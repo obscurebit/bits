@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-03-04-edition-034/" class="archive-item">
+    <div class="archive-item__number">034</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">March 04, 2026</span>
+      <h3 class="archive-item__title">Edition #034</h3>
+      <p class="archive-item__excerpt">Reality Glitches · The camera lingers on a silver spoon, its bowl tarnished, handle etched with a pattern of overlapping circles. It rests on a counter strewn with flour, a smear...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Reality Glitches</span><span class="archive-item__genre" title="Romantic subplot driving a speculative premise">Romantic subplot driving a speculative premise</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-03-03-edition-033/" class="archive-item">
     <div class="archive-item__number">033</div>
     <div class="archive-item__content">
