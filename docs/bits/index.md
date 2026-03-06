@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-03-06-receipt-for-services-rendered/" class="archive-item">
+    <div class="archive-item__number">036</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">March 06, 2026</span>
+      <h3 class="archive-item__title">Receipt for Services Rendered</h3>
+      <p class="archive-item__excerpt">Itemized:</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Memory Manipulation</span><span class="archive-item__genre" title="Political allegory, thinly veiled">Political allegory</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-03-05-the-tin-labyrinth/" class="archive-item">
     <div class="archive-item__number">035</div>
     <div class="archive-item__content">
