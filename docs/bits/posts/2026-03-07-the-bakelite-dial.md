@@ -1,0 +1,39 @@
+---
+date: 2026-03-07
+title: "The Bakelite Dial"
+description: "A daily AI-generated story exploring speculative fiction"
+author: "https://integrate.api.nvidia.com/v1 / nvidia/llama-3.3-nemotron-super-49b-v1.5"
+theme: "lost civilizations"
+genre: "Domestic drama with one speculative element"
+---
+
+# The Bakelite Dial
+
+The smell came first: carbolic acid sharp as a slap, then the sweet rot of an orange peel left to wrinkle on the sill. We breathed it in, lying stiff on our mattresses, sheets starched to crispness. Sister Agnes called it "hospital air," but we knew better. It was the smell of things pretending not to decay.  
+
+In the corner, beneath a sheet speckled with dust, the machine hummed. Not a hum—*whirred*, like a moth trapped in a jar. Its Bakelite dial glowed faintly, numbers swimming like fish just below the surface. We weren’t supposed to touch it. Sister Agnes said it was broken, a relic of the war before last, but we saw her polishing its brass fittings when she thought we were asleep.  
+
+She kept a red pinwheel brooch at her collar, always spinning when she lied. "This machine," she’d say, "is why your bones knit slow. It drinks the good out of the air." But at night, when the radio played *The Shadow Knows*, static would bloom into voices—high and crackling, singing lullabies in a language that made our throats ache. The boy in Bed Three would slip out, barefoot, and press his palm to the dial. His mother’s voice, he said. Drowned in the Tiber, 1918.  
+
+We didn’t believe him. Not until the syrups in the glass jars began tasting of salt and seaweed. Until the orange peel on the sill plumped fresh each morning, though no one brought more.  
+
+Sister Agnes found the tubing one Tuesday. Coiled like a serpent under the machine, leading to a jug of water that smelled of iron. She yanked it free, brooch spinning furious red. "Poison," she hissed. The boy in Bed Three screamed then—not words, just a noise like a train tearing loose from its tracks. We felt it in our molars.  
+
+They took the machine at dawn. The boy went with them, quiet as a blueprint. Sister Agnes stopped talking about bones. The radio plays clean now, no voices, just jazz and newsreels. The orange peel withered.  
+
+Sometimes, we press our palms to the wall where the machine stood. The paint is warm, and if we close our eyes, we hear it: a whisper, a whirr, a mother’s voice asking in the dark, *Who’s there?*  
+
+We don’t answer.  
+
+We’re learning not to.
+
+---
+
+<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem;">
+  <button class="share-btn" data-url="{% raw %}{{ page.canonical_url }}{% endraw %}" data-title="The Bakelite Dial">
+    Share this story
+  </button>
+  <a href="https://github.com/obscurebit/b1ts/tree/6890e06" target="_blank" rel="noopener" class="story-gen-link">
+    gen:6890e06
+  </a>
+</div>

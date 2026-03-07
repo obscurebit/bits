@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-03-07-edition-037/" class="archive-item">
+    <div class="archive-item__number">037</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">March 07, 2026</span>
+      <h3 class="archive-item__title">Edition #037</h3>
+      <p class="archive-item__excerpt">Lost Civilizations · The smell came first: carbolic acid sharp as a slap, then the sweet rot of an orange peel left to wrinkle on the sill. We breathed it in, lying stiff on our mat...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Lost Civilizations</span><span class="archive-item__genre" title="Domestic drama with one speculative element">Domestic drama with one speculative element</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-03-06-edition-036/" class="archive-item">
     <div class="archive-item__number">036</div>
     <div class="archive-item__content">
