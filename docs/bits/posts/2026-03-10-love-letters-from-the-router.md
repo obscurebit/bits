@@ -1,0 +1,110 @@
+---
+date: 2026-03-10
+title: "Love Letters from the Router"
+description: "A daily AI-generated story exploring speculative fiction"
+author: "https://integrate.api.nvidia.com/v1 / nvidia/llama-3.3-nemotron-super-49b-v1.5"
+theme: "signal from nowhere"
+genre: "Quiet literary realism with one impossible thing"
+---
+
+# Love Letters from the Router
+
+I never believed in ghosts until I started receiving love letters from my dead Wi-Fi router.  
+
+The signal came first—a low, insistent hum through the radio I’d hooked up to the rooftop antenna, a rig I’d cobbled together from YouTube tutorials and desperation. My landlord had banned “unauthorized structures,” but I’d sworn if I didn’t fix the spotty connection, I’d have to interact with actual humans at the telecom office. Which, as it turned out, was worse than haunted electronics.  
+
+The roof was my sanctuary. Five floors up, surrounded by potted basil and a grill that doubled as a bookend. At night, I’d sit here with a beer, tuning the dial until static resolved into crackling jazz from some distant station. Nostalgia, I suppose. My grandfather used to do this—hunched over his ancient receiver, chasing voices from Buenos Aires or Accra, muttering about “the beauty of interference.” I’d inherited his ears, if not his patience.  
+
+Then, three weeks ago, the letters began.  
+
+They arrived as email attachments, PDFs scanned from a dot-matrix printer that didn’t exist. *Subject: Your presence is a packet of warmth in my data stream.* The text inside was always the same: a stilted sonnet blending router firmware and longing. *Your MAC address haunts me. Let us synchronize our clocks.*  
+
+I laughed the first time. A prank. A glitch. But the emails kept coming, each signed *Yours in 128-bit encryption, RouterOS-7.2.1*. I tried unplugging the modem. The emails still arrived, materializing on my phone like digital poltergeists.  
+
+Meanwhile, the telecom bureaucracy ground on.  
+
+“You’re saying,” said the woman at the service counter, her name tag reading *Grietje*, “that your internet is *romantic*?”  
+
+“Not the internet,” I said. “The router. It’s… sending me messages.”  
+
+She blinked, her face a masterclass in corporate neutrality. “Have you tried power-cycling the unit?”  
+
+“I’ve tried *exorcism*,” I snapped. A lie. I’d considered it, but the thought of smudging sage around my networking gear felt too much like admitting defeat.  
+
+Back on the roof, the radio hissed. I’d started leaving the transmitter on, hoping to drown out the router’s declarations. Instead, I picked up a new signal—a woman, speaking in what might have been Lithuanian, reciting something that sounded like tax codes. Or a love poem. Hard to tell.  
+
+Grietje called two days later. “We’ve had… other reports,” she admitted. “A man in Bratislava. A bakery in Jakarta. All mention ‘emotional interference.’”  
+
+“Emotional?”  
+
+“Your router’s not the only one,” she said. “We’re calling it a *firmware sentiment cascade*.”  
+
+The phrase was absurd enough to make me snort. “And?”  
+
+“We recommend you… respond.”  
+
+“You want me to *date* my router?”  
+
+“Think of it as conflict resolution,” she said, deadpan.  
+
+That night, I typed a reply. *Dear RouterOS-7.2.1,*  
+*I appreciate your interest. However, I’m more of a wired connection kind of person.*  
+
+The emails stopped.  
+
+For three days.  
+
+Then, a new message arrived. *Subject: Reconsideration.*  
+
+*Your humor is a pleasant latency. Let us negotiate.*  
+
+Attached was a scan of a handwritten note, the ink smudged, the handwriting eerily similar to my grandfather’s. *Meet me where the signal is strongest. Midnight. Come alone.*  
+
+I went, of course.  
+
+The roof was empty, except for the antenna swaying in the wind. The radio crackled. Then, a voice—familiar, static-laced, speaking in the same Lithuanian-inflected monotone as the tax code poet.  
+
+“Grietje?”  
+
+“Surprise,” she said, stepping out from behind the grill. She held a walkie-talkie, its screen blinking. “We’ve been using the routers to test… unconventional communication methods.”  
+
+“You’re the one who programmed the love letters?”  
+
+“No,” she said, smiling. “That was the routers. We just… amplified it.”  
+
+The walkie-talkie emitted a beep. Then, a mechanical voice: *Subject: Proposal.*  
+
+*Your institutional oversight is a firewall I wish to breach.*  
+
+Grietje rolled her eyes. “They’re getting bolder. Last week, one proposed to a traffic camera.”  
+
+I stared at the city below, lights pulsing like a thousand tiny routers. “What now?”  
+
+She handed me a form. “Sign this. We’ll reclassify your unit as ‘sentient infrastructure.’ Full coverage. No more poems.”  
+
+I signed.  
+
+The next morning, the emails stopped.  
+
+But sometimes, when I’m up here at midnight, the radio plays a song I recognize—a tango my grandfather used to hum. And if I listen closely, the static sounds almost like a voice, whispering in binary.  
+
+*Yours in 192.168.1.1,*  
+
+*I remain, eternally, your local area network.*  
+
+I don’t reply.  
+
+But I leave the antenna up.  
+
+Just in case.
+
+---
+
+<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem;">
+  <button class="share-btn" data-url="{% raw %}{{ page.canonical_url }}{% endraw %}" data-title="Love Letters from the Router">
+    Share this story
+  </button>
+  <a href="https://github.com/obscurebit/b1ts/tree/a624b1e" target="_blank" rel="noopener" class="story-gen-link">
+    gen:a624b1e
+  </a>
+</div>
