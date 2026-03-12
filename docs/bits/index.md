@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-03-12-the-suburban-stitchwork/" class="archive-item">
+    <div class="archive-item__number">042</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">March 12, 2026</span>
+      <h3 class="archive-item__title">The Suburban Stitchwork</h3>
+      <p class="archive-item__excerpt">We arrived when the streetlamps flickered on, six of us crammed into Edie’s Chevrolet, gravel spit from the tires when she parked too sharp in front o...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Edge Of Maps</span><span class="archive-item__genre" title="Body horror, transformation, the flesh is wrong">Body horror</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-03-11-the-infinite-windows/" class="archive-item">
     <div class="archive-item__number">041</div>
     <div class="archive-item__content">
