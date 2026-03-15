@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-03-15-edition-045/" class="archive-item">
+    <div class="archive-item__number">045</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">March 15, 2026</span>
+      <h3 class="archive-item__title">Edition #045</h3>
+      <p class="archive-item__excerpt">Digital Archaeology · Scanned the third reel of microfilm at 14:37. Motor whirred like a trapped wasp. Cat watched from the windowsill, tail flicking. Same as every afternoon.</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Digital Archaeology</span><span class="archive-item__genre" title="Political allegory, thinly veiled">Political allegory</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-03-14-edition-044/" class="archive-item">
     <div class="archive-item__number">044</div>
     <div class="archive-item__content">
