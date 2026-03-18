@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-03-18-the-spice-of-elsewheres/" class="archive-item">
+    <div class="archive-item__number">048</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">March 18, 2026</span>
+      <h3 class="archive-item__title">The Spice of Elsewheres</h3>
+      <p class="archive-item__excerpt">She held the jar like it might shatter, which it might, if the stories were true. The label read *Cinnamon (Probably)* in six languages, the last one ...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Parallel Dimensions</span><span class="archive-item__genre" title="Romantic subplot driving a speculative premise">Romantic subplot driving a speculative premise</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-03-17-timekeeping-for-the-distracted/" class="archive-item">
     <div class="archive-item__number">047</div>
     <div class="archive-item__content">

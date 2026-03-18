@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-03-18-edition-048/" class="archive-item">
+    <div class="archive-item__number">048</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">March 18, 2026</span>
+      <h3 class="archive-item__title">Edition #048</h3>
+      <p class="archive-item__excerpt">Parallel Dimensions · She held the jar like it might shatter, which it might, if the stories were true. The label read *Cinnamon (Probably)* in six languages, the last one smudged in...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Parallel Dimensions</span><span class="archive-item__genre" title="Romantic subplot driving a speculative premise">Romantic subplot driving a speculative premise</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-03-17-edition-047/" class="archive-item">
     <div class="archive-item__number">047</div>
     <div class="archive-item__content">
