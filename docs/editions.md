@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-03-19-edition-049/" class="archive-item">
+    <div class="archive-item__number">049</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">March 19, 2026</span>
+      <h3 class="archive-item__title">Edition #049</h3>
+      <p class="archive-item__excerpt">Synthetic Life · The smell of toner and stale coffee clung to the air, sharp and unyielding, like the office itself had forgotten how to exhale.</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Synthetic Life</span><span class="archive-item__genre" title="Mythic retelling set in a modern context">Mythic retelling set in a modern context</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-03-18-edition-048/" class="archive-item">
     <div class="archive-item__number">048</div>
     <div class="archive-item__content">

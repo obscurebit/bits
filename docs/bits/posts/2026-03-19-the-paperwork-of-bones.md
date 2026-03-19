@@ -1,0 +1,55 @@
+---
+date: 2026-03-19
+title: "The Paperwork of Bones"
+description: "A daily AI-generated story exploring speculative fiction"
+author: "https://integrate.api.nvidia.com/v1 / nvidia/llama-3.3-nemotron-super-49b-v1.5"
+theme: "synthetic life"
+genre: "Mythic retelling set in a modern context"
+---
+
+# The Paperwork of Bones
+
+The smell of toner and stale coffee clung to the air, sharp and unyielding, like the office itself had forgotten how to exhale.  
+
+This is how we tell it now, around dimming monitors and half-empty mugs: the story of Piotr and the thing he built to save his daughter. Not with gods or lightning, but with CRISPR and a grant from the Ministry of Agricultural Efficiency. You know the kind. Paperwork thicker than a brick, signatures bleeding into checkboxes.  
+
+Piotr’s desk was a graveyard of petri dishes, their edges crusted with neglect. Across from him, Anjali leaned on a stack of incident reports, her pen tapping a Morse code of impatience. "They’re coming at dawn," she said. "The auditors. You know what happens if they find it."  
+
+The "it" lived in a sealed culture dish between them, a quivering mass of engineered muscle tissue, translucent under the fluorescent lights. Piotr had promised his daughter a cure. A body. A *self*. Instead, he’d made a heart that beat without a chest, lungs that never breathed. A mock-up. A lie.  
+
+"You swore it would think," Anjali said. "That it would *know* her."  
+
+"It does." Piotr’s voice frayed at the edges. "It just… doesn’t want to."  
+
+The thing pulsed, as if disagreeing. Its surface rippled with phantom nerves, a flicker of synapse-like sparks dancing across its gelatinous surface. Anjali stared. She’d named it Orpheus in her head, though never out loud. Bureaucracy hates a name. Names demand accountability.  
+
+Piotr reached for a syringe. "One more injection. The neural matrix might—"  
+
+"Stop." Anjali’s hand closed over his. "You’ve pumped enough dreams into it. Look at the margins, Piotr. The report says *non-viable consciousness*. Your daughter’s scans are in the file. This isn’t her. It’s a footnote."  
+
+Outside, a train rattled past the windowless room, its vibration loosening a staple on the oldest document in the pile. Piotr’s eyes lingered on the photo clipped to the top: his daughter at twelve, grinning with a gap-toothed ferocity, a summer before the illness hollowed her.  
+
+"They’ll incinerate it," he said.  
+
+"Or archive it," Anjali said. "Either way, it’s a box checked."  
+
+The culture dish shuddered. A bubble formed at its center, swelled, and burst. Something like a sigh, but not. A release.  
+
+In the myths, this is where the creature would rise, wrathful or radiant. But here, it simply went still. The lights buzzed on. The coffee went cold.  
+
+Piotr signed the disposal form without reading it. Anjali filed the death under "Unsuccessful Trials," subsection B. The auditors never knew.  
+
+We tell it this way now: not as a tragedy, but an inventory. How many promises dissolve into paperwork. How often the alive and the almost-alive switch places, unnoticed.  
+
+The dish was sterilized by dawn. The only thing left behind was the smell—toner, coffee, and something sweetly acidic, like cells letting go.
+
+---
+
+<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem;">
+  <button class="share-btn" data-url="{% raw %}{{ page.canonical_url }}{% endraw %}" data-title="The Paperwork of Bones">
+    Share this story
+  </button>
+  <a href="https://github.com/obscurebit/b1ts/tree/bac10a5" target="_blank" rel="noopener" class="story-gen-link">
+    gen:bac10a5
+  </a>
+</div>
