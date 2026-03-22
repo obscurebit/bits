@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-03-22-edition-052/" class="archive-item">
+    <div class="archive-item__number">052</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">March 22, 2026</span>
+      <h3 class="archive-item__title">Edition #052</h3>
+      <p class="archive-item__excerpt">Reality Glitches · You are not supposed to remember the third act before the curtain rises. But here it is, crystalline in your skull: the lead actor choking on his final line, th...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Reality Glitches</span><span class="archive-item__genre" title="Mythic retelling set in a modern context">Mythic retelling set in a modern context</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-03-21-edition-051/" class="archive-item">
     <div class="archive-item__number">051</div>
     <div class="archive-item__content">
