@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-03-23-edition-053/" class="archive-item">
+    <div class="archive-item__number">053</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">March 23, 2026</span>
+      <h3 class="archive-item__title">Edition #053</h3>
+      <p class="archive-item__excerpt">Emergent Intelligence · The sound was a spoon against stone, brittle and out of place. I froze, quill hovering above the vellum. In the vault beneath Saint Marcellus’s crypt, where the...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Emergent Intelligence</span><span class="archive-item__genre" title="Survival story, resourcefulness under pressure">Survival story</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-03-22-edition-052/" class="archive-item">
     <div class="archive-item__number">052</div>
     <div class="archive-item__content">
