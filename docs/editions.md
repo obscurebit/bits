@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-03-27-edition-057/" class="archive-item">
+    <div class="archive-item__number">057</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">March 27, 2026</span>
+      <h3 class="archive-item__title">Edition #057</h3>
+      <p class="archive-item__excerpt">Biological Computing · The smell of burnt hair clung to the air, sweet and acrid, mixing with the sharp tang of solder. Hands moved in the dim light of a workshop cluttered with typew...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Biological Computing</span><span class="archive-item__genre" title="Ghost story, atmospheric and slow">Ghost story</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-03-24-edition-054/" class="archive-item">
     <div class="archive-item__number">054</div>
     <div class="archive-item__content">

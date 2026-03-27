@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-03-27-the-honeycomb-engine/" class="archive-item">
+    <div class="archive-item__number">057</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">March 27, 2026</span>
+      <h3 class="archive-item__title">The Honeycomb Engine</h3>
+      <p class="archive-item__excerpt">The smell of burnt hair clung to the air, sweet and acrid, mixing with the sharp tang of solder. Hands moved in the dim light of a workshop cluttered ...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Biological Computing</span><span class="archive-item__genre" title="Ghost story, atmospheric and slow">Ghost story</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-03-24-the-gatekeepers-equation/" class="archive-item">
     <div class="archive-item__number">054</div>
     <div class="archive-item__content">
