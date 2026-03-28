@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-03-28-the-1215-signal/" class="archive-item">
+    <div class="archive-item__number">058</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">March 28, 2026</span>
+      <h3 class="archive-item__title">The 12:15 Signal</h3>
+      <p class="archive-item__excerpt">Seventeen minutes until the 12:15.</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Signal From Nowhere</span><span class="archive-item__genre" title="Domestic drama with one speculative element">Domestic drama with one speculative element</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-03-27-the-honeycomb-engine/" class="archive-item">
     <div class="archive-item__number">057</div>
     <div class="archive-item__content">

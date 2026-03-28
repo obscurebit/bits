@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-03-28-edition-058/" class="archive-item">
+    <div class="archive-item__number">058</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">March 28, 2026</span>
+      <h3 class="archive-item__title">Edition #058</h3>
+      <p class="archive-item__excerpt">Signal From Nowhere · Seventeen minutes until the 12:15.</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Signal From Nowhere</span><span class="archive-item__genre" title="Domestic drama with one speculative element">Domestic drama with one speculative element</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-03-27-edition-057/" class="archive-item">
     <div class="archive-item__number">057</div>
     <div class="archive-item__content">
