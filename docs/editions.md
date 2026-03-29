@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-03-29-edition-059/" class="archive-item">
+    <div class="archive-item__number">059</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">March 29, 2026</span>
+      <h3 class="archive-item__title">Edition #059</h3>
+      <p class="archive-item__excerpt">Recursive Realities · The candle sputtered as he descended the final stair, wax dripping onto the stone like frozen tears. The air smelled of mildew and old ink. Before him, a chambe...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Recursive Realities</span><span class="archive-item__genre" title="Ghost story, atmospheric and slow">Ghost story</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-03-28-edition-058/" class="archive-item">
     <div class="archive-item__number">058</div>
     <div class="archive-item__content">
