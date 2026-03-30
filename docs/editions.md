@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-03-30-edition-060/" class="archive-item">
+    <div class="archive-item__number">060</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">March 30, 2026</span>
+      <h3 class="archive-item__title">Edition #060</h3>
+      <p class="archive-item__excerpt">Edge Of Maps · [REDACTED] entered the train car at 7:14 p.m., local time, seat 12B. The conductor later confirmed the clock had stopped at that exact minute for three consecut...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Edge Of Maps</span><span class="archive-item__genre" title="Heist or caper, clever and kinetic">Heist or caper</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-03-29-edition-059/" class="archive-item">
     <div class="archive-item__number">059</div>
     <div class="archive-item__content">

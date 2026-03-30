@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-03-30-transcript-the-unseen-route/" class="archive-item">
+    <div class="archive-item__number">060</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">March 30, 2026</span>
+      <h3 class="archive-item__title">Transcript: The Unseen Route</h3>
+      <p class="archive-item__excerpt">[REDACTED] entered the train car at 7:14 p.m., local time, seat 12B. The conductor later confirmed the clock had stopped at that exact minute for thre...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Edge Of Maps</span><span class="archive-item__genre" title="Heist or caper, clever and kinetic">Heist or caper</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-03-29-the-whispering-parchment/" class="archive-item">
     <div class="archive-item__number">059</div>
     <div class="archive-item__content">
