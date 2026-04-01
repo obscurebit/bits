@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-04-01-edition-062/" class="archive-item">
+    <div class="archive-item__number">062</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">April 01, 2026</span>
+      <h3 class="archive-item__title">Edition #062</h3>
+      <p class="archive-item__excerpt">Forgotten Technology · INTERVIEWER: "You’re telling me the entire orchestra section just… moved on its own?"</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Forgotten Technology</span><span class="archive-item__genre" title="Workplace comedy with a sci-fi twist">Workplace comedy with a sci-fi twist</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-03-31-edition-061/" class="archive-item">
     <div class="archive-item__number">061</div>
     <div class="archive-item__content">

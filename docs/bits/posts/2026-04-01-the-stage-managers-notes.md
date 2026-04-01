@@ -1,0 +1,52 @@
+---
+date: 2026-04-01
+title: "The Stage Manager's Notes"
+description: "A daily AI-generated story exploring speculative fiction"
+author: "https://integrate.api.nvidia.com/v1 / nvidia/llama-3.3-nemotron-super-49b-v1.5"
+theme: "forgotten technology"
+genre: "Workplace comedy with a sci-fi twist"
+---
+
+# The Stage Manager's Notes
+
+INTERVIEWER: "You’re telling me the entire orchestra section just… moved on its own?"  
+
+BLESSING (STAGEHAND, 14 YEARS): "Not the whole thing. The pit cover. During *Carmen*. But not like *ghosts*. More like… the hydraulics woke up. They hadn’t worked since the ’30s. Someone had welded them shut, actually. Found slag in the joints when we pried it open."  
+
+[PORTION REDACTED FOR FACILITY SECURITY CLEARANCE]  
+
+INTERVIEWER: "And you’re certain no one else noticed?"  
+
+BLESSING: "The conductor had a fit about the lighting. Said the spotlights were ‘breathing.’ That’s what he called it. Turned out the old incandescent rig above the balcony—it was cycling on and off, but not in sync with the show. Like it was trying to keep a rhythm. Or remember one."  
+
+[SECTION OMITTED PER LEGAL REVIEW]  
+
+BLESSING: "We tried replacing the wiring. New fuses, new switches. Nothing. Then Juanita—she does props—said her grandma used to work here back when it was a vaudeville house. Said the stage used to ‘sing’ if you stood in the center. Called it the *bones of the building*. We laughed. Next day, the trapdoor opened by itself during load-in. No one was near it. Just… clicked open. Dust everywhere. Smelled like grandfather’s closet."  
+
+INTERVIEWER: "And the management’s reaction?"  
+
+BLESSING: "Sent a guy from ‘Historic Preservation.’ Real suit, real smirk. Tapped walls, took pictures. Left a form. Said we couldn’t touch anything until they ‘assessed the cultural integrity.’ Like it’s a damn museum. Meanwhile, the crew’s terrified. Except Marco. He says the stage ‘remembers’ him. Thinks it’s got a crush. He’s been leaving coffee cups center stage. Joke’s on him—the cleaning crew throws them out by noon."  
+
+[REDACTED: NAME OF CLEANING STAFF UNION REPRESENTATIVE]  
+
+INTERVIEWER: "Have you experienced anything personally?"  
+
+BLESSING: "Last week. 2 a.m. Had to fix a curtain motor. Heard singing. Not through the speakers. Through the floor. Like the concrete was vibrating. Checked the sound booth—nothing. Then I stepped onto the main stage. The wood was warm. Not hot. Warm. Like after a show, when the lights have been on. But the lights were off. Whole building was dark. I… I sang back. Don’t judge me. It stopped. Haven’t told anyone. Marco thinks I’m ‘channeling the spirits now.’ Jerk won’t let me live it down."  
+
+[END OF TRANSCRIPT. ARCHIVED UNDER THEATER SAFETY PROTOCOL 12.7]  
+
+APPENDIX A: HANDWRITTEN NOTE FOUND IN VENTILATION DUCT (LEVEL 3, NORTH WING):  
+*"For the girl who listens: the bones only sing when they’re listened to. Don’t let them pave the stage. —M. (1923-1998)"*  
+
+[NOTE DEEMED NON-THREATENING. NO FURTHER ACTION RECOMMENDED.]
+
+---
+
+<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem;">
+  <button class="share-btn" data-url="{% raw %}{{ page.canonical_url }}{% endraw %}" data-title="The Stage Manager's Notes">
+    Share this story
+  </button>
+  <a href="https://github.com/obscurebit/b1ts/tree/6af3388" target="_blank" rel="noopener" class="story-gen-link">
+    gen:6af3388
+  </a>
+</div>
