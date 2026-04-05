@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-04-05-the-glassmongers-bargain/" class="archive-item">
+    <div class="archive-item__number">066</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">April 05, 2026</span>
+      <h3 class="archive-item__title">The Glassmonger’s Bargain</h3>
+      <p class="archive-item__excerpt">Listen close. I’ve sold three of them now. Each time, the same flicker in the buyer’s eyes—as if they’ve glimpsed their own face in a river and mistoo...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Parallel Dimensions</span><span class="archive-item__genre" title="Ghost story, atmospheric and slow">Ghost story</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-04-03-stages-of-absence/" class="archive-item">
     <div class="archive-item__number">064</div>
     <div class="archive-item__content">

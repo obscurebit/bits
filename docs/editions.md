@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-04-05-edition-066/" class="archive-item">
+    <div class="archive-item__number">066</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">April 05, 2026</span>
+      <h3 class="archive-item__title">Edition #066</h3>
+      <p class="archive-item__excerpt">Parallel Dimensions · Listen close. I’ve sold three of them now. Each time, the same flicker in the buyer’s eyes—as if they’ve glimpsed their own face in a river and mistook it for a...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Parallel Dimensions</span><span class="archive-item__genre" title="Ghost story, atmospheric and slow">Ghost story</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-04-03-edition-064/" class="archive-item">
     <div class="archive-item__number">064</div>
     <div class="archive-item__content">
