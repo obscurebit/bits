@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-04-08-edition-069/" class="archive-item">
+    <div class="archive-item__number">069</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">April 08, 2026</span>
+      <h3 class="archive-item__title">Edition #069</h3>
+      <p class="archive-item__excerpt">Abandoned Stations · **Interview Transcript: Subject #872-B**</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Abandoned Stations</span><span class="archive-item__genre" title="Workplace comedy with a sci-fi twist">Workplace comedy with a sci-fi twist</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-04-07-edition-068/" class="archive-item">
     <div class="archive-item__number">068</div>
     <div class="archive-item__content">
