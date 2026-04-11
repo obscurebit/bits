@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-04-11-edition-072/" class="archive-item">
+    <div class="archive-item__number">072</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">April 11, 2026</span>
+      <h3 class="archive-item__title">Edition #072</h3>
+      <p class="archive-item__excerpt">Memory Manipulation · I stole my own memories on a Tuesday, which is a Tuesday thing to do.</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Memory Manipulation</span><span class="archive-item__genre" title="Heist or caper, clever and kinetic">Heist or caper</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-04-10-edition-071/" class="archive-item">
     <div class="archive-item__number">071</div>
     <div class="archive-item__content">
