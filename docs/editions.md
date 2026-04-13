@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-04-13-edition-074/" class="archive-item">
+    <div class="archive-item__number">074</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">April 13, 2026</span>
+      <h3 class="archive-item__title">Edition #074</h3>
+      <p class="archive-item__excerpt">Underground Networks · Receipt #4421: 3:47 PM, Table 12, One unsalted butter cookie, One decaf latte, One request for the manager.</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Underground Networks</span><span class="archive-item__genre" title="Fable or parable, simple surface hiding depth">Fable or parable</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-04-12-edition-073/" class="archive-item">
     <div class="archive-item__number">073</div>
     <div class="archive-item__content">
