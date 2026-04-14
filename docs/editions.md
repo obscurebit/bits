@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-04-14-edition-075/" class="archive-item">
+    <div class="archive-item__number">075</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">April 14, 2026</span>
+      <h3 class="archive-item__title">Edition #075</h3>
+      <p class="archive-item__excerpt">Biological Computing · The door creaks open, admitting a woman in a frayed denim jacket. She hesitates, shoulder brushing the frame, as if the air inside might be toxic. The workshop...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Biological Computing</span><span class="archive-item__genre" title="Domestic drama with one speculative element">Domestic drama with one speculative element</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-04-13-edition-074/" class="archive-item">
     <div class="archive-item__number">074</div>
     <div class="archive-item__content">
