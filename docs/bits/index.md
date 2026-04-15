@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-04-15-how-to-tune-the-void/" class="archive-item">
+    <div class="archive-item__number">076</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">April 15, 2026</span>
+      <h3 class="archive-item__title">How to Tune the Void</h3>
+      <p class="archive-item__excerpt">Do you remember the first time the numbers blinked on the oscilloscope? 1972. Munich Olympics on the TV, the workshop reeking of solder and burnt coff...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Signal From Nowhere</span><span class="archive-item__genre" title="Romantic subplot driving a speculative premise">Romantic subplot driving a speculative premise</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-04-14-the-archive-of-small-things/" class="archive-item">
     <div class="archive-item__number">075</div>
     <div class="archive-item__content">

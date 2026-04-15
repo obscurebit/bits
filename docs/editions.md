@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-04-15-edition-076/" class="archive-item">
+    <div class="archive-item__number">076</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">April 15, 2026</span>
+      <h3 class="archive-item__title">Edition #076</h3>
+      <p class="archive-item__excerpt">Signal From Nowhere · Do you remember the first time the numbers blinked on the oscilloscope? 1972. Munich Olympics on the TV, the workshop reeking of solder and burnt coffee. You’d...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Signal From Nowhere</span><span class="archive-item__genre" title="Romantic subplot driving a speculative premise">Romantic subplot driving a speculative premise</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-04-14-edition-075/" class="archive-item">
     <div class="archive-item__number">075</div>
     <div class="archive-item__content">
