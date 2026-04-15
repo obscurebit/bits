@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Backfill the link registry from existing published link posts.
+Backfill the repo-backed link registry from existing published link posts.
 
 Scans docs/links/posts/*.md, extracts URLs and metadata from frontmatter,
 and registers them so future runs never duplicate a previously published link.

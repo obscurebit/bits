@@ -6,7 +6,7 @@ Maintains a SHA-256 hash index of every URL ever published, preventing
 cross-day duplicates. Also tracks per-domain frequency for global
 diversity enforcement.
 
-Registry file: cache/link_registry.json
+Registry file: data/discovery/link_registry.json
 """
 
 import hashlib
@@ -18,7 +18,8 @@ from typing import Dict, List, Optional, Tuple
 from urllib.parse import urlparse, urlencode, parse_qs, urlunparse
 
 
-REGISTRY_PATH = Path("cache/link_registry.json")
+REGISTRY_PATH = Path("data/discovery/link_registry.json")
+LEGACY_REGISTRY_PATH = Path("cache/link_registry.json")
 
 # Query parameters that are tracking/noise — strip before hashing
 STRIP_PARAMS = {
@@ -87,6 +88,13 @@ class LinkRegistry:
     # ── persistence ──────────────────────────────────────────────
 
     def _load(self) -> None:
+        if not self.path.exists() and LEGACY_REGISTRY_PATH.exists():
+            try:
+                self.path.parent.mkdir(parents=True, exist_ok=True)
+                self.path.write_text(LEGACY_REGISTRY_PATH.read_text())
+            except OSError:
+                pass
+
         if self.path.exists():
             try:
                 self.data = json.loads(self.path.read_text())

@@ -16,16 +16,40 @@ import time
 import hashlib
 from collections import Counter
 from typing import Dict, List, Optional, Tuple
-from urllib.parse import urljoin, urlparse, unquote
+from urllib.parse import urljoin, urlparse, unquote, urlunparse
 from pathlib import Path
 from dataclasses import dataclass, asdict
 import requests
 from bs4 import BeautifulSoup, Comment
-import tiktoken
+
+try:
+    import certifi
+except Exception:
+    certifi = None
 
 # Cache directory
 CACHE_DIR = Path("cache/web_content")
 CACHE_DIR.mkdir(parents=True, exist_ok=True)
+
+FETCH_MAX_RETRIES = 3
+FETCH_DISABLE_AFTER_FAILURES = 4
+FETCH_RETRYABLE_STATUSES = {408, 425, 429, 500, 502, 503, 504}
+TRANSIENT_ERROR_MARKERS = (
+    "name or service not known",
+    "temporary failure in name resolution",
+    "failed to resolve",
+    "name resolution",
+    "nodename nor servname provided",
+    "getaddrinfo failed",
+    "connection reset",
+    "connection aborted",
+    "connection refused",
+    "timed out",
+    "timeout",
+    "temporarily unavailable",
+    "remote disconnected",
+    "eai_again",
+)
 
 @dataclass
 class ScrapedContent:
@@ -48,7 +72,15 @@ class WebScraper:
         self.session.headers.update({
             'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
         })
-        self.tokenizer = tiktoken.get_encoding("cl100k_base")
+        if certifi:
+            try:
+                ca_bundle = certifi.where()
+                if ca_bundle and Path(ca_bundle).exists():
+                    self.session.verify = ca_bundle
+            except Exception:
+                pass
+        self.transient_fetch_failures = 0
+        self.network_disabled = False
         
         # Obscurity indicators
         self.obscurity_indicators = {
@@ -103,15 +135,73 @@ class WebScraper:
         cache_path = self.get_cache_path(content.url)
         with open(cache_path, 'w') as f:
             json.dump(asdict(content), f, indent=2)
+
+    def _is_transient_request_error(self, error: Exception) -> bool:
+        message = str(error).lower()
+        return any(marker in message for marker in TRANSIENT_ERROR_MARKERS)
+
+    def _request_variants(self, url: str) -> List[str]:
+        variants = [url]
+        try:
+            parsed = urlparse(url)
+        except Exception:
+            return variants
+
+        if parsed.scheme not in {"http", "https"} or not parsed.netloc:
+            return variants
+
+        host = parsed.hostname or ""
+        if not host:
+            return variants
+
+        alternate_host = None
+        if host.startswith("www."):
+            alternate_host = host[4:]
+        elif host.count(".") == 1:
+            alternate_host = f"www.{host}"
+
+        if not alternate_host or alternate_host == host:
+            return variants
+
+        netloc = alternate_host
+        if parsed.port:
+            netloc = f"{alternate_host}:{parsed.port}"
+        alternate = urlunparse(parsed._replace(netloc=netloc))
+        if alternate not in variants:
+            variants.append(alternate)
+        return variants
     
     def fetch_page(self, url: str, timeout: int = 10) -> Optional[requests.Response]:
-        """Fetch a web page with error handling."""
-        try:
-            response = self.session.get(url, timeout=timeout, allow_redirects=True)
-            response.raise_for_status()
-            return response
-        except requests.RequestException as e:
+        """Fetch a web page with retries for transient DNS/connection failures."""
+        if self.network_disabled:
             return None
+        last_error: Optional[Exception] = None
+        variants = self._request_variants(url)
+
+        for attempt in range(FETCH_MAX_RETRIES):
+            for candidate_url in variants:
+                try:
+                    response = self.session.get(candidate_url, timeout=timeout, allow_redirects=True)
+                    if response.status_code in FETCH_RETRYABLE_STATUSES:
+                        last_error = requests.HTTPError(f"retryable status {response.status_code}")
+                        continue
+                    response.raise_for_status()
+                    self.transient_fetch_failures = 0
+                    return response
+                except requests.RequestException as error:
+                    last_error = error
+                    if not self._is_transient_request_error(error):
+                        return None
+
+            if attempt < FETCH_MAX_RETRIES - 1:
+                time.sleep(1.5 * (attempt + 1))
+
+        if last_error and self._is_transient_request_error(last_error):
+            self.transient_fetch_failures += 1
+            if not self.network_disabled and self.transient_fetch_failures >= FETCH_DISABLE_AFTER_FAILURES:
+                self.network_disabled = True
+                print("    ⚠️  Disabling live page fetches for the remainder of this run")
+        return None
 
     def _derive_asset_title(self, url: str) -> str:
         path = unquote(urlparse(url).path)
@@ -141,6 +231,23 @@ class WebScraper:
         )
         self.save_to_cache(result)
         return result
+
+    def _infer_asset_type(self, url: str, content_type: str) -> Optional[str]:
+        lowered = (content_type or "").lower()
+        url_lower = url.lower()
+        if "application/pdf" in lowered or url_lower.endswith(".pdf"):
+            return "PDF"
+        if "application/epub+zip" in lowered or url_lower.endswith(".epub"):
+            return "EPUB"
+        if "application/x-mobipocket-ebook" in lowered or url_lower.endswith(".mobi"):
+            return "MOBI"
+        if "application/zip" in lowered or url_lower.endswith(".zip"):
+            return "ZIP"
+        if "application/octet-stream" in lowered:
+            return "binary asset"
+        if lowered and "html" not in lowered and "xml" not in lowered and "text/" not in lowered:
+            return lowered.split(";")[0]
+        return None
     
     def extract_text(self, soup: BeautifulSoup) -> str:
         """Extract clean text from HTML."""
@@ -331,12 +438,17 @@ class WebScraper:
             )
         
         content_type = response.headers.get('Content-Type', '').lower()
-        if 'application/pdf' in content_type or url.lower().endswith('.pdf'):
-            print("    📄 Detected PDF document; using download metadata")
-            return self._handle_non_html_asset(url, response, "PDF")
+        asset_type = self._infer_asset_type(url, content_type)
+        if asset_type:
+            print(f"    📄 Detected {asset_type}; using download metadata")
+            return self._handle_non_html_asset(url, response, asset_type)
 
         # Parse HTML
-        soup = BeautifulSoup(response.text, 'html.parser')
+        try:
+            soup = BeautifulSoup(response.text, 'html.parser')
+        except Exception as exc:
+            print(f"    ⚠️  HTML parse failed; treating as generic asset: {exc}")
+            return self._handle_non_html_asset(url, response, "download")
         
         # Extract metadata
         title = soup.find('title')

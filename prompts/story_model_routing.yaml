@@ -1,0 +1,92 @@
+# Story Model Routing
+# Routes choose a writer model based on the day's selected brief.
+# The selector/editor model remains controlled separately by STORY_SELECTOR_MODEL.
+
+routes:
+  - name: "grounded-human"
+    model: "mistralai/mistral-large-3-675b-instruct-2512"
+    description: "Best default for clean, character-driven, socially grounded stories."
+    match:
+      genre:
+        - "quiet literary realism"
+        - "domestic drama"
+        - "workplace comedy"
+        - "tender romance"
+        - "character study"
+        - "caper energy"
+      tone:
+        - "dry"
+        - "melancholic"
+        - "tender"
+        - "plainspoken"
+        - "petty"
+        - "warmth"
+      structure:
+        - "linear scene"
+        - "one conversation"
+        - "single continuous scene"
+        - "brief sections"
+        - "confession"
+      setting:
+        - "apartment"
+        - "kitchen"
+        - "market"
+        - "clinic"
+        - "school"
+        - "neighborhood"
+      theme_name:
+        - "maintenance myths"
+        - "municipal weirdness"
+        - "small gods of commerce"
+        - "counterfeit realities"
+        - "memory manipulation"
+
+  - name: "formal-experimental"
+    model: "qwen/qwen3-next-80b-a3b-instruct"
+    description: "Use for more structurally adventurous or voice-led stories."
+    match:
+      pov:
+        - "epistolary"
+        - "multiple short first-person voices"
+        - "collective first person plural"
+        - "instructional voice"
+        - "oral storytelling"
+      structure:
+        - "fragmented vignettes"
+        - "list or inventory"
+        - "two short timelines"
+        - "sequence of objects"
+        - "form, report"
+      genre:
+        - "satire"
+        - "moral fable"
+        - "noir-ish"
+      tone:
+        - "playful"
+        - "bitter"
+        - "patient wonder"
+      theme_name:
+        - "recursive realities"
+        - "digital archaeology"
+        - "cryptographic secrets"
+
+  - name: "uncanny-speculative"
+    model: "nvidia/llama-3.3-nemotron-super-49b-v1.5"
+    description: "Keep as fallback for stranger, higher-concept, or colder speculative setups."
+    match:
+      genre:
+        - "ghost story"
+        - "impossible pressure point"
+      tone:
+        - "tense"
+        - "claustrophobic"
+      era:
+        - "deep future"
+        - "post-collapse"
+      theme_name:
+        - "parallel dimensions"
+        - "synthetic life"
+        - "signal from nowhere"
+        - "abandoned stations"
+        - "reality glitches"
+        - "consciousness frontiers"

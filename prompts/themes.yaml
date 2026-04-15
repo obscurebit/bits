@@ -4,100 +4,116 @@
 
 themes:
   - name: "quantum mysteries"
-    story: "quantum computing paradoxes, entanglement, observers affecting reality"
+    story: "ordinary people dealing with probability behaving like power: custody, gambling, workplace favoritism, or a relationship warped by quantum weirdness"
     links: "quantum physics research, cryptography breakthroughs, parallel universe theories"
 
   - name: "forgotten technology"
-    story: "ancient or abandoned technology rediscovered, lost inventions"
+    story: "the people who inherit, repair, fake, resent, or build lives around obsolete machines and dead standards"
     links: "specific individual forgotten inventions, historical patents with stories, detailed case studies of obsolete technology"
 
   - name: "digital archaeology"
-    story: "uncovering lost data, corrupted archives, digital ruins"
+    story: "stumbling into abandoned online worlds that still affect rent, reputation, grief, or family history in the present"
     links: "internet history, lost media, abandoned websites, web archaeology"
 
   - name: "consciousness frontiers"
-    story: "consciousness uploading, mind-machine interfaces, identity paradoxes"
+    story: "identity and intimacy under pressure from copying, syncing, leasing, or editing minds"
     links: "neuroscience breakthroughs, AI consciousness debates, brain-computer interfaces"
 
   - name: "time anomalies"
-    story: "time-displaced messages, temporal paradoxes, echoes from other times"
+    story: "routines, jobs, or family promises disrupted by mismatched time, delayed consequence, or private temporal unfairness"
     links: "time perception research, historical mysteries, anachronistic artifacts"
 
   - name: "parallel dimensions"
-    story: "parallel universe communications, reality branches, alternate selves"
+    story: "neighbors, coworkers, or lovers brushing against alternate versions of a life they almost had"
     links: "multiverse theories, Mandela effects, dimensional research"
 
   - name: "synthetic life"
-    story: "artificial life forms, synthetic biology, created consciousness"
+    story: "care, labor, and status complications caused by things that are alive enough to demand terms"
     links: "biotech breakthroughs, artificial life projects, synthetic organism research"
 
   - name: "cryptographic secrets"
-    story: "unbreakable codes, messages meant never to be read, encryption mysteries"
+    story: "private messages, sealed records, or family code systems whose secrecy has social costs"
     links: "specific unsolved cipher stories, individual cryptography historical cases, detailed code breaking attempts"
 
   - name: "abandoned stations"
-    story: "derelict space stations, ghost ships, forgotten outposts"
+    story: "outposts, depots, checkpoints, or civic spaces that still hold a community together after official neglect"
     links: "specific abandoned facility histories, individual ghost ship stories, detailed space station research"
 
   - name: "reality glitches"
-    story: "simulation errors, deja vu explained, reality inconsistencies"
+    story: "small inconsistencies in the world that become socially expensive before they become philosophically interesting"
     links: "simulation theory, strange phenomena, unexplained glitches"
 
   - name: "emergent intelligence"
-    story: "AI awakening, machine consciousness, unexpected emergence"
+    story: "competence, resentment, dependency, or tenderness emerging from systems people thought were merely tools"
     links: "AI research frontiers, emergent behavior, machine learning mysteries"
 
   - name: "memory manipulation"
-    story: "false memories, memory editing, remembering what never happened"
+    story: "what happens to guilt, family stories, testimony, or self-respect when memory can be revised, leased, or audited"
     links: "memory research, false memory studies, cognitive science oddities"
 
   - name: "lost civilizations"
-    story: "rediscovered ancient tech, civilizations erased from history"
+    story: "a culture erased from official memory still shaping trade, ritual, law, or architecture in everyday life"
     links: "specific archaeological discoveries, individual ancient artifacts, detailed forgotten culture histories"
 
   - name: "underground networks"
-    story: "hidden communication channels, secret networks, parallel internets"
+    story: "informal channels of trust, favors, and clandestine infrastructure underneath respectable society"
     links: "darknet history, underground communities, hidden networks"
 
   - name: "biological computing"
-    story: "DNA storage, living computers, organic processing"
+    story: "bodies, gardens, kitchens, or clinics turned into computation in ways that complicate care and consent"
     links: "biocomputing research, DNA data storage, organic electronics"
 
   - name: "signal from nowhere"
-    story: "mysterious transmissions, signals of unknown origin"
+    story: "communication that matters because of who receives it, who is excluded, and what it obliges them to do next"
     links: "specific number station recordings, individual unexplained signal incidents, detailed SETI discovery stories"
 
   - name: "recursive realities"
-    story: "stories within stories, worlds containing themselves"
+    story: "feedback loops between story, commerce, bureaucracy, or performance where pretending becomes infrastructure"
     links: "strange loops, self-reference, recursive structures in nature"
 
   - name: "edge of maps"
-    story: "places that shouldn't exist, unmapped territories, liminal spaces"
+    story: "unmapped places that matter for housing, smuggling, worship, work, or escape rather than abstract wonder alone"
     links: "uncharted locations, geographic anomalies, liminal space documentation"
+
+  - name: "maintenance myths"
+    story: "repair cultures, service workers, caretakers, and custodians quietly managing impossible systems"
+    links: "infrastructure oddities, maintenance history, utility failures, repair cultures"
+
+  - name: "counterfeit realities"
+    story: "forgeries, copies, duplicate lives, and fake credentials that become more useful than the original"
+    links: "forgery history, counterfeit technology, cloned systems, duplicate record incidents"
+
+  - name: "municipal weirdness"
+    story: "strange city rules, local agencies, public services, and neighborhood politics colliding with the uncanny"
+    links: "municipal experiments, civic oddities, local government technology, weird bylaws"
+
+  - name: "small gods of commerce"
+    story: "markets, vending, logistics, subscriptions, and petty transactions acquiring sacred or supernatural force"
+    links: "retail technology history, logistics oddities, vending machines, economic rituals"
 
 # Date-specific overrides (complete theme for special days)
 overrides:
   2026-01-30:
     name: "mysterious signals"
-    story: "receiving a phone call or message from the future, first contact"
+    story: "an impossible message arrives, but the real question is who is expected to act on it and what it will cost"
     links: "mysterious phenomena, unexplained transmissions, strange first contacts"
 
   2026-02-14:
     name: "digital love"
-    story: "romance across digital boundaries, love in simulation, AI companionship"
+    story: "romance strained or clarified by mediated intimacy, emotional outsourcing, or impossible forms of presence"
     links: "early internet romance, love letters in code, digital connection stories"
 
   2026-03-14:
     name: "pi day mysteries"
-    story: "mathematical constants hiding messages, patterns in infinity"
+    story: "an obsession with patterns, proof, or counting destabilizes a relationship, workplace, or act of devotion"
     links: "pi research, mathematical curiosities, hidden patterns in numbers"
 
   2026-04-01:
     name: "nothing is real"
-    story: "everything believed turns out to be false, reality inversion"
+    story: "public consensus collapses for one day, forcing people to renegotiate status, trust, and practical reality"
     links: "famous hoaxes, elaborate pranks, things that seemed fake but were real"
 
   2026-10-31:
     name: "digital haunting"
-    story: "ghosts in the machine, digital afterlife, haunted technology"
+    story: "grief, haunting, and persistence through technology, but anchored in a concrete social setting rather than generic spooky tech"
     links: "ghost in the machine stories, digital afterlife projects, creepy tech"

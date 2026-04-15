@@ -5,11 +5,14 @@ Technical documentation for developers working on Obscure Bit.
 ## Quick Start
 
 ```bash
-# Clone and install
+# Clone and bootstrap the local venv with uv
 git clone https://github.com/obscurebit/b1ts.git
 cd b1ts
-pip install -r requirements.txt
+uv venv
+uv pip install --python .venv/bin/python -r requirements.txt
 ```
+
+`uv` is the default local runner for this repo. The project still keeps a simple `requirements.txt`, but local execution should assume `.venv` + `uv run` so your shell Python does not become part of the runtime.
 
 ## Local Development
 
@@ -17,7 +20,7 @@ pip install -r requirements.txt
 
 ```bash
 # Start development server with live reload
-python3 -m mkdocs serve
+uv run --python .venv/bin/python mkdocs serve
 
 # Or if mkdocs is in PATH
 mkdocs serve
@@ -31,7 +34,7 @@ Changes to files in `docs/` and `overrides/` will auto-reload.
 
 ```bash
 # Build static site to site/ directory
-python3 -m mkdocs build
+uv run --python .venv/bin/python mkdocs build
 
 # Preview built site (no live reload)
 python3 -m http.server 8000 --directory site
@@ -41,13 +44,19 @@ python3 -m http.server 8000 --directory site
 
 **`mkdocs: command not found`**
 ```bash
-# Use python module syntax instead
-python3 -m mkdocs serve
+# Use the project venv through uv
+uv run --python .venv/bin/python mkdocs serve
 ```
 
 **Missing dependencies**
 ```bash
-pip install mkdocs-material
+uv pip install --python .venv/bin/python -r requirements.txt
+```
+
+**Shell Python is missing packages like `yaml`**
+```bash
+# Do not rely on the system interpreter for project scripts
+uv run --python .venv/bin/python scripts/run_daily.py --help
 ```
 
 ## Environment Setup
@@ -58,9 +67,14 @@ pip install mkdocs-material
 export OPENAI_API_KEY="your-nvidia-nim-api-key"
 export OPENAI_API_BASE="https://integrate.api.nvidia.com/v1"
 export OPENAI_MODEL="nvidia/llama-3.3-nemotron-super-49b-v1.5"
-export SERPAPI_KEY="optional-serpapi-key"              # Enables resilient Google results
-export CONTEXTUALWEB_API_KEY="optional-rapidapi-key"  # Backup search provider
+export STORY_MODEL_ROUTING="1"                          # Route writer model by story brief
+export STORY_CANDIDATES="2"                              # Generate multiple drafts and auto-pick the strongest
+export STORY_SELECTOR_MODEL="$OPENAI_MODEL"             # Optional separate editor model
 ```
+
+For story quality A/B tests on `build.nvidia.com`, keep the prompts fixed and swap only `OPENAI_MODEL`. Two worthwhile candidates to compare against the current default are `qwen/qwen3-next-80b-a3b-instruct` and `mistralai/mistral-large-3-675b-instruct-2512`.
+
+Link discovery is intentionally lane-first. The nightly job does not use generic search-result APIs; it starts from curated source neighborhoods, expands with bounded crawl, and curates from the repo-backed corpus.
 
 ### GitHub Secrets (for CI)
 
@@ -69,8 +83,9 @@ export CONTEXTUALWEB_API_KEY="optional-rapidapi-key"  # Backup search provider
 | `OPENAI_API_KEY` | NVIDIA NIM API key |
 | `OPENAI_API_BASE` | API endpoint (optional) |
 | `OPENAI_MODEL` | Model name (optional) |
-| `SERPAPI_KEY` | Optional SerpAPI key for reliable Google results |
-| `CONTEXTUALWEB_API_KEY` | Optional RapidAPI key for ContextualWeb backup |
+| `STORY_MODEL_ROUTING` | Enable brief-based writer model routing |
+| `STORY_CANDIDATES` | Number of story drafts to generate before selection |
+| `STORY_SELECTOR_MODEL` | Optional separate model for picking the best draft |
 
 ## Scripts
 
@@ -78,30 +93,38 @@ export CONTEXTUALWEB_API_KEY="optional-rapidapi-key"  # Backup search provider
 
 ```bash
 # Full daily run (story + links + landing)
-python scripts/run_daily.py
+uv run --python .venv/bin/python scripts/run_daily.py
 
 # Generate a new story
-python scripts/generate_story.py
+uv run --python .venv/bin/python scripts/generate_story.py
 
 # Generate new links
-python scripts/generate_links.py
+uv run --python .venv/bin/python scripts/generate_links.py
 
 # Update landing pages and archives
-python scripts/update_landing.py
+uv run --python .venv/bin/python scripts/update_landing.py
 ```
 
 ### Link Registry
 
-The link generation system uses a persistent SHA-256 URL registry (`cache/link_registry.json`) to prevent cross-day duplicates. Since `cache/` is gitignored, the registry must be rebuilt before each run in CI.
+The link generation system now persists discovery memory directly in the repository under `data/discovery/`. That lets nightly GitHub Actions runs accumulate candidates over time instead of starting from zero.
 
 ```bash
-# Seed the registry from all existing published link posts
-python scripts/backfill_registry.py
+# Seed the link registry from all existing published link posts
+uv run --python .venv/bin/python scripts/backfill_registry.py
 
-# The registry is automatically updated after each generate_links.py run
+# The registry and discovery corpus are automatically updated after each generate_links.py run
 ```
 
-In CI, the `Backfill Link Registry` step runs automatically before daily generation.
+Repo-backed discovery files:
+
+- `data/discovery/link_registry.json` - hard dedup for previously published URLs
+- `data/discovery/candidates.jsonl` - compact corpus of discovered candidate pages
+- `data/discovery/selection_history.jsonl` - nightly selection history for novelty penalties
+- `data/discovery/domain_state.json` - domain freshness/frequency tracking
+- `data/discovery/story_context/` - same-day motifs exported for story generation
+
+In CI, the backfill step remains as a safety bootstrap if the registry ever falls behind the published posts.
 
 ### Backfill Past Dates
 
@@ -109,16 +132,16 @@ All generation scripts accept `--date YYYY-MM-DD` to generate content for a spec
 
 ```bash
 # Full backfill for a specific date (skip landing since it should reflect latest)
-python scripts/run_daily.py --date 2026-02-10 --skip-landing
+uv run --python .venv/bin/python scripts/run_daily.py --date 2026-02-10 --skip-landing
 
 # Backfill just a story
-python scripts/generate_story.py --date 2026-02-10
+uv run --python .venv/bin/python scripts/generate_story.py --date 2026-02-10
 
 # Backfill just links
-python scripts/generate_links.py --date 2026-02-10
+uv run --python .venv/bin/python scripts/generate_links.py --date 2026-02-10
 
 # Then rebuild archives to include the new content
-python scripts/update_landing.py
+uv run --python .venv/bin/python scripts/update_landing.py
 ```
 
 ### Substack Publishing
@@ -129,14 +152,14 @@ Substack uses Cloudflare protection that blocks automated requests. We use a two
 
 ```bash
 # Install Playwright (one-time)
-pip3 install playwright
-python3 -m playwright install chromium
+uv pip install --python .venv/bin/python playwright
+uv run --python .venv/bin/python playwright install chromium
 
 # Login and extract cookies (opens browser)
-python3 scripts/substack_playwright.py --login
+uv run --python .venv/bin/python scripts/substack_playwright.py --login
 
 # Export cookies for GitHub Actions (optional)
-python3 scripts/substack_playwright.py --export-cookies
+uv run --python .venv/bin/python scripts/substack_playwright.py --export-cookies
 ```
 
 Cookies are saved to `~/.substack_cookies.json`.
@@ -149,13 +172,13 @@ export SUBSTACK_PUBLICATION_URL="https://obscurebit.substack.com"
 export SUBSTACK_COOKIES_PATH="$HOME/.substack_cookies.json"
 
 # Create draft for edition
-python3 scripts/publish_substack.py --edition 3 --draft
+uv run --python .venv/bin/python scripts/publish_substack.py --edition 3 --draft
 
 # Publish directly
-python3 scripts/publish_substack.py --edition 3 --publish
+uv run --python .venv/bin/python scripts/publish_substack.py --edition 3 --publish
 
 # Force republish
-python3 scripts/publish_substack.py --edition 3 --publish --force
+uv run --python .venv/bin/python scripts/publish_substack.py --edition 3 --publish --force
 ```
 
 #### Alternative: Manual Cookie Export
@@ -183,7 +206,8 @@ b1ts/
 ├── scripts/
 │   ├── run_daily.py            # Orchestrator (theme → story + links + landing)
 │   ├── generate_story.py       # AI story generation w/ style modifiers
-│   ├── generate_links.py       # Links generation v3.1 w/ registry + quality gates
+│   ├── generate_links.py       # Lane-first obscure link discovery + repo-backed corpus
+│   ├── discovery_corpus.py     # Persistent discovery memory + novelty-aware selection
 │   ├── link_registry.py        # Persistent SHA-256 URL registry for cross-day dedup
 │   ├── backfill_registry.py    # Seeds registry from existing published posts
 │   ├── web_scraper.py          # Content extraction & analysis
@@ -193,18 +217,26 @@ b1ts/
 │   └── test_web_access.py      # Web access diagnostics
 ├── prompts/
 │   ├── story_system.md         # Story generation system prompt
+│   ├── story_model_routing.yaml # Writer model routing rules by brief shape
+│   ├── links_judge_system.md   # Hidden-gem scoring prompt for link curation
 │   ├── links_system.md         # Links generation system prompt
+│   ├── source_lanes.yaml       # Curated lane catalog + theme-specific discovery overrides
 │   ├── research_strategy_system.md  # LLM research strategy prompt
 │   ├── themes.yaml             # Unified themes for stories + links
 │   └── style_modifiers.yaml    # Randomized story constraint pools
 ├── overrides/
 │   ├── home.html               # Custom homepage template
 │   └── main.html               # Base template override
+├── data/discovery/
+│   ├── link_registry.json      # Persistent URL hash registry for hard dedup
+│   ├── candidates.jsonl        # Repo-backed discovery corpus
+│   ├── selection_history.jsonl # Published-link history for novelty penalties
+│   ├── domain_state.json       # Per-domain freshness/frequency tracking
+│   └── story_context/          # Selected-link motifs for same-day story inspiration
 ├── cache/
-│   ├── link_registry.json      # Persistent URL hash registry (gitignored, rebuilt by backfill)
-│   └── web_content/            # Cached scraped content
+│   └── web_content/            # Ephemeral scraped-page cache
 ├── mkdocs.yml                  # MkDocs configuration
-└── requirements.txt            # Python dependencies
+└── requirements.txt            # Python dependencies installed into .venv via uv
 ```
 
 ## Workflows
@@ -213,43 +245,40 @@ b1ts/
 
 Runs daily at 6 AM UTC via `.github/workflows/generate-content.yml`:
 
-1. Backfill link registry from existing posts (since `cache/` is gitignored)
-2. Generate story → `docs/bits/posts/`
-3. Generate links → `docs/links/posts/` (registry filters previously-published URLs)
+1. Bootstrap the link registry if needed from existing posts
+2. Explore curated source lanes, bounded seed-page crawl, and trusted-domain search; update the discovery corpus, then publish links → `docs/links/posts/`
+3. Generate story → `docs/bits/posts/` using selected-link motifs from the same run
 4. Update landing pages and archives
-5. Commit and push → triggers GitHub Pages deploy
+5. Commit and push → persists discovery memory and triggers GitHub Pages deploy
 
 #### Manual Orchestration
 
 Use `scripts/run_daily.py` to run all three steps locally with a single command:
 
 ```bash
-python scripts/run_daily.py
+uv run --python .venv/bin/python scripts/run_daily.py
 ```
 
 **Options**
 
 ```bash
 # Provide explicit theme JSON (string or path)
-python scripts/run_daily.py --theme-json '{"name": "quantum mysteries", "story": "decoder cults", "links": "analog cryptography"}'
-python scripts/run_daily.py --theme-json path/to/custom-theme.json
+uv run --python .venv/bin/python scripts/run_daily.py --theme-json '{"name": "quantum mysteries", "story": "decoder cults", "links": "analog cryptography"}'
+uv run --python .venv/bin/python scripts/run_daily.py --theme-json path/to/custom-theme.json
 
 # Pick a specific date from themes.yaml (uses overrides or rotation)
-python scripts/run_daily.py --date 2026-02-14
+uv run --python .venv/bin/python scripts/run_daily.py --date 2026-02-14
 
 # Skip specific steps if needed
-python scripts/run_daily.py --skip-story      # links + landing only
-python scripts/run_daily.py --skip-links      # story + landing only
-python scripts/run_daily.py --skip-landing    # story + links only
+uv run --python .venv/bin/python scripts/run_daily.py --skip-story      # links + landing only
+uv run --python .venv/bin/python scripts/run_daily.py --skip-links      # story + landing only
+uv run --python .venv/bin/python scripts/run_daily.py --skip-landing    # story + links only
 
 # Pass overrides directly to individual scripts
-python scripts/generate_links.py --theme-json '{"name": "lost utilities", "story": "haunted telecom", "links": "abandoned power grids"}'
-python scripts/generate_story.py --theme-json custom-theme.json
-python scripts/update_landing.py --theme-json custom-theme.json
+uv run --python .venv/bin/python scripts/generate_links.py --theme-json '{"name": "lost utilities", "story": "haunted telecom", "links": "abandoned power grids"}'
+uv run --python .venv/bin/python scripts/generate_story.py --theme-json custom-theme.json
+uv run --python .venv/bin/python scripts/update_landing.py --theme-json custom-theme.json
 
-# Provide optional search API keys for resilient link generation
-export SERPAPI_KEY="..."
-export CONTEXTUALWEB_API_KEY="..."
 ```
 
 When `--theme-json` is omitted, all scripts fall back to loading `prompts/themes.yaml` (with date overrides). Setting the `THEME_JSON` environment variable has the same effect as passing `--theme-json`.

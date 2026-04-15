@@ -18,7 +18,7 @@ import argparse
 from datetime import datetime
 from pathlib import Path
 from typing import List, Dict, Optional, Tuple
-from urllib.parse import quote_plus, urlparse, parse_qs, unquote
+from urllib.parse import quote_plus, urlparse, parse_qs, unquote, urlunparse
 import random
 import time
 import subprocess
@@ -26,31 +26,46 @@ import subprocess
 import yaml
 import requests
 from bs4 import BeautifulSoup
-from openai import OpenAI
+try:
+    import certifi
+except Exception:
+    certifi = None
+
+try:
+    from openai import OpenAI
+    OPENAI_IMPORT_ERROR = None
+except Exception as exc:
+    OpenAI = None
+    OPENAI_IMPORT_ERROR = exc
 
 # Import our web scraper
 from web_scraper import WebScraper, ScrapedContent
-from link_registry import LinkRegistry
+from link_registry import LinkRegistry, normalize_url
+from discovery_corpus import DiscoveryCorpus, STORY_CONTEXT_DIR, classify_source_lane
 
 # Configuration
 API_BASE = os.environ.get("OPENAI_API_BASE", "https://integrate.api.nvidia.com/v1")
 API_KEY = os.environ.get("OPENAI_API_KEY")
 MODEL = os.environ.get("OPENAI_MODEL", "nvidia/llama-3.3-nemotron-super-49b-v1.5")
-SERPAPI_KEY = os.environ.get("SERPAPI_KEY")
-CONTEXTUALWEB_API_KEY = os.environ.get("CONTEXTUALWEB_API_KEY")
 
 # Paths
 PROMPTS_DIR = Path(__file__).parent.parent / "prompts"
 SYSTEM_PROMPT_FILE = PROMPTS_DIR / "links_system.md"
+LINK_JUDGE_PROMPT_FILE = PROMPTS_DIR / "links_judge_system.md"
+SOURCE_LANES_FILE = PROMPTS_DIR / "source_lanes.yaml"
 THEMES_FILE = PROMPTS_DIR / "themes.yaml"
 CACHE_DIR = Path("cache/link_generation")
 CACHE_DIR.mkdir(parents=True, exist_ok=True)
 
 # Search configuration
 SEARCH_TIMEOUT = 15
+REQUEST_MAX_RETRIES = 3
+REQUEST_RETRYABLE_STATUSES = {408, 425, 429, 500, 502, 503, 504}
+NETWORK_DISABLE_AFTER_FAILURES = 4
 MAX_CANDIDATES = 40
-MIN_RELEVANCE_SCORE = 0.5
+MIN_RELEVANCE_SCORE = 0.45
 MIN_OBSCURITY_SCORE = 0.3
+MIN_GEM_SCORE = 0.55
 MIN_RELEVANCE_FALLBACK = 0.35
 MIN_OBSCURITY_FALLBACK = 0.25
 MINIMUM_SELECTED_LINKS = 3
@@ -69,6 +84,108 @@ DDG_USER_AGENTS = [
     'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Gecko/20100101 Firefox/121.0'
 ]
 
+DEFAULT_SOURCE_LANE_ORDER = [
+    "primary-doc",
+    "enthusiast-research",
+    "old-web",
+    "museum-object",
+    "local-history",
+    "niche-institution",
+    "indie-essay",
+]
+
+DEFAULT_SOURCE_LANES = {
+    "primary-doc": {
+        "seed_domains": [
+            "bitsavers.org",
+            "textfiles.com",
+            "cryptomuseum.com",
+            "codesandciphers.org.uk",
+        ],
+        "query_templates": [
+            '"{theme_name}" "{primary_term}" "manual" -wikipedia -github',
+            '"{theme_name}" "{primary_term}" "field report" -shop -store',
+            '"{theme_name}" "{links_direction}" "lab notes" -site:medium.com',
+        ],
+    },
+    "enthusiast-research": {
+        "seed_domains": [
+            "vcfed.org",
+            "nycsubway.org",
+            "subbrit.org.uk",
+            "lowtechmagazine.com",
+        ],
+        "query_templates": [
+            '"{theme_name}" "{links_direction}" "independent research"',
+            '"{theme_name}" "{primary_term}" "collector" OR "restoration"',
+            '"{theme_name}" "{links_direction}" "field notes" -wikipedia',
+        ],
+    },
+    "old-web": {
+        "seed_domains": [
+            "textfiles.com",
+            "404pagefound.com",
+            "lostmediawiki.com",
+        ],
+        "query_templates": [
+            '"{theme_name}" "{links_direction}" "personal site"',
+            '"{theme_name}" "{primary_term}" "webring" OR "BBS"',
+            '"{theme_name}" "{links_direction}" "homepage" -site:github.com',
+        ],
+    },
+    "museum-object": {
+        "seed_domains": [
+            "wellcomecollection.org",
+            "collection.sciencemuseumgroup.org.uk",
+            "si.edu",
+            "computerhistory.org",
+        ],
+        "query_templates": [
+            '"{theme_name}" "{links_direction}" "museum object" -shop -store',
+            '"{theme_name}" "{primary_term}" "collection item"',
+            '"{theme_name}" "{links_direction}" "object record"',
+        ],
+    },
+    "local-history": {
+        "seed_domains": [
+            "nycsubway.org",
+            "abandonedstations.org.uk",
+            "subbrit.org.uk",
+            "roadsideamerica.com",
+        ],
+        "query_templates": [
+            '"{theme_name}" "{links_direction}" "local history"',
+            '"{theme_name}" "{primary_term}" "historical society"',
+            '"{theme_name}" "{links_direction}" "oral history"',
+        ],
+    },
+    "niche-institution": {
+        "seed_domains": [
+            "publicdomainreview.org",
+            "wellcomecollection.org",
+            "computerhistory.org",
+            "cabinetmagazine.org",
+        ],
+        "query_templates": [
+            '"{theme_name}" "{links_direction}" "archive"',
+            '"{theme_name}" "{primary_term}" "case study" -site:.edu',
+            '"{theme_name}" "{links_direction}" "catalog"',
+        ],
+    },
+    "indie-essay": {
+        "seed_domains": [
+            "cabinetmagazine.org",
+            "lowtechmagazine.com",
+            "publicdomainreview.org",
+        ],
+        "query_templates": [
+            '"{theme_name}" "{links_direction}" essay',
+            '"{theme_name}" "{primary_term}" "notes"',
+            '"{theme_name}" "{links_direction}" "forgotten history"',
+        ],
+    },
+}
+
 THINKING_BLOCK_RE = re.compile(r'^<think>.*?</think>\s*', re.S)
 DISALLOWED_BASE_DOMAINS = ("wikipedia.org", "archive.org", "github.com")
 
@@ -77,7 +194,13 @@ DISALLOWED_LINK_DOMAINS = {
     "listverse.com", "buzzfeed.com", "boredpanda.com", "ranker.com",
     "list25.com", "viralnova.com", "thecoolist.com", "therichest.com",
     "softwareheritage.org", "packsify.com", "techaro.lol",
-    "newworldencyclopedia.org",
+    "newworldencyclopedia.org", "encyclopedia.com", "zxc.wiki",
+    "reddit.com", "www.reddit.com", "stackexchange.com", "worldbuilding.stackexchange.com",
+    "medium.com", "substack.com", "linkedin.com", "facebook.com", "x.com", "twitter.com",
+    "youtube.com", "www.youtube.com", "bsky.app", "mastodon.social", "creativecommons.org",
+    "oclc.org", "policies.oclc.org", "help.oclc.org", "lite.ip2location.com",
+    "about.marginalia-search.com",
+    "sufficientvelocity.com", "forums.sufficientvelocity.com",
 }
 
 
@@ -85,6 +208,132 @@ _last_ddg_request_time = 0.0
 _ddg_failure_count = 0
 _ddg_disabled_for_run = False
 _ddg_queries_this_run = 0
+_network_failure_count = 0
+_network_disabled_for_run = False
+
+
+def get_requests_verify():
+    """Return a CA bundle path when available so HTTPS failures are less environment-sensitive."""
+    if certifi:
+        try:
+            bundle = certifi.where()
+            if bundle and Path(bundle).exists():
+                return bundle
+        except Exception:
+            pass
+    return True
+
+
+def build_requests_session(headers: Optional[Dict[str, str]] = None) -> requests.Session:
+    session = requests.Session()
+    session.verify = get_requests_verify()
+    if headers:
+        session.headers.update(headers)
+    return session
+
+
+def _is_transient_request_error(error: Exception) -> bool:
+    message = str(error).lower()
+    markers = (
+        "name or service not known",
+        "temporary failure in name resolution",
+        "failed to resolve",
+        "name resolution",
+        "nodename nor servname provided",
+        "getaddrinfo failed",
+        "connection reset",
+        "connection aborted",
+        "connection refused",
+        "timed out",
+        "timeout",
+        "temporarily unavailable",
+        "remote disconnected",
+        "eai_again",
+    )
+    return any(marker in message for marker in markers)
+
+
+def _request_variants(url: str) -> List[str]:
+    variants = [url]
+    try:
+        parsed = urlparse(url)
+    except Exception:
+        return variants
+
+    if parsed.scheme not in {"http", "https"} or not parsed.netloc:
+        return variants
+
+    host = parsed.hostname or ""
+    if not host:
+        return variants
+
+    alternate_host = None
+    if host.startswith("www."):
+        alternate_host = host[4:]
+    elif host.count(".") == 1:
+        alternate_host = f"www.{host}"
+
+    if not alternate_host or alternate_host == host:
+        return variants
+
+    netloc = alternate_host
+    if parsed.port:
+        netloc = f"{alternate_host}:{parsed.port}"
+    alternate = urlunparse(parsed._replace(netloc=netloc))
+    if alternate not in variants:
+        variants.append(alternate)
+    return variants
+
+
+def request_with_retries(
+    session: requests.Session,
+    method: str,
+    url: str,
+    *,
+    attempts: int = REQUEST_MAX_RETRIES,
+    retry_statuses: Optional[set] = None,
+    retry_variants: bool = True,
+    retry_label: str = "request",
+    **kwargs,
+):
+    global _network_disabled_for_run
+    retry_statuses = retry_statuses or REQUEST_RETRYABLE_STATUSES
+    variants = _request_variants(url) if retry_variants else [url]
+    last_error: Optional[Exception] = None
+
+    if _network_disabled_for_run:
+        raise requests.RequestException("fresh web discovery disabled for this run after repeated transient network failures")
+
+    for attempt in range(attempts):
+        for candidate_url in variants:
+            try:
+                response = session.request(method, candidate_url, **kwargs)
+                if response.status_code in retry_statuses:
+                    print(
+                        f"      ⚠️  {retry_label} got status {response.status_code} "
+                        f"for {candidate_url[:60]}... (attempt {attempt + 1}/{attempts})"
+                    )
+                    last_error = requests.HTTPError(f"retryable status {response.status_code}")
+                    continue
+                _record_network_success()
+                return response
+            except requests.RequestException as error:
+                last_error = error
+                if not _is_transient_request_error(error):
+                    raise
+                print(
+                    f"      ⚠️  {retry_label} transient failure for {candidate_url[:60]}...: {error} "
+                    f"(attempt {attempt + 1}/{attempts})"
+                )
+
+        if attempt < attempts - 1:
+            time.sleep(1.5 * (attempt + 1))
+
+    if last_error:
+        if _is_transient_request_error(last_error):
+            _record_network_failure()
+        raise last_error
+    raise requests.RequestException(f"{retry_label} failed for {url}")
 
 
 def _throttle_ddg(min_interval: float) -> None:
@@ -116,11 +365,38 @@ def _record_ddg_failure() -> None:
         print("      ⚠️  Disabling DuckDuckGo for the remainder of this run")
 
 
+def _record_network_success() -> None:
+    global _network_failure_count
+    _network_failure_count = 0
+
+
+def _record_network_failure() -> None:
+    global _network_failure_count, _network_disabled_for_run
+    _network_failure_count += 1
+    if not _network_disabled_for_run and _network_failure_count >= NETWORK_DISABLE_AFTER_FAILURES:
+        _network_disabled_for_run = True
+        print("      ⚠️  Disabling fresh web discovery for the remainder of this run")
+
+
 def load_system_prompt() -> str:
     """Load the system prompt from external file."""
     if not SYSTEM_PROMPT_FILE.exists():
         return "You are a helpful assistant that finds obscure and interesting web links."
     return SYSTEM_PROMPT_FILE.read_text().strip()
+
+
+def load_link_judge_prompt() -> str:
+    """Load the structured link judge prompt."""
+    if not LINK_JUDGE_PROMPT_FILE.exists():
+        return "You score links for thematic fit and hidden-gem quality. Return JSON only."
+    return LINK_JUDGE_PROMPT_FILE.read_text().strip()
+
+
+def load_source_lanes() -> dict:
+    """Load curated source lanes and theme-specific seeds."""
+    if not SOURCE_LANES_FILE.exists():
+        return {}
+    return yaml.safe_load(SOURCE_LANES_FILE.read_text()) or {}
 
 
 RESEARCH_STRATEGY_PROMPT_FILE = PROMPTS_DIR / "research_strategy_system.md"
@@ -178,11 +454,11 @@ def is_disallowed_domain(domain: str) -> bool:
     domain = domain.lower()
     if domain.startswith("www."):
         domain = domain[4:]
-    if domain.endswith('.edu'):
-        return True
     if any(domain == base or domain.endswith(f".{base}") for base in DISALLOWED_BASE_DOMAINS):
         return True
-    if domain in DISALLOWED_LINK_DOMAINS:
+    if any(domain == blocked or domain.endswith(f".{blocked}") for blocked in DISALLOWED_LINK_DOMAINS):
+        return True
+    if domain.endswith(".stackexchange.com"):
         return True
     return False
 
@@ -242,6 +518,568 @@ def looks_like_boilerplate(candidate: "LinkCandidate") -> bool:
     return False
 
 
+def looks_like_bad_page_type(candidate: "LinkCandidate") -> Optional[str]:
+    """Reject homepages, search pages, generic hubs, and corporate/product fluff."""
+    url = candidate.url.lower()
+    title = (candidate.title or "").lower()
+    description = (candidate.description or "").lower()
+    domain = urlparse(candidate.url).netloc.lower()
+    combined = " ".join([title, description, candidate.content[:500].lower()])
+
+    artifact_exceptions = ["/object/", "/objects/", "/item/", "/items/", "/record/", "/records/"]
+    bad_path_markers = [
+        "/search", "?q=", "?query=", "/tag/", "/tags/", "/category/", "/categories/",
+        "/topics/", "/collections", "/collection/", "/browse", "/directory", "/directories",
+        "/index", "/about", "/about-us", "/team", "/careers", "/shop", "/products",
+        "/pricing", "/services", "/solutions", "/platform", "/docs", "/documentation",
+        "/forum/", "/forums/", "/thread/", "/threads/", "/events/", "/calendar/",
+        "/compliance", "/accessibility",
+    ]
+    if any(marker in url for marker in bad_path_markers) and not any(marker in url for marker in artifact_exceptions):
+        return "search/category/homepage/product page"
+
+    if re.fullmatch(r"https?://[^/]+/?", candidate.url.strip()):
+        return "homepage"
+
+    generic_title_markers = [
+        "search results", "home", "homepage", "about us", "products", "documentation",
+        "pricing", "services", "resources", "blog", "news", "category", "archive",
+        "all posts", "tag archive", "welcome to", "index of",
+    ]
+    if any(marker in title for marker in generic_title_markers):
+        return "generic hub title"
+
+    if any(marker in combined for marker in [
+        "sign up", "book a demo", "request a demo", "schedule a call", "our platform",
+        "contact sales", "free trial", "cookie policy", "privacy policy", "all rights reserved",
+        "community forum", "threadmarks", "upcoming event", "event calendar", "accessibility statement",
+    ]):
+        return "corporate/marketing page"
+
+    if domain.startswith("forum.") or domain.startswith("forums."):
+        return "forum/community page"
+
+    if domain.endswith(".gov") and len(candidate.content) < 900:
+        return "thin institutional page"
+
+    if len(candidate.content) < 350 and not candidate.description:
+        return "too little substance"
+
+    return None
+
+
+def extract_theme_terms(theme: dict) -> List[str]:
+    theme_name = theme.get("name", "")
+    links_direction = theme.get("links", theme_name)
+    raw_terms = re.findall(r"[A-Za-z][A-Za-z'-]{3,}", f"{theme_name} {links_direction}".lower())
+    seen = set()
+    clean = []
+    for term in raw_terms:
+        if term in {"about", "through", "their", "where", "which", "research", "stories", "history"}:
+            continue
+        if term not in seen:
+            seen.add(term)
+            clean.append(term)
+    return clean
+
+
+def _merge_unique_strings(*groups: List[str]) -> List[str]:
+    merged: List[str] = []
+    seen = set()
+    for group in groups:
+        for item in group or []:
+            text = (item or "").strip()
+            if not text:
+                continue
+            key = text.lower()
+            if key in seen:
+                continue
+            seen.add(key)
+            merged.append(text)
+    return merged
+
+
+def get_source_lane_catalog() -> dict:
+    """Return the global source-lane catalog, overlaying YAML config on sensible defaults."""
+    config = load_source_lanes()
+    global_cfg = config.get("global", {})
+    configured_lanes = global_cfg.get("lanes", {}) or {}
+    lane_catalog = {}
+
+    for lane_name in DEFAULT_SOURCE_LANE_ORDER:
+        defaults = DEFAULT_SOURCE_LANES.get(lane_name, {})
+        configured = configured_lanes.get(lane_name, {})
+        lane_catalog[lane_name] = {
+            "seed_urls": _merge_unique_strings(defaults.get("seed_urls", []), configured.get("seed_urls", [])),
+            "seed_domains": _merge_unique_strings(defaults.get("seed_domains", []), configured.get("seed_domains", [])),
+            "query_templates": _merge_unique_strings(defaults.get("query_templates", []), configured.get("query_templates", [])),
+        }
+
+    for lane_name, configured in configured_lanes.items():
+        if lane_name not in lane_catalog:
+            lane_catalog[lane_name] = {
+                "seed_urls": _merge_unique_strings(configured.get("seed_urls", [])),
+                "seed_domains": _merge_unique_strings(configured.get("seed_domains", [])),
+                "query_templates": _merge_unique_strings(configured.get("query_templates", [])),
+            }
+
+    lane_order = _merge_unique_strings(
+        global_cfg.get("lane_order", []),
+        DEFAULT_SOURCE_LANE_ORDER,
+        list(lane_catalog.keys()),
+    )
+
+    return {
+        "lane_order": lane_order,
+        "lanes": lane_catalog,
+        "seed_urls": _merge_unique_strings(global_cfg.get("seed_urls", [])),
+        "seed_domains": _merge_unique_strings(global_cfg.get("seed_domains", [])),
+        "seed_queries": _merge_unique_strings(global_cfg.get("seed_queries", [])),
+    }
+
+
+def get_theme_discovery_plan(theme: dict) -> dict:
+    """Build a lane-first discovery plan for the current theme."""
+    config = load_source_lanes()
+    catalog = get_source_lane_catalog()
+    theme_name = theme.get("name", "")
+    theme_plan = (config.get("themes") or {}).get(theme_name, {})
+    lane_overrides = theme_plan.get("lane_overrides", {}) or {}
+
+    preferred_lanes = _merge_unique_strings(
+        theme_plan.get("preferred_lanes", []),
+        catalog["lane_order"],
+    )
+
+    lane_plans = {}
+    for lane_name in preferred_lanes:
+        base = catalog["lanes"].get(lane_name, {})
+        override = lane_overrides.get(lane_name, {})
+        lane_plans[lane_name] = {
+            "seed_urls": _merge_unique_strings(override.get("seed_urls", []), base.get("seed_urls", [])),
+            "seed_domains": _merge_unique_strings(override.get("seed_domains", []), base.get("seed_domains", [])),
+            "query_templates": _merge_unique_strings(override.get("query_templates", []), base.get("query_templates", [])),
+        }
+    return {
+        "preferred_lanes": preferred_lanes,
+        "seed_urls": _merge_unique_strings(catalog.get("seed_urls", []), theme_plan.get("seed_urls", [])),
+        "seed_domains": _merge_unique_strings(catalog.get("seed_domains", []), theme_plan.get("seed_domains", [])),
+        "seed_queries": _merge_unique_strings(catalog.get("seed_queries", []), theme_plan.get("seed_queries", [])),
+        "lane_plans": lane_plans,
+    }
+
+
+def get_theme_lane_config(theme: dict) -> dict:
+    config = load_source_lanes()
+    return (config.get("themes") or {}).get(theme.get("name", ""), {}) or {}
+
+
+def get_theme_trusted_domains(theme: dict) -> List[str]:
+    plan = get_theme_discovery_plan(theme)
+    domains: List[str] = []
+    seen = set()
+
+    def add_domain(raw_domain: str) -> None:
+        normalized = (raw_domain or "").lower().strip().rstrip(".")
+        if normalized.startswith("www."):
+            normalized = normalized[4:]
+        if not normalized or normalized in seen:
+            return
+        seen.add(normalized)
+        domains.append(normalized)
+
+    for domain in plan.get("seed_domains", []):
+        add_domain(domain)
+    for url in plan.get("seed_urls", []):
+        try:
+            add_domain(urlparse(url).netloc)
+        except Exception:
+            continue
+    for lane_plan in plan.get("lane_plans", {}).values():
+        for domain in lane_plan.get("seed_domains", []):
+            add_domain(domain)
+        for url in lane_plan.get("seed_urls", []):
+            try:
+                add_domain(urlparse(url).netloc)
+            except Exception:
+                continue
+    return domains
+
+
+def is_trusted_theme_domain(url: str, theme: dict) -> bool:
+    try:
+        domain = urlparse(url).netloc.lower().rstrip(".")
+    except Exception:
+        return False
+    if domain.startswith("www."):
+        domain = domain[4:]
+    trusted_domains = get_theme_trusted_domains(theme)
+    return any(domain == trusted or domain.endswith(f".{trusted}") for trusted in trusted_domains)
+
+
+def _normalize_theme_terms(values: List[str], min_length: int = 4) -> List[str]:
+    cleaned: List[str] = []
+    seen = set()
+    for value in values:
+        normalized = re.sub(r"\s+", " ", (value or "").lower()).strip()
+        if len(normalized) < min_length:
+            continue
+        if normalized in seen:
+            continue
+        seen.add(normalized)
+        cleaned.append(normalized)
+    return cleaned
+
+
+def get_theme_focus_terms(theme: dict) -> List[str]:
+    """Return theme-specific anchor phrases used to reject drift and improve relevance scoring."""
+    lane_config = get_theme_lane_config(theme)
+    return _normalize_theme_terms(_merge_unique_strings(
+        lane_config.get("focus_terms", []),
+        [theme.get("name", "")],
+        [part.strip() for part in theme.get("links", "").split(",") if part.strip()],
+    ))
+
+
+def get_theme_drift_terms(theme: dict) -> List[str]:
+    lane_config = get_theme_lane_config(theme)
+    return _normalize_theme_terms(lane_config.get("drift_terms", []), min_length=3)
+
+
+def get_theme_blocked_domains(theme: dict) -> List[str]:
+    lane_config = get_theme_lane_config(theme)
+    domains: List[str] = []
+    seen = set()
+    for domain in lane_config.get("blocked_domains", []) or []:
+        normalized = (domain or "").lower().strip().rstrip(".")
+        if normalized.startswith("www."):
+            normalized = normalized[4:]
+        if not normalized or normalized in seen:
+            continue
+        seen.add(normalized)
+        domains.append(normalized)
+    return domains
+
+
+def theme_focus_hits(candidate: "LinkCandidate", theme: dict) -> List[str]:
+    text = " ".join([
+        candidate.url,
+        candidate.title,
+        candidate.description,
+        " ".join(candidate.concepts[:8]),
+        candidate.content[:1800],
+    ]).lower()
+    return [term for term in get_theme_focus_terms(theme) if term and term in text]
+
+
+def theme_drift_hits(candidate: "LinkCandidate", theme: dict) -> List[str]:
+    text = " ".join([
+        candidate.url,
+        candidate.title,
+        candidate.description,
+        " ".join(candidate.concepts[:8]),
+        candidate.content[:1500],
+    ]).lower()
+    return [term for term in get_theme_drift_terms(theme) if term and term in text]
+
+
+def is_theme_blocked_domain(url: str, theme: dict) -> bool:
+    try:
+        domain = urlparse(url).netloc.lower().rstrip(".")
+    except Exception:
+        return False
+    if domain.startswith("www."):
+        domain = domain[4:]
+    blocked_domains = get_theme_blocked_domains(theme)
+    return any(domain == blocked or domain.endswith(f".{blocked}") for blocked in blocked_domains)
+
+
+def get_theme_rejection_reason(candidate: "LinkCandidate", theme: dict) -> Optional[str]:
+    if is_theme_blocked_domain(candidate.url, theme):
+        return "theme-blocked domain"
+
+    if theme_focus_hits(candidate, theme):
+        return None
+
+    drift_hits = theme_drift_hits(candidate, theme)
+    if not drift_hits:
+        return None
+
+    title_text = " ".join([candidate.url, candidate.title, candidate.description]).lower()
+    if any(term in title_text for term in drift_hits) or len(drift_hits) >= 2:
+        return f"theme drift: {drift_hits[0]}"
+    return None
+
+
+def looks_off_theme(candidate: "LinkCandidate", theme: dict) -> bool:
+    """Reject pages that never meaningfully touch the theme, even if they are obscure."""
+    hits = theme_focus_hits(candidate, theme)
+    if hits:
+        return False
+
+    generic_terms = [term for term in extract_theme_terms(theme) if len(term) >= 5]
+    if not generic_terms:
+        return False
+
+    title_text = " ".join([
+        candidate.url,
+        candidate.title,
+        candidate.description,
+    ]).lower()
+    body_text = " ".join([
+        " ".join(candidate.concepts[:8]),
+        candidate.content[:1000],
+    ]).lower()
+    title_hits = sum(1 for term in generic_terms if term in title_text)
+    body_hits = sum(1 for term in generic_terms if term in body_text)
+    if title_hits >= 1 and body_hits >= 1:
+        return False
+
+    text = " ".join([
+        candidate.url,
+        candidate.title,
+        candidate.description,
+        " ".join(candidate.concepts[:8]),
+        candidate.content[:1000],
+    ]).lower()
+    generic_hits = sum(1 for term in generic_terms if term in text)
+    return generic_hits < 2
+
+
+def build_lane_query(template: str, theme: dict, lane_name: str) -> str:
+    """Render a lane query template with theme-specific terms."""
+    theme_name = theme.get("name", "")
+    links_direction = theme.get("links", theme_name)
+    direction_focus = links_direction.split(",")[0].strip() if "," in links_direction else links_direction
+    terms = extract_theme_terms(theme)
+    primary_term = terms[0] if terms else theme_name
+    secondary_term = terms[1] if len(terms) > 1 else primary_term
+    theme_terms = " ".join(terms[:4]) or theme_name
+    lane_label = lane_name.replace("-", " ")
+    try:
+        return template.format(
+            theme_name=theme_name,
+            links_direction=direction_focus,
+            primary_term=primary_term,
+            secondary_term=secondary_term,
+            theme_terms=theme_terms,
+            lane_name=lane_label,
+        )
+    except KeyError:
+        return template
+
+
+def looks_like_bad_url_shape(url: str, anchor_text: str = "") -> bool:
+    text = f"{url.lower()} {(anchor_text or '').lower()}"
+    artifact_exceptions = ["/object/", "/objects/", "/item/", "/items/", "/record/", "/records/"]
+    bad_markers = [
+        "/search", "?q=", "?query=", "/tag/", "/tags/", "/category/", "/categories/",
+        "/topics/", "/collections", "/collection/", "/browse", "/directory", "/directories/",
+        "/about", "/contact", "/privacy", "/terms", "/shop", "/products", "/pricing",
+        "/services", "/solutions", "/platform", "/docs", "/documentation", "/feed",
+        "/rss", ".rss", ".xml", "sitemap", "/wp-json", "/author/", "/page/", "login", "signup", "subscribe",
+        "/forum/", "/forums/", "/thread/", "/threads/", "threadmarks", "/events/", "/calendar/",
+        "compliance", "accessibility",
+    ]
+    return any(marker in text for marker in bad_markers) and not any(marker in text for marker in artifact_exceptions)
+
+
+def score_seed_link(candidate_url: str, anchor_text: str, seed_domain: str) -> float:
+    score = 0.0
+    parsed = urlparse(candidate_url)
+    path = parsed.path or "/"
+    depth = len([part for part in path.split("/") if part])
+
+    if parsed.netloc.lower().rstrip(".").startswith("www."):
+        domain = parsed.netloc.lower().rstrip(".")[4:]
+    else:
+        domain = parsed.netloc.lower().rstrip(".")
+
+    if domain == seed_domain:
+        score += 0.25
+
+    score += min(depth * 0.08, 0.32)
+
+    if re.search(r"/(article|articles|essay|essays|object|objects|station|manual|history|record|entry|report|notes|archive)/", path.lower()):
+        score += 0.2
+    if re.search(r"\d", path):
+        score += 0.08
+
+    anchor_len = len((anchor_text or "").strip())
+    if 10 <= anchor_len <= 90:
+        score += 0.1
+
+    if looks_like_bad_url_shape(candidate_url, anchor_text):
+        score -= 0.5
+
+    return score
+
+
+def crawl_seed_page(seed_url: str, max_links: int = 10) -> List[str]:
+    """Extract promising child pages from a curated seed page."""
+    if _network_disabled_for_run:
+        print(f"    ⚠️  Skipping seed crawl; fresh web discovery disabled for run")
+        return []
+    try:
+        response = request_with_retries(
+            build_requests_session(headers={"User-Agent": random.choice(DDG_USER_AGENTS)}),
+            "get",
+            seed_url,
+            retry_label="seed crawl",
+            timeout=SEARCH_TIMEOUT,
+        )
+        if response.status_code != 200 or "text/html" not in response.headers.get("Content-Type", "").lower():
+            return []
+    except Exception as e:
+        print(f"    ⚠️  Seed crawl failed for {seed_url[:60]}...: {e}")
+        return []
+
+    soup = BeautifulSoup(response.text, "html.parser")
+    seed_domain = urlparse(seed_url).netloc.lower().rstrip(".")
+    if seed_domain.startswith("www."):
+        seed_domain = seed_domain[4:]
+
+    scored_links = []
+    seen = set()
+    for link in soup.find_all("a", href=True):
+        href = link.get("href", "").strip()
+        text = link.get_text(" ", strip=True)
+        if not href:
+            continue
+        absolute = requests.compat.urljoin(seed_url, href)
+        if not absolute.startswith("http"):
+            continue
+        normalized = normalize_url(absolute)
+        if normalized in seen:
+            continue
+        seen.add(normalized)
+
+        try:
+            parsed = urlparse(absolute)
+        except Exception:
+            continue
+
+        domain = parsed.netloc.lower().rstrip(".")
+        if domain.startswith("www."):
+            domain = domain[4:]
+
+        if domain != seed_domain:
+            continue
+        if is_disallowed_domain(domain):
+            continue
+        if looks_like_bad_url_shape(absolute, text):
+            continue
+
+        score = score_seed_link(absolute, text, seed_domain)
+        if score <= 0:
+            continue
+        scored_links.append((score, absolute))
+
+    scored_links.sort(key=lambda item: item[0], reverse=True)
+    return [url for _, url in scored_links[:max_links]]
+
+
+def dedupe_candidate_urls(urls: List[str], limit: Optional[int] = None) -> List[str]:
+    clean: List[str] = []
+    seen = set()
+    for url in urls:
+        try:
+            domain = urlparse(url).netloc.lower()
+        except Exception:
+            continue
+        if not domain or is_disallowed_domain(domain) or looks_like_bad_url_shape(url):
+            continue
+        normalized = normalize_url(url)
+        if normalized in seen:
+            continue
+        seen.add(normalized)
+        clean.append(url)
+        if limit and len(clean) >= limit:
+            break
+    return clean
+
+
+def search_seed_domain(domain: str, queries: List[str], max_results: int = 8) -> List[str]:
+    """Search within a trusted domain using lane-specific queries."""
+    collected: List[str] = []
+    for query in queries:
+        site_query = f"site:{domain} {query}".strip()
+        results = search_marginalia(site_query, max_results=max_results)
+        if not results:
+            results = search_duckduckgo(site_query, max_results=min(4, max_results))
+        collected.extend(results)
+        if len(dedupe_candidate_urls(collected)) >= max_results:
+            break
+    return dedupe_candidate_urls(collected, limit=max_results)
+
+
+def expand_candidate_neighborhood(seed_urls: List[str], max_seed_pages: int = 4, max_links: int = 4) -> List[str]:
+    """Crawl a small neighborhood around promising pages to find adjacent hidden gems."""
+    expanded: List[str] = []
+    for seed_url in dedupe_candidate_urls(seed_urls, limit=max_seed_pages):
+        expanded.extend(crawl_seed_page(seed_url, max_links=max_links))
+    return dedupe_candidate_urls(expanded, limit=max_seed_pages * max_links)
+
+
+def get_curated_seed_urls(theme: dict) -> List[str]:
+    """Return URLs from globally trusted seed pages and theme-specific scout queries."""
+    plan = get_theme_discovery_plan(theme)
+    discovered: List[str] = []
+
+    if plan.get("seed_urls"):
+        print("\n  Curated seed pages...")
+        for seed_url in plan["seed_urls"][:8]:
+            print(f"    Seed: {seed_url}")
+            discovered.append(seed_url)
+            discovered.extend(crawl_seed_page(seed_url, max_links=6))
+
+    if plan.get("seed_domains"):
+        print("\n  Curated scout domains...")
+        for domain in plan["seed_domains"][:6]:
+            scout_query = build_lane_query('"{theme_name}" "{links_direction}"', theme, "theme-scouting")
+            discovered.extend(search_seed_domain(domain, [scout_query], max_results=4))
+
+    if plan.get("seed_queries"):
+        print("\n  Curated scout queries...")
+        for query in plan["seed_queries"][:6]:
+            rendered = build_lane_query(query, theme, "theme-scouting")
+            discovered.extend(search_marginalia(rendered, max_results=5))
+
+    clean = dedupe_candidate_urls(discovered, limit=24)
+    print(f"  Curated scout seeds produced {len(clean)} candidate URLs")
+    return clean
+
+
+def discover_lane_urls(theme: dict, lane_name: str, lane_plan: dict) -> List[str]:
+    """Discover promising candidates by exploring one specific source lane."""
+    discovered: List[str] = []
+    rendered_queries = [build_lane_query(query, theme, lane_name) for query in lane_plan.get("query_templates", [])[:4]]
+
+    print(f"\n  Lane: {lane_name}")
+
+    for seed_url in lane_plan.get("seed_urls", [])[:6]:
+        print(f"    Seed page: {seed_url}")
+        discovered.append(seed_url)
+        discovered.extend(crawl_seed_page(seed_url, max_links=5))
+
+    for domain in lane_plan.get("seed_domains", [])[:5]:
+        print(f"    Trusted domain: {domain}")
+        discovered.extend(search_seed_domain(domain, rendered_queries, max_results=5))
+
+    for query in rendered_queries:
+        print(f"    Lane query: {query[:100]}")
+        discovered.extend(search_marginalia(query, max_results=4))
+
+    neighborhood = expand_candidate_neighborhood(discovered, max_seed_pages=4, max_links=4)
+    if neighborhood:
+        print(f"    Expanded neighborhood: {len(neighborhood)} adjacent pages")
+        discovered.extend(neighborhood)
+
+    clean = dedupe_candidate_urls(discovered, limit=16)
+    print(f"    Lane yielded {len(clean)} candidate URLs")
+    return clean
+
+
 def ensure_minimum_entries(primary: List[str], backups: List[str], minimum: int) -> List[str]:
     merged = []
     seen = set()
@@ -263,15 +1101,21 @@ def search_marginalia(query: str, max_results: int = 8) -> List[str]:
     clean_query = query.strip()
     if not clean_query:
         return []
+    if _network_disabled_for_run:
+        print("      ⚠️  Skipping Marginalia; fresh web discovery disabled for run")
+        return []
     headers = {
         'User-Agent': random.choice(DDG_USER_AGENTS),
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
     }
     try:
-        response = requests.get(
+        response = request_with_retries(
+            build_requests_session(headers=headers),
+            "get",
             "https://search.marginalia.nu/search",
+            retry_variants=False,
+            retry_label="Marginalia",
             params={"query": clean_query},
-            headers=headers,
             timeout=SEARCH_TIMEOUT,
         )
         if response.status_code != 200:
@@ -301,21 +1145,21 @@ def generate_backup_domain_ideas(theme_name: str, links_direction: str) -> List[
     base = theme_name.lower()
     direction = links_direction.lower()
     return [
-        f"Recovered personal diaries describing {base} moments hidden in {direction} collections.",
-        f"Technical excavation logs from hobbyists restoring {base} artifacts tied to {direction} history.",
-        f"Museum or community oral histories documenting {base} through {direction} field work.",
-        f"Investigations into lost or shuttered projects where {base} research went missing within {direction} archives.",
-        f"Independent labs experimenting with preserving {base} materials discovered via {direction} leads.",
+        f"Personal research pages documenting one odd corner of {base} in relation to {direction}.",
+        f"Community archives or local history sites with one unusually specific {base} artifact or story.",
+        f"Hobbyist restoration logs, field notes, or object writeups tied to {base} and {direction}.",
+        f"Dead-web or old-web pages preserving a failed project, strange document, or forgotten system about {base}.",
+        f"Museum object pages or oral-history fragments where {base} appears in a singular, concrete way.",
     ]
 
 
 def generate_backup_search_queries(theme_name: str, links_direction: str) -> List[str]:
     combos = [
-        f'"{theme_name}" "field notes" {links_direction}',
-        f'{theme_name} "case study" intitle:"archives" -wikipedia',
-        f'"{theme_name}" "primary source" {links_direction}',
-        f'{theme_name} "artifact" "personal blog"',
-        f'{theme_name} "museum report" "obscure"',
+        f'"{theme_name}" "field notes" "{links_direction}" -wikipedia -github -site:medium.com',
+        f'"{theme_name}" "oral history" "{links_direction}" -site:.edu -site:archive.org',
+        f'"{theme_name}" "museum object" "{links_direction}" -shop -store',
+        f'"{theme_name}" "personal research" -wikipedia -site:substack.com',
+        f'"{theme_name}" "forgotten project" "{links_direction}"',
     ]
     return combos
 
@@ -338,6 +1182,43 @@ def filter_llm_urls(urls: List[str]) -> List[str]:
     return filtered[:5]
 
 
+def filter_llm_direct_urls(urls: List[str], theme: dict) -> List[str]:
+    """Only trust direct URLs from the model if they stay inside curated source neighborhoods."""
+    plan = get_theme_discovery_plan(theme)
+    allowed_domains = set()
+    for domain in plan.get("seed_domains", []):
+        allowed_domains.add(domain.lower().lstrip("www."))
+    for url in plan.get("seed_urls", []):
+        parsed = urlparse(url)
+        domain = parsed.netloc.lower().rstrip(".")
+        if domain.startswith("www."):
+            domain = domain[4:]
+        if domain:
+            allowed_domains.add(domain)
+    for lane_plan in plan.get("lane_plans", {}).values():
+        for domain in lane_plan.get("seed_domains", []):
+            allowed_domains.add(domain.lower().lstrip("www."))
+        for url in lane_plan.get("seed_urls", []):
+            parsed = urlparse(url)
+            domain = parsed.netloc.lower().rstrip(".")
+            if domain.startswith("www."):
+                domain = domain[4:]
+            if domain:
+                allowed_domains.add(domain)
+
+    filtered = []
+    for url in filter_llm_urls(urls):
+        try:
+            domain = urlparse(url).netloc.lower().rstrip(".")
+        except Exception:
+            continue
+        if domain.startswith("www."):
+            domain = domain[4:]
+        if domain in allowed_domains:
+            filtered.append(url)
+    return filtered[:5]
+
+
 def load_themes() -> dict:
     """Load unified themes configuration from YAML file."""
     if not THEMES_FILE.exists():
@@ -346,11 +1227,11 @@ def load_themes() -> dict:
     return yaml.safe_load(THEMES_FILE.read_text()) or {}
 
 
-def get_daily_theme() -> dict:
+def get_daily_theme(target_date: Optional[datetime] = None) -> dict:
     """Get today's theme (story + links directions)."""
-    today = datetime.now()
-    date_str = today.strftime("%Y-%m-%d")
-    day_of_year = today.timetuple().tm_yday
+    selected_date = target_date or datetime.now()
+    date_str = selected_date.strftime("%Y-%m-%d")
+    day_of_year = selected_date.timetuple().tm_yday
     
     config = load_themes()
     
@@ -380,10 +1261,15 @@ class LinkCandidate:
         self.description = description
         self.content = ""
         self.concepts: List[str] = []
+        self.interesting_bits: List[str] = []
         self.relevance_score = 0.0
         self.obscurity_score = 0.0
+        self.gem_score = 0.0
+        self.story_seed_score = 0.0
+        self.anti_corporate_score = 0.0
         self.final_score = 0.0
         self.error: Optional[str] = None
+        self.curator_reason: str = ""
         
     def to_dict(self) -> Dict:
         return {
@@ -392,14 +1278,22 @@ class LinkCandidate:
             "description": self.description,
             "relevance_score": self.relevance_score,
             "obscurity_score": self.obscurity_score,
+            "gem_score": self.gem_score,
+            "story_seed_score": self.story_seed_score,
+            "anti_corporate_score": self.anti_corporate_score,
             "final_score": self.final_score,
             "concepts": self.concepts[:5],
+            "interesting_bits": self.interesting_bits[:5],
+            "curator_reason": self.curator_reason,
         }
 
 
 def search_duckduckgo(query: str, max_results: int = 10) -> List[str]:
     """Search DuckDuckGo Lite with throttling/retries and parse direct/redirect URLs."""
     if not query:
+        return []
+    if _network_disabled_for_run:
+        print("      ⚠️  Skipping DuckDuckGo; fresh web discovery disabled for run")
         return []
 
     clean_query = query.strip().strip('"').strip("'")
@@ -425,8 +1319,7 @@ def search_duckduckgo(query: str, max_results: int = 10) -> List[str]:
         delay = DDG_MIN_INTERVAL * (DDG_THROTTLE_FACTOR ** attempt)
         _throttle_ddg(delay)
         try:
-            session = requests.Session()
-            session.headers.update(headers)
+            session = build_requests_session(headers=headers)
             endpoints = [
                 ("post", "https://lite.duckduckgo.com/lite/", {'q': clean_query, 'kl': 'us-en'}),
                 ("get", f"https://lite.duckduckgo.com/lite/?q={quote_plus(clean_query)}&kl=us-en", None),
@@ -437,9 +1330,28 @@ def search_duckduckgo(query: str, max_results: int = 10) -> List[str]:
             for method, url, data in endpoints:
                 print(f"      🔍 DDG: {clean_query[:60]}... ({method.upper()} {url.split('//')[1][:30]}...) (attempt {attempt + 1})")
                 if method == "post":
-                    response = session.post(url, data=data, timeout=SEARCH_TIMEOUT, allow_redirects=True)
+                    response = request_with_retries(
+                        session,
+                        "post",
+                        url,
+                        attempts=2,
+                        retry_variants=False,
+                        retry_label="DDG",
+                        data=data,
+                        timeout=SEARCH_TIMEOUT,
+                        allow_redirects=True,
+                    )
                 else:
-                    response = session.get(url, timeout=SEARCH_TIMEOUT, allow_redirects=True)
+                    response = request_with_retries(
+                        session,
+                        "get",
+                        url,
+                        attempts=2,
+                        retry_variants=False,
+                        retry_label="DDG",
+                        timeout=SEARCH_TIMEOUT,
+                        allow_redirects=True,
+                    )
                 print(f"      📄 Status: {response.status_code}")
                 if response.status_code in (200, 202):
                     break
@@ -509,6 +1421,9 @@ def search_duckduckgo(query: str, max_results: int = 10) -> List[str]:
 
 def search_academic_sources(theme: str, links_direction: str) -> List[str]:
     """Search academic and archival sources for relevant content."""
+    if _network_disabled_for_run:
+        print("  ⚠️  Skipping academic search; fresh web discovery disabled for run")
+        return []
     urls = []
     
     # Build search terms
@@ -518,7 +1433,14 @@ def search_academic_sources(theme: str, links_direction: str) -> List[str]:
     # arXiv search
     try:
         arxiv_url = f"http://export.arxiv.org/api/query?search_query=all:{query}&start=0&max_results=5"
-        response = requests.get(arxiv_url, timeout=SEARCH_TIMEOUT)
+        response = request_with_retries(
+            build_requests_session(),
+            "get",
+            arxiv_url,
+            retry_variants=False,
+            retry_label="arXiv",
+            timeout=SEARCH_TIMEOUT,
+        )
         if response.status_code == 200:
             # Parse arXiv IDs from XML
             ids = re.findall(r'<id>(http://arxiv.org/abs/\d+\.\d+)</id>', response.text)
@@ -529,432 +1451,6 @@ def search_academic_sources(theme: str, links_direction: str) -> List[str]:
     
     # Filter out disallowed domains before returning
     return [u for u in urls if not is_disallowed_domain(urlparse(u).netloc)]
-
-
-def search_extended_sources(theme: str, links_direction: str) -> List[str]:
-    """Search 30+ extended sources for obscure content."""
-    urls = []
-    query = quote_plus(f"{theme} {links_direction}")
-    
-    # === ACADEMIC & RESEARCH (8 sources) ===
-    academic_sources = [
-        # Google Scholar
-        ("https://scholar.google.com/scholar?q={q}", "Google Scholar"),
-        # Semantic Scholar
-        ("https://api.semanticscholar.org/graph/v1/paper/search?query={q}&limit=5", "Semantic Scholar"),
-        # CORE (Open Access Research)
-        ("https://core.ac.uk/api-v2/articles/search/{q}?apiKey=dummy&page=1&pageSize=5", "CORE"),
-        # BASE (Bielefeld Academic Search)
-        ("https://base-search.net/Search/Results?lookfor={q}&type=all&limit=5", "BASE"),
-        # PubMed (medical/biological)
-        ("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term={q}&retmax=5&retmode=json", "PubMed"),
-        # DOAJ (Open Access Journals)
-        ("https://doaj.org/api/search/articles/{q}?pageSize=5", "DOAJ"),
-        # SSRN (Social Science)
-        ("https://www.ssrn.com/index.cfm/en/search/?searchText={q}", "SSRN"),
-        # JSTOR (for older papers - limited access)
-        ("https://www.jstor.org/action/doBasicSearch?Query={q}&acc=off&wc=on&fc=off&group=none", "JSTOR"),
-    ]
-    
-    # === DIGITAL ARCHIVES & LIBRARIES (10 sources) ===
-    archive_sources = [
-        # HathiTrust
-        ("https://catalog.hathitrust.org/api/volumes/full/json?q={q}", "HathiTrust"),
-        # Digital Public Library of America
-        ("https://api.dp.la/v2/items?q={q}&api_key=dummy&page_size=5", "DPLA"),
-        # Library of Congress
-        ("https://www.loc.gov/search/?q={q}&fo=json&c=5", "Library of Congress"),
-        # National Archives
-        ("https://catalog.archives.gov/api/v1?rows=5&q={q}", "National Archives"),
-        # Europeana
-        ("https://api.europeana.eu/record/v2/search.json?wskey=dummy&query={q}&rows=5", "Europeana"),
-        # Gallica (French digital library)
-        ("https://gallica.bnf.fr/services/engine/search/sru?operation=searchRetrieve&query={q}&maximumRecords=5", "Gallica"),
-        # Trove (Australia)
-        ("https://trove.nla.gov.au/api/result?q={q}&zone=all&n=5&encoding=json", "Trove"),
-        # Wellcome Collection (medical history)
-        ("https://api.wellcomecollection.org/catalogue/v2/works?query={q}&pageSize=5", "Wellcome"),
-        # Smithsonian
-        ("https://api.si.edu/openaccess/api/v1.0/search?q={q}&rows=5", "Smithsonian"),
-        # Digital Commons Network
-        ("https://network.bepress.com/cgi/query.cgi?query={q}", "Digital Commons"),
-    ]
-    
-    # === TECH/COMPUTING HISTORY (6 sources) ===
-    tech_sources = [
-        # GitHub search (for abandoned projects)
-        ("https://api.github.com/search/repositories?q={q}+stars:<10+updated:<2020-01-01&sort=updated&order=desc&per_page=5", "GitHub"),
-        # Computer History Museum
-        ("https://www.computerhistory.org/search/?q={q}", "Computer History Museum"),
-        # Bitsavers (computer documentation)
-        ("http://bitsavers.org/search.html?q={q}", "Bitsavers"),
-        # Vintage Computing Federation
-        ("https://vcfed.org/search/?q={q}", "VCF"),
-        # Textfiles.com (BBS era)
-        ("http://textfiles.com/search/?q={q}", "Textfiles"),
-        # Software Heritage
-        ("https://archive.softwareheritage.org/browse/search/?q={q}", "Software Heritage"),
-    ]
-    
-    # === SPECIALIZED/CURATED PLATFORMS (8 sources) ===
-    curated_sources = [
-        # Are.na (curated collections)
-        ("https://api.are.na/v2/search?q={q}&per=5", "Are.na"),
-        # Atlas Obscura
-        ("https://www.atlasobscura.com/search?query={q}", "Atlas Obscura"),
-        # Reddit (obscure subreddits via search)
-        ("https://www.reddit.com/search/?q={q}&type=posts&sort=relevance&t=all", "Reddit"),
-        # Hacker News (Algolia API)
-        ("http://hn.algolia.com/api/v1/search?query={q}&tags=(story,show_hn)&hitsPerPage=5", "Hacker News"),
-        # Metafilter
-        ("https://www.metafilter.com/search.mefi?site=mefi&q={q}", "Metafilter"),
-        # 99% Invisible
-        ("https://99percentinvisible.org/?s={q}", "99PI"),
-        # Public Domain Review
-        ("https://publicdomainreview.org/?s={q}", "Public Domain Review"),
-        # Wikipedia "Further reading" via search
-        ("https://en.wikipedia.org/w/api.php?action=opensearch&search={q}&limit=5&namespace=0&format=json", "Wikipedia"),
-    ]
-    
-    # === GOVERNMENT/INSTITUTIONAL (5 sources) ===
-    gov_sources = [
-        # NASA Technical Reports
-        ("https://ntrs.nasa.gov/api/search?q={q}&page=1&size=5", "NASA NTRS"),
-        # USPTO Patents
-        ("https://patentsview.uspto.gov/api/patents/query?q={{\"_and\":{{\"_text_any\":{{\"patent_title\":\"{q}\"}}}}}}&f=[\"patent_number\",\"patent_title\"]&o={{\"per_page\":5}}", "USPTO"),
-        # DOE OSTI
-        ("https://www.osti.gov/api/v1/records?q={q}&rows=5", "OSTI"),
-        # DTIC (Defense Technical)
-        ("https://discover.dtic.mil/wp-json/dtic/v1/search?q={q}&posts_per_page=5", "DTIC"),
-        # CIA FOIA Reading Room
-        ("https://www.cia.gov/readingroom/search/site/{q}", "CIA FOIA"),
-    ]
-    
-    # === SPECIALIZED SEARCH ENGINES (5 sources) ===
-    # These surface obscure, non-commercial content perfect for discovery
-    obscure_sources = [
-        # Million Short - removes top 1M sites, surfaces hidden gems
-        ("https://millionshort.com/search?q={q}&remove=1000000", "Million Short"),
-        # Marginalia - indie search for old/forgotten web pages
-        ("https://search.marginalia.nu/search?query={q}", "Marginalia"),
-        # Open Library - millions of books, rare/out-of-print
-        ("https://openlibrary.org/search.json?q={q}&limit=5", "Open Library"),
-        # WorldCat - global library catalog (2B+ items)
-        ("https://www.worldcat.org/search?q={q}", "WorldCat"),
-        # Stanford Web Archive Portal - curated historical collections
-        ("https://swap.stanford.edu/?q={q}", "Stanford Web Archive"),
-    ]
-    
-    all_sources = (
-        [("academic", url, name) for url, name in academic_sources] +
-        [("archive", url, name) for url, name in archive_sources] +
-        [("tech", url, name) for url, name in tech_sources] +
-        [("curated", url, name) for url, name in curated_sources] +
-        [("gov", url, name) for url, name in gov_sources] +
-        [("obscure", url, name) for url, name in obscure_sources]
-    )
-    
-    print(f"\n  Searching 42 extended sources...")
-    
-    # Sample 20 sources to broaden coverage (rotating selection)
-    random.shuffle(all_sources)
-    selected_sources = all_sources[:20]
-    
-    headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'}
-    
-    for category, url_template, name in selected_sources:
-        try:
-            url = url_template.format(q=query)
-            response = requests.get(url, headers=headers, timeout=8)
-            
-            if response.status_code == 200:
-                # Extract URLs based on response type
-                found_urls = extract_urls_from_response(response, name, category)
-                if found_urls:
-                    urls.extend(found_urls[:3])  # Max 3 per source to widen pool
-                    print(f"    ✓ {name}: {len(found_urls)} found")
-            
-        except Exception as e:
-            # Silent fail for individual sources
-            pass
-    
-    # Remove duplicates and filter disallowed domains
-    seen = set()
-    unique_urls = []
-    for url in urls:
-        if url in seen:
-            continue
-        try:
-            domain = urlparse(url).netloc.lower()
-        except Exception:
-            continue
-        if is_disallowed_domain(domain):
-            continue
-        seen.add(url)
-        unique_urls.append(url)
-    
-    print(f"  Total unique from extended sources: {len(unique_urls)}")
-    return unique_urls
-
-
-def run_operator_queries(theme: str, links_direction: str) -> List[str]:
-    """Run additional DDG queries with search operators to expand candidate pool."""
-    operator_queries = [
-        f'"{theme}" "field notes" -site:.edu -site:wikipedia.org',
-        f'"{theme}" "{links_direction}" intitle:"case study" -list -site:wikipedia.org',
-        f'"{theme}" filetype:pdf "report" -site:.edu -site:archive.org',
-        f'"{theme}" "personal blog" "lost" -site:wikipedia.org -site:medium.com',
-    ]
-
-    all_urls = []
-    print("\n  Running operator-driven searches...")
-    for query in operator_queries:
-        print(f"    Query: {query[:80]}...")
-        results = search_duckduckgo(query, max_results=5)
-        all_urls.extend(results)
-        if results:
-            print(f"      Found {len(results)} URLs")
-    return all_urls
-
-
-def run_fallback_searches(theme: str, links_direction: str) -> List[str]:
-    """Query a curated list of dependable sources plus generic backups."""
-    fallback_sources = [
-        ("Library of Congress", 'site:loc.gov "{theme}" "{direction}"'),
-        ("Smithsonian Magazine", 'site:smithsonianmag.com "{theme}"'),
-        ("Foreign Affairs", 'site:foreignaffairs.com "{theme}"'),
-        ("Cold War International History Project", 'site:wilsoncenter.org "{theme}"'),
-        ("National Security Archive", 'site:gwu.edu "National Security Archive" "{theme}"'),
-        ("NASA History", 'site:nasa.gov history "{theme}"'),
-        ("Intelligence.org", 'site:intelligence.org "{theme}"'),
-        ("Britannica", 'site:britannica.com "{theme}" "{direction}" -list'),
-    ]
-
-    extra_queries = [
-        f'"{theme}" "{links_direction}" "oral history"',
-        f'"{theme}" "{links_direction}" "archives" -site:wikipedia.org',
-        f'"{theme}" "{links_direction}" "personal diary"',
-        f'"{theme}" "{links_direction}" "declassified"',
-    ]
-
-    collected: List[str] = []
-
-    for label, template in fallback_sources:
-        query = template.format(theme=theme, direction=links_direction)
-        print(f"\n  Fallback search ({label})...")
-        ddg_results = search_duckduckgo(query, max_results=4)
-        collected.extend(ddg_results)
-        if not ddg_results:
-            marginalia_results = search_marginalia(query, max_results=3)
-            collected.extend(marginalia_results)
-
-    print("\n  Fallback generic queries...")
-    for query in extra_queries:
-        print(f"    Query: {query[:80]}...")
-        results = search_duckduckgo(query, max_results=4)
-        collected.extend(results)
-        if not results:
-            collected.extend(search_marginalia(query, max_results=3))
-
-    seen = set()
-    unique_urls = []
-    for url in collected:
-        if not url or url in seen:
-            continue
-        seen.add(url)
-        unique_urls.append(url)
-
-    print(f"  Fallback sources contributed {len(unique_urls)} URLs")
-    return unique_urls
-
-
-def _filter_external_urls(urls: List[str]) -> List[str]:
-    """Deduplicate and filter disallowed domains for API-based search results."""
-    filtered = []
-    seen = set()
-    for url in urls:
-        if not url:
-            continue
-        try:
-            domain = urlparse(url).netloc.lower()
-        except Exception:
-            continue
-        if not domain or is_disallowed_domain(domain):
-            continue
-        if url in seen:
-            continue
-        seen.add(url)
-        filtered.append(url)
-    return filtered
-
-
-def search_serpapi(query: str, max_results: int = 8) -> List[str]:
-    """Use SerpApi (if configured) to fetch additional web results."""
-    if not SERPAPI_KEY:
-        return []
-    try:
-        params = {
-            "engine": "google",
-            "q": query,
-            "num": max_results,
-            "api_key": SERPAPI_KEY,
-        }
-        response = requests.get("https://serpapi.com/search", params=params, timeout=SEARCH_TIMEOUT)
-        if response.status_code != 200:
-            print(f"    ⚠️  SerpApi status {response.status_code}")
-            return []
-        data = response.json()
-        urls = [item.get("link") for item in data.get("organic_results", []) if item.get("link")]
-        return _filter_external_urls(urls)[:max_results]
-    except Exception as e:
-        print(f"    ⚠️  SerpApi request failed: {e}")
-        return []
-
-
-def search_contextualweb(query: str, max_results: int = 8) -> List[str]:
-    """Use ContextualWeb Search (RapidAPI) if configured."""
-    if not CONTEXTUALWEB_API_KEY:
-        return []
-    try:
-        headers = {
-            "X-RapidAPI-Key": CONTEXTUALWEB_API_KEY,
-            "X-RapidAPI-Host": "contextualwebsearch-websearch-v1.p.rapidapi.com",
-        }
-        params = {
-            "q": query,
-            "pageNumber": 1,
-            "pageSize": max_results,
-            "autoCorrect": "true",
-            "safeSearch": "false",
-        }
-        response = requests.get(
-            "https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/Search/WebSearchAPI",
-            headers=headers,
-            params=params,
-            timeout=SEARCH_TIMEOUT,
-        )
-        if response.status_code != 200:
-            print(f"    ⚠️  ContextualWeb status {response.status_code}")
-            return []
-        data = response.json()
-        urls = [item.get("url") for item in data.get("value", []) if item.get("url")]
-        return _filter_external_urls(urls)[:max_results]
-    except Exception as e:
-        print(f"    ⚠️  ContextualWeb request failed: {e}")
-        return []
-
-
-def extract_urls_from_response(response: requests.Response, source_name: str, category: str) -> List[str]:
-    """Extract URLs from various API responses."""
-    urls = []
-    
-    try:
-        # JSON APIs
-        if 'json' in response.headers.get('Content-Type', ''):
-            data = response.json()
-            
-            if source_name == "Semantic Scholar":
-                papers = data.get('data', [])
-                for p in papers:
-                    if p.get('openAccessPdf', {}).get('url'):
-                        urls.append(p['openAccessPdf']['url'])
-                    elif p.get('externalIds', {}).get('DOI'):
-                        urls.append(f"https://doi.org/{p['externalIds']['DOI']}")
-            
-            elif source_name in ["PubMed", "NASA NTRS", "OSTI", "DTIC"]:
-                # Look for ID patterns in JSON
-                if 'esearchresult' in str(data):  # PubMed
-                    ids = data.get('esearchresult', {}).get('idlist', [])
-                    for pmid in ids:
-                        urls.append(f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/")
-                elif 'results' in data:  # NASA/OSTI
-                    for r in data.get('results', [])[:3]:
-                        if r.get('download'):
-                            urls.append(r['download'])
-                        elif r.get('links', [{}])[0].get('href'):
-                            urls.append(r['links'][0]['href'])
-            
-            elif source_name == "Europeana":
-                items = data.get('items', [])
-                for item in items:
-                    guid = item.get('guid')
-                    if guid:
-                        urls.append(guid)
-            
-            elif source_name == "Hacker News":
-                hits = data.get('hits', [])
-                for hit in hits:
-                    url = hit.get('url')
-                    if url and not url.startswith('http'):
-                        url = f"https://news.ycombinator.com/item?id={hit.get('objectID')}"
-                    if url:
-                        urls.append(url)
-            
-            elif source_name == "Open Library":
-                docs = data.get('docs', [])
-                for doc in docs:
-                    # Get Open Library work page
-                    key = doc.get('key')
-                    if key:
-                        urls.append(f"https://openlibrary.org{key}")
-                    # Or get archive.org link if available
-                    ia_id = doc.get('ia', [None])[0]
-                    if ia_id:
-                        urls.append(f"https://archive.org/details/{ia_id}")
-        
-        # HTML responses - parse for links
-        else:
-            soup = BeautifulSoup(response.text, 'html.parser')
-            
-            # Extract all external links
-            for a in soup.find_all('a', href=True):
-                href = a.get('href', '')
-                if href.startswith('http') and not any(skip in href for skip in [
-                    'google.com', 'facebook.com', 'twitter.com', 'instagram.com',
-                    'youtube.com', 'linkedin.com', 'pinterest.com'
-                ]):
-                    urls.append(href.split('#')[0])
-            
-            # Specific parsers for certain sources
-            if source_name == "Wikipedia":
-                # Look for external link sections
-                for extlink in soup.find_all('a', class_='external-text'):
-                    href = extlink.get('href', '')
-                    if href.startswith('http'):
-                        urls.append(href)
-            
-            elif source_name == "Marginalia":
-                # Marginalia shows results with original URLs
-                for link in soup.find_all('a', href=True):
-                    href = link.get('href', '')
-                    if href.startswith('http') and 'marginalia.nu' not in href:
-                        urls.append(href)
-            
-            elif source_name == "Million Short":
-                # Million Short shows results from web
-                for link in soup.find_all('a', class_=re.compile(r'result|title|url'), href=True):
-                    href = link.get('href', '')
-                    if href.startswith('http'):
-                        urls.append(href)
-            
-            elif source_name == "WorldCat":
-                # Look for catalog links
-                for link in soup.find_all('a', href=re.compile(r'/title/')):
-                    href = link.get('href', '')
-                    if href.startswith('/'):
-                        urls.append(f"https://www.worldcat.org{href}")
-            
-            elif source_name == "Stanford Web Archive":
-                # Look for archived page links
-                for link in soup.find_all('a', href=re.compile(r'web/\d{14}')):
-                    href = link.get('href', '')
-                    if href.startswith('http'):
-                        urls.append(href)
-    
-    except Exception as e:
-        pass
-    
-    return list(set(urls))[:5]  # Max 5 per source
 
 
 def _extract_section(content: str, header: str, headers: List[str]) -> str:
@@ -991,13 +1487,20 @@ def get_llm_research_strategy(theme: dict) -> Tuple[List[str], List[str], List[s
     if not API_KEY:
         print("    ⚠️  No API key available")
         return [], [], []
+    if OpenAI is None:
+        print(f"    ⚠️  OpenAI client unavailable: {OPENAI_IMPORT_ERROR}")
+        return [], [], []
 
     theme_name = theme.get("name", "")
     links_direction = theme.get("links", theme_name)
 
-    system_prompt = load_research_strategy_prompt().format(
+    system_prompt = (
+        load_system_prompt().strip()
+        + "\n\n"
+        + load_research_strategy_prompt().format(
         theme_name=theme_name,
         links_direction=links_direction
+        )
     )
 
     headers = ["DOMAIN IDEAS", "SEARCH QUERIES", "URLs FOUND"]
@@ -1030,7 +1533,7 @@ def get_llm_research_strategy(theme: dict) -> Tuple[List[str], List[str], List[s
 
             best_domain = sanitize_llm_list(raw_domain)
             best_queries = [q for q in (normalize_search_query(q) for q in sanitize_llm_list(raw_queries)) if q]
-            best_urls = filter_llm_urls(raw_urls)
+            best_urls = filter_llm_direct_urls(raw_urls, theme)
 
             if len(best_domain) >= MIN_LLM_DOMAIN_IDEAS and len(best_queries) >= MIN_LLM_SEARCH_QUERIES:
                 break
@@ -1052,238 +1555,66 @@ def get_llm_research_strategy(theme: dict) -> Tuple[List[str], List[str], List[s
     print(f"    ✅ LLM suggested {len(best_queries)} search queries")
     for i, query in enumerate(best_queries[:3], 1):
         print(f"       {i}. {query}")
-    print(f"    ✅ LLM suggested {len(best_urls)} direct URLs")
+    print(f"    ✅ LLM suggested {len(best_urls)} trusted direct URLs")
 
     return best_domain, best_queries, best_urls
 
 
-def get_llm_candidate_urls(theme: dict) -> List[str]:
-    """Get URLs from LLM research strategy and follow-up searches."""
-    _, search_queries, direct_urls = get_llm_research_strategy(theme)
-
-    all_urls = list(direct_urls)
-
-    if search_queries:
-        print(f"\n  Executing LLM search queries...")
-        for query in search_queries[:3]:
-            print(f"    Query: {query[:80]}...")
-            results = search_duckduckgo(query, max_results=5)
-            all_urls.extend(results)
-            if results:
-                print(f"      Found {len(results)} from: {query[:60]}...")
-
-    return all_urls[:15]
-
-
-def get_llm_search_sources_batch(theme: dict, batch_num: int = 0) -> List[str]:
-    """Ask LLM for domains - multiple batches."""
-    if not API_KEY:
-        return []
-    
-    theme_name = theme.get("name", "")
-    
-    prompts = [
-        f"List 4 diverse website domains about {theme_name} (mix of news, history, tech, museums). Just domains:",
-        f"List 4 different websites covering {theme_name} (not archive.org). Just domains:",
-        f"List 4 varied sources for {theme_name} articles (blogs, news, edu, orgs). Just domains:",
-    ]
-    
-    prompt = prompts[batch_num % len(prompts)]
-    
-    try:
-        client = OpenAI(api_key=API_KEY, base_url=API_BASE)
-        response = client.chat.completions.create(
-            model=MODEL,
-            messages=[{"role": "user", "content": prompt}],
-            temperature=0.4 + (batch_num * 0.1),
-            max_tokens=200
-        )
-        
-        content = response.choices[0].message.content
-        domains = re.findall(r'[a-z0-9][a-z0-9\-\.]+\.(?:com|org|net|edu|io|co)', content.lower())
-        
-        return list(set(domains))
-        
-    except Exception as e:
-        print(f"    Domain batch {batch_num} failed: {e}")
-        return []
-
-
-def get_llm_search_sources(theme: dict) -> List[str]:
-    """Get domains from multiple LLM calls."""
-    all_domains = []
-    
-    for i in range(3):  # 3 batches
-        domains = get_llm_search_sources_batch(theme, i)
-        all_domains.extend(domains)
-        if domains:
-            print(f"    Batch {i+1}: {len(domains)} domains")
-    
-    # Deduplicate
-    seen = set()
-    unique = []
-    for d in all_domains:
-        if d not in seen:
-            seen.add(d)
-            unique.append(d)
-    
-    print(f"    Total unique: {len(unique)} domains")
-    return unique[:10]
-
-
 def get_candidate_urls(theme: dict, registry: Optional[LinkRegistry] = None) -> List[str]:
-    """Generate candidate URLs from multiple sources.
-
-    DDG is limited to a single broad query per run to avoid 202 throttling.
-    Marginalia, SerpApi, ContextualWeb, and the 42 extended-source APIs carry
-    the bulk of discovery.
-    """
+    """Generate candidate URLs using lane-first discovery across trusted web neighborhoods."""
     theme_name = theme.get("name", "")
-    links_direction = theme.get("links", theme_name)
-    
     print(f"\nTheme: {theme_name}")
-    
-    all_urls = []
-    
-    # 1. LLM suggestions (primary — uses DDG budget for its top query)
-    print(f"\n  Getting LLM URL suggestions...")
-    llm_urls = get_llm_candidate_urls(theme)
-    all_urls.extend(llm_urls)
-    
-    # 2. Extended sources (42 different APIs and search engines)
-    print(f"\n  Searching extended sources...")
-    extended_urls = search_extended_sources(theme_name, links_direction)
-    all_urls.extend(extended_urls)
-    
-    # 3. External API searches (SerpApi / ContextualWeb) — no DDG cost
-    search_terms = [
-        f"{theme_name} {links_direction}",
-        f"obscure {theme_name} history",
-    ]
-    api_urls = []
-    if SERPAPI_KEY:
-        print("\n  Querying SerpApi...")
-        for term in search_terms:
-            api_results = search_serpapi(term)
-            api_urls.extend(api_results)
-            if api_results:
-                print(f"    SerpApi found {len(api_results)} for '{term[:40]}...'")
-    if CONTEXTUALWEB_API_KEY:
-        print("\n  Querying ContextualWeb...")
-        for term in search_terms:
-            api_results = search_contextualweb(term)
-            api_urls.extend(api_results)
-            if api_results:
-                print(f"    ContextualWeb found {len(api_results)} for '{term[:40]}...'")
-    all_urls.extend(api_urls)
-    
-    # 4. Ask LLM for diverse sources, search via Marginalia (no DDG cost)
-    print(f"\n  Getting LLM source suggestions...")
-    suggested_domains = get_llm_search_sources(theme)
-    
-    for domain in suggested_domains[:6]:
-        print(f"\n  Searching Marginalia (site:{domain})...")
-        marginalia_urls = search_marginalia(f"site:{domain} {theme_name}", max_results=6)
-        all_urls.extend(marginalia_urls)
-    
-    # 5. Fallback searches — curated reliable sources (DDG budget will auto-redirect to Marginalia)
-    fallback_urls = run_fallback_searches(theme_name, links_direction)
-    all_urls.extend(fallback_urls)
 
-    # Deduplicate but keep order
-    all_urls = list(dict.fromkeys(all_urls))
+    plan = get_theme_discovery_plan(theme)
+    all_urls: List[str] = []
 
-    # Filter disallowed domains that slipped through any source
-    all_urls = [
-        u for u in all_urls
-        if not is_disallowed_domain(urlparse(u).netloc)
-    ]
+    # 0. Scout from globally trusted seeds and explicit theme-level seeds.
+    all_urls.extend(get_curated_seed_urls(theme))
+
+    # 1. Explore trusted source lanes in order, keeping each lane bounded.
+    for lane_name in plan["preferred_lanes"][:5]:
+        if _network_disabled_for_run:
+            print("\n  ⚠️  Network looks unavailable; stopping fresh lane discovery")
+            break
+        lane_urls = discover_lane_urls(theme, lane_name, plan["lane_plans"].get(lane_name, {}))
+        all_urls.extend(lane_urls)
+
+    # 2. Ask the LLM for a few extra search angles, but keep it inside lane-first search.
+    if _network_disabled_for_run:
+        print("\n  ⚠️  Skipping live search expansion; fresh web discovery disabled for run")
+    else:
+        print("\n  LLM search angles...")
+        _, llm_queries, llm_direct_urls = get_llm_research_strategy(theme)
+        all_urls.extend(filter_llm_direct_urls(llm_direct_urls, theme))
+        for query in llm_queries[:3]:
+            print(f"    Angle: {query[:100]}")
+            all_urls.extend(search_marginalia(query, max_results=4))
+
+    # 3. If the pool is still thin, widen within the same architecture using lane queries only.
+    all_urls = dedupe_candidate_urls(all_urls)
+    if len(all_urls) < 25 and not _network_disabled_for_run:
+        print(f"\n  ⚠️  Only {len(all_urls)} candidates from lane discovery; widening within trusted lanes")
+        for lane_name in plan["preferred_lanes"][:3]:
+            lane_plan = plan["lane_plans"].get(lane_name, {})
+            for query in lane_plan.get("query_templates", [])[:2]:
+                rendered = build_lane_query(query, theme, lane_name)
+                all_urls.extend(search_marginalia(rendered, max_results=5))
+        for query in plan.get("seed_queries", [])[:3]:
+            rendered = build_lane_query(query, theme, "theme-scouting")
+            all_urls.extend(search_marginalia(rendered, max_results=5))
+
+    all_urls = dedupe_candidate_urls(all_urls)
 
     # Filter previously-published URLs via registry
     if registry:
-        before = len(all_urls)
         all_urls, rejected = registry.filter_new(all_urls)
         if rejected:
             print(f"\n  🗂️  Registry rejected {rejected} previously-published URLs")
 
-    if len(all_urls) < 25:
-        print(f"\n  ⚠️  Only {len(all_urls)} unique candidates so far — running backup broad queries")
-        booster_terms = [
-            f"{theme_name} hidden history",
-            f"forgotten {links_direction} archives",
-            f"{theme_name} oral history",
-        ]
-        for term in booster_terms:
-            marginalia_results = search_marginalia(term, max_results=5)
-            all_urls.extend(marginalia_results)
-        all_urls = list(dict.fromkeys(all_urls))
-
-    unique_urls = all_urls[:MAX_CANDIDATES]
+    unique_urls = dedupe_candidate_urls(all_urls, limit=MAX_CANDIDATES)
 
     print(f"\nTotal unique candidates: {len(all_urls)}")
     return unique_urls
-
-
-def search_archive_org(theme: str) -> List[str]:
-    """Search Archive.org for specific items related to theme."""
-    urls = []
-    try:
-        # Search for specific subjects in archive.org
-        subjects = [
-            f"{theme} invention",
-            f"{theme} patent", 
-            f"{theme} history",
-            f"early {theme}",
-        ]
-        
-        for subject in subjects[:2]:
-            query = quote_plus(subject)
-            # Use archive.org catalog search for items (not collections)
-            search_url = f"https://archive.org/services/search/v1/scrape?fields=identifier,title&q={query}%20mediatype:texts&sorts=week"
-            
-            response = requests.get(search_url, timeout=SEARCH_TIMEOUT)
-            if response.status_code == 200:
-                data = response.json()
-                docs = data.get('items', [])
-                for doc in docs[:3]:  # Max 3 per subject
-                    identifier = doc.get('identifier')
-                    title = doc.get('title', '')
-                    if identifier and title:
-                        # Filter out generic collections
-                        bad_keywords = ['collection', 'archive', 'library', 'group']
-                        if not any(kw in title.lower() for kw in bad_keywords):
-                            urls.append(f"https://archive.org/details/{identifier}")
-                
-        print(f"    Found {len(urls)} archive.org items")
-    except Exception as e:
-        print(f"    Archive.org search failed: {e}")
-    
-    return urls[:8]  # Return up to 8
-
-
-def search_smithsonian(theme: str) -> List[str]:
-    """Search Smithsonian API for specific objects."""
-    urls = []
-    try:
-        # Smithsonian API
-        query = quote_plus(f"{theme} invention")
-        api_url = f"https://api.si.edu/openaccess/api/v1.0/search?q={query}&api_key=hJ1TEiyhGhY&rows=10"
-        
-        response = requests.get(api_url, timeout=SEARCH_TIMEOUT)
-        if response.status_code == 200:
-            data = response.json()
-            objects = data.get('response', {}).get('rows', [])
-            for obj in objects:
-                url = obj.get('content', {}).get('descriptiveNonRepeating', {}).get('online_media', {}).get('media', [{}])[0].get('guid')
-                if not url:
-                    url = f"https://www.si.edu/object/{obj.get('id')}"
-                if url:
-                    urls.append(url)
-            print(f"    Found {len(urls)} Smithsonian items")
-    except Exception as e:
-        print(f"    Smithsonian search failed: {e}")
-    
-    return urls[:5]
 
 
 def is_listicle_url(url: str, title: str = "") -> bool:
@@ -1346,7 +1677,7 @@ def is_listicle_url(url: str, title: str = "") -> bool:
     
     # Check title specifically for leading number pattern (e.g. "5 Cold War Close Calls")
     title_stripped = title.strip()
-    if re.match(r'^\d+\s+', title_stripped):
+    if re.match(r'^\d{1,2}\s+', title_stripped):
         return True
     
     # Check for library guide URLs (.edu sites with /guides/, /research/, etc)
@@ -1367,13 +1698,12 @@ def is_listicle_url(url: str, title: str = "") -> bool:
 def scrape_and_analyze(urls: List[str], theme: dict) -> List[LinkCandidate]:
     """Scrape content from URLs and analyze relevance."""
     scraper = WebScraper()
-    theme_name = theme.get("name", "").lower()
-    links_direction = theme.get("links", theme_name).lower()
-    
     candidates = []
     listicle_count = 0
     failed_count = 0
     success_count = 0
+    theme_reject_count = 0
+    off_theme_count = 0
     
     print(f"\nScraping {len(urls)} candidates...")
     
@@ -1396,6 +1726,7 @@ def scrape_and_analyze(urls: List[str], theme: dict) -> List[LinkCandidate]:
         candidate.description = scraped.description
         candidate.content = scraped.content[:3000]  # Limit content
         candidate.concepts = scraped.concepts
+        candidate.interesting_bits = scraped.interesting_bits
         candidate.obscurity_score = scraped.obscurity_score
         
         # Reject listicles early
@@ -1405,15 +1736,37 @@ def scrape_and_analyze(urls: List[str], theme: dict) -> List[LinkCandidate]:
             candidate.error = "Listicle/junk content detected"
             listicle_count += 1
             continue
+
+        bad_page_reason = looks_like_bad_page_type(candidate)
+        if bad_page_reason:
+            print(f"    ✗ Rejected ({bad_page_reason}): {scraped.title[:60]}...")
+            candidate.error = bad_page_reason
+            continue
         
-        # Check .edu domains (early filter)
-        if urlparse(candidate.url).netloc.endswith('.edu'):
-            print(f"    ✗ Rejected (.edu domain): {scraped.title[:60]}...")
+        # Allow trusted museum/institution .edu pages only when they come from the theme's curated lanes.
+        if urlparse(candidate.url).netloc.endswith('.edu') and not is_trusted_theme_domain(candidate.url, theme):
+            print(f"    ✗ Rejected (untrusted .edu domain): {scraped.title[:60]}...")
             candidate.error = ".edu domain filtered"
+            continue
+
+        theme_rejection = get_theme_rejection_reason(candidate, theme)
+        if theme_rejection:
+            print(f"    ✗ Rejected ({theme_rejection}): {scraped.title[:60]}...")
+            candidate.error = theme_rejection
+            theme_reject_count += 1
+            continue
+
+        if looks_off_theme(candidate, theme):
+            print(f"    ✗ Rejected (off-theme drift): {scraped.title[:60]}...")
+            candidate.error = "off-theme drift"
+            off_theme_count += 1
             continue
         
         print(f"    ✓ Scraped: {scraped.title[:60]}...")
         print(f"    Concepts: {', '.join(scraped.concepts[:5])}")
+        focus_hits = theme_focus_hits(candidate, theme)
+        if focus_hits:
+            print(f"    Focus hits: {', '.join(focus_hits[:4])}")
         print(f"    Obscurity: {scraped.obscurity_score:.2f}")
         success_count += 1
         
@@ -1423,27 +1776,43 @@ def scrape_and_analyze(urls: List[str], theme: dict) -> List[LinkCandidate]:
     print(f"  ✓ Successfully scraped: {success_count}")
     print(f"  ✗ Failed: {failed_count}")
     print(f"  ⏭ Filtered as listicles: {listicle_count}")
+    print(f"  ⏭ Filtered by theme blocks: {theme_reject_count}")
+    print(f"  ⏭ Filtered as off-theme drift: {off_theme_count}")
     
     return candidates
 
 
 def calculate_relevance_score(candidate: LinkCandidate, theme: dict) -> float:
     """Calculate how relevant the content is to the theme."""
-    theme_name = theme.get("name", "").lower()
-    links_direction = theme.get("links", theme_name).lower()
-    theme_words = set(theme_name.split() + links_direction.split())
+    theme_words = set(extract_theme_terms(theme))
+    focus_terms = get_theme_focus_terms(theme)
+    drift_terms = get_theme_drift_terms(theme)
     
     score = 0.0
     content_lower = candidate.content.lower()
     title_lower = candidate.title.lower()
+    description_lower = candidate.description.lower()
+    concept_text = " ".join(candidate.concepts[:8]).lower()
+    combined = " ".join([candidate.url.lower(), title_lower, description_lower, concept_text, content_lower])
+
+    # Theme-specific anchor phrases matter more than generic keyword overlap.
+    title_focus_matches = sum(1 for term in focus_terms if term in title_lower)
+    score += min(title_focus_matches * 0.30, 0.60)
+
+    body_focus_matches = sum(1 for term in focus_terms if term in combined)
+    score += min(body_focus_matches * 0.10, 0.30)
+
+    drift_matches = sum(1 for term in drift_terms if term in combined)
+    if drift_matches and body_focus_matches == 0:
+        score -= min(drift_matches * 0.10, 0.30)
     
     # Check for theme word matches in title (high weight)
     title_matches = sum(1 for word in theme_words if word in title_lower)
-    score += min(title_matches * 0.25, 0.5)
+    score += min(title_matches * 0.12, 0.24)
     
     # Check for theme word matches in content
-    content_matches = sum(1 for word in theme_words if word in content_lower)
-    score += min(content_matches * 0.05, 0.3)
+    content_matches = sum(1 for word in theme_words if word in combined)
+    score += min(content_matches * 0.03, 0.18)
     
     # Check concept relevance
     concept_matches = 0
@@ -1451,76 +1820,138 @@ def calculate_relevance_score(candidate: LinkCandidate, theme: dict) -> float:
         concept_lower = concept.lower()
         if any(word in concept_lower for word in theme_words):
             concept_matches += 1
-    score += min(concept_matches * 0.1, 0.2)
+        if any(term in concept_lower for term in focus_terms):
+            concept_matches += 1
+    score += min(concept_matches * 0.08, 0.24)
     
-    return min(score, 1.0)
+    return min(max(score, 0.0), 1.0)
 
 
-def verify_relevance_with_llm(candidate: LinkCandidate, theme: dict) -> float:
-    """Use LLM to verify content relevance to theme."""
+def judge_candidate_with_llm(candidate: LinkCandidate, theme: dict) -> Dict[str, float]:
+    """Use LLM to judge if a page is a real hidden gem for this theme."""
+    fallback_relevance = calculate_relevance_score(candidate, theme)
+    lane = classify_source_lane(candidate.url, candidate.title, candidate.description, candidate.concepts)
+    focus_hits = theme_focus_hits(candidate, theme)
+    lane_gem_bonus = 0.08 if lane in {"old-web", "primary-doc", "enthusiast-research", "museum-object", "indie-essay"} else 0.0
+    focus_bonus = min(len(focus_hits) * 0.06, 0.12)
+    relevance_bonus = 0.08 if fallback_relevance >= 0.65 else 0.0
+    bit_bonus = min(len(candidate.interesting_bits) * 0.03, 0.09)
+    fallback = {
+        "relevance": fallback_relevance,
+        "gem": min(0.92, max(candidate.obscurity_score * 0.62, 0.2) + lane_gem_bonus + focus_bonus + relevance_bonus + bit_bonus),
+        "story_seed": min(0.9, 0.25 + (len(candidate.interesting_bits) * 0.12)),
+        "anti_corporate": 0.8 if not looks_like_boilerplate(candidate) else 0.2,
+        "reason": "fallback heuristic",
+    }
+
     if not API_KEY:
-        return calculate_relevance_score(candidate, theme)
-    
+        return fallback
+    if OpenAI is None:
+        print(f"    LLM link judge unavailable: {OPENAI_IMPORT_ERROR}")
+        return fallback
+
     theme_name = theme.get("name", "")
     links_direction = theme.get("links", theme_name)
-    
-    prompt = f"""Rate the relevance of this web page to the topic: "{links_direction}"
-
+    system_prompt = load_link_judge_prompt()
+    prompt = f"""Theme: {theme_name}
+Links direction: {links_direction}
+URL: {candidate.url}
 Title: {candidate.title}
 Description: {candidate.description}
-Content excerpt: {candidate.content[:1000]}
-
-On a scale of 0.0 to 1.0, how relevant is this page to the topic?
-- 1.0 = Highly relevant, directly about the topic
-- 0.5 = Somewhat related
-- 0.0 = Not related at all
-
-Respond with ONLY a number between 0.0 and 1.0."""
+Top concepts: {", ".join(candidate.concepts[:8])}
+Interesting bits: {", ".join(candidate.interesting_bits[:5])}
+Content excerpt:
+{candidate.content[:1400]}
+"""
 
     try:
         client = OpenAI(api_key=API_KEY, base_url=API_BASE)
         response = client.chat.completions.create(
             model=MODEL,
             messages=[
-                {"role": "system", "content": "You rate content relevance. Respond with only a number."},
+                {"role": "system", "content": system_prompt},
                 {"role": "user", "content": prompt}
             ],
             temperature=0.1,
-            max_tokens=10
+            max_tokens=180
         )
-        
-        content = response.choices[0].message.content.strip()
-        
-        # Extract number
-        match = re.search(r'(\d+\.?\d*)', content)
-        if match:
-            score = float(match.group(1))
-            return min(max(score, 0.0), 1.0)
-        
+
+        content = strip_thinking_block(response.choices[0].message.content or "")
+        match = re.search(r'\{.*\}', content, re.S)
+        if not match:
+            return fallback
+        data = json.loads(match.group(0))
+        judged = {
+            "relevance": min(max(float(data.get("relevance", fallback["relevance"])), 0.0), 1.0),
+            "gem": min(max(float(data.get("gem", fallback["gem"])), 0.0), 1.0),
+            "story_seed": min(max(float(data.get("story_seed", fallback["story_seed"])), 0.0), 1.0),
+            "anti_corporate": min(max(float(data.get("anti_corporate", fallback["anti_corporate"])), 0.0), 1.0),
+            "reason": str(data.get("reason", ""))[:180],
+        }
+        return judged
+
     except Exception as e:
-        print(f"    LLM relevance check failed: {e}")
-    
-    # Fallback to keyword matching
-    return calculate_relevance_score(candidate, theme)
+        print(f"    LLM link judge failed: {e}")
+        return fallback
+
+
+def get_selection_thresholds(candidate: LinkCandidate, theme: dict) -> Dict[str, float]:
+    """Allow a narrow threshold relaxation for trusted, clearly on-theme sources."""
+    thresholds = {
+        "relevance": MIN_RELEVANCE_SCORE,
+        "obscurity": MIN_OBSCURITY_SCORE,
+        "gem": MIN_GEM_SCORE,
+        "reason": "",
+    }
+
+    if not is_trusted_theme_domain(candidate.url, theme):
+        return thresholds
+
+    focus_hits = theme_focus_hits(candidate, theme)
+    if not focus_hits:
+        return thresholds
+
+    lane = classify_source_lane(candidate.url, candidate.title, candidate.description, candidate.concepts)
+    if lane not in {"primary-doc", "enthusiast-research", "old-web", "museum-object", "local-history", "niche-institution", "indie-essay"}:
+        return thresholds
+
+    thresholds["relevance"] = 0.40
+    thresholds["obscurity"] = 0.25
+    thresholds["gem"] = 0.48
+    thresholds["reason"] = f"trusted {lane} source with {len(focus_hits)} focus hit(s)"
+    return thresholds
 
 
 def score_candidates(candidates: List[LinkCandidate], theme: dict) -> List[LinkCandidate]:
-    """Score all candidates for relevance and obscurity."""
+    """Score all candidates for relevance, gem quality, and obscurity."""
     print(f"\nScoring {len(candidates)} candidates...")
     
     for i, candidate in enumerate(candidates, 1):
         print(f"\n  [{i}/{len(candidates)}] {candidate.url}")
         
-        # Calculate relevance
-        relevance = verify_relevance_with_llm(candidate, theme)
-        candidate.relevance_score = relevance
-        
-        # Combined score: relevance * 0.7 + obscurity * 0.3
-        candidate.final_score = (relevance * 0.7) + (candidate.obscurity_score * 0.3)
-        
-        print(f"    Relevance: {relevance:.2f}")
+        judged = judge_candidate_with_llm(candidate, theme)
+        candidate.relevance_score = judged["relevance"]
+        candidate.gem_score = judged["gem"]
+        candidate.story_seed_score = judged["story_seed"]
+        candidate.anti_corporate_score = judged["anti_corporate"]
+        candidate.curator_reason = judged.get("reason", "")
+
+        candidate.final_score = (
+            candidate.relevance_score * 0.30
+            + candidate.obscurity_score * 0.20
+            + candidate.gem_score * 0.30
+            + candidate.story_seed_score * 0.10
+            + candidate.anti_corporate_score * 0.10
+        )
+
+        print(f"    Relevance: {candidate.relevance_score:.2f}")
         print(f"    Obscurity: {candidate.obscurity_score:.2f}")
+        print(f"    Gem: {candidate.gem_score:.2f}")
+        print(f"    Story seed: {candidate.story_seed_score:.2f}")
+        print(f"    Anti-corporate: {candidate.anti_corporate_score:.2f}")
         print(f"    Final: {candidate.final_score:.2f}")
+        if candidate.curator_reason:
+            print(f"    Why: {candidate.curator_reason}")
     
     return candidates
 
@@ -1561,7 +1992,7 @@ def calculate_content_similarity(candidate1: LinkCandidate, candidate2: LinkCand
     return (title_sim * 0.7) + (concept_overlap * 0.3)
 
 
-def select_best_links(candidates: List[LinkCandidate], count: int = 7) -> List[LinkCandidate]:
+def select_best_links(candidates: List[LinkCandidate], theme: dict, count: int = 7, corpus: Optional[DiscoveryCorpus] = None) -> List[LinkCandidate]:
     """Select the best links based on final score with diversity checks."""
     # Filter out candidates with errors, low scores, or .edu domains
     print(f"\n🔍 Filtering {len(candidates)} candidates:")
@@ -1569,10 +2000,17 @@ def select_best_links(candidates: List[LinkCandidate], count: int = 7) -> List[L
     # Track filtering reasons
     filter_stats = {
         "errors": 0,
+        "disallowed_domain": 0,
+        "listicle": 0,
+        "bad_page_type": 0,
+        "theme_reject": 0,
+        "off_theme": 0,
         "low_relevance": 0,
         "low_obscurity": 0,
+        "low_gem": 0,
         "edu_domain": 0,
         "boilerplate": 0,
+        "trusted_exception": 0,
         "passed": 0
     }
     
@@ -1582,26 +2020,78 @@ def select_best_links(candidates: List[LinkCandidate], count: int = 7) -> List[L
             filter_stats["errors"] += 1
             print(f"  ✗ {c.url[:60]}... - ERROR: {c.error}")
             continue
+
+        domain = urlparse(c.url).netloc
+        if is_disallowed_domain(domain):
+            filter_stats["disallowed_domain"] += 1
+            print(f"  ✗ {c.url[:60]}... - Disallowed domain")
+            continue
+
+        if is_listicle_url(c.url, c.title):
+            filter_stats["listicle"] += 1
+            print(f"  ✗ {c.url[:60]}... - Listicle/junk pattern")
+            continue
+
+        bad_page_reason = looks_like_bad_page_type(c)
+        if (
+            bad_page_reason == "too little substance"
+            and (c.concepts or c.interesting_bits or c.description)
+        ):
+            bad_page_reason = None
+        if bad_page_reason:
+            filter_stats["bad_page_type"] += 1
+            print(f"  ✗ {c.url[:60]}... - Bad page type: {bad_page_reason}")
+            continue
+
+        theme_rejection = get_theme_rejection_reason(c, theme)
+        if theme_rejection:
+            filter_stats["theme_reject"] += 1
+            print(f"  ✗ {c.url[:60]}... - {theme_rejection}")
+            continue
+
+        if looks_off_theme(c, theme):
+            filter_stats["off_theme"] += 1
+            print(f"  ✗ {c.url[:60]}... - Off-theme drift")
+            continue
         
-        if urlparse(c.url).netloc.endswith('.edu'):
+        if urlparse(c.url).netloc.endswith('.edu') and not is_trusted_theme_domain(c.url, theme):
             filter_stats["edu_domain"] += 1
             print(f"  ✗ {c.url[:60]}... - .edu domain filtered")
             continue
+
+        thresholds = get_selection_thresholds(c, theme)
+        used_trusted_exception = bool(
+            thresholds["reason"]
+            and (
+                c.relevance_score < MIN_RELEVANCE_SCORE
+                or c.obscurity_score < MIN_OBSCURITY_SCORE
+                or c.gem_score < MIN_GEM_SCORE
+            )
+        )
             
-        if c.relevance_score < MIN_RELEVANCE_SCORE:
+        if c.relevance_score < thresholds["relevance"]:
             filter_stats["low_relevance"] += 1
-            print(f"  ✗ {c.url[:60]}... - Low relevance: {c.relevance_score:.2f} < {MIN_RELEVANCE_SCORE}")
+            print(f"  ✗ {c.url[:60]}... - Low relevance: {c.relevance_score:.2f} < {thresholds['relevance']:.2f}")
             continue
             
-        if c.obscurity_score < MIN_OBSCURITY_SCORE:
+        if c.obscurity_score < thresholds["obscurity"]:
             filter_stats["low_obscurity"] += 1
-            print(f"  ✗ {c.url[:60]}... - Low obscurity: {c.obscurity_score:.2f} < {MIN_OBSCURITY_SCORE}")
+            print(f"  ✗ {c.url[:60]}... - Low obscurity: {c.obscurity_score:.2f} < {thresholds['obscurity']:.2f}")
+            continue
+
+        if c.gem_score < thresholds["gem"]:
+            filter_stats["low_gem"] += 1
+            print(f"  ✗ {c.url[:60]}... - Low gem score: {c.gem_score:.2f} < {thresholds['gem']:.2f}")
             continue
 
         if looks_like_boilerplate(c):
             filter_stats["boilerplate"] += 1
             print(f"  ✗ {c.url[:60]}... - Looks like boilerplate (contact/privacy/etc.)")
             continue
+
+        if used_trusted_exception:
+            filter_stats["trusted_exception"] += 1
+            print(f"  ✓ Trusted-source threshold exception: {thresholds['reason']}")
         
         filter_stats["passed"] += 1
         valid.append(c)
@@ -1609,10 +2099,17 @@ def select_best_links(candidates: List[LinkCandidate], count: int = 7) -> List[L
     print(f"\n📊 Filtering Summary:")
     print(f"  ✓ Passed all filters: {filter_stats['passed']}")
     print(f"  ✗ Errors: {filter_stats['errors']}")
-    print(f"  ✗ Low relevance (<{MIN_RELEVANCE_SCORE}): {filter_stats['low_relevance']}")
-    print(f"  ✗ Low obscurity (<{MIN_OBSCURITY_SCORE}): {filter_stats['low_obscurity']}")
+    print(f"  ✗ Disallowed domains: {filter_stats['disallowed_domain']}")
+    print(f"  ✗ Listicles/junk: {filter_stats['listicle']}")
+    print(f"  ✗ Bad page types: {filter_stats['bad_page_type']}")
+    print(f"  ✗ Theme rejects: {filter_stats['theme_reject']}")
+    print(f"  ✗ Off-theme drift: {filter_stats['off_theme']}")
+    print(f"  ✗ Low relevance: {filter_stats['low_relevance']}")
+    print(f"  ✗ Low obscurity: {filter_stats['low_obscurity']}")
+    print(f"  ✗ Low gem score: {filter_stats['low_gem']}")
     print(f"  ✗ .edu domains: {filter_stats['edu_domain']}")
     print(f"  ✗ Boilerplate/contact pages: {filter_stats['boilerplate']}")
+    print(f"  ✓ Trusted-source exceptions used: {filter_stats['trusted_exception']}")
     
     fallback_mode = False
     if len(valid) < MINIMUM_SELECTED_LINKS:
@@ -1627,7 +2124,8 @@ def select_best_links(candidates: List[LinkCandidate], count: int = 7) -> List[L
         for rel_threshold, obs_threshold, label in fallback_tiers:
             if len(valid) >= MINIMUM_SELECTED_LINKS:
                 break
-            print(f"    • {label}: rel ≥ {rel_threshold:.2f}, obs ≥ {obs_threshold:.2f}")
+            gem_threshold = min(0.45, rel_threshold + 0.05)
+            print(f"    • {label}: rel ≥ {rel_threshold:.2f}, obs ≥ {obs_threshold:.2f}, gem ≥ {gem_threshold:.2f}")
             added_this_tier = 0
             for c in candidates:
                 if len(valid) >= MINIMUM_SELECTED_LINKS:
@@ -1636,12 +2134,24 @@ def select_best_links(candidates: List[LinkCandidate], count: int = 7) -> List[L
                     continue
                 if is_disallowed_domain(urlparse(c.url).netloc):
                     continue
+                if get_theme_rejection_reason(c, theme):
+                    continue
+                if looks_off_theme(c, theme):
+                    continue
                 if looks_like_boilerplate(c):
+                    continue
+                bad_page_reason = looks_like_bad_page_type(c)
+                if (
+                    bad_page_reason == "too little substance"
+                    and (c.concepts or c.interesting_bits or c.description)
+                ):
+                    bad_page_reason = None
+                if bad_page_reason:
                     continue
                 if is_listicle_url(c.url, c.title):
                     continue
-                if c.relevance_score >= rel_threshold and c.obscurity_score >= obs_threshold:
-                    print(f"  ➕ Fallback candidate: {c.url[:60]}... (rel {c.relevance_score:.2f}, obs {c.obscurity_score:.2f})")
+                if c.relevance_score >= rel_threshold and c.obscurity_score >= obs_threshold and c.gem_score >= gem_threshold:
+                    print(f"  ➕ Fallback candidate: {c.url[:60]}... (rel {c.relevance_score:.2f}, obs {c.obscurity_score:.2f}, gem {c.gem_score:.2f})")
                     valid.append(c)
                     added_this_tier += 1
             if added_this_tier:
@@ -1651,25 +2161,43 @@ def select_best_links(candidates: List[LinkCandidate], count: int = 7) -> List[L
         print("\n❌ No candidates passed filtering!")
         return []
     
-    # Sort by final score
-    sorted_candidates = sorted(valid, key=lambda x: x.final_score, reverse=True)
+    # Sort by final score adjusted for recent repetition in the persistent corpus
+    scored_valid = []
+    for candidate in valid:
+        novelty_adjustment = corpus.novelty_adjustment(candidate) if corpus else 0.0
+        selection_score = candidate.final_score + novelty_adjustment
+        setattr(candidate, "selection_score", selection_score)
+        setattr(candidate, "novelty_adjustment", novelty_adjustment)
+        scored_valid.append(candidate)
+
+    sorted_candidates = sorted(scored_valid, key=lambda x: getattr(x, "selection_score", x.final_score), reverse=True)
     
     # Select top N with diversity checks (domain + content)
     selected = []
     domains_used = []
+    lanes_used = []
     skipped_domain = 0
+    skipped_lane = 0
     skipped_similar = 0
     
+    lane_limit = 2 if len(valid) > MINIMUM_SELECTED_LINKS else 3
+
     for candidate in sorted_candidates:
         if len(selected) >= count:
             break
         
         domain = urlparse(candidate.url).netloc
+        lane = classify_source_lane(candidate.url, candidate.title, candidate.description, candidate.concepts)
         
         # Skip if domain already used (max 3 links per domain)
         if domains_used.count(domain) >= 3:
             print(f"  ⏭ Skipping (domain limit reached): {candidate.title[:50]}...")
             skipped_domain += 1
+            continue
+
+        if lanes_used.count(lane) >= lane_limit:
+            print(f"  ⏭ Skipping (lane limit reached: {lane}): {candidate.title[:50]}...")
+            skipped_lane += 1
             continue
         
         # Check content similarity with already selected links
@@ -1687,11 +2215,20 @@ def select_best_links(candidates: List[LinkCandidate], count: int = 7) -> List[L
         
         selected.append(candidate)
         domains_used.append(domain)
-        print(f"  ✓ Selected: {candidate.title[:50]}... (score: {candidate.final_score:.2f})")
+        lanes_used.append(lane)
+        if corpus:
+            print(
+                f"  ✓ Selected: {candidate.title[:50]}... "
+                f"(base: {candidate.final_score:.2f}, novelty: {getattr(candidate, 'novelty_adjustment', 0.0):+.2f}, "
+                f"selection: {getattr(candidate, 'selection_score', candidate.final_score):.2f})"
+            )
+        else:
+            print(f"  ✓ Selected: {candidate.title[:50]}... (score: {candidate.final_score:.2f})")
     
     print(f"\n📊 Selection Summary:")
     print(f"  ✓ Selected: {len(selected)}")
     print(f"  ⏭ Skipped (domain limit): {skipped_domain}")
+    print(f"  ⏭ Skipped (lane limit): {skipped_lane}")
     print(f"  ⏭ Skipped (similar content): {skipped_similar}")
     
     return selected
@@ -1736,6 +2273,56 @@ def generate_summary(candidate: LinkCandidate, theme: dict) -> Tuple[str, str, L
     summary = _extract_summary_text(candidate)
     tags = _generate_tags(candidate)
     return title, summary, tags
+
+
+def build_story_link_context(links: List[LinkCandidate], theme: dict, target_date: Optional[datetime] = None) -> dict:
+    """Build a compact JSON artifact the story generator can use for same-day inspiration."""
+    today = target_date or datetime.now()
+    motifs = []
+    interesting = []
+    selected_links = []
+    seen = set()
+
+    for link in links[:5]:
+        title = (link.title or "").strip()
+        reason = (link.curator_reason or "").strip()
+        concepts = [c for c in link.concepts[:4] if c]
+        bits = [b for b in link.interesting_bits[:3] if b]
+        selected_links.append({
+            "title": title,
+            "url": link.url,
+            "concepts": concepts,
+            "reason": reason,
+        })
+        for item in concepts + bits:
+            key = item.lower()
+            if key in seen:
+                continue
+            seen.add(key)
+            if len(item) <= 60:
+                motifs.append(item)
+        for item in bits:
+            if len(item) <= 120 and item not in interesting:
+                interesting.append(item)
+
+    return {
+        "date": today.strftime("%Y-%m-%d"),
+        "theme": theme.get("name", "unknown"),
+        "links_direction": theme.get("links", theme.get("name", "unknown")),
+        "motifs": motifs[:12],
+        "interesting_bits": interesting[:8],
+        "links": selected_links,
+    }
+
+
+def save_story_link_context(links: List[LinkCandidate], theme: dict, target_date: Optional[datetime] = None) -> Path:
+    """Persist selected-link context for the story generator."""
+    context = build_story_link_context(links, theme, target_date)
+    date_str = context["date"]
+    filepath = STORY_CONTEXT_DIR / f"{date_str}-links.json"
+    filepath.write_text(json.dumps(context, indent=2))
+    print(f"✓ Saved story context to: {filepath}")
+    return filepath
 
 
 def save_links(links: List[LinkCandidate], theme: dict, target_date: Optional[datetime] = None) -> Path:
@@ -1821,7 +2408,7 @@ def main():
     args = parse_args()
     target_date = resolve_date(args.date) if args.date else None
     theme_override = load_theme_override(args.theme_json)
-    theme = theme_override or get_daily_theme()
+    theme = theme_override or get_daily_theme(target_date)
     theme_name = theme.get("name", "unknown")
     print(f"\nTheme: {theme_name}")
     print(f"Direction: {theme.get('links', theme_name)}")
@@ -1836,7 +2423,15 @@ def main():
 
     # Load persistent URL registry for cross-day dedup
     registry = LinkRegistry()
+    corpus = DiscoveryCorpus()
     print(f"🗂️  Registry loaded: {registry.total_links} previously-published links")
+    print(f"🗂️  Discovery corpus loaded: {len(corpus.candidates)} candidates, {len(corpus.selection_history)} selections")
+    existing_pool = corpus.candidate_pool(
+        LinkCandidate,
+        limit=80,
+        include_published=False,
+        theme_name=theme_name,
+    )
     
     # Step 1: Get candidate URLs
     print("\n" + "=" * 70)
@@ -1845,21 +2440,29 @@ def main():
     candidates_urls = get_candidate_urls(theme, registry=registry)
     
     if not candidates_urls:
-        print("Error: No candidate URLs found")
-        sys.exit(1)
-    
-    # Step 2: Scrape and analyze
-    print("\n" + "=" * 70)
-    print("STEP 2: Scraping Content")
-    print("=" * 70)
-    candidates = scrape_and_analyze(candidates_urls, theme)
+        if not existing_pool:
+            print("Error: No candidate URLs found and no stored corpus candidates available")
+            sys.exit(1)
+        print("⚠️  No fresh candidate URLs found; continuing with stored corpus only")
+        candidates = []
+    else:
+        # Step 2: Scrape and analyze
+        print("\n" + "=" * 70)
+        print("STEP 2: Scraping Content")
+        print("=" * 70)
+        candidates = scrape_and_analyze(candidates_urls, theme)
     
     valid_candidates = [c for c in candidates if c.error is None]
     print(f"\nSuccessfully scraped {len(valid_candidates)}/{len(candidates)} URLs")
-    
-    if len(valid_candidates) < 3:
-        print("Error: Too few valid candidates")
-        sys.exit(1)
+
+    if len(valid_candidates) < MINIMUM_SELECTED_LINKS:
+        print(
+            f"⚠️  Only {len(valid_candidates)} newly scraped candidates; "
+            f"stored corpus has {len(existing_pool)} unpublished candidate(s) for this theme"
+        )
+        if not valid_candidates and not existing_pool:
+            print("Error: No viable candidates available from scrape or corpus")
+            sys.exit(1)
     
     # Step 3: Score candidates
     print("\n" + "=" * 70)
@@ -1869,25 +2472,50 @@ def main():
     
     # Step 4: Select best
     print("\n" + "=" * 70)
-    print("STEP 4: Selecting Best Links")
+    print("STEP 4: Updating Discovery Corpus")
     print("=" * 70)
-    selected = select_best_links(scored, count=7)
+    date_str = (target_date or datetime.now()).strftime("%Y-%m-%d")
+    for candidate in scored:
+        corpus.upsert_candidate(candidate, theme_name, date_str)
+    corpus.save()
+    print(f"✓ Corpus updated with {len(scored)} scored candidates")
+
+    print("\n" + "=" * 70)
+    print("STEP 5: Selecting Best Links")
+    print("=" * 70)
+    selection_pool = corpus.candidate_pool(
+        LinkCandidate,
+        limit=80,
+        include_published=False,
+        theme_name=theme_name,
+    )
+    print(f"Selection pool size from corpus: {len(selection_pool)}")
+    selected = select_best_links(selection_pool, theme, count=7, corpus=corpus)
     
     if not selected:
         print("Error: No links passed scoring thresholds")
         sys.exit(1)
+
+    if len(selected) < MINIMUM_SELECTED_LINKS:
+        print(f"Error: Only {len(selected)} link(s) selected; minimum required is {MINIMUM_SELECTED_LINKS}")
+        sys.exit(1)
     
     print(f"\n✓ Selected {len(selected)} links")
     
-    # Step 5: Save
+    # Step 6: Save
     print("\n" + "=" * 70)
-    print("STEP 5: Saving Results")
+    print("STEP 6: Saving Results")
     print("=" * 70)
     today = target_date or datetime.now()
     date_str = today.strftime("%Y-%m-%d")
     filepath = save_links(selected, theme, target_date)
+    save_story_link_context(selected, theme, target_date)
 
-    # Step 6: Register published URLs in the persistent registry
+    # Step 7: Persist nightly selection history
+    corpus.mark_selected(selected, theme_name, date_str)
+    corpus.save()
+
+    # Step 8: Register published URLs in the persistent registry
     registry.register_batch(
         [(link.url, link.title) for link in selected],
         date=date_str,

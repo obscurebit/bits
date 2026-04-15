@@ -1,0 +1,580 @@
+# Curated source lanes for Obscure Bit.
+# The nightly job should explore neighborhoods of the web, not generic search-result sludge.
+
+global:
+  lane_order:
+    - primary-doc
+    - enthusiast-research
+    - old-web
+    - museum-object
+    - local-history
+    - niche-institution
+    - indie-essay
+
+  seed_queries:
+    - '"forgotten project" "field notes" -site:medium.com -site:substack.com'
+    - '"museum object" "odd history" -shop -store -product'
+    - '"local history" "unusual artifact" -wikipedia'
+    - '"independent research" "obscure history" -linkedin -youtube'
+
+  lanes:
+    primary-doc:
+      seed_domains:
+        - "bitsavers.org"
+        - "textfiles.com"
+        - "cryptomuseum.com"
+        - "codesandciphers.org.uk"
+      query_templates:
+        - '"{theme_name}" "{primary_term}" "manual" -wikipedia -github'
+        - '"{theme_name}" "{links_direction}" "field report" -site:.edu'
+        - '"{theme_name}" "{primary_term}" "lab notes" -shop -store'
+
+    enthusiast-research:
+      seed_domains:
+        - "vcfed.org"
+        - "nycsubway.org"
+        - "subbrit.org.uk"
+        - "lowtechmagazine.com"
+      query_templates:
+        - '"{theme_name}" "{links_direction}" "independent research"'
+        - '"{theme_name}" "{primary_term}" collector OR restoration'
+        - '"{theme_name}" "{links_direction}" "field notes" -wikipedia'
+
+    old-web:
+      seed_domains:
+        - "textfiles.com"
+        - "404pagefound.com"
+        - "lostmediawiki.com"
+      query_templates:
+        - '"{theme_name}" "{links_direction}" "personal site"'
+        - '"{theme_name}" "{primary_term}" "homepage" -site:github.com'
+        - '"{theme_name}" "{primary_term}" BBS OR webring'
+
+    museum-object:
+      seed_domains:
+        - "wellcomecollection.org"
+        - "collection.sciencemuseumgroup.org.uk"
+        - "si.edu"
+        - "computerhistory.org"
+      query_templates:
+        - '"{theme_name}" "{links_direction}" "museum object" -shop -store'
+        - '"{theme_name}" "{primary_term}" "object record"'
+        - '"{theme_name}" "{links_direction}" "collection item"'
+
+    local-history:
+      seed_domains:
+        - "nycsubway.org"
+        - "abandonedstations.org.uk"
+        - "subbrit.org.uk"
+        - "roadsideamerica.com"
+      query_templates:
+        - '"{theme_name}" "{links_direction}" "local history"'
+        - '"{theme_name}" "{primary_term}" "historical society"'
+        - '"{theme_name}" "{links_direction}" "oral history"'
+
+    niche-institution:
+      seed_domains:
+        - "publicdomainreview.org"
+        - "wellcomecollection.org"
+        - "computerhistory.org"
+        - "cabinetmagazine.org"
+      query_templates:
+        - '"{theme_name}" "{links_direction}" archive'
+        - '"{theme_name}" "{primary_term}" "case study" -site:.edu'
+        - '"{theme_name}" "{links_direction}" catalog'
+
+    indie-essay:
+      seed_domains:
+        - "cabinetmagazine.org"
+        - "lowtechmagazine.com"
+        - "publicdomainreview.org"
+      query_templates:
+        - '"{theme_name}" "{links_direction}" essay'
+        - '"{theme_name}" "{primary_term}" notes'
+        - '"{theme_name}" "{links_direction}" "forgotten history"'
+
+themes:
+  forgotten technology:
+    preferred_lanes:
+      - primary-doc
+      - enthusiast-research
+      - old-web
+      - museum-object
+      - indie-essay
+    seed_urls:
+      - "https://calpaterson.com/bank-python.html"
+      - "https://www.oldcomputers.net/kayproii.html"
+      - "https://www.computerhistory.org/revolution/computer-graphics-music-and-art/15/224/643"
+      - "https://120years.net/dubreq-stylophone/"
+      - "https://archives.museumofplay.org/repositories/3/archival_objects/21782"
+      - "https://gamesx.com/wiki/doku.php?id=repair:cdxdisassembly"
+    seed_queries:
+      - '"obsolete computer" "field notes" OR "oral history" -wikipedia'
+      - '"dead standard" "manual" OR "operator guide" -github'
+      - '"forgotten machine" restoration OR collector -youtube'
+      - '"arcade hardware" repair OR "service manual"'
+      - '"electronic instrument" "design history" prototype'
+    focus_terms:
+      - "obsolete computer"
+      - "forgotten machine"
+      - "dead standard"
+      - "legacy system"
+      - "obsolete hardware"
+      - "historical patent"
+      - "word processor"
+      - "teletype"
+      - "dial-up modem"
+      - "bank python"
+      - "triadex muse"
+      - "kaypro"
+      - "arcade hardware"
+      - "game console"
+      - "electronic instrument"
+      - "industrial design"
+      - "interface design"
+      - "stylophone"
+      - "pong"
+      - "sega cdx"
+    blocked_domains:
+      - "99percentinvisible.org"
+      - "lite.ip2location.com"
+    drift_terms:
+      - "worldbuilding"
+      - "ball lightning"
+      - "toynbee"
+      - "dyatlov"
+      - "taos hum"
+      - "subscribe"
+      - "podcast"
+      - "rss"
+    lane_overrides:
+      primary-doc:
+        seed_domains:
+          - "obsoletecomputermuseum.org"
+          - "oldcomputers.net"
+          - "computerhistory.org"
+        query_templates:
+          - '"obsolete system" "{links_direction}" manual'
+          - '"forgotten machine" "{primary_term}" documentation'
+          - '"dead standard" protocol OR specification'
+      enthusiast-research:
+        seed_domains:
+          - "calpaterson.com"
+          - "vcfed.org"
+          - "oldcomputers.net"
+          - "gamesx.com"
+          - "120years.net"
+        query_templates:
+          - '"obsolete system" collector OR restoration'
+          - '"legacy hardware" "oral history"'
+          - '"forgotten technology" "field notes" OR teardown'
+          - '"arcade hardware" repair OR teardown'
+          - '"electronic instrument" restoration OR notes'
+      old-web:
+        seed_domains:
+          - "textfiles.com"
+          - "oldcomputers.net"
+          - "gamesx.com"
+        query_templates:
+          - '"obsolete computer" "personal site"'
+          - '"dead standard" homepage OR webring'
+          - '"bank python" "oral history"'
+          - '"game console" "service manual"'
+      museum-object:
+        seed_urls:
+          - "https://120years.net/dubreq-stylophone/"
+          - "https://archives.museumofplay.org/repositories/3/archival_objects/21782"
+        seed_domains:
+          - "computerhistory.org"
+          - "obsoletecomputermuseum.org"
+          - "museumofplay.org"
+          - "designmuseum.org"
+        query_templates:
+          - '"triadex muse" "museum object"'
+          - '"obsolete computer" "object record"'
+          - '"forgotten machine" exhibit OR collection'
+          - '"electronic instrument" exhibit OR collection'
+
+  digital archaeology:
+    preferred_lanes:
+      - old-web
+      - enthusiast-research
+      - primary-doc
+      - niche-institution
+    lane_overrides:
+      old-web:
+        query_templates:
+          - '"abandoned website" "{primary_term}"'
+          - '"old web" "{links_direction}" "personal site"'
+
+  cryptographic secrets:
+    preferred_lanes:
+      - primary-doc
+      - niche-institution
+      - enthusiast-research
+      - museum-object
+    lane_overrides:
+      primary-doc:
+        seed_domains:
+          - "cipherfoundation.org"
+        query_templates:
+          - '"unsolved cipher" "{links_direction}" "case file"'
+          - '"codebook" "{primary_term}" manual'
+
+  abandoned stations:
+    preferred_lanes:
+      - local-history
+      - enthusiast-research
+      - museum-object
+    lane_overrides:
+      local-history:
+        query_templates:
+          - '"abandoned station" "{links_direction}" "local history"'
+          - '"closed platform" "{primary_term}" "oral history"'
+
+  maintenance myths:
+    preferred_lanes:
+      - enthusiast-research
+      - primary-doc
+      - local-history
+      - indie-essay
+    lane_overrides:
+      primary-doc:
+        query_templates:
+          - '"maintenance log" "{links_direction}"'
+          - '"repair manual" "{primary_term}" history'
+
+  municipal weirdness:
+    preferred_lanes:
+      - local-history
+      - niche-institution
+      - museum-object
+      - indie-essay
+    seed_urls:
+      - "https://designmuseum.org/design/blue-diversion-toilet"
+      - "https://americanhistory.si.edu/collections/object/nmah_841431"
+      - "https://americanhistory.si.edu/collections/object/nmah_1290920"
+      - "https://collection.sciencemuseumgroup.org.uk/objects/co8069235/coin-operated-toilet-lock"
+      - "https://collection.sciencemuseumgroup.org.uk/people/ap27393/post-office-london-railway"
+      - "https://www.untappedcities.com/pneumatic-tube-mail-nyc/"
+      - "https://www.untappedcities.com/inside-roosevelt-islands-futuristic-pneumatic-tube-trash-system/"
+      - "https://www.untappedcities.com/nycs-first-subway-a-one-block-pneumatic-tunnel-below-broadway/"
+    seed_queries:
+      - '"municipal code" weird OR odd "local history" -wikipedia'
+      - '"public works" "case study" unusual city'
+      - '"weird bylaw" city OR town "historical society"'
+      - '"street furniture" "local history" city'
+      - '"urban design" oddity "public works"'
+    focus_terms:
+      - "municipal code"
+      - "city ordinance"
+      - "weird bylaw"
+      - "public works"
+      - "sanitation department"
+      - "civic experiment"
+      - "municipal building"
+      - "utility tunnel"
+      - "pneumatic tube"
+      - "traffic island"
+      - "street numbering"
+      - "zoning oddity"
+      - "public toilet"
+      - "street furniture"
+      - "urban design"
+      - "wayfinding"
+      - "civic signage"
+      - "parking meter"
+      - "traffic signal"
+      - "pneumatic mail"
+      - "pneumatic transit"
+      - "pneumatic subway"
+      - "vacuum collection"
+      - "roosevelt island"
+      - "avac"
+      - "street sign"
+    blocked_domains:
+      - "balh.org.uk"
+      - "catnaps.org"
+      - "antipope.org"
+      - "eyeteeth.blogspot.com"
+    drift_terms:
+      - "restaurant"
+      - "luxury apartment"
+      - "real estate"
+      - "travel guide"
+      - "podcast"
+      - "shopping"
+      - "wiki"
+      - "photographer"
+      - "magazine"
+      - "islamic"
+      - "belfast"
+    lane_overrides:
+      local-history:
+        seed_urls:
+          - "https://www.untappedcities.com/pneumatic-tube-mail-nyc/"
+          - "https://www.untappedcities.com/inside-roosevelt-islands-futuristic-pneumatic-tube-trash-system/"
+          - "https://www.untappedcities.com/nycs-first-subway-a-one-block-pneumatic-tunnel-below-broadway/"
+        seed_domains:
+          - "forgotten-ny.com"
+          - "roadsideamerica.com"
+          - "subbrit.org.uk"
+          - "untappedcities.com"
+        query_templates:
+          - '"municipal code" "{links_direction}" "local history"'
+          - '"city rule" "{primary_term}" "case study"'
+          - '"public works" "oral history" city'
+          - '"street furniture" "local history"'
+      niche-institution:
+        seed_domains:
+          - "cabinetmagazine.org"
+          - "publicdomainreview.org"
+          - "collection.sciencemuseumgroup.org.uk"
+          - "designmuseum.org"
+          - "americanhistory.si.edu"
+        query_templates:
+          - '"civic technology" archive OR catalog'
+          - '"municipal experiment" "case study"'
+          - '"sanitation department" exhibit OR archive'
+          - '"wayfinding" city design archive'
+      museum-object:
+        seed_urls:
+          - "https://americanhistory.si.edu/collections/object/nmah_841431"
+          - "https://americanhistory.si.edu/collections/object/nmah_1290920"
+          - "https://collection.sciencemuseumgroup.org.uk/objects/co8069235/coin-operated-toilet-lock"
+        seed_domains:
+          - "si.edu"
+          - "collection.sciencemuseumgroup.org.uk"
+          - "designmuseum.org"
+          - "americanhistory.si.edu"
+        query_templates:
+          - '"public works" "museum object"'
+          - '"traffic signal" "object record"'
+          - '"pneumatic tube" "collection item"'
+          - '"street sign" "design collection"'
+      indie-essay:
+        seed_domains:
+          - "cabinetmagazine.org"
+          - "lowtechmagazine.com"
+        query_templates:
+          - '"city ordinance" essay OR notebook'
+          - '"street numbering" essay OR notes'
+          - '"municipal weirdness" "field notes"'
+          - '"urban design" city oddity essay'
+
+  edge of maps:
+    preferred_lanes:
+      - local-history
+      - niche-institution
+      - indie-essay
+      - museum-object
+    lane_overrides:
+      local-history:
+        query_templates:
+          - '"map error" "{links_direction}" "local history"'
+          - '"uncharted place" "{primary_term}" "field notes"'
+
+  biological computing:
+    preferred_lanes:
+      - indie-essay
+      - primary-doc
+      - enthusiast-research
+      - niche-institution
+    seed_urls:
+      - "https://third-bit.com/2013/07/17/biological-computing-user-stories/"
+      - "http://plasticbag.org/archives/2003/04/hydra_biological_computing_and_ericbonabeau/"
+      - "https://gwern.net/doc/cs/computable/2016-adamatzky-advancesinphysarummachines.pdf"
+    focus_terms:
+      - "biological computing"
+      - "dna computing"
+      - "molecular computing"
+      - "biomolecular computing"
+      - "unconventional computing"
+      - "slime mold computing"
+      - "physarum"
+      - "wetware"
+      - "organic transistor"
+      - "organic electronics"
+      - "bacterial logic gates"
+      - "gene circuit"
+      - "quorum sensing"
+    lane_overrides:
+      indie-essay:
+        seed_domains:
+          - "third-bit.com"
+          - "plasticbag.org"
+          - "gwern.net"
+        query_templates:
+          - '"biological computing" essay OR blog'
+          - '"slime mold computing" OR physarum essay'
+          - '"unconventional computing" notes OR notebook'
+      primary-doc:
+        seed_domains:
+          - "gwern.net"
+        query_templates:
+          - '"dna computing" "lab notes" OR notebook -site:.edu'
+          - '"molecular computing" OR "biomolecular computing" "field report"'
+          - 'physarum OR "slime mold" computing manual OR report'
+      enthusiast-research:
+        seed_domains:
+          - "third-bit.com"
+          - "plasticbag.org"
+        query_templates:
+          - '"slime mold computing" project OR field notes'
+          - '"bacterial logic gates" OR "gene circuit" "personal site"'
+          - '"organic transistor" OR wetware project OR prototype'
+      niche-institution:
+        seed_domains:
+          - "computerhistory.org"
+          - "wellcomecollection.org"
+        query_templates:
+          - '"unconventional computing" archive OR catalog'
+          - '"organic electronics" "case study" -site:.edu'
+          - '"dna computing" exhibit OR archive'
+
+  synthetic life:
+    preferred_lanes:
+      - primary-doc
+      - niche-institution
+      - enthusiast-research
+      - indie-essay
+    seed_urls:
+      - "https://www.jcvi.org/research/first-minimal-synthetic-bacterial-cell"
+      - "https://www.edge.org/conversation/j_craig_venter-creation-of-a-bacterial-cell-controlled-by-a-chemically-synthesized"
+      - "https://static.igem.org/mediawiki/2010/e/ec/Ventersyntheticcell.pdf"
+      - "http://www.intropy.co.uk/2010/05/synthetic-life-life-as-information.html"
+    seed_queries:
+      - '"synthetic cell" "lab notes" OR "field report" -site:.edu'
+      - '"minimal cell" case study OR "primary source"'
+      - '"artificial life" protocell OR xenobot "personal site"'
+      - '"synthetic life" "old web" OR blog'
+    focus_terms:
+      - "synthetic cell"
+      - "minimal cell"
+      - "synthetic genome"
+      - "chemically synthesized genome"
+      - "protocell"
+      - "artificial life"
+      - "xenobot"
+      - "cell-free system"
+      - "bottom-up biology"
+      - "synthetic organism"
+      - "igem"
+      - "jcvi-syn3.0"
+    blocked_domains:
+      - "bio.libretexts.org"
+      - "whackamia.substack.com"
+    drift_terms:
+      - "mendel"
+      - "chromosomes"
+      - "inheritance"
+      - "wild animals"
+      - "de-extinction"
+      - "frontiers in biofoundry"
+      - "philosophy of"
+    lane_overrides:
+      primary-doc:
+        seed_domains:
+          - "jcvi.org"
+          - "static.igem.org"
+        query_templates:
+          - '"synthetic cell" manual OR supplementary OR pdf'
+          - '"minimal cell" report OR notes'
+          - '"protocell" protocol OR workshop'
+      niche-institution:
+        seed_domains:
+          - "edge.org"
+          - "jcvi.org"
+          - "thehastingscenter.org"
+        query_templates:
+          - '"synthetic genome" "case study"'
+          - '"artificial life" archive OR interview'
+          - '"minimal cell" ethics OR workshop'
+      enthusiast-research:
+        seed_urls:
+          - "http://www.intropy.co.uk/2010/05/synthetic-life-life-as-information.html"
+        seed_domains:
+          - "edge.org"
+          - "intropy.co.uk"
+        query_templates:
+          - '"protocell" "field notes"'
+          - '"artificial life" "personal site"'
+          - '"xenobot" notes OR prototype'
+          - '"synthetic life" blog OR notebook'
+
+  signal from nowhere:
+    preferred_lanes:
+      - primary-doc
+      - enthusiast-research
+      - old-web
+      - niche-institution
+    seed_urls:
+      - "https://www.bigear.org/wow.htm"
+      - "https://www.qsl.net/n1irz/woodpeck.html"
+      - "https://technosearch.seti.org/wow-signal/"
+    seed_queries:
+      - '"number station" "field notes" OR recording -wikipedia'
+      - '"russian woodpecker" OR duga "history" "personal site"'
+      - '"uvb-76" OR "the buzzer" archive OR logbook'
+    focus_terms:
+      - "number station"
+      - "shortwave"
+      - "uvb-76"
+      - "the buzzer"
+      - "russian woodpecker"
+      - "duga radar"
+      - "over-the-horizon radar"
+      - "wow signal"
+      - "big ear"
+      - "interval signal"
+      - "spy radio"
+      - "cold war radio"
+      - "skyking"
+    blocked_domains:
+      - "99percentinvisible.org"
+      - "alienlife.net"
+      - "gardenofmemory.net"
+      - "gigazine.net"
+      - "news.berkeley.edu"
+      - "projectavalon.net"
+    drift_terms:
+      - "extraterrestrial"
+      - "breakthrough listen"
+      - "staff"
+      - "subscribe"
+      - "podcast"
+      - "ufo"
+    lane_overrides:
+      primary-doc:
+        seed_domains:
+          - "bigear.org"
+          - "priyom.org"
+          - "technosearch.seti.org"
+        query_templates:
+          - '"number station" logs OR transcript'
+          - '"wow signal" paper OR observer'
+          - '"uvb-76" recording OR archive'
+      enthusiast-research:
+        seed_domains:
+          - "qsl.net"
+          - "priyom.org"
+          - "cryptomuseum.com"
+        query_templates:
+          - '"russian woodpecker" "field notes"'
+          - '"shortwave" mystery signal history'
+          - '"numbers station" operator OR schedule'
+      old-web:
+        seed_domains:
+          - "qsl.net"
+        query_templates:
+          - '"number station" "personal site"'
+          - '"shortwave mystery" homepage'
+          - '"russian woodpecker" old web'
+      niche-institution:
+        seed_domains:
+          - "technosearch.seti.org"
+          - "cryptomuseum.com"
+        query_templates:
+          - '"wow signal" archive OR exhibit'
+          - '"cold war radio" archive OR case study'
+          - '"interval signal" catalog'

@@ -2,7 +2,7 @@
 
 ## Overview
 
-Obscure Bit is an automated content generation system that creates and publishes daily tech stories, links, and newsletter editions. A single orchestrator (`run_daily.py`) synchronizes theme selection and triggers the story, link, and landing generators. The system runs on GitHub Actions for content generation and publishes to GitHub Pages. Substack publishing requires local execution due to Cloudflare restrictions.
+Obscure Bit is an automated content generation system that creates and publishes daily stories, curated links, and newsletter editions. A single orchestrator (`run_daily.py`) synchronizes theme selection and triggers the story, link, and landing generators. The system runs on GitHub Actions for content generation and publishes to GitHub Pages. Substack publishing requires local execution due to Cloudflare restrictions.
 
 ## Architecture
 
@@ -20,7 +20,7 @@ graph TB
     subgraph "Content Sources"
         E[OpenAI API] --> A
         F[Prompts & Seeds] --> A
-        W[LLM Strategy + Web Search APIs] --> A
+        W[Lane Catalog + Bounded Search] --> A
         SM[Style Modifiers<br/>SHA-256 date seed] --> A
     end
     
@@ -51,7 +51,7 @@ flowchart LR
     subgraph "Input"
         A1[OpenAI API]
         A2[Story Prompts]
-        A3[Link Seeds]
+        A3[Lane Catalog + Theme Overrides]
         SM[style_modifiers.yaml]
     end
     
@@ -79,7 +79,6 @@ flowchart LR
     A1 --> B1
     A2 --> B1
     SM --> B1
-    W --> B2
     A3 --> B2
     WS --> B2
     B1 --> C1
@@ -133,124 +132,138 @@ flowchart TD
 - **Anti-repetition**: Banned word sets rotate to prevent stylistic staleness
 - **Genre propagation**: Genre flows from modifier → frontmatter → HTML cards via `update_landing.py`
 
-## Link Generation Architecture (v3.1 - Registry + Quality Gates)
+## Link Generation Architecture (v4 - Lane-First Discovery + Repo Memory)
 
-The link generation system uses a multi-stage pipeline with LLM-driven research strategy, active web search, and a persistent URL registry for cross-day deduplication:
+The link generation system is now lane-first. It no longer depends on generic search-provider fanout as the primary discovery method. Instead it starts from curated source neighborhoods, expands them with a bounded crawl, optionally asks the LLM for a small number of better angles inside those neighborhoods, and then scores candidates against a repo-backed discovery corpus.
 
 ```mermaid
 flowchart LR
-    subgraph "Stage 1: LLM Research Strategy"
-        RS1[Load research_strategy_system.md]
-        RS2[LLM generates domain ideas]
-        RS3[LLM generates search queries]
-        RS4[Parse structured output]
+    subgraph "Stage 1: Theme Planning"
+        TP1[Load themes.yaml]
+        TP2[Load source_lanes.yaml]
+        TP3[Merge global lanes + theme overrides]
     end
     
-    subgraph "Stage 2: Discovery"
-        D1[Execute LLM search queries]
-        D2["Extended sources (42 APIs)"]
-        D3[SerpAPI / ContextualWeb]
-        D4["Marginalia (primary fallback)"]
+    subgraph "Stage 2: Lane Discovery"
+        D1[Curated seed URLs]
+        D2[Trusted lane domains]
+        D3[Lane query templates]
+        D4[Bounded one-hop seed crawl]
+        D5[Marginalia / limited DDG fallback]
     end
     
-    subgraph "Stage 2b: Registry Filter"
+    subgraph "Stage 3: Repo Memory Filter"
         REG[link_registry.py]
-        REG2[SHA-256 URL hash lookup]
-        REG3[Reject previously-published URLs]
+        CORPUS[discovery_corpus.py]
+        REG2[Reject previously-published URLs]
     end
     
-    subgraph "Stage 3: Scraping"
+    subgraph "Stage 4: Scraping"
         S1[Fetch Content]
         S2[Extract Concepts]
         S3[Score Obscurity]
     end
     
-    subgraph "Stage 4: Verification"
-        V1[LLM Relevance Check]
-        V2[Keyword Fallback]
+    subgraph "Stage 5: Theme Validation"
+        V1[Focus-term match]
+        V2[Theme drift rejection]
+        V3[Theme-blocked domains]
+        V4[LLM judge or fallback heuristic]
     end
     
-    subgraph "Stage 5: Selection"
-        SEL[Score: 70% relevance + 30% obscurity]
-        QG[Listicle + junk domain filter]
-        DIV[Content similarity filter]
-        DOM[Domain Diversity max 3/domain]
-        EDU[Filter .edu + disallowed domains]
+    subgraph "Stage 6: Selection"
+        SEL[Composite scoring]
+        QG[Listicle / boilerplate / bad-page filter]
+        DIV[Similarity and lane diversity]
+        DOM[Domain and novelty balancing]
+        OUT[Select best links]
     end
     
-    RS1 --> RS2
-    RS2 --> RS3
-    RS3 --> RS4
-    RS4 --> D1
-    D1 --> REG
-    D2 --> REG
-    D3 --> REG
+    TP1 --> TP2
+    TP2 --> TP3
+    TP3 --> D1
+    TP3 --> D2
+    TP3 --> D3
+    D1 --> D4
+    D2 --> D5
+    D3 --> D5
     D4 --> REG
+    D5 --> REG
     REG --> REG2
-    REG2 --> REG3
-    REG3 --> S1
+    CORPUS --> SEL
+    REG2 --> S1
     S1 --> S2
     S2 --> S3
     S3 --> V1
-    V1 --> SEL
-    V2 --> SEL
+    V1 --> V2
+    V2 --> V3
+    V3 --> V4
+    V4 --> SEL
     SEL --> QG
     QG --> DIV
     DIV --> DOM
-    DOM --> EDU
-    EDU --> OUT[Top 7 Links]
-    OUT --> REG4[Register in registry]
+    DOM --> OUT
+    OUT --> REG4[Persist registry + corpus + story context]
 ```
 
-### Research Strategy System
+### Lane-First Discovery
 
-The new approach asks the LLM to act as a **research strategist** rather than directly suggesting URLs:
+The active link system is built around curated lanes defined in `prompts/source_lanes.yaml`.
 
-1. **Domain Ideas**: LLM suggests 5 creative domain categories (niche history blogs, museum collections, research departments, etc.)
-2. **Search Queries**: LLM generates 5 specific, SEO-avoiding queries using technical terms and dates
-3. **Query Execution**: System executes queries via DuckDuckGo to discover actual URLs
-4. **Direct URLs**: Any URLs the LLM knows with confidence are also included
+Each lane represents a different kind of high-signal web neighborhood:
+- `primary-doc`
+- `enthusiast-research`
+- `old-web`
+- `museum-object`
+- `local-history`
+- `niche-institution`
+- `indie-essay`
 
-This approach surfaces obscure content by:
-- Avoiding broad keywords that attract clickbait
-- Using technical/academic vocabulary
-- Searching across diverse domains
-- Filtering listicles and SEO-optimized content early
+For each daily theme, the generator:
 
-### Resilient Search Stack
+1. Loads theme-specific lane preferences, seeds, focus terms, drift terms, and blocked domains.
+2. Starts from trusted seed URLs and seed domains instead of broad internet search.
+3. Runs a bounded one-hop crawl on seed pages to surface adjacent artifact pages.
+4. Executes only a small number of lane-shaped search queries, primarily through Marginalia and a tightly constrained DuckDuckGo fallback.
+5. Uses the LLM only for limited query expansion inside the trusted lane architecture, not for open-ended URL hunting.
 
-To survive DuckDuckGo throttling while still surfacing at least seven high-quality links, the discovery stage fans out across multiple providers:
-
-1. **DuckDuckGo Lite** – limited to **1 query per run** to avoid 202 throttle storms in CI. Disables after the first failure. Used only for the broadest theme query; all other searches route through alternative providers.
-2. **SerpAPI (Google)** – triggered automatically when `SERPAPI_KEY` is present; supplies clean organic URLs for broad theme queries. Now the primary search engine.
-3. **ContextualWeb Search** – optional RapidAPI fallback for additional coverage.
-4. **Marginalia.nu** – indie search engine that handles all `site:` domain queries and serves as the automatic fallback whenever DDG budget is exhausted or throttled.
-5. **Curated fallback queries** – `run_fallback_searches()` hits dependable domains (Library of Congress, Smithsonian, Wilson Center, etc.) plus generic "oral history / archives / declassified" searches, ensuring variety even when all other sources are sparse.
-6. **Backup booster queries** – if the deduplicated pool has <25 URLs, broad "hidden history" prompts run through Marginalia.
+This keeps discovery in better neighborhoods and materially reduces forum junk, SEO sludge, and generic encyclopedia drift.
 
 ### URL Registry (Cross-Day Deduplication)
 
-A persistent SHA-256 hash registry (`cache/link_registry.json`) prevents the same URL from ever being published twice:
+A persistent SHA-256 hash registry (`data/discovery/link_registry.json`) prevents the same URL from ever being published twice:
 
 1. **Normalize** – lowercase domain, strip `www.`, remove tracking params (`utm_*`, `fbclid`, etc.), sort query params, strip trailing slashes
 2. **Hash** – SHA-256 of the normalized URL → deterministic key
 3. **Filter** – before scoring, every candidate URL is checked against the registry; known URLs are rejected
 4. **Register** – after saving, all selected URLs are added to the registry with date, theme, title, and domain metadata
-5. **Domain frequency** – the registry tracks per-domain counts across all days, enabling future global diversity caps
+5. **Domain frequency** – the registry tracks per-domain counts across all days, enabling cross-run diversity caps
 
-The registry was backfilled from all existing posts via `scripts/backfill_registry.py`.
+The registry and the broader discovery memory live under `data/discovery/`, which is intended to be committed so nightly runs do not start from zero.
+
+### Discovery Corpus and Story Context
+
+`scripts/discovery_corpus.py` persists more than a hard dedup list:
+
+- `candidates.jsonl` stores compact scored candidate records
+- `selection_history.jsonl` stores published-link history for novelty penalties
+- `domain_state.json` tracks freshness and frequency by domain
+- `story_context/<date>-links.json` exports same-day motifs and interesting bits into story generation
+
+That repo-backed memory lets the selector penalize repetition and lets the story system borrow texture from the same day’s chosen links.
 
 ### Quality Gates
 
 Multiple layers prevent low-quality content from reaching publication:
 
-- **Disallowed domains**: Wikipedia, Archive.org, GitHub, `.edu` domains, plus a blocklist of junk/listicle sites (Listverse, BuzzFeed, Ranker, etc.)
-- **Listicle filter**: Catches numbered titles ("5 Cold War Close Calls"), clickbait patterns, game guides, and tip pages
-- **Domain filtering at every stage**: `search_extended_sources()` and `search_academic_sources()` now filter disallowed domains before returning URLs
-- **Fallback floor**: Emergency fallback thresholds bottom out at (0.15, 0.15) — no more zero-threshold "accept anything" mode
-- **Boilerplate detection**: Contact pages, privacy policies, and thin content are filtered
+- **Global disallowed domains**: Wikipedia, Archive.org, GitHub, StackExchange, major social feeds, and other junk-heavy surfaces are filtered early.
+- **Bad-page detection**: Homepages, category pages, product pages, forum/event pages, privacy/policy pages, and thin institutional pages are rejected.
+- **Listicle filter**: Catches numbered titles, clickbait phrasing, guides, and game-tip style pages.
+- **Theme focus terms**: Candidate relevance is anchored to theme-specific phrases from `source_lanes.yaml`, not just generic keyword overlap.
+- **Theme drift rejection**: Per-theme drift terms and blocked domains can reject pages that are obscure but clearly off-brief.
+- **Fallback scoring**: If LLM judging is unavailable, the system falls back to a deterministic heuristic that rewards lane quality, obscurity, focus hits, and interesting bits.
 
-Downstream safeguards guarantee at least three published links by temporarily relaxing relevance/obscurity thresholds (floor: 0.15/0.15) when the strict pass yields too few candidates.
+Downstream safeguards still allow fallback thresholds when the strict pass is too thin, but the intent is now “rescue real near-misses” rather than “accept anything remotely related.”
 
 ## Action Flows
 
@@ -327,13 +340,13 @@ sequenceDiagram
 
 #### Local Setup
 ```bash
-# One-time: Install Playwright and login
-pip3 install playwright
-python3 -m playwright install chromium
-python3 scripts/substack_playwright.py --login
+# One-time: install Playwright into the project venv and login
+uv pip install --python .venv/bin/python playwright
+uv run --python .venv/bin/python playwright install chromium
+uv run --python .venv/bin/python scripts/substack_playwright.py --login
 
 # Daily: Publish edition
-python3 scripts/substack_playwright.py --edition 3 --draft
+uv run --python .venv/bin/python scripts/substack_playwright.py --edition 3 --draft
 ```
 
 ### 3. Content Update Flow
@@ -371,11 +384,11 @@ b1ts/
 │   └── stylesheets/
 ├── scripts/
 │   ├── run_daily.py            # Theme orchestrator (story + links + landing)
-│   ├── generate_story.py       # AI story generation
-│   ├── generate_links.py       # Enhanced links with LLM research + multi-source search (v3.1)
+│   ├── generate_story.py       # AI story generation with same-day link context
+│   ├── generate_links.py       # Lane-first link discovery + scoring
+│   ├── discovery_corpus.py     # Repo-backed candidate memory and novelty-aware selection
 │   ├── link_registry.py        # Persistent SHA-256 URL registry for cross-day dedup
-│   ├── backfill_registry.py    # One-time script to seed registry from existing posts
-│   ├── generate_links_old.py   # Legacy links generation (archived)
+│   ├── backfill_registry.py    # Seeds registry from existing posts
 │   ├── web_scraper.py          # Content extraction & analysis
 │   ├── update_landing.py       # Site updates (parses genre → HTML tags)
 │   ├── publish_substack.py     # Substack API publishing
@@ -383,24 +396,32 @@ b1ts/
 │   └── test_web_access.py      # Web access diagnostics
 ├── prompts/
 │   ├── story_system.md         # Story generation prompts
-│   ├── links_system.md         # Links content generation prompts
-│   ├── research_strategy_system.md  # LLM research strategy prompts
+│   ├── links_system.md         # Link generation system prompt
+│   ├── links_judge_system.md   # Structured hidden-gem scoring prompt
+│   ├── source_lanes.yaml       # Curated lane catalog + theme overrides
+│   ├── research_strategy_system.md  # Limited LLM query-expansion prompt
 │   ├── themes.yaml             # Unified themes for stories + links
 │   └── style_modifiers.yaml    # Randomized story constraint pools (9 dimensions)
+├── data/discovery/
+│   ├── link_registry.json      # Persistent URL hash registry (cross-day dedup)
+│   ├── candidates.jsonl        # Repo-backed discovery corpus
+│   ├── selection_history.jsonl # Published-link history for novelty penalties
+│   ├── domain_state.json       # Per-domain freshness/frequency tracking
+│   └── story_context/          # Same-day link motifs for story generation
 └── cache/
-    ├── link_registry.json      # Persistent URL hash registry (cross-day dedup)
-    └── web_content/            # Cached scraped content
+    └── web_content/            # Ephemeral scraped content
 ```
 
 ## Environment Variables
 
 ### GitHub Secrets
 ```yaml
-OPENAI_API_KEY:          # OpenAI API access
-OPENAI_API_BASE:         # API endpoint (NVIDIA)
-OPENAI_MODEL:            # Model name
-SERPAPI_KEY:             # Optional SerpAPI key for resilient search
-CONTEXTUALWEB_API_KEY:   # Optional RapidAPI key (ContextualWeb backup)
+OPENAI_API_KEY:          # OpenAI-compatible API access
+OPENAI_API_BASE:         # API endpoint (NVIDIA by default)
+OPENAI_MODEL:            # Default model name
+STORY_MODEL_ROUTING:     # Enable brief-based story model routing
+STORY_CANDIDATES:        # Number of story drafts to generate before selection
+STORY_SELECTOR_MODEL:    # Optional separate selector/editor model
 # Note: Substack secrets removed - Cloudflare blocks CI
 ```
 
@@ -409,8 +430,9 @@ CONTEXTUALWEB_API_KEY:   # Optional RapidAPI key (ContextualWeb backup)
 export OPENAI_API_KEY="..."
 export OPENAI_API_BASE="https://integrate.api.nvidia.com/v1"
 export OPENAI_MODEL="nvidia/llama-3.3-nemotron-super-49b-v1.5"
-export SERPAPI_KEY="optional-serpapi-key"
-export CONTEXTUALWEB_API_KEY="optional-rapidapi-key"
+export STORY_MODEL_ROUTING="1"
+export STORY_CANDIDATES="2"
+export STORY_SELECTOR_MODEL="$OPENAI_MODEL"
 export SUBSTACK_PUBLICATION_URL="https://obscurebit.substack.com"
 export SUBSTACK_COOKIES_PATH="$HOME/.substack_cookies.json"
 ```
@@ -437,8 +459,14 @@ stateDiagram-v2
 
 ### OpenAI API Failures
 - Retry mechanism with exponential backoff
-- Fallback to cached content if available
-- Continue with other content types
+- Link scoring falls back to deterministic heuristics if the judge call fails
+- Story generation exits clearly if the OpenAI client itself is unavailable
+
+### Link Discovery Failures
+- Marginalia is the main external discovery fallback; DuckDuckGo is used sparingly
+- Per-theme lane seeds and seed crawls still provide some discovery even if broader search is weak
+- The repo-backed corpus and registry preserve prior discovery state across runs
+- Theme-specific drift blocks prevent “obscure but wrong” pages from sneaking through just because the run is sparse
 
 ### Substack Failures
 - Cloudflare blocks GitHub Actions IPs (use local publishing)

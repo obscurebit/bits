@@ -1,4 +1,12 @@
+beautifulsoup4>=4.12.0
+certifi>=2025.0.0
+httpcore>=1.0.0
+httpx>=0.28.0
 mkdocs>=1.5.0
 mkdocs-material>=9.5.0
 mkdocs-material-extensions>=1.3.0
+openai>=2.0.0
+python-substack>=0.0.8
+PyYAML>=6.0.0
+requests>=2.32.0
 tiktoken>=0.7.0
