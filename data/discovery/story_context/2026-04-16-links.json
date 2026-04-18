@@ -1,0 +1,63 @@
+{
+  "date": "2026-04-16",
+  "theme": "municipal weirdness",
+  "links_direction": "municipal experiments, civic oddities, local government technology, weird bylaws",
+  "motifs": [
+    "Civic",
+    "Experimental Modes",
+    "Civic Tech",
+    "Tech",
+    "\"what's the difference between sentiment and action?\"",
+    "New York",
+    "New York City",
+    "York",
+    "Pneumatic",
+    "34 years",
+    "in 1893",
+    "in 1897"
+  ],
+  "interesting_bits": [
+    "\"what's the difference between sentiment and action?\"",
+    "34 years",
+    "in 1893",
+    "in 1897",
+    "25 years",
+    "in 1904",
+    "In 1870"
+  ],
+  "links": [
+    {
+      "title": "Experimental Modes of Civic Engagement in Civic Tech \u2013 Smart Chicago",
+      "url": "https://www.smartchicagocollaborative.org/work/special-initiatives/deep-dive/experimental-modes-of-civic-engagement-in-civic-tech/",
+      "concepts": [
+        "Civic",
+        "Experimental Modes",
+        "Civic Tech",
+        "Tech"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "The Pneumatic Tube Mail System in New York City - Untapped New York",
+      "url": "https://untappedcities.com/2013/03/15/nycs-pneumatic-tube-mail-network/?ref=untappedcities.com",
+      "concepts": [
+        "New York",
+        "New York City",
+        "York",
+        "Pneumatic"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "NYC's First Subway, A One Block Pneumatic Tunnel Below Broadway - Untapped New York",
+      "url": "https://www.untappedcities.com/nycs-first-subway-a-one-block-pneumatic-tunnel-below-broadway/",
+      "concepts": [
+        "Beach",
+        "Subway",
+        "Pneumatic",
+        "Broadway"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}

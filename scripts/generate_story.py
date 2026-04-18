@@ -24,6 +24,7 @@ except Exception as exc:
     OpenAI = None
     OPENAI_IMPORT_ERROR = exc
 from discovery_corpus import STORY_CONTEXT_DIR
+from project_paths import story_posts_output_dir
 
 # Configuration
 API_BASE = os.environ.get("OPENAI_API_BASE", "https://integrate.api.nvidia.com/v1")
@@ -31,6 +32,8 @@ API_KEY = os.environ.get("OPENAI_API_KEY")
 MODEL = os.environ.get("OPENAI_MODEL", "nvidia/llama-3.3-nemotron-super-49b-v1.5")
 SELECTOR_MODEL = os.environ.get("STORY_SELECTOR_MODEL", MODEL)
 ENABLE_MODEL_ROUTING = os.environ.get("STORY_MODEL_ROUTING", "1").lower() not in {"0", "false", "no"}
+OPENAI_REQUEST_TIMEOUT = max(30, int(os.environ.get("OPENAI_REQUEST_TIMEOUT", "120")))
+OPENAI_MAX_RETRIES = max(0, int(os.environ.get("OPENAI_MAX_RETRIES", "2")))
 
 # Paths to prompt files
 PROMPTS_DIR = Path(__file__).parent.parent / "prompts"
@@ -562,6 +565,7 @@ def request_story_completion(client: OpenAI, writer_model: str, system_prompt: s
         temperature=temperature,
         top_p=0.95,
         max_tokens=4096,
+        timeout=OPENAI_REQUEST_TIMEOUT,
     )
     return clean_story_response(response.choices[0].message.content.strip())
 
@@ -603,6 +607,7 @@ def select_best_candidate(client: OpenAI, theme: dict, base_prompt: str, candida
         temperature=0.15,
         top_p=0.9,
         max_tokens=250,
+        timeout=OPENAI_REQUEST_TIMEOUT,
     )
 
     decision = clean_story_response(response.choices[0].message.content.strip())
@@ -636,6 +641,8 @@ def generate_story(theme: dict, target_date: Optional[datetime] = None) -> tuple
     client = OpenAI(
         api_key=API_KEY,
         base_url=API_BASE,
+        max_retries=OPENAI_MAX_RETRIES,
+        timeout=OPENAI_REQUEST_TIMEOUT,
     )
     
     system_prompt = load_system_prompt()
@@ -679,7 +686,7 @@ def save_story(title: str, story: str, theme_name: str, genre: str = "speculativ
     slug = "-".join(slug.split()[:6])
     
     # Ensure posts directory exists
-    posts_dir = Path("docs/bits/posts")
+    posts_dir = story_posts_output_dir()
     posts_dir.mkdir(parents=True, exist_ok=True)
     
     # Create filename

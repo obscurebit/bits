@@ -42,11 +42,14 @@ except Exception as exc:
 from web_scraper import WebScraper, ScrapedContent
 from link_registry import LinkRegistry, normalize_url
 from discovery_corpus import DiscoveryCorpus, STORY_CONTEXT_DIR, classify_source_lane
+from project_paths import links_posts_output_dir
 
 # Configuration
 API_BASE = os.environ.get("OPENAI_API_BASE", "https://integrate.api.nvidia.com/v1")
 API_KEY = os.environ.get("OPENAI_API_KEY")
 MODEL = os.environ.get("OPENAI_MODEL", "nvidia/llama-3.3-nemotron-super-49b-v1.5")
+OPENAI_REQUEST_TIMEOUT = max(30, int(os.environ.get("OPENAI_REQUEST_TIMEOUT", "120")))
+OPENAI_MAX_RETRIES = max(0, int(os.environ.get("OPENAI_MAX_RETRIES", "2")))
 
 # Paths
 PROMPTS_DIR = Path(__file__).parent.parent / "prompts"
@@ -1513,7 +1516,12 @@ def get_llm_research_strategy(theme: dict) -> Tuple[List[str], List[str], List[s
         try:
             temperature = 0.45 + (attempt * 0.15)
             print(f"    🤖 LLM attempt {attempt + 1} (temp={temperature:.2f})")
-            client = OpenAI(api_key=API_KEY, base_url=API_BASE)
+            client = OpenAI(
+                api_key=API_KEY,
+                base_url=API_BASE,
+                max_retries=OPENAI_MAX_RETRIES,
+                timeout=OPENAI_REQUEST_TIMEOUT,
+            )
             response = client.chat.completions.create(
                 model=MODEL,
                 messages=[
@@ -1521,7 +1529,8 @@ def get_llm_research_strategy(theme: dict) -> Tuple[List[str], List[str], List[s
                     {"role": "user", "content": f"Research topic: {theme_name}"}
                 ],
                 temperature=temperature,
-                max_tokens=1000
+                max_tokens=1000,
+                timeout=OPENAI_REQUEST_TIMEOUT,
             )
 
             content = strip_thinking_block(response.choices[0].message.content or "")
@@ -1865,7 +1874,12 @@ Content excerpt:
 """
 
     try:
-        client = OpenAI(api_key=API_KEY, base_url=API_BASE)
+        client = OpenAI(
+            api_key=API_KEY,
+            base_url=API_BASE,
+            max_retries=OPENAI_MAX_RETRIES,
+            timeout=OPENAI_REQUEST_TIMEOUT,
+        )
         response = client.chat.completions.create(
             model=MODEL,
             messages=[
@@ -1873,7 +1887,8 @@ Content excerpt:
                 {"role": "user", "content": prompt}
             ],
             temperature=0.1,
-            max_tokens=180
+            max_tokens=180,
+            timeout=OPENAI_REQUEST_TIMEOUT,
         )
 
         content = strip_thinking_block(response.choices[0].message.content or "")
@@ -2343,7 +2358,7 @@ def save_links(links: List[LinkCandidate], theme: dict, target_date: Optional[da
         commit_url = "#"
 
     # Ensure posts directory exists
-    posts_dir = Path("docs/links/posts")
+    posts_dir = links_posts_output_dir()
     posts_dir.mkdir(parents=True, exist_ok=True)
     
     # Create filename

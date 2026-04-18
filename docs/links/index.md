@@ -10,6 +10,33 @@ description: Daily curated discoveries from the hidden corners of the web
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-04-18-daily-links/" class="archive-item archive-item--links">
+    <div class="archive-item__number">079</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">April 18, 2026</span>
+      <div class="archive-item__tags"><span class="archive-item__theme">Municipal Weirdness</span></div>
+    </div>
+    <span class="archive-item__category">3 Links</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
+  <a href="posts/2026-04-17-daily-links/" class="archive-item archive-item--links">
+    <div class="archive-item__number">078</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">April 17, 2026</span>
+      <div class="archive-item__tags"><span class="archive-item__theme">Forgotten Technology</span></div>
+    </div>
+    <span class="archive-item__category">3 Links</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
+  <a href="posts/2026-04-16-daily-links/" class="archive-item archive-item--links">
+    <div class="archive-item__number">077</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">April 16, 2026</span>
+      <div class="archive-item__tags"><span class="archive-item__theme">Municipal Weirdness</span></div>
+    </div>
+    <span class="archive-item__category">3 Links</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-04-15-daily-links/" class="archive-item archive-item--links">
     <div class="archive-item__number">076</div>
     <div class="archive-item__content">

@@ -1,0 +1,64 @@
+{
+  "date": "2026-04-18",
+  "theme": "municipal weirdness",
+  "links_direction": "municipal experiments, civic oddities, local government technology, weird bylaws",
+  "motifs": [
+    "Parking",
+    "Meter",
+    "Parking Meter",
+    "Number",
+    "38.1 cm",
+    "22.86 cm",
+    "in 1935",
+    "System",
+    "Roosevelt Island",
+    "Pneumatic",
+    "Island",
+    "1.7 million"
+  ],
+  "interesting_bits": [
+    "38.1 cm",
+    "22.86 cm",
+    "in 1935",
+    "1.7 million",
+    "on April 1, 1974",
+    "In 1971",
+    "34 years",
+    "in 1893"
+  ],
+  "links": [
+    {
+      "title": "Miller Parking Meter | National Museum of American History",
+      "url": "https://americanhistory.si.edu/collections/object/nmah_1290920",
+      "concepts": [
+        "Parking",
+        "Meter",
+        "Parking Meter",
+        "Number"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Inside Roosevelt Island\u2019s Futuristic Pneumatic Tube Trash System - Untapped New York",
+      "url": "https://www.untappedcities.com/inside-roosevelt-islands-futuristic-pneumatic-tube-trash-system/",
+      "concepts": [
+        "System",
+        "Roosevelt Island",
+        "Pneumatic",
+        "Island"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "The Pneumatic Tube Mail System in New York City - Untapped New York",
+      "url": "https://www.untappedcities.com/pneumatic-tube-mail-nyc/",
+      "concepts": [
+        "New York",
+        "New York City",
+        "York",
+        "Pneumatic"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}

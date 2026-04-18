@@ -101,7 +101,17 @@ jobs:
 
           retry 3 20 uv run --python .venv/bin/python scripts/backfill_registry.py
 
+      - name: Prepare Edition Queue
+        if: github.event_name == 'schedule'
+        continue-on-error: true
+        run: uv run --python .venv/bin/python scripts/prepare_queue.py
+
+      - name: Publish Today's Prepared Edition
+        if: github.event_name == 'schedule'
+        run: uv run --python .venv/bin/python scripts/publish_prepared.py --update-home
+
       - name: Run Daily Generation Pipeline
+        if: github.event_name == 'workflow_dispatch'
         env:
           INPUT_THEME_JSON: ${{ inputs.theme_json }}
           INPUT_THEME_DATE: ${{ inputs.theme_date }}
@@ -109,54 +119,37 @@ jobs:
           INPUT_GENERATE_LINKS: ${{ inputs.generate_links }}
           INPUT_UPDATE_LANDING: ${{ inputs.update_landing }}
         run: |
-          retry_eval() {
-            local attempts="$1"
-            local delay="$2"
-            shift 2
-            local try=1
-            while true; do
-              eval "$*" && return 0
-              local exit_code=$?
-              if [[ "$try" -ge "$attempts" ]]; then
-                return "$exit_code"
-              fi
-              echo "Attempt $try failed with exit $exit_code. Retrying in ${delay}s..."
-              sleep "$delay"
-              try=$((try + 1))
-            done
-          }
-
-          CMD="uv run --python .venv/bin/python scripts/run_daily.py"
+          CMD=(uv run --python .venv/bin/python scripts/run_daily.py)
 
           if [[ "$GITHUB_EVENT_NAME" == "workflow_dispatch" ]]; then
             if [[ -n "$INPUT_THEME_JSON" ]]; then
               if [[ "${INPUT_THEME_JSON:0:1}" == "{" ]]; then
                 printf '%s' "$INPUT_THEME_JSON" > theme_override.json
-                CMD="$CMD --theme-json theme_override.json"
+                CMD+=(--theme-json theme_override.json)
               else
-                CMD="$CMD --theme-json $INPUT_THEME_JSON"
+                CMD+=(--theme-json "$INPUT_THEME_JSON")
               fi
             fi
 
             if [[ -n "$INPUT_THEME_DATE" ]]; then
-              CMD="$CMD --date $INPUT_THEME_DATE"
+              CMD+=(--date "$INPUT_THEME_DATE")
             fi
 
             if [[ "$INPUT_GENERATE_STORY" != "true" ]]; then
-              CMD="$CMD --skip-story"
+              CMD+=(--skip-story)
             fi
 
             if [[ "$INPUT_GENERATE_LINKS" != "true" ]]; then
-              CMD="$CMD --skip-links"
+              CMD+=(--skip-links)
             fi
 
             if [[ "$INPUT_UPDATE_LANDING" != "true" ]]; then
-              CMD="$CMD --skip-landing"
+              CMD+=(--skip-landing)
             fi
           fi
 
-          echo "Running: $CMD"
-          retry_eval 3 30 "$CMD"
+          echo "Running: ${CMD[*]}"
+          "${CMD[@]}"
 
       - name: Generate Substack Newsletter
         run: uv run --python .venv/bin/python scripts/publish_substack.py

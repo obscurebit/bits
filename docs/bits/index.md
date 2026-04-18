@@ -10,6 +10,39 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-04-18-the-pneumatic-alibi/" class="archive-item">
+    <div class="archive-item__number">079</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">April 18, 2026</span>
+      <h3 class="archive-item__title">The Pneumatic Alibi</h3>
+      <p class="archive-item__excerpt">He arrived late to the union hall meeting, the kind of tardiness that made people side-eye your commitment, not your punctuality. The door’s hinges sc...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Municipal Weirdness</span><span class="archive-item__genre" title="Moral fable disguised as a very specific modern problem">Moral fable disguised as a very specific modern problem</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
+  <a href="posts/2026-04-17-the-last-log-entry/" class="archive-item">
+    <div class="archive-item__number">078</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">April 17, 2026</span>
+      <h3 class="archive-item__title">The Last Log Entry</h3>
+      <p class="archive-item__excerpt">The screen door slams and there you are, late again, flour on your sleeve and that look like you’ve been crying or maybe just slicing onions. Ma’s alr...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Forgotten Technology</span><span class="archive-item__genre" title="Quiet literary realism with one impossible pressure point">Quiet literary realism with one impossible pressure point</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
+  <a href="posts/2026-04-16-tube-12s-complaint/" class="archive-item">
+    <div class="archive-item__number">077</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">April 16, 2026</span>
+      <h3 class="archive-item__title">Tube 12’s Complaint</h3>
+      <p class="archive-item__excerpt">I was late to the morning shift because the pneumatic tube from my apartment building’s laundry chute spat out a moth-eaten sock at 6:03 a.m., and I h...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Municipal Weirdness</span><span class="archive-item__genre" title="Domestic drama bent by one technological or metaphysical fact">Domestic drama bent by one technological or metaphysical fact</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-04-15-how-to-tune-the-void/" class="archive-item">
     <div class="archive-item__number">076</div>
     <div class="archive-item__content">

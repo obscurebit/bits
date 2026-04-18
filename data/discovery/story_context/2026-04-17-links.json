@@ -1,0 +1,64 @@
+{
+  "date": "2026-04-17",
+  "theme": "forgotten technology",
+  "links_direction": "specific individual forgotten inventions, historical patents with stories, detailed case studies of obsolete technology",
+  "motifs": [
+    "Kaypro",
+    "The Kaypro",
+    "Kaypro Ii",
+    "Systems",
+    "120 million",
+    "20 million",
+    "Stylophone",
+    "The Stylophone",
+    "Opens",
+    "Share",
+    "in 1971",
+    "In 2003"
+  ],
+  "interesting_bits": [
+    "\" screen on the Kaypro is a distinct advantage over the Osborne's tiny 5\"",
+    "120 million",
+    "20 million",
+    "in 1971",
+    "In 2003",
+    "\" db = barbara . open () # pull out some bond my_gilt = db [ \"",
+    "\"A credit default swap pays some money when a bond goes into default\"",
+    "\"A position is an instrument and how many of it\""
+  ],
+  "links": [
+    {
+      "title": "Kaypro II computer",
+      "url": "https://www.oldcomputers.net/kayproii.html",
+      "concepts": [
+        "Kaypro",
+        "The Kaypro",
+        "Kaypro Ii",
+        "Systems"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "The Stylophone , Brian Jarvis, UK, 1967 \u2013 120 Years of Electronic Music",
+      "url": "https://120years.net/dubreq-stylophone/",
+      "concepts": [
+        "Stylophone",
+        "The Stylophone",
+        "Opens",
+        "Share"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "An oral history of Bank Python",
+      "url": "https://calpaterson.com/bank-python.html",
+      "concepts": [
+        "Barbara",
+        "Dagger",
+        "Value",
+        "Python"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}
