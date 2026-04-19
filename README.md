@@ -1,59 +1,103 @@
 # Obscure Bit
 
-A daily publication featuring AI-generated sci-fi stories and curated links from the hidden corners of the web.
+A daily publication of AI-generated speculative stories and curated links from obscure corners of the web.
 
 🌐 **[obscurebit.com](https://obscurebit.com)**
 
-## What Is This?
+## What It Produces
 
-Every day at 6 AM UTC, Obscure Bit automatically generates:
+Every day Obscure Bit publishes:
 
-- **Daily Bits** — Short sci-fi stories exploring mysteries, speculative concepts, and the unknown
-- **Obscure Links** — Curated discoveries from weird, wonderful, and forgotten corners of the web
-- **Daily Editions** — Newsletter-style snapshots combining both
+- **Daily Bits**: one story
+- **Obscure Links**: one curated links post
+- **Daily Edition**: a combined edition snapshot
 
 ## How It Works
 
-```
-GitHub Actions (6 AM UTC)
+Obscure Bit now uses a queue-first publishing model.
+
+```text
+GitHub Actions schedule
     ↓
-AI generates story + links (NVIDIA NIM)
+prepare_queue.py stages one or more dated editions
     ↓
-Site updates automatically (GitHub Pages)
+publish_prepared.py promotes today's prepared edition into docs/
     ↓
-Optional: Publish to Substack (local only)
+MkDocs site updates and GitHub Pages deploys
 ```
 
-Content is fully automated. The site rebuilds and deploys itself daily.
+That means the public site is no longer supposed to depend on live discovery succeeding in the same step that publishes the day’s content.
+
+### Scheduled Path
+
+- `scripts/backfill_registry.py` bootstraps link-memory state if needed
+- `scripts/prepare_queue.py` builds staged content under `data/edition_queue/<date>/`
+- `scripts/publish_prepared.py --update-home` publishes today’s prepared edition
+- `scripts/publish_substack.py` generates newsletter markdown/history
+- GitHub Actions commits and pushes the resulting changes
+
+### Manual Path
+
+- `workflow_dispatch` still runs `scripts/run_daily.py` directly as a one-off escape hatch
+- Developers can also run `generate_story.py`, `generate_links.py`, and `update_landing.py` individually
+- Backfills should usually use `prepare_queue.py` followed by `publish_prepared.py`
 
 ## Quick Start
 
 ```bash
 git clone https://github.com/obscurebit/b1ts.git
 cd b1ts
-pip install -r requirements.txt
-mkdocs serve
+uv venv
+uv pip install --python .venv/bin/python -r requirements.txt
+uv run --python .venv/bin/python mkdocs serve
 ```
 
-## For Developers
+## Common Commands
 
-See **[DEVELOPMENT.md](DEVELOPMENT.md)** for:
-- Environment setup and secrets
-- Script usage and workflows
-- Substack publishing (local only due to Cloudflare)
-- Project structure
+```bash
+# Prepare staged content for today and the next few dates
+uv run --python .venv/bin/python scripts/prepare_queue.py
 
-See **[SYSTEM_DESIGN.md](SYSTEM_DESIGN.md)** for:
-- Architecture diagrams
-- Data flow and action flows
-- Error handling
+# Prepare a specific date
+uv run --python .venv/bin/python scripts/prepare_queue.py --date 2026-04-19 --force
+
+# Publish a prepared date
+uv run --python .venv/bin/python scripts/publish_prepared.py --date 2026-04-19
+
+# Direct manual run
+uv run --python .venv/bin/python scripts/run_daily.py --date 2026-04-19
+```
+
+## Story and Link Systems
+
+- Story generation uses deterministic date-seeded style modifiers from `prompts/style_modifiers.yaml`
+- Link generation is lane-first and repo-memory-backed using `prompts/source_lanes.yaml` and `data/discovery/`
+- `run_daily.py` can fall forward through multiple rotating themes when link generation fails for the first candidate theme
+
+## Substack
+
+The repo still contains Substack tooling:
+
+- `scripts/publish_substack.py`
+- `scripts/substack_playwright.py`
+
+In practice:
+
+- CI currently uses `publish_substack.py` for newsletter markdown/history generation
+- actual draft/publish actions remain explicit operator actions
+- cookie/browser-based auth may still be needed because Substack automation is brittle
+
+## Documentation
+
+- [DEVELOPMENT.md](DEVELOPMENT.md): setup, commands, workflows, backfills, style modifiers
+- [SYSTEM_DESIGN.md](SYSTEM_DESIGN.md): architecture, queue model, data flow, failure handling
 
 ## Tech Stack
 
 - **Site**: MkDocs Material
-- **AI**: NVIDIA NIM API
+- **Generation**: OpenAI-compatible API, currently NVIDIA NIM by default
 - **Hosting**: GitHub Pages
-- **CI/CD**: GitHub Actions
+- **Automation**: GitHub Actions
 
 ## License
 

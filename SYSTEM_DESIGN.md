@@ -2,520 +2,460 @@
 
 ## Overview
 
-Obscure Bit is an automated content generation system that creates and publishes daily stories, curated links, and newsletter editions. A single orchestrator (`run_daily.py`) synchronizes theme selection and triggers the story, link, and landing generators. The system runs on GitHub Actions for content generation and publishes to GitHub Pages. Substack publishing requires local execution due to Cloudflare restrictions.
+Obscure Bit is a queue-first daily publishing system for stories, curated links, and edition pages.
+
+- Scheduled GitHub Actions runs no longer publish directly from live generation.
+- The scheduled path prepares staged content under `data/edition_queue/<date>/` first, then promotes that prepared edition into `docs/`.
+- `scripts/run_daily.py` still exists as the single-date orchestrator, but it is now mainly the engine behind queue preparation and manual escape-hatch runs.
+- Link discovery remains lane-first and repo-memory-backed.
+- Story generation remains deterministic by date through the style-modifier system.
+- `scripts/publish_substack.py` is still part of the repo, but CI only uses it to generate newsletter markdown/history unless explicitly run in draft/publish mode.
 
 ## Architecture
 
 ```mermaid
 graph TB
-    subgraph "GitHub Actions (Daily 6AM UTC)"
-        A["run_daily.py (story+links+landing)"] --> B[Update Landing Pages]
-        B --> C[Commit & Push]
+    subgraph "GitHub Actions (schedule)"
+        A[prepare_queue.py] --> B[publish_prepared.py]
+        B --> C[publish_substack.py<br/>markdown/history only]
+        C --> D[Commit and Push]
     end
-    
-    subgraph "Local Machine (Manual)"
-        D[Publish to Substack]
+
+    subgraph "GitHub Actions (workflow_dispatch)"
+        E[run_daily.py] --> F[update_landing.py]
+        F --> D
     end
-    
-    subgraph "Content Sources"
-        E[OpenAI API] --> A
-        F[Prompts & Seeds] --> A
-        W[Lane Catalog + Bounded Search] --> A
-        SM[Style Modifiers<br/>SHA-256 date seed] --> A
+
+    subgraph "Generation Core"
+        G[generate_links.py]
+        H[generate_story.py]
+        I[update_landing.py]
     end
-    
-    subgraph "Outputs"
-        G[GitHub Pages Site]
-        H[Substack Drafts]
-        I[Markdown History]
+
+    subgraph "Persistent State"
+        J[data/discovery]
+        K[data/edition_queue]
+        L[docs/]
     end
-    
+
+    subgraph "External Inputs"
+        M[OpenAI-compatible API]
+        N[prompts/themes.yaml]
+        O[prompts/source_lanes.yaml]
+        P[prompts/style_modifiers.yaml]
+    end
+
     A --> G
-    A --> I
-    D --> H
-    
-    subgraph "Manual Actions"
-        J[Review Draft] --> K[Publish to Substack]
-        L[Edit Posts] --> M[Regenerate Content]
-    end
-    
-    H --> J
-    G --> L
-    M --> A
+    A --> H
+    A --> K
+    B --> I
+    B --> L
+    G --> J
+    H --> K
+    M --> G
+    M --> H
+    N --> A
+    O --> G
+    P --> H
 ```
 
 ## Data Flow
 
 ```mermaid
 flowchart LR
-    subgraph "Input"
-        A1[OpenAI API]
-        A2[Story Prompts]
-        A3[Lane Catalog + Theme Overrides]
-        SM[style_modifiers.yaml]
+    subgraph "Inputs"
+        A1[themes.yaml]
+        A2[source_lanes.yaml]
+        A3[style_modifiers.yaml]
+        A4[OpenAI-compatible API]
     end
-    
-    subgraph "Generation"
-        B1[generate_story.py]
-        B2[generate_links.py]
-        B3[update_landing.py]
-        WS[web_scraper.py]
+
+    subgraph "Queue Prep"
+        B1[prepare_queue.py]
+        B2[run_daily.py with OBSCUREBIT_OUTPUT_ROOT]
+        B3[generate_links.py]
+        B4[generate_story.py]
     end
-    
-    WS --> B2
-    
-    subgraph "Storage"
-        C1["docs/bits/posts/<br/>(frontmatter: theme, genre)"]
-        C2[docs/links/posts/]
-        C3[docs/editions/posts/]
-        C4[docs/substack/]
+
+    subgraph "Staging"
+        C1[data/edition_queue date docs bits posts]
+        C2[data/edition_queue date docs links posts]
+        C3[data/edition_queue date manifest.json]
     end
-    
-    subgraph "Publishing"
-        D1[GitHub Pages]
-        D2[Substack API]
+
+    subgraph "Promotion"
+        D1[publish_prepared.py]
+        D2[update_landing.py helpers]
     end
-    
+
+    subgraph "Published Output"
+        E1[docs/bits/posts]
+        E2[docs/links/posts]
+        E3[docs/editions/posts]
+        E4[docs/bits/index.md]
+        E5[docs/links/index.md]
+        E6[docs/editions.md]
+        E7[overrides/home.html]
+    end
+
+    subgraph "Repo Memory"
+        F1[data/discovery/link_registry.json]
+        F2[data/discovery/candidates.jsonl]
+        F3[data/discovery/selection_history.jsonl]
+        F4[data/discovery/domain_state.json]
+        F5[data/discovery/story_context]
+    end
+
     A1 --> B1
-    A2 --> B1
-    SM --> B1
-    A3 --> B2
-    WS --> B2
-    B1 --> C1
-    B2 --> C2
-    B3 --> C3
-    B3 --> C4
+    A1 --> B2
+    A2 --> B3
+    A3 --> B4
+    A4 --> B3
+    A4 --> B4
+    B1 --> B2
+    B2 --> B3
+    B2 --> B4
+    B3 --> C2
+    B4 --> C1
+    B1 --> C3
+    B3 --> F1
+    B3 --> F2
+    B3 --> F3
+    B3 --> F4
+    B3 --> F5
     C1 --> D1
     C2 --> D1
     C3 --> D1
-    C4 --> D2
+    D1 --> D2
+    D1 --> E1
+    D1 --> E2
+    D2 --> E3
+    D2 --> E4
+    D2 --> E5
+    D2 --> E6
+    D2 --> E7
 ```
 
-## Style Modifiers System
+## Queue-First Publish Model
 
-Each story is shaped by randomized constraints drawn from `prompts/style_modifiers.yaml`. This ensures variety even when themes repeat on their 18-day rotation.
+The main reliability change is that daily publishing is no longer supposed to depend on live discovery succeeding in the same step that updates the public site.
 
-```mermaid
-flowchart TD
-    DATE["Date (YYYY-MM-DD)"] --> HASH["SHA-256 hash → seed"]
-    HASH --> RNG["Seeded RNG"]
-    
-    subgraph "Style Dimensions (9)"
-        POV[pov · 15 options]
-        TONE[tone · 15 options]
-        ERA[era · 15 options]
-        SET[setting · 16 options]
-        STR[structure · 14 options]
-        CON[conflict · 14 options]
-        OPEN[opening · 14 options]
-        GEN[genre · 15 options]
-        WILD[wildcard · 12 options]
-    end
-    
-    RNG --> POV & TONE & ERA & SET & STR & CON & OPEN & GEN & WILD
-    
-    subgraph "Banned Words"
-        BAN["12 word sets · 7 words each"]
-    end
-    
-    RNG --> BAN
-    
-    POV & TONE & ERA & SET & STR & CON & OPEN & GEN & WILD --> PROMPT["Story prompt<br/>with TODAY'S CONSTRAINTS"]
-    BAN --> PROMPT
-    GEN --> FM["Frontmatter: genre field"]
-    FM --> CARDS["Landing page + archive genre tags"]
-```
+### Scheduled Path
 
-### Properties
-- **Deterministic**: Same date → same modifiers (reproducible backfills)
-- **Combinatorial**: ~15^9 × 12 ≈ 460 billion unique combinations
-- **Anti-repetition**: Banned word sets rotate to prevent stylistic staleness
-- **Genre propagation**: Genre flows from modifier → frontmatter → HTML cards via `update_landing.py`
+1. `scripts/prepare_queue.py` selects one or more target dates.
+2. For each date it runs `scripts/run_daily.py` with `OBSCUREBIT_OUTPUT_ROOT` pointed at `data/edition_queue/<date>/`.
+3. `run_daily.py` generates links first; if link generation fails, it can fall forward through multiple rotating themes for that date.
+4. When links succeed, the same theme is reused for story generation so the edition stays internally consistent.
+5. `scripts/publish_prepared.py` copies the staged story and links into `docs/`, rebuilds indexes and edition snapshot pages, and updates the queue manifest to `published`.
 
-## Link Generation Architecture (v4 - Lane-First Discovery + Repo Memory)
+### Manual Escape Hatches
 
-The link generation system is now lane-first. It no longer depends on generic search-provider fanout as the primary discovery method. Instead it starts from curated source neighborhoods, expands them with a bounded crawl, optionally asks the LLM for a small number of better angles inside those neighborhoods, and then scores candidates against a repo-backed discovery corpus.
+- `workflow_dispatch` still runs `run_daily.py` directly for one-off manual generation.
+- Developers can still run `generate_story.py`, `generate_links.py`, or `update_landing.py` individually.
+- Backfills should now prefer `prepare_queue.py --date ... --force` followed by `publish_prepared.py --date ...`.
+
+## Story Generation and Style Modifiers
+
+Story generation is driven by `scripts/generate_story.py`.
+
+### Deterministic Daily Seed
+
+- A seed is derived from `SHA-256(YYYY-MM-DD)` in `get_daily_seed()`.
+- The same date always produces the same style modifier combination.
+- That makes backfills reproducible as long as prompts and models are unchanged.
+
+### Current Modifier Shape
+
+The style system currently samples from 14 dimensions plus one banned-word set, not the older 9-dimension version.
+
+| Dimension | Count |
+|-----------|-------|
+| `pov` | 10 |
+| `tone` | 10 |
+| `era` | 10 |
+| `setting` | 12 |
+| `structure` | 10 |
+| `conflict` | 10 |
+| `opening` | 10 |
+| `genre` | 10 |
+| `wildcard` | 10 |
+| `protagonist` | 12 |
+| `desire` | 10 |
+| `anchor_object` | 12 |
+| `social_pressure` | 10 |
+| `ending_shape` | 10 |
+| `banned_word_sets` | 8 |
+
+That yields roughly `1.3824e15` possible combinations before model variation.
+
+### What the Modifiers Affect
+
+- Prompt voice and structure
+- Character role and social pressure
+- Desired outcome and ending shape
+- One explicit `genre` label
+- A banned-word set that discourages repetitive speculative vocabulary
+
+### Genre Propagation
+
+The chosen `genre` is written into story frontmatter by `generate_story.py`, then read by `update_landing.py` to decorate:
+
+- the homepage feature card
+- bits archive cards
+- edition pages and edition archive cards
+
+### Candidate Selection and Routing
+
+`generate_story.py` also supports:
+
+- `STORY_CANDIDATES` for multiple draft generation and selection
+- `STORY_MODEL_ROUTING` and `prompts/story_model_routing.yaml` for brief-based writer-model routing
+- `STORY_SELECTOR_MODEL` for an optional separate selector model
+
+Queue prep intentionally overrides some of those defaults for speed and reliability:
+
+- `STORY_CANDIDATES=1`
+- `STORY_MODEL_ROUTING=0`
+- `OPENAI_REQUEST_TIMEOUT=90`
+
+## Link Generation Architecture
+
+The link system remains lane-first and repo-memory-backed.
 
 ```mermaid
 flowchart LR
-    subgraph "Stage 1: Theme Planning"
-        TP1[Load themes.yaml]
-        TP2[Load source_lanes.yaml]
-        TP3[Merge global lanes + theme overrides]
+    subgraph "Planning"
+        A[themes.yaml]
+        B[source_lanes.yaml]
+        C[theme lane plan]
     end
-    
-    subgraph "Stage 2: Lane Discovery"
-        D1[Curated seed URLs]
-        D2[Trusted lane domains]
-        D3[Lane query templates]
-        D4[Bounded one-hop seed crawl]
-        D5[Marginalia / limited DDG fallback]
+
+    subgraph "Discovery"
+        D[curated seed URLs]
+        E[trusted seed domains]
+        F[seed queries]
+        G[bounded seed crawl]
+        H[Marginalia plus constrained fallback]
     end
-    
-    subgraph "Stage 3: Repo Memory Filter"
-        REG[link_registry.py]
-        CORPUS[discovery_corpus.py]
-        REG2[Reject previously-published URLs]
+
+    subgraph "Filtering and Scoring"
+        I[link_registry.py]
+        J[web_scraper.py]
+        K[theme validation]
+        L[LLM judge or heuristic]
+        M[novelty and diversity selection]
     end
-    
-    subgraph "Stage 4: Scraping"
-        S1[Fetch Content]
-        S2[Extract Concepts]
-        S3[Score Obscurity]
+
+    subgraph "Persistence"
+        N[links post]
+        O[link_registry.json]
+        P[candidates.jsonl]
+        Q[selection_history.jsonl]
+        R[domain_state.json]
+        S[story_context date links.json]
     end
-    
-    subgraph "Stage 5: Theme Validation"
-        V1[Focus-term match]
-        V2[Theme drift rejection]
-        V3[Theme-blocked domains]
-        V4[LLM judge or fallback heuristic]
-    end
-    
-    subgraph "Stage 6: Selection"
-        SEL[Composite scoring]
-        QG[Listicle / boilerplate / bad-page filter]
-        DIV[Similarity and lane diversity]
-        DOM[Domain and novelty balancing]
-        OUT[Select best links]
-    end
-    
-    TP1 --> TP2
-    TP2 --> TP3
-    TP3 --> D1
-    TP3 --> D2
-    TP3 --> D3
-    D1 --> D4
-    D2 --> D5
-    D3 --> D5
-    D4 --> REG
-    D5 --> REG
-    REG --> REG2
-    CORPUS --> SEL
-    REG2 --> S1
-    S1 --> S2
-    S2 --> S3
-    S3 --> V1
-    V1 --> V2
-    V2 --> V3
-    V3 --> V4
-    V4 --> SEL
-    SEL --> QG
-    QG --> DIV
-    DIV --> DOM
-    DOM --> OUT
-    OUT --> REG4[Persist registry + corpus + story context]
+
+    A --> C
+    B --> C
+    C --> D
+    C --> E
+    C --> F
+    D --> G
+    E --> H
+    F --> H
+    G --> I
+    H --> I
+    I --> J
+    J --> K
+    K --> L
+    L --> M
+    M --> N
+    M --> O
+    M --> P
+    M --> Q
+    M --> R
+    M --> S
 ```
 
-### Lane-First Discovery
+### Link-System Properties
 
-The active link system is built around curated lanes defined in `prompts/source_lanes.yaml`.
-
-Each lane represents a different kind of high-signal web neighborhood:
-- `primary-doc`
-- `enthusiast-research`
-- `old-web`
-- `museum-object`
-- `local-history`
-- `niche-institution`
-- `indie-essay`
-
-For each daily theme, the generator:
-
-1. Loads theme-specific lane preferences, seeds, focus terms, drift terms, and blocked domains.
-2. Starts from trusted seed URLs and seed domains instead of broad internet search.
-3. Runs a bounded one-hop crawl on seed pages to surface adjacent artifact pages.
-4. Executes only a small number of lane-shaped search queries, primarily through Marginalia and a tightly constrained DuckDuckGo fallback.
-5. Uses the LLM only for limited query expansion inside the trusted lane architecture, not for open-ended URL hunting.
-
-This keeps discovery in better neighborhoods and materially reduces forum junk, SEO sludge, and generic encyclopedia drift.
-
-### URL Registry (Cross-Day Deduplication)
-
-A persistent SHA-256 hash registry (`data/discovery/link_registry.json`) prevents the same URL from ever being published twice:
-
-1. **Normalize** – lowercase domain, strip `www.`, remove tracking params (`utm_*`, `fbclid`, etc.), sort query params, strip trailing slashes
-2. **Hash** – SHA-256 of the normalized URL → deterministic key
-3. **Filter** – before scoring, every candidate URL is checked against the registry; known URLs are rejected
-4. **Register** – after saving, all selected URLs are added to the registry with date, theme, title, and domain metadata
-5. **Domain frequency** – the registry tracks per-domain counts across all days, enabling cross-run diversity caps
-
-The registry and the broader discovery memory live under `data/discovery/`, which is intended to be committed so nightly runs do not start from zero.
-
-### Discovery Corpus and Story Context
-
-`scripts/discovery_corpus.py` persists more than a hard dedup list:
-
-- `candidates.jsonl` stores compact scored candidate records
-- `selection_history.jsonl` stores published-link history for novelty penalties
-- `domain_state.json` tracks freshness and frequency by domain
-- `story_context/<date>-links.json` exports same-day motifs and interesting bits into story generation
-
-That repo-backed memory lets the selector penalize repetition and lets the story system borrow texture from the same day’s chosen links.
-
-### Quality Gates
-
-Multiple layers prevent low-quality content from reaching publication:
-
-- **Global disallowed domains**: Wikipedia, Archive.org, GitHub, StackExchange, major social feeds, and other junk-heavy surfaces are filtered early.
-- **Bad-page detection**: Homepages, category pages, product pages, forum/event pages, privacy/policy pages, and thin institutional pages are rejected.
-- **Listicle filter**: Catches numbered titles, clickbait phrasing, guides, and game-tip style pages.
-- **Theme focus terms**: Candidate relevance is anchored to theme-specific phrases from `source_lanes.yaml`, not just generic keyword overlap.
-- **Theme drift rejection**: Per-theme drift terms and blocked domains can reject pages that are obscure but clearly off-brief.
-- **Fallback scoring**: If LLM judging is unavailable, the system falls back to a deterministic heuristic that rewards lane quality, obscurity, focus hits, and interesting bits.
-
-Downstream safeguards still allow fallback thresholds when the strict pass is too thin, but the intent is now “rescue real near-misses” rather than “accept anything remotely related.”
+- Discovery starts from curated seeds and trusted domains rather than broad search fanout.
+- A persistent URL registry prevents re-publishing the same normalized URL.
+- The discovery corpus stores candidates and domain freshness across days.
+- `story_context/<date>-links.json` exports same-day motifs into story generation.
+- Fallback thresholds exist, but only after stricter theme and quality filters run first.
 
 ## Action Flows
 
-### 1. Daily Content Generation (Automated)
+### 1. Scheduled Daily Run
 
 ```mermaid
 sequenceDiagram
     participant GA as GitHub Actions
-    participant AI as OpenAI API
+    participant PQ as prepare_queue.py
+    participant RD as run_daily.py
+    participant PP as publish_prepared.py
     participant GH as GitHub Repo
-    participant SS as Substack API
-    
-    GA->>GA: Select theme (rotation or override)
-    GA->>GA: Select style modifiers (SHA-256 date seed)
-    GA->>AI: Generate story (theme + modifiers)
-    AI-->>GA: Story content + genre
-    GA->>AI: Generate links (theme direction)
-    AI-->>GA: Links content
-    
-    GA->>GH: Save story to docs/bits/posts/ (genre in frontmatter)
-    GA->>GH: Save links to docs/links/posts/
-    GA->>GH: Create edition snapshot (genre in frontmatter)
-    GA->>GH: Update landing page + archives (genre tags on cards)
-    
-    GA->>GH: Commit changes
-    GA->>GH: Push to main
-    
-    Note over GA: Content ready for local Substack publish
+
+    GA->>PQ: scheduled run
+    PQ->>RD: build staged edition for target date
+    RD->>GH: write staged story and links under data/edition_queue
+    PQ->>GH: write queue manifest
+    GA->>PP: publish today's prepared edition
+    PP->>GH: copy staged files into docs/
+    PP->>GH: rebuild indexes, home, edition snapshot
+    GA->>GH: commit and push
 ```
 
-### 1b. Backfill Generation (Manual)
-
-All scripts accept `--date YYYY-MM-DD` to generate content for past dates. The date controls theme selection, style modifier seed, and output filenames.
+### 2. Manual Backfill
 
 ```mermaid
 sequenceDiagram
     participant Dev as Developer
+    participant PQ as prepare_queue.py
     participant RD as run_daily.py
-    participant GS as generate_story.py
-    participant GL as generate_links.py
-    
-    Dev->>RD: --date 2026-02-10 --skip-landing
-    RD->>RD: select_theme("2026-02-10")
-    RD->>GL: --date 2026-02-10 --theme-json {...}
-    GL->>GL: save_links(target_date=Feb 10)
-    RD->>GS: --date 2026-02-10 --theme-json {...}
-    GS->>GS: select_style_modifiers(seed=SHA256("2026-02-10"))
-    GS->>GS: save_story(target_date=Feb 10)
-    
-    Dev->>Dev: python scripts/update_landing.py
-    Note over Dev: Rebuild archives to include backfilled content
+    participant PP as publish_prepared.py
+
+    Dev->>PQ: --date YYYY-MM-DD --force
+    PQ->>RD: generate staged story and links
+    PQ-->>Dev: manifest status prepared or failed
+    Dev->>PP: --date YYYY-MM-DD
+    PP-->>Dev: published docs plus rebuilt indexes
 ```
 
-### 2. Local Substack Publishing (Manual)
+### 3. Manual Direct Run
 
-**Note:** Substack uses Cloudflare protection that blocks GitHub Actions datacenter IPs. Publishing must be done locally.
+Use this when you explicitly want to bypass the queue:
 
-```mermaid
-sequenceDiagram
-    participant User as Local Machine
-    participant PW as Playwright Browser
-    participant SS as Substack
-    
-    User->>PW: python scripts/substack_playwright.py --edition N --draft
-    PW->>SS: Open editor (bypasses Cloudflare)
-    PW->>SS: Fill title, subtitle, content
-    SS->>SS: Auto-save draft
-    
-    User->>SS: Review draft in browser
-    User->>SS: Click Publish
-    
-    Note over User: Or use --publish flag to publish directly
-```
-
-#### Local Setup
 ```bash
-# One-time: install Playwright into the project venv and login
-uv pip install --python .venv/bin/python playwright
-uv run --python .venv/bin/python playwright install chromium
-uv run --python .venv/bin/python scripts/substack_playwright.py --login
-
-# Daily: Publish edition
-uv run --python .venv/bin/python scripts/substack_playwright.py --edition 3 --draft
+uv run --python .venv/bin/python scripts/run_daily.py --date 2026-04-19
 ```
 
-### 3. Content Update Flow
+`run_daily.py` now has:
 
-```mermaid
-sequenceDiagram
-    participant User as User
-    participant GH as GitHub Repo
-    participant GA as GitHub Actions
-    
-    User->>GH: Edit post in docs/
-    User->>GH: git push
-    
-    GA->>GH: Detect changes
-    GA->>GH: Regenerate landing pages
-    GA->>GH: Update navigation
-    GA->>GH: Commit updates
-    
-    Note over GA: Substack not affected (prevents duplicates)
-```
+- idempotent skip behavior if story or links already exist
+- bounded per-step timeouts
+- multi-theme fallback for links when no explicit `--theme-json` is supplied
+
+### 4. Substack Workflow
+
+- CI runs `scripts/publish_substack.py` with no publish flags, which is used for newsletter markdown/history generation.
+- Actual Substack draft/publish actions still require running `publish_substack.py --draft` or `--publish`.
+- `scripts/substack_playwright.py` remains the helper for extracting cookies when API auth via browser session is needed.
 
 ## File Structure
 
-```
+```text
 b1ts/
 ├── .github/workflows/
-│   └── generate-content.yml    # Daily automation
+│   └── generate-content.yml
 ├── docs/
-│   ├── bits/posts/             # Daily stories
-│   ├── links/posts/            # Daily links
-│   ├── editions.md             # Edition archive
-│   ├── substack/               # Newsletter drafts & history
-│   │   ├── YYYY-MM-DD-edition-XXX.md
-│   │   └── edition-XXX-published.txt
-│   └── stylesheets/
+│   ├── bits/posts/
+│   ├── links/posts/
+│   ├── editions/posts/
+│   ├── bits/index.md
+│   ├── links/index.md
+│   ├── editions.md
+│   └── substack/
 ├── scripts/
-│   ├── run_daily.py            # Theme orchestrator (story + links + landing)
-│   ├── generate_story.py       # AI story generation with same-day link context
-│   ├── generate_links.py       # Lane-first link discovery + scoring
-│   ├── discovery_corpus.py     # Repo-backed candidate memory and novelty-aware selection
-│   ├── link_registry.py        # Persistent SHA-256 URL registry for cross-day dedup
-│   ├── backfill_registry.py    # Seeds registry from existing posts
-│   ├── web_scraper.py          # Content extraction & analysis
-│   ├── update_landing.py       # Site updates (parses genre → HTML tags)
-│   ├── publish_substack.py     # Substack API publishing
-│   ├── substack_playwright.py  # Cookie extraction helper
-│   └── test_web_access.py      # Web access diagnostics
+│   ├── run_daily.py
+│   ├── generate_story.py
+│   ├── generate_links.py
+│   ├── prepare_queue.py
+│   ├── publish_prepared.py
+│   ├── project_paths.py
+│   ├── discovery_corpus.py
+│   ├── link_registry.py
+│   ├── backfill_registry.py
+│   ├── update_landing.py
+│   ├── publish_substack.py
+│   └── substack_playwright.py
 ├── prompts/
-│   ├── story_system.md         # Story generation prompts
-│   ├── links_system.md         # Link generation system prompt
-│   ├── links_judge_system.md   # Structured hidden-gem scoring prompt
-│   ├── source_lanes.yaml       # Curated lane catalog + theme overrides
-│   ├── research_strategy_system.md  # Limited LLM query-expansion prompt
-│   ├── themes.yaml             # Unified themes for stories + links
-│   └── style_modifiers.yaml    # Randomized story constraint pools (9 dimensions)
-├── data/discovery/
-│   ├── link_registry.json      # Persistent URL hash registry (cross-day dedup)
-│   ├── candidates.jsonl        # Repo-backed discovery corpus
-│   ├── selection_history.jsonl # Published-link history for novelty penalties
-│   ├── domain_state.json       # Per-domain freshness/frequency tracking
-│   └── story_context/          # Same-day link motifs for story generation
+│   ├── themes.yaml
+│   ├── source_lanes.yaml
+│   ├── style_modifiers.yaml
+│   ├── story_model_routing.yaml
+│   └── ...
+├── data/
+│   ├── discovery/
+│   │   ├── link_registry.json
+│   │   ├── candidates.jsonl
+│   │   ├── selection_history.jsonl
+│   │   ├── domain_state.json
+│   │   └── story_context/
+│   └── edition_queue/
+│       └── YYYY-MM-DD/
+│           ├── docs/bits/posts/
+│           ├── docs/links/posts/
+│           └── manifest.json
 └── cache/
-    └── web_content/            # Ephemeral scraped content
+    └── web_content/
 ```
 
 ## Environment Variables
 
-### GitHub Secrets
-```yaml
-OPENAI_API_KEY:          # OpenAI-compatible API access
-OPENAI_API_BASE:         # API endpoint (NVIDIA by default)
-OPENAI_MODEL:            # Default model name
-STORY_MODEL_ROUTING:     # Enable brief-based story model routing
-STORY_CANDIDATES:        # Number of story drafts to generate before selection
-STORY_SELECTOR_MODEL:    # Optional separate selector/editor model
-# Note: Substack secrets removed - Cloudflare blocks CI
-```
+### Core Model Settings
 
-### Local Development
 ```bash
-export OPENAI_API_KEY="..."
-export OPENAI_API_BASE="https://integrate.api.nvidia.com/v1"
-export OPENAI_MODEL="nvidia/llama-3.3-nemotron-super-49b-v1.5"
-export STORY_MODEL_ROUTING="1"
-export STORY_CANDIDATES="2"
-export STORY_SELECTOR_MODEL="$OPENAI_MODEL"
-export SUBSTACK_PUBLICATION_URL="https://obscurebit.substack.com"
-export SUBSTACK_COOKIES_PATH="$HOME/.substack_cookies.json"
+OPENAI_API_KEY
+OPENAI_API_BASE
+OPENAI_MODEL
+STORY_SELECTOR_MODEL
+STORY_MODEL_ROUTING
+STORY_CANDIDATES
+OPENAI_REQUEST_TIMEOUT
+OPENAI_MAX_RETRIES
 ```
 
-## Publishing States
+### Orchestrator and Queue Controls
 
-```mermaid
-stateDiagram-v2
-    [*] --> Generated: Daily workflow
-    Generated --> Draft: Create draft
-    Draft --> Published: Manual publish
-    Draft --> Edited: Edit content
-    Edited --> Draft: Regenerate
-    Published --> [*]: Complete
-    
-    note right of Published
-        Marker file created:
-        docs/substack/edition-XXX-published.txt
-        Prevents duplicate publishing
-    end note
+```bash
+AUTO_THEME_ATTEMPTS
+RUN_DAILY_LINK_TIMEOUT_SECONDS
+RUN_DAILY_STORY_TIMEOUT_SECONDS
+RUN_DAILY_LANDING_TIMEOUT_SECONDS
+OBSCUREBIT_OUTPUT_ROOT
+```
+
+### Substack
+
+Used only when running Substack draft/publish flows:
+
+```bash
+SUBSTACK_PUBLICATION_URL
+SUBSTACK_EMAIL
+SUBSTACK_PASSWORD
+SUBSTACK_COOKIES
+SUBSTACK_COOKIES_PATH
 ```
 
 ## Error Handling
 
-### OpenAI API Failures
-- Retry mechanism with exponential backoff
-- Link scoring falls back to deterministic heuristics if the judge call fails
-- Story generation exits clearly if the OpenAI client itself is unavailable
+### Queue Prep Failures
+
+- `prepare_queue.py` records `failed` manifests when staging does not complete.
+- The scheduled workflow currently marks queue prep `continue-on-error: true`, so a publish step can still run if today's prepared edition already exists.
+
+### Direct Run Failures
+
+- `run_daily.py` applies explicit timeouts to link, story, and landing steps.
+- Link generation can retry across multiple rotating themes for the target date.
+- Explicit `--theme-json` runs do not silently fall to another theme.
 
 ### Link Discovery Failures
-- Marginalia is the main external discovery fallback; DuckDuckGo is used sparingly
-- Per-theme lane seeds and seed crawls still provide some discovery even if broader search is weak
-- The repo-backed corpus and registry preserve prior discovery state across runs
-- Theme-specific drift blocks prevent “obscure but wrong” pages from sneaking through just because the run is sparse
+
+- Curated seeds, trusted domains, and repo-backed discovery memory reduce dependence on live search luck.
+- The registry and corpus are committed so selection state persists across runs.
 
 ### Substack Failures
-- Cloudflare blocks GitHub Actions IPs (use local publishing)
-- Playwright browser automation bypasses Cloudflare locally
-- Browser state saved in ~/.playwright_state.json
-- Draft creation is non-destructive
-- Duplicate prevention protects against retries
 
-### GitHub Actions Failures
-- Workflow continues on partial failures
-- Content generation independent from publishing
-- Manual recovery possible
-
-## Scaling Considerations
-
-### Content Volume
-- Daily editions: ~365 posts/year
-- Storage: Minimal (markdown files)
-- API calls: ~4-6 per day (story generation, link research strategy, link scoring, link summaries)
-
-### Performance
-- Generation time: ~30 seconds
-- Site rebuild: ~2 minutes
-- Substack draft: ~10 seconds
-
-### Cost Management
-- OpenAI tokens: ~5K per day
-- GitHub Actions: Free tier sufficient
-- Substack: Free tier
-
-## Future Enhancements
-
-1. **Scheduled Publishing**: Auto-publish drafts at specific times
-2. **Content Caching**: Reduce API calls for unchanged content
-3. **Multi-platform**: Add Twitter, LinkedIn integration
-4. **Analytics**: Track engagement and optimize content
-5. **A/B Testing**: Test different content formats
-
-## Security Considerations
-
-- All secrets stored in GitHub Secrets
-- No credentials in code
-- Cookie-based auth for Substack
-- Read-only file permissions for content
+- Cloudflare and auth issues still make true publish automation brittle.
+- Markdown/history generation is safe in CI.
+- Draft/publish actions should still be treated as operator-driven.
 
 ## Monitoring
 
-- GitHub Actions dashboard for workflow status
-- Draft review in Substack dashboard
-- Site health via GitHub Pages status
-- Error notifications via GitHub issues
-- Mixpanel telemetry embedded in the site head records anonymous story/link views (autocapture + manual `Story Viewed` / `Links Viewed` events), giving real-time engagement while keeping everything anonymous by default.
+- GitHub Actions run status
+- Queue manifests under `data/edition_queue/<date>/manifest.json`
+- Published docs pages and indexes
+- Discovery corpus changes under `data/discovery/`
