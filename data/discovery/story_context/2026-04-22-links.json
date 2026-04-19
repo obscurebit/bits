@@ -1,0 +1,57 @@
+{
+  "date": "2026-04-22",
+  "theme": "digital archaeology",
+  "links_direction": "internet history, lost media, abandoned websites, web archaeology",
+  "motifs": [
+    "Website",
+    "Neocities",
+    "Some",
+    "Links",
+    "in 2021",
+    "Vision Of Substance Digitalbook Pub",
+    "PDF download",
+    "North Dakota",
+    "Sheyenne Bend",
+    "Michlovic",
+    "Holley",
+    "35 years"
+  ],
+  "interesting_bits": [
+    "in 2021",
+    "PDF download",
+    "35 years",
+    "30 years"
+  ],
+  "links": [
+    {
+      "title": "The Dock",
+      "url": "https://koshka.love/links.html",
+      "concepts": [
+        "Website",
+        "Neocities",
+        "Some",
+        "Links"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Vision Of Substance Digitalbook Pub",
+      "url": "https://thedigitalpress.org/wp-content/uploads/2015/08/vision_of_substance_digitalbook_pub.pdf",
+      "concepts": [
+        "Vision Of Substance Digitalbook Pub"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "New Book Day: The Archaeological Cultures of the Sheyenne Bend \u2013 The Digital Press at the University of North Dakota",
+      "url": "https://thedigitalpress.org/2022/02/03/new-book-day-the-archaeological-cultures-of-the-sheyenne-bend/comment-page-1/#comment-4241",
+      "concepts": [
+        "North Dakota",
+        "Sheyenne Bend",
+        "Michlovic",
+        "Holley"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}

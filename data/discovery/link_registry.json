@@ -63,6 +63,1462 @@
       "date": "2026-04-17",
       "theme": "forgotten technology",
       "title": "An oral history of Bank Python"
+    },
+    "9166c980f06152b64312d2949dcdc7d8426556a95acc549861ed7f8d7ddae571": {
+      "url": "https://en.wikipedia.org/wiki/Mary_Phelps_Jacob",
+      "domain": "en.wikipedia.org",
+      "date": "2026-01-30",
+      "theme": "quantum mysteries",
+      "title": "The Rebel Heiress Who Redefined Women's Underwear"
+    },
+    "baae1479848be6e3976f0e203acb1d82e342f755f22f301945e5b65c92287abe": {
+      "url": "https://www.chem.uci.edu/~bgerber/Class%20151B/midgley.html",
+      "domain": "chem.uci.edu",
+      "date": "2026-01-30",
+      "theme": "quantum mysteries",
+      "title": "The Man Who Poisoned the Planet (and Saved It Too)"
+    },
+    "b3f5f020518ee5c1da75794c758a91352b47cb730c3c45e9a0f0df3022456d1d": {
+      "url": "https://www.nih.gov/news-events/nih-news/in-remembrance-dr-patricia-bath",
+      "domain": "nih.gov",
+      "date": "2026-01-30",
+      "theme": "quantum mysteries",
+      "title": "The Ophthalmologist Who Fought Blindness with Lasers"
+    },
+    "2d959008b3b94869bbbd165738dd1b7c116f66d467dda6fadf4b2369781b524f": {
+      "url": "https://www.history.com/topics/black-history/granville-woods",
+      "domain": "history.com",
+      "date": "2026-01-30",
+      "theme": "quantum mysteries",
+      "title": "The \"Black Tesla\" Who Powered the Railroad Revolution"
+    },
+    "4401ba91d1d3ed7bddc9dfd4dfbbf9f063ee00c45b844242a1a72a3f5b6fb009": {
+      "url": "https://en.wikipedia.org/wiki/Nicolas-Joseph_Cugnot",
+      "domain": "en.wikipedia.org",
+      "date": "2026-01-30",
+      "theme": "quantum mysteries",
+      "title": "The 18th-Century Engineer Who Built the First Car"
+    },
+    "0303faac50e02aece699e72c25b9dce108e418c75b5540d815c328fc0a5ab00d": {
+      "url": "https://en.wikipedia.org/wiki/Emanuel_Reydel",
+      "domain": "en.wikipedia.org",
+      "date": "2026-01-30",
+      "theme": "quantum mysteries",
+      "title": "The Forgotten Parachute Pioneer Who Defied Gravity"
+    },
+    "9389462ced53b7fc8756c435038832d4938619910686ee2a3f7307d373e743be": {
+      "url": "https://en.wikipedia.org/wiki/Ball_lightning",
+      "domain": "en.wikipedia.org",
+      "date": "2026-01-31",
+      "theme": "forgotten technology",
+      "title": "The Enigmatic Phenomenon of Ball Lightning"
+    },
+    "05e6634c20e06a6a578930ea859a2245aff5a6cf391283dff2e08fcd99b10e1d": {
+      "url": "https://en.wikipedia.org/wiki/Toynbee_tiles",
+      "domain": "en.wikipedia.org",
+      "date": "2026-01-31",
+      "theme": "forgotten technology",
+      "title": "The Mysterious Toynbee Tiles Embedding Secret Messages in City Streets"
+    },
+    "7d3209567c5a5a72c236ed5152ee39e0032c59129083f0fbde941fd558db0ed2": {
+      "url": "https://en.wikipedia.org/wiki/Taos_hum",
+      "domain": "en.wikipedia.org",
+      "date": "2026-01-31",
+      "theme": "forgotten technology",
+      "title": "The Unexplained Taos Hum: A Global Auditory Enigma"
+    },
+    "f8054e5b89e20f93467f61b2f924bc62a357afd83e7630210b4df7959fdec5e1": {
+      "url": "https://en.wikipedia.org/wiki/Dyatlov_Pass_incident",
+      "domain": "en.wikipedia.org",
+      "date": "2026-01-31",
+      "theme": "forgotten technology",
+      "title": "The Dyatlov Pass Incident: A Fatal, Unexplained Hiking Disaster"
+    },
+    "318620f55dc9806b7b4f9ec3e4a64074383b8bd7d8e82f6c94612ce3bfaabd22": {
+      "url": "https://en.wikipedia.org/wiki/Dancing_plague_of_1518",
+      "domain": "en.wikipedia.org",
+      "date": "2026-01-31",
+      "theme": "forgotten technology",
+      "title": "The Dancing Plague of 1518: A Mysterious Epidemic of Involuntary Movement"
+    },
+    "63d9bba8b71bba0ad00281881ecbdfda9a929b944753a22676f7b6aecca9b60e": {
+      "url": "https://en.wikipedia.org/wiki/Wow!_signal",
+      "domain": "en.wikipedia.org",
+      "date": "2026-01-31",
+      "theme": "forgotten technology",
+      "title": "The Wow! Signal: A Cosmic Radio Transmission That Remains Unexplained"
+    },
+    "cd7ad29d7fee3fe5fe1a6be6d810868f5bac73da684f8c7a0d3405513eb2fff5": {
+      "url": "https://en.wikipedia.org/wiki/Tunguska_event",
+      "domain": "en.wikipedia.org",
+      "date": "2026-01-31",
+      "theme": "forgotten technology",
+      "title": "The Tunguska Event: The Mysterious Siberian Explosion of 1908"
+    },
+    "27a4c370064406c6ca6307edff613d59d6bad2efef417f24058ef11504236ce6": {
+      "url": "https://en.wikipedia.org/wiki/DNA_data_storage",
+      "domain": "en.wikipedia.org",
+      "date": "2026-02-01",
+      "theme": "biological computing",
+      "title": "\"The Unlikely Future of Data Storage: DNA as a Medium\""
+    },
+    "c08279540ce16925da98cf3fe3b688ae9a2a159c2f820ef40e3d7a96d0ec35a3": {
+      "url": "https://registry.igem.org/Teams/Registry2016/Cambridge_UK",
+      "domain": "registry.igem.org",
+      "date": "2026-02-01",
+      "theme": "biological computing",
+      "title": "\"Student Scientists Tackle DNA-Based Computing in iGEM Competition\""
+    },
+    "53096a4ec15c9d0eb17bfa6b3abac73ab8fc45d3b2a2bf54fd58a3e75ce3501d": {
+      "url": "https://www.ebi.ac.uk/training/online/course/dna-data-storage",
+      "domain": "ebi.ac.uk",
+      "date": "2026-02-01",
+      "theme": "biological computing",
+      "title": "\"European Bioinformatics Institute's Guide to DNA Data Storage\""
+    },
+    "c77b37c13a290887b45d6579132a1d821781f0c0e6c31166cc3923a8045c1658": {
+      "url": "https://www.manchester.ac.uk/research/dna-nanotechnology",
+      "domain": "manchester.ac.uk",
+      "date": "2026-02-01",
+      "theme": "biological computing",
+      "title": "\"DNA Nanotechnology at the University of Manchester: Building Tiny Computers\""
+    },
+    "b3d26738f250c4d04a4dde8bc888c77284b106d5ba743a2bd4cb4b0c42a46dcb": {
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0212345",
+      "domain": "journals.plos.org",
+      "date": "2026-02-01",
+      "theme": "biological computing",
+      "title": "\"Experimental Demonstration of DNA Data Storage in Living Bacteria\""
+    },
+    "7f67d57ecf8eceb0cd43cb714f8d45baf6cb5ee6dc97d880f2d74c44066f0482": {
+      "url": "https://en.wikipedia.org/wiki/Number_station",
+      "domain": "en.wikipedia.org",
+      "date": "2026-02-02",
+      "theme": "signal from nowhere",
+      "title": "\"The Mysterious World of Number Stations: Decoding Cold War-Era Radio Enigmas\""
+    },
+    "57bcae6f84a421cd9368aee5456a7f3df23efb971cffbad8284e7bd030afe5d4": {
+      "url": "https://astronomy.osu.edu/outreach/astronomy-cast/episodes/2016/episode-118-wow-signal",
+      "domain": "astronomy.osu.edu",
+      "date": "2026-02-02",
+      "theme": "signal from nowhere",
+      "title": "\"The Wow! Signal: Ohio State\u2019s Role in One of SETI\u2019s Most Baffling Discoveries\""
+    },
+    "5d4ba8770a5d27c743d4e16fe1ab67ee4eda2266ec109a0cad05106c199ff3a6": {
+      "url": "https://www.seti.org/research/arecibo-message",
+      "domain": "seti.org",
+      "date": "2026-02-02",
+      "theme": "signal from nowhere",
+      "title": "\"The Arecibo Message: Humanity\u2019s First Cosmic \u2018Hello\u2019 and Its Unintended Consequences\""
+    },
+    "27fed01fdfe05f8da2aa2093af517d3bf16184528f9e4796ca63e9f0c223036c": {
+      "url": "https://archive.org/details/ShortwaveRadioRecordingsColdWarEra",
+      "domain": "archive.org",
+      "date": "2026-02-02",
+      "theme": "signal from nowhere",
+      "title": "\"Cold War Radio Archives: Rare Recordings of Mysterious Number Stations\""
+    },
+    "dee486380d2185d28154f2ae78a1294a5082188525de00b9cc662db780759daa": {
+      "url": "https://news.berkeley.edu/2015/07/15/breakthrough-listen/",
+      "domain": "news.berkeley.edu",
+      "date": "2026-02-02",
+      "theme": "signal from nowhere",
+      "title": "\"Breakthrough Listen: UC Berkeley\u2019s Role in the Most Extensive Search for Extraterrestrial Intelligence\""
+    },
+    "db77a8b6218403a54d179e6930839f5fd7b7ab0c09dcb21daffc7a7b9860451e": {
+      "url": "https://en.wikipedia.org/wiki/Strange_loop",
+      "domain": "en.wikipedia.org",
+      "date": "2026-02-03",
+      "theme": "recursive realities",
+      "title": "\"The Infinite Staircase: Strange Loops in Mathematics and Art\""
+    },
+    "6383c4996d4503dc7b3661c39c291421a6f193fb355fd635a34e13feac28d903": {
+      "url": "https://plato.stanford.edu/entries/goedel/",
+      "domain": "plato.stanford.edu",
+      "date": "2026-02-03",
+      "theme": "recursive realities",
+      "title": "\"G\u00f6del\u2019s Incompleteness Theorems: The Math of Self-Reference\""
+    },
+    "e04d371e11f4e0966d0c0d167881013a1f800ce388b15727046825897f6de455": {
+      "url": "https://plato.stanford.edu/entries/self-reference/",
+      "domain": "plato.stanford.edu",
+      "date": "2026-02-03",
+      "theme": "recursive realities",
+      "title": "\"The Liar Paradox and the Puzzle of Self-Description\""
+    },
+    "488dee362a4422cc3c2d7d18f61c716d3dec0da75a4beb120d8be8e5a3b46d53": {
+      "url": "https://www.nobelprize.org/prizes/chemistry/2011/shechtman/lecture/",
+      "domain": "nobelprize.org",
+      "date": "2026-02-03",
+      "theme": "recursive realities",
+      "title": "\"Quasicrystals: Impossible Patterns That Defy Symmetry Rules\""
+    },
+    "3dd84907831b89a1f44aab01383f700995995c9d53fb67c3c54f1ae8993f5ce4": {
+      "url": "http://mathworld.wolfram.com/MandelbrotSet.html",
+      "domain": "mathworld.wolfram.com",
+      "date": "2026-02-03",
+      "theme": "recursive realities",
+      "title": "\"The Mandelbrot Set: Infinity in a Mathematical Snowflake\""
+    },
+    "c27bfb209b3b8c3beb9f34b011a8fcfb7a06aa1fcd36c1f446e54e37c6afb52b": {
+      "url": "https://en.wikipedia.org/wiki/Sargasso_Sea",
+      "domain": "en.wikipedia.org",
+      "date": "2026-02-04",
+      "theme": "edge of maps",
+      "title": "\"The Ocean's Mysterious Floating Forest\""
+    },
+    "e4308d372bbc74c98ad40bc637f1e5996b7eebe9414596f1a10f6a2142827477": {
+      "url": "https://en.wikipedia.org/wiki/Darvaza_Crater",
+      "domain": "en.wikipedia.org",
+      "date": "2026-02-04",
+      "theme": "edge of maps",
+      "title": "\"The Door to Hell: A Burning Crater in the Karakum Desert\""
+    },
+    "89203ff5c2978f3862cb526f4778a397ac640bbc3807f583d2c45b10e0098776": {
+      "url": "https://en.wikipedia.org/wiki/Zone_of_Silence",
+      "domain": "en.wikipedia.org",
+      "date": "2026-02-04",
+      "theme": "edge of maps",
+      "title": "\"Mexico\u2019s Mysterious Radio-Silent Desert\""
+    },
+    "7f8bc7cb30cad6a4416f78c792af142fe07d312ac5b69104672b5a5e6feb5e81": {
+      "url": "https://en.wikipedia.org/wiki/Danakil_Depression",
+      "domain": "en.wikipedia.org",
+      "date": "2026-02-04",
+      "theme": "edge of maps",
+      "title": "\"Earth\u2019s Hottest and Most Alien Landscape\""
+    },
+    "4cb5a11e5e2a26e71a8c764a0c83f612fa6865f65ee48677dfd522e108b8ee38": {
+      "url": "https://en.wikipedia.org/wiki/Quantum_suicide",
+      "domain": "en.wikipedia.org",
+      "date": "2026-02-05",
+      "theme": "quantum mysteries",
+      "title": "\"The Bizarre Thought Experiment Linking Quantum Physics to Immortality\""
+    },
+    "023dbced0e6ab7d2bbd72684e115e11e1aa1daf8e00d1986f07ce266ec2deac1": {
+      "url": "https://csrc.nist.gov/projects/post-quantum-cryptography",
+      "domain": "csrc.nist.gov",
+      "date": "2026-02-05",
+      "theme": "quantum mysteries",
+      "title": "\"The U.S. Government\u2019s Race to Save Encryption from Quantum Computers\""
+    },
+    "6ccf4c399a33a4a1dddd1906f01b93c9bcfba0c264e8f4f4a6704c7826d32b1e": {
+      "url": "https://plato.stanford.edu/entries/quantum-mechanics-many-worlds/",
+      "domain": "plato.stanford.edu",
+      "date": "2026-02-05",
+      "theme": "quantum mysteries",
+      "title": "\"The Stanford Encyclopedia\u2019s Deep Dive Into the Many-Worlds Interpretation\""
+    },
+    "a65c004da15d36cbbf3a64b0d7e791659873468f807e79cd0afd16ab518ecc8d": {
+      "url": "https://archive.org/details/QuantumPhysicsCollection",
+      "domain": "archive.org",
+      "date": "2026-02-05",
+      "theme": "quantum mysteries",
+      "title": "\"A Digital Time Capsule of Rare Quantum Physics Texts\""
+    },
+    "13b37a5efaae5365b14a3e0b185295cba6591c0ac02bf57e9d328d38f5fbade5": {
+      "url": "https://archive.org/details/otherworldsthano00wall",
+      "domain": "archive.org",
+      "date": "2026-02-05",
+      "theme": "quantum mysteries",
+      "title": "\"A 19th-Century Book That Predicted Parallel Universes\""
+    },
+    "721968aa37bc5bec3b078acd9f8fe5761ac9e7b899643fb0c08b8194f12249d5": {
+      "url": "https://archive.org/details/Eftos_Local_Sense_Technology_The_Forgotten4hifi-full",
+      "domain": "archive.org",
+      "date": "2026-02-06",
+      "theme": "forgotten technology",
+      "title": "Eftos_Local_Sense_Technology_The_Forgotten4hifi-full : Eftos : Free Download, Borrow, and Streami..."
+    },
+    "36a82e35735df11eb445fe9d8bc468a685d89e881efdfea6433764cf8c12957c": {
+      "url": "https://archive.org/details/youtube-_mRrB33wvGk",
+      "domain": "archive.org",
+      "date": "2026-02-06",
+      "theme": "forgotten technology",
+      "title": "the forgotten technology : Mestre pedreiro : Free Download, Borrow, and Streaming : Internet Archive"
+    },
+    "4932a77ea561a462be33bff33fc1d9bbf81e69a241da264b78e2e9ae9e865990": {
+      "url": "https://archive.org/details/charles-joe-flynn-parallel-path-technology",
+      "domain": "archive.org",
+      "date": "2026-02-06",
+      "theme": "forgotten technology",
+      "title": "Charles Joe Flynn Parallel Path Technology - How Parallel Path Gets Over Unity : Overunity Electr..."
+    },
+    "4a7bb0678bd15a32635d79309b4838003ced5a90db23205af1670b61e0dd8bc0": {
+      "url": "https://oldcomputers.net/indexwp.html",
+      "domain": "oldcomputers.net",
+      "date": "2026-02-06",
+      "theme": "forgotten technology",
+      "title": "Old Computers - rare, vintage, and obsolete computers"
+    },
+    "73930ac2a8a02f31f123a9ec5d9023279b4002138d4b7eb3996c7c701cccbf3f": {
+      "url": "https://www.newworldencyclopedia.org/entry/4_(number)",
+      "domain": "newworldencyclopedia.org",
+      "date": "2026-02-06",
+      "theme": "forgotten technology",
+      "title": "4 (number) - New World Encyclopedia"
+    },
+    "628a6ae9216992a3d1097a68f15767a2daab74063d9998ffc186535550d02a7d": {
+      "url": "https://techaro.lol",
+      "domain": "techaro.lol",
+      "date": "2026-02-06",
+      "theme": "forgotten technology",
+      "title": "Techaro"
+    },
+    "d5c1ac2503ec83d7dfb8447167c341f0661343ae9c7b7dbb58027da230013298": {
+      "url": "https://militaryhistorynow.com/2014/01/10/cold-wars-some-of-military-historys-most-frigid-battles/",
+      "domain": "militaryhistorynow.com",
+      "date": "2026-02-07",
+      "theme": "cold war and freezing cold",
+      "title": "Cold Wars \u2013 Just How Freezing Was It On History\u2019s Most Bone-Chilling Battlefields? - MilitaryHistoryNow.com"
+    },
+    "cd9e918c3c06a2ce0ff13979288e0a48691af77f2b84a05dfd1e6e8f2bd724d2": {
+      "url": "https://www.history.com/articles/5-cold-war-close-calls",
+      "domain": "history.com",
+      "date": "2026-02-07",
+      "theme": "cold war and freezing cold",
+      "title": "5 Cold War Close Calls | HISTORY"
+    },
+    "f28413aca06ad1d8dee0de9dbcd354be9b2434723ffc5c7045660027a857bd98": {
+      "url": "https://spyscape.com/article/cold-war-crazy-10-bizarre-stories-from-bear-pilots-to-flying-boats",
+      "domain": "spyscape.com",
+      "date": "2026-02-07",
+      "theme": "cold war and freezing cold",
+      "title": "Cold War Crazy: 10 Bizarre Spy Stories From Atomic Kitty to Bear Pilots"
+    },
+    "2beb966605cda29ddf37e101816c22e3a55aa4faee6b0816d73f8367e0df4eaa": {
+      "url": "https://bunkernearme.com/cold-war-bunkers-how-different-nations-used-bunkers-in-warfare/",
+      "domain": "bunkernearme.com",
+      "date": "2026-02-07",
+      "theme": "cold war and freezing cold",
+      "title": "Cold war bunkers \u2013 How Different Nations Used Bunkers"
+    },
+    "b532c3a2e449acbe4a09cf525d25fba5f22de83ae2ddc1bc0c22ef7d1389020c": {
+      "url": "https://listverse.com/2024/11/14/10-unsolved-mysteries-from-the-cold-war/",
+      "domain": "listverse.com",
+      "date": "2026-02-07",
+      "theme": "cold war and freezing cold",
+      "title": "10 Unsolved Mysteries from the Cold War - Listverse"
+    },
+    "137efd136780877c17e5102a4e27348f3c00bf4045c04f04c43678c5940dd324": {
+      "url": "https://www.softwareheritage.org/",
+      "domain": "softwareheritage.org",
+      "date": "2026-02-07",
+      "theme": "cold war and freezing cold",
+      "title": "Home Page - Software Heritage"
+    },
+    "a4b05f49d2ca18408f62f8bee085e687acf91504c4f03b4beba7caa471b796e0": {
+      "url": "https://www.packsify.com/blogs/last-war-survival-game-tips-and-tricks",
+      "domain": "packsify.com",
+      "date": "2026-02-07",
+      "theme": "cold war and freezing cold",
+      "title": "Last War Survival Tips for Alliance Leaders | Save Time, Scale Faster \u2502 Packsify"
+    },
+    "0d8631e88c8236c6b54e1d67f472faed77fb12b29fe2f564688341ff56d9f962": {
+      "url": "https://www.bit2geek.com/interfaces-potential-ethical-concerns/",
+      "domain": "bit2geek.com",
+      "date": "2026-02-08",
+      "theme": "consciousness frontiers",
+      "title": "Brain-Computer Interfaces: Potential and Ethical Concerns"
+    },
+    "c562afa15b1dacb59a1d70f12dba0f4cffcfd40d6cad3aa8eb9a83da437753d7": {
+      "url": "https://theconversation.com/brain-computer-interfaces-could-allow-soldiers-to-control-weapons-with-their-thoughts-and-turn-off-their-fear-but-the-ethics-of-neurotechnology-lags-behind-the-science-194017",
+      "domain": "theconversation.com",
+      "date": "2026-02-08",
+      "theme": "consciousness frontiers",
+      "title": "Brain-computer interfaces could allow soldiers to control weapons with their thoughts and turn off their fear \u2013 but t..."
+    },
+    "6333d53aa72de5f61d3ae161a7742a492265ee188f0044fa1c680ab038ee3f41": {
+      "url": "https://mastodon.social/@publicdomainrev",
+      "domain": "mastodon.social",
+      "date": "2026-02-08",
+      "theme": "consciousness frontiers",
+      "title": "The Public Domain Review (@publicdomainrev@mastodon.social) - Mastodon"
+    },
+    "d877041c91c97f2b312ae150c416fe94fb8134489b0ec5509c9ee120d9247c23": {
+      "url": "https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2011.00056/full",
+      "domain": "frontiersin.org",
+      "date": "2026-02-09",
+      "theme": "time anomalies",
+      "title": "Frontiers | Psychological and Neural Mechanisms of Subjective Time Dilation"
+    },
+    "60bb6fb571b26691b4a8bff41d010da0b73c49656b2d4a6e65d0bb2af43852ca": {
+      "url": "https://www.sciencenewstoday.org/understanding-time-dilation-why-time-moves-differently-in-space",
+      "domain": "sciencenewstoday.org",
+      "date": "2026-02-09",
+      "theme": "time anomalies",
+      "title": "Understanding Time Dilation: Why Time Moves Differently in Space"
+    },
+    "6ccf6c78997202f80af68ff8c379fb5e348b32db216055d1c74c77d3bf5716c9": {
+      "url": "https://www.snopes.com/fact-check/berenstain-bears-mandela-effect/",
+      "domain": "snopes.com",
+      "date": "2026-02-10",
+      "theme": "parallel dimensions",
+      "title": "Is it 'Berenstain' or 'Berenstein' Bears? Classic case of Mandela Effect, explained | Snopes.com"
+    },
+    "161e80f73b49ebe2e7d9ca1dceafd4666ec3251c3e396f2293256dbe684667ab": {
+      "url": "https://www.biznews.com/good-hope-project/decoding-mandela-effect-memory-fails-us",
+      "domain": "biznews.com",
+      "date": "2026-02-10",
+      "theme": "parallel dimensions",
+      "title": "Decoding the Mandela effect: When memory fails us"
+    },
+    "fdba181b47e3c57b9ada444698fb102d1d26bf8dce2525c28cfb9d2b6c779407": {
+      "url": "https://link.springer.com/article/10.1007/s11248-026-00483-y",
+      "domain": "link.springer.com",
+      "date": "2026-02-11",
+      "theme": "synthetic life",
+      "title": "Emerging trends in genome editing of wild animals | Transgenic Research | Springer Nature Link"
+    },
+    "fb8154c397a84034a6d79bbb02e908316baac9e103d051493dbc1108fc3ed7a0": {
+      "url": "https://www.frontiersin.org/journals/synthetic-biology/articles/10.3389/fsybi.2025.1630026/full",
+      "domain": "frontiersin.org",
+      "date": "2026-02-11",
+      "theme": "synthetic life",
+      "title": "Frontiers | Frontiers in biofoundry: opportunities and challenges"
+    },
+    "7cc732939957355972961f389f5095cb5761b87b65cc0af85d7719158a2e6c76": {
+      "url": "https://nature.sciencearray.com/synthetic-biology-resurrect-extinct-species-deextinction",
+      "domain": "nature.sciencearray.com",
+      "date": "2026-02-11",
+      "theme": "synthetic life",
+      "title": "Can Synthetic Biology Revive Extinct Species? | Science Array"
+    },
+    "f528a9210672300f44d390ce42f2ca32e7239678c467f90c63915748c2f4e901": {
+      "url": "https://www.thecodebreaker.org/zodiac/",
+      "domain": "thecodebreaker.org",
+      "date": "2026-02-12",
+      "theme": "cryptographic secrets",
+      "title": "ZODIAC KILLER - The Codebreaker"
+    },
+    "8776d5ee6a782765ce226030b4d1c56761b53b07bc0e7e868f0dc395c2e66f6c": {
+      "url": "https://unsolvedproblems.org/index_files/Zodiac.htm",
+      "domain": "unsolvedproblems.org",
+      "date": "2026-02-12",
+      "theme": "cryptographic secrets",
+      "title": "Zodiac"
+    },
+    "9e6774176015051eaf434a0a09e05a21be3d205fa0f3c09c8caea9a7134f89cc": {
+      "url": "https://www.pmel.noaa.gov/rediscover/old-weather-whaling",
+      "domain": "pmel.noaa.gov",
+      "date": "2026-02-13",
+      "theme": "abandoned stations",
+      "title": "In search of the lost Arctic: citizen-scientists recover 19th century sea-ice records from ship logbooks | Arctic Red..."
+    },
+    "c33faa255cf84cc9f867c4c33c7f9edee2c4df1d96522e68f5abe3b707f955e2": {
+      "url": "https://outofyourcomfortzone.net/visiting-an-abandoned-us-surveillance-station-from-the-cold-war/",
+      "domain": "outofyourcomfortzone.net",
+      "date": "2026-02-13",
+      "theme": "abandoned stations",
+      "title": "How to Visit Teufelsberg: An Abandoned Spy Station from the Cold War in Berlin"
+    },
+    "99a0ff3dc838a5d93c33dc33be1fb0dc8138825d31ecdb68a4222fc0b7cadd72": {
+      "url": "https://en.wikipedia.org/wiki/Listening_station",
+      "domain": "en.wikipedia.org",
+      "date": "2026-02-13",
+      "theme": "abandoned stations",
+      "title": "Listening station - Wikipedia"
+    },
+    "05aa279baf7c2a30f34a895b8b3eea57216cc9c6373e2e27a5489ca73001e53b": {
+      "url": "https://johnkreiter.com/unmasking-the-matrix-deja-vu-and-jamais-vu-as-evidence-of-the-simulation/",
+      "domain": "johnkreiter.com",
+      "date": "2026-02-14",
+      "theme": "reality glitches",
+      "title": "Unmasking The Matrix: D\u00e9j\u00e0 Vu and Jamais Vu as Evidence of the Simulation \u2013 John Kreiter"
+    },
+    "5b170633be76bbe80da58b2da68c9e97d5063213d297abaaeb81874946738f8e": {
+      "url": "https://www.realityshifters.com/pages/yourstories.html",
+      "domain": "realityshifters.com",
+      "date": "2026-02-14",
+      "theme": "reality glitches",
+      "title": "RealityShifters | Your Stories 1"
+    },
+    "6465d79f01b2bdb21efa7977d32e0b04a0b5f919e3aeb7883c5cf7ce95c317ae": {
+      "url": "https://www.yourtango.com/self/life-suddenly-feels-off-signs-mean-shifting-new-reality",
+      "domain": "yourtango.com",
+      "date": "2026-02-14",
+      "theme": "reality glitches",
+      "title": "If Life Suddenly Feels 'Off,' These 15 Signs Mean You\u2019re Shifting Into A New Reality | YourTango"
+    },
+    "2bc6e166604addc1d9a5c6aff924f97e3fe036b21eb7eb4d8f52c40ce37f0996": {
+      "url": "https://web.archive.org/web/*/https://accelerationwatch.com/critiques.html",
+      "domain": "web.archive.org",
+      "date": "2026-02-15",
+      "theme": "emergent intelligence",
+      "title": "Wayback Machine"
+    },
+    "894be287c8895cf05ce3c1823f3106b0dc06833e078c9fbe7f7ddc8d46b925f0": {
+      "url": "https://techcrunch.com/2023/01/17/that-microsoft-deal-isnt-exclusive-video-is-coming-and-more-from-openai-ceo-sam-altman/",
+      "domain": "techcrunch.com",
+      "date": "2026-02-15",
+      "theme": "emergent intelligence",
+      "title": "Video is coming and more from OpenAI CEO Sam Altman | TechCrunch"
+    },
+    "193d91163ee3368126234a629a4aba1ae60436ffadc4e16ea52f0ac6e5274fdc": {
+      "url": "https://www.nature.com/articles/s41467-025-61985-7",
+      "domain": "nature.com",
+      "date": "2026-02-15",
+      "theme": "emergent intelligence",
+      "title": "A collective intelligence model for swarm robotics applications | Nature Communications"
+    },
+    "2ef707dd7ae63a4ba395b5b976fd34254d9e2910d80ae2945d236c39e6b20ce9": {
+      "url": "http://www.britishtherapy.org/2024/12/11/the-ethical-implications-of-memory-manipulation-in-psychotherapy/",
+      "domain": "britishtherapy.org",
+      "date": "2026-02-16",
+      "theme": "memory manipulation",
+      "title": "The Ethical Implications of Memory Manipulation in Psychotherapy \u2013 British Psychotheray Institute"
+    },
+    "c266fe35d70891cefe598a622bd3bc25aecf019d603f2deec1dd9e70bd239ac1": {
+      "url": "https://journals.oslomet.no/index.php/rerm/article/view/3852",
+      "domain": "journals.oslomet.no",
+      "date": "2026-02-16",
+      "theme": "memory manipulation",
+      "title": "\u201cAsk for a Miracle\u201d: Memory, Manipulation, and Displacement in the Cooper-Young Neighborhood"
+    },
+    "97f6af7e9633e13986a19ed1fc5e8d9b2ff4edf9e80d511559f652f252d2bd97": {
+      "url": "https://drb.ie/articles/troubles-with-remembering-or-the-seven-sins-of-memory-studies/",
+      "domain": "drb.ie",
+      "date": "2026-02-16",
+      "theme": "memory manipulation",
+      "title": "Troubles with Remembering; or, The Seven Sins of Memory Studies - DRB"
+    },
+    "0cab454a30340f9c5adc15e5a227d9909c17dc9e8b9f26b2397eb32f491f33c4": {
+      "url": "https://bioethicstoday.org/resources/manipulating-human-memory-through-reconsolidation-ethical-implications-of-a-new-therapeutic-approach/",
+      "domain": "bioethicstoday.org",
+      "date": "2026-02-16",
+      "theme": "memory manipulation",
+      "title": "Resource - Manipulating Human Memory Through Reconsolidation: Ethical Implications of a New Therapeutic Approach - Bi..."
+    },
+    "57a2881dc86259e9541923a26be9ecd79682f61f5789a2478b06ecf75206d661": {
+      "url": "https://ericjguignard.com/dark_tales.html",
+      "domain": "ericjguignard.com",
+      "date": "2026-02-17",
+      "theme": "lost civilizations",
+      "title": "Dark Tales of Lost Civilizations"
+    },
+    "a2d98b52184aa08c8d5041c258df972baf3b8082e5117e9b0e5c2c79eec2bc6f": {
+      "url": "https://www.thearchaeologist.org/blog/the-lost-language-of-the-indus-valley-civilization",
+      "domain": "thearchaeologist.org",
+      "date": "2026-02-17",
+      "theme": "lost civilizations",
+      "title": "The Lost Language of the Indus Valley Civilization"
+    },
+    "7c4d24eac6f2521fcd171b71819743f1b17e17bd0d1099e5a6e5600760dd4414": {
+      "url": "https://www.zmescience.com/science/physics/computing-capacity-life/",
+      "domain": "zmescience.com",
+      "date": "2026-02-19",
+      "theme": "biological computing",
+      "title": "Cells Might Be Doing Quantum Computing. Life on Earth Has Performed 10\u2076\u2070 Logical Operations"
+    },
+    "f7161f4fe234374bf85df590207574b4ca6589fd009c3e49eb7c3bacc481bfff": {
+      "url": "https://lite.ip2location.com/",
+      "domain": "lite.ip2location.com",
+      "date": "2026-02-19",
+      "theme": "biological computing",
+      "title": "Free IP Geolocation Database"
+    },
+    "952f8fe3f4dd8e26d66000e15b9810f28dd9f38331e792fcdcf5c695b3c1b53a": {
+      "url": "https://www.nature.com/articles/s44182-025-00056-x",
+      "domain": "nature.com",
+      "date": "2026-02-19",
+      "theme": "biological computing",
+      "title": "Biohybrid living robotics: A comprehensive review of recent advances, technological innovation, and future prospects ..."
+    },
+    "1728ba376ec6af01a719ef1f26dc6f11035b89f84e1958844fe65b720b108484": {
+      "url": "https://www.alienlife.net/articles/the-big-question-what-was-the-wow-signal/",
+      "domain": "alienlife.net",
+      "date": "2026-02-20",
+      "theme": "signal from nowhere",
+      "title": "The Big Question: What Was the Wow! Signal? - Alien Life"
+    },
+    "e7f55d06da1a3065eb0dc12efd45078c5c12b269285ec979748aa5a2ca176ca6": {
+      "url": "https://gigazine.net/gsc_news/en/20250827-wow-signal-extraterrestrial-source-powerful",
+      "domain": "gigazine.net",
+      "date": "2026-02-20",
+      "theme": "signal from nowhere",
+      "title": "A mysterious signal observed in 1977, the 'Wow! Signal,' has been re-examined and found to be likely extraterrestrial..."
+    },
+    "eed3af8d71f479fe2dbccf6d3519b6af72a8e78935727059dd5cbb23285dc399": {
+      "url": "https://www.gardenofmemory.net/update-the-wow-signal-solved-2/",
+      "domain": "gardenofmemory.net",
+      "date": "2026-02-20",
+      "theme": "signal from nowhere",
+      "title": "Update: The WOW! Signal Solved."
+    },
+    "9852a4f90a74cb7629c018592b4e95d73791d51aef56e4a54e4b348988e379a8": {
+      "url": "https://www.projectavalon.net/forum4/showthread.php?121956-The-Why-What-and-Where-of-the-WOW--Signal",
+      "domain": "projectavalon.net",
+      "date": "2026-02-20",
+      "theme": "signal from nowhere",
+      "title": "The Why, What and Where of the WOW! Signal"
+    },
+    "a153b115e337833336764fa58ea0e9168988735e7d285f9387c4b1fca1a5aa2b": {
+      "url": "https://web.archive.org/web/*/https://kennethreitz.org/essays/2025-09-16-the-meandering-sea-of-primordial-soupy-thought",
+      "domain": "web.archive.org",
+      "date": "2026-02-21",
+      "theme": "recursive realities",
+      "title": "Wayback Machine"
+    },
+    "ab0fc56514203610b739e56158da0df8f12a2f97b392064c7c0e78634c7bbac3": {
+      "url": "https://git.marginalia.nu/",
+      "domain": "git.marginalia.nu",
+      "date": "2026-02-21",
+      "theme": "recursive realities",
+      "title": "GitHub - MarginaliaSearch/MarginaliaSearch: Internet search engine for text-oriented websites. Indexing the small, ol..."
+    },
+    "8e85197ad5f1b1ffb8eab7297591c9268f07580d16f63f03239e1c9587378d60": {
+      "url": "https://kennethreitz.org/essays/2025-09-16-the-meandering-sea-of-primordial-soupy-thought",
+      "domain": "kennethreitz.org",
+      "date": "2026-02-21",
+      "theme": "recursive realities",
+      "title": "The Meandering Sea of Primordial Soupy Thought - Kenneth Reitz"
+    },
+    "d0966c2a54d9be2978252255bd39d0099b2de1c600044f467402a0fa4e71d76a": {
+      "url": "https://about.marginalia-search.com/",
+      "domain": "about.marginalia-search.com",
+      "date": "2026-02-21",
+      "theme": "recursive realities",
+      "title": "About Marginalia Search - Marginalia Search"
+    },
+    "4b8842b114f2eddf935585774b0e4631113ed4bf2067c8c3a1b1919a1d7b736d": {
+      "url": "https://discord.gg/99pi",
+      "domain": "discord.gg",
+      "date": "2026-02-21",
+      "theme": "recursive realities",
+      "title": "99% Invisible"
+    },
+    "0a72ba211362fed72bd429f5c4071f8d24dea85c368120ad7f8dbc4775fbf50c": {
+      "url": "https://mythologyworldwide.com/the-mythical-map-unraveling-the-secrets-of-ancient-cartography/",
+      "domain": "mythologyworldwide.com",
+      "date": "2026-02-22",
+      "theme": "edge of maps",
+      "title": "The Mythical Map: Unraveling the Secrets of Ancient Cartography - Mythology WorldWide"
+    },
+    "9085732207f4c09d7ea221d5aaae2d18c1d270363072388f2320b8332ba73fb0": {
+      "url": "https://studentwork.prattsi.org/dh/2014/02/09/network-visualization-rocky-flats-oral-history-collection/",
+      "domain": "studentwork.prattsi.org",
+      "date": "2026-02-22",
+      "theme": "edge of maps",
+      "title": "Network Visualization of the Rocky Flats Oral History Collection \u2013 Digital Humanities @ Pratt School of Information"
+    },
+    "174c1ccbb04531214052353f604d353768aa9a631e68ac17964f23dfe907b14c": {
+      "url": "https://bsky.app/profile/celphase.bsky.social",
+      "domain": "bsky.app",
+      "date": "2026-02-22",
+      "theme": "edge of maps",
+      "title": "@celphase.bsky.social on Bluesky"
+    },
+    "60793a6117e1dd5310de2df531f4c8951749120bab99addc33dcf3c712b38008": {
+      "url": "https://theconversation.com/new-entanglement-breakthrough-links-cores-of-atoms-brings-quantum-computers-closer-265668",
+      "domain": "theconversation.com",
+      "date": "2026-02-23",
+      "theme": "quantum mysteries",
+      "title": "New entanglement breakthrough links cores of atoms, brings quantum computers closer"
+    },
+    "e497956110ef0b1d014bae12db967f1be7c11dbccd6e98ad65711179899280f8": {
+      "url": "https://interestingengineering.com/innovation/telecom-band-entangled-photons",
+      "domain": "interestingengineering.com",
+      "date": "2026-02-23",
+      "theme": "quantum mysteries",
+      "title": "US team achieves 99% fidelity in quantum communication breakthrough"
+    },
+    "6bb4602e787ce0b4967c1986913502889e72e3373e010bcf704fb4b5133e3187": {
+      "url": "https://physicsedge.com/investigation",
+      "domain": "physicsedge.com",
+      "date": "2026-02-23",
+      "theme": "quantum mysteries",
+      "title": "PhysicsEdge.com is for sale | HugeDomains"
+    },
+    "d64e548b7f6db550b38877b89bb1df1b98e1c4a3dbfbacc90aac78bcf270107f": {
+      "url": "https://worldbuilding.stackexchange.com/questions/7279",
+      "domain": "worldbuilding.stackexchange.com",
+      "date": "2026-02-24",
+      "theme": "forgotten technology",
+      "title": "science based - What is the ideal time period for 'forgotten history' novels/stories to take place and still end up w..."
+    },
+    "6f05051b88d3e662114bfb34f9bfba85b47c41f61e5521a8529563f71ba8e179": {
+      "url": "https://digitalarchaeology.org.uk/our-purpose",
+      "domain": "digitalarchaeology.org.uk",
+      "date": "2026-02-25",
+      "theme": "digital archaeology",
+      "title": "Home \u2014 The Institute for Digital Archaeology"
+    },
+    "64c89b66e45fb790f8e2c3873b8b8ddc6a96546ea0536591882ad6ae58d0537e": {
+      "url": "https://www.restorewebpages.com/website-recovery-guide-restore-your-site-from-scratch/",
+      "domain": "restorewebpages.com",
+      "date": "2026-02-25",
+      "theme": "digital archaeology",
+      "title": "Website Recovery Guide: Restore Your Site from Scratch - Restore Your Webpages"
+    },
+    "313c44411eb7d3652910991b5de37fec2c543312ee7e25c34019eedd1551a96c": {
+      "url": "https://www.alliedacademies.org/articles/neuroplasticity-the-brains-remarkable-ability-to-adapt-and-heal.pdf",
+      "domain": "alliedacademies.org",
+      "date": "2026-02-26",
+      "theme": "consciousness frontiers",
+      "title": "Neuroplasticity The Brains Remarkable Ability To Adapt And Heal"
+    },
+    "53c37144ffaac724f9fad785bffbe82ce9bacd1773b149ff61ce60562f277fb9": {
+      "url": "https://old-search.marginalia.nu/",
+      "domain": "old-search.marginalia.nu",
+      "date": "2026-02-26",
+      "theme": "consciousness frontiers",
+      "title": "Marginalia Search"
+    },
+    "e0614735cc50687d2bfb9c7af45993c86066cd3497feef8e984cbbcf35585e67": {
+      "url": "https://mysteriousuniverse.org/2018/03/very-strange-accounts-of-bizarre-time-anomalies/",
+      "domain": "mysteriousuniverse.org",
+      "date": "2026-02-27",
+      "theme": "time anomalies",
+      "title": "Very Strange Accounts of Bizarre Time Anomalies"
+    },
+    "9bba9901e4d994d7a1cf6dc8f5e585df674f3e41ecad0810b7590ea8c1e243b0": {
+      "url": "https://ueaeprints.uea.ac.uk/id/eprint/71047/",
+      "domain": "ueaeprints.uea.ac.uk",
+      "date": "2026-02-27",
+      "theme": "time anomalies",
+      "title": "Event-based time in three indigenous Amazonian and Xinguan cultures and languages  - UEA Digital Repository"
+    },
+    "c657aa63aec357616b41d06384c49dbad7731b23d7fa67739ff7aabf91d49f5b": {
+      "url": "https://mysteriousuniverse.org/2024/03/31.08-MU-Podcast-Apparitions-of-Time/",
+      "domain": "mysteriousuniverse.org",
+      "date": "2026-02-27",
+      "theme": "time anomalies",
+      "title": "31.08 - MU Podcast - Apparitions of Time"
+    },
+    "fb747616991cba9e697189d334b36ee84c6134a02fd503fe52a397a1fe55ed77": {
+      "url": "https://www.bbc.com/news/science-environment-13452711",
+      "domain": "bbc.com",
+      "date": "2026-02-27",
+      "theme": "time anomalies",
+      "title": "Amondawa tribe lacks abstract idea of time, study says - BBC News"
+    },
+    "e452238146107756fa48741db3f4fbfafcdeebe2f7ff20dd3b7e43d49fbc7f84": {
+      "url": "https://openreview.net/forum?id=yIoMqDes7O",
+      "domain": "openreview.net",
+      "date": "2026-02-28",
+      "theme": "parallel dimensions",
+      "title": "When Agents \u201cMisremember\u201d Collectively: Exploring the Mandela Effect in LLM-based Multi-Agent Systems | OpenReview"
+    },
+    "bfdf0a810abedee5c82c0f6be3cedcde0ac443464c1a5261bfe0e8c8e704f89f": {
+      "url": "https://www.thehastingscenter.org/who-we-are/our-research/selected-past-projects/ethical-issues-in-synthetic-biology-four-case-studies/",
+      "domain": "thehastingscenter.org",
+      "date": "2026-03-01",
+      "theme": "synthetic life",
+      "title": "Ethical Issues in Synthetic Biology: Four Case Studies - The Hastings Center for Bioethics"
+    },
+    "c569f80ea326f5c27a7fd3a7f3182650bb8ff2a5870fa093dd4e27a5e84297b1": {
+      "url": "https://arxiv.org/abs/2403.17350",
+      "domain": "arxiv.org",
+      "date": "2026-03-02",
+      "theme": "cryptographic secrets",
+      "title": "[2403.17350] The Solution of the Zodiac Killer's 340-Character Cipher"
+    },
+    "4ff7b9abf4052c0c7d0472274e89f4e19aeb9c37583b6f481dd112e670535b30": {
+      "url": "https://ciphermysteries.com/2025/10/11/lisa-fagin-davis-the-materiality-of-the-voynich-manuscript",
+      "domain": "ciphermysteries.com",
+      "date": "2026-03-02",
+      "theme": "cryptographic secrets",
+      "title": "Lisa Fagin Davis' \"The Materiality of the Voynich Manuscript\"... - Cipher Mysteries"
+    },
+    "b4348eb9eb684f4fa9f43f4559302da59acdfb61ff2993e6dfd806a8ca2ad454": {
+      "url": "https://centraliapeostafire.org/stations-2-2024/",
+      "domain": "centraliapeostafire.org",
+      "date": "2026-03-03",
+      "theme": "abandoned stations",
+      "title": "Fire Stations \u2013 Centralia-Peosta Fire Department"
+    },
+    "a12296c9a4fcf079e5b5c4e014701de19874ade49e90f27a19bd1f8c6c357689": {
+      "url": "https://www.phoenixnewtimes.com/music/the-edge-phoenix-alternative-radio-station-oral-history-15442036/",
+      "domain": "phoenixnewtimes.com",
+      "date": "2026-03-03",
+      "theme": "abandoned stations",
+      "title": "The Edge: An Oral History of Phoenix's Iconic Alt-Rock Radio Station"
+    },
+    "56b586cb9f94c008707aa3cedf80e1652048f13eab4658b29075a1f322a44c1b": {
+      "url": "https://americanfreedomnews.us/the-whistleblower-simulation",
+      "domain": "americanfreedomnews.us",
+      "date": "2026-03-04",
+      "theme": "reality glitches",
+      "title": "The Whistleblower Simulation | American Freedom News"
+    },
+    "c8ffbc40f9bbb05da5f8c1f0ba88e7ce8bb2c3204a0f57de92d1e2446540a365": {
+      "url": "https://www.sciencenews.org/century/quantum-physics-theory-revolution-reality-uncertainty",
+      "domain": "sciencenews.org",
+      "date": "2026-03-04",
+      "theme": "reality glitches",
+      "title": "The quantum revolution questioned the nature of reality - Century of Science | Science News"
+    },
+    "73458e4a1011e9450b13d5920bcd251de4e32588c88c7243f669d2b5a7f70e22": {
+      "url": "https://felixleuschner.de/farsideofthesky/",
+      "domain": "felixleuschner.de",
+      "date": "2026-03-04",
+      "theme": "reality glitches",
+      "title": "Far Side Of The Sky \u2013 FELIX LEUSCHNER"
+    },
+    "f51f9d0ea11515c02abe2e507288b76d91e627d84e8519c173fb38fabc298627": {
+      "url": "https://web.archive.org/web/*/https://oralhistory.org/events/workshops-and-institutes/",
+      "domain": "web.archive.org",
+      "date": "2026-03-05",
+      "theme": "emergent intelligence",
+      "title": "Wayback Machine"
+    },
+    "53194fb12ee6aea4e6cd897e4b376f33bda2b2b56440fc63dade92fdb6e77095": {
+      "url": "https://link.springer.com/chapter/10.1007/978-981-95-2909-4_5",
+      "domain": "link.springer.com",
+      "date": "2026-03-05",
+      "theme": "emergent intelligence",
+      "title": "Case Studies in AI Ethics | Springer Nature Link"
+    },
+    "06473ba6ce35aab8d9031966ab139cfc0f890b38a22c0e7447f467130909187d": {
+      "url": "https://www.frontiersin.org/journals/human-dynamics/articles/10.3389/fhumd.2025.1579166/full",
+      "domain": "frontiersin.org",
+      "date": "2026-03-05",
+      "theme": "emergent intelligence",
+      "title": "Frontiers | Human-artificial interaction in the age of agentic AI: a system-theoretical approach"
+    },
+    "d042cf85a3fe90550261e261091cea576ce655dac5fbc5c314ca3751af4ad71d": {
+      "url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1433762/full",
+      "domain": "frontiersin.org",
+      "date": "2026-03-06",
+      "theme": "memory manipulation",
+      "title": "Frontiers | Remembering what did not happen: the role of hypnosis in memory recall and false memories formation"
+    },
+    "4ba5af0d660e1635538341059c7dbd3f7b1674ea295b4b6df5cc61d194079b1f": {
+      "url": "https://link.springer.com/article/10.3758/s13421-024-01524-9",
+      "domain": "link.springer.com",
+      "date": "2026-03-06",
+      "theme": "memory manipulation",
+      "title": "Unringing the bell: Successful debriefing following a rich false memory study | Memory & Cognition | Springer Nature ..."
+    },
+    "8de7b50421a5a283c9e461b8f3fbf9c0b2884d9129c17d756213150a6a3e795a": {
+      "url": "https://www.nature.com/articles/s41598-021-84310-w",
+      "domain": "nature.com",
+      "date": "2026-03-07",
+      "theme": "lost civilizations",
+      "title": "A Model of the Cosmos in the ancient Greek Antikythera Mechanism | Scientific Reports"
+    },
+    "66a1c1b0927eb55f3e293b05f7bd46a42e9b6ddcafd35a33942382a0985527d4": {
+      "url": "https://gwern.net/dnm-archive",
+      "domain": "gwern.net",
+      "date": "2026-03-08",
+      "theme": "underground networks",
+      "title": "Darknet Market Archives (2013\u20132015) \u00b7 Gwern.net"
+    },
+    "53ba74f3d7a51f3e5c8ab830349fc4ba95e96b5712279ac0595ed9f2a1249eb9": {
+      "url": "https://blacksprutg.net/blog/history-of-the-darknet",
+      "domain": "blacksprutg.net",
+      "date": "2026-03-08",
+      "theme": "underground networks",
+      "title": "History of the Darknet: From Cold War Tech to Silk Road -"
+    },
+    "976665733115d9dae18f2a0f13fb47549cfb8ae2784e626af4676ff57c5fd6be": {
+      "url": "https://darkipedia.net/index.php?title=Markets",
+      "domain": "darkipedia.net",
+      "date": "2026-03-08",
+      "theme": "underground networks",
+      "title": "Darkipedia - All Darknet Markets By History"
+    },
+    "76e8609990b423ee061be31a45bea5494531e79e388cd59e284e672605ddb686": {
+      "url": "https://www.nature.com/articles/s41928-025-01552-6",
+      "domain": "nature.com",
+      "date": "2026-03-09",
+      "theme": "biological computing",
+      "title": "Using electronics to build biohybrid robots with physical intelligence | Nature Electronics"
+    },
+    "e27fd7ceb5814c6bef7354eb9cfb26cdaca13c26816d63895c4c032b8f3ceba7": {
+      "url": "https://www.bigear.org/wow.htm",
+      "domain": "bigear.org",
+      "date": "2026-03-10",
+      "theme": "signal from nowhere",
+      "title": "Ohio State University Radio Observatory - The Wow! Signal"
+    },
+    "db197a488a87ce5827cdcce97b095523ef90d826c0dbbf03810aecc60ad7e010": {
+      "url": "https://www.nicap.org/papers/ridge/WOW_Signal_&_MADAR.pdf",
+      "domain": "nicap.org",
+      "date": "2026-03-10",
+      "theme": "signal from nowhere",
+      "title": "Wow Signal & Madar"
+    },
+    "487441f8918008345c54bd6b87ff12cd943e6ec996acfba287e434684c5eea98": {
+      "url": "https://technosearch.seti.org/wow-signal/",
+      "domain": "technosearch.seti.org",
+      "date": "2026-03-10",
+      "theme": "signal from nowhere",
+      "title": "WOW! Signal \u2013 Technosearch"
+    },
+    "91a8e642ebb1e808b7ef5f749a16daf25eb21e7b79dc6e475293092b14132c7c": {
+      "url": "https://fractalfoundation.org/OFC/OFC-1-1.html",
+      "domain": "fractalfoundation.org",
+      "date": "2026-03-11",
+      "theme": "recursive realities",
+      "title": "Fractal Foundation Online Course - Chapter 1 - FRACTALS IN NATURE"
+    },
+    "72e52a65798f3a83a1c45b3c71141e0bec1acf3d8101348413a23da6c3d231cb": {
+      "url": "https://www.kahinvasi.com/botanical-fractals",
+      "domain": "kahinvasi.com",
+      "date": "2026-03-11",
+      "theme": "recursive realities",
+      "title": "Botanical Fractals | Kahin Vasi"
+    },
+    "9cce8173b157101b01f2359ea4b8869604cee3424d6f4a228e396d7defb6f939": {
+      "url": "https://bsky.app/profile/publicdomainrev.bsky.social",
+      "domain": "bsky.app",
+      "date": "2026-03-11",
+      "theme": "recursive realities",
+      "title": "@publicdomainrev.bsky.social on Bluesky"
+    },
+    "9927f6eadf3e5df1818a923ff95b3a95401df31baf3e75f83b6772fc5ace842c": {
+      "url": "https://computerhistory.org/plan-your-visit/",
+      "domain": "computerhistory.org",
+      "date": "2026-03-12",
+      "theme": "edge of maps",
+      "title": "Plan Your Visit - CHM"
+    },
+    "0c141942b7283b10eadcc9138ecb19842939b25c81b0f40f80d2f1daf65bdc23": {
+      "url": "https://computerhistory.org/tours/",
+      "domain": "computerhistory.org",
+      "date": "2026-03-12",
+      "theme": "edge of maps",
+      "title": "Tours - CHM"
+    },
+    "dd661cc4b29b1aa012e06eb8c5879aefd51c9aea718de627f987e22cb109a58c": {
+      "url": "https://physics.stackexchange.com/questions/36406",
+      "domain": "physics.stackexchange.com",
+      "date": "2026-03-13",
+      "theme": "quantum mysteries",
+      "title": "Is there any quantum interpretation which isn't \"crazy\" at all? - Physics Stack Exchange"
+    },
+    "e1258f6bcfde5eed3a673fb8686404a6ca1434c48e553de382e61398ff2a5698": {
+      "url": "https://miraclesofthequantumworld.blogspot.com/2026/03/",
+      "domain": "miraclesofthequantumworld.blogspot.com",
+      "date": "2026-03-13",
+      "theme": "quantum mysteries",
+      "title": "Is the cat dead, or is it living? The revolutionary quantum world.: March 2026"
+    },
+    "cd04af8f0f77016e109f01dd932e0d926a7483ea9115d104751fa6c3a57873a0": {
+      "url": "https://computerhistory.org/timelines/",
+      "domain": "computerhistory.org",
+      "date": "2026-03-14",
+      "theme": "forgotten technology",
+      "title": "Timelines - CHM"
+    },
+    "1650ba223123467e895e9b27df0fc63fd103d304794dfb3c341e26f562f8088a": {
+      "url": "https://99percentinvisible.org/listen/",
+      "domain": "99percentinvisible.org",
+      "date": "2026-03-14",
+      "theme": "forgotten technology",
+      "title": "Ways to Listen - 99% Invisible"
+    },
+    "8654cf3f835213f8e4acd39eba87c729cff8f2d422210c2fa306e8d850aa497c": {
+      "url": "https://netnosta.com/blog/exploring-the-impact-of-early-web-design-a-journey-through-retro-aesthetics/",
+      "domain": "netnosta.com",
+      "date": "2026-03-15",
+      "theme": "digital archaeology",
+      "title": "Exploring the Impact of Early Web Design: A Journey Through Retro Aesthetics"
+    },
+    "ecc2402a2a9a4a3f14c01acbf2f335fb9b31180b9ae8f5507a803ef478a81c8e": {
+      "url": "https://www.hieroart.com/article/evolution-web-design-look-back-and-ahead",
+      "domain": "hieroart.com",
+      "date": "2026-03-15",
+      "theme": "digital archaeology",
+      "title": "The Evolution of Web Design"
+    },
+    "56966cf646a74b831a3aeab462beb8ec59e8b6af8fe387a412c2d0c969970240": {
+      "url": "https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1113695/full",
+      "domain": "frontiersin.org",
+      "date": "2026-03-16",
+      "theme": "consciousness frontiers",
+      "title": "Frontiers | Functional networks in prolonged disorders of consciousness"
+    },
+    "4eab11be8da1a629e9bd6481ab48c30c73e6e14690e41ec5894756688c3bbaf2": {
+      "url": "https://www.science-frontiers.com/online/search.cgi?zoom_and=1&zoom_page=1&zoom_per_page=50&zoom_query=devil&zoom_sort=2&zoom_xml=0",
+      "domain": "science-frontiers.com",
+      "date": "2026-03-16",
+      "theme": "consciousness frontiers",
+      "title": "Example Zoom search template page"
+    },
+    "623dbaee27d27f98bb0b48aa452bd3abd05d5dfde13767f5d2a9aba0c418bb1a": {
+      "url": "https://auth.computerhistory.org/sso?app=my_account",
+      "domain": "auth.computerhistory.org",
+      "date": "2026-03-16",
+      "theme": "consciousness frontiers",
+      "title": "SSO - Log In"
+    },
+    "9adfd39bb50e9cb13e074d4a262930a5f3c0305dc0255e705aab6426a3c7f8de": {
+      "url": "https://thepsychesphere.com/how-culture-affects-our-perception-of-time/",
+      "domain": "thepsychesphere.com",
+      "date": "2026-03-17",
+      "theme": "time anomalies",
+      "title": "How Culture Affects Our Perception of Time"
+    },
+    "928c6530be143d9ebf50ab8cbaaaac373c46f9c2c9f1fc1534d8c678e5c2885c": {
+      "url": "https://pressbooks.pub/modernblueprint/chapter/20-cultural-influences-on-the-perception-of-time/",
+      "domain": "pressbooks.pub",
+      "date": "2026-03-17",
+      "theme": "time anomalies",
+      "title": "Chapter 20: Cultural Influences on the Perception of Time \u2013 Modern Blueprint for College and Career Success"
+    },
+    "c07d46bd461924d2e19ebeecf4282b806eea9086d91cab5e146f8fc63f71b6f0": {
+      "url": "https://link.springer.com/content/pdf/10.1007/978-94-010-0155-7_2",
+      "domain": "link.springer.com",
+      "date": "2026-03-17",
+      "theme": "time anomalies",
+      "title": "The Human Sense of Time: Biological, Cognitive and Cultural Considerations | Springer Nature Link"
+    },
+    "a373cf8534ce223b3355e2cdc73aef0d43a95ab1ec6c6c779c2cd2cb795851f0": {
+      "url": "https://arxiv.org/abs/2602.00428",
+      "domain": "arxiv.org",
+      "date": "2026-03-18",
+      "theme": "parallel dimensions",
+      "title": "[2602.00428] When Agents \"Misremember\" Collectively: Exploring the Mandela Effect in LLM-based Multi-Agent Systems"
+    },
+    "a6a24f4373be6ba1b92290cf51ce170fbc022ac7992d5aebe17ead4abe8317ed": {
+      "url": "https://www.jcvi.org/research/first-minimal-synthetic-bacterial-cell",
+      "domain": "jcvi.org",
+      "date": "2026-03-19",
+      "theme": "synthetic life",
+      "title": "First Minimal Synthetic Bacterial Cell | JCVI"
+    },
+    "2af1ea0ba2ba1f37bee94ab614997db85352e010cf50f047e74d6cf8b0a69df4": {
+      "url": "https://www.edge.org/conversation/j_craig_venter-creation-of-a-bacterial-cell-controlled-by-a-chemically-synthesized",
+      "domain": "edge.org",
+      "date": "2026-03-19",
+      "theme": "synthetic life",
+      "title": "CREATION OF A BACTERIAL CELL CONTROLLED BY A CHEMICALLY SYNTHESIZED GENOME | Edge.org"
+    },
+    "ee5e2c4300117484f800062319d618ff0f4893797cdcca5257dd99d5f43feb56": {
+      "url": "https://static.igem.org/mediawiki/2010/e/ec/Ventersyntheticcell.pdf",
+      "domain": "static.igem.org",
+      "date": "2026-03-19",
+      "theme": "synthetic life",
+      "title": "Ventersyntheticcell"
+    },
+    "3395ec8d361e035d592f3cd93b7390a27fb686ac35af58c68d4c2b43febe5706": {
+      "url": "https://www.bealedeciphered.com/",
+      "domain": "bealedeciphered.com",
+      "date": "2026-03-20",
+      "theme": "cryptographic secrets",
+      "title": "Thomas Beale Cipher Decoded"
+    },
+    "d504a6c2a347a96f49e869a181552e53e0c44e7ee9345dc8fe1b7eaecb0ac44c": {
+      "url": "https://www.popularmechanics.com/adventure/a62954493/treasure-hunt-beale-ciphers/",
+      "domain": "popularmechanics.com",
+      "date": "2026-03-20",
+      "theme": "cryptographic secrets",
+      "title": "The Beale Ciphers: These Amateur Sleuths May Have Cracked the Code"
+    },
+    "0aa0207687131ca2d85bb21c8ae95f6997205e4db4372be207a9948c759aae7c": {
+      "url": "https://knowledgevoyager.com/the-beale-ciphers-treasure-map-or-elaborate-hoax/",
+      "domain": "knowledgevoyager.com",
+      "date": "2026-03-20",
+      "theme": "cryptographic secrets",
+      "title": "The Beale Ciphers: Treasure Map or Elaborate Hoax? - Knowledge Voyager"
+    },
+    "d4bfb817bdacd4d35519522773e309216f260f5991445b49599689fb8de3a91d": {
+      "url": "https://en.wikipedia.org/wiki/Lord%27s_tube_station",
+      "domain": "en.wikipedia.org",
+      "date": "2026-03-21",
+      "theme": "abandoned stations",
+      "title": "Lord's tube station - Wikipedia"
+    },
+    "2fc691580379f2151db6ac149a32b393f50aa76d8c690136a15f1ded5cb1072a": {
+      "url": "https://achatsreproduction.bnf.fr/views/vel/mon_panier.jsf",
+      "domain": "achatsreproduction.bnf.fr",
+      "date": "2026-03-21",
+      "theme": "abandoned stations",
+      "title": "BnF : Espace personnel"
+    },
+    "de100632841e5a2a38759de75635e71693818b7ca83beee0a13a7c77eb0000a1": {
+      "url": "https://fascinatingandunbelievablefacts.blogspot.com/2025/04/time-slips.html",
+      "domain": "fascinatingandunbelievablefacts.blogspot.com",
+      "date": "2026-03-22",
+      "theme": "reality glitches",
+      "title": "Time Slips: Glitches in the Matrix or Misfires of the Mind? - Fascinating Facts"
+    },
+    "66be8f6824dda5cae81bd1ae0be2ad6e8008e86fbf9a136710795fd060b329c5": {
+      "url": "https://web.archive.org/web/*/https://en.wikipedia.org/wiki/Artificial_life",
+      "domain": "web.archive.org",
+      "date": "2026-03-23",
+      "theme": "emergent intelligence",
+      "title": "Wayback Machine"
+    },
+    "30e52ef27a110ce5852da2f503abe497cf61d2ba4349c6088820f5d03f642c1f": {
+      "url": "https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2024.1362294/full",
+      "domain": "frontiersin.org",
+      "date": "2026-03-23",
+      "theme": "emergent intelligence",
+      "title": "Frontiers | Collaborative robots (cobots) for disaster risk resilience: a framework for swarm of snake robots in deli..."
+    },
+    "3f0df2e5c6cdd9c96c96325a09e244020f929171d41515fdd8f85a6394f9fb81": {
+      "url": "https://psyforu.com/revisiting-the-past-the-implications-of-false-memory-syndrome-in-therapy/",
+      "domain": "psyforu.com",
+      "date": "2026-03-24",
+      "theme": "memory manipulation",
+      "title": "Revisiting the Past: The Implications of False Memory Syndrome in Therapy - PSYFORU"
+    },
+    "a7430bbdfbcd5cceb1d9f258cd99b3e9d85a83de636ad7908c257aa9c1c544ff": {
+      "url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2024.1366137/full",
+      "domain": "frontiersin.org",
+      "date": "2026-03-24",
+      "theme": "memory manipulation",
+      "title": "Frontiers | EMDR: dispelling the false memory creation myth in response to Otgaar et al. (2022a)"
+    },
+    "3f0d66d66807f8fb1b2173c7fc1c79046337b8dd7be49aa46d0dca926da6b50f": {
+      "url": "https://www.scientificamerican.com/article/these-living-computers-are-made-from-human-neurons/",
+      "domain": "scientificamerican.com",
+      "date": "2026-03-27",
+      "theme": "biological computing",
+      "title": "These Living Computers Are Made from Human Neurons | Scientific American"
+    },
+    "c5fb436b697dad4ab795054d4134a9e0634332e39e587928ec859b30fa378594": {
+      "url": "https://www.forgottenchernobyl.net/duga-radar-electrical-substation",
+      "domain": "forgottenchernobyl.net",
+      "date": "2026-03-28",
+      "theme": "signal from nowhere",
+      "title": "Duga Radar Electrical Substation \u2013 Forgotten Chernobyl"
+    },
+    "69bb4a7e92415963005edd8d157d69321a5ab861344ad48fe6717b1da1c6dc6a": {
+      "url": "https://99percentinvisible.org/about/the-staff/",
+      "domain": "99percentinvisible.org",
+      "date": "2026-03-28",
+      "theme": "signal from nowhere",
+      "title": "The Staff - 99% Invisible"
+    },
+    "c9b02d6806613599cdf84c0fd113fcd63af9f0d4c99603d9c0988c40076f75e0": {
+      "url": "https://www.qsl.net/n1irz/woodpeck.html",
+      "domain": "qsl.net",
+      "date": "2026-03-28",
+      "theme": "signal from nowhere",
+      "title": "The Russian Woodpecker"
+    },
+    "726df85a970b0a459a8dd320c3ab196d0721a67770d14b7c570e9d87e94c67e0": {
+      "url": "https://continuingcreation.org/patterns-in-nature/",
+      "domain": "continuingcreation.org",
+      "date": "2026-03-29",
+      "theme": "recursive realities",
+      "title": "Patterns in Nature - Continuing Creation"
+    },
+    "1cfc858b252514045f4bf5c44a5351155791699672aa5e408fc57c6427dc08ca": {
+      "url": "https://religious-naturalist-association.org/patterns-that-repeat-in-nature-and-science/",
+      "domain": "religious-naturalist-association.org",
+      "date": "2026-03-29",
+      "theme": "recursive realities",
+      "title": "Patterns that Repeat in Nature and Science | Religious Naturalist Association"
+    },
+    "6c4840314804f6db8ac695d48f6b9aff8c860ab17bd49e5315299587874ed717": {
+      "url": "https://fractalfoundation.org/OFC/OFC-1-4.html",
+      "domain": "fractalfoundation.org",
+      "date": "2026-03-29",
+      "theme": "recursive realities",
+      "title": "Fractal Foundation Online Course - Chapter 1 - FRACTALS IN NATURE"
+    },
+    "8d70037ffca3b8d4eb7a9cb3745272bb5b7ac631e73d4252ffd72da70a2d307c": {
+      "url": "https://historytrek.com/when-maps-lied-cartographic-propaganda-across-history/",
+      "domain": "historytrek.com",
+      "date": "2026-03-30",
+      "theme": "edge of maps",
+      "title": "When Maps Lied: Cartographic Propaganda Across History \u2013 historytrek.com"
+    },
+    "ed317a8729014d724b85639e29970d42b6e77cd1549c73c5048900b7d1c522b7": {
+      "url": "https://www.sturmfreii.com/post/when-maps-lie-cartographic-mistakes-that-changed-the-world",
+      "domain": "sturmfreii.com",
+      "date": "2026-03-30",
+      "theme": "edge of maps",
+      "title": "When Maps Lie: Cartographic Mistakes That Changed the World"
+    },
+    "12abd91c427101e1a9e8d920d1ece0e0ba51da4ad6417214522290f20bdc6ec2": {
+      "url": "https://www.frontiersin.org/journals/quantum-science-and-technology/articles/10.3389/frqst.2024.1466906/full",
+      "domain": "frontiersin.org",
+      "date": "2026-03-31",
+      "theme": "quantum mysteries",
+      "title": "Frontiers | Quantum phenomena in biological systems"
+    },
+    "d3ec933712eb4b6ae53409fbbef4eff250817050503cde2da95265d643b25a2e": {
+      "url": "https://99percentinvisible.org/book-club/",
+      "domain": "99percentinvisible.org",
+      "date": "2026-04-01",
+      "theme": "forgotten technology",
+      "title": "The 99% Invisible Breakdown - 99% Invisible"
+    },
+    "1dc3fd45eba601fa7334ca717dec3c5897ef889ca1711d0dcb8b37f3a35b32ca": {
+      "url": "https://99percentinvisible.org/sr/",
+      "domain": "99percentinvisible.org",
+      "date": "2026-04-01",
+      "theme": "forgotten technology",
+      "title": "Service Request - 99% Invisible"
+    },
+    "9b33017f8058caa6fccb2a3ee4f771b98976e0ac934d526423073a5b26ef5cb1": {
+      "url": "https://bgr.com/2005249/1990s-websites-you-can-still-visit/",
+      "domain": "bgr.com",
+      "date": "2026-04-02",
+      "theme": "digital archaeology",
+      "title": "These 1990s Websites Are Still Alive And Waiting For You To Explore"
+    },
+    "ef2e8f780887b751f73a7b67b1df8511ca8f0dc6feafaf2a0c73818045d417b3": {
+      "url": "https://link.springer.com/article/10.1007/s10329-025-01209-0",
+      "domain": "link.springer.com",
+      "date": "2026-04-03",
+      "theme": "consciousness frontiers",
+      "title": "Advancements in comparative omics analysis of human and non-human primate brains and their implications for the evolu..."
+    },
+    "712c21d10401d1de2806c659be1aaa3d467cc21525582b70f4a01ad3badb6739": {
+      "url": "https://books.google.nl/books?id=XrBKEAAAQBAJ",
+      "domain": "books.google.nl",
+      "date": "2026-04-03",
+      "theme": "consciousness frontiers",
+      "title": "Proud Boys and the White Ethnostate: How the Alt-Right Is Warping the ... - Alexandra Minna Stern - Google Boeken"
+    },
+    "03372d050999fcc4dad820a158ba79ed6723695aef5e74a2333367e170ad62ea": {
+      "url": "https://link.springer.com/article/10.1007/s12144-021-02439-3",
+      "domain": "link.springer.com",
+      "date": "2026-04-05",
+      "theme": "parallel dimensions",
+      "title": "Reality shifting: psychological features of an emergent online daydreaming culture | Current Psychology | Springer Na..."
+    },
+    "c1710cd4cbc5c3ff7bf9ed1b2852822029e1615867bbdc8634f3a49a847686d3": {
+      "url": "https://bio.libretexts.org/Bookshelves/Microbiology/Microbiology_(OpenStax)/10%3A_Biochemistry_of_the_Genome/10.01%3A_Using_Microbiology_to_Discover_the_Secrets_of_Life",
+      "domain": "bio.libretexts.org",
+      "date": "2026-04-06",
+      "theme": "synthetic life",
+      "title": "10.1: Using Microbiology to Discover the Secrets of Life - Biology LibreTexts"
+    },
+    "d55b653d3444bb8805edc8f090500709d9f4c32c55305adc82732c0a5c29129a": {
+      "url": "http://thales.doa.fmph.uniba.sk/macaj/skola/krypto2025/crypto/Kahn%20The%20Codebreakers-%20The%20Comprehensive%20History%20of%20Secret%20Communication%20from%20Ancient%20Times%20to%20the%20Internet(2).pdf",
+      "domain": "thales.doa.fmph.uniba.sk",
+      "date": "2026-04-07",
+      "theme": "cryptographic secrets",
+      "title": "Kahn The Codebreakers  The Comprehensive History Of Secret Communication From Ancient Times To The Internet(2)"
+    },
+    "ea3aeb619ff8a1ef329ec2cb6e82002a2001fa03143624d25b8aaaf2a2dba862": {
+      "url": "https://www.mentalfloss.com/history/mystery/beale-ciphers-buried-treasure",
+      "domain": "mentalfloss.com",
+      "date": "2026-04-07",
+      "theme": "cryptographic secrets",
+      "title": "The Quest to Break America\u00e2\u0080\u0099s Most Mysterious Code\u00e2\u0080\u0094And Find $60 Million in Buried Treasure"
+    },
+    "afb48b63e11ff1de8d312ec56cd865a99a67491d041aa31c57f24112d97ef975": {
+      "url": "https://freeaitoolsonline.com/tool/beale-treasure-key",
+      "domain": "freeaitoolsonline.com",
+      "date": "2026-04-07",
+      "theme": "cryptographic secrets",
+      "title": "Beale Treasure Key | FreeAIToolsOnline.com"
+    },
+    "884000f8881347b0a36bc42a0ede7d231426eff5e1bfd510b0a674ca7cdad9b4": {
+      "url": "https://www.nycsubway.org/wiki/Abandoned_and_Disused_Stations",
+      "domain": "nycsubway.org",
+      "date": "2026-04-08",
+      "theme": "abandoned stations",
+      "title": "Abandoned and Disused Stations - nycsubway.org"
+    },
+    "97715b0d0d5fd9a164a9bb5ec0ac056f0e104b2189e63c35ffbcb988aeea8a45": {
+      "url": "https://spacejournal.org/salyut6",
+      "domain": "spacejournal.org",
+      "date": "2026-04-08",
+      "theme": "abandoned stations",
+      "title": "https://spacejournal.org/salyut6"
+    },
+    "bf52ecd779b1be93b4dfe8cc7670d14e4c02c79559ee8d775dde1c02128d749e": {
+      "url": "https://www.frontiersin.org/journals/virtual-reality/articles/10.3389/frvir.2022.880634/full",
+      "domain": "frontiersin.org",
+      "date": "2026-04-09",
+      "theme": "reality glitches",
+      "title": "Frontiers | Lingering effects associated with the consumer use of virtual reality"
+    },
+    "10b88bb8d7b5ba2afcfc7fd7ee45594f8d4f6d6effaf34b882fe8be678c99e83": {
+      "url": "https://globalresearchandinnovationpublications.com/HCI/article/view/115",
+      "domain": "globalresearchandinnovationpublications.com",
+      "date": "2026-04-10",
+      "theme": "emergent intelligence",
+      "title": "Swarm Intelligence and Decentralized AI"
+    },
+    "d407ae024587f680ee5e8a17166342e0ce389e18393d142cfe6cd99ef735ea78": {
+      "url": "https://web.archive.org/web/*/https://ai.stackexchange.com/questions/7129",
+      "domain": "web.archive.org",
+      "date": "2026-04-10",
+      "theme": "emergent intelligence",
+      "title": "Wayback Machine"
+    },
+    "ab96c046b6b9976362175e25ad47cb77ee739158a8fb6294bf2885e6762c8fff": {
+      "url": "https://www.semanticscholar.org/paper/Swarm-Intelligence-and-Decentralized-AI-Pak%C3%B6z/e8a9ec1500a724e22f3942bceddf0c9e325bcd8c",
+      "domain": "semanticscholar.org",
+      "date": "2026-04-10",
+      "theme": "emergent intelligence",
+      "title": "https://www.semanticscholar.org/paper/Swarm-Intelligence-and-Decentralized-AI-Pak%C3%B6z/e8a9ec1500a724e22f3942bceddf..."
+    },
+    "4426b851a3d10f06093f85618da44922e5b4a253f3f899e53b4aad7147fdd52d": {
+      "url": "http://www.fmsfonline.org/?ginterest=Hypnosis",
+      "domain": "fmsfonline.org",
+      "date": "2026-04-11",
+      "theme": "memory manipulation",
+      "title": "False Memory Syndrome Foundation"
+    },
+    "28539f8fddecd810af40a808bffd15ca051b0fd25f54299fe3f628510a249a0f": {
+      "url": "https://worldbuilding.stackexchange.com/questions/96428",
+      "domain": "worldbuilding.stackexchange.com",
+      "date": "2026-04-11",
+      "theme": "memory manipulation",
+      "title": "science based - Chemical weapon to kill a werewolf - Worldbuilding Stack Exchange"
+    },
+    "d7844303ca8fc61cb36de947332611a889a81ecf7c3c73b70090dcdf22026430": {
+      "url": "https://news.artnet.com/art-world/nazca-geoglyphs-peru-ai-2316856",
+      "domain": "news.artnet.com",
+      "date": "2026-04-12",
+      "theme": "lost civilizations",
+      "title": "Archaeologists in Peru Used A.I. to Discover Ancient Geoglyphs of Killer Whales, Two-Headed Snakes, and Other Creatur..."
+    },
+    "c478ac15a56f56ff475eee5ed15761115f7b6c3124a14368adc49935f237a912": {
+      "url": "https://worldbuilding.stackexchange.com/questions/122272",
+      "domain": "worldbuilding.stackexchange.com",
+      "date": "2026-04-12",
+      "theme": "lost civilizations",
+      "title": "post apocalypse - A catastrophe that wipes out the current civilization but does not make humanity go extinct - World..."
+    },
+    "e105a917f02ca95b34f1f0abf1ee79bbc0b402fb51774d1044cd3b150fb69187": {
+      "url": "https://computerhistory.org/explore/",
+      "domain": "computerhistory.org",
+      "date": "2026-04-12",
+      "theme": "lost civilizations",
+      "title": "Explore - CHM"
+    },
+    "7ee6eeaf1501924b5a2aa697b9b5adb55b326dd2ad6b99ca3d3d270bb1d57050": {
+      "url": "https://docslib.org/doc/4749883/the-culture-of-samizdat-literature-and-underground-networks-in-the-late-soviet-union",
+      "domain": "docslib.org",
+      "date": "2026-04-13",
+      "theme": "underground networks",
+      "title": "The Culture of Samizdat: Literature and Underground Networks in the Late Soviet Union - DocsLib"
+    },
+    "055205b9c028699aadf35d71d84c1a60df6582af8aac8e36d44ebdb4a6b284c7": {
+      "url": "https://worldbuilding.stackexchange.com/questions/229967",
+      "domain": "worldbuilding.stackexchange.com",
+      "date": "2026-04-13",
+      "theme": "underground networks",
+      "title": "science based - What location options are available for a large-scale underground mining city - Worldbuilding Stack E..."
+    },
+    "913e5d0b91cd632d74ae2c9b89bfad0693b12e56cbca209bf073f9b76bac12fe": {
+      "url": "https://protocol.ecologies.info/interviews/prodromou-distributed_social_networks/",
+      "domain": "protocol.ecologies.info",
+      "date": "2026-04-13",
+      "theme": "underground networks",
+      "title": "Evan Prodromou: Distributed social networks - Protocol Oral History Project"
+    },
+    "2baad0ce8b971832d7ab3415ac5488b4165bc8644f5412054985965f0e0aeae5": {
+      "url": "https://computerhistory.org/volunteers/",
+      "domain": "computerhistory.org",
+      "date": "2026-04-14",
+      "theme": "biological computing",
+      "title": "Volunteers - CHM"
+    },
+    "7d4d265d1eaa69838d72d1b95cfaaa9102494f92c2deaeb2251cb82f5e5bda68": {
+      "url": "https://www.numbersoddities.nl/recordings.html",
+      "domain": "numbersoddities.nl",
+      "date": "2026-04-15",
+      "theme": "signal from nowhere",
+      "title": "Recordings of numbers stations"
+    },
+    "2689928ffe2be01c872e0e1e3dfd9d579cb07b921e0073248b00cb649e23e227": {
+      "url": "https://www.ncei.noaa.gov/cdo-web/",
+      "domain": "ncei.noaa.gov",
+      "date": "2026-04-15",
+      "theme": "signal from nowhere",
+      "title": "Climate Data Online (CDO) - The National Climatic Data"
+    },
+    "d1d1d7782ce63351b6a660c817e14b6b3586469231d74e0aeb7b45cfbeb6fbdd": {
+      "url": "https://www.torrossa.com/it/resources/an/5817987",
+      "domain": "torrossa.com",
+      "date": "2026-04-15",
+      "theme": "signal from nowhere",
+      "title": "Science, Seti, and Mathematics - Berghahn Books - Torrossa"
+    },
+    "6482141b6ef1626c5c271f05f1168374c370d49a0eb9b1e9d5f50620a543545e": {
+      "url": "https://www.bibliotecapleyades.net/ciencia/ciencia_artificialhumans.htm#menu",
+      "domain": "bibliotecapleyades.net",
+      "date": "2026-04-19",
+      "theme": "synthetic life",
+      "title": "Synthetic Life - Robotoids, Parasites and Artificial Humans / Vida \r\nSint\u00e9tica - Robots, Par\u00e1sitos y Seres Humanos Artif"
+    },
+    "aa897f1d29856b4bd3ba5dc8023d7c59a8be7d221f33cd5d74fd9e858b604507": {
+      "url": "https://www.bibliotecapleyades.net/ciencia/ciencia_genoma61.htm",
+      "domain": "bibliotecapleyades.net",
+      "date": "2026-04-19",
+      "theme": "synthetic life",
+      "title": "Synthetic Life - Biologists Are Crafting Libraries"
+    },
+    "4604f7de98c4bad1ff6d10e6f782740c00adba1ec0812796986c1ccf8639db7c": {
+      "url": "https://www.jcvi.org/media-center/ibea-receives-3-million-dept-energy-grant-synthetic-genome-development",
+      "domain": "jcvi.org",
+      "date": "2026-04-19",
+      "theme": "synthetic life",
+      "title": "IBEA Receives $3 Million Dept. of Energy Grant for Synthetic Genome Development | JCVI"
+    },
+    "4cb1f17d1f278c684fa89c695cca9b60624bdaceedeab7e421c852a7367bcb80": {
+      "url": "https://www.jcvi.org/system/files/assets/projects/first-minimal-synthetic-bacterial-cell/minimal-cell-release.pdf",
+      "domain": "jcvi.org",
+      "date": "2026-04-19",
+      "theme": "synthetic life",
+      "title": "Minimal Cell Release"
+    },
+    "7360e3042b6d9b4c2024c79ccd60d622c55dcabe35664f0c17b3a6d23a038f76": {
+      "url": "https://nicole.express/2024/super-duper-rainbow-pong.html",
+      "domain": "nicole.express",
+      "date": "2026-04-20",
+      "theme": "forgotten technology",
+      "title": "Composite Mod from Scratch: Atari's Pong Sports IV"
+    },
+    "138064f4a3c8a049c11f0f2acabe80d3bed8ff679d44f0b05b2c0856bd8259eb": {
+      "url": "https://www.oldcomputers.net/kaypro2000.html",
+      "domain": "oldcomputers.net",
+      "date": "2026-04-20",
+      "theme": "forgotten technology",
+      "title": "Kaypro 2000 computer"
+    },
+    "ea0cd991f26946f21e3619c43649d33248ea048fb721c951b4bf017c509b635a": {
+      "url": "https://nicole.express/2023/special-thanks-to-homer.html",
+      "domain": "nicole.express",
+      "date": "2026-04-20",
+      "theme": "forgotten technology",
+      "title": "The Bare Minimum Video Game: The Odyssey 100"
+    },
+    "36287ae23ccb0f1a50227beffcfe05c8449a62c875db0007a54ca987667bcbea": {
+      "url": "https://thedigitalpress.org/archaeology-at-the-digital-press/",
+      "domain": "thedigitalpress.org",
+      "date": "2026-04-21",
+      "theme": "digital archaeology",
+      "title": "Archaeology at The Digital Press \u2013 The Digital Press at the University of North Dakota"
+    },
+    "7b982c71b536450cf4ddf3ad6e8e6e0e2f344789dcf932474e0d72c3f978c0b1": {
+      "url": "https://thedigitalpress.org/2025/09/23/new-book-day-practical-necromancy-for-beginners/comment-page-1/#comment-4253",
+      "domain": "thedigitalpress.org",
+      "date": "2026-04-21",
+      "theme": "digital archaeology",
+      "title": "NEW BOOK DAY: Practical Necromancy for Beginners \u2013 The Digital Press at the University of North Dakota"
+    },
+    "f146840fd425a7c13adbcc85b8069742a80bf5da3d0a377860860b7a77e51c7d": {
+      "url": "https://thedigitalpress.org/wp-content/uploads/2015/08/punk_archaeology_2014.pdf",
+      "domain": "thedigitalpress.org",
+      "date": "2026-04-21",
+      "theme": "digital archaeology",
+      "title": "Punk Archaeology 2014"
+    },
+    "6aed231b106e9c1efeb9c3a3e01acd5b03d79636b34fffa51f3ebac3d56a8a81": {
+      "url": "https://koshka.love/links.html",
+      "domain": "koshka.love",
+      "date": "2026-04-22",
+      "theme": "digital archaeology",
+      "title": "The Dock"
+    },
+    "5ee2c813d94f7c218e05176ac379f36c8cc98ee6a76a2ccdd67f3608179fc66c": {
+      "url": "https://thedigitalpress.org/wp-content/uploads/2015/08/vision_of_substance_digitalbook_pub.pdf",
+      "domain": "thedigitalpress.org",
+      "date": "2026-04-22",
+      "theme": "digital archaeology",
+      "title": "Vision Of Substance Digitalbook Pub"
+    },
+    "0548abc4bb114579b3128ca6db9a13111000ede33450d5f5217cb71d654d390c": {
+      "url": "https://thedigitalpress.org/2022/02/03/new-book-day-the-archaeological-cultures-of-the-sheyenne-bend/comment-page-1/#comment-4241",
+      "domain": "thedigitalpress.org",
+      "date": "2026-04-22",
+      "theme": "digital archaeology",
+      "title": "New Book Day: The Archaeological Cultures of the Sheyenne Bend \u2013 The Digital Press at the University of North Dakota"
     }
   }
 }

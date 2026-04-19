@@ -1,6 +1,6 @@
 {
   "120years.net": {
-    "last_seen": "2026-04-17",
+    "last_seen": "2026-04-21",
     "last_selected": "2026-04-17",
     "selected_count": 1
   },
@@ -78,6 +78,11 @@
     "last_seen": "",
     "last_selected": "2026-04-02",
     "selected_count": 1
+  },
+  "bibliotecapleyades.net": {
+    "last_seen": "2026-04-19",
+    "last_selected": "2026-04-19",
+    "selected_count": 2
   },
   "bigear.org": {
     "last_seen": "",
@@ -289,10 +294,15 @@
     "last_selected": "2026-02-23",
     "selected_count": 1
   },
+  "intropy.co.uk": {
+    "last_seen": "2026-04-19",
+    "last_selected": "",
+    "selected_count": 0
+  },
   "jcvi.org": {
-    "last_seen": "",
-    "last_selected": "2026-03-19",
-    "selected_count": 1
+    "last_seen": "2026-04-19",
+    "last_selected": "2026-04-19",
+    "selected_count": 3
   },
   "johnkreiter.com": {
     "last_seen": "",
@@ -322,6 +332,11 @@
   "knowledgevoyager.com": {
     "last_seen": "",
     "last_selected": "2026-03-20",
+    "selected_count": 1
+  },
+  "koshka.love": {
+    "last_seen": "2026-04-21",
+    "last_selected": "2026-04-22",
     "selected_count": 1
   },
   "link.springer.com": {
@@ -359,6 +374,11 @@
     "last_selected": "2026-04-07",
     "selected_count": 1
   },
+  "middlesavagery.wordpress.com": {
+    "last_seen": "2026-04-19",
+    "last_selected": "",
+    "selected_count": 0
+  },
   "militaryhistorynow.com": {
     "last_seen": "",
     "last_selected": "2026-02-07",
@@ -370,7 +390,7 @@
     "selected_count": 1
   },
   "misterdizzy.neocities.org": {
-    "last_seen": "2026-04-17",
+    "last_seen": "2026-04-21",
     "last_selected": "",
     "selected_count": 0
   },
@@ -424,6 +444,11 @@
     "last_selected": "2026-03-10",
     "selected_count": 1
   },
+  "nicole.express": {
+    "last_seen": "2026-04-20",
+    "last_selected": "2026-04-20",
+    "selected_count": 2
+  },
   "nih.gov": {
     "last_seen": "",
     "last_selected": "2026-01-30",
@@ -450,9 +475,9 @@
     "selected_count": 1
   },
   "oldcomputers.net": {
-    "last_seen": "2026-04-17",
-    "last_selected": "2026-04-17",
-    "selected_count": 2
+    "last_seen": "2026-04-20",
+    "last_selected": "2026-04-20",
+    "selected_count": 3
   },
   "openreview.net": {
     "last_seen": "",
@@ -525,7 +550,7 @@
     "selected_count": 1
   },
   "quantum-journal.org": {
-    "last_seen": "2026-04-17",
+    "last_seen": "2026-04-20",
     "last_selected": "",
     "selected_count": 0
   },
@@ -573,6 +598,11 @@
     "last_seen": "",
     "last_selected": "2026-04-10",
     "selected_count": 1
+  },
+  "seop.illc.uva.nl": {
+    "last_seen": "2026-04-19",
+    "last_selected": "",
+    "selected_count": 0
   },
   "seti.org": {
     "last_seen": "",
@@ -653,6 +683,11 @@
     "last_seen": "",
     "last_selected": "2026-02-23",
     "selected_count": 2
+  },
+  "thedigitalpress.org": {
+    "last_seen": "2026-04-22",
+    "last_selected": "2026-04-22",
+    "selected_count": 5
   },
   "thehastingscenter.org": {
     "last_seen": "",

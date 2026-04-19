@@ -10,6 +10,15 @@ description: Daily curated discoveries from the hidden corners of the web
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-04-19-daily-links/" class="archive-item archive-item--links">
+    <div class="archive-item__number">080</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">April 19, 2026</span>
+      <div class="archive-item__tags"><span class="archive-item__theme">Synthetic Life</span></div>
+    </div>
+    <span class="archive-item__category">4 Links</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-04-18-daily-links/" class="archive-item archive-item--links">
     <div class="archive-item__number">079</div>
     <div class="archive-item__content">

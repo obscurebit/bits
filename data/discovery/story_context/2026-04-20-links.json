@@ -1,0 +1,62 @@
+{
+  "date": "2026-04-20",
+  "theme": "forgotten technology",
+  "links_direction": "specific individual forgotten inventions, historical patents with stories, detailed case studies of obsolete technology",
+  "motifs": [
+    "Atari",
+    "Pong",
+    "Video",
+    "Signal",
+    "2.5mm",
+    "Kaypro",
+    "Computer",
+    "The Kaypro",
+    "Price",
+    "\"Volkswagen of computer manufacturers\"",
+    "\" . The Chicago Tribune called it the \"",
+    "120 million"
+  ],
+  "interesting_bits": [
+    "2.5mm",
+    "\"Volkswagen of computer manufacturers\"",
+    "\" . The Chicago Tribune called it the \"",
+    "120 million",
+    "3.5mm",
+    "in 1972"
+  ],
+  "links": [
+    {
+      "title": "Composite Mod from Scratch: Atari's Pong Sports IV",
+      "url": "https://nicole.express/2024/super-duper-rainbow-pong.html",
+      "concepts": [
+        "Atari",
+        "Pong",
+        "Video",
+        "Signal"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Kaypro 2000 computer",
+      "url": "https://www.oldcomputers.net/kaypro2000.html",
+      "concepts": [
+        "Kaypro",
+        "Computer",
+        "The Kaypro",
+        "Price"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "The Bare Minimum Video Game: The Odyssey 100",
+      "url": "https://nicole.express/2023/special-thanks-to-homer.html",
+      "concepts": [
+        "Odyssey",
+        "Game",
+        "Magnavox",
+        "The Odyssey"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}

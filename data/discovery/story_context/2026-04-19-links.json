@@ -1,0 +1,72 @@
+{
+  "date": "2026-04-19",
+  "theme": "synthetic life",
+  "links_direction": "biotech breakthroughs, artificial life projects, synthetic organism research",
+  "motifs": [
+    "Espa",
+    "Espa Ol",
+    "Robots",
+    "Synthetic",
+    "20 Years",
+    "Genetic",
+    "Endy",
+    "Parts",
+    "Cells",
+    "Ibea",
+    "Smith",
+    "Energy"
+  ],
+  "interesting_bits": [
+    "\" Dentro de 50 A\u00f1os va a ser casi Imposible distinguir un Robot Humanoide de una Persona\"",
+    "20 Years",
+    "\"Say I want to modify a plant so that it changes color in the presence of TNT,\"",
+    "\" Endy says as he holds out a container filled with more than 50 vials of clear, syrupy fluid. \"",
+    "\"Interchangeable components are something we take for granted in other kinds of engineering,\"",
+    "\" said J. Craig Venter, Ph.D., president of IBEA. \"",
+    "\" According to Dr. Smith the work is in its earliest phases but has exciting possibilities, \"",
+    "3 Million"
+  ],
+  "links": [
+    {
+      "title": "Synthetic Life - Robotoids, Parasites and Artificial Humans / Vida \r\nSint\u00e9tica - Robots, Par\u00e1sitos y Seres Humanos Artificiales",
+      "url": "https://www.bibliotecapleyades.net/ciencia/ciencia_artificialhumans.htm#menu",
+      "concepts": [
+        "Espa",
+        "Espa Ol",
+        "Robots",
+        "Synthetic"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Synthetic Life - Biologists Are Crafting Libraries",
+      "url": "https://www.bibliotecapleyades.net/ciencia/ciencia_genoma61.htm",
+      "concepts": [
+        "Genetic",
+        "Endy",
+        "Parts",
+        "Cells"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "IBEA Receives $3 Million Dept. of Energy Grant for Synthetic Genome Development | JCVI",
+      "url": "https://www.jcvi.org/media-center/ibea-receives-3-million-dept-energy-grant-synthetic-genome-development",
+      "concepts": [
+        "Ibea",
+        "Smith",
+        "Energy",
+        "Science"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Minimal Cell Release",
+      "url": "https://www.jcvi.org/system/files/assets/projects/first-minimal-synthetic-bacterial-cell/minimal-cell-release.pdf",
+      "concepts": [
+        "Minimal Cell Release"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}

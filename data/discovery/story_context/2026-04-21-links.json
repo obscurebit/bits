@@ -1,0 +1,53 @@
+{
+  "date": "2026-04-21",
+  "theme": "digital archaeology",
+  "links_direction": "internet history, lost media, abandoned websites, web archaeology",
+  "motifs": [
+    "Digital",
+    "Archaeology",
+    "Book",
+    "The Digital Press",
+    "Graham",
+    "Practical Necromancy",
+    "Failing Gloriously",
+    "in 2019",
+    "Punk Archaeology 2014",
+    "PDF download"
+  ],
+  "interesting_bits": [
+    "in 2019",
+    "PDF download"
+  ],
+  "links": [
+    {
+      "title": "Archaeology at The Digital Press \u2013 The Digital Press at the University of North Dakota",
+      "url": "https://thedigitalpress.org/archaeology-at-the-digital-press/",
+      "concepts": [
+        "Digital",
+        "Archaeology",
+        "Book",
+        "The Digital Press"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "NEW BOOK DAY: Practical Necromancy for Beginners \u2013 The Digital Press at the University of North Dakota",
+      "url": "https://thedigitalpress.org/2025/09/23/new-book-day-practical-necromancy-for-beginners/comment-page-1/#comment-4253",
+      "concepts": [
+        "Graham",
+        "Book",
+        "Practical Necromancy",
+        "Failing Gloriously"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Punk Archaeology 2014",
+      "url": "https://thedigitalpress.org/wp-content/uploads/2015/08/punk_archaeology_2014.pdf",
+      "concepts": [
+        "Punk Archaeology 2014"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}
