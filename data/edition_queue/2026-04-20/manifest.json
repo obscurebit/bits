@@ -1,9 +1,11 @@
 {
   "date": "2026-04-20",
-  "exit_code": 0,
   "links_file": "docs/links/posts/2026-04-20-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-04-20T08:46:11Z",
+  "published_links_file": "docs/links/posts/2026-04-20-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-04-20-the-stack-of-unsigned-forms.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-04-20-the-stack-of-unsigned-forms.md",
   "theme": "forgotten technology",
-  "updated_at": "2026-04-19T08:05:43Z"
+  "updated_at": "2026-04-20T08:19:35Z"
 }

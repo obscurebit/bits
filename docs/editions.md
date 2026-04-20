@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-04-20-edition-081/" class="archive-item">
+    <div class="archive-item__number">081</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">April 20, 2026</span>
+      <h3 class="archive-item__title">Edition #081</h3>
+      <p class="archive-item__excerpt">Forgotten Technology · Rule 12: *All maintenance requests must be submitted via Form 22-B, available in the staff room cabinet. Do not use the old pink slips.*</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Forgotten Technology</span><span class="archive-item__genre" title="Domestic drama bent by one technological or metaphysical fact">Domestic drama bent by one technological or metaphysical fact</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-04-19-edition-080/" class="archive-item">
     <div class="archive-item__number">080</div>
     <div class="archive-item__content">
