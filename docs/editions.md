@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-04-21-edition-082/" class="archive-item">
+    <div class="archive-item__number">082</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">April 21, 2026</span>
+      <h3 class="archive-item__title">Edition #082</h3>
+      <p class="archive-item__excerpt">Digital Archaeology · You adjust the tool belt digging into your ribs as the third person today eyes the slip of paper in your hand. The notice above the backstage corridor’s bulleti...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Digital Archaeology</span><span class="archive-item__genre" title="Moral fable disguised as a very specific modern problem">Moral fable disguised as a very specific modern problem</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-04-20-edition-081/" class="archive-item">
     <div class="archive-item__number">081</div>
     <div class="archive-item__content">
