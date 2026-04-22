@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-04-22-edition-083/" class="archive-item">
+    <div class="archive-item__number">083</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">April 22, 2026</span>
+      <h3 class="archive-item__title">Edition #083</h3>
+      <p class="archive-item__excerpt">Digital Archaeology · The counterfeit card trembles in my palm, its edges fraying like old bandage gauze. I swipe it anyway, the bus’s reader coughing a strangled *beep*. The driver...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Digital Archaeology</span><span class="archive-item__genre" title="Character study where the strange thing stays partly offstage">Character study where the strange thing stays partly offstage</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-04-21-edition-082/" class="archive-item">
     <div class="archive-item__number">082</div>
     <div class="archive-item__content">
