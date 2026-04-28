@@ -85,7 +85,7 @@
     "selected_count": 2
   },
   "bigear.org": {
-    "last_seen": "",
+    "last_seen": "2026-05-01",
     "last_selected": "2026-03-10",
     "selected_count": 1
   },
@@ -169,10 +169,20 @@
     "last_selected": "2026-02-05",
     "selected_count": 1
   },
+  "culture-crop.com": {
+    "last_seen": "2026-05-01",
+    "last_selected": "",
+    "selected_count": 0
+  },
   "darkipedia.net": {
     "last_seen": "",
     "last_selected": "2026-03-08",
     "selected_count": 1
+  },
+  "davidpratt.info": {
+    "last_seen": "2026-04-30",
+    "last_selected": "",
+    "selected_count": 0
   },
   "digitalarchaeology.org.uk": {
     "last_seen": "",
@@ -190,7 +200,7 @@
     "selected_count": 1
   },
   "dondammassa.com": {
-    "last_seen": "2026-04-25",
+    "last_seen": "2026-05-01",
     "last_selected": "",
     "selected_count": 0
   },
@@ -275,9 +285,9 @@
     "selected_count": 1
   },
   "gwern.net": {
-    "last_seen": "",
-    "last_selected": "2026-03-08",
-    "selected_count": 1
+    "last_seen": "2026-04-28",
+    "last_selected": "2026-04-28",
+    "selected_count": 2
   },
   "hieroart.com": {
     "last_seen": "",
@@ -292,6 +302,11 @@
   "historytrek.com": {
     "last_seen": "",
     "last_selected": "2026-03-30",
+    "selected_count": 1
+  },
+  "idtechex.com": {
+    "last_seen": "2026-04-29",
+    "last_selected": "2026-04-30",
     "selected_count": 1
   },
   "in2worlds.net": {
@@ -424,6 +439,11 @@
     "last_selected": "",
     "selected_count": 0
   },
+  "monitor-post.blogspot.com": {
+    "last_seen": "2026-04-29",
+    "last_selected": "",
+    "selected_count": 0
+  },
   "mysteriousuniverse.org": {
     "last_seen": "",
     "last_selected": "2026-02-27",
@@ -465,7 +485,7 @@
     "selected_count": 1
   },
   "newtownpentacle.com": {
-    "last_seen": "2026-04-25",
+    "last_seen": "2026-04-28",
     "last_selected": "",
     "selected_count": 0
   },
@@ -544,6 +564,11 @@
     "last_selected": "2026-02-23",
     "selected_count": 1
   },
+  "plasticbag.org": {
+    "last_seen": "2026-04-30",
+    "last_selected": "2026-04-30",
+    "selected_count": 2
+  },
   "plato.stanford.edu": {
     "last_seen": "",
     "last_selected": "2026-02-05",
@@ -562,6 +587,11 @@
   "pressbooks.pub": {
     "last_seen": "",
     "last_selected": "2026-03-17",
+    "selected_count": 1
+  },
+  "priyom.org": {
+    "last_seen": "2026-04-29",
+    "last_selected": "2026-05-01",
     "selected_count": 1
   },
   "projectavalon.net": {
@@ -629,6 +659,11 @@
     "last_selected": "2026-03-27",
     "selected_count": 1
   },
+  "selfawarepatterns.com": {
+    "last_seen": "2026-04-30",
+    "last_selected": "2026-04-30",
+    "selected_count": 1
+  },
   "semanticscholar.org": {
     "last_seen": "",
     "last_selected": "2026-04-10",
@@ -670,7 +705,7 @@
     "selected_count": 1
   },
   "stackoverflow.com": {
-    "last_seen": "2026-04-25",
+    "last_seen": "2026-05-01",
     "last_selected": "",
     "selected_count": 0
   },
@@ -694,6 +729,11 @@
     "last_selected": "",
     "selected_count": 0
   },
+  "swling.com": {
+    "last_seen": "2026-05-01",
+    "last_selected": "2026-05-01",
+    "selected_count": 2
+  },
   "techaro.lol": {
     "last_seen": "",
     "last_selected": "2026-02-06",
@@ -705,7 +745,7 @@
     "selected_count": 1
   },
   "technosearch.seti.org": {
-    "last_seen": "",
+    "last_seen": "2026-05-01",
     "last_selected": "2026-03-10",
     "selected_count": 1
   },
@@ -744,6 +784,11 @@
     "last_selected": "2026-03-17",
     "selected_count": 1
   },
+  "third-bit.com": {
+    "last_seen": "2026-04-28",
+    "last_selected": "2026-04-28",
+    "selected_count": 1
+  },
   "torrossa.com": {
     "last_seen": "",
     "last_selected": "2026-04-15",
@@ -764,10 +809,20 @@
     "last_selected": "2026-04-16",
     "selected_count": 4
   },
+  "w4uvh.net": {
+    "last_seen": "2026-05-01",
+    "last_selected": "",
+    "selected_count": 0
+  },
   "web.archive.org": {
     "last_seen": "",
     "last_selected": "2026-04-10",
     "selected_count": 5
+  },
+  "worldatlas.com": {
+    "last_seen": "2026-04-30",
+    "last_selected": "",
+    "selected_count": 0
   },
   "worldbuilding.stackexchange.com": {
     "last_seen": "",

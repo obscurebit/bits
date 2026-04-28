@@ -1,0 +1,52 @@
+{
+  "date": "2026-04-30",
+  "theme": "biological computing",
+  "links_direction": "biocomputing research, DNA data storage, organic electronics",
+  "motifs": [
+    "Printed",
+    "Printed Electronics",
+    "November",
+    "Largest Event",
+    "Opens",
+    "Biological",
+    "Software",
+    "Think",
+    "Hydra Eric Biological",
+    "image/gif download"
+  ],
+  "interesting_bits": [
+    "image/gif download"
+  ],
+  "links": [
+    {
+      "title": "Printed Electronics USA 2020",
+      "url": "https://www.idtechex.com/printed-electronics-usa/show/en/masterclasses",
+      "concepts": [
+        "Printed",
+        "Printed Electronics",
+        "November",
+        "Largest Event"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Biological computation and the nature of software \u2013 SelfAwarePatterns",
+      "url": "https://selfawarepatterns.com/2025/12/31/biological-computation-and-the-nature-of-software/comment-page-1/",
+      "concepts": [
+        "Opens",
+        "Biological",
+        "Software",
+        "Think"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Hydra Eric Biological",
+      "url": "http://www.plasticbag.org/images/extra/hydra_eric_biological.gif",
+      "concepts": [
+        "Hydra Eric Biological"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}

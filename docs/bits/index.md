@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-04-28-plastic-bloom/" class="archive-item">
+    <div class="archive-item__number">089</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">April 28, 2026</span>
+      <h3 class="archive-item__title">Plastic Bloom</h3>
+      <p class="archive-item__excerpt">The keychain digs into my palm as I hurry past the locked gymnasium, its cracked plastic duck gleaming under the flickering hallway light. I’m twenty ...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Biological Computing</span><span class="archive-item__genre" title="Moral fable disguised as a very specific modern problem">Moral fable disguised as a very specific modern problem</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-04-22-transfer-slip/" class="archive-item">
     <div class="archive-item__number">083</div>
     <div class="archive-item__content">

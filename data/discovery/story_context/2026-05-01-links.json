@@ -1,0 +1,58 @@
+{
+  "date": "2026-05-01",
+  "theme": "signal from nowhere",
+  "links_direction": "specific number station recordings, individual unexplained signal incidents, detailed SETI discovery stories",
+  "motifs": [
+    "Numbers",
+    "Working",
+    "Inside",
+    "Other",
+    "Post",
+    "Substack",
+    "Ralph",
+    "Radio",
+    "Sometimes",
+    "Station",
+    "Schedules",
+    "Same"
+  ],
+  "interesting_bits": [
+    "In 1997",
+    "In 2006"
+  ],
+  "links": [
+    {
+      "title": "Operator shares what it\u2019s like to work for a numbers station | The SWLing Post",
+      "url": "https://swling.com/blog/2017/07/operator-shares-what-its-like-to-work-for-a-numbers-station/",
+      "concepts": [
+        "Numbers",
+        "Working",
+        "Inside",
+        "Other"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "How Shortwave Sparked Ralph\u2019s Lifetime of Adventure | The SWLing Post",
+      "url": "https://swling.com/blog/2026/04/how-shortwave-sparked-ralphs-lifetime-of-adventure/",
+      "concepts": [
+        "Post",
+        "Substack",
+        "Ralph",
+        "Radio"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "DGI \u203a  Priyom.org",
+      "url": "https://priyom.org/number-stations/operators/dgi",
+      "concepts": [
+        "Sometimes",
+        "Station",
+        "Schedules",
+        "Same"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}
