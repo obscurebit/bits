@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-04-30-edition-091/" class="archive-item">
+    <div class="archive-item__number">091</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">April 30, 2026</span>
+      <h3 class="archive-item__title">Edition #091</h3>
+      <p class="archive-item__excerpt">Biological Computing · The smell of damp paper and chalk dust clings to the backstage corridor, where the walls still bear nail holes from the last production’s set pieces. You’ve wor...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Biological Computing</span><span class="archive-item__genre" title="Caper energy at a human scale">Caper energy at a human scale</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-04-28-edition-089/" class="archive-item">
     <div class="archive-item__number">089</div>
     <div class="archive-item__content">

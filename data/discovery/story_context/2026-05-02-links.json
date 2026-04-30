@@ -1,0 +1,61 @@
+{
+  "date": "2026-05-02",
+  "theme": "lost civilizations",
+  "links_direction": "specific archaeological discoveries, individual ancient artifacts, detailed forgotten culture histories",
+  "motifs": [
+    "Norte Chico",
+    "Some",
+    "Aksum",
+    "Tartessos",
+    "5 million",
+    "in 3000",
+    "Blocks",
+    "Inca",
+    "Stones",
+    "Protzen",
+    "30 cm",
+    "5 km"
+  ],
+  "interesting_bits": [
+    "5 million",
+    "in 3000",
+    "30 cm",
+    "5 km",
+    "in 1609"
+  ],
+  "links": [
+    {
+      "title": "Lost Civilizations We Still Know Little About",
+      "url": "https://www.worldatlas.com/ancient-world/lost-civilizations-we-still-know-little-about.html",
+      "concepts": [
+        "Norte Chico",
+        "Some",
+        "Aksum",
+        "Tartessos"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Lost civilizations of the Andes (2)",
+      "url": "https://davidpratt.info/andes2.htm",
+      "concepts": [
+        "Blocks",
+        "Inca",
+        "Stones",
+        "Protzen"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Old'aVista: Directories",
+      "url": "https://www.oldavista.com/dirs/entertainment/paranormal_phenomena/ancient_civilizations",
+      "concepts": [
+        "Direct",
+        "Ia Direct",
+        "Ancient",
+        "Ancient Civilizations"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}

@@ -1,9 +1,11 @@
 {
   "date": "2026-04-30",
-  "exit_code": 0,
   "links_file": "docs/links/posts/2026-04-30-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-04-30T09:13:25Z",
+  "published_links_file": "docs/links/posts/2026-04-30-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-04-30-the-ledger-of-living-cells.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-04-30-the-ledger-of-living-cells.md",
   "theme": "biological computing",
-  "updated_at": "2026-04-28T09:52:36Z"
+  "updated_at": "2026-04-30T08:29:27Z"
 }

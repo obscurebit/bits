@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-04-30-the-ledger-of-living-cells/" class="archive-item">
+    <div class="archive-item__number">091</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">April 30, 2026</span>
+      <h3 class="archive-item__title">The Ledger of Living Cells</h3>
+      <p class="archive-item__excerpt">The smell of damp paper and chalk dust clings to the backstage corridor, where the walls still bear nail holes from the last production’s set pieces. ...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Biological Computing</span><span class="archive-item__genre" title="Caper energy at a human scale">Caper energy at a human scale</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-04-28-plastic-bloom/" class="archive-item">
     <div class="archive-item__number">089</div>
     <div class="archive-item__content">
