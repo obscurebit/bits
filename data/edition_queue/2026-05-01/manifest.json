@@ -1,9 +1,12 @@
 {
   "date": "2026-05-01",
-  "exit_code": 1,
+  "exit_code": 0,
   "links_file": "docs/links/posts/2026-05-01-daily-links.md",
-  "status": "failed",
-  "story_file": "",
-  "theme": "signal from nowhere",
-  "updated_at": "2026-04-30T08:34:01Z"
+  "published_at": "2026-05-01T22:49:50Z",
+  "published_links_file": "docs/links/posts/2026-05-01-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-05-01-the-lease-of-forgetting.md",
+  "status": "published",
+  "story_file": "docs/bits/posts/2026-05-01-the-lease-of-forgetting.md",
+  "theme": "memory manipulation",
+  "updated_at": "2026-05-01T22:49:50Z"
 }

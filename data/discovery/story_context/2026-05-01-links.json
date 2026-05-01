@@ -1,56 +1,56 @@
 {
   "date": "2026-05-01",
-  "theme": "signal from nowhere",
-  "links_direction": "specific number station recordings, individual unexplained signal incidents, detailed SETI discovery stories",
+  "theme": "memory manipulation",
+  "links_direction": "memory research, false memory studies, cognitive science oddities",
   "motifs": [
-    "Numbers",
-    "Working",
-    "Inside",
-    "Other",
-    "Post",
-    "Substack",
-    "Ralph",
-    "Radio",
-    "Sometimes",
-    "Station",
-    "Schedules",
-    "Same"
+    "Information",
+    "Share",
+    "Guardian",
+    "Life",
+    "\"Craig Venter creates synthetic life form\"",
+    "Minimal Cell Fact Sheet",
+    "PDF download",
+    "Opens",
+    "Window",
+    "Opens In",
+    "1cm",
+    "3cm"
   ],
   "interesting_bits": [
-    "In 1997",
-    "In 2006"
+    "\"Craig Venter creates synthetic life form\"",
+    "PDF download",
+    "1cm",
+    "3cm",
+    "in 2014"
   ],
   "links": [
     {
-      "title": "Operator shares what it\u2019s like to work for a numbers station | The SWLing Post",
-      "url": "https://swling.com/blog/2017/07/operator-shares-what-its-like-to-work-for-a-numbers-station/",
+      "title": "Intropy: Synthetic life - life as information",
+      "url": "http://www.intropy.co.uk/2010/05/synthetic-life-life-as-information.html",
       "concepts": [
-        "Numbers",
-        "Working",
-        "Inside",
-        "Other"
+        "Information",
+        "Share",
+        "Guardian",
+        "Life"
       ],
       "reason": "fallback heuristic"
     },
     {
-      "title": "How Shortwave Sparked Ralph\u2019s Lifetime of Adventure | The SWLing Post",
-      "url": "https://swling.com/blog/2026/04/how-shortwave-sparked-ralphs-lifetime-of-adventure/",
+      "title": "Minimal Cell Fact Sheet",
+      "url": "https://www.jcvi.org/system/files/assets/projects/first-minimal-synthetic-bacterial-cell/minimal-cell-fact-sheet.pdf",
       "concepts": [
-        "Post",
-        "Substack",
-        "Ralph",
-        "Radio"
+        "Minimal Cell Fact Sheet"
       ],
       "reason": "fallback heuristic"
     },
     {
-      "title": "DGI \u203a  Priyom.org",
-      "url": "https://priyom.org/number-stations/operators/dgi",
+      "title": "Lego Archaeology Field Report \u2013 Colleen Morgan",
+      "url": "https://middlesavagery.wordpress.com/2008/06/07/lego-archaeology-field-report/",
       "concepts": [
-        "Sometimes",
-        "Station",
-        "Schedules",
-        "Same"
+        "Opens",
+        "Share",
+        "Window",
+        "Opens In"
       ],
       "reason": "fallback heuristic"
     }

@@ -2249,6 +2249,56 @@ def select_best_links(candidates: List[LinkCandidate], theme: dict, count: int =
     return selected
 
 
+def select_emergency_corpus_links(
+    candidates: List[LinkCandidate],
+    already_selected: List[LinkCandidate],
+    count: int = MINIMUM_SELECTED_LINKS,
+) -> List[LinkCandidate]:
+    """Select repo-backed links during discovery outages, keeping only broad quality filters."""
+    selected = list(already_selected)
+    selected_urls = {normalize_url(candidate.url) for candidate in selected}
+    domains_used = [urlparse(candidate.url).netloc for candidate in selected]
+
+    print("\n⚠️  Emergency corpus fallback enabled for queue preparation")
+    for candidate in sorted(candidates, key=lambda item: item.final_score, reverse=True):
+        if len(selected) >= count:
+            break
+        normalized = normalize_url(candidate.url)
+        if normalized in selected_urls or candidate.error:
+            continue
+
+        domain = urlparse(candidate.url).netloc
+        if is_disallowed_domain(domain):
+            continue
+        if is_listicle_url(candidate.url, candidate.title):
+            continue
+        if looks_like_boilerplate(candidate):
+            continue
+
+        bad_page_reason = looks_like_bad_page_type(candidate)
+        if (
+            bad_page_reason == "too little substance"
+            and (candidate.concepts or candidate.interesting_bits or candidate.description)
+        ):
+            bad_page_reason = None
+        if bad_page_reason:
+            continue
+
+        if candidate.relevance_score < 0.15 or candidate.obscurity_score < 0.15 or candidate.gem_score < 0.20:
+            continue
+        if domains_used.count(domain) >= 3:
+            continue
+        if any(calculate_content_similarity(candidate, existing) > 0.5 for existing in selected):
+            continue
+
+        selected.append(candidate)
+        selected_urls.add(normalized)
+        domains_used.append(domain)
+        print(f"  ✓ Emergency selected: {candidate.title[:50]}... (score: {candidate.final_score:.2f})")
+
+    return selected
+
+
 def _extract_summary_text(candidate: LinkCandidate) -> str:
     """Build cleaner summaries, preferring descriptions and sentence boundaries."""
     description = (candidate.description or "").strip()
@@ -2447,6 +2497,17 @@ def main():
         include_published=False,
         theme_name=theme_name,
     )
+    if not existing_pool:
+        existing_pool = corpus.candidate_pool(
+            LinkCandidate,
+            limit=80,
+            include_published=False,
+        )
+        if existing_pool:
+            print(
+                "🗂️  No unpublished corpus candidates matched this theme exactly; "
+                f"loaded {len(existing_pool)} cross-theme fallback candidate(s)"
+            )
     
     # Step 1: Get candidate URLs
     print("\n" + "=" * 70)
@@ -2504,8 +2565,21 @@ def main():
         include_published=False,
         theme_name=theme_name,
     )
+    if not selection_pool:
+        selection_pool = corpus.candidate_pool(
+            LinkCandidate,
+            limit=80,
+            include_published=False,
+        )
+        if selection_pool:
+            print(
+                "No unpublished corpus candidates matched this theme exactly; "
+                "using cross-theme fallback pool"
+            )
     print(f"Selection pool size from corpus: {len(selection_pool)}")
     selected = select_best_links(selection_pool, theme, count=7, corpus=corpus)
+    if len(selected) < MINIMUM_SELECTED_LINKS and os.environ.get("ALLOW_CROSS_THEME_CORPUS_LINKS") == "1":
+        selected = select_emergency_corpus_links(selection_pool, selected, count=MINIMUM_SELECTED_LINKS)
     
     if not selected:
         print("Error: No links passed scoring thresholds")

@@ -125,6 +125,7 @@ def prepare_date(target_date: date, force: bool = False) -> int:
     env.setdefault("STORY_CANDIDATES", "1")
     env.setdefault("STORY_MODEL_ROUTING", "0")
     env.setdefault("OPENAI_REQUEST_TIMEOUT", "90")
+    env.setdefault("ALLOW_CROSS_THEME_CORPUS_LINKS", "1")
     cmd = [
         sys.executable,
         str(Path(__file__).parent / "run_daily.py"),

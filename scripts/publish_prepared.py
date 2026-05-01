@@ -10,6 +10,7 @@ from datetime import UTC, date, datetime
 from pathlib import Path
 from typing import Optional, Tuple
 
+from prepare_queue import prepare_date
 from project_paths import queue_entry_dir, queue_manifest_path
 from update_landing import (
     create_edition_snapshot,
@@ -72,7 +73,21 @@ def copy_prepared_files(target_date: date) -> Tuple[Path, Path]:
     story_source = queued_story_path(entry_dir, target_date)
     links_source = queued_links_path(entry_dir, target_date)
     if not story_source or not links_source:
-        raise FileNotFoundError(f"Queue entry incomplete for {target_date}")
+        print(f"Queue entry incomplete for {target_date}; preparing that date now")
+        prepare_result = prepare_date(target_date)
+        story_source = queued_story_path(entry_dir, target_date)
+        links_source = queued_links_path(entry_dir, target_date)
+        if prepare_result != 0 or not story_source or not links_source:
+            missing = []
+            if not story_source:
+                missing.append("story")
+            if not links_source:
+                missing.append("links")
+            missing_label = ", ".join(missing) or "unknown files"
+            raise FileNotFoundError(
+                f"Queue entry incomplete for {target_date} after prepare attempt "
+                f"(missing: {missing_label}; exit code: {prepare_result})"
+            )
 
     remove_existing_for_date(target_date)
 

@@ -5,6 +5,7 @@ import tempfile
 import unittest
 from datetime import date
 from pathlib import Path
+from unittest import mock
 
 
 MODULE_PATH = Path(__file__).resolve().parents[1] / "scripts" / "publish_prepared.py"
@@ -51,6 +52,50 @@ class PublishPreparedTests(unittest.TestCase):
                 self.assertFalse(old_story.exists())
                 self.assertEqual(story_target.name, staged_story.name)
                 self.assertEqual(links_target.name, staged_links.name)
+            finally:
+                os.chdir(original_cwd)
+
+    def test_copy_prepared_files_prepares_missing_queue_entry(self) -> None:
+        target_date = date(2026, 4, 25)
+        date_str = target_date.strftime("%Y-%m-%d")
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+
+            def fake_prepare_date(prepared_date: date) -> int:
+                self.assertEqual(prepared_date, target_date)
+                queue_story_dir = root / "data" / "edition_queue" / date_str / "docs" / "bits" / "posts"
+                queue_links_dir = root / "data" / "edition_queue" / date_str / "docs" / "links" / "posts"
+                queue_story_dir.mkdir(parents=True, exist_ok=True)
+                queue_links_dir.mkdir(parents=True, exist_ok=True)
+                (queue_story_dir / f"{date_str}-rescued-story.md").write_text("rescued story")
+                (queue_links_dir / f"{date_str}-daily-links.md").write_text("rescued links")
+                return 0
+
+            original_cwd = Path.cwd()
+            try:
+                os.chdir(root)
+                with mock.patch.object(publish_prepared, "prepare_date", side_effect=fake_prepare_date):
+                    story_target, links_target = publish_prepared.copy_prepared_files(target_date)
+                self.assertEqual(story_target.read_text(), "rescued story")
+                self.assertEqual(links_target.read_text(), "rescued links")
+            finally:
+                os.chdir(original_cwd)
+
+    def test_copy_prepared_files_reports_missing_parts_after_prepare_failure(self) -> None:
+        target_date = date(2026, 4, 27)
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            original_cwd = Path.cwd()
+            try:
+                os.chdir(root)
+                with mock.patch.object(publish_prepared, "prepare_date", return_value=9):
+                    with self.assertRaises(FileNotFoundError) as raised:
+                        publish_prepared.copy_prepared_files(target_date)
+                message = str(raised.exception)
+                self.assertIn("missing: story, links", message)
+                self.assertIn("exit code: 9", message)
             finally:
                 os.chdir(original_cwd)
 

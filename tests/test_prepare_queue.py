@@ -50,6 +50,7 @@ class PrepareQueueTests(unittest.TestCase):
             self.assertEqual(captured["env"]["STORY_CANDIDATES"], "1")
             self.assertEqual(captured["env"]["STORY_MODEL_ROUTING"], "0")
             self.assertEqual(captured["env"]["OPENAI_REQUEST_TIMEOUT"], "90")
+            self.assertEqual(captured["env"]["ALLOW_CROSS_THEME_CORPUS_LINKS"], "1")
 
             manifest = json.loads((root / "data" / "edition_queue" / date_str / "manifest.json").read_text())
             self.assertEqual(manifest["status"], "prepared")
