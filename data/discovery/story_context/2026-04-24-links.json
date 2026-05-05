@@ -1,0 +1,64 @@
+{
+  "date": "2026-04-24",
+  "theme": "parallel dimensions",
+  "links_direction": "multiverse theories, Mandela effects, dimensional research",
+  "motifs": [
+    "Opens",
+    "Share",
+    "Window",
+    "Opens In",
+    "1cm",
+    "3cm",
+    "in 2014",
+    "Mode",
+    "Section",
+    "Spectrum",
+    "Spread Spectrum",
+    "\"The FCC allows ROS to be used in the USA,\""
+  ],
+  "interesting_bits": [
+    "1cm",
+    "3cm",
+    "in 2014",
+    "\" When queried about this new statement, the FCC's Consumer Assistance Office stated that \"",
+    "\"The FCC allows ROS to be used in the USA,\"",
+    "On March 4, 2010",
+    "in 1966",
+    "in 1972"
+  ],
+  "links": [
+    {
+      "title": "Lego Archaeology Field Report \u2013 Colleen Morgan",
+      "url": "https://middlesavagery.wordpress.com/2008/06/07/lego-archaeology-field-report/",
+      "concepts": [
+        "Opens",
+        "Share",
+        "Window",
+        "Opens In"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "The Btown Monitoring Post: Current status of the ROS digital mode use in the US",
+      "url": "https://monitor-post.blogspot.com/2010/08/current-status-of-ros-digital-mode-use.html",
+      "concepts": [
+        "Mode",
+        "Section",
+        "Spectrum",
+        "Spread Spectrum"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "The Last of the First: The Magnavox Odyssey 500",
+      "url": "https://nicole.express/2024/super-magnavox-odyssey.html",
+      "concepts": [
+        "Odyssey",
+        "The Odyssey",
+        "Game",
+        "Pong"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}

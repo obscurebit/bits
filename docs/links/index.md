@@ -10,6 +10,33 @@ description: Daily curated discoveries from the hidden corners of the web
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-05-04-daily-links/" class="archive-item archive-item--links">
+    <div class="archive-item__number">095</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">May 04, 2026</span>
+      <div class="archive-item__tags"><span class="archive-item__theme">Recursive Realities</span></div>
+    </div>
+    <span class="archive-item__category">3 Links</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
+  <a href="posts/2026-05-03-daily-links/" class="archive-item archive-item--links">
+    <div class="archive-item__number">094</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">May 03, 2026</span>
+      <div class="archive-item__tags"><span class="archive-item__theme">Underground Networks</span></div>
+    </div>
+    <span class="archive-item__category">3 Links</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
+  <a href="posts/2026-05-02-daily-links/" class="archive-item archive-item--links">
+    <div class="archive-item__number">093</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">May 02, 2026</span>
+      <div class="archive-item__tags"><span class="archive-item__theme">Lost Civilizations</span></div>
+    </div>
+    <span class="archive-item__category">3 Links</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-05-01-daily-links/" class="archive-item archive-item--links">
     <div class="archive-item__number">092</div>
     <div class="archive-item__content">
@@ -28,11 +55,65 @@ description: Daily curated discoveries from the hidden corners of the web
     <span class="archive-item__category">3 Links</span>
     <span class="archive-item__arrow">→</span>
   </a>
+  <a href="posts/2026-04-29-daily-links/" class="archive-item archive-item--links">
+    <div class="archive-item__number">090</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">April 29, 2026</span>
+      <div class="archive-item__tags"><span class="archive-item__theme">Reality Glitches</span></div>
+    </div>
+    <span class="archive-item__category">3 Links</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-04-28-daily-links/" class="archive-item archive-item--links">
     <div class="archive-item__number">089</div>
     <div class="archive-item__content">
       <span class="archive-item__date">April 28, 2026</span>
       <div class="archive-item__tags"><span class="archive-item__theme">Biological Computing</span></div>
+    </div>
+    <span class="archive-item__category">3 Links</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
+  <a href="posts/2026-04-27-daily-links/" class="archive-item archive-item--links">
+    <div class="archive-item__number">088</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">April 27, 2026</span>
+      <div class="archive-item__tags"><span class="archive-item__theme">Reality Glitches</span></div>
+    </div>
+    <span class="archive-item__category">3 Links</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
+  <a href="posts/2026-04-26-daily-links/" class="archive-item archive-item--links">
+    <div class="archive-item__number">087</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">April 26, 2026</span>
+      <div class="archive-item__tags"><span class="archive-item__theme">Reality Glitches</span></div>
+    </div>
+    <span class="archive-item__category">3 Links</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
+  <a href="posts/2026-04-25-daily-links/" class="archive-item archive-item--links">
+    <div class="archive-item__number">086</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">April 25, 2026</span>
+      <div class="archive-item__tags"><span class="archive-item__theme">Reality Glitches</span></div>
+    </div>
+    <span class="archive-item__category">3 Links</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
+  <a href="posts/2026-04-24-daily-links/" class="archive-item archive-item--links">
+    <div class="archive-item__number">085</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">April 24, 2026</span>
+      <div class="archive-item__tags"><span class="archive-item__theme">Parallel Dimensions</span></div>
+    </div>
+    <span class="archive-item__category">3 Links</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
+  <a href="posts/2026-04-23-daily-links/" class="archive-item archive-item--links">
+    <div class="archive-item__number">084</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">April 23, 2026</span>
+      <div class="archive-item__tags"><span class="archive-item__theme">Consciousness Frontiers</span></div>
     </div>
     <span class="archive-item__category">3 Links</span>
     <span class="archive-item__arrow">→</span>
@@ -199,6 +280,15 @@ description: Daily curated discoveries from the hidden corners of the web
     <span class="archive-item__category">1 Links</span>
     <span class="archive-item__arrow">→</span>
   </a>
+  <a href="posts/2026-04-04-daily-links/" class="archive-item archive-item--links">
+    <div class="archive-item__number">065</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">April 04, 2026</span>
+      <div class="archive-item__tags"><span class="archive-item__theme">Synthetic Life</span></div>
+    </div>
+    <span class="archive-item__category">3 Links</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-04-03-daily-links/" class="archive-item archive-item--links">
     <div class="archive-item__number">064</div>
     <div class="archive-item__content">
@@ -267,6 +357,24 @@ description: Daily curated discoveries from the hidden corners of the web
     <div class="archive-item__content">
       <span class="archive-item__date">March 27, 2026</span>
       <div class="archive-item__tags"><span class="archive-item__theme">Biological Computing</span></div>
+    </div>
+    <span class="archive-item__category">3 Links</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
+  <a href="posts/2026-03-26-daily-links/" class="archive-item archive-item--links">
+    <div class="archive-item__number">056</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">March 26, 2026</span>
+      <div class="archive-item__tags"><span class="archive-item__theme">Counterfeit Realities</span></div>
+    </div>
+    <span class="archive-item__category">3 Links</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
+  <a href="posts/2026-03-25-daily-links/" class="archive-item archive-item--links">
+    <div class="archive-item__number">055</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">March 25, 2026</span>
+      <div class="archive-item__tags"><span class="archive-item__theme">Counterfeit Realities</span></div>
     </div>
     <span class="archive-item__category">3 Links</span>
     <span class="archive-item__arrow">→</span>
@@ -573,6 +681,15 @@ description: Daily curated discoveries from the hidden corners of the web
     <div class="archive-item__content">
       <span class="archive-item__date">February 19, 2026</span>
       <div class="archive-item__tags"><span class="archive-item__theme">Biological Computing</span></div>
+    </div>
+    <span class="archive-item__category">3 Links</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
+  <a href="posts/2026-02-18-daily-links/" class="archive-item archive-item--links">
+    <div class="archive-item__number">020</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">February 18, 2026</span>
+      <div class="archive-item__tags"><span class="archive-item__theme">Parallel Dimensions</span></div>
     </div>
     <span class="archive-item__category">3 Links</span>
     <span class="archive-item__arrow">→</span>

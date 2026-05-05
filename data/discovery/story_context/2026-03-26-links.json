@@ -1,0 +1,59 @@
+{
+  "date": "2026-03-26",
+  "theme": "counterfeit realities",
+  "links_direction": "forgery history, counterfeit technology, cloned systems, duplicate record incidents",
+  "motifs": [
+    "Information",
+    "Share",
+    "Guardian",
+    "Life",
+    "\"Craig Venter creates synthetic life form\"",
+    "Repair",
+    "Design",
+    "Maintenance",
+    "Essay",
+    "Lock",
+    "Atomic",
+    "Memory"
+  ],
+  "interesting_bits": [
+    "\"Craig Venter creates synthetic life form\"",
+    "\" https://repair.design/ See report on phase one research here . The Maintainers \u2014 \"",
+    "\" (1) ); } static inline void atomic_close(volatile int *gate) { asm volatile ( \""
+  ],
+  "links": [
+    {
+      "title": "Intropy: Synthetic life - life as information",
+      "url": "http://www.intropy.co.uk/2010/05/synthetic-life-life-as-information.html",
+      "concepts": [
+        "Information",
+        "Share",
+        "Guardian",
+        "Life"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Ideas - Scholarship and Research \u2014 Culture of Repair",
+      "url": "https://www.cultureofrepair.org/academic-research",
+      "concepts": [
+        "Repair",
+        "Design",
+        "Maintenance",
+        "Essay"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "c - Locks around memory manipulation via inline assembly - Stack Overflow",
+      "url": "https://www.stackoverflow.com/questions/37241553",
+      "concepts": [
+        "Lock",
+        "Atomic",
+        "Memory",
+        "Gate"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}

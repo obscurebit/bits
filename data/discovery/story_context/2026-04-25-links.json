@@ -1,0 +1,60 @@
+{
+  "date": "2026-04-25",
+  "theme": "reality glitches",
+  "links_direction": "simulation theory, strange phenomena, unexplained glitches",
+  "motifs": [
+    "Updated",
+    "Articles",
+    "June",
+    "Gangstalking",
+    "Book",
+    "Chasing Phantoms",
+    "Part",
+    "\"Gang Stalking vs. Hyperdimensional Matrix Attacks.\"",
+    "\"Sidetrack Circus Diversion/Fear and Paranoia Generators.\"",
+    "Synchs",
+    "Words",
+    "Time"
+  ],
+  "interesting_bits": [
+    "\" - Book by Carissa Conti carissaconti@yahoo.com Updated 2013 Completely updated version of \"",
+    "\"Gang Stalking vs. Hyperdimensional Matrix Attacks.\"",
+    "\"Sidetrack Circus Diversion/Fear and Paranoia Generators.\"",
+    "on March 29, 2013"
+  ],
+  "links": [
+    {
+      "title": "article | In 2 Worlds",
+      "url": "https://in2worlds.net/article/",
+      "concepts": [
+        "Updated",
+        "Articles",
+        "June",
+        "Gangstalking"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "\"Chasing Phantoms\" - MILABS / Mind Control Book by Carissa Conti - UPDATED 2013 | In 2 Worlds",
+      "url": "https://in2worlds.net/abductions2",
+      "concepts": [
+        "Book",
+        "Chasing Phantoms",
+        "Part",
+        "Updated"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "synchronicities | In 2 Worlds",
+      "url": "https://in2worlds.net/synchronicities/",
+      "concepts": [
+        "Synchs",
+        "Words",
+        "Time",
+        "Some"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+trim:
+  width: "7in"
+  height: "10in"
+  margin_inner: "0.68in"
+  margin_outer: "0.52in"
+  margin_top: "0.52in"
+  margin_bottom: "0.58in"
+
+typography:
+  display: "Cormorant Garamond, Baskerville, Georgia, serif"
+  body: "Source Serif 4, Iowan Old Style, Charter, Georgia, serif"
+  sans: "Space Grotesk, Avenir Next, Inter, Helvetica Neue, Arial, sans-serif"
+  mono: "IBM Plex Mono, BlexMono Nerd Font, Menlo, Courier New, monospace"
+  display_source: "https://fonts.google.com/specimen/Cormorant+Garamond"
+  body_source: "https://fonts.google.com/specimen/Source+Serif+4"
+  sans_source: "https://fonts.google.com/specimen/Space+Grotesk"
+  mono_source: "https://fonts.google.com/specimen/IBM+Plex+Mono"
+  display_project: "https://github.com/CatharsisFonts/Cormorant"
+  body_project: "https://github.com/adobe-fonts/source-serif"
+  sans_project: "https://github.com/floriankarsten/space-grotesk"
+  mono_project: "https://github.com/IBM/plex"
+  display_weights: [400, 600]
+  body_weights: [400, 600]
+  sans_weights: [400, 500, 600]
+  mono_weights: [400, 600]
+  story_size: "11pt"
+  story_leading: "15pt"
+  title_weight: 400
+  label_tracking: "0.08em"
+
+palettes:
+  light:
+    name: "Paper Archive"
+    paper: "#f3efe4"
+    paper_alt: "#ebe4d4"
+    ink: "#171512"
+    muted: "#62594c"
+    rule: "#c9bca4"
+    accent: "#b64127"
+    accent_2: "#145f68"
+    accent_3: "#9b7a24"
+    plate_a: "#d8c6a1"
+    plate_b: "#9bb4b0"
+    plate_c: "#d7835b"
+  dark:
+    name: "Night Archive"
+    paper: "#08090b"
+    paper_alt: "#121318"
+    ink: "#efe7d4"
+    muted: "#a89f8f"
+    rule: "#353842"
+    accent: "#ff6a3d"
+    accent_2: "#4db7c5"
+    accent_3: "#d8ad3f"
+    plate_a: "#2a1f35"
+    plate_b: "#123d45"
+    plate_c: "#5b2a1e"
+
+layout:
+  section_size: 16
+  entry_excerpt_words: 220
+  front_note_excerpt_words: 150
+  show_art_placeholders: true
+  qr_placeholder_label: "QR"
+
+layout_modes:
+  signal:
+    label: "Signal"
+    glyph: "///"
+    description: "transmissions, static, routers, phones, intercepted messages"
+  archive:
+    label: "Archive"
+    glyph: "IDX"
+    description: "ledgers, files, catalogs, memory stores, evidence"
+  field_note:
+    label: "Field Note"
+    glyph: "OBS"
+    description: "reports, expeditions, specimens, found observations"
+  protocol:
+    label: "Protocol"
+    glyph: "PRT"
+    description: "forms, rules, procedures, bureaucracy, maintenance"
+  myth:
+    label: "Myth"
+    glyph: "MYT"
+    description: "fables, gods, ceremonies, impossible folklore"
+  glitch:
+    label: "Glitch"
+    glyph: "ERR"
+    description: "reality errors, loops, recursion, broken systems"
+
+section_glyphs:
+  "0": "SIG"
+  "1": "ROM"
+  "2": "BIO"
+  "3": "FRM"
+  "4": "GHO"
+  "5": "MAP"
+  "6": "BDY"
+  "7": "CLK"
+  "8": "OBJ"
+  "9": "RIT"
+  "A": "ARC"
+  "B": "MAT"
+  "C": "INS"
+  "D": "MYT"
+  "E": "END"
+  "F": "CHK"

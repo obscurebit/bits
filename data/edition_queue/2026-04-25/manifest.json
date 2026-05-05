@@ -1,9 +1,12 @@
 {
   "date": "2026-04-25",
-  "exit_code": 1,
-  "links_file": "",
-  "status": "failed",
-  "story_file": "",
-  "theme": "",
-  "updated_at": "2026-04-22T09:03:02Z"
+  "exit_code": 0,
+  "links_file": "docs/links/posts/2026-04-25-daily-links.md",
+  "published_at": "2026-05-05T15:45:56Z",
+  "published_links_file": "docs/links/posts/2026-04-25-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-04-25-the-mirror-test.md",
+  "status": "published",
+  "story_file": "docs/bits/posts/2026-04-25-the-mirror-test.md",
+  "theme": "reality glitches",
+  "updated_at": "2026-05-05T15:45:56Z"
 }

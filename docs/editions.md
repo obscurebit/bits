@@ -10,6 +10,39 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-05-04-edition-095/" class="archive-item">
+    <div class="archive-item__number">095</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">May 04, 2026</span>
+      <h3 class="archive-item__title">Edition #095</h3>
+      <p class="archive-item__excerpt">Recursive Realities · The union hall reeked of burnt coffee and the powdery musk of old drywall. I’d know that smell anywhere—same as the pharmacy stockroom where I spent eight hours...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Recursive Realities</span><span class="archive-item__genre" title="Noir-ish social observation rather than detective plotting">Noir-ish social observation rather than detective plotting</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
+  <a href="posts/2026-05-03-edition-094/" class="archive-item">
+    <div class="archive-item__number">094</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">May 03, 2026</span>
+      <h3 class="archive-item__title">Edition #094</h3>
+      <p class="archive-item__excerpt">Underground Networks · The man with the mole like a squashed raisin on his cheek slides into the chair beside me at the permit counter, reeking of peppermint and stale ambition. “Hey,...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Underground Networks</span><span class="archive-item__genre" title="Workplace comedy with a speculative inconvenience">Workplace comedy with a speculative inconvenience</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
+  <a href="posts/2026-05-02-edition-093/" class="archive-item">
+    <div class="archive-item__number">093</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">May 02, 2026</span>
+      <h3 class="archive-item__title">Edition #093</h3>
+      <p class="archive-item__excerpt">Lost Civilizations · **Posted Notice (School Faculty Lounge):**</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Lost Civilizations</span><span class="archive-item__genre" title="Quiet literary realism with one impossible pressure point">Quiet literary realism with one impossible pressure point</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-05-01-edition-092/" class="archive-item">
     <div class="archive-item__number">092</div>
     <div class="archive-item__content">
@@ -32,6 +65,17 @@ description: Browse previous daily editions of Obscure Bit
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>
   </a>
+  <a href="posts/2026-04-29-edition-090/" class="archive-item">
+    <div class="archive-item__number">090</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">April 29, 2026</span>
+      <h3 class="archive-item__title">Edition #090</h3>
+      <p class="archive-item__excerpt">Reality Glitches · The receipt jams in the shop printer again, its edges curled like a dried fly. *Stoke & Sons Printery*, it says, though the store closed in 2014. The date stamp...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Reality Glitches</span><span class="archive-item__genre" title="Character study where the strange thing stays partly offstage">Character study where the strange thing stays partly offstage</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-04-28-edition-089/" class="archive-item">
     <div class="archive-item__number">089</div>
     <div class="archive-item__content">
@@ -39,6 +83,61 @@ description: Browse previous daily editions of Obscure Bit
       <h3 class="archive-item__title">Edition #089</h3>
       <p class="archive-item__excerpt">Biological Computing · The keychain digs into my palm as I hurry past the locked gymnasium, its cracked plastic duck gleaming under the flickering hallway light. I’m twenty minutes la...</p>
       <div class="archive-item__tags"><span class="archive-item__theme">Biological Computing</span><span class="archive-item__genre" title="Moral fable disguised as a very specific modern problem">Moral fable disguised as a very specific modern problem</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
+  <a href="posts/2026-04-27-edition-088/" class="archive-item">
+    <div class="archive-item__number">088</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">April 27, 2026</span>
+      <h3 class="archive-item__title">Edition #088</h3>
+      <p class="archive-item__excerpt">Reality Glitches · The catering schedule lies face-up on the dashboard, smudged with congealed grease. Marjorie flips it open to the weekend’s weddings: the Ruiz reception at 4 PM...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Reality Glitches</span><span class="archive-item__genre" title="Quiet literary realism with one impossible pressure point">Quiet literary realism with one impossible pressure point</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
+  <a href="posts/2026-04-26-edition-087/" class="archive-item">
+    <div class="archive-item__number">087</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">April 26, 2026</span>
+      <h3 class="archive-item__title">Edition #087</h3>
+      <p class="archive-item__excerpt">Reality Glitches · The key to survival during a catering disaster is knowing which rules to bend and which to shatter. Take today: The mayor’s aide called at 5 a.m. to add “gluten...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Reality Glitches</span><span class="archive-item__genre" title="Character study where the strange thing stays partly offstage">Character study where the strange thing stays partly offstage</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
+  <a href="posts/2026-04-25-edition-086/" class="archive-item">
+    <div class="archive-item__number">086</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">April 25, 2026</span>
+      <h3 class="archive-item__title">Edition #086</h3>
+      <p class="archive-item__excerpt">Reality Glitches · Rule 14: *All incoming donations must be inspected for cracks, stains, or other defects before cataloging.* The notice hung above the intake desk, its letters s...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Reality Glitches</span><span class="archive-item__genre" title="Moral fable disguised as a very specific modern problem">Moral fable disguised as a very specific modern problem</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
+  <a href="posts/2026-04-24-edition-085/" class="archive-item">
+    <div class="archive-item__number">085</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">April 24, 2026</span>
+      <h3 class="archive-item__title">Edition #085</h3>
+      <p class="archive-item__excerpt">Time Anomalies · Posted notices rarely lie, but they do hum. The union hall’s bulletin board thrummed with them, each printout slightly askew, as if the office printer had been...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Time Anomalies</span><span class="archive-item__genre" title="Character study where the strange thing stays partly offstage">Character study where the strange thing stays partly offstage</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
+  <a href="posts/2026-04-23-edition-084/" class="archive-item">
+    <div class="archive-item__number">084</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">April 23, 2026</span>
+      <h3 class="archive-item__title">Edition #084</h3>
+      <p class="archive-item__excerpt">Consciousness Frontiers · The third time Mrs. Halvorsen slams her palm on the counter, the handbell cracks. Its brass tongue slips from the wooden base, landing soundlessly on the cork l...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Consciousness Frontiers</span><span class="archive-item__genre" title="Quiet literary realism with one impossible pressure point">Quiet literary realism with one impossible pressure point</span></div>
     </div>
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>
@@ -241,6 +340,17 @@ description: Browse previous daily editions of Obscure Bit
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>
   </a>
+  <a href="posts/2026-04-04-edition-065/" class="archive-item">
+    <div class="archive-item__number">065</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">April 04, 2026</span>
+      <h3 class="archive-item__title">Edition #065</h3>
+      <p class="archive-item__excerpt">Synthetic Life · The air in the clinic waiting room smells like antiseptic and burnt coffee, the kind that’s been reheated all day. You sit on a chair with a cracked vinyl seat,...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Synthetic Life</span><span class="archive-item__genre" title="Noir-ish social observation rather than detective plotting">Noir-ish social observation rather than detective plotting</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-04-03-edition-064/" class="archive-item">
     <div class="archive-item__number">064</div>
     <div class="archive-item__content">
@@ -325,6 +435,28 @@ description: Browse previous daily editions of Obscure Bit
       <h3 class="archive-item__title">Edition #057</h3>
       <p class="archive-item__excerpt">Biological Computing · The smell of burnt hair clung to the air, sweet and acrid, mixing with the sharp tang of solder. Hands moved in the dim light of a workshop cluttered with typew...</p>
       <div class="archive-item__tags"><span class="archive-item__theme">Biological Computing</span><span class="archive-item__genre" title="Ghost story, atmospheric and slow">Ghost story</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
+  <a href="posts/2026-03-26-edition-056/" class="archive-item">
+    <div class="archive-item__number">056</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">March 26, 2026</span>
+      <h3 class="archive-item__title">Edition #056</h3>
+      <p class="archive-item__excerpt">Counterfeit Realities · The synthetic musk of a hundred stranger’s coats clings to the air, a cloying stew of perfumes and anxiety sweat. Mara flicks the scanner wand at a dripping umb...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Counterfeit Realities</span><span class="archive-item__genre" title="Domestic drama bent by one technological or metaphysical fact">Domestic drama bent by one technological or metaphysical fact</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
+  <a href="posts/2026-03-25-edition-055/" class="archive-item">
+    <div class="archive-item__number">055</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">March 25, 2026</span>
+      <h3 class="archive-item__title">Edition #055</h3>
+      <p class="archive-item__excerpt">Counterfeit Realities · The keycard trembles in her fist as the bus shudders to a stop at the transfer station. The reader blinks red. *Expired*, it scrolls. Mara jams the card back on...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Counterfeit Realities</span><span class="archive-item__genre" title="Satire of systems, credentials, or institutional language">Satire of systems</span></div>
     </div>
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>
@@ -699,6 +831,17 @@ description: Browse previous daily editions of Obscure Bit
       <h3 class="archive-item__title">Edition #021</h3>
       <p class="archive-item__excerpt">Biological Computing · Rule 4.2: No organic substrate may interface with archival memory cores without prior sterilization and multi-spectral verification.</p>
       <div class="archive-item__tags"><span class="archive-item__theme">Biological Computing</span><span class="archive-item__genre" title="Ghost story, atmospheric and slow">Ghost story</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
+  <a href="posts/2026-02-18-edition-020/" class="archive-item">
+    <div class="archive-item__number">020</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">February 18, 2026</span>
+      <h3 class="archive-item__title">Edition #020</h3>
+      <p class="archive-item__excerpt">Parallel Dimensions · The thermos leaks condensed steam onto the checkout desk, its crack lengthening like a zip code. I tighten the lid anyway. The library’s intercom crackles—*not...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Parallel Dimensions</span><span class="archive-item__genre" title="Character study where the strange thing stays partly offstage">Character study where the strange thing stays partly offstage</span></div>
     </div>
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>

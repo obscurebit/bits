@@ -43,6 +43,8 @@ export STORY_MODEL_ROUTING="1"
 export STORY_CANDIDATES="2"
 export OPENAI_REQUEST_TIMEOUT="120"
 export OPENAI_MAX_RETRIES="2"
+export OPENAI_COMPLETION_ATTEMPTS="3"
+export OPENAI_RETRY_BACKOFF_SECONDS="15"
 ```
 
 ### Optional Orchestrator Controls
@@ -199,15 +201,15 @@ The current system samples 14 dimensions plus a banned-word set:
 | `pov` | 10 |
 | `tone` | 10 |
 | `era` | 10 |
-| `setting` | 12 |
+| `setting` | 48 |
 | `structure` | 10 |
 | `conflict` | 10 |
 | `opening` | 10 |
 | `genre` | 10 |
 | `wildcard` | 10 |
-| `protagonist` | 12 |
+| `protagonist` | 48 |
 | `desire` | 10 |
-| `anchor_object` | 12 |
+| `anchor_object` | 48 |
 | `social_pressure` | 10 |
 | `ending_shape` | 10 |
 | `banned_word_sets` | 8 |

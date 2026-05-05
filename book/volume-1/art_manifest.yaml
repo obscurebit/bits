@@ -1,0 +1,35 @@
+volume: 1
+title: "256 Bits"
+default_aspect_ratio: "4:5"
+default_output_size: "print-ready source, minimum 2400px on the long edge"
+
+lanes:
+  auto_draft:
+    provider: "nvidia"
+    model: "black-forest-labs/flux.1-schnell"
+    role: "Generate fast commercial-use visual drafts and exploratory plates."
+    commercial_note: "NVIDIA's FLUX.1-schnell model card described the model as ready for commercial use when researched on 2026-05-04."
+  manual_hero:
+    providers:
+      - "Gemini image generation / Nano Banana"
+      - "Midjourney"
+    role: "Human-directed final art for selected entries."
+    commercial_note: "Record plan, account, prompt, date, edits, and final approval for every final asset."
+
+global_forbidden:
+  - "living artist style imitation"
+  - "named fictional characters"
+  - "named fictional universes"
+  - "brand logos or trademark-like symbols"
+  - "celebrity likenesses"
+  - "lyrics, poems, or text copied from protected works"
+  - "reference images without owned or licensed rights"
+
+approval_states:
+  - "missing"
+  - "draft"
+  - "needs_human_review"
+  - "approved_for_book"
+  - "rejected"
+
+entries: []

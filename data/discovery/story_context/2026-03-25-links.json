@@ -1,0 +1,60 @@
+{
+  "date": "2026-03-25",
+  "theme": "counterfeit realities",
+  "links_direction": "forgery history, counterfeit technology, cloned systems, duplicate record incidents",
+  "motifs": [
+    "Drilling",
+    "Downhole",
+    "Shock",
+    "Data",
+    "250 Hz",
+    "100 Hz",
+    "Biology",
+    "Systems",
+    "Systems Biology",
+    "Synthetic Biology",
+    "in 1968",
+    "in 2000"
+  ],
+  "interesting_bits": [
+    "250 Hz",
+    "100 Hz",
+    "in 1968",
+    "in 2000"
+  ],
+  "links": [
+    {
+      "title": "Schlumberger\u2019s Drilling ECG Goes to the Heart of the Matter To Diagnose Abnormal Conditions in Real Time",
+      "url": "https://jpt.spe.org/schlumbergers-drilling-ecg-goes-to-the-heart-of-the-matter-to-diagnose-abnormal-conditions-in-real-time",
+      "concepts": [
+        "Drilling",
+        "Downhole",
+        "Shock",
+        "Data"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Philosophy of Systems and Synthetic Biology (Stanford Encyclopedia of Philosophy)",
+      "url": "https://seop.illc.uva.nl/entries/systems-synthetic-biology/",
+      "concepts": [
+        "Biology",
+        "Systems",
+        "Systems Biology",
+        "Synthetic Biology"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Anomaly Detection Software | ManageEngine Log360",
+      "url": "https://www.manageengine.com/log-management/anomaly-detection-software.html",
+      "concepts": [
+        "Anomaly",
+        "Detection",
+        "What",
+        "Anomalies"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}

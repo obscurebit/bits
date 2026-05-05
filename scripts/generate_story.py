@@ -11,6 +11,7 @@ import random
 import hashlib
 import argparse
 import re
+import time
 from datetime import datetime
 from pathlib import Path
 from typing import Optional
@@ -18,9 +19,10 @@ from collections import Counter
 
 import yaml
 try:
-    from openai import OpenAI
+    from openai import APIConnectionError, APIStatusError, APITimeoutError, OpenAI, RateLimitError
     OPENAI_IMPORT_ERROR = None
 except Exception as exc:
+    APIConnectionError = APIStatusError = APITimeoutError = RateLimitError = Exception
     OpenAI = None
     OPENAI_IMPORT_ERROR = exc
 from discovery_corpus import STORY_CONTEXT_DIR
@@ -34,6 +36,8 @@ SELECTOR_MODEL = os.environ.get("STORY_SELECTOR_MODEL", MODEL)
 ENABLE_MODEL_ROUTING = os.environ.get("STORY_MODEL_ROUTING", "1").lower() not in {"0", "false", "no"}
 OPENAI_REQUEST_TIMEOUT = max(30, int(os.environ.get("OPENAI_REQUEST_TIMEOUT", "120")))
 OPENAI_MAX_RETRIES = max(0, int(os.environ.get("OPENAI_MAX_RETRIES", "2")))
+OPENAI_COMPLETION_ATTEMPTS = max(1, int(os.environ.get("OPENAI_COMPLETION_ATTEMPTS", "3")))
+OPENAI_RETRY_BACKOFF_SECONDS = max(1, int(os.environ.get("OPENAI_RETRY_BACKOFF_SECONDS", "15")))
 
 # Paths to prompt files
 PROMPTS_DIR = Path(__file__).parent.parent / "prompts"
@@ -139,7 +143,10 @@ def load_themes() -> dict:
     if not THEMES_FILE.exists():
         print(f"Error: Themes file not found at {THEMES_FILE}")
         sys.exit(1)
-    return yaml.safe_load(THEMES_FILE.read_text()) or {}
+    config = yaml.safe_load(THEMES_FILE.read_text()) or {}
+    overrides = config.get("overrides", {})
+    config["overrides"] = {str(key): value for key, value in overrides.items()}
+    return config
 
 
 def load_model_routing() -> dict:
@@ -526,6 +533,12 @@ def build_story_prompt(theme: dict, style: dict, target_date: Optional[datetime]
             words = ", ".join(style["banned_words"])
             parts.append(f"- BANNED WORDS (do not use these): {words}")
         parts.append("")
+
+    parts.append("NOVELTY RULES:")
+    parts.append("- Treat the protagonist role, setting, and anchor object as today's one-use focus details, not house motifs.")
+    parts.append("- Do not repeat distinctive recent props, workplaces, named institutions, or opening images. If a detail feels familiar from the recent archive, substitute a different concrete detail.")
+    parts.append("- Obscurity should come from fresh specificity: a new job, room, errand, tool, local rule, or social ritual rather than another version of the same odd object.")
+    parts.append("")
     
     parts.append("CRAFT TARGETS:")
     parts.append("- Give the story a lived-in social world: work, family, neighbors, debt, ritual, status, care, jealousy, obligation, or embarrassment.")
@@ -555,8 +568,54 @@ def build_candidate_prompts(base_prompt: str, target_date: Optional[datetime] = 
     return prompts
 
 
+def is_retryable_openai_error(exc: Exception) -> bool:
+    if isinstance(exc, (APITimeoutError, APIConnectionError, RateLimitError)):
+        return True
+    if isinstance(exc, APIStatusError):
+        return exc.status_code in {408, 409, 425, 429, 500, 502, 503, 504}
+    return False
+
+
+def request_chat_completion_with_retries(
+    client: OpenAI,
+    *,
+    model: str,
+    messages: list[dict],
+    temperature: float,
+    top_p: float,
+    max_tokens: int,
+    label: str,
+):
+    last_error: Optional[Exception] = None
+    for attempt in range(1, OPENAI_COMPLETION_ATTEMPTS + 1):
+        try:
+            return client.chat.completions.create(
+                model=model,
+                messages=messages,
+                temperature=temperature,
+                top_p=top_p,
+                max_tokens=max_tokens,
+                timeout=OPENAI_REQUEST_TIMEOUT,
+            )
+        except Exception as exc:
+            if not is_retryable_openai_error(exc) or attempt >= OPENAI_COMPLETION_ATTEMPTS:
+                raise
+            last_error = exc
+            delay = OPENAI_RETRY_BACKOFF_SECONDS * attempt
+            print(
+                f"{label} transient API failure on attempt "
+                f"{attempt}/{OPENAI_COMPLETION_ATTEMPTS}: {exc}. Retrying in {delay}s..."
+            )
+            time.sleep(delay)
+
+    if last_error:
+        raise last_error
+    raise RuntimeError(f"{label} failed without an exception")
+
+
 def request_story_completion(client: OpenAI, writer_model: str, system_prompt: str, user_prompt: str, temperature: float) -> str:
-    response = client.chat.completions.create(
+    response = request_chat_completion_with_retries(
+        client,
         model=writer_model,
         messages=[
             {"role": "system", "content": system_prompt},
@@ -565,7 +624,7 @@ def request_story_completion(client: OpenAI, writer_model: str, system_prompt: s
         temperature=temperature,
         top_p=0.95,
         max_tokens=4096,
-        timeout=OPENAI_REQUEST_TIMEOUT,
+        label="Story generation",
     )
     return clean_story_response(response.choices[0].message.content.strip())
 
@@ -598,7 +657,8 @@ def select_best_candidate(client: OpenAI, theme: dict, base_prompt: str, candida
     selector_prompt = load_selector_prompt()
     selection_prompt = build_story_selection_prompt(theme, base_prompt, candidates, target_date)
 
-    response = client.chat.completions.create(
+    response = request_chat_completion_with_retries(
+        client,
         model=SELECTOR_MODEL,
         messages=[
             {"role": "system", "content": selector_prompt},
@@ -607,7 +667,7 @@ def select_best_candidate(client: OpenAI, theme: dict, base_prompt: str, candida
         temperature=0.15,
         top_p=0.9,
         max_tokens=250,
-        timeout=OPENAI_REQUEST_TIMEOUT,
+        label="Story selection",
     )
 
     decision = clean_story_response(response.choices[0].message.content.strip())

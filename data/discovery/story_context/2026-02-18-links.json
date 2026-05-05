@@ -1,0 +1,61 @@
+{
+  "date": "2026-02-18",
+  "theme": "parallel dimensions",
+  "links_direction": "multiverse theories, Mandela effects, dimensional research",
+  "motifs": [
+    "Olivia",
+    "Numbers",
+    "Andrus",
+    "Radio",
+    "in 2001",
+    "in 2010",
+    "August",
+    "On August",
+    "Russian",
+    "Uvb-",
+    "\"August 3 5 2 7 Accretion 3 6 0 9 5 6 7 3\"",
+    "\"UVB-76. UVB-76. 38, 527. ????????. 36, 09, 55, 73.\""
+  ],
+  "interesting_bits": [
+    "in 2001",
+    "in 2010",
+    "\"August 3 5 2 7 Accretion 3 6 0 9 5 6 7 3\"",
+    "\"UVB-76. UVB-76. 38, 527. ????????. 36, 09, 55, 73.\"",
+    "389 ms"
+  ],
+  "links": [
+    {
+      "title": "The Buzzer: Are there secret spy messages on the radio? \u2014 Twenty Thousand Hertz - The stories behind the world's most recognizable and interesting sounds.",
+      "url": "https://www.20k.org/episodes/thebuzzer",
+      "concepts": [
+        "Olivia",
+        "Numbers",
+        "Andrus",
+        "Radio"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "The Btown Monitoring Post: Mysterious Russian 'buzzer' (Enigma S28) radio broadcast changes",
+      "url": "https://monitor-post.blogspot.com/2010/08/mysterious-russian-buzzer-radio.html",
+      "concepts": [
+        "August",
+        "On August",
+        "Russian",
+        "Uvb-"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Reality Glitches | In 2 Worlds",
+      "url": "https://in2worlds.net/glitches-in-the-matrix",
+      "concepts": [
+        "What",
+        "Portland",
+        "Like",
+        "Just"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}

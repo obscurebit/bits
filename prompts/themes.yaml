@@ -93,11 +93,6 @@ themes:
 
 # Date-specific overrides (complete theme for special days)
 overrides:
-  2026-01-30:
-    name: "mysterious signals"
-    story: "an impossible message arrives, but the real question is who is expected to act on it and what it will cost"
-    links: "mysterious phenomena, unexplained transmissions, strange first contacts"
-
   2026-02-14:
     name: "digital love"
     story: "romance strained or clarified by mediated intimacy, emotional outsourcing, or impossible forms of presence"
@@ -113,7 +108,27 @@ overrides:
     story: "public consensus collapses for one day, forcing people to renegotiate status, trust, and practical reality"
     links: "famous hoaxes, elaborate pranks, things that seemed fake but were real"
 
+  2026-05-25:
+    name: "names on stone"
+    story: "remembrance, sacrifice, official ceremonies, and private grief colliding over what the living owe the dead"
+    links: "Memorial Day history, war memorials, military archives, remembrance rituals, monument records"
+
+  2026-07-04:
+    name: "independence machines"
+    story: "freedom, spectacle, paperwork, surveillance, and neighborhood ritual making independence feel both public and deeply conditional"
+    links: "Independence Day history, American Revolution artifacts, fireworks technology, civic rituals, declaration archives"
+
   2026-10-31:
     name: "digital haunting"
     story: "grief, haunting, and persistence through technology, but anchored in a concrete social setting rather than generic spooky tech"
     links: "ghost in the machine stories, digital afterlife projects, creepy tech"
+
+  2026-11-26:
+    name: "uneasy tables"
+    story: "gratitude, debt, family performance, food logistics, and contested history pressuring one meal until something gives"
+    links: "Thanksgiving history, harvest festivals, Indigenous perspectives, food history, family ritual research"
+
+  2026-12-25:
+    name: "gift economies"
+    story: "gifts, obligations, faith, family logistics, loneliness, and retail machinery making generosity stranger than anyone admits"
+    links: "Christmas history, gift exchange anthropology, holiday technology, winter folklore, retail history"

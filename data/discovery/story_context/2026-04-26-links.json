@@ -1,0 +1,58 @@
+{
+  "date": "2026-04-26",
+  "theme": "reality glitches",
+  "links_direction": "simulation theory, strange phenomena, unexplained glitches",
+  "motifs": [
+    "Cell",
+    "Bringing",
+    "Growth",
+    "Chromosome",
+    "Legends",
+    "Tomorrow",
+    "Digital",
+    "Season",
+    "Russian",
+    "Spanish",
+    "Radio Vostok Rossii",
+    "Radio"
+  ],
+  "interesting_bits": [
+    "in 2011",
+    "In 2013"
+  ],
+  "links": [
+    {
+      "title": "Bringing the genetically minimal cell to life on a computer in 4D. | JCVI",
+      "url": "https://www.jcvi.org/publications/bringing-genetically-minimal-cell-life-computer-4d",
+      "concepts": [
+        "Cell",
+        "Bringing",
+        "Growth",
+        "Chromosome"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "MCBASTARD'S  MAUSOLEUM: DC's Legends of Tomorrow: The Complete Sixth Season - Time Jump to November 9th  to Own the Blu-Ray & DVD",
+      "url": "https://mcbastardsmausoleum.blogspot.com/2021/08/dcs-legends-of-tomorrow-complete-sixth.html",
+      "concepts": [
+        "Legends",
+        "Tomorrow",
+        "Digital",
+        "Season"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Priyom pinpoints V07 transmissions to Khabarovsk \u203a  Priyom.org",
+      "url": "https://priyom.org/blog/priyom-pinpoints-v07-transmissions-to-khabarovsk",
+      "concepts": [
+        "Russian",
+        "Spanish",
+        "Radio Vostok Rossii",
+        "Radio"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}

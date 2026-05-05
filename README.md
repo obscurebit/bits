@@ -66,7 +66,21 @@ uv run --python .venv/bin/python scripts/publish_prepared.py --date 2026-04-19
 
 # Direct manual run
 uv run --python .venv/bin/python scripts/run_daily.py --date 2026-04-19
+
+# Draft the 256 Bits book production artifacts locally
+uv run --python .venv/bin/python scripts/book_build.py --allow-incomplete
 ```
+
+## 256 Bits Book
+
+The repo includes a local-only production scaffold for `256 Bits: Volume 1`, a curated 16 by 16 selection indexed `00` through `FF`.
+
+- Source controls live under `book/volume-1/`
+- Generated book artifacts live under ignored `book-output/volume-1/`
+- Private scans, final art, and rights reports live under ignored `private/`
+- The release build intentionally fails while the volume is incomplete or any validation blocker remains
+
+See [book/volume-1/PRODUCTION_PLAN.md](book/volume-1/PRODUCTION_PLAN.md).
 
 ## Story and Link Systems
 

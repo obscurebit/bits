@@ -1,0 +1,62 @@
+{
+  "date": "2026-04-27",
+  "theme": "reality glitches",
+  "links_direction": "simulation theory, strange phenomena, unexplained glitches",
+  "motifs": [
+    "Read",
+    "Phoenix Lights",
+    "Rendlesham Forest",
+    "Arizona",
+    "000 years",
+    "500 years",
+    "1.6 km",
+    "Http",
+    "Dxld",
+    "Alaska",
+    "Chinese",
+    "30 years"
+  ],
+  "interesting_bits": [
+    "000 years",
+    "500 years",
+    "1.6 km",
+    "30 years",
+    "5 million",
+    "in 1959"
+  ],
+  "links": [
+    {
+      "title": "2026 Crop Circles Culture-crop.com France :: SELECTION LINKS",
+      "url": "https://www.culture-crop.com/en-selection.html",
+      "concepts": [
+        "Read",
+        "Phoenix Lights",
+        "Rendlesham Forest",
+        "Arizona"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "https://www.w4uvh.net/dxld1851.txt",
+      "url": "https://www.w4uvh.net/dxld1851.txt",
+      "concepts": [
+        "Http",
+        "Dxld",
+        "Alaska",
+        "Chinese"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Philosophy, Mind, etc.",
+      "url": "https://arnold-neumaier.at/phil.html",
+      "concepts": [
+        "Philosophy",
+        "Mind",
+        "Quantum",
+        "Consciousness"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+volume: 1
+title: "256 Bits"
+subtitle: "Volume 1: The First Byte"
+edition_name: "First Byte Edition"
+canonical_url_base: "https://obscurebit.com/bits/posts"
+target_entry_count: 256
+byte_index_start: 0
+selection_mode: "curated"
+status: "in_progress"
+
+front_matter:
+  creator_note:
+    title: "A Note From The Creator"
+    source: "book/volume-1/creator-note.md"
+    required_for_release: true
+  machines_note:
+    title: "A Note From The Machines"
+    source: "book/volume-1/machines-note.md"
+    required_for_release: true
+  editor_letter:
+    title: "A Letter From The Editor"
+    source: "book/volume-1/editor-letter.md"
+    required_for_release: true
+
+sections:
+  - code: "0"
+    title: "Signals In The Wire"
+    motif: "telephones, radios, routers, static, accidental contact"
+  - code: "1"
+    title: "Rooms That Remember"
+    motif: "houses, archives, desks, leases, paperwork, domestic machinery"
+  - code: "2"
+    title: "Soft Machines"
+    motif: "cells, circuits, living systems, synthetic organisms"
+  - code: "3"
+    title: "Impossible Offices"
+    motif: "forms, queues, ministries, rules that become metaphysics"
+  - code: "4"
+    title: "Ghost Protocols"
+    motif: "hauntings, recursion, afterimages, abandoned instructions"
+  - code: "5"
+    title: "Field Notes From Elsewhere"
+    motif: "expeditions, maps, transmissions, found reports"
+  - code: "6"
+    title: "The Body Has A Ledger"
+    motif: "anatomy, repair, memory in tissue, medical strangeness"
+  - code: "7"
+    title: "Unreliable Timekeeping"
+    motif: "loops, clocks, delays, calendars, temporal mistakes"
+  - code: "8"
+    title: "Domestic Cosmology"
+    motif: "ordinary objects revealing large systems"
+  - code: "9"
+    title: "Ceremonies Of Maintenance"
+    motif: "rituals, repairs, caretaker logic, recurring obligations"
+  - code: "A"
+    title: "Archives Against Forgetting"
+    motif: "catalogs, indexes, ledgers, preservation, loss"
+  - code: "B"
+    title: "Misbehaving Matter"
+    motif: "physics, materials, glitches, strange substances"
+  - code: "C"
+    title: "Instructions For The Unseen"
+    motif: "manuals, warnings, marginalia, half-understood procedures"
+  - code: "D"
+    title: "Mythologies In Debug Mode"
+    motif: "old gods, fables, folklore, rewritten by systems"
+  - code: "E"
+    title: "The Last Page Is A Door"
+    motif: "endings, thresholds, returns, irreversible choices"
+  - code: "F"
+    title: "Checksum"
+    motif: "final proofs, validation, signatures, the book seeing itself"
+
+selection_rules:
+  - "Exactly 256 final entries indexed 00 through FF."
+  - "Prefer distinctive voice, durable weirdness, strong imagery, and low rights risk."
+  - "Do not include entries with unresolved IP, source, or art provenance concerns."
+  - "Preserve original publication dates, but allow curated ordering."
+  - "Every final entry must have a stable QR target and a final art approval."
+
+validation:
+  allowed_repeated_full_names: []
+  allowed_repeated_single_names: []
+
+release_outputs:
+  manuscript: "book-output/volume-1/256-bits-volume-1.md"
+  validation_report: "book-output/volume-1/validation-report.md"
+  source_manifest: "book-output/volume-1/source-manifest.json"
+  art_briefs: "book-output/volume-1/art-briefs.yaml"
+  qr_targets: "book-output/volume-1/qr-targets.csv"
+  candidate_scorecard: "book-output/volume-1/candidate-scorecard.csv"
+  gumroad_readme: "book-output/volume-1/gumroad/README.txt"
+
+selected_entries: []

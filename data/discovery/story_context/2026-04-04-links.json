@@ -1,0 +1,56 @@
+{
+  "date": "2026-04-04",
+  "theme": "synthetic life",
+  "links_direction": "biotech breakthroughs, artificial life projects, synthetic organism research",
+  "motifs": [
+    "Information",
+    "Share",
+    "Guardian",
+    "Life",
+    "\"Craig Venter creates synthetic life form\"",
+    "Minimal Cell Fact Sheet",
+    "PDF download",
+    "Espa",
+    "Espa Ol",
+    "Scientists",
+    "Cient",
+    "90 GB"
+  ],
+  "interesting_bits": [
+    "\"Craig Venter creates synthetic life form\"",
+    "PDF download",
+    "90 GB"
+  ],
+  "links": [
+    {
+      "title": "Intropy: Synthetic life - life as information",
+      "url": "http://www.intropy.co.uk/2010/05/synthetic-life-life-as-information.html?showComment=1274440020093#c7631164829694181044",
+      "concepts": [
+        "Information",
+        "Share",
+        "Guardian",
+        "Life"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Minimal Cell Fact Sheet",
+      "url": "https://www.jcvi.org/system/files/assets/projects/first-minimal-synthetic-bacterial-cell/minimal-cell-fact-sheet.pdf",
+      "concepts": [
+        "Minimal Cell Fact Sheet"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Genoma",
+      "url": "https://www.bibliotecapleyades.net/ciencia/ciencia_genoma.htm#menu",
+      "concepts": [
+        "Espa",
+        "Espa Ol",
+        "Scientists",
+        "Cient"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}

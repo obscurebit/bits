@@ -1,0 +1,60 @@
+{
+  "date": "2026-05-04",
+  "theme": "recursive realities",
+  "links_direction": "strange loops, self-reference, recursive structures in nature",
+  "motifs": [
+    "Organic",
+    "Market",
+    "Electronics",
+    "Organic Electronics",
+    "in 2024",
+    "in 2025",
+    "Portable Freezers",
+    "Thanks",
+    "Report",
+    "\"Portable Freezers & refrigerators\"",
+    "Observers",
+    "Marvel"
+  ],
+  "interesting_bits": [
+    "in 2024",
+    "in 2025",
+    "\"Portable Freezers & refrigerators\"",
+    "in 1977"
+  ],
+  "links": [
+    {
+      "title": "Organic Electronics Market Size, Share Report | Growth 2035",
+      "url": "https://www.marketresearchfuture.com/reports/organic-electronics-market-1162",
+      "concepts": [
+        "Organic",
+        "Market",
+        "Electronics",
+        "Organic Electronics"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Market Research Future - Industry Analysis Report, Business Consulting and Research",
+      "url": "https://www.marketresearchfuture.com/ask_for_customize/1162",
+      "concepts": [
+        "Portable Freezers",
+        "Thanks",
+        "Report",
+        "Market"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "A VLA SEARCH FOR THE OHIO STATE \"WOW\" | TECHNOSEARCH",
+      "url": "https://technosearch.seti.org/wp-content/uploads/node/3761.html",
+      "concepts": [
+        "Observers",
+        "Marvel",
+        "Link",
+        "Reference"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}

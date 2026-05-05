@@ -56,7 +56,10 @@ def load_themes() -> dict:
     if not THEMES_FILE.exists():
         print(f"Error: themes file not found at {THEMES_FILE}")
         sys.exit(1)
-    return yaml.safe_load(THEMES_FILE.read_text()) or {}
+    config = yaml.safe_load(THEMES_FILE.read_text()) or {}
+    overrides = config.get("overrides", {})
+    config["overrides"] = {str(key): value for key, value in overrides.items()}
+    return config
 
 
 def resolve_target_date(date_override: Optional[str] = None) -> datetime:

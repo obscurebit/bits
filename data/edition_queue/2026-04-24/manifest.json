@@ -1,9 +1,12 @@
 {
   "date": "2026-04-24",
-  "exit_code": 1,
-  "links_file": "",
-  "status": "failed",
-  "story_file": "",
-  "theme": "",
-  "updated_at": "2026-04-22T08:36:48Z"
+  "exit_code": 0,
+  "links_file": "docs/links/posts/2026-04-24-daily-links.md",
+  "published_at": "2026-05-05T15:25:31Z",
+  "published_links_file": "docs/links/posts/2026-04-24-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-04-24-the-key-deposit-policy.md",
+  "status": "published",
+  "story_file": "docs/bits/posts/2026-04-24-the-key-deposit-policy.md",
+  "theme": "time anomalies",
+  "updated_at": "2026-05-05T15:25:30Z"
 }

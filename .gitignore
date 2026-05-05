@@ -1,5 +1,8 @@
 # Build output
 site/
+book-output/
+exports/gumroad/
+dist/book/
 
 # Cache
 cache/
@@ -30,3 +33,9 @@ Thumbs.db
 # Local testing
 .env
 .env.local
+
+# Private book production assets
+private/
+private/book-assets/
+private/scans/
+private/rights-reports/

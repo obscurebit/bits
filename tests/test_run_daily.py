@@ -139,6 +139,29 @@ class RunDailyFallbackTests(unittest.TestCase):
             ],
         )
 
+    def test_load_themes_normalizes_yaml_date_override_keys(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            themes_path = Path(tmpdir) / "themes.yaml"
+            themes_path.write_text(
+                """
+themes:
+  - name: "rotating"
+    story: "s"
+    links: "l"
+overrides:
+  2026-12-25:
+    name: "gift economies"
+    story: "holiday story"
+    links: "holiday links"
+"""
+            )
+
+            with mock.patch.object(run_daily, "THEMES_FILE", themes_path):
+                config = run_daily.load_themes()
+
+        self.assertIn("2026-12-25", config["overrides"])
+        self.assertEqual(config["overrides"]["2026-12-25"]["name"], "gift economies")
+
 
 if __name__ == "__main__":
     unittest.main()

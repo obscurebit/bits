@@ -1,9 +1,12 @@
 {
   "date": "2026-05-03",
-  "exit_code": 1,
-  "links_file": "",
-  "status": "failed",
-  "story_file": "",
-  "theme": "",
-  "updated_at": "2026-04-30T09:13:25Z"
+  "exit_code": 0,
+  "links_file": "docs/links/posts/2026-05-03-daily-links.md",
+  "published_at": "2026-05-05T17:01:40Z",
+  "published_links_file": "docs/links/posts/2026-05-03-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-05-03-permit-for-the-unseen-room.md",
+  "status": "published",
+  "story_file": "docs/bits/posts/2026-05-03-permit-for-the-unseen-room.md",
+  "theme": "underground networks",
+  "updated_at": "2026-05-05T17:01:40Z"
 }

@@ -1,0 +1,58 @@
+{
+  "date": "2026-04-29",
+  "theme": "reality glitches",
+  "links_direction": "simulation theory, strange phenomena, unexplained glitches",
+  "motifs": [
+    "Stoke",
+    "World",
+    "Carstairs",
+    "Stoke Mandeville",
+    "in 1926",
+    "in 1942",
+    "Vault",
+    "Cryptographic Vault",
+    "Root",
+    "System",
+    "Cell",
+    "Synthetic"
+  ],
+  "interesting_bits": [
+    "in 1926",
+    "in 1942"
+  ],
+  "links": [
+    {
+      "title": "Stoke Mandeville",
+      "url": "https://www.lloydianaspects.co.uk/scripts/stokeMandevilleSetting.html",
+      "concepts": [
+        "Stoke",
+        "World",
+        "Carstairs",
+        "Stoke Mandeville"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Cryptographic Vault",
+      "url": "https://www.jfcarter.net/~jimc/documents/cryptovault.html",
+      "concepts": [
+        "Vault",
+        "Cryptographic Vault",
+        "Root",
+        "System"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "12th Build-a-Cell Workshop hosted at J. Craig Venter Institute in La Jolla | JCVI",
+      "url": "https://www.jcvi.org/media-center/12th-build-cell-workshop-hosted-j-craig-venter-institute-la-jolla",
+      "concepts": [
+        "Cell",
+        "Synthetic",
+        "March",
+        "Workshop"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}

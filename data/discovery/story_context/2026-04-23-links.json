@@ -1,0 +1,60 @@
+{
+  "date": "2026-04-23",
+  "theme": "consciousness frontiers",
+  "links_direction": "neuroscience breakthroughs, AI consciousness debates, brain-computer interfaces",
+  "motifs": [
+    "Information",
+    "Share",
+    "Guardian",
+    "Life",
+    "\"Craig Venter creates synthetic life form\"",
+    "Lock",
+    "Atomic",
+    "Memory",
+    "Gate",
+    "Euston",
+    "Line",
+    "City"
+  ],
+  "interesting_bits": [
+    "\"Craig Venter creates synthetic life form\"",
+    "\" (1) ); } static inline void atomic_close(volatile int *gate) { asm volatile ( \"",
+    "in 1863",
+    "in 1934"
+  ],
+  "links": [
+    {
+      "title": "Intropy: Synthetic life - life as information",
+      "url": "http://www.intropy.co.uk/2010/05/synthetic-life-life-as-information.html?showComment=1274442647752#c5062306055703619817",
+      "concepts": [
+        "Information",
+        "Share",
+        "Guardian",
+        "Life"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "c - Locks around memory manipulation via inline assembly - Stack Overflow",
+      "url": "https://www.stackoverflow.com/questions/37241553/locks-around-memory-manipulation-via-inline-assembly",
+      "concepts": [
+        "Lock",
+        "Atomic",
+        "Memory",
+        "Gate"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Euston Underground Station \u2013 Subterranea Britannica",
+      "url": "https://www.subbrit.org.uk/sites/euston-underground-station/",
+      "concepts": [
+        "Euston",
+        "Line",
+        "City",
+        "Northbound"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}

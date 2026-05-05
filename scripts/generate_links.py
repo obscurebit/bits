@@ -1227,7 +1227,10 @@ def load_themes() -> dict:
     if not THEMES_FILE.exists():
         print(f"Error: Themes file not found at {THEMES_FILE}")
         sys.exit(1)
-    return yaml.safe_load(THEMES_FILE.read_text()) or {}
+    config = yaml.safe_load(THEMES_FILE.read_text()) or {}
+    overrides = config.get("overrides", {})
+    config["overrides"] = {str(key): value for key, value in overrides.items()}
+    return config
 
 
 def get_daily_theme(target_date: Optional[datetime] = None) -> dict:
