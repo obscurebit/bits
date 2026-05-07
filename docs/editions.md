@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-05-07-edition-098/" class="archive-item">
+    <div class="archive-item__number">098</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">May 07, 2026</span>
+      <h3 class="archive-item__title">Edition #098</h3>
+      <p class="archive-item__excerpt">Counterfeit Realities · The woman arrived late, her heels slapping the linoleum like a metronome set to panic. I knew that sound—the ferry to Vashon left at 3:14, and the cafeteria doo...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Counterfeit Realities</span><span class="archive-item__genre" title="Workplace comedy with a speculative inconvenience">Workplace comedy with a speculative inconvenience</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-05-04-edition-095/" class="archive-item">
     <div class="archive-item__number">095</div>
     <div class="archive-item__content">

@@ -1,0 +1,60 @@
+{
+  "date": "2026-05-08",
+  "theme": "counterfeit realities",
+  "links_direction": "forgery history, counterfeit technology, cloned systems, duplicate record incidents",
+  "motifs": [
+    "Value",
+    "Range",
+    "The Range",
+    "Intensity",
+    "\") but also the circling of the 6 characters \"",
+    "\", which is equivalent to the statistical term \"",
+    "Pool",
+    "Magic",
+    "Acid",
+    "Water",
+    "90 percent",
+    "Atomic"
+  ],
+  "interesting_bits": [
+    "\") but also the circling of the 6 characters \"",
+    "\", which is equivalent to the statistical term \"",
+    "90 percent",
+    "\" (1) ); } static inline void atomic_close(volatile int *gate) { asm volatile ( \""
+  ],
+  "links": [
+    {
+      "title": "Ohio State University Radio Observatory - Explanation of 6EQUJ5",
+      "url": "https://www.bigear.org/6equj5.htm",
+      "concepts": [
+        "Value",
+        "Range",
+        "The Range",
+        "Intensity"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Pool\u00a0School: Maintenance Basics 101 | Family Handyman",
+      "url": "https://www.familyhandyman.com/article/pool-school-maintenance-basics-101/",
+      "concepts": [
+        "Pool",
+        "Magic",
+        "Acid",
+        "Water"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Edit - Stack Overflow",
+      "url": "https://www.stackoverflow.com/posts/37241553/edit",
+      "concepts": [
+        "Atomic",
+        "Gate",
+        "Jester",
+        "Lock"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "date": "2026-05-09",
+  "theme": "small gods of commerce",
+  "links_direction": "retail technology history, logistics oddities, vending machines, economic rituals",
+  "motifs": [
+    "Wayfinding",
+    "Design",
+    "The Underground",
+    "Systems",
+    "Part",
+    "Part The",
+    "July",
+    "Three",
+    "Accept",
+    "France",
+    "Research",
+    "Stonehenge England July"
+  ],
+  "interesting_bits": [],
+  "links": [
+    {
+      "title": "Jason Santa Maria | Wayfinding",
+      "url": "https://v3.jasonsantamaria.com/archive/2007/06/19/wayfinding.html",
+      "concepts": [
+        "Wayfinding",
+        "Design",
+        "The Underground",
+        "Systems"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "2026 Crop Circles Culture-crop.com France :: Research and Deciphering by William Betts : DIGITAL BOOK",
+      "url": "https://www.culture-crop.com/en-livre.html",
+      "concepts": [
+        "Part",
+        "Part The",
+        "July",
+        "Three"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "2026 Crop Circles Culture-crop.com France :: Research and deciphering : PHOTOS GALLERY POST 2010",
+      "url": "https://www.culture-crop.com/en-galerie.html",
+      "concepts": [
+        "Accept",
+        "France",
+        "Research",
+        "Stonehenge England July"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}

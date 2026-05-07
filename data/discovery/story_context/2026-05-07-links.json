@@ -1,0 +1,57 @@
+{
+  "date": "2026-05-07",
+  "theme": "counterfeit realities",
+  "links_direction": "forgery history, counterfeit technology, cloned systems, duplicate record incidents",
+  "motifs": [
+    "Report",
+    "Islands",
+    "Thanks",
+    "Manager",
+    "\"Portable Freezers & refrigerators\"",
+    "Subway",
+    "Opens",
+    "Share",
+    "Mitch Waxman",
+    "Arxiv",
+    "Phys",
+    "Https"
+  ],
+  "interesting_bits": [
+    "\"Portable Freezers & refrigerators\""
+  ],
+  "links": [
+    {
+      "title": "Market Research Future - Industry Analysis Report, Business Consulting and Research",
+      "url": "https://www.marketresearchfuture.com/sample_request/1162",
+      "concepts": [
+        "Report",
+        "Islands",
+        "Thanks",
+        "Manager"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "terrible unseeing | The Newtown Pentacle",
+      "url": "https://newtownpentacle.com/2016/02/25/terrible-unseeing/",
+      "concepts": [
+        "Subway",
+        "Opens",
+        "Share",
+        "Mitch Waxman"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Inflation: a Python library for classical and quantum causal compatibility \u2013 Quantum",
+      "url": "https://quantum-journal.org/papers/q-2023-05-04-996/",
+      "concepts": [
+        "Arxiv",
+        "Phys",
+        "Https",
+        "Https Doi"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}
