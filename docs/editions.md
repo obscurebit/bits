@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-05-08-edition-099/" class="archive-item">
+    <div class="archive-item__number">099</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">May 08, 2026</span>
+      <h3 class="archive-item__title">Edition #099</h3>
+      <p class="archive-item__excerpt">Maintenance Myths · The sister arrives late, her hair still damp from the bus shelter’s leaky roof, clutching a paper cup of coffee like it’s a hospital discharge papers. We’re hun...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Maintenance Myths</span><span class="archive-item__genre" title="Moral fable disguised as a very specific modern problem">Moral fable disguised as a very specific modern problem</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-05-07-edition-098/" class="archive-item">
     <div class="archive-item__number">098</div>
     <div class="archive-item__content">

@@ -1,9 +1,12 @@
 {
   "date": "2026-05-08",
-  "exit_code": 124,
+  "exit_code": 0,
   "links_file": "docs/links/posts/2026-05-08-daily-links.md",
-  "status": "failed",
-  "story_file": "",
-  "theme": "counterfeit realities",
-  "updated_at": "2026-05-07T09:08:25Z"
+  "published_at": "2026-05-08T08:54:22Z",
+  "published_links_file": "docs/links/posts/2026-05-08-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-05-08-line-items-in-the-dark.md",
+  "status": "published",
+  "story_file": "docs/bits/posts/2026-05-08-line-items-in-the-dark.md",
+  "theme": "maintenance myths",
+  "updated_at": "2026-05-08T07:52:43Z"
 }
