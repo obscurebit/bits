@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-05-09-the-lanyard-and-the-lemon-drops/" class="archive-item">
+    <div class="archive-item__number">100</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">May 09, 2026</span>
+      <h3 class="archive-item__title">The Lanyard and the Lemon Drops</h3>
+      <p class="archive-item__excerpt">The ferry horn moaned like a rusted hinge, and the air in the lost-and-found room curdled with salt and mildew. I sorted through a carton of waterlogg...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Small Gods Of Commerce</span><span class="archive-item__genre" title="Quiet literary realism with one impossible pressure point">Quiet literary realism with one impossible pressure point</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-05-08-line-items-in-the-dark/" class="archive-item">
     <div class="archive-item__number">099</div>
     <div class="archive-item__content">

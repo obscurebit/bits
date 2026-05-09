@@ -1,0 +1,54 @@
+{
+  "date": "2026-05-10",
+  "theme": "digital archaeology",
+  "links_direction": "internet history, lost media, abandoned websites, web archaeology",
+  "motifs": [
+    "Archaeology",
+    "Mediterranean",
+    "Punk Archaeology",
+    "Punk",
+    "Opens",
+    "Share",
+    "Window",
+    "Opens In",
+    "\"violating the spirit of LAGPRA\""
+  ],
+  "interesting_bits": [
+    "\"violating the spirit of LAGPRA\""
+  ],
+  "links": [
+    {
+      "title": "Archaeology \u2013 The Digital Press at the University of North Dakota",
+      "url": "https://thedigitalpress.org/catalog/archaeology/",
+      "concepts": [
+        "Archaeology",
+        "Mediterranean",
+        "Punk Archaeology",
+        "Punk"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Lego Archaeology Field Report (Part 2) \u2013 Colleen Morgan",
+      "url": "https://middlesavagery.wordpress.com/2009/04/04/lego-archaeology-field-report-part-2/",
+      "concepts": [
+        "Opens",
+        "Share",
+        "Window",
+        "Opens In"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Embedded Interpretation pt. II \u2013 Colleen Morgan",
+      "url": "https://middlesavagery.wordpress.com/2008/06/04/embedded-interpretation-pt-ii/",
+      "concepts": [
+        "Opens",
+        "Share",
+        "Window",
+        "Opens In"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}
