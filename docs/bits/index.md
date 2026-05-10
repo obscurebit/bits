@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-05-10-the-third-ink/" class="archive-item">
+    <div class="archive-item__number">101</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">May 10, 2026</span>
+      <h3 class="archive-item__title">The Third Ink</h3>
+      <p class="archive-item__excerpt">You’re already late for court when the cassingle slams through your mail slot, landing on the kitchen tiles like a dropped coin. The label is scribble...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Digital Archaeology</span><span class="archive-item__genre" title="Noir-ish social observation rather than detective plotting">Noir-ish social observation rather than detective plotting</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-05-09-the-lanyard-and-the-lemon-drops/" class="archive-item">
     <div class="archive-item__number">100</div>
     <div class="archive-item__content">

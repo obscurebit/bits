@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-05-10-edition-101/" class="archive-item">
+    <div class="archive-item__number">101</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">May 10, 2026</span>
+      <h3 class="archive-item__title">Edition #101</h3>
+      <p class="archive-item__excerpt">Digital Archaeology · You’re already late for court when the cassingle slams through your mail slot, landing on the kitchen tiles like a dropped coin. The label is scribbled in three...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Digital Archaeology</span><span class="archive-item__genre" title="Noir-ish social observation rather than detective plotting">Noir-ish social observation rather than detective plotting</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-05-09-edition-100/" class="archive-item">
     <div class="archive-item__number">100</div>
     <div class="archive-item__content">
