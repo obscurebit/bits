@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-05-12-edition-103/" class="archive-item">
+    <div class="archive-item__number">103</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">May 12, 2026</span>
+      <h3 class="archive-item__title">Edition #103</h3>
+      <p class="archive-item__excerpt">Digital Archaeology · *Posted Notice: All unclaimed devices must be wiped before disposal. Violators subject to disciplinary review.*</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Digital Archaeology</span><span class="archive-item__genre" title="Moral fable disguised as a very specific modern problem">Moral fable disguised as a very specific modern problem</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-05-10-edition-101/" class="archive-item">
     <div class="archive-item__number">101</div>
     <div class="archive-item__content">

@@ -1,9 +1,12 @@
 {
   "date": "2026-05-12",
-  "exit_code": 1,
-  "links_file": "",
-  "status": "failed",
-  "story_file": "",
-  "theme": "",
-  "updated_at": "2026-05-10T09:13:24Z"
+  "exit_code": 0,
+  "links_file": "docs/links/posts/2026-05-12-daily-links.md",
+  "published_at": "2026-05-12T10:25:16Z",
+  "published_links_file": "docs/links/posts/2026-05-12-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-05-12-the-garment-tag.md",
+  "status": "published",
+  "story_file": "docs/bits/posts/2026-05-12-the-garment-tag.md",
+  "theme": "digital archaeology",
+  "updated_at": "2026-05-12T08:59:28Z"
 }

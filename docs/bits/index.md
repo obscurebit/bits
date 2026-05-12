@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-05-12-the-garment-tag/" class="archive-item">
+    <div class="archive-item__number">103</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">May 12, 2026</span>
+      <h3 class="archive-item__title">The Garment Tag</h3>
+      <p class="archive-item__excerpt">*Posted Notice: All unclaimed devices must be wiped before disposal. Violators subject to disciplinary review.*</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Digital Archaeology</span><span class="archive-item__genre" title="Moral fable disguised as a very specific modern problem">Moral fable disguised as a very specific modern problem</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-05-10-the-third-ink/" class="archive-item">
     <div class="archive-item__number">101</div>
     <div class="archive-item__content">

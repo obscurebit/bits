@@ -1,0 +1,57 @@
+{
+  "date": "2026-05-12",
+  "theme": "digital archaeology",
+  "links_direction": "internet history, lost media, abandoned websites, web archaeology",
+  "motifs": [
+    "Writing",
+    "Click",
+    "Digest",
+    "Learn",
+    "Since 1998",
+    "Opens",
+    "Share",
+    "Window",
+    "Opens In",
+    "Resources",
+    "From Script",
+    "Script"
+  ],
+  "interesting_bits": [
+    "Since 1998"
+  ],
+  "links": [
+    {
+      "title": "WD Presents: 4 WDU Courses, an Upcoming Webinar, Submission Deadline for Your Favorite Writing Websites, and More!",
+      "url": "https://www.writersdigest.com/resources/wd-presents-4-wdu-courses-an-upcoming-webinar-submission-deadline-for-your-favorite-writing-websites-and-more",
+      "concepts": [
+        "Writing",
+        "Click",
+        "Digest",
+        "Learn"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Presidio Miscellany \u2013 Colleen Morgan",
+      "url": "https://middlesavagery.wordpress.com/2008/06/11/presidio-miscellany/",
+      "concepts": [
+        "Opens",
+        "Share",
+        "Window",
+        "Opens In"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Digital Editions - Writer's Digest",
+      "url": "https://www.writersdigest.com/resources/digital-editions",
+      "concepts": [
+        "Resources",
+        "From Script",
+        "Script",
+        "Share"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}
