@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-05-16-the-velvet-audit/" class="archive-item">
+    <div class="archive-item__number">107</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">May 16, 2026</span>
+      <h3 class="archive-item__title">The Velvet Audit</h3>
+      <p class="archive-item__excerpt">Marty’s boots scuffed the cracked linoleum of the self-checkout lane, his arrival announced by the hollow clatter of the emergency lights. The store’s...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Cryptographic Secrets</span><span class="archive-item__genre" title="Satire of systems, credentials, or institutional language">Satire of systems</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-05-12-the-garment-tag/" class="archive-item">
     <div class="archive-item__number">103</div>
     <div class="archive-item__content">

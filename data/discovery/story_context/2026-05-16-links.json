@@ -1,0 +1,60 @@
+{
+  "date": "2026-05-16",
+  "theme": "cryptographic secrets",
+  "links_direction": "specific unsolved cipher stories, individual cryptography historical cases, detailed code breaking attempts",
+  "motifs": [
+    "Harappa",
+    "Indus Valley",
+    "Daro",
+    "Indus",
+    "in 1500",
+    "in 1981",
+    "Human",
+    "Some",
+    "What",
+    "Work",
+    "Guest",
+    "Andy Gracie It"
+  ],
+  "interesting_bits": [
+    "in 1500",
+    "in 1981",
+    "\"What I cannot create, I do not understand\"",
+    "\"Synthetic Biology for a Suitable Bioeconomy\""
+  ],
+  "links": [
+    {
+      "title": "Where Are The Ancient Archeological Sites Of Mohenjo Daro And Harappa Located?",
+      "url": "https://www.worldatlas.com/articles/where-are-the-ancient-archeological-sites-of-mohenjo-daro-and-harappa-located.html",
+      "concepts": [
+        "Harappa",
+        "Indus Valley",
+        "Daro",
+        "Indus"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Mark Burgess Website: The End of Sympathy: giving up our world to the robots",
+      "url": "https://markburgess.org/blog_work.html",
+      "concepts": [
+        "Human",
+        "Some",
+        "What",
+        "Work"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "SOLU / Bioart Society | Workshop 1",
+      "url": "https://bioartsociety.fi/projects/making-life/pages/workshop-1",
+      "concepts": [
+        "Guest",
+        "Andy Gracie It",
+        "Helsinki",
+        "Andy"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}

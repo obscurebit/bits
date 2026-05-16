@@ -1,0 +1,61 @@
+{
+  "date": "2026-05-18",
+  "theme": "underground networks",
+  "links_direction": "darknet history, underground communities, hidden networks",
+  "motifs": [
+    "Cipher",
+    "Elgar",
+    "Said",
+    "Dorabella",
+    "In 1897",
+    "on November 10, 2012",
+    "Transit",
+    "Systems",
+    "Optimization",
+    "Transportation",
+    "Pour",
+    "Nous"
+  ],
+  "interesting_bits": [
+    "In 1897",
+    "on November 10, 2012",
+    "\" les petits gars bien de chez nous \"",
+    "160 cm",
+    "70 cm"
+  ],
+  "links": [
+    {
+      "title": "Dorabella Cipher - Cipher Mysteries",
+      "url": "https://ciphermysteries.com/other-ciphers/the-dorabella-cipher",
+      "concepts": [
+        "Cipher",
+        "Elgar",
+        "Said",
+        "Dorabella"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Cognitive Mesh Transit Optimization: Urban Mobility Using Swarm Intelligence and Behavioral Modeling - Unpatentable.org | We Invent the Future.",
+      "url": "https://unpatentable.org/innovation/cognitive-mesh-transit-optimization-urban-mobility-using-swarm-intelligence-and-behavioral-modeling/",
+      "concepts": [
+        "Transit",
+        "Systems",
+        "Optimization",
+        "Transportation"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "D\u00c3\u00a9fi dans le colza 2007-2010 (\u00c3\u00a0 vos planches !) par Culture-crop.com",
+      "url": "https://www.culture-crop.com/defidanslecolza2007.htm",
+      "concepts": [
+        "Pour",
+        "Nous",
+        "Vous",
+        "Golden Ball Hill"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}
