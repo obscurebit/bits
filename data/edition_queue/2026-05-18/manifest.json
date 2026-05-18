@@ -1,9 +1,11 @@
 {
   "date": "2026-05-18",
-  "exit_code": 0,
   "links_file": "docs/links/posts/2026-05-18-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-05-18T11:43:08Z",
+  "published_links_file": "docs/links/posts/2026-05-18-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-05-18-bench-warrant-bowling.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-05-18-bench-warrant-bowling.md",
   "theme": "underground networks",
-  "updated_at": "2026-05-16T09:30:26Z"
+  "updated_at": "2026-05-18T10:15:51Z"
 }

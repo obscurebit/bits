@@ -101,8 +101,8 @@
   },
   "bioartsociety.fi": {
     "last_seen": "2026-05-16",
-    "last_selected": "2026-05-16",
-    "selected_count": 1
+    "last_selected": "2026-05-21",
+    "selected_count": 2
   },
   "bioethicstoday.org": {
     "last_seen": "",
@@ -149,6 +149,11 @@
     "last_selected": "2026-04-17",
     "selected_count": 3
   },
+  "carpentries.org": {
+    "last_seen": "2026-05-21",
+    "last_selected": "2026-05-21",
+    "selected_count": 1
+  },
   "centraliapeostafire.org": {
     "last_seen": "",
     "last_selected": "2026-03-03",
@@ -183,6 +188,11 @@
     "last_seen": "",
     "last_selected": "2026-03-29",
     "selected_count": 1
+  },
+  "corndancer.com": {
+    "last_seen": "2026-05-20",
+    "last_selected": "2026-05-19",
+    "selected_count": 3
   },
   "csrc.nist.gov": {
     "last_seen": "",
@@ -650,7 +660,7 @@
     "selected_count": 1
   },
   "priyom.org": {
-    "last_seen": "2026-05-04",
+    "last_seen": "2026-05-21",
     "last_selected": "2026-04-26",
     "selected_count": 2
   },
@@ -737,6 +747,11 @@
   "seti.org": {
     "last_seen": "",
     "last_selected": "2026-02-02",
+    "selected_count": 1
+  },
+  "setileague.org": {
+    "last_seen": "2026-05-21",
+    "last_selected": "2026-05-21",
     "selected_count": 1
   },
   "smartchicagocollaborative.org": {

@@ -1,0 +1,62 @@
+{
+  "date": "2026-05-19",
+  "theme": "lost civilizations",
+  "links_direction": "specific archaeological discoveries, individual ancient artifacts, detailed forgotten culture histories",
+  "motifs": [
+    "What",
+    "Documentary",
+    "Does",
+    "The Documentary",
+    "\"Civilization Lost and Found: Fabricating History.\"",
+    "\" in blue letters toward the top of the page.\u00c2 On the \"",
+    "in 2010",
+    "Ancient",
+    "Fringe",
+    "Scholarship",
+    "Ancient Aliens",
+    "80 percent"
+  ],
+  "interesting_bits": [
+    "\"Civilization Lost and Found: Fabricating History.\"",
+    "\" in blue letters toward the top of the page.\u00c2 On the \"",
+    "in 2010",
+    "\"actual vimana flying machine scale model found in archeological dig.\"",
+    "80 percent",
+    "since 1970"
+  ],
+  "links": [
+    {
+      "title": "Fringe History Pseudoscience and Popular Culture Study Guide Lost Civilizations",
+      "url": "https://corndancer.com/fritze/invntdknwldg/sg-lostciv.html",
+      "concepts": [
+        "What",
+        "Documentary",
+        "Does",
+        "The Documentary"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Fringe History | A Mild Debunking of the Ancient Mysteries International Spring Conference 2013",
+      "url": "https://corndancer.com/fritze/invntdknwldg/invknw_home.html",
+      "concepts": [
+        "Ancient",
+        "Fringe",
+        "Scholarship",
+        "Ancient Aliens"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Fringe History Pseudoscience and Popular Culture Bibliography for Book Reviews",
+      "url": "https://corndancer.com/fritze/invntdknwldg/invknw-biblio-a.html",
+      "concepts": [
+        "History",
+        "Atlantis",
+        "America",
+        "Ancient"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}

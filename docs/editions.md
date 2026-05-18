@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-05-18-edition-109/" class="archive-item">
+    <div class="archive-item__number">109</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">May 18, 2026</span>
+      <h3 class="archive-item__title">Edition #109</h3>
+      <p class="archive-item__excerpt">Underground Networks · Milton’s cart clattered against the linoleum as he hauled the day’s discards to the chute: a cracked holographic exhibit projector, three blister packs of expir...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Underground Networks</span><span class="archive-item__genre" title="Character study where the strange thing stays partly offstage">Character study where the strange thing stays partly offstage</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-05-16-edition-107/" class="archive-item">
     <div class="archive-item__number">107</div>
     <div class="archive-item__content">
