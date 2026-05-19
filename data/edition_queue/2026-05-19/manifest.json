@@ -1,9 +1,11 @@
 {
   "date": "2026-05-19",
-  "exit_code": 0,
   "links_file": "docs/links/posts/2026-05-19-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-05-19T11:11:34Z",
+  "published_links_file": "docs/links/posts/2026-05-19-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-05-19-the-bell-and-the-biscotti.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-05-19-the-bell-and-the-biscotti.md",
   "theme": "lost civilizations",
-  "updated_at": "2026-05-18T10:43:18Z"
+  "updated_at": "2026-05-19T09:56:17Z"
 }
