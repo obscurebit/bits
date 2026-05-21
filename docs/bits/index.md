@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-05-21-dock-12/" class="archive-item">
+    <div class="archive-item__number">112</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">May 21, 2026</span>
+      <h3 class="archive-item__title">Dock 12</h3>
+      <p class="archive-item__excerpt">You’re halfway through explaining to the coat check clerk why you need to return 37 raffle tickets when the radio on his counter crackles. Not a whisp...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Recursive Realities</span><span class="archive-item__genre" title="Caper energy at a human scale">Caper energy at a human scale</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-05-19-the-bell-and-the-biscotti/" class="archive-item">
     <div class="archive-item__number">110</div>
     <div class="archive-item__content">

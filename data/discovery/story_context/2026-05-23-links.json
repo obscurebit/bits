@@ -1,0 +1,60 @@
+{
+  "date": "2026-05-23",
+  "theme": "maintenance myths",
+  "links_direction": "infrastructure oddities, maintenance history, utility failures, repair cultures",
+  "motifs": [
+    "Yale",
+    "Manual",
+    "Forklift",
+    "Repair",
+    "137 years",
+    "in 1844",
+    "Years",
+    "Years Old",
+    "Environment",
+    "11 years",
+    "14 years",
+    "Educators"
+  ],
+  "interesting_bits": [
+    "137 years",
+    "in 1844",
+    "11 years",
+    "14 years"
+  ],
+  "links": [
+    {
+      "title": "Yale Forklift Manual Guide",
+      "url": "https://diydays.com/yale-forklift-manual/",
+      "concepts": [
+        "Yale",
+        "Manual",
+        "Forklift",
+        "Repair"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Educator Resource Library \u2014 Culture of Repair",
+      "url": "https://www.cultureofrepair.org/ed-resources-classroom-materials",
+      "concepts": [
+        "Years",
+        "Years Old",
+        "Repair",
+        "Environment"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Repair Education Program Overview  \u2014 Culture of Repair",
+      "url": "https://www.cultureofrepair.org/schools",
+      "concepts": [
+        "Repair",
+        "Educators",
+        "Teaching",
+        "Repair Advocates"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}

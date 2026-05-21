@@ -1,0 +1,55 @@
+{
+  "date": "2026-05-24",
+  "theme": "underground networks",
+  "links_direction": "darknet history, underground communities, hidden networks",
+  "motifs": [
+    "Earth",
+    "Friedman",
+    "West Point Inn",
+    "Design",
+    "Students",
+    "Class",
+    "Book",
+    "Pseudoscience",
+    "Initiatives",
+    "Categories",
+    "Mind",
+    "Body"
+  ],
+  "interesting_bits": [],
+  "links": [
+    {
+      "title": "Presumption and Allowing ~ A Reflection on \"Tending Building\", by Kiel Moe and Daniel Friedman \u2014 Culture of Repair",
+      "url": "https://www.cultureofrepair.org/reflections-on-repair/2024/12/27/from-the-porch-of-west-point-inn",
+      "concepts": [
+        "Earth",
+        "Friedman",
+        "West Point Inn",
+        "Design"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Fringe History, Pseudoscience and Popular Culture Syllabus Spring 2013",
+      "url": "https://corndancer.com/fritze/invntdknwldg/invknw_sylsprng13.html",
+      "concepts": [
+        "Students",
+        "Class",
+        "Book",
+        "Pseudoscience"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Categories Are Troubling \u2014 Culture of Repair",
+      "url": "https://www.cultureofrepair.org/reflections-on-repair/2025/6/30/categories",
+      "concepts": [
+        "Initiatives",
+        "Categories",
+        "Mind",
+        "Body"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}

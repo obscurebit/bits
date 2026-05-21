@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-05-21-edition-112/" class="archive-item">
+    <div class="archive-item__number">112</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">May 21, 2026</span>
+      <h3 class="archive-item__title">Edition #112</h3>
+      <p class="archive-item__excerpt">Recursive Realities · You’re halfway through explaining to the coat check clerk why you need to return 37 raffle tickets when the radio on his counter crackles. Not a whisper or a hu...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Recursive Realities</span><span class="archive-item__genre" title="Caper energy at a human scale">Caper energy at a human scale</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-05-19-edition-110/" class="archive-item">
     <div class="archive-item__number">110</div>
     <div class="archive-item__content">
