@@ -13,12 +13,26 @@ from typing import List, Optional, Tuple
 import yaml
 from project_paths import links_posts_output_dir, story_posts_output_dir
 
+try:
+    from openai import OpenAI
+    OPENAI_IMPORT_ERROR = None
+except Exception as exc:
+    OpenAI = None
+    OPENAI_IMPORT_ERROR = exc
+
 PROMPTS_DIR = Path(__file__).parent.parent / "prompts"
 THEMES_FILE = PROMPTS_DIR / "themes.yaml"
+API_BASE = os.environ.get("OPENAI_API_BASE", "https://integrate.api.nvidia.com/v1")
+API_KEY = os.environ.get("OPENAI_API_KEY")
+MODEL = os.environ.get("OPENAI_MODEL", "nvidia/llama-3.3-nemotron-super-49b-v1.5")
 AUTO_THEME_ATTEMPTS = max(1, int(os.environ.get("AUTO_THEME_ATTEMPTS", "8")))
+AI_THEME_FALLBACKS = max(0, int(os.environ.get("AI_THEME_FALLBACKS", "0")))
+AI_THEME_TIMEOUT_SECONDS = max(15, int(os.environ.get("AI_THEME_TIMEOUT_SECONDS", "60")))
 LINK_STEP_TIMEOUT_SECONDS = max(60, int(os.environ.get("RUN_DAILY_LINK_TIMEOUT_SECONDS", "900")))
 STORY_STEP_TIMEOUT_SECONDS = max(60, int(os.environ.get("RUN_DAILY_STORY_TIMEOUT_SECONDS", "420")))
 LANDING_STEP_TIMEOUT_SECONDS = max(30, int(os.environ.get("RUN_DAILY_LANDING_TIMEOUT_SECONDS", "180")))
+ALLOW_EMPTY_LINKS = os.environ.get("ALLOW_EMPTY_LINKS", "0").lower() in {"1", "true", "yes"}
+ALLOW_FALLBACK_STORY = os.environ.get("ALLOW_FALLBACK_STORY", "0").lower() in {"1", "true", "yes"}
 
 
 def parse_args() -> argparse.Namespace:
@@ -113,6 +127,130 @@ def build_theme_candidates(date_override: Optional[str] = None, limit: int = AUT
     return candidates
 
 
+def normalize_ai_theme(raw: dict) -> Optional[dict]:
+    name = str(raw.get("name", "")).strip().lower()
+    story = str(raw.get("story", "")).strip()
+    links = str(raw.get("links", "")).strip()
+    if not name or not story or not links:
+        return None
+    if len(name) > 60 or len(story) < 40 or len(links) < 30:
+        return None
+    return {"name": name, "story": story, "links": links}
+
+
+def parse_ai_theme_response(content: str, limit: int) -> List[dict]:
+    try:
+        parsed = json.loads(content)
+    except json.JSONDecodeError:
+        start = content.find("[")
+        end = content.rfind("]")
+        if start < 0 or end <= start:
+            return []
+        try:
+            parsed = json.loads(content[start:end + 1])
+        except json.JSONDecodeError:
+            return []
+
+    if isinstance(parsed, dict):
+        parsed = parsed.get("themes", [])
+    if not isinstance(parsed, list):
+        return []
+
+    themes = []
+    seen = set()
+    for item in parsed:
+        if not isinstance(item, dict):
+            continue
+        theme = normalize_ai_theme(item)
+        if not theme:
+            continue
+        key = theme["name"].lower()
+        if key in seen:
+            continue
+        seen.add(key)
+        themes.append(theme)
+        if len(themes) >= limit:
+            break
+    return themes
+
+
+def generate_ai_theme_candidates(target_date: datetime, first_theme: dict, existing_names: set[str], limit: int) -> List[Tuple[dict, str]]:
+    if limit <= 0:
+        return []
+    if not API_KEY:
+        print("⚠️  AI theme fallback skipped: OPENAI_API_KEY not set")
+        return []
+    if OpenAI is None:
+        print(f"⚠️  AI theme fallback skipped: OpenAI client unavailable: {OPENAI_IMPORT_ERROR}")
+        return []
+
+    date_str = target_date.strftime("%Y-%m-%d")
+    prompt = f"""Generate {limit} fallback daily-edition themes for Obscure Bit.
+
+The scheduled theme may fail link discovery:
+{json.dumps(first_theme, indent=2)}
+
+Return ONLY a JSON array. Each item must have:
+- name: short lowercase theme label
+- story: one sentence describing a grounded speculative story direction
+- links: comma-separated search direction likely to find real obscure nonfiction links
+
+Constraints:
+- Optimize for discoverable obscure links: museum object pages, enthusiast research, primary documents, local history, old-web pages, field notes, manuals, archives.
+- Avoid made-up proper nouns, fake incidents, exact named mysteries unless widely verifiable.
+- Avoid broad physics/philosophy topics that mainly return generic explainers.
+- Keep the Obscure Bit tone: specific jobs, places, records, tools, rituals, public systems.
+- Do not reuse these theme names: {', '.join(sorted(existing_names))}
+- Date: {date_str}
+"""
+    try:
+        client = OpenAI(api_key=API_KEY, base_url=API_BASE, timeout=AI_THEME_TIMEOUT_SECONDS)
+        response = client.chat.completions.create(
+            model=MODEL,
+            messages=[
+                {"role": "system", "content": "You design reliable fallback themes for a daily fiction-and-links site. Return valid JSON only."},
+                {"role": "user", "content": prompt},
+            ],
+            temperature=0.5,
+            max_tokens=900,
+            timeout=AI_THEME_TIMEOUT_SECONDS,
+        )
+    except Exception as exc:
+        print(f"⚠️  AI theme fallback failed: {exc}")
+        return []
+
+    content = response.choices[0].message.content or ""
+    generated = parse_ai_theme_response(content, limit)
+    candidates = []
+    for theme in generated:
+        key = theme["name"].lower()
+        if key in existing_names:
+            continue
+        existing_names.add(key)
+        candidates.append((theme, f"AI fallback theme for {date_str}"))
+    if candidates:
+        print(f"🤖 AI generated {len(candidates)} fallback theme(s)")
+    else:
+        print("⚠️  AI theme fallback returned no usable themes")
+    return candidates
+
+
+def enrich_theme_candidates_with_ai(candidates: List[Tuple[dict, str]], target_date: datetime) -> List[Tuple[dict, str]]:
+    if AI_THEME_FALLBACKS <= 0 or not candidates:
+        return candidates
+
+    existing_names = {
+        (theme.get("name") or "").lower()
+        for theme, _label in candidates
+        if theme.get("name")
+    }
+    first_theme = candidates[0][0]
+    ai_candidates = generate_ai_theme_candidates(target_date, first_theme, existing_names, AI_THEME_FALLBACKS)
+    if not ai_candidates:
+        return candidates
+    return [candidates[0], *ai_candidates, *candidates[1:]]
+
+
 def print_theme(theme: dict, label: str = "Daily Theme") -> None:
     print(f"\n=== {label} ===")
     print(json.dumps(theme, indent=2))
@@ -130,6 +268,99 @@ def find_existing_story(target_date: datetime) -> Optional[Path]:
 def find_existing_links(target_date: datetime) -> Optional[Path]:
     path = links_posts_output_dir() / f"{target_date.strftime('%Y-%m-%d')}-daily-links.md"
     return path if path.exists() else None
+
+
+def markdown_escape(value: str) -> str:
+    return value.replace('"', '\\"')
+
+
+def slugify(value: str) -> str:
+    slug = value.lower()
+    slug = "".join(c if c.isalnum() or c == " " else "" for c in slug)
+    return "-".join(slug.split()[:7]) or "fallback-bit"
+
+
+def write_empty_links(theme: dict, target_date: datetime, reason: str) -> Path:
+    date_str = target_date.strftime("%Y-%m-%d")
+    theme_name = theme.get("name", "unknown")
+    output_dir = links_posts_output_dir()
+    output_dir.mkdir(parents=True, exist_ok=True)
+    path = output_dir / f"{date_str}-daily-links.md"
+    content = f"""---
+date: {target_date}
+title: "Obscure Links - {target_date.strftime('%B %d, %Y')}"
+description: "Today's link discovery did not produce publishable links: {markdown_escape(reason)}"
+author: "Obscure Bit"
+theme: "{markdown_escape(theme_name)}"
+---
+
+# Obscure Links - {target_date.strftime('%B %d, %Y')}
+
+Link discovery did not produce publishable links for this edition.
+
+The daily story still published; this page is intentionally empty rather than filled with weak or off-theme links.
+"""
+    path.write_text(content)
+
+    context_dir = Path("data/discovery/story_context")
+    context_dir.mkdir(parents=True, exist_ok=True)
+    context_path = context_dir / f"{date_str}-links.json"
+    context_path.write_text(json.dumps({
+        "date": date_str,
+        "theme": theme_name,
+        "motifs": [],
+        "interesting_bits": [],
+        "links": [],
+        "fallback_reason": reason,
+    }, indent=2) + "\n")
+    print(f"⚠️  Wrote empty links fallback: {path}")
+    print(f"⚠️  Wrote empty story context fallback: {context_path}")
+    return path
+
+
+def fallback_story_text(theme: dict, target_date: datetime) -> tuple[str, str, str]:
+    theme_name = theme.get("name", "unknown")
+    title = f"The Spare Edition"
+    genre = "Fallback speculative vignette"
+    date_label = target_date.strftime("%B %d, %Y")
+    story = f"""By the time the daily machine admitted it had no story, the office had already opened.
+
+The clerk on duty was supposed to stamp a packet, unlock the side door, and pretend the missing page did not matter. Instead, she held the blank sheet up to the window and watched the morning pass through it. On one side was {date_label}. On the other was the version of the day that had arrived fully prepared.
+
+The form at the top said {theme_name.title()}. Nobody in the queue cared what that meant. They cared about lunch breaks, bus transfers, small promises made too early, and whether a system that failed politely still counted as a system.
+
+So she wrote the first true thing she could prove: the day had happened. Then she wrote the second: someone had noticed.
+
+At closing, she filed the page between the finished editions and locked the cabinet. The blank space did not disappear. It became part of the record, which was not the same as being repaired, but was better than being lost."""
+    return title, story, genre
+
+
+def write_fallback_story(theme: dict, target_date: datetime, reason: str) -> Path:
+    date_str = target_date.strftime("%Y-%m-%d")
+    theme_name = theme.get("name", "unknown")
+    title, story, genre = fallback_story_text(theme, target_date)
+    safe_title = markdown_escape(title)
+    safe_theme = markdown_escape(theme_name)
+    safe_genre = markdown_escape(genre)
+    output_dir = story_posts_output_dir()
+    output_dir.mkdir(parents=True, exist_ok=True)
+    path = output_dir / f"{date_str}-{slugify(title)}.md"
+    content = f"""---
+date: {date_str}
+title: "{safe_title}"
+description: "Fallback daily story generated after model failure: {markdown_escape(reason)}"
+author: "fallback-local"
+theme: "{safe_theme}"
+genre: "{safe_genre}"
+---
+
+# {title}
+
+{story}
+"""
+    path.write_text(content)
+    print(f"⚠️  Wrote fallback story after generation failure: {path}")
+    return path
 
 
 def run_script(
@@ -169,6 +400,8 @@ def main():
         if explicit_theme
         else build_theme_candidates(args.date)
     )
+    if not explicit_theme:
+        theme_candidates = enrich_theme_candidates_with_ai(theme_candidates, target_date)
     theme = theme_candidates[0][0]
     theme_json = json.dumps(theme)
     shared_env = os.environ.copy()
@@ -207,26 +440,39 @@ def main():
                     if index > 1:
                         print(f"Using fallback theme for remaining steps: {theme.get('name', 'unknown')}")
                     break
-                if explicit_theme:
+                if explicit_theme and not ALLOW_EMPTY_LINKS:
                     sys.exit(last_exit_code)
             else:
-                print(
-                    f"Error: link generation failed for {len(theme_candidates)} attempted theme(s) "
-                    f"on {(args.date or datetime.now().strftime('%Y-%m-%d'))}"
-                )
-                sys.exit(last_exit_code)
+                if ALLOW_EMPTY_LINKS:
+                    reason = (
+                        f"link generation failed for {len(theme_candidates)} attempted theme(s) "
+                        f"with exit code {last_exit_code}"
+                    )
+                    write_empty_links(theme, target_date, reason)
+                else:
+                    print(
+                        f"Error: link generation failed for {len(theme_candidates)} attempted theme(s) "
+                        f"on {(args.date or datetime.now().strftime('%Y-%m-%d'))}"
+                    )
+                    sys.exit(last_exit_code)
 
     if not args.skip_story:
         existing_story = find_existing_story(target_date)
         if existing_story:
             print(f"Using existing story for {target_date.strftime('%Y-%m-%d')}: {existing_story}")
         else:
-            run_script(
+            story_exit_code = run_script(
                 "Generate Story",
                 [sys.executable, str(scripts_dir / "generate_story.py"), "--theme-json", theme_json] + date_args,
                 shared_env,
+                exit_on_failure=False,
                 timeout_seconds=STORY_STEP_TIMEOUT_SECONDS,
             )
+            if story_exit_code != 0:
+                if ALLOW_FALLBACK_STORY:
+                    write_fallback_story(theme, target_date, f"story generation exited {story_exit_code}")
+                else:
+                    sys.exit(story_exit_code)
 
     if not args.skip_landing:
         run_script(

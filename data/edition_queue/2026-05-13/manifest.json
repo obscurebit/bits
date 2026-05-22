@@ -1,9 +1,12 @@
 {
   "date": "2026-05-13",
-  "exit_code": 1,
-  "links_file": "",
-  "status": "failed",
-  "story_file": "",
-  "theme": "",
-  "updated_at": "2026-05-12T09:28:16Z"
+  "exit_code": 0,
+  "links_file": "docs/links/posts/2026-05-13-daily-links.md",
+  "published_at": "2026-05-20T21:14:55Z",
+  "published_links_file": "docs/links/posts/2026-05-13-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-05-13-the-spiral.md",
+  "status": "published",
+  "story_file": "docs/bits/posts/2026-05-13-the-spiral.md",
+  "theme": "abandoned stations",
+  "updated_at": "2026-05-20T21:14:55Z"
 }

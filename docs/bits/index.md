@@ -43,6 +43,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
     <span class="archive-item__category">Story</span>
     <span class="archive-item__arrow">→</span>
   </a>
+  <a href="posts/2026-05-17-the-glass-and-the-lie/" class="archive-item">
+    <div class="archive-item__number">108</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">May 17, 2026</span>
+      <h3 class="archive-item__title">The Glass and the Lie</h3>
+      <p class="archive-item__excerpt">The smell of burnt plastic clings to the customs queue, sharp beneath the greasy perfume of trucker coffee. You lean against the chipped linoleum coun...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Lost Civilizations</span><span class="archive-item__genre" title="Quiet literary realism with one impossible pressure point">Quiet literary realism with one impossible pressure point</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-05-16-the-velvet-audit/" class="archive-item">
     <div class="archive-item__number">107</div>
     <div class="archive-item__content">
@@ -54,6 +65,39 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
     <span class="archive-item__category">Story</span>
     <span class="archive-item__arrow">→</span>
   </a>
+  <a href="posts/2026-05-15-the-bells-rule/" class="archive-item">
+    <div class="archive-item__number">106</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">May 15, 2026</span>
+      <h3 class="archive-item__title">The Bell's Rule</h3>
+      <p class="archive-item__excerpt">Rule 14 is taped to the corkboard behind the Xerox machine, its letters smudged from decades of carbon paper and thumbtacks. *The bell is for emergenc...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Emergent Intelligence</span><span class="archive-item__genre" title="Character study where the strange thing stays partly offstage">Character study where the strange thing stays partly offstage</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
+  <a href="posts/2026-05-14-saved-fingerprint/" class="archive-item">
+    <div class="archive-item__number">105</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">May 14, 2026</span>
+      <h3 class="archive-item__title">Saved Fingerprint</h3>
+      <p class="archive-item__excerpt">A bus depot vending machine alcove is not a place but a compromise. The notice taped above the machine—peeling at the edges, ink smudged by decades of...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Reality Glitches</span><span class="archive-item__genre" title="Satire of systems, credentials, or institutional language">Satire of systems</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
+  <a href="posts/2026-05-13-the-spiral/" class="archive-item">
+    <div class="archive-item__number">104</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">May 13, 2026</span>
+      <h3 class="archive-item__title">The Spiral</h3>
+      <p class="archive-item__excerpt">She kept the receipt spike in her apron pocket, bent into a spiral during a slow afternoon in 1937, when the hotel still had enough guests to justify ...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Abandoned Stations</span><span class="archive-item__genre" title="Ghost story energy without old haunted-house defaults">Ghost story energy without old haunted-house defaults</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-05-12-the-garment-tag/" class="archive-item">
     <div class="archive-item__number">103</div>
     <div class="archive-item__content">
@@ -61,6 +105,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
       <h3 class="archive-item__title">The Garment Tag</h3>
       <p class="archive-item__excerpt">*Posted Notice: All unclaimed devices must be wiped before disposal. Violators subject to disciplinary review.*</p>
       <div class="archive-item__tags"><span class="archive-item__theme">Digital Archaeology</span><span class="archive-item__genre" title="Moral fable disguised as a very specific modern problem">Moral fable disguised as a very specific modern problem</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
+  <a href="posts/2026-05-11-final-notice/" class="archive-item">
+    <div class="archive-item__number">102</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">May 11, 2026</span>
+      <h3 class="archive-item__title">Final Notice</h3>
+      <p class="archive-item__excerpt">Violation Log: 04/15/2023 – 22 tickets issued. Note: All proceeds directed to maintenance fund as per Agreement §7.2.</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Synthetic Life</span><span class="archive-item__genre" title="Ghost story energy without old haunted-house defaults">Ghost story energy without old haunted-house defaults</span></div>
     </div>
     <span class="archive-item__category">Story</span>
     <span class="archive-item__arrow">→</span>
@@ -105,6 +160,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
       <h3 class="archive-item__title">The Ferry Notary’s Second Signature</h3>
       <p class="archive-item__excerpt">The woman arrived late, her heels slapping the linoleum like a metronome set to panic. I knew that sound—the ferry to Vashon left at 3:14, and the caf...</p>
       <div class="archive-item__tags"><span class="archive-item__theme">Counterfeit Realities</span><span class="archive-item__genre" title="Workplace comedy with a speculative inconvenience">Workplace comedy with a speculative inconvenience</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
+  <a href="posts/2026-05-06-receipt-88-and-the-man-who/" class="archive-item">
+    <div class="archive-item__number">097</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">May 06, 2026</span>
+      <h3 class="archive-item__title">Receipt #88 and the Man Who Bought Mango Lassi</h3>
+      <p class="archive-item__excerpt">The receipt began with a single line item: *Prescription #1422 – 30mg, 30 tabs*. That’s all it should’ve had. But halfway through my lunch break, the ...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Forgotten Technology</span><span class="archive-item__genre" title="Domestic drama bent by one technological or metaphysical fact">Domestic drama bent by one technological or metaphysical fact</span></div>
     </div>
     <span class="archive-item__category">Story</span>
     <span class="archive-item__arrow">→</span>

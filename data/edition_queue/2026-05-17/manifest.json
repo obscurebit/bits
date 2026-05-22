@@ -1,9 +1,12 @@
 {
   "date": "2026-05-17",
-  "exit_code": 1,
-  "links_file": "",
-  "status": "failed",
-  "story_file": "",
-  "theme": "",
-  "updated_at": "2026-05-16T09:02:46Z"
+  "exit_code": 0,
+  "links_file": "docs/links/posts/2026-05-17-daily-links.md",
+  "published_at": "2026-05-21T12:03:12Z",
+  "published_links_file": "docs/links/posts/2026-05-17-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-05-17-the-glass-and-the-lie.md",
+  "status": "published",
+  "story_file": "docs/bits/posts/2026-05-17-the-glass-and-the-lie.md",
+  "theme": "lost civilizations",
+  "updated_at": "2026-05-21T12:03:12Z"
 }

@@ -1,12 +1,5 @@
 {
   "date": "2026-05-02",
-  "exit_code": 0,
-  "links_file": "docs/links/posts/2026-05-02-daily-links.md",
-  "published_at": "2026-05-05T16:51:31Z",
-  "published_links_file": "docs/links/posts/2026-05-02-daily-links.md",
-  "published_story_file": "docs/bits/posts/2026-05-02-the-unlisted-special.md",
-  "status": "published",
-  "story_file": "docs/bits/posts/2026-05-02-the-unlisted-special.md",
-  "theme": "lost civilizations",
-  "updated_at": "2026-05-05T16:51:31Z"
+  "status": "already-published",
+  "updated_at": "2026-05-19T14:20:12Z"
 }

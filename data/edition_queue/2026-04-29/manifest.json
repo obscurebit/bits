@@ -1,12 +1,5 @@
 {
   "date": "2026-04-29",
-  "exit_code": 0,
-  "links_file": "docs/links/posts/2026-04-29-daily-links.md",
-  "published_at": "2026-05-05T16:47:03Z",
-  "published_links_file": "docs/links/posts/2026-04-29-daily-links.md",
-  "published_story_file": "docs/bits/posts/2026-04-29-the-oathkeepers-lanyard.md",
-  "status": "published",
-  "story_file": "docs/bits/posts/2026-04-29-the-oathkeepers-lanyard.md",
-  "theme": "reality glitches",
-  "updated_at": "2026-05-05T16:47:03Z"
+  "status": "already-published",
+  "updated_at": "2026-05-19T14:20:11Z"
 }

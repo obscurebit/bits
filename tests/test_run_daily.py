@@ -100,6 +100,76 @@ class RunDailyFallbackTests(unittest.TestCase):
         self._run_in_temp_cwd(exercise)
         self.assertEqual(executed, [("generate_links.py", "counterfeit realities")])
 
+    def test_empty_links_fallback_allows_story_to_continue(self) -> None:
+        explicit_theme = {"name": "parallel dimensions", "story": "s1", "links": "l1"}
+        executed = []
+
+        def fake_run(command, env, timeout=None):
+            script_name = Path(command[1]).name
+            executed.append(script_name)
+            if script_name == "generate_links.py":
+                return self._completed(7)
+            return self._completed(0)
+
+        args = SimpleNamespace(
+            theme_json='{"name":"parallel dimensions"}',
+            date="2026-05-17",
+            skip_story=False,
+            skip_links=False,
+            skip_landing=False,
+        )
+
+        def exercise(root: Path) -> None:
+            with mock.patch.object(run_daily, "parse_args", return_value=args), \
+                 mock.patch.object(run_daily, "load_theme_override", return_value=explicit_theme), \
+                 mock.patch.object(run_daily, "ALLOW_EMPTY_LINKS", True), \
+                 mock.patch.object(run_daily.subprocess, "run", side_effect=fake_run):
+                run_daily.main()
+
+            links_path = root / "docs" / "links" / "posts" / "2026-05-17-daily-links.md"
+            context_path = root / "data" / "discovery" / "story_context" / "2026-05-17-links.json"
+            self.assertTrue(links_path.exists())
+            self.assertTrue(context_path.exists())
+            self.assertIn("intentionally empty", links_path.read_text())
+
+        self._run_in_temp_cwd(exercise)
+        self.assertEqual(executed, ["generate_links.py", "generate_story.py", "update_landing.py"])
+
+    def test_fallback_story_allows_landing_to_continue(self) -> None:
+        explicit_theme = {"name": "parallel dimensions", "story": "s1", "links": "l1"}
+        executed = []
+
+        def fake_run(command, env, timeout=None):
+            script_name = Path(command[1]).name
+            executed.append(script_name)
+            if script_name == "generate_story.py":
+                return self._completed(124)
+            return self._completed(0)
+
+        args = SimpleNamespace(
+            theme_json='{"name":"parallel dimensions"}',
+            date="2026-05-17",
+            skip_story=False,
+            skip_links=False,
+            skip_landing=False,
+        )
+
+        def exercise(root: Path) -> None:
+            with mock.patch.object(run_daily, "parse_args", return_value=args), \
+                 mock.patch.object(run_daily, "load_theme_override", return_value=explicit_theme), \
+                 mock.patch.object(run_daily, "ALLOW_FALLBACK_STORY", True), \
+                 mock.patch.object(run_daily.subprocess, "run", side_effect=fake_run):
+                run_daily.main()
+
+            story_files = list((root / "docs" / "bits" / "posts").glob("2026-05-17-*.md"))
+            self.assertEqual(len(story_files), 1)
+            story_text = story_files[0].read_text()
+            self.assertIn('author: "fallback-local"', story_text)
+            self.assertIn("The Spare Edition", story_text)
+
+        self._run_in_temp_cwd(exercise)
+        self.assertEqual(executed, ["generate_links.py", "generate_story.py", "update_landing.py"])
+
     def test_existing_links_skip_link_generation(self) -> None:
         fallback_theme = {"name": "municipal weirdness", "story": "s2", "links": "l2"}
         executed = []
@@ -138,6 +208,35 @@ class RunDailyFallbackTests(unittest.TestCase):
                 ("update_landing.py", "municipal weirdness", run_daily.LANDING_STEP_TIMEOUT_SECONDS),
             ],
         )
+
+    def test_parse_ai_theme_response_accepts_json_array(self) -> None:
+        content = json.dumps([
+            {
+                "name": "lost maintenance rooms",
+                "story": "service workers discover that a locked utility room has been recording favors, debts, and repairs no resident remembers requesting",
+                "links": "utility rooms, building maintenance logs, local infrastructure archives, janitor manuals",
+            }
+        ])
+
+        themes = run_daily.parse_ai_theme_response(content, limit=2)
+
+        self.assertEqual(themes[0]["name"], "lost maintenance rooms")
+        self.assertIn("maintenance logs", themes[0]["links"])
+
+    def test_ai_theme_candidates_are_inserted_before_rotating_fallbacks(self) -> None:
+        base = ({"name": "parallel dimensions", "story": "s1", "links": "l1"}, "rotating theme")
+        rotating = ({"name": "edge of maps", "story": "s2", "links": "l2"}, "rotating fallback")
+        ai = ({"name": "lost maintenance rooms", "story": "s3", "links": "l3"}, "AI fallback")
+
+        with mock.patch.object(run_daily, "AI_THEME_FALLBACKS", 1), \
+             mock.patch.object(run_daily, "generate_ai_theme_candidates", return_value=[ai]):
+            enriched = run_daily.enrich_theme_candidates_with_ai([base, rotating], run_daily.resolve_target_date("2026-05-17"))
+
+        self.assertEqual([theme["name"] for theme, _label in enriched], [
+            "parallel dimensions",
+            "lost maintenance rooms",
+            "edge of maps",
+        ])
 
     def test_load_themes_normalizes_yaml_date_override_keys(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:

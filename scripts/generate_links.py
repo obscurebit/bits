@@ -91,6 +91,7 @@ DEFAULT_SOURCE_LANE_ORDER = [
     "primary-doc",
     "enthusiast-research",
     "old-web",
+    "reddit-discovery",
     "museum-object",
     "local-history",
     "niche-institution",
@@ -134,6 +135,24 @@ DEFAULT_SOURCE_LANES = {
             '"{theme_name}" "{links_direction}" "personal site"',
             '"{theme_name}" "{primary_term}" "webring" OR "BBS"',
             '"{theme_name}" "{links_direction}" "homepage" -site:github.com',
+        ],
+    },
+    "reddit-discovery": {
+        "subreddits": [
+            "ObscureMedia",
+            "lostmedia",
+            "vintagecomputing",
+            "retrobattlestations",
+            "whatisthisthing",
+            "specializedtools",
+            "urbanexploration",
+            "AskHistorians",
+            "UnresolvedMysteries",
+        ],
+        "query_templates": [
+            'site:reddit.com/r/{subreddit} "{theme_name}" "{primary_term}"',
+            'site:reddit.com/r/{subreddit} "{links_direction}" source OR archive',
+            'site:reddit.com/r/{subreddit} "{primary_term}" manual OR history OR "field notes"',
         ],
     },
     "museum-object": {
@@ -213,6 +232,8 @@ _ddg_disabled_for_run = False
 _ddg_queries_this_run = 0
 _network_failure_count = 0
 _network_disabled_for_run = False
+REDDIT_DISCOVERY_ENABLED = os.environ.get("REDDIT_DISCOVERY_ENABLED", "1").lower() not in {"0", "false", "no"}
+ALLOW_REDDIT_FINAL_LINKS = os.environ.get("ALLOW_REDDIT_FINAL_LINKS", "0").lower() in {"1", "true", "yes"}
 
 
 def get_requests_verify():
@@ -453,12 +474,23 @@ def strip_thinking_block(content: str) -> str:
     return THINKING_BLOCK_RE.sub("", content, count=1).strip()
 
 
+def is_reddit_domain(domain: str) -> bool:
+    normalized = (domain or "").lower().strip().rstrip(".")
+    if normalized.startswith("www."):
+        normalized = normalized[4:]
+    if normalized.startswith("old."):
+        normalized = normalized[4:]
+    return normalized == "reddit.com" or normalized.endswith(".reddit.com")
+
+
 def is_disallowed_domain(domain: str) -> bool:
     domain = domain.lower()
     if domain.startswith("www."):
         domain = domain[4:]
     if any(domain == base or domain.endswith(f".{base}") for base in DISALLOWED_BASE_DOMAINS):
         return True
+    if ALLOW_REDDIT_FINAL_LINKS and is_reddit_domain(domain):
+        return False
     if any(domain == blocked or domain.endswith(f".{blocked}") for blocked in DISALLOWED_LINK_DOMAINS):
         return True
     if domain.endswith(".stackexchange.com"):
@@ -616,6 +648,7 @@ def get_source_lane_catalog() -> dict:
             "seed_urls": _merge_unique_strings(defaults.get("seed_urls", []), configured.get("seed_urls", [])),
             "seed_domains": _merge_unique_strings(defaults.get("seed_domains", []), configured.get("seed_domains", [])),
             "query_templates": _merge_unique_strings(defaults.get("query_templates", []), configured.get("query_templates", [])),
+            "subreddits": _merge_unique_strings(defaults.get("subreddits", []), configured.get("subreddits", [])),
         }
 
     for lane_name, configured in configured_lanes.items():
@@ -624,6 +657,7 @@ def get_source_lane_catalog() -> dict:
                 "seed_urls": _merge_unique_strings(configured.get("seed_urls", [])),
                 "seed_domains": _merge_unique_strings(configured.get("seed_domains", [])),
                 "query_templates": _merge_unique_strings(configured.get("query_templates", [])),
+                "subreddits": _merge_unique_strings(configured.get("subreddits", [])),
             }
 
     lane_order = _merge_unique_strings(
@@ -662,6 +696,7 @@ def get_theme_discovery_plan(theme: dict) -> dict:
             "seed_urls": _merge_unique_strings(override.get("seed_urls", []), base.get("seed_urls", [])),
             "seed_domains": _merge_unique_strings(override.get("seed_domains", []), base.get("seed_domains", [])),
             "query_templates": _merge_unique_strings(override.get("query_templates", []), base.get("query_templates", [])),
+            "subreddits": _merge_unique_strings(override.get("subreddits", []), base.get("subreddits", [])),
         }
     return {
         "preferred_lanes": preferred_lanes,
@@ -849,7 +884,7 @@ def looks_off_theme(candidate: "LinkCandidate", theme: dict) -> bool:
     return generic_hits < 2
 
 
-def build_lane_query(template: str, theme: dict, lane_name: str) -> str:
+def build_lane_query(template: str, theme: dict, lane_name: str, **extra_values: str) -> str:
     """Render a lane query template with theme-specific terms."""
     theme_name = theme.get("name", "")
     links_direction = theme.get("links", theme_name)
@@ -860,14 +895,16 @@ def build_lane_query(template: str, theme: dict, lane_name: str) -> str:
     theme_terms = " ".join(terms[:4]) or theme_name
     lane_label = lane_name.replace("-", " ")
     try:
-        return template.format(
-            theme_name=theme_name,
-            links_direction=direction_focus,
-            primary_term=primary_term,
-            secondary_term=secondary_term,
-            theme_terms=theme_terms,
-            lane_name=lane_label,
-        )
+        values = {
+            "theme_name": theme_name,
+            "links_direction": direction_focus,
+            "primary_term": primary_term,
+            "secondary_term": secondary_term,
+            "theme_terms": theme_terms,
+            "lane_name": lane_label,
+        }
+        values.update(extra_values)
+        return template.format(**values)
     except KeyError:
         return template
 
@@ -1142,6 +1179,173 @@ def search_marginalia(query: str, max_results: int = 8) -> List[str]:
     except Exception as e:
         print(f"      ⚠️  Marginalia fallback failed: {e}")
         return []
+
+
+def is_reddit_thread_url(url: str) -> bool:
+    try:
+        parsed = urlparse(url)
+    except Exception:
+        return False
+    if not is_reddit_domain(parsed.netloc):
+        return False
+    path = parsed.path.lower()
+    return bool(re.search(r"/r/[^/]+/comments/[a-z0-9]+", path))
+
+
+def normalize_reddit_fetch_url(url: str) -> str:
+    parsed = urlparse(url)
+    netloc = parsed.netloc.lower()
+    if netloc in {"reddit.com", "www.reddit.com"}:
+        netloc = "old.reddit.com"
+    return urlunparse((parsed.scheme or "https", netloc, parsed.path, "", parsed.query, ""))
+
+
+def unwrap_reddit_outbound_url(url: str) -> str:
+    parsed = urlparse(url)
+    if is_reddit_domain(parsed.netloc) and parsed.path.startswith("/out"):
+        outbound = parse_qs(parsed.query).get("url", [""])[0]
+        if outbound:
+            return unquote(outbound)
+    return url
+
+
+def extract_reddit_phrases(text: str, limit: int = 6) -> List[str]:
+    """Extract durable names/phrases from a Reddit thread to search outside Reddit."""
+    candidates: List[str] = []
+    seen = set()
+    cleaned = re.sub(r"\s+", " ", text or " ").strip()
+    cleaned = re.sub(r"\b(?:comments|reddit|subreddit|upvote|downvote|login|sign up)\b", " ", cleaned, flags=re.I)
+
+    patterns = [
+        r'"([^"\n]{5,80})"',
+        r"\b([A-Z][A-Za-z0-9&'./-]+(?:\s+[A-Z][A-Za-z0-9&'./-]+){1,5})\b",
+    ]
+    for pattern in patterns:
+        for match in re.finditer(pattern, cleaned):
+            phrase = re.sub(r"\s+", " ", match.group(1)).strip(" -:;,.")
+            if len(phrase) < 6 or len(phrase) > 90:
+                continue
+            if phrase.lower() in {
+                "reddit",
+                "old reddit",
+                "log in",
+                "sign up",
+                "comments",
+                "ask historians",
+            }:
+                continue
+            key = phrase.lower()
+            if key in seen:
+                continue
+            seen.add(key)
+            candidates.append(phrase)
+            if len(candidates) >= limit:
+                return candidates
+    return candidates
+
+
+def scrape_reddit_thread_for_leads(thread_url: str, theme: dict, max_outbound: int = 8, max_phrase_searches: int = 3) -> List[str]:
+    """Use Reddit as a scouting surface, returning non-Reddit URLs worth scoring normally."""
+    if _network_disabled_for_run:
+        return []
+
+    fetch_url = normalize_reddit_fetch_url(thread_url)
+    try:
+        response = request_with_retries(
+            build_requests_session(headers={"User-Agent": random.choice(DDG_USER_AGENTS)}),
+            "get",
+            fetch_url,
+            retry_label="reddit scout",
+            timeout=SEARCH_TIMEOUT,
+        )
+        if response.status_code != 200:
+            return []
+    except Exception as e:
+        print(f"      ⚠️  Reddit scout failed for {thread_url[:70]}...: {e}")
+        return []
+
+    soup = BeautifulSoup(response.text, "html.parser")
+    outbound: List[str] = []
+    seen = set()
+    for link in soup.find_all("a", href=True):
+        href = link.get("href", "").strip()
+        if not href:
+            continue
+        absolute = requests.compat.urljoin(fetch_url, href)
+        absolute = unwrap_reddit_outbound_url(absolute)
+        if not absolute.startswith("http"):
+            continue
+        parsed = urlparse(absolute)
+        if is_reddit_domain(parsed.netloc):
+            continue
+        if is_disallowed_domain(parsed.netloc) or looks_like_bad_url_shape(absolute, link.get_text(" ", strip=True)):
+            continue
+        normalized = normalize_url(absolute)
+        if normalized in seen:
+            continue
+        seen.add(normalized)
+        outbound.append(absolute)
+        if len(outbound) >= max_outbound:
+            break
+
+    text_parts = []
+    for selector in ["title", "h1", "a.title", ".usertext-body", ".md", "p"]:
+        for node in soup.select(selector)[:12]:
+            text = node.get_text(" ", strip=True)
+            if text:
+                text_parts.append(text)
+    phrases = extract_reddit_phrases(" ".join(text_parts), limit=max_phrase_searches)
+
+    searched: List[str] = []
+    for phrase in phrases[:max_phrase_searches]:
+        query = f'"{phrase}" "{theme.get("links", theme.get("name", ""))}" -site:reddit.com -site:wikipedia.org'
+        print(f"      Reddit phrase search: {phrase[:70]}")
+        searched.extend(search_marginalia(query, max_results=3))
+
+    return dedupe_candidate_urls(outbound + searched, limit=max_outbound + (max_phrase_searches * 3))
+
+
+def discover_reddit_leads(theme: dict, lane_plan: dict) -> List[str]:
+    """Search Reddit for leads, then return only external candidate URLs."""
+    if not REDDIT_DISCOVERY_ENABLED:
+        print("\n  Reddit discovery disabled")
+        return []
+    if _network_disabled_for_run:
+        print("\n  ⚠️  Skipping Reddit discovery; fresh web discovery disabled for run")
+        return []
+
+    subreddits = lane_plan.get("subreddits", [])[:8]
+    templates = lane_plan.get("query_templates", [])[:3]
+    if not subreddits or not templates:
+        return []
+
+    print("\n  Lane: reddit-discovery")
+    thread_urls: List[str] = []
+    for index, subreddit in enumerate(subreddits):
+        template = templates[index % len(templates)]
+        query = build_lane_query(template, theme, "reddit-discovery", subreddit=subreddit)
+        print(f"    Reddit scout query: {query[:100]}")
+        for url in search_marginalia(query, max_results=4):
+            if is_reddit_thread_url(url):
+                thread_urls.append(url)
+        if len(thread_urls) >= 8:
+            break
+
+    thread_urls = _merge_unique_strings(thread_urls)[:8]
+    if not thread_urls:
+        print("    Reddit scout found 0 usable threads")
+        return []
+
+    print(f"    Reddit scout found {len(thread_urls)} thread(s); extracting outside leads")
+    leads: List[str] = []
+    for thread_url in thread_urls:
+        leads.extend(scrape_reddit_thread_for_leads(thread_url, theme, max_outbound=5, max_phrase_searches=2))
+        if len(dedupe_candidate_urls(leads)) >= 18:
+            break
+
+    clean = dedupe_candidate_urls(leads, limit=18)
+    print(f"    Reddit discovery yielded {len(clean)} external candidate URLs")
+    return clean
 
 
 def generate_backup_domain_ideas(theme_name: str, links_direction: str) -> List[str]:
@@ -1588,7 +1792,11 @@ def get_candidate_urls(theme: dict, registry: Optional[LinkRegistry] = None) -> 
         if _network_disabled_for_run:
             print("\n  ⚠️  Network looks unavailable; stopping fresh lane discovery")
             break
-        lane_urls = discover_lane_urls(theme, lane_name, plan["lane_plans"].get(lane_name, {}))
+        lane_plan = plan["lane_plans"].get(lane_name, {})
+        if lane_name == "reddit-discovery":
+            lane_urls = discover_reddit_leads(theme, lane_plan)
+        else:
+            lane_urls = discover_lane_urls(theme, lane_name, lane_plan)
         all_urls.extend(lane_urls)
 
     # 2. Ask the LLM for a few extra search angles, but keep it inside lane-first search.
@@ -1596,9 +1804,14 @@ def get_candidate_urls(theme: dict, registry: Optional[LinkRegistry] = None) -> 
         print("\n  ⚠️  Skipping live search expansion; fresh web discovery disabled for run")
     else:
         print("\n  LLM search angles...")
-        _, llm_queries, llm_direct_urls = get_llm_research_strategy(theme)
+        llm_domain_ideas, llm_queries, llm_direct_urls = get_llm_research_strategy(theme)
         all_urls.extend(filter_llm_direct_urls(llm_direct_urls, theme))
-        for query in llm_queries[:3]:
+        expanded_queries = list(llm_queries[:3])
+        for idea in llm_domain_ideas[:2]:
+            query = normalize_search_query(idea)
+            if query and query not in expanded_queries:
+                expanded_queries.append(query)
+        for query in expanded_queries[:5]:
             print(f"    Angle: {query[:100]}")
             all_urls.extend(search_marginalia(query, max_results=4))
 
@@ -1607,6 +1820,8 @@ def get_candidate_urls(theme: dict, registry: Optional[LinkRegistry] = None) -> 
     if len(all_urls) < 25 and not _network_disabled_for_run:
         print(f"\n  ⚠️  Only {len(all_urls)} candidates from lane discovery; widening within trusted lanes")
         for lane_name in plan["preferred_lanes"][:3]:
+            if lane_name == "reddit-discovery":
+                continue
             lane_plan = plan["lane_plans"].get(lane_name, {})
             for query in lane_plan.get("query_templates", [])[:2]:
                 rendered = build_lane_query(query, theme, lane_name)
@@ -2581,7 +2796,11 @@ def main():
             )
     print(f"Selection pool size from corpus: {len(selection_pool)}")
     selected = select_best_links(selection_pool, theme, count=7, corpus=corpus)
-    if len(selected) < MINIMUM_SELECTED_LINKS and os.environ.get("ALLOW_CROSS_THEME_CORPUS_LINKS") == "1":
+    if (
+        len(selected) < MINIMUM_SELECTED_LINKS
+        and os.environ.get("ALLOW_CROSS_THEME_CORPUS_LINKS") == "1"
+        and os.environ.get("ALLOW_EMERGENCY_OFF_THEME_LINKS") == "1"
+    ):
         selected = select_emergency_corpus_links(selection_pool, selected, count=MINIMUM_SELECTED_LINKS)
     
     if not selected:

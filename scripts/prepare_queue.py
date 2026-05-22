@@ -124,7 +124,16 @@ def prepare_date(target_date: date, force: bool = False) -> int:
     # Queue prep prioritizes reliability and bounded runtime over generating multiple drafts.
     env.setdefault("STORY_CANDIDATES", "1")
     env.setdefault("STORY_MODEL_ROUTING", "0")
-    env.setdefault("OPENAI_REQUEST_TIMEOUT", "90")
+    env.setdefault("OPENAI_REQUEST_TIMEOUT", "240")
+    env.setdefault("OPENAI_COMPLETION_ATTEMPTS", "3")
+    env.setdefault("OPENAI_RETRY_BACKOFF_SECONDS", "20")
+    env.setdefault("RUN_DAILY_STORY_TIMEOUT_SECONDS", "1200")
+    env.setdefault("ALLOW_EMPTY_LINKS", "1")
+    env.setdefault("ALLOW_FALLBACK_STORY", "1")
+    env.setdefault("AI_THEME_FALLBACKS", "3")
+    env.setdefault("AI_THEME_TIMEOUT_SECONDS", "60")
+    env.setdefault("AI_STORY_VARIETY", "1")
+    env.setdefault("AI_STORY_VARIETY_TIMEOUT_SECONDS", "45")
     env.setdefault("ALLOW_CROSS_THEME_CORPUS_LINKS", "1")
     cmd = [
         sys.executable,

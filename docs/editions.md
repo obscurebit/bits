@@ -43,6 +43,17 @@ description: Browse previous daily editions of Obscure Bit
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>
   </a>
+  <a href="posts/2026-05-17-edition-108/" class="archive-item">
+    <div class="archive-item__number">108</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">May 17, 2026</span>
+      <h3 class="archive-item__title">Edition #108</h3>
+      <p class="archive-item__excerpt">Lost Civilizations · The smell of burnt plastic clings to the customs queue, sharp beneath the greasy perfume of trucker coffee. You lean against the chipped linoleum counter, your...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Lost Civilizations</span><span class="archive-item__genre" title="Quiet literary realism with one impossible pressure point">Quiet literary realism with one impossible pressure point</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-05-16-edition-107/" class="archive-item">
     <div class="archive-item__number">107</div>
     <div class="archive-item__content">
@@ -54,6 +65,39 @@ description: Browse previous daily editions of Obscure Bit
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>
   </a>
+  <a href="posts/2026-05-15-edition-106/" class="archive-item">
+    <div class="archive-item__number">106</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">May 15, 2026</span>
+      <h3 class="archive-item__title">Edition #106</h3>
+      <p class="archive-item__excerpt">Emergent Intelligence · Rule 14 is taped to the corkboard behind the Xerox machine, its letters smudged from decades of carbon paper and thumbtacks. *The bell is for emergencies only....</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Emergent Intelligence</span><span class="archive-item__genre" title="Character study where the strange thing stays partly offstage">Character study where the strange thing stays partly offstage</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
+  <a href="posts/2026-05-14-edition-105/" class="archive-item">
+    <div class="archive-item__number">105</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">May 14, 2026</span>
+      <h3 class="archive-item__title">Edition #105</h3>
+      <p class="archive-item__excerpt">Reality Glitches · A bus depot vending machine alcove is not a place but a compromise. The notice taped above the machine—peeling at the edges, ink smudged by decades of greasy fi...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Reality Glitches</span><span class="archive-item__genre" title="Satire of systems, credentials, or institutional language">Satire of systems</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
+  <a href="posts/2026-05-13-edition-104/" class="archive-item">
+    <div class="archive-item__number">104</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">May 13, 2026</span>
+      <h3 class="archive-item__title">Edition #104</h3>
+      <p class="archive-item__excerpt">Abandoned Stations · She kept the receipt spike in her apron pocket, bent into a spiral during a slow afternoon in 1937, when the hotel still had enough guests to justify a night cl...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Abandoned Stations</span><span class="archive-item__genre" title="Ghost story energy without old haunted-house defaults">Ghost story energy without old haunted-house defaults</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-05-12-edition-103/" class="archive-item">
     <div class="archive-item__number">103</div>
     <div class="archive-item__content">
@@ -61,6 +105,17 @@ description: Browse previous daily editions of Obscure Bit
       <h3 class="archive-item__title">Edition #103</h3>
       <p class="archive-item__excerpt">Digital Archaeology · *Posted Notice: All unclaimed devices must be wiped before disposal. Violators subject to disciplinary review.*</p>
       <div class="archive-item__tags"><span class="archive-item__theme">Digital Archaeology</span><span class="archive-item__genre" title="Moral fable disguised as a very specific modern problem">Moral fable disguised as a very specific modern problem</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
+  <a href="posts/2026-05-11-edition-102/" class="archive-item">
+    <div class="archive-item__number">102</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">May 11, 2026</span>
+      <h3 class="archive-item__title">Edition #102</h3>
+      <p class="archive-item__excerpt">Synthetic Life · Violation Log: 04/15/2023 – 22 tickets issued. Note: All proceeds directed to maintenance fund as per Agreement §7.2.</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Synthetic Life</span><span class="archive-item__genre" title="Ghost story energy without old haunted-house defaults">Ghost story energy without old haunted-house defaults</span></div>
     </div>
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>
@@ -105,6 +160,17 @@ description: Browse previous daily editions of Obscure Bit
       <h3 class="archive-item__title">Edition #098</h3>
       <p class="archive-item__excerpt">Counterfeit Realities · The woman arrived late, her heels slapping the linoleum like a metronome set to panic. I knew that sound—the ferry to Vashon left at 3:14, and the cafeteria doo...</p>
       <div class="archive-item__tags"><span class="archive-item__theme">Counterfeit Realities</span><span class="archive-item__genre" title="Workplace comedy with a speculative inconvenience">Workplace comedy with a speculative inconvenience</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
+  <a href="posts/2026-05-06-edition-097/" class="archive-item">
+    <div class="archive-item__number">097</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">May 06, 2026</span>
+      <h3 class="archive-item__title">Edition #097</h3>
+      <p class="archive-item__excerpt">Forgotten Technology · The receipt began with a single line item: *Prescription #1422 – 30mg, 30 tabs*. That’s all it should’ve had. But halfway through my lunch break, the paper trem...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Forgotten Technology</span><span class="archive-item__genre" title="Domestic drama bent by one technological or metaphysical fact">Domestic drama bent by one technological or metaphysical fact</span></div>
     </div>
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>

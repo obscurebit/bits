@@ -6,6 +6,7 @@ global:
     - primary-doc
     - enthusiast-research
     - old-web
+    - reddit-discovery
     - museum-object
     - local-history
     - niche-institution
@@ -49,6 +50,26 @@ global:
         - '"{theme_name}" "{links_direction}" "personal site"'
         - '"{theme_name}" "{primary_term}" "homepage" -site:github.com'
         - '"{theme_name}" "{primary_term}" BBS OR webring'
+
+    reddit-discovery:
+      # Reddit is used as a scout, not a normal publishable source: threads are
+      # searched for names, incidents, and outbound links, then final candidates
+      # still go through the normal domain and quality filters.
+      subreddits:
+        - "ObscureMedia"
+        - "lostmedia"
+        - "vintagecomputing"
+        - "retrobattlestations"
+        - "whatisthisthing"
+        - "specializedtools"
+        - "urbanexploration"
+        - "AskHistorians"
+        - "UnresolvedMysteries"
+        - "ArtefactPorn"
+      query_templates:
+        - 'site:reddit.com/r/{subreddit} "{theme_name}" "{primary_term}"'
+        - 'site:reddit.com/r/{subreddit} "{links_direction}" source OR archive'
+        - 'site:reddit.com/r/{subreddit} "{primary_term}" manual OR history OR "field notes"'
 
     museum-object:
       seed_domains:

@@ -1,9 +1,12 @@
 {
   "date": "2026-05-14",
-  "exit_code": 1,
-  "links_file": "",
-  "status": "failed",
-  "story_file": "",
-  "theme": "",
-  "updated_at": "2026-05-12T09:53:53Z"
+  "exit_code": 0,
+  "links_file": "docs/links/posts/2026-05-14-daily-links.md",
+  "published_at": "2026-05-20T23:50:58Z",
+  "published_links_file": "docs/links/posts/2026-05-14-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-05-14-saved-fingerprint.md",
+  "status": "published",
+  "story_file": "docs/bits/posts/2026-05-14-saved-fingerprint.md",
+  "theme": "reality glitches",
+  "updated_at": "2026-05-20T23:50:58Z"
 }

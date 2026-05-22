@@ -38,6 +38,8 @@ OPENAI_REQUEST_TIMEOUT = max(30, int(os.environ.get("OPENAI_REQUEST_TIMEOUT", "1
 OPENAI_MAX_RETRIES = max(0, int(os.environ.get("OPENAI_MAX_RETRIES", "2")))
 OPENAI_COMPLETION_ATTEMPTS = max(1, int(os.environ.get("OPENAI_COMPLETION_ATTEMPTS", "3")))
 OPENAI_RETRY_BACKOFF_SECONDS = max(1, int(os.environ.get("OPENAI_RETRY_BACKOFF_SECONDS", "15")))
+AI_STORY_VARIETY = os.environ.get("AI_STORY_VARIETY", "0").lower() in {"1", "true", "yes"}
+AI_STORY_VARIETY_TIMEOUT_SECONDS = max(15, int(os.environ.get("AI_STORY_VARIETY_TIMEOUT_SECONDS", "45")))
 
 # Paths to prompt files
 PROMPTS_DIR = Path(__file__).parent.parent / "prompts"
@@ -471,6 +473,130 @@ def format_link_context(link_context: dict) -> str:
     return "\n".join(parts)
 
 
+def normalize_ai_variety(raw: dict) -> Optional[dict]:
+    if not isinstance(raw, dict):
+        return None
+
+    fields = {}
+    for key in ["person", "place", "object", "social_texture", "formal_twist"]:
+        value = str(raw.get(key, "")).strip()
+        if value:
+            fields[key] = value[:220]
+
+    avoid_raw = raw.get("avoid", [])
+    avoid = []
+    if isinstance(avoid_raw, list):
+        avoid = [str(item).strip()[:120] for item in avoid_raw if str(item).strip()]
+    elif isinstance(avoid_raw, str) and avoid_raw.strip():
+        avoid = [part.strip()[:120] for part in avoid_raw.split(",") if part.strip()]
+
+    if avoid:
+        fields["avoid"] = avoid[:6]
+
+    required = {"person", "place", "object"}
+    if not required.issubset(fields):
+        return None
+    return fields
+
+
+def parse_ai_variety_response(content: str) -> Optional[dict]:
+    try:
+        parsed = json.loads(content)
+    except json.JSONDecodeError:
+        start = content.find("{")
+        end = content.rfind("}")
+        if start < 0 or end <= start:
+            return None
+        try:
+            parsed = json.loads(content[start:end + 1])
+        except json.JSONDecodeError:
+            return None
+    return normalize_ai_variety(parsed)
+
+
+def format_ai_variety_brief(variety: Optional[dict]) -> str:
+    if not variety:
+        return ""
+
+    parts = ["AI VARIETY BRIEF (use as fresh one-day specificity; do not mention this brief):"]
+    if variety.get("person"):
+        parts.append(f"- Fresh person detail: {variety['person']}")
+    if variety.get("place"):
+        parts.append(f"- Fresh place detail: {variety['place']}")
+    if variety.get("object"):
+        parts.append(f"- Fresh object detail: {variety['object']}")
+    if variety.get("social_texture"):
+        parts.append(f"- Fresh social texture: {variety['social_texture']}")
+    if variety.get("formal_twist"):
+        parts.append(f"- Fresh formal move: {variety['formal_twist']}")
+    if variety.get("avoid"):
+        parts.append(f"- Specifically avoid today: {', '.join(variety['avoid'])}")
+    return "\n".join(parts)
+
+
+def generate_ai_variety_brief(
+    client: OpenAI,
+    theme: dict,
+    style: dict,
+    target_date: Optional[datetime] = None,
+) -> Optional[dict]:
+    if not AI_STORY_VARIETY:
+        return None
+
+    date_label = (target_date or datetime.now()).strftime("%Y-%m-%d")
+    recent_context = format_recent_story_context(collect_recent_story_context(target_date))
+    link_context = format_link_context(load_daily_link_context(target_date))
+    prompt = f"""Create one freshness brief for today's Obscure Bit story.
+
+Date: {date_label}
+Theme: {json.dumps(theme, indent=2)}
+Current deterministic style: {json.dumps(style, indent=2, default=str)}
+
+Return ONLY one JSON object with these keys:
+- person: one fresh protagonist subtype or human detail, not a full plot
+- place: one specific place detail or room detail
+- object: one concrete focus object that is not iconic or over-symbolic
+- social_texture: one grounded social pressure, ritual, rule, job friction, or local custom
+- formal_twist: one light formal/voice nudge
+- avoid: array of 3-6 recent-feeling motifs, props, settings, or story moves to avoid
+
+Rules:
+- Keep each value compact and usable inside a fiction prompt.
+- Prefer ordinary but underused material: local services, tools, forms, rooms, errands, family logistics, minor public systems.
+- Do not use tea cups, archives, mysterious signals, generic devices, chosen-one roles, laboratories, or cosmic exposition.
+- Do not invent proper nouns that sound like fake lore.
+"""
+    if recent_context:
+        prompt += f"\n\n{recent_context}"
+    if link_context:
+        prompt += f"\n\n{link_context}"
+
+    try:
+        response = client.chat.completions.create(
+            model=MODEL,
+            messages=[
+                {"role": "system", "content": "You add fresh, grounded specificity to a story prompt. Return valid JSON only."},
+                {"role": "user", "content": prompt},
+            ],
+            temperature=0.65,
+            top_p=0.9,
+            max_tokens=500,
+            timeout=AI_STORY_VARIETY_TIMEOUT_SECONDS,
+        )
+    except Exception as exc:
+        print(f"⚠️  AI story variety skipped: {exc}")
+        return None
+
+    content = clean_story_response(response.choices[0].message.content or "")
+    variety = parse_ai_variety_response(content)
+    if not variety:
+        print("⚠️  AI story variety returned no usable brief")
+        return None
+
+    print(f"AI story variety: {json.dumps(variety, indent=2)}")
+    return variety
+
+
 def select_candidate_emphases(target_date: Optional[datetime], count: int) -> list[str]:
     rng = random.Random(get_daily_seed(target_date) ^ 0x5F3759DF)
     options = CANDIDATE_EMPHASES[:]
@@ -484,7 +610,12 @@ def select_candidate_emphases(target_date: Optional[datetime], count: int) -> li
     return selected
 
 
-def build_story_prompt(theme: dict, style: dict, target_date: Optional[datetime] = None) -> tuple[str, str]:
+def build_story_prompt(
+    theme: dict,
+    style: dict,
+    target_date: Optional[datetime] = None,
+    ai_variety: Optional[dict] = None,
+) -> tuple[str, str]:
     """Generate a unique prompt for today's story based on theme + randomized style modifiers.
     
     Returns (prompt_text, genre_label) so genre can be stored in frontmatter.
@@ -532,6 +663,11 @@ def build_story_prompt(theme: dict, style: dict, target_date: Optional[datetime]
         if "banned_words" in style:
             words = ", ".join(style["banned_words"])
             parts.append(f"- BANNED WORDS (do not use these): {words}")
+        parts.append("")
+
+    variety_brief = format_ai_variety_brief(ai_variety)
+    if variety_brief:
+        parts.append(variety_brief)
         parts.append("")
 
     parts.append("NOVELTY RULES:")
@@ -707,8 +843,9 @@ def generate_story(theme: dict, target_date: Optional[datetime] = None) -> tuple
     
     system_prompt = load_system_prompt()
     style = select_style_modifiers(target_date)
+    ai_variety = generate_ai_variety_brief(client, theme, style, target_date)
     writer_model, routing_reason = select_story_model(theme, style)
-    user_prompt, genre = build_story_prompt(theme, style, target_date)
+    user_prompt, genre = build_story_prompt(theme, style, target_date, ai_variety)
     
     print(f"System prompt loaded from: {SYSTEM_PROMPT_FILE}")
     print(f"Writer model selected: {writer_model} ({routing_reason})")

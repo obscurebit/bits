@@ -37,6 +37,15 @@ description: Daily curated discoveries from the hidden corners of the web
     <span class="archive-item__category">3 Links</span>
     <span class="archive-item__arrow">→</span>
   </a>
+  <a href="posts/2026-05-17-daily-links/" class="archive-item archive-item--links">
+    <div class="archive-item__number">108</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">May 17, 2026</span>
+      <div class="archive-item__tags"><span class="archive-item__theme">Lost Civilizations</span></div>
+    </div>
+    <span class="archive-item__category">0 Links</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-05-16-daily-links/" class="archive-item archive-item--links">
     <div class="archive-item__number">107</div>
     <div class="archive-item__content">
@@ -46,6 +55,33 @@ description: Daily curated discoveries from the hidden corners of the web
     <span class="archive-item__category">3 Links</span>
     <span class="archive-item__arrow">→</span>
   </a>
+  <a href="posts/2026-05-15-daily-links/" class="archive-item archive-item--links">
+    <div class="archive-item__number">106</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">May 15, 2026</span>
+      <div class="archive-item__tags"><span class="archive-item__theme">Emergent Intelligence</span></div>
+    </div>
+    <span class="archive-item__category">0 Links</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
+  <a href="posts/2026-05-14-daily-links/" class="archive-item archive-item--links">
+    <div class="archive-item__number">105</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">May 14, 2026</span>
+      <div class="archive-item__tags"><span class="archive-item__theme">Reality Glitches</span></div>
+    </div>
+    <span class="archive-item__category">0 Links</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
+  <a href="posts/2026-05-13-daily-links/" class="archive-item archive-item--links">
+    <div class="archive-item__number">104</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">May 13, 2026</span>
+      <div class="archive-item__tags"><span class="archive-item__theme">Abandoned Stations</span></div>
+    </div>
+    <span class="archive-item__category">0 Links</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-05-12-daily-links/" class="archive-item archive-item--links">
     <div class="archive-item__number">103</div>
     <div class="archive-item__content">
@@ -53,6 +89,15 @@ description: Daily curated discoveries from the hidden corners of the web
       <div class="archive-item__tags"><span class="archive-item__theme">Digital Archaeology</span></div>
     </div>
     <span class="archive-item__category">3 Links</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
+  <a href="posts/2026-05-11-daily-links/" class="archive-item archive-item--links">
+    <div class="archive-item__number">102</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">May 11, 2026</span>
+      <div class="archive-item__tags"><span class="archive-item__theme">Synthetic Life</span></div>
+    </div>
+    <span class="archive-item__category">0 Links</span>
     <span class="archive-item__arrow">→</span>
   </a>
   <a href="posts/2026-05-10-daily-links/" class="archive-item archive-item--links">
@@ -89,6 +134,15 @@ description: Daily curated discoveries from the hidden corners of the web
       <div class="archive-item__tags"><span class="archive-item__theme">Counterfeit Realities</span></div>
     </div>
     <span class="archive-item__category">3 Links</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
+  <a href="posts/2026-05-06-daily-links/" class="archive-item archive-item--links">
+    <div class="archive-item__number">097</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">May 06, 2026</span>
+      <div class="archive-item__tags"><span class="archive-item__theme">Forgotten Technology</span></div>
+    </div>
+    <span class="archive-item__category">0 Links</span>
     <span class="archive-item__arrow">→</span>
   </a>
   <a href="posts/2026-05-04-daily-links/" class="archive-item archive-item--links">
