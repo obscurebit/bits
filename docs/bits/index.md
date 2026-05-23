@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-05-23-the-mirror-and-the-misfiled-oath/" class="archive-item">
+    <div class="archive-item__number">114</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">May 23, 2026</span>
+      <h3 class="archive-item__title">The Mirror and the Misfiled Oath</h3>
+      <p class="archive-item__excerpt">The dust in the archive tastes like powdered time, bitter on the back of your tongue as you sort donated paperbacks by spine width. Your cart wobbles,...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Memory Manipulation</span><span class="archive-item__genre" title="Tender romance complicated by one impossible condition">Tender romance complicated by one impossible condition</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-05-21-dock-12/" class="archive-item">
     <div class="archive-item__number">112</div>
     <div class="archive-item__content">

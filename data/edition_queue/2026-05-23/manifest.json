@@ -1,9 +1,12 @@
 {
   "date": "2026-05-23",
-  "exit_code": 1,
+  "exit_code": 0,
   "links_file": "docs/links/posts/2026-05-23-daily-links.md",
-  "status": "failed",
-  "story_file": "",
-  "theme": "maintenance myths",
-  "updated_at": "2026-05-21T10:55:54Z"
+  "published_at": "2026-05-23T09:38:39Z",
+  "published_links_file": "docs/links/posts/2026-05-23-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-05-23-the-mirror-and-the-misfiled-oath.md",
+  "status": "published",
+  "story_file": "docs/bits/posts/2026-05-23-the-mirror-and-the-misfiled-oath.md",
+  "theme": "memory manipulation",
+  "updated_at": "2026-05-23T08:27:38Z"
 }

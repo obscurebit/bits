@@ -159,6 +159,11 @@
     "last_selected": "2026-03-03",
     "selected_count": 1
   },
+  "chase.com": {
+    "last_seen": "2026-05-25",
+    "last_selected": "",
+    "selected_count": 0
+  },
   "chem.uci.edu": {
     "last_seen": "",
     "last_selected": "2026-01-30",
@@ -175,7 +180,7 @@
     "selected_count": 2
   },
   "collection.sciencemuseumgroup.org.uk": {
-    "last_seen": "2026-05-05",
+    "last_seen": "2026-05-26",
     "last_selected": "",
     "selected_count": 0
   },
@@ -383,6 +388,11 @@
     "last_seen": "2026-04-26",
     "last_selected": "2026-04-29",
     "selected_count": 1
+  },
+  "johnjayrec.nyc": {
+    "last_seen": "2026-05-26",
+    "last_selected": "",
+    "selected_count": 0
   },
   "johnkreiter.com": {
     "last_seen": "",
@@ -815,7 +825,7 @@
     "selected_count": 1
   },
   "swling.com": {
-    "last_seen": "2026-05-01",
+    "last_seen": "2026-05-25",
     "last_selected": "2026-05-01",
     "selected_count": 2
   },

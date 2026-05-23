@@ -1,0 +1,81 @@
+---
+date: 2026-05-25
+title: "The Copyist’s Dilemma"
+description: "A daily AI-generated story exploring speculative fiction"
+author: "https://integrate.api.nvidia.com/v1 / nvidia/llama-3.3-nemotron-super-49b-v1.5"
+theme: "counterfeit realities"
+genre: "Ghost story energy without old haunted-house defaults"
+---
+
+# The Copyist’s Dilemma
+
+He never lied, except when the truth wouldn’t pay the rent.  
+
+At the food bank, he weighed stories like flour. Mrs. O’Reilly’s cough that “came back” every Thursday. The Torres boy’s shoe size, which grew two sizes monthly. He didn’t care. He stamped their intake forms, the ink smudging in the same place every time. The supervisor called this diligence. He called it avoiding eye contact.  
+
+At the copy shop, the bell above the door clanged like a dinner chime. Lena ran the place, her hair pinned up with a pencil that stayed sharper than her tongue. “The usual?” she’d ask, nodding at the stack of unsigned forms he carried like a bad conscience. He’d nod. She’d feed them to the mimeograph, its teeth chewing out perfect duplicates.  
+
+The copies didn’t match the originals. Not exactly. The ink bled where it shouldn’t. Names curved like they’d been written in a tremor. But the relief office accepted them. The grocery co-op stamped them. People came back with smiles too bright, saying, “You wouldn’t believe how much easier it is now.” He didn’t ask what “now” meant.  
+
+Then the duplicates started showing up.  
+
+Not at the food bank. At the copy shop. A man in a frayed suit, Lena’s forms clutched in his hand, except his face was wax where hers was sharp. A woman with Mrs. O’Reilly’s cough, but her shadow had no edges. They didn’t speak. They just stood by the counter, waiting. Lena ignored them. “New policy,” she muttered. “Charge extra for existential dread.”  
+
+He laughed. It came out a cough.  
+
+The supervisor at the food bank caught him staring at a duplicate Torres boy, who was now two sizes smaller than yesterday. “Curiosity’s a luxury,” she said, her voice like a ruler. “Obedience pays the bills.” He nodded, but that night, he didn’t take the forms to Lena.  
+
+They piled up.  
+
+The duplicates followed.  
+
+At his apartment, they pooled in the hallway, their eyes like smudged paper. They didn’t speak. They just waited. He stopped sleeping.  
+
+On the third night, Lena showed up. The real one. “You’re causing a paper jam,” she said. “Those things aren’t people. They’re what’s left when you copy a lie too many times.”  
+
+He held up a form. Unsigned. “Make them stop.”  
+
+She shrugged. “Refuse to copy another. See what happens.”  
+
+He tried.  
+
+The next morning, the duplicates were gone. But so were the originals. Mrs. O’Reilly didn’t come. The Torres boy’s mother wept into an empty stroller. The supervisor handed him a termination notice. “Obedience *was* the job,” she said.  
+
+At the copy shop, Lena handed him a form. Blank. “Yours?” he asked.  
+
+“Nah,” she said. “It’s for the guy who thinks he can quit.”  
+
+He stared.  
+
+She leaned forward, the pencil in her hair glinting. “You ever tried to copy a refusal? It comes out looking like a threat.”  
+
+He didn’t sign.  
+
+The form sat on the counter, untouched.  
+
+After a while, Lena turned off the mimeograph. The bulb above the counter buzzed, then died.  
+
+He walked out.  
+
+The street was empty.  
+
+No duplicates.  
+
+No originals.  
+
+Just the sound of a pencil snapping somewhere behind him.  
+
+---  
+
+*The funny sentence*: “Lena’s pencil was so sharp, it once cut a customer’s excuse for being late.”
+
+---
+
+<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem;">
+  <button class="share-btn" data-url="{% raw %}{{ page.canonical_url }}{% endraw %}" data-title="The Copyist’s Dilemma">
+    Share this story
+  </button>
+  <a href="https://github.com/obscurebit/b1ts/tree/e0516e4" target="_blank" rel="noopener" class="story-gen-link">
+    gen:e0516e4
+  </a>
+</div>
