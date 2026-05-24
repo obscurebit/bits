@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-05-24-incense-and-the-exit-sign/" class="archive-item">
+    <div class="archive-item__number">115</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">May 24, 2026</span>
+      <h3 class="archive-item__title">Incense and the Exit Sign</h3>
+      <p class="archive-item__excerpt">The city rewrote its history, but the bus depot still smells like the old incense—sweet rot, like crushed marigolds and wet concrete. I know because I...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Lost Civilizations</span><span class="archive-item__genre" title="Quiet literary realism with one impossible pressure point">Quiet literary realism with one impossible pressure point</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-05-23-the-mirror-and-the-misfiled-oath/" class="archive-item">
     <div class="archive-item__number">114</div>
     <div class="archive-item__content">
