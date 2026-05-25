@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-05-25-edition-116/" class="archive-item">
+    <div class="archive-item__number">116</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">May 25, 2026</span>
+      <h3 class="archive-item__title">Edition #116</h3>
+      <p class="archive-item__excerpt">Counterfeit Realities · He never lied, except when the truth wouldn’t pay the rent.</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Counterfeit Realities</span><span class="archive-item__genre" title="Ghost story energy without old haunted-house defaults">Ghost story energy without old haunted-house defaults</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-05-24-edition-115/" class="archive-item">
     <div class="archive-item__number">115</div>
     <div class="archive-item__content">

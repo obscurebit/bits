@@ -1,8 +1,11 @@
 {
   "date": "2026-05-25",
   "links_file": "docs/links/posts/2026-05-25-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-05-25T10:52:08Z",
+  "published_links_file": "docs/links/posts/2026-05-25-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-05-25-the-copyists-dilemma.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-05-25-the-copyists-dilemma.md",
   "theme": "counterfeit realities",
-  "updated_at": "2026-05-24T08:37:03Z"
+  "updated_at": "2026-05-25T10:19:50Z"
 }
