@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-05-26-the-mourning-docket/" class="archive-item">
+    <div class="archive-item__number">117</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">May 26, 2026</span>
+      <h3 class="archive-item__title">The Mourning Docket</h3>
+      <p class="archive-item__excerpt">A dented nameplate reads *H. R. Dinsmore, Manager*—though the office it once adorned was bulldozed three years past to make way for a parking lot. Mab...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Small Gods Of Commerce</span><span class="archive-item__genre" title="Tender romance complicated by one impossible condition">Tender romance complicated by one impossible condition</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-05-25-the-copyists-dilemma/" class="archive-item">
     <div class="archive-item__number">116</div>
     <div class="archive-item__content">

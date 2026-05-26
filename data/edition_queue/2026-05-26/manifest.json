@@ -1,8 +1,11 @@
 {
   "date": "2026-05-26",
   "links_file": "docs/links/posts/2026-05-26-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-05-26T10:37:49Z",
+  "published_links_file": "docs/links/posts/2026-05-26-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-05-26-the-mourning-docket.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-05-26-the-mourning-docket.md",
   "theme": "small gods of commerce",
-  "updated_at": "2026-05-25T10:19:50Z"
+  "updated_at": "2026-05-26T10:06:25Z"
 }
