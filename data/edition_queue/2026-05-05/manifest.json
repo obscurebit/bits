@@ -1,9 +1,12 @@
 {
   "date": "2026-05-05",
-  "exit_code": 1,
-  "links_file": "",
-  "status": "failed",
-  "story_file": "",
-  "theme": "",
-  "updated_at": "2026-05-19T15:47:13Z"
+  "exit_code": 0,
+  "links_file": "docs/links/posts/2026-05-05-daily-links.md",
+  "published_at": "2026-05-23T02:59:48Z",
+  "published_links_file": "docs/links/posts/2026-05-05-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-05-05-the-clipboards-edge.md",
+  "status": "published",
+  "story_file": "docs/bits/posts/2026-05-05-the-clipboards-edge.md",
+  "theme": "quantum mysteries",
+  "updated_at": "2026-05-23T02:59:48Z"
 }

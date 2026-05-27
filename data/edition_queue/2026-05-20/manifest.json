@@ -1,9 +1,12 @@
 {
   "date": "2026-05-20",
-  "exit_code": 1,
-  "links_file": "",
-  "status": "failed",
-  "story_file": "",
-  "theme": "",
-  "updated_at": "2026-05-19T10:34:32Z"
+  "exit_code": 0,
+  "links_file": "docs/links/posts/2026-05-20-daily-links.md",
+  "published_at": "2026-05-23T08:31:46Z",
+  "published_links_file": "docs/links/posts/2026-05-20-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-05-20-rubbed-out.md",
+  "status": "published",
+  "story_file": "docs/bits/posts/2026-05-20-rubbed-out.md",
+  "theme": "signal from nowhere",
+  "updated_at": "2026-05-23T08:31:46Z"
 }

@@ -65,6 +65,17 @@ description: Browse previous daily editions of Obscure Bit
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>
   </a>
+  <a href="posts/2026-05-22-edition-113/" class="archive-item">
+    <div class="archive-item__number">113</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">May 22, 2026</span>
+      <h3 class="archive-item__title">Edition #113</h3>
+      <p class="archive-item__excerpt">Edge Of Maps · Rule 1: Every vehicle must display a numbered tag. Rule 2: No exceptions.</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Edge Of Maps</span><span class="archive-item__genre" title="Ghost story energy without old haunted-house defaults">Ghost story energy without old haunted-house defaults</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-05-21-edition-112/" class="archive-item">
     <div class="archive-item__number">112</div>
     <div class="archive-item__content">
@@ -72,6 +83,17 @@ description: Browse previous daily editions of Obscure Bit
       <h3 class="archive-item__title">Edition #112</h3>
       <p class="archive-item__excerpt">Recursive Realities · You’re halfway through explaining to the coat check clerk why you need to return 37 raffle tickets when the radio on his counter crackles. Not a whisper or a hu...</p>
       <div class="archive-item__tags"><span class="archive-item__theme">Recursive Realities</span><span class="archive-item__genre" title="Caper energy at a human scale">Caper energy at a human scale</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
+  <a href="posts/2026-05-20-edition-111/" class="archive-item">
+    <div class="archive-item__number">111</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">May 20, 2026</span>
+      <h3 class="archive-item__title">Edition #111</h3>
+      <p class="archive-item__excerpt">Signal From Nowhere · The customer slaps a tire pressure gauge on the counter and says, “Fix this. It’s been acting up since your guy put it in.” His tone implies *your guy* is a gho...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Signal From Nowhere</span><span class="archive-item__genre" title="Domestic drama bent by one technological or metaphysical fact">Domestic drama bent by one technological or metaphysical fact</span></div>
     </div>
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>
@@ -226,6 +248,17 @@ description: Browse previous daily editions of Obscure Bit
       <h3 class="archive-item__title">Edition #097</h3>
       <p class="archive-item__excerpt">Forgotten Technology · The receipt began with a single line item: *Prescription #1422 – 30mg, 30 tabs*. That’s all it should’ve had. But halfway through my lunch break, the paper trem...</p>
       <div class="archive-item__tags"><span class="archive-item__theme">Forgotten Technology</span><span class="archive-item__genre" title="Domestic drama bent by one technological or metaphysical fact">Domestic drama bent by one technological or metaphysical fact</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
+  <a href="posts/2026-05-05-edition-096/" class="archive-item">
+    <div class="archive-item__number">096</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">May 05, 2026</span>
+      <h3 class="archive-item__title">Edition #096</h3>
+      <p class="archive-item__excerpt">Quantum Mysteries · The corner of the clipboard dug into my palm as Mrs. Kowalski’s son screamed about root canals on credit. His spittle flecked the schedule I guarded like a nun...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Quantum Mysteries</span><span class="archive-item__genre" title="Ghost story energy without old haunted-house defaults">Ghost story energy without old haunted-house defaults</span></div>
     </div>
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>

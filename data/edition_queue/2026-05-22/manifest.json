@@ -1,9 +1,12 @@
 {
   "date": "2026-05-22",
-  "exit_code": 1,
-  "links_file": "",
-  "status": "failed",
-  "story_file": "",
-  "theme": "",
-  "updated_at": "2026-05-21T10:23:28Z"
+  "exit_code": 0,
+  "links_file": "docs/links/posts/2026-05-22-daily-links.md",
+  "published_at": "2026-05-23T10:10:39Z",
+  "published_links_file": "docs/links/posts/2026-05-22-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-05-22-the-ice-bucket-tags.md",
+  "status": "published",
+  "story_file": "docs/bits/posts/2026-05-22-the-ice-bucket-tags.md",
+  "theme": "edge of maps",
+  "updated_at": "2026-05-23T10:10:39Z"
 }
