@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-05-27-the-leverage-of-frayed-plastic/" class="archive-item">
+    <div class="archive-item__number">118</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">May 27, 2026</span>
+      <h3 class="archive-item__title">The Leverage of Frayed Plastic</h3>
+      <p class="archive-item__excerpt">Rule 7: All personnel must present valid identification before accessing the East Wing Permit Archives. Exceptions require supervisor authorization.</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Quantum Mysteries</span><span class="archive-item__genre" title="Moral fable disguised as a very specific modern problem">Moral fable disguised as a very specific modern problem</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-05-26-the-mourning-docket/" class="archive-item">
     <div class="archive-item__number">117</div>
     <div class="archive-item__content">

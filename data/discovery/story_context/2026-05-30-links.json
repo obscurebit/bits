@@ -1,0 +1,58 @@
+{
+  "date": "2026-05-30",
+  "theme": "library of lost formats",
+  "links_direction": "obsolete media guides, analog preservation case studies, data decay research, corporate format obsolescence",
+  "motifs": [
+    "Information",
+    "Read",
+    "Like",
+    "Philosophy",
+    "\"are we building the right system?\"",
+    "30 years",
+    "Photography",
+    "Artistic",
+    "Media Art Net",
+    "Fotografie",
+    "Photographic",
+    "Post"
+  ],
+  "interesting_bits": [
+    "\"are we building the right system?\"",
+    "30 years"
+  ],
+  "links": [
+    {
+      "title": "Artificial Life Live",
+      "url": "https://thephilosophyofinformation.blogspot.com/2006/06/artificial-life-live.html",
+      "concepts": [
+        "Information",
+        "Read",
+        "Like",
+        "Philosophy"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Media Art Net | Photo/Byte | Artistic Concept",
+      "url": "http://www.medienkunstnetz.de/themes/photo_byte/artistic concept/",
+      "concepts": [
+        "Photography",
+        "Artistic",
+        "Media Art Net",
+        "Fotografie"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Media Art Net | Photo/Byte | Photographic/Post-Photographic",
+      "url": "http://www.medienkunstnetz.de/themes/photo_byte/photographic_post-photographic/",
+      "concepts": [
+        "Photographic",
+        "Media Art Net",
+        "Post",
+        "Post-Photographic"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}
