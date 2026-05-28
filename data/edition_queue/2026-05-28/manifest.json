@@ -1,8 +1,11 @@
 {
   "date": "2026-05-28",
   "links_file": "docs/links/posts/2026-05-28-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-05-28T10:48:54Z",
+  "published_links_file": "docs/links/posts/2026-05-28-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-05-28-the-glove-and-the-good-neighbors.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-05-28-the-glove-and-the-good-neighbors.md",
   "theme": "forgotten technology",
-  "updated_at": "2026-05-27T10:04:32Z"
+  "updated_at": "2026-05-28T10:13:16Z"
 }

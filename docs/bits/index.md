@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-05-28-the-glove-and-the-good-neighbors/" class="archive-item">
+    <div class="archive-item__number">119</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">May 28, 2026</span>
+      <h3 class="archive-item__title">The Glove and the Good Neighbors</h3>
+      <p class="archive-item__excerpt">The third time Marv from across the street “jokes” about our hedge trimming, we’re hunched in the port authority lost-and-found, sorting through a bin...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Forgotten Technology</span><span class="archive-item__genre" title="Character study where the strange thing stays partly offstage">Character study where the strange thing stays partly offstage</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-05-27-the-leverage-of-frayed-plastic/" class="archive-item">
     <div class="archive-item__number">118</div>
     <div class="archive-item__content">
