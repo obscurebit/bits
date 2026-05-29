@@ -127,6 +127,21 @@ entries:
     brightness: "1.01"
     scale: "1.02"
     continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/02-the-balcony-transmission/continuation-middle.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_0700a1ff8a8ee57d016a18e61742988196bbf9af71ec590a20.png"
+        role_note: "Middle-page theater signal field; intercom static, balcony aperture, and program-paper dust without repeating the opener."
+        art_layout: "side"
+        fit: "cover"
+        position: "center 48%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.76"
+        contrast: "1.02"
+        brightness: "1.04"
+        scale: "1.03"
       - use: "tail"
         page_index: 2
         asset_path: "book/source/volume-1/assets/art/02-the-balcony-transmission/final-balcony-afterimage.png"
@@ -313,6 +328,21 @@ entries:
     brightness: "1.02"
     scale: "1.04"
     continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/30-tube-12s-complaint/continuation-middle.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_0700a1ff8a8ee57d016a18e64e15a08196a8924339bc17ad46.png"
+        role_note: "Middle-page municipal dossier field; brass tube elbows, blank routing lines, and logbook residue without repeating the opener."
+        art_layout: "municipal"
+        fit: "cover"
+        position: "center 48%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.72"
+        contrast: "1.02"
+        brightness: "1.04"
+        scale: "1.04"
       - use: "tail"
         asset_path: "book/source/volume-1/assets/art/30-tube-12s-complaint/continuation-routing.png"
         generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0f03fa89c155a4ae016a15a856f890819991668892d08db6cc.png"
@@ -353,10 +383,25 @@ entries:
     scale: "1.05"
     continuation_assets:
       - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/37-saved-fingerprint/continuation-middle.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_0700a1ff8a8ee57d016a18e68b814c8196808ea1e541fb01cc.png"
+        role_note: "Middle-page biometric dossier field; cracked phone glass, fingerprint residue, and blank audit boxes without repeating the opener."
+        art_layout: "dossier"
+        fit: "cover"
+        position: "center 48%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.68"
+        contrast: "1.02"
+        brightness: "1.04"
+        scale: "1.04"
+      - use: "continuation"
         page_index: 2
         asset_path: "book/source/volume-1/assets/art/37-saved-fingerprint/continuation-fragment.png"
         generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0f03fa89c155a4ae016a15a8c1df4c8199a50872e64d996589.png"
-        role_note: "Middle continuation dossier fragment; partial fingerprint residue and blank audit fields."
+        role_note: "Final-page dossier fragment; partial fingerprint residue and blank audit fields for the closing tail."
         art_layout: "dossier"
         fit: "cover"
         position: "center 48%"

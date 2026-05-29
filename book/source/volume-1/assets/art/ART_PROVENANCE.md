@@ -41,6 +41,9 @@ Use: pilot story art plates for renderer/layout review.
 
 ### Companion Assets
 
+- Continuation asset: `book/source/volume-1/assets/art/02-the-balcony-transmission/continuation-middle.png`
+- Continuation source: `/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_0700a1ff8a8ee57d016a18e61742988196bbf9af71ec590a20.png`
+- Continuation prompt intent: middle-page theater signal field, dark balcony aperture, speaker-grille geometry, intercom static bands, dusty program-paper fibers.
 - Tail asset: `book/source/volume-1/assets/art/02-the-balcony-transmission/final-balcony-afterimage.png`
 - Tail source: `/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_088e696f484784a4016a15e76b13ec819a85587178aba65bd8.png`
 - Tail prompt intent: final theater afterimage, smaller dark balcony aperture, loose wire trace, fading static.
@@ -104,6 +107,9 @@ Use: pilot story art plates for renderer/layout review.
 
 ### Companion Assets
 
+- Continuation asset: `book/source/volume-1/assets/art/30-tube-12s-complaint/continuation-middle.png`
+- Continuation source: `/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_0700a1ff8a8ee57d016a18e64e15a08196a8924339bc17ad46.png`
+- Continuation prompt intent: middle-page municipal dossier, brass tube elbows, capsule silhouette, blank routing lines, smudged logbook paper, blank service-ticket slips.
 - Tail asset: `book/source/volume-1/assets/art/30-tube-12s-complaint/continuation-routing.png`
 - Tail source: `/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0f03fa89c155a4ae016a15a856f890819991668892d08db6cc.png`
 - Tail prompt intent: capsule routing diagram, blank complaint slips, hole-punched paper, carbon-copy smears.
@@ -118,9 +124,12 @@ Use: pilot story art plates for renderer/layout review.
 
 ### Companion Assets
 
-- Continuation asset: `book/source/volume-1/assets/art/37-saved-fingerprint/continuation-fragment.png`
-- Continuation source: `/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0f03fa89c155a4ae016a15a8c1df4c8199a50872e64d996589.png`
-- Continuation prompt intent: partial fingerprint ridge fragments, acetate glare, blank audit fields, redaction bars.
+- Continuation asset: `book/source/volume-1/assets/art/37-saved-fingerprint/continuation-middle.png`
+- Continuation source: `/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_0700a1ff8a8ee57d016a18e68b814c8196808ea1e541fb01cc.png`
+- Continuation prompt intent: middle-page biometric dossier, cracked phone-screen rectangle, partial fingerprint ridge field, blank audit boxes, abstract vending-machine alcove panels.
+- Tail asset: `book/source/volume-1/assets/art/37-saved-fingerprint/continuation-fragment.png`
+- Tail source: `/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0f03fa89c155a4ae016a15a8c1df4c8199a50872e64d996589.png`
+- Tail prompt intent: partial fingerprint ridge fragments, acetate glare, blank audit fields, redaction bars.
 
 ## 40 / The Nested Echo
 
