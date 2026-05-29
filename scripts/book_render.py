@@ -12,6 +12,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import time
 from pathlib import Path
 from typing import Any
 
@@ -25,6 +26,11 @@ DEFAULT_OUTPUT_DIR = Path("book/output/volume-1")
 LOGO_MARK_PATH = Path("assets/obscure-bit-mark.png")
 ART_DIRECTION_PATH = Path("art_direction.yaml")
 STORY_DIVIDER = "__OBSCUREBIT_STORY_DIVIDER__"
+PDF_IMAGE_PROFILES: dict[str, dict[str, Any]] = {
+    "review": {"suffix": "review", "quality": None, "max_long_edge": None, "optimize_images": False},
+    "print": {"suffix": "print", "quality": 90, "max_long_edge": None, "optimize_images": True},
+    "download": {"suffix": "download", "quality": 76, "max_long_edge": 1200, "optimize_images": True},
+}
 
 
 def parse_args() -> argparse.Namespace:
@@ -33,6 +39,18 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--output-dir", default=str(DEFAULT_OUTPUT_DIR))
     parser.add_argument("--theme", choices=["light", "dark", "both"], default="both")
     parser.add_argument("--format", choices=["html", "pdf", "both"], default="both")
+    parser.add_argument(
+        "--pdf-profile",
+        choices=sorted(PDF_IMAGE_PROFILES),
+        default="review",
+        help="Image profile and output suffix for PDF/HTML render assets.",
+    )
+    parser.add_argument(
+        "--asset-mode",
+        choices=["auto", "inline", "linked"],
+        default="auto",
+        help="Use inline data URIs or linked file URLs. Auto inlines review renders and links optimized PDF profiles.",
+    )
     parser.add_argument("--allow-incomplete", action="store_true")
     return parser.parse_args()
 
@@ -173,6 +191,107 @@ def image_data_uri(path: Path) -> str:
     encoded = base64.b64encode(path.read_bytes()).decode("ascii")
     mime_type = mimetypes.guess_type(path.name)[0] or "image/png"
     return f"data:{mime_type};base64,{encoded}"
+
+
+class AssetResolver:
+    def __init__(self, volume_dir: Path, output_dir: Path, profile_name: str, asset_mode: str) -> None:
+        self.volume_dir = volume_dir.resolve()
+        self.assets_root = (self.volume_dir / "assets").resolve()
+        self.output_dir = output_dir.resolve()
+        self.profile_name = profile_name
+        self.profile = PDF_IMAGE_PROFILES[profile_name]
+        if asset_mode == "auto":
+            asset_mode = "inline" if profile_name == "review" else "linked"
+        self.inline = asset_mode == "inline"
+        max_edge = self.profile.get("max_long_edge")
+        max_label = str(max_edge) if max_edge else "native"
+        quality = self.profile.get("quality") or "source"
+        self.cache_dir = self.output_dir / "image-cache" / f"{profile_name}-q{quality}-{max_label}"
+
+    def uri(self, path: Path) -> str:
+        resolved = path if path.is_absolute() else Path.cwd() / path
+        resolved = resolved.resolve()
+        if not resolved.exists():
+            return ""
+        if self.inline:
+            return image_data_uri(resolved)
+        link_path = self.optimized_asset_path(resolved)
+        return link_path.as_uri()
+
+    def optimized_asset_path(self, path: Path) -> Path:
+        if not self.should_optimize(path):
+            return path
+        rel = path.relative_to(self.assets_root)
+        target = (self.cache_dir / rel).with_suffix(".jpg")
+        if target.exists() and target.stat().st_mtime >= path.stat().st_mtime:
+            return target
+        target.parent.mkdir(parents=True, exist_ok=True)
+        self.convert_to_jpeg(path, target)
+        return target
+
+    def should_optimize(self, path: Path) -> bool:
+        if not self.profile.get("optimize_images"):
+            return False
+        if path.name == LOGO_MARK_PATH.name:
+            return False
+        if path.suffix.lower() not in {".png", ".jpg", ".jpeg"}:
+            return False
+        try:
+            path.relative_to(self.assets_root)
+        except ValueError:
+            return False
+        return True
+
+    def convert_to_jpeg(self, source: Path, target: Path) -> None:
+        quality = int(self.profile.get("quality") or 90)
+        max_long_edge = self.profile.get("max_long_edge")
+        if self.convert_with_pillow(source, target, quality, max_long_edge):
+            return
+        if self.convert_with_sips(source, target, quality, max_long_edge):
+            return
+        raise RuntimeError(
+            f"Cannot optimize {source}; install Pillow or run on macOS with sips available."
+        )
+
+    def convert_with_pillow(self, source: Path, target: Path, quality: int, max_long_edge: Any) -> bool:
+        try:
+            from PIL import Image
+        except ImportError:
+            return False
+        with Image.open(source) as image:
+            image = image.convert("RGB")
+            if max_long_edge and max(image.size) > int(max_long_edge):
+                ratio = int(max_long_edge) / max(image.size)
+                size = (round(image.width * ratio), round(image.height * ratio))
+                resampling = getattr(getattr(Image, "Resampling", Image), "LANCZOS")
+                image = image.resize(size, resampling)
+            image.save(target, "JPEG", quality=quality, optimize=True, progressive=True, subsampling=1)
+        return True
+
+    def convert_with_sips(self, source: Path, target: Path, quality: int, max_long_edge: Any) -> bool:
+        sips = shutil.which("sips")
+        if not sips:
+            return False
+        temp_target = target.with_suffix(".tmp.jpg")
+        command = [sips]
+        if max_long_edge:
+            command.extend(["-Z", str(int(max_long_edge))])
+        command.extend(
+            [
+                "-s",
+                "format",
+                "jpeg",
+                "-s",
+                "formatOptions",
+                str(quality),
+                str(source),
+                "--out",
+                str(temp_target),
+            ]
+        )
+        subprocess.run(command, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        temp_target.replace(target)
+        return True
 
 
 def render_story_body(text: str, words: int) -> str:
@@ -392,7 +511,7 @@ def mode_palette_css(design: dict[str, Any], palette_name: str) -> str:
     return "\n".join(rules)
 
 
-def mode_panel_uri(design: dict[str, Any], mode: str) -> str:
+def mode_panel_uri(design: dict[str, Any], mode: str, assets: AssetResolver | None = None) -> str:
     mode_panels = design.get("mode_panels") or {}
     data = mode_panels.get(mode) if isinstance(mode_panels, dict) else None
     if not isinstance(data, dict):
@@ -400,10 +519,11 @@ def mode_panel_uri(design: dict[str, Any], mode: str) -> str:
     value = data.get("asset_path")
     if not value:
         return ""
-    return image_data_uri(Path(str(value)))
+    path = Path(str(value))
+    return assets.uri(path) if assets else image_data_uri(path)
 
 
-def section_panel_uri(design: dict[str, Any], code: str) -> str:
+def section_panel_uri(design: dict[str, Any], code: str, assets: AssetResolver | None = None) -> str:
     section_panels = design.get("section_panels") or {}
     if not isinstance(section_panels, dict):
         return ""
@@ -413,7 +533,8 @@ def section_panel_uri(design: dict[str, Any], code: str) -> str:
     value = data.get("asset_path")
     if not value:
         return ""
-    return image_data_uri(Path(str(value)))
+    path = Path(str(value))
+    return assets.uri(path) if assets else image_data_uri(path)
 
 
 def section_open_tag(entry: book_build.BookEntry, design: dict[str, Any], extra_classes: str = "") -> str:
@@ -763,6 +884,7 @@ def art_asset_uri_for(
     role: str = "opener",
     index: int = 0,
     allow_fallback: bool = True,
+    assets: AssetResolver | None = None,
 ) -> str:
     manifest_entry = art_variant_entry_for(entry, art_direction, role, index, allow_fallback)
     for key in ("asset_path", "draft_asset_path", "approved_asset_path"):
@@ -770,7 +892,7 @@ def art_asset_uri_for(
         if not value:
             continue
         path = Path(str(value))
-        uri = image_data_uri(path)
+        uri = assets.uri(path) if assets else image_data_uri(path)
         if uri:
             return uri
     return ""
@@ -3399,6 +3521,28 @@ html, body {{
 """
 
 
+def pdf_profile_css(profile_name: str) -> str:
+    if profile_name == "review":
+        return ""
+    return """
+.pdf-profile-print *,
+.pdf-profile-download * {
+  mix-blend-mode: normal !important;
+  backdrop-filter: none !important;
+}
+.pdf-profile-print .plate-art-img,
+.pdf-profile-download .plate-art-img,
+.pdf-profile-print .mode-card-panel img,
+.pdf-profile-download .mode-card-panel img,
+.pdf-profile-print .section-panel img,
+.pdf-profile-download .section-panel img {
+  filter: none !important;
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
+}
+""".strip()
+
+
 def load_front_note(path: Path, fallback_title: str) -> tuple[str, str, str]:
     if not path.exists():
         return fallback_title, "missing", "This required front-matter note has not been written yet."
@@ -3522,6 +3666,7 @@ def designed_object_pages(
     art_direction: dict[str, Any],
     mark_uri: str,
     palette_name: str,
+    assets: AssetResolver | None = None,
 ) -> list[str]:
     counts = mode_counts(entries)
     modes = design.get("layout_modes") or {}
@@ -3531,7 +3676,7 @@ def designed_object_pages(
         info = mode_info(design, str(mode))
         direction = mode_art_direction(str(mode), art_direction)
         treatment = direction.get("treatment", str(mode))
-        panel_uri = mode_panel_uri(design, str(mode))
+        panel_uri = mode_panel_uri(design, str(mode), assets)
         panel_img = f'<img src="{html.escape(panel_uri, quote=True)}" alt="">' if panel_uri else ""
         mode_thread.append(
             f'<span class="{mode_css_class(str(mode))}"><strong>{html.escape(info["glyph"])} / {counts.get(str(mode), 0):02d}</strong></span>'
@@ -3844,6 +3989,7 @@ def plate_html(
     role: str = "opener",
     art_index: int = 0,
     allow_art_fallback: bool = True,
+    assets: AssetResolver | None = None,
 ) -> str:
     art_direction = art_direction or {}
     identity = plate_identity(entry, design)
@@ -3852,7 +3998,7 @@ def plate_html(
     treatment = art_treatment_for(entry, art_direction)
     material = str(story_direction.get("material") or mode_direction.get("material") or entry.art_lane)
     gesture = str(story_direction.get("gesture") or mode_direction.get("gesture") or entry.art_status)
-    asset_uri = art_asset_uri_for(entry, art_direction, role, art_index, allow_art_fallback)
+    asset_uri = art_asset_uri_for(entry, art_direction, role, art_index, allow_art_fallback, assets)
     art_extra = art_classes_for(entry, art_direction, role, art_index, allow_art_fallback)
     art_class = (" has-art " + art_extra).rstrip() if asset_uri else ""
     art_style = art_style_for(entry, art_direction, role, art_index, allow_art_fallback)
@@ -3895,13 +4041,14 @@ def render_standard_entry_page(
     design: dict[str, Any],
     art_direction: dict[str, Any],
     page_num: int,
+    assets: AssetResolver,
 ) -> str:
     body = render_story_blocks(story_blocks(entry.bit.body, body_word_count(entry.bit.body), include_dividers=True))
     quote = pull_quote(entry.bit.body)
     parts = [
         section_open_tag(entry, design),
         entry_head_html(entry, manifest, design),
-        plate_html(entry, design, art_direction),
+        plate_html(entry, design, art_direction, assets=assets),
     ]
     if teaser_enabled(entry, design):
         parts.append(f'<div class="entry-pullquote">{html.escape(quote)}</div>')
@@ -3921,6 +4068,7 @@ def render_spread_entry_pages(
     design: dict[str, Any],
     art_direction: dict[str, Any],
     first_page_num: int,
+    assets: AssetResolver,
 ) -> list[str]:
     pages = split_story_for_pages(entry, design)
     quote = pull_quote(entry.bit.body)
@@ -3928,7 +4076,7 @@ def render_spread_entry_pages(
     open_parts = [
         section_open_tag(entry, design, "spread-open"),
         entry_head_html(entry, manifest, design),
-        plate_html(entry, design, art_direction),
+        plate_html(entry, design, art_direction, assets=assets),
     ]
     if teaser_enabled(entry, design):
         open_parts.append(f'<div class="entry-pullquote">{html.escape(quote)}</div>')
@@ -3959,9 +4107,9 @@ def render_spread_entry_pages(
         tail_class = f" tail-continuation{tail_density}" if is_tail_continuation else ""
         continuation_has_art = (not is_tail_continuation) and has_explicit_art_variant_for(entry, art_direction, "continuation", index)
         continuation_class = " art-continuation" if continuation_has_art else ""
-        tail_plate = plate_html(entry, design, art_direction, "tail", index) if is_tail_continuation else ""
+        tail_plate = plate_html(entry, design, art_direction, "tail", index, assets=assets) if is_tail_continuation else ""
         continuation_plate = (
-            plate_html(entry, design, art_direction, "continuation", index, allow_art_fallback=False)
+            plate_html(entry, design, art_direction, "continuation", index, allow_art_fallback=False, assets=assets)
             if continuation_has_art
             else ""
         )
@@ -3988,6 +4136,7 @@ def render_html(
     design: dict[str, Any],
     art_direction: dict[str, Any],
     palette_name: str,
+    assets: AssetResolver,
     mark_uri: str = "",
 ) -> str:
     palette = design["palettes"][palette_name]
@@ -3999,9 +4148,10 @@ def render_html(
         f"<title>{html.escape(str(manifest.get('title', '256 Bits')))} - {palette_name}</title>",
         "<style>",
         css_for(design, palette_name),
+        pdf_profile_css(assets.profile_name),
         "</style>",
         "</head>",
-        "<body>",
+        f'<body class="pdf-profile-{html.escape(assets.profile_name)}">',
         '<section class="page cover">',
         '<div class="cover-top">',
         '<div class="cover-code">00 01 02 03 04 05 06 07<br>08 09 0A 0B 0C 0D 0E 0F<br><br>10 11 12 13 14 15 16 17<br>18 19 1A 1B 1C 1D 1E 1F</div>',
@@ -4015,7 +4165,7 @@ def render_html(
         "</section>",
         endpaper_page(entries, "Front Endpaper / 00-FF", "front"),
         *front_matter_pages(manifest, design, mark_uri),
-        *designed_object_pages(entries, manifest, design, art_direction, mark_uri, palette_name),
+        *designed_object_pages(entries, manifest, design, art_direction, mark_uri, palette_name, assets),
         '<section class="page toc">',
         '<div class="object-kicker">address field / occupied and dark bytes</div>',
         "<h2>Memory Map</h2>",
@@ -4032,7 +4182,7 @@ def render_html(
         if entry.section_code != current_section:
             current_section = entry.section_code
             page_num += 1
-            section_panel_uri_value = section_panel_uri(design, current_section)
+            section_panel_uri_value = section_panel_uri(design, current_section, assets)
             section_panel = (
                 f'<div class="section-panel"><img src="{html.escape(section_panel_uri_value, quote=True)}" alt=""></div>'
                 if section_panel_uri_value
@@ -4057,11 +4207,11 @@ def render_html(
             )
         page_num += 1
         if is_spread_entry(entry, design):
-            spread_pages = render_spread_entry_pages(entry, manifest, design, art_direction, page_num)
+            spread_pages = render_spread_entry_pages(entry, manifest, design, art_direction, page_num, assets)
             parts.extend(spread_pages)
             page_num += len(spread_pages) - 1
         else:
-            parts.append(render_standard_entry_page(entry, manifest, design, art_direction, page_num))
+            parts.append(render_standard_entry_page(entry, manifest, design, art_direction, page_num, assets))
 
     parts.extend(back_matter_pages(entries, manifest, design, art_direction, palette_name))
     parts.extend(
@@ -4160,11 +4310,13 @@ def chrome_path() -> str | None:
     return None
 
 
-def print_pdf(html_path: Path, pdf_path: Path) -> None:
+def print_pdf(html_path: Path, pdf_path: Path, timeout_seconds: int = 180) -> None:
     chrome = chrome_path()
     if not chrome:
         raise RuntimeError("Chrome/Chromium not found; HTML was rendered but PDF cannot be printed.")
     pdf_path.parent.mkdir(parents=True, exist_ok=True)
+    if pdf_path.exists():
+        pdf_path.unlink()
     with tempfile.TemporaryDirectory(prefix="obscurebit-chrome-profile-") as profile_dir:
         command = [
             chrome,
@@ -4184,15 +4336,48 @@ def print_pdf(html_path: Path, pdf_path: Path) -> None:
             f"--print-to-pdf={pdf_path.resolve()}",
             html_path.resolve().as_uri(),
         ]
-        try:
-            subprocess.run(command, check=True, timeout=45)
-        except subprocess.TimeoutExpired:
-            if pdf_path.exists() and pdf_path.stat().st_size > 0:
-                return
-            raise
+        process = subprocess.Popen(command)
+        deadline = time.monotonic() + timeout_seconds
+        last_size = -1
+        stable_ticks = 0
+        while time.monotonic() < deadline:
+            return_code = process.poll()
+            if pdf_path.exists():
+                size = pdf_path.stat().st_size
+                if size > 0 and size == last_size:
+                    stable_ticks += 1
+                else:
+                    stable_ticks = 0
+                last_size = size
+                if stable_ticks >= 2:
+                    if return_code is None:
+                        process.terminate()
+                        try:
+                            process.wait(timeout=5)
+                        except subprocess.TimeoutExpired:
+                            process.kill()
+                    return
+            if return_code is not None:
+                break
+            time.sleep(1)
+        if process.poll() is None:
+            process.terminate()
+            try:
+                process.wait(timeout=5)
+            except subprocess.TimeoutExpired:
+                process.kill()
+        if not pdf_path.exists() or pdf_path.stat().st_size == 0:
+            raise RuntimeError(f"Chrome did not produce PDF output at {pdf_path}")
 
 
-def render(volume_dir: Path, output_dir: Path, palette_name: str, formats: set[str]) -> tuple[Path, Path | None, list[str]]:
+def render(
+    volume_dir: Path,
+    output_dir: Path,
+    palette_name: str,
+    formats: set[str],
+    pdf_profile: str,
+    asset_mode: str,
+) -> tuple[Path, Path | None, list[str]]:
     manifest = book_build.read_yaml(volume_dir / "manifest.yaml")
     design = read_yaml(volume_dir / "design.yaml")
     art_direction = read_optional_yaml(volume_dir / ART_DIRECTION_PATH)
@@ -4206,10 +4391,12 @@ def render(volume_dir: Path, output_dir: Path, palette_name: str, formats: set[s
     warnings.extend(name_warnings)
 
     output_dir.mkdir(parents=True, exist_ok=True)
-    html_path = output_dir / f"256-bits-volume-1-{palette_name}-review.html"
-    pdf_path = output_dir / f"256-bits-volume-1-{palette_name}-review.pdf"
-    mark_uri = image_data_uri(volume_dir / LOGO_MARK_PATH)
-    html_path.write_text(render_html(entries, warnings, manifest, design, art_direction, palette_name, mark_uri))
+    profile_suffix = str(PDF_IMAGE_PROFILES[pdf_profile]["suffix"])
+    html_path = output_dir / f"256-bits-volume-1-{palette_name}-{profile_suffix}.html"
+    pdf_path = output_dir / f"256-bits-volume-1-{palette_name}-{profile_suffix}.pdf"
+    assets = AssetResolver(volume_dir, output_dir, pdf_profile, asset_mode)
+    mark_uri = assets.uri(volume_dir / LOGO_MARK_PATH)
+    html_path.write_text(render_html(entries, warnings, manifest, design, art_direction, palette_name, assets, mark_uri))
 
     rendered_pdf = None
     if "pdf" in formats:
@@ -4225,7 +4412,14 @@ def main() -> None:
 
     all_warnings: list[str] = []
     for theme_name in theme_names:
-        html_path, pdf_path, warnings = render(Path(args.volume_dir), Path(args.output_dir), theme_name, formats)
+        html_path, pdf_path, warnings = render(
+            Path(args.volume_dir),
+            Path(args.output_dir),
+            theme_name,
+            formats,
+            args.pdf_profile,
+            args.asset_mode,
+        )
         all_warnings.extend(warnings)
         print(f"Rendered {theme_name} HTML: {html_path}")
         if pdf_path:

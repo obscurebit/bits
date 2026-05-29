@@ -69,6 +69,16 @@ class BookRenderTests(unittest.TestCase):
         self.assertIn("scrollHeight > body.clientHeight", script)
         self.assertIn("fit-overflow-risk", script)
 
+    def test_pdf_profile_css_keeps_review_unchanged(self) -> None:
+        self.assertEqual(book_render.pdf_profile_css("review"), "")
+
+    def test_pdf_profile_css_strips_expensive_print_effects(self) -> None:
+        css = book_render.pdf_profile_css("download")
+
+        self.assertIn("mix-blend-mode: normal", css)
+        self.assertIn("backdrop-filter: none", css)
+        self.assertIn("mask-image: none", css)
+
     def test_spread_split_keeps_both_pages_populated(self) -> None:
         text = "\n\n".join(
             [
