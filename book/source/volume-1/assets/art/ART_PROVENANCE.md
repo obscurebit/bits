@@ -392,6 +392,13 @@ Use: pilot story art plates for renderer/layout review.
 - Prompt intent: 1970s ward correspondence, bed-window forms, oscilloscopic silence waves, coded dots, wire-mesh shadows.
 - Rights note: draft original generation, no readable patient data, hospital names, logos, people, or protected-world references requested.
 
+### Companion Assets
+
+- Continuation/tail asset: `book/source/volume-1/assets/art/C1-the-silent-ward/continuation-tail.png`
+- Continuation/tail source: `/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_039832f8804bb182016a18e33b020481998b41140eebb178bc.png`
+- Continuation/tail prompt intent: quiet ward bed-window forms, wire-mesh shadow, oscilloscopic silence fade, coded dot rows, blank correspondence/chart shapes.
+- Rights note: draft original continuation generation, no readable patient data, hospital names, logos, people, or protected-world references requested.
+
 ## C2 / The Cipher's Edge
 
 - Asset: `book/source/volume-1/assets/art/C2-the-ciphers-edge/plate-draft-v2.png`
@@ -417,6 +424,13 @@ Use: pilot story art plates for renderer/layout review.
 - Prompt intent: care-home instruction packet, blank keycard, oxygen monitor diagram, synthetic skin waveform, coffee-stained order panel.
 - Rights note: replacement selected to avoid visible byte-label text; draft original generation, no readable patient data, medical branding, people, or protected-world references requested.
 
+### Companion Assets
+
+- Continuation/tail asset: `book/source/volume-1/assets/art/C4-care-instructions-for-unit-4b/continuation-tail.png`
+- Continuation/tail source: `/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_039832f8804bb182016a18e381d4308199b293f0d27191617f.png`
+- Continuation/tail prompt intent: blank oxygen-order form, synthetic skin monitor waveform, obsolete keycard corner, coffee-stain question mark, folded instruction sheet, soft cable loop.
+- Rights note: draft original continuation generation, no readable patient data, medical branding, people, logos, or protected-world references requested.
+
 ## C5 / The Lanyard and the Lemon Drops
 
 - Asset: `book/source/volume-1/assets/art/C5-the-lanyard-and-the-lemon-drops/plate-draft-v2.png`
@@ -437,3 +451,73 @@ Use: pilot story art plates for renderer/layout review.
 - Continuation asset: `book/source/volume-1/assets/art/E1-the-receipt-and-the-rhododendron/continuation-afterimage.png`
 - Continuation source: `/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0b6eac79a92b3962016a15ce2526a88199a11b6192615fa98e.png`
 - Continuation prompt intent: quiet receipt curl, envelope aperture, botanical shadow afterimage, large negative space.
+
+## 08 / Permit for the Unseen Room
+
+- Asset: `book/source/volume-1/assets/art/08-permit-for-the-unseen-room/plate-draft.png`
+- Source: `/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_06eabfd06d618296016a16e9b9b86481979de5e01fbf9132a7.png`
+- Prompt intent: hotel permit office, structural permit boxes, freezer bag of obsolete coins, missing fifteenth-floor blueprint, keycard, folded guest note.
+- Rights note: draft original generation, no readable brand/logos, numbers, people, or protected-world references requested.
+
+### Companion Assets
+
+- Continuation/tail asset: `book/source/volume-1/assets/art/08-permit-for-the-unseen-room/continuation-tail.png`
+- Continuation/tail source: `/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_039832f8804bb182016a18e226f9c481998e7ceb122df0e114.png`
+- Continuation/tail prompt intent: quiet unseen-room permit tail plate, missing blueprint residue, blank structural boxes, obsolete coins, keycard silhouette, donation-slot aperture.
+- Rights note: draft original continuation generation, no readable text, numbers, logos, people, or protected-world references requested.
+
+## 14 / The Lease of Forgetting
+
+- Asset: `book/source/volume-1/assets/art/14-the-lease-of-forgetting/plate-draft.png`
+- Source: `/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0b91d43e23ed8545016a171e10f6388196a1f9fdd0ae4f63cb.png`
+- Prompt intent: chipped forget-me-not teacup, unopened envelope, tote fabric, audit contract edges, cotton-candy cloud mist.
+- Rights note: draft original generation, no readable brand/logos, people, or protected-world references requested.
+
+### Companion Assets
+
+- Continuation/tail asset: `book/source/volume-1/assets/art/14-the-lease-of-forgetting/continuation-tail.png`
+- Continuation/tail source: `/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_039832f8804bb182016a18e26bd9d08199a6795e40e081feec.png`
+- Continuation/tail prompt intent: quiet lease tail plate, chipped teacup fragment, unopened envelope, blank lease/audit contract pages, tote edge, hospice receipt shape.
+- Rights note: draft original continuation generation, no readable text, logos, people, or protected-world references requested.
+
+## 2F / Synthetic Dawn at Checkpoint Twelve
+
+- Asset: `book/source/volume-1/assets/art/2f-synthetic-dawn-at-checkpoint-twelve/plate-draft.png`
+- Source: `/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_011396941fa97d77016a174239ed7081979996e775d22cc3c5.png`
+- Prompt intent: sterile UV transit med-bay, coiled synthetic hair question mark, scanner glass, cryopods, bioluminescent node-sinew forms.
+- Rights note: draft original generation, no readable brand/logos, faces, explicit gore, or protected-world references requested.
+
+### Companion Assets
+
+- Continuation/tail asset: `book/source/volume-1/assets/art/2f-synthetic-dawn-at-checkpoint-twelve/continuation-tail.png`
+- Continuation/tail source: `/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_039832f8804bb182016a18e2afa88081998da88b37853b7b04.png`
+- Continuation/tail prompt intent: quiet checkpoint tail plate, scanner glass with organic smear, coiled synthetic hair, blank checkpoint slip, cryopod edge, bioluminescent node-sinew.
+- Rights note: draft original continuation generation, no readable text, logos, people, faces, explicit gore, or protected-world references requested.
+
+## 48 / The Spice of Elsewheres
+
+- Asset: `book/source/volume-1/assets/art/48-the-spice-of-elsewheres/plate-draft.png`
+- Source: `/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_063ac50248675600016a177f0a1728819388401f430808cbf1.png`
+- Prompt intent: market stall, glass spice jar with cinnamon dust and miniature galaxy spiral, impossible weather reflection, brass scale.
+- Rights note: draft original generation, no readable labels, text, logos, faces, or protected-world references requested.
+
+### Companion Assets
+
+- Continuation/tail asset: `book/source/volume-1/assets/art/48-the-spice-of-elsewheres/continuation-tail.png`
+- Continuation/tail source: `/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_039832f8804bb182016a18e2f4b3f88199b7ea45a71a15d62d.png`
+- Continuation/tail prompt intent: quiet spice-market tail plate, cinnamon dust spiral, brass scale fragment, impossible weather reflection, blank market tag, folded packet.
+- Rights note: draft original continuation generation, no readable labels, text, logos, faces, or protected-world references requested.
+
+## E2 / Final Notice
+
+- Asset: `book/source/volume-1/assets/art/E2-final-notice/plate-draft.png`
+- Source: `/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_06eabfd06d618296016a167aa18a3881979b2620a05fdc98a9.png`
+- Prompt intent: seamless velvet box, frost from hinge shadow, torn parking citation, empty parking garage stripes, abstract citation log blocks, yellow sun patch.
+- Rights note: draft original generation, no readable text, numbers, logos, cars with brands, people, or protected-world references requested.
+
+### Companion Assets
+
+- Continuation/tail asset: `book/source/volume-1/assets/art/E2-final-notice/continuation-tail.png`
+- Continuation/tail source: `/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_039832f8804bb182016a18e3c575408199a3c04f0d675f5df7.png`
+- Continuation/tail prompt intent: quiet final-notice tail plate, velvet-box shadow, hinge frost, torn blank parking citation, empty garage stripe geometry, yellow sun patch.
+- Rights note: draft original continuation generation, no readable text, numbers, logos, vehicles with brands, people, or protected-world references requested.

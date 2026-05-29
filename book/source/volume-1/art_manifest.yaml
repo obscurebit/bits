@@ -1096,6 +1096,21 @@ entries:
     contrast: "1.03"
     brightness: "1.03"
     scale: "1.04"
+    continuation_assets:
+      - use: "continuation"
+        asset_path: "book/source/volume-1/assets/art/C1-the-silent-ward/continuation-tail.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_039832f8804bb182016a18e33b020481998b41140eebb178bc.png"
+        role_note: "Quiet continuation/tail plate for the three-page spread; supports the ward correspondence pages without repeating the opener."
+        art_layout: "foldout"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.68"
+        contrast: "1.02"
+        brightness: "1.04"
+        scale: "1.03"
     prompt: |
       Original editorial art for Bit C1, "The Silent Ward": 1970s ward correspondence plate, bed-window forms, oscilloscopic silence waves, coded dots on hospital paper, no readable patient data, no hospital marks, no people.
   - slug: "2026-03-20-the-ciphers-edge"
@@ -1159,6 +1174,21 @@ entries:
     contrast: "1.03"
     brightness: "1.03"
     scale: "1.04"
+    continuation_assets:
+      - use: "continuation"
+        asset_path: "book/source/volume-1/assets/art/C4-care-instructions-for-unit-4b/continuation-tail.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_039832f8804bb182016a18e381d4308199b293f0d27191617f.png"
+        role_note: "Quiet continuation/tail plate for the three-page spread; keeps the care packet present without repeating the opener."
+        art_layout: "foldout"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.70"
+        contrast: "1.02"
+        brightness: "1.04"
+        scale: "1.03"
     prompt: |
       Original editorial art for Bit C4, "Care Instructions for Unit 4B": care-home instruction packet, obsolete keycard, flickering synthetic skin monitor, oxygen-order forms, no readable data, no medical branding, no people.
   - slug: "2026-05-09-the-lanyard-and-the-lemon-drops"
@@ -1439,6 +1469,21 @@ entries:
     contrast: "1.04"
     brightness: "1.0"
     scale: "1.04"
+    continuation_assets:
+      - use: "continuation"
+        asset_path: "book/source/volume-1/assets/art/48-the-spice-of-elsewheres/continuation-tail.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_039832f8804bb182016a18e2f4b3f88199b7ea45a71a15d62d.png"
+        role_note: "Quiet continuation/tail plate for the three-page spread; repeats the spice-market motifs as a calmer closing field."
+        art_layout: "foldout"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.82"
+        contrast: "1.03"
+        brightness: "1.02"
+        scale: "1.03"
     prompt: |
       Original editorial art for Bit 48, "The Spice of Elsewheres": market stall, one glass spice jar containing cinnamon dust and a miniature galaxy spiral, impossible weather reflection, almost-touching anonymous hands, brass scale, soft market shapes, amber, copper, rain blue, translucent glass, grainy paper texture, no readable labels, no text, no logos, no faces, no living artist style imitation.
   - slug: "2026-03-22-glitch-in-the-pantheon"
@@ -2081,6 +2126,21 @@ entries:
     contrast: "1.04"
     brightness: "1.02"
     scale: "1.08"
+    continuation_assets:
+      - use: "continuation"
+        asset_path: "book/source/volume-1/assets/art/E2-final-notice/continuation-tail.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_039832f8804bb182016a18e3c575408199a3c04f0d675f5df7.png"
+        role_note: "Quiet continuation/tail plate for the three-page spread; carries the parking citation afterimage into the closing pages."
+        art_layout: "side"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.74"
+        contrast: "1.03"
+        brightness: "1.03"
+        scale: "1.03"
     prompt: |
       Original editorial art for Bit E2, "Final Notice": parking enforcement ghost story without literal ghosts, seam-less velvet box on parking booth counter, frost crawling from shadow hinge, torn parking citation as warm paper fragment, empty parking garage stripes, abstract citation log blocks, tiny stitched crooked yellow sun patch, asphalt black, cold frost blue, velvet charcoal, citation yellow, municipal orange, bone paper, oxidized teal, no readable text, no numbers, no logos, no cars with brands, no people, no faces, no living artist style imitation.
   - slug: "2026-03-08-dead-drop"
@@ -2213,6 +2273,21 @@ entries:
     contrast: "1.02"
     brightness: "1.03"
     scale: "1.04"
+    continuation_assets:
+      - use: "continuation"
+        asset_path: "book/source/volume-1/assets/art/08-permit-for-the-unseen-room/continuation-tail.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_039832f8804bb182016a18e226f9c481998e7ceb122df0e114.png"
+        role_note: "Quiet continuation/tail plate for the three-page spread; keeps the unseen-room permit evidence active without repeating the opener."
+        art_layout: "foldout"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.74"
+        contrast: "1.02"
+        brightness: "1.04"
+        scale: "1.03"
     prompt: |
       Original editorial art for Bit 08, "Permit for the Unseen Room": hotel permit office and impossible room paperwork, structural permit form as abstract boxes, freezer bag of obsolete coins, missing fifteenth-floor blueprint, keycard, folded guest note, small rounded donation-slot aperture, warm bone paper, hotel brass, municipal teal, peppermint green, coin silver, rust stamp red, freezer-bag blue, no readable text, no words, no numbers, no logos, no people, no faces, no living artist style imitation.
   - slug: "2026-05-12-the-garment-tag"
@@ -2389,6 +2464,21 @@ entries:
     contrast: "1.02"
     brightness: "1.04"
     scale: "1.02"
+    continuation_assets:
+      - use: "continuation"
+        asset_path: "book/source/volume-1/assets/art/14-the-lease-of-forgetting/continuation-tail.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_039832f8804bb182016a18e26bd9d08199a6795e40e081feec.png"
+        role_note: "Quiet continuation/tail plate for the three-page spread; extends the lease-and-memory-market textures into the later pages."
+        art_layout: "foldout"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.74"
+        contrast: "1.02"
+        brightness: "1.04"
+        scale: "1.02"
     prompt: |
       Original editorial art for Bit 14, "The Lease of Forgetting": tender memory-market romance, chipped forget-me-not teacup, unopened envelope, tote fabric, audit contract edges, cotton-candy cloud mist, warm ivory, soft pink, market orange, hospice blue, oxidized teal, no readable text, no logos, no people, no faces, no living artist style imitation.
   - slug: "2026-05-23-the-mirror-and-the-misfiled-oath"
@@ -2697,6 +2787,21 @@ entries:
     contrast: "1.05"
     brightness: "0.98"
     scale: "1.03"
+    continuation_assets:
+      - use: "continuation"
+        asset_path: "book/source/volume-1/assets/art/2f-synthetic-dawn-at-checkpoint-twelve/continuation-tail.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_039832f8804bb182016a18e2afa88081998da88b37853b7b04.png"
+        role_note: "Quiet continuation/tail plate for the three-page spread; shifts the checkpoint med-bay into a calmer evidence field."
+        art_layout: "foldout"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.78"
+        contrast: "1.03"
+        brightness: "1.0"
+        scale: "1.03"
     prompt: |
       Original editorial art for Bit 2F, "Synthetic Dawn at Checkpoint Twelve": sterile UV transit med-bay, coiled synthetic hair question mark, scanner glass with iridescent organic smear, cryopods, bioluminescent node-sinew forms, cold violet, sterile white, oily rainbow, deep teal, no readable text, no logos, no faces, no explicit gore, no living artist style imitation.
   - slug: "2026-04-18-the-pneumatic-alibi"
