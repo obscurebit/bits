@@ -1,8 +1,11 @@
 {
   "date": "2026-05-29",
   "links_file": "docs/links/posts/2026-05-29-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-05-29T10:35:36Z",
+  "published_links_file": "docs/links/posts/2026-05-29-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-05-29-unclaimed.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-05-29-unclaimed.md",
   "theme": "digital archaeology",
-  "updated_at": "2026-05-28T10:13:16Z"
+  "updated_at": "2026-05-29T10:03:15Z"
 }

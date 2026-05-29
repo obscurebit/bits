@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-05-29-unclaimed/" class="archive-item">
+    <div class="archive-item__number">120</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">May 29, 2026</span>
+      <h3 class="archive-item__title">Unclaimed</h3>
+      <p class="archive-item__excerpt">The pharmacy tech’s name tag reads *Marisol* in faded black ink. She knows the lie by the way the customer’s eyes dart to the left when they say their...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Digital Archaeology</span><span class="archive-item__genre" title="Ghost story energy without old haunted-house defaults">Ghost story energy without old haunted-house defaults</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-05-28-the-glove-and-the-good-neighbors/" class="archive-item">
     <div class="archive-item__number">119</div>
     <div class="archive-item__content">
