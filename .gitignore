@@ -1,13 +1,15 @@
 # Build output
 site/
-book/
+book/output/
 book-output/
 exports/gumroad/
 dist/book/
-scripts/book_build.py
-scripts/book_render.py
-tests/test_book_build.py
-tests/test_book_render.py
+
+# Rendered book deliverables should stay out of Git.
+book/**/*.pdf
+book/**/*.html
+book/**/*.epub
+book/**/*.zip
 
 # Cache
 cache/
@@ -39,8 +41,5 @@ Thumbs.db
 .env
 .env.local
 
-# Private book production assets
+# Private material
 private/
-private/book-assets/
-private/scans/
-private/rights-reports/

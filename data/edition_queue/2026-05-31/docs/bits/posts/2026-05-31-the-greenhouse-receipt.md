@@ -9,7 +9,7 @@ genre: "Tender romance complicated by one impossible condition"
 
 # The Greenhouse Receipt
 
-“You’re late again, Marjorie.”  
+“You’re late again, Celia.”  
 
 The words hung like stale cigarette smoke. I didn’t look up from the stamping. “The 10:15 bus doesn’t run on time, Edna. You know that.”  
 
@@ -25,7 +25,7 @@ Frank’s address.
 
 I’d eaten lunch at my desk all week, staring at the greenhouse ferns through the window. Our greenhouse. Where he’d knelt in the soil two summers ago, handing me a seedling and saying, *“This’ll outlive us both, if you don’t kill it first.”* The same day he’d borrowed my company credit card. The same day the receipt began its… growth.  
 
-The rooftop door creaked. Mrs. Halvorsen from 4B shuffled in, her arms full of lemon-scented herbs. “Marjorie! The zinnias are wilting. You’d know why if you stopped hiding in here.”  
+The rooftop door creaked. Mrs. Bellwether from 4B shuffled in, her arms full of lemon-scented herbs. “Celia! The zinnias are wilting. You’d know why if you stopped hiding in here.”  
 
 “Overwatering,” I said automatically. “The drainage trays are clogged again.”  
 
@@ -61,7 +61,7 @@ Below us, a delivery boy handed Frank a package at 77 Oak. The receipt in my poc
 
 I handed Edna a different paper. “This is the one you want. The greenhouse audit.”  
 
-She eyed it. “You’re a better clerk than this, Marjorie.”  
+She eyed it. “You’re a better clerk than this, Celia.”  
 
 When Frank asked about the ticket that night, I said, “I burned it.”  
 

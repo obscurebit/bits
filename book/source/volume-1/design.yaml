@@ -1,0 +1,846 @@
+trim:
+  width: "7in"
+  height: "10in"
+  margin_inner: "0.68in"
+  margin_outer: "0.52in"
+  margin_top: "0.52in"
+  margin_bottom: "0.58in"
+
+typography:
+  display: "Cormorant Garamond, Baskerville, Georgia, serif"
+  body: "Source Serif 4, Iowan Old Style, Charter, Georgia, serif"
+  sans: "Space Grotesk, Avenir Next, Inter, Helvetica Neue, Arial, sans-serif"
+  mono: "IBM Plex Mono, BlexMono Nerd Font, Menlo, Courier New, monospace"
+  display_source: "https://fonts.google.com/specimen/Cormorant+Garamond"
+  body_source: "https://fonts.google.com/specimen/Source+Serif+4"
+  sans_source: "https://fonts.google.com/specimen/Space+Grotesk"
+  mono_source: "https://fonts.google.com/specimen/IBM+Plex+Mono"
+  display_project: "https://github.com/CatharsisFonts/Cormorant"
+  body_project: "https://github.com/adobe-fonts/source-serif"
+  sans_project: "https://github.com/floriankarsten/space-grotesk"
+  mono_project: "https://github.com/IBM/plex"
+  display_weights: [400, 600]
+  body_weights: [400, 600]
+  sans_weights: [400, 500, 600]
+  mono_weights: [400, 600]
+  story_size: "11pt"
+  story_leading: "15pt"
+  title_weight: 400
+  label_tracking: "0.08em"
+
+palettes:
+  light:
+    name: "Paper Archive"
+    paper: "#f3efe4"
+    paper_alt: "#ebe4d4"
+    ink: "#171512"
+    muted: "#62594c"
+    rule: "#c9bca4"
+    accent: "#b64127"
+    accent_2: "#145f68"
+    accent_3: "#9b7a24"
+    plate_a: "#d8c6a1"
+    plate_b: "#9bb4b0"
+    plate_c: "#d7835b"
+  dark:
+    name: "Night Archive"
+    paper: "#08090b"
+    paper_alt: "#121318"
+    ink: "#efe7d4"
+    muted: "#a89f8f"
+    rule: "#353842"
+    accent: "#ff6a3d"
+    accent_2: "#4db7c5"
+    accent_3: "#d8ad3f"
+    plate_a: "#2a1f35"
+    plate_b: "#123d45"
+    plate_c: "#5b2a1e"
+
+section_palettes:
+  light:
+    "0": { accent: "#b64127", accent_2: "#145f68", accent_3: "#8a742d", wash: "#dbe8e3" }
+    "1": { accent: "#7f5d32", accent_2: "#3f6f58", accent_3: "#9a7a2b", wash: "#e1ddc9" }
+    "2": { accent: "#5d7b38", accent_2: "#157078", accent_3: "#7b5a91", wash: "#d8e5d8" }
+    "3": { accent: "#b4492f", accent_2: "#536270", accent_3: "#b78a29", wash: "#e8dfcf" }
+    "4": { accent: "#7b4f86", accent_2: "#2f7080", accent_3: "#b15872", wash: "#e3dce8" }
+    "5": { accent: "#a75d2b", accent_2: "#2b6b83", accent_3: "#9a842f", wash: "#e4dfcb" }
+    "6": { accent: "#a13d3d", accent_2: "#326c86", accent_3: "#806b52", wash: "#e8ded8" }
+    "7": { accent: "#9b6d26", accent_2: "#176f73", accent_3: "#7c6aa5", wash: "#e6dfcc" }
+    "8": { accent: "#b0762f", accent_2: "#527348", accent_3: "#2d7380", wash: "#e7e0cf" }
+    "9": { accent: "#c05b28", accent_2: "#3f6983", accent_3: "#86702a", wash: "#e5dccb" }
+    "A": { accent: "#9b6570", accent_2: "#426f89", accent_3: "#9c8133", wash: "#e4dde0" }
+    "B": { accent: "#8e5540", accent_2: "#4d7866", accent_3: "#b24735", wash: "#dfdfd4" }
+    "C": { accent: "#a98624", accent_2: "#2f6f8a", accent_3: "#a74c35", wash: "#e7e0c9" }
+    "D": { accent: "#a05a3c", accent_2: "#635a91", accent_3: "#a9872c", wash: "#e5dcd0" }
+    "E": { accent: "#b9527e", accent_2: "#176f70", accent_3: "#9f762b", wash: "#eadce4" }
+    "F": { accent: "#3f7f61", accent_2: "#5f6f7b", accent_3: "#b18b2a", wash: "#dde2da" }
+  dark:
+    "0": { accent: "#ff6a3d", accent_2: "#4db7c5", accent_3: "#d8ad3f", wash: "#102025" }
+    "1": { accent: "#d09b5a", accent_2: "#79b897", accent_3: "#d8b957", wash: "#1d1d17" }
+    "2": { accent: "#9cc96e", accent_2: "#5bd0ce", accent_3: "#c39be0", wash: "#14231b" }
+    "3": { accent: "#ff7d58", accent_2: "#9aa9bb", accent_3: "#e0b84a", wash: "#221b18" }
+    "4": { accent: "#c793dc", accent_2: "#63c3d2", accent_3: "#e184a4", wash: "#1d1824" }
+    "5": { accent: "#e08b4e", accent_2: "#62b6d5", accent_3: "#d2bd53", wash: "#211e16" }
+    "6": { accent: "#e67373", accent_2: "#75bdd9", accent_3: "#c1a88a", wash: "#241a1b" }
+    "7": { accent: "#d8a94b", accent_2: "#55c0bc", accent_3: "#b5a3e5", wash: "#211e16" }
+    "8": { accent: "#e0a257", accent_2: "#92bd79", accent_3: "#62bfce", wash: "#221f17" }
+    "9": { accent: "#f07a41", accent_2: "#7eb2d1", accent_3: "#d4bd52", wash: "#231d16" }
+    "A": { accent: "#d997a6", accent_2: "#79b9d2", accent_3: "#d7bc5d", wash: "#211b20" }
+    "B": { accent: "#d7896f", accent_2: "#83bf9f", accent_3: "#ec765c", wash: "#1c201b" }
+    "C": { accent: "#d9bd48", accent_2: "#78bdda", accent_3: "#e27a5c", wash: "#232015" }
+    "D": { accent: "#d58d66", accent_2: "#aaa0de", accent_3: "#dec158", wash: "#211b20" }
+    "E": { accent: "#f080b1", accent_2: "#5fc4bd", accent_3: "#d8ad55", wash: "#241820" }
+    "F": { accent: "#7bc894", accent_2: "#a3afbc", accent_3: "#d7b857", wash: "#18211d" }
+
+section_panels:
+  "0":
+    asset_path: "book/source/volume-1/assets/sections/section-0-signals-in-the-wire.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0d705e790306feee016a161ed4f4ec8196a588c0be6ff32402.png"
+  "1":
+    asset_path: "book/source/volume-1/assets/sections/section-1-rooms-that-remember.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0d705e790306feee016a161f166b508196b3a6a9fafbbbad93.png"
+  "2":
+    asset_path: "book/source/volume-1/assets/sections/section-2-soft-machines.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0d705e790306feee016a161f5e546881968a2ea6b7b50c1450.png"
+  "3":
+    asset_path: "book/source/volume-1/assets/sections/section-3-impossible-offices.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0d705e790306feee016a161fa6547c819689e71026cf4cc390.png"
+  "4":
+    asset_path: "book/source/volume-1/assets/sections/section-4-ghost-protocols.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0d705e790306feee016a1620027d508196a0fdd69fa301a61c.png"
+  "5":
+    asset_path: "book/source/volume-1/assets/sections/section-5-field-notes-from-elsewhere.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0d705e790306feee016a16204cd95c81969413a9cebfe8d397.png"
+  "6":
+    asset_path: "book/source/volume-1/assets/sections/section-6-the-body-has-a-ledger.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0d705e790306feee016a1620a71da88196886e979b2249a82e.png"
+  "7":
+    asset_path: "book/source/volume-1/assets/sections/section-7-unreliable-timekeeping.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0d705e790306feee016a1620f5f52c8196a3a0ffabae64df9a.png"
+  "8":
+    asset_path: "book/source/volume-1/assets/sections/section-8-domestic-cosmology.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0d705e790306feee016a162143ee2c81968fdad35d990f1bd8.png"
+  "9":
+    asset_path: "book/source/volume-1/assets/sections/section-9-ceremonies-of-maintenance.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0d705e790306feee016a1621a78a2c8196a7ab1fb769c47be3.png"
+  "A":
+    asset_path: "book/source/volume-1/assets/sections/section-a-archives-against-forgetting.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0d705e790306feee016a162266ed6c819697136e8ee85cef9e.png"
+  "B":
+    asset_path: "book/source/volume-1/assets/sections/section-b-misbehaving-matter.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0d705e790306feee016a1622b8f630819692accef108f659bb.png"
+  "C":
+    asset_path: "book/source/volume-1/assets/sections/section-c-instructions-for-the-unseen.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0d705e790306feee016a16230ddcdc819683ac58f34410da13.png"
+  "D":
+    asset_path: "book/source/volume-1/assets/sections/section-d-mythologies-in-debug-mode.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0d705e790306feee016a162361e79481968b8b2ef860fac3f1.png"
+  "E":
+    asset_path: "book/source/volume-1/assets/sections/section-e-the-last-page-is-a-door.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0d705e790306feee016a1623bf054481968519c50a048e2e3f.png"
+  "F":
+    asset_path: "book/source/volume-1/assets/sections/section-f-checksum.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0d705e790306feee016a162410dd088196a972048cb627cf96.png"
+
+mode_panels:
+  signal:
+    asset_path: "book/source/volume-1/assets/modes/signal-panel.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0b91d43e23ed8545016a16fd9eb138819696818024e627c747.png"
+    light: { accent: "#b64127", accent_2: "#145f68", accent_3: "#8a742d", wash: "#dbe8e3" }
+    dark: { accent: "#ff6a3d", accent_2: "#4db7c5", accent_3: "#d8ad3f", wash: "#102025" }
+  archive:
+    asset_path: "book/source/volume-1/assets/modes/archive-panel.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0b91d43e23ed8545016a16fdf4d9388196a422b69cb2863a06.png"
+    light: { accent: "#9b6570", accent_2: "#426f89", accent_3: "#9c8133", wash: "#e4dde0" }
+    dark: { accent: "#d997a6", accent_2: "#79b9d2", accent_3: "#d7bc5d", wash: "#211b20" }
+  field_note:
+    asset_path: "book/source/volume-1/assets/modes/field-note-panel.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0b91d43e23ed8545016a16fe7d32c081968779c5643293f759.png"
+    light: { accent: "#5d7b38", accent_2: "#157078", accent_3: "#a75d2b", wash: "#d8e5d8" }
+    dark: { accent: "#9cc96e", accent_2: "#5bd0ce", accent_3: "#e08b4e", wash: "#14231b" }
+  protocol:
+    asset_path: "book/source/volume-1/assets/modes/protocol-panel.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0b91d43e23ed8545016a16fed80dcc81968c3da1b84a8de297.png"
+    light: { accent: "#b4492f", accent_2: "#2b6b83", accent_3: "#b78a29", wash: "#e8dfcf" }
+    dark: { accent: "#ff7d58", accent_2: "#62b6d5", accent_3: "#e0b84a", wash: "#221b18" }
+  myth:
+    asset_path: "book/source/volume-1/assets/modes/myth-panel.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0b91d43e23ed8545016a16ff3677608196ade293973a6a90b9.png"
+    light: { accent: "#a05a3c", accent_2: "#635a91", accent_3: "#a9872c", wash: "#e5dcd0" }
+    dark: { accent: "#d58d66", accent_2: "#aaa0de", accent_3: "#dec158", wash: "#211b20" }
+  glitch:
+    asset_path: "book/source/volume-1/assets/modes/glitch-panel.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0b91d43e23ed8545016a16ff8e547c8196be6d28c20eeb49a6.png"
+    light: { accent: "#b9527e", accent_2: "#176f70", accent_3: "#3f7f61", wash: "#eadce4" }
+    dark: { accent: "#f080b1", accent_2: "#5fc4bd", accent_3: "#7bc894", wash: "#241820" }
+
+layout:
+  section_size: 16
+  entry_excerpt_words: 220
+  single_page_full_words: 450
+  single_page_full_words_by_mode:
+    archive: 460
+    field_note: 360
+    glitch: 430
+    myth: 420
+    protocol: 400
+    signal: 430
+  sectioned_single_page_full_words: 340
+  two_page_spread_min_words: 700
+  two_page_spread_words: 900
+  spread_first_page_words: 400
+  spread_continuation_words: 700
+  sectioned_first_page_words: 400
+  sectioned_continuation_words: 560
+  tail_plate_max_words: 240
+  two_page_spread_entries:
+    - "22"
+  layout_overrides:
+    "00":
+      variant: "static-tower"
+      art_title: "Receiver Drift"
+      art_glyph: "RX"
+      teaser: false
+      plate_height: "3.08in"
+      first_page_words: 250
+      continuation_words: 430
+      body_font: "IBM Plex Mono, Menlo, Courier New, monospace"
+      body_size: "8.7px"
+      body_leading: "1.46"
+    "01":
+      variant: "frostbite-core"
+      art_title: "Cryo Core"
+      art_glyph: "ICE"
+      teaser: false
+      body_font: "Space Grotesk, Avenir Next, Inter, Helvetica Neue, Arial, sans-serif"
+      body_size: "9.8px"
+      body_leading: "1.48"
+      plate_height: "3.05in"
+      first_page_words: 190
+      continuation_words: 420
+    "02":
+      art_title: "Balcony Feed"
+      art_glyph: "BAL"
+      teaser: false
+      plate_height: "3.05in"
+      first_page_words: 180
+      continuation_words: 300
+    "03":
+      first_page_words: 260
+      continuation_words: 560
+    "04":
+      variant: "router-love-letter"
+      art_title: "Router Letter"
+      art_glyph: "RTR"
+      teaser: false
+      body_font: "IBM Plex Mono, Menlo, Courier New, monospace"
+      body_size: "8.45px"
+      body_leading: "1.47"
+    "08":
+      art_title: "Unseen Room Permit"
+      art_glyph: "PER"
+      teaser: false
+      first_page_words: 250
+      continuation_words: 420
+    "09":
+      variant: "garment-tag"
+      art_title: "Care Label Signal"
+      art_glyph: "TAG"
+      teaser: false
+      body_font: "IBM Plex Mono, Menlo, Courier New, monospace"
+      body_size: "8.65px"
+      body_leading: "1.43"
+      first_page_words: 230
+      continuation_words: 430
+    "0A":
+      art_title: "Lane Warrant"
+      art_glyph: "BWL"
+      teaser: false
+      first_page_words: 220
+      continuation_words: 430
+    "0B":
+      variant: "smudged-badge"
+      art_title: "Smudged Badge"
+      art_glyph: "BDG"
+      teaser: false
+      plate_height: "3.05in"
+      first_page_words: 190
+      continuation_words: 430
+    "3B":
+      variant: "copyist-dilemma"
+      art_title: "Forgery Ledger"
+      art_glyph: "CPY"
+      teaser: false
+      first_page_words: 240
+      continuation_words: 410
+    "3A":
+      tail_plate_max_words: 520
+    "3C":
+      tail_plate_max_words: 560
+    "5C":
+      variant: "ice-bucket-tags"
+      art_title: "Bucket Tag Stack"
+      art_glyph: "TAG"
+      teaser: false
+      body_font: "Space Grotesk, Avenir Next, Inter, Helvetica Neue, Arial, sans-serif"
+      body_size: "8.75px"
+      body_leading: "1.36"
+      first_page_words: 260
+      continuation_words: 410
+    "B5":
+      variant: "clipboard-edge"
+      art_title: "Clipboard Probability"
+      art_glyph: "CLP"
+      teaser: false
+      body_size: "9.6px"
+      body_leading: "1.38"
+      first_page_words: 250
+      continuation_words: 430
+    "11":
+      art_title: "Services Ledger"
+      art_glyph: "SRV"
+      teaser: false
+      body_font: "IBM Plex Mono, Menlo, Courier New, monospace"
+      body_size: "8.3px"
+      body_leading: "1.27"
+      first_page_words: 250
+      continuation_words: 340
+    "12":
+      first_page_words: 250
+      continuation_words: 430
+    "14":
+      first_page_words: 250
+      continuation_words: 300
+    "15":
+      tail_plate_max_words: 360
+    "20":
+      art_title: "Bloom Protocol"
+      art_glyph: "BLM"
+      teaser: false
+      first_page_words: 260
+      continuation_words: 420
+    "22":
+      variant: "genome-foldout"
+      art_title: "Petri Dish Alphabet"
+      art_glyph: "DNA"
+      teaser: false
+      body_font: "Source Serif 4, Iowan Old Style, Charter, Georgia, serif"
+      body_size: "9.9px"
+      body_leading: "1.47"
+      first_page_words: 230
+      continuation_words: 360
+    "23":
+      variant: "listening-chair"
+      art_title: "Listening Chair"
+      art_glyph: "CHR"
+      teaser: false
+      body_font: "Source Serif 4, Iowan Old Style, Charter, Georgia, serif"
+      body_size: "11.1px"
+      body_leading: "1.42"
+    "24":
+      variant: "basement-lattice"
+      art_title: "Basement Lattice"
+      art_glyph: "LAT"
+      teaser: false
+      body_size: "10.25px"
+      body_leading: "1.43"
+    "25":
+      variant: "receipt-transcript"
+      art_title: "Receipt #4827"
+      art_glyph: "RCT"
+      teaser: false
+      body_font: "IBM Plex Mono, Menlo, Courier New, monospace"
+      body_size: "8.2px"
+      body_leading: "1.25"
+      first_page_words: 180
+      continuation_words: 360
+    "27":
+      art_title: "Tin Corridor"
+      art_glyph: "TIN"
+      force_single_page: true
+      body_size: "10px"
+      body_leading: "1.42"
+    "2A":
+      first_page_words: 260
+      continuation_words: 560
+    "2B":
+      first_page_words: 145
+      continuation_words: 420
+    "2C":
+      first_page_words: 220
+      continuation_words: 560
+    "2D":
+      variant: "stage-terminal"
+      art_title: "Stage Terminal"
+      art_glyph: "ABS"
+      teaser: false
+      body_size: "10.2px"
+      body_leading: "1.42"
+    "2E":
+      tail_plate_max_words: 460
+    "2F":
+      art_title: "Checkpoint Twelve"
+      art_glyph: "CHK"
+      teaser: false
+      first_page_words: 240
+      continuation_words: 300
+    "30":
+      variant: "pneumatic-tube"
+      art_title: "Tube 12 Evidence"
+      art_glyph: "PNE"
+      teaser: false
+      body_font: "IBM Plex Mono, Menlo, Courier New, monospace"
+      body_size: "8.35px"
+      body_leading: "1.36"
+      first_page_words: 220
+      continuation_words: 300
+    "31":
+      variant: "pneumatic-tube"
+      art_title: "Pneumatic Alibi"
+      art_glyph: "PNE"
+      teaser: false
+      first_page_words: 260
+      continuation_words: 430
+      tail_plate_max_words: 500
+    "33":
+      variant: "detergent-ticket"
+      art_title: "Detergent Ticket"
+      art_glyph: "DET"
+      teaser: false
+      body_font: "IBM Plex Mono, Menlo, Courier New, monospace"
+      body_size: "8.15px"
+      body_leading: "1.42"
+    "34":
+      first_page_words: 220
+      continuation_words: 560
+      tail_plate_max_words: 500
+    "36":
+      art_title: "Third Ink"
+      art_glyph: "INK"
+      teaser: false
+      first_page_words: 240
+      continuation_words: 430
+    "37":
+      variant: "saved-fingerprint"
+      art_title: "Saved Fingerprint"
+      art_glyph: "FPR"
+      teaser: false
+      body_font: "Space Grotesk, Avenir Next, Inter, Helvetica Neue, Arial, sans-serif"
+      body_size: "8.25px"
+      body_leading: "1.34"
+      first_page_words: 220
+      continuation_words: 380
+    "38":
+      art_title: "Bell Rule"
+      art_glyph: "BEL"
+      teaser: false
+      body_font: "IBM Plex Mono, Menlo, Courier New, monospace"
+      body_size: "8.45px"
+      body_leading: "1.33"
+      first_page_words: 220
+      continuation_words: 380
+      tail_plate_max_words: 500
+    "39":
+      art_title: "Glass Lie"
+      art_glyph: "GLS"
+      teaser: false
+      first_page_words: 230
+      continuation_words: 390
+    "40":
+      variant: "vhs-echo"
+      art_title: "VHS Echo"
+      art_glyph: "VHS"
+      teaser: false
+      body_font: "IBM Plex Mono, Menlo, Courier New, monospace"
+      body_size: "8.4px"
+      body_leading: "1.43"
+      force_spread: true
+      first_page_words: 190
+      continuation_words: 360
+    "41":
+      first_page_words: 250
+      continuation_words: 430
+      tail_plate_max_words: 520
+    "42":
+      tail_plate_max_words: 560
+    "43":
+      tail_plate_max_words: 560
+    "46":
+      first_page_words: 280
+      continuation_words: 560
+      tail_plate_max_words: 520
+      allow_glitch_tail_plate: true
+    "47":
+      variant: "infinite-windows"
+      art_title: "Infinite Windows"
+      art_glyph: "WIN"
+      teaser: false
+      first_page_words: 250
+      continuation_words: 430
+    "48":
+      first_page_words: 220
+      continuation_words: 300
+    "4A":
+      first_page_words: 260
+      continuation_words: 300
+      tail_plate_max_words: 520
+    "4C":
+      first_page_words: 280
+      continuation_words: 560
+      tail_plate_max_words: 560
+      allow_glitch_tail_plate: true
+    "4E":
+      first_page_words: 280
+      continuation_words: 560
+      tail_plate_max_words: 560
+      allow_glitch_tail_plate: true
+    "4F":
+      art_title: "Mirror Test"
+      art_glyph: "MIR"
+      teaser: false
+      first_page_words: 230
+      continuation_words: 420
+    "52":
+      art_title: "Ghost Bureau"
+      art_glyph: "FRM"
+      teaser: false
+      first_page_words: 230
+      continuation_words: 430
+    "53":
+      art_title: "Naqshab Cogs"
+      art_glyph: "COG"
+      teaser: false
+      first_page_words: 260
+      continuation_words: 430
+    "54":
+      art_title: "Stitchwork"
+      art_glyph: "STC"
+      teaser: false
+      first_page_words: 230
+      continuation_words: 430
+    "55":
+      variant: "ghost-ship"
+      art_title: "Ghost Ship Drift"
+      art_glyph: "DRF"
+      teaser: false
+      force_spread: true
+      first_page_words: 230
+      continuation_words: 300
+      body_size: "10px"
+      body_leading: "1.42"
+    "56":
+      art_title: "Unseen Route"
+      art_glyph: "RTE"
+      force_single_page: true
+      body_size: "9.7px"
+      body_leading: "1.38"
+    "57":
+      art_title: "Last Testimony"
+      art_glyph: "FR"
+      teaser: false
+    "58":
+      art_title: "Plastic Bloom"
+      art_glyph: "BLM"
+      teaser: false
+      first_page_words: 260
+      continuation_words: 420
+    "59":
+      art_title: "Oathkeeper"
+      art_glyph: "LNY"
+      teaser: false
+      first_page_words: 280
+      continuation_words: 560
+      tail_plate_max_words: 560
+      allow_glitch_tail_plate: true
+    "5A":
+      art_title: "Unlisted"
+      art_glyph: "SPL"
+      teaser: false
+      first_page_words: 260
+      continuation_words: 430
+    "5B":
+      variant: "spiral-file"
+      art_title: "The Spiral"
+      art_glyph: "SPR"
+      teaser: false
+      first_page_words: 260
+      continuation_words: 420
+      tail_plate_max_words: 320
+    "70":
+      variant: "static-echoes"
+      first_page_words: 260
+      continuation_words: 560
+    "71":
+      art_title: "Chrono Caper"
+      art_glyph: "CHR"
+      teaser: false
+      first_page_words: 260
+      continuation_words: 560
+    "72":
+      art_title: "Distracted Time"
+      art_glyph: "CLK"
+      teaser: false
+      first_page_words: 250
+      continuation_words: 430
+      tail_plate_max_words: 520
+    "73":
+      art_title: "Key Deposit"
+      art_glyph: "KEY"
+      teaser: false
+      first_page_words: 250
+      continuation_words: 560
+      tail_plate_max_words: 520
+    "74":
+      art_title: "Bell + Biscotti"
+      art_glyph: "BIS"
+      teaser: false
+      first_page_words: 250
+      continuation_words: 430
+      tail_plate_max_words: 520
+    "90": "midway-mind"
+    "A0": "memory-weaver"
+    "A1":
+      art_title: "Resonance"
+      art_glyph: "RES"
+      teaser: false
+      first_page_words: 220
+      continuation_words: 560
+      tail_plate_max_words: 520
+    "A2":
+      art_title: "Silent Archive"
+      art_glyph: "ARC"
+      teaser: false
+      first_page_words: 240
+      continuation_words: 560
+      tail_plate_max_words: 520
+    "A3":
+      art_title: "Aerialist"
+      art_glyph: "AIR"
+      teaser: false
+      first_page_words: 230
+      continuation_words: 520
+      tail_plate_max_words: 520
+    "A4":
+      art_title: "Circuit Graves"
+      art_glyph: "CRT"
+      teaser: false
+      force_single_page: true
+      body_size: "9.9px"
+      body_leading: "1.46"
+      tail_plate_max_words: 520
+    "A5":
+      art_title: "Bakelite Dial"
+      art_glyph: "DIA"
+      teaser: false
+      force_single_page: true
+      body_size: "9.6px"
+      body_leading: "1.44"
+      tail_plate_max_words: 520
+    "A6":
+      art_title: "Last Rehearsal"
+      art_glyph: "THR"
+      teaser: false
+      first_page_words: 210
+      continuation_words: 360
+    "A7":
+      art_title: "Reel Seven"
+      art_glyph: "CAT"
+      teaser: false
+      first_page_words: 220
+      continuation_words: 360
+    "A8":
+      art_title: "Stage Notes"
+      art_glyph: "PIT"
+      teaser: false
+      first_page_words: 230
+      continuation_words: 430
+      tail_plate_max_words: 520
+    "A9":
+      art_title: "Flesh Archive"
+      art_glyph: "HEX"
+      teaser: false
+      first_page_words: 230
+      continuation_words: 430
+      tail_plate_max_words: 520
+    "AA":
+      art_title: "Salt Archivist"
+      art_glyph: "SLT"
+      teaser: false
+      first_page_words: 230
+      continuation_words: 430
+      tail_plate_max_words: 520
+    "AB":
+      art_title: "Small Things"
+      art_glyph: "VAT"
+      teaser: false
+      first_page_words: 230
+      continuation_words: 430
+      tail_plate_max_words: 520
+    "AC":
+      art_title: "Last Log"
+      art_glyph: "LOG"
+      teaser: false
+      first_page_words: 240
+      continuation_words: 520
+      tail_plate_max_words: 520
+    "5D":
+      art_title: "Good Neighbors"
+      art_glyph: "GLV"
+      teaser: false
+      first_page_words: 240
+      continuation_words: 320
+      tail_plate_max_words: 420
+    "AD":
+      art_title: "Unsigned Forms"
+      art_glyph: "22B"
+      teaser: false
+      first_page_words: 235
+      continuation_words: 330
+      tail_plate_max_words: 420
+    "AE":
+      art_title: "Queue Order"
+      art_glyph: "QUE"
+      teaser: false
+      first_page_words: 235
+      continuation_words: 330
+      tail_plate_max_words: 420
+    "AF":
+      art_title: "Transfer Slip"
+      art_glyph: "BUS"
+      teaser: false
+      first_page_words: 240
+      continuation_words: 340
+      tail_plate_max_words: 430
+    "B1":
+      art_title: "Observers"
+      art_glyph: "QBT"
+      teaser: false
+      first_page_words: 235
+      continuation_words: 330
+      tail_plate_max_words: 420
+    "B2":
+      art_title: "Superposition Form"
+      art_glyph: "SUP"
+      teaser: false
+      first_page_words: 230
+      continuation_words: 420
+    "B3":
+      variant: "dialup-entanglement"
+      first_page_words: 220
+      continuation_words: 560
+    "B4":
+      art_title: "Double Slit"
+      art_glyph: "SLT"
+      teaser: false
+      first_page_words: 250
+      continuation_words: 360
+    "B6":
+      art_title: "Frayed Plastic"
+      art_glyph: "KEY"
+      teaser: false
+      first_page_words: 190
+      continuation_words: 320
+      tail_plate_max_words: 420
+    "C1":
+      variant: "silent-ward"
+      art_title: "Silent Ward"
+      art_glyph: "WRD"
+      teaser: false
+      first_page_words: 220
+      continuation_words: 300
+      tail_plate_max_words: 380
+    "C2":
+      art_title: "Cipher Edge"
+      art_glyph: "DEC"
+      teaser: false
+      first_page_words: 230
+      continuation_words: 320
+      tail_plate_max_words: 410
+    "C3":
+      art_title: "Sock Cipher"
+      art_glyph: "ARG"
+      teaser: false
+      first_page_words: 250
+      continuation_words: 360
+    "C4":
+      art_title: "Unit 4B"
+      art_glyph: "4B"
+      teaser: false
+      first_page_words: 220
+      continuation_words: 360
+      tail_plate_max_words: 380
+    "C5":
+      art_title: "Lanyard + Lemon Drops"
+      art_glyph: "LNY"
+      teaser: false
+      first_page_words: 240
+      continuation_words: 340
+      tail_plate_max_words: 430
+    "C6":
+      variant: "velvet-audit"
+      art_title: "Velvet Audit"
+      art_glyph: "VLT"
+      teaser: false
+      first_page_words: 250
+      continuation_words: 430
+    "D0":
+      variant: "underworld-ledger"
+      first_page_words: 240
+      continuation_words: 330
+    "E2":
+      variant: "final-notice"
+      art_title: "Final Notice"
+      art_glyph: "FIN"
+      teaser: false
+      first_page_words: 230
+      continuation_words: 300
+    "E1":
+      first_page_words: 280
+      continuation_words: 560
+  front_note_excerpt_words: 150
+  show_art_placeholders: true
+  qr_placeholder_label: "QR"
+
+layout_modes:
+  signal:
+    label: "Signal"
+    glyph: "///"
+    description: "transmissions, static, routers, phones, intercepted messages"
+  archive:
+    label: "Archive"
+    glyph: "IDX"
+    description: "ledgers, files, catalogs, memory stores, evidence"
+  field_note:
+    label: "Field Note"
+    glyph: "OBS"
+    description: "reports, expeditions, specimens, found observations"
+  protocol:
+    label: "Protocol"
+    glyph: "PRT"
+    description: "forms, rules, procedures, bureaucracy, maintenance"
+  myth:
+    label: "Myth"
+    glyph: "MYT"
+    description: "fables, gods, ceremonies, impossible folklore"
+  glitch:
+    label: "Glitch"
+    glyph: "ERR"
+    description: "reality errors, loops, recursion, broken systems"
+
+section_glyphs:
+  "0": "SIG"
+  "1": "ROM"
+  "2": "BIO"
+  "3": "FRM"
+  "4": "GHO"
+  "5": "MAP"
+  "6": "BDY"
+  "7": "CLK"
+  "8": "OBJ"
+  "9": "RIT"
+  "A": "ARC"
+  "B": "MAT"
+  "C": "INS"
+  "D": "MYT"
+  "E": "END"
+  "F": "CHK"

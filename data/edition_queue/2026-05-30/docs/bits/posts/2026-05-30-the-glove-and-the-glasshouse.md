@@ -15,7 +15,7 @@ Your job is to know who’s lying. Not the kids with fake IDs, not the businessm
 
 The greenhouse is your punishment and your peace. Five floors up, crammed between ventilation stacks, it’s the only place the city doesn’t feel like it’s chewing you. You water the tomatoes, prune the basil, and wait for her.  
 
-She comes every Thursday, 3 p.m., always late. Marisol, though that’s not her name either. She wears a cracked wristwatch, its face clouded, and smells like photocopier toner. She’s the one who maintains the archive cartridges in the sub-basement of the media library, though she’ll never say what’s on them. You’ve seen her palms, stained with iron oxide dust, and wondered if it’s poisonous.  
+She comes every Thursday, 3 p.m., always late. Inez, though that’s not her name either. She wears a cracked wristwatch, its face clouded, and smells like photocopier toner. She’s the one who maintains the archive cartridges in the sub-basement of the media library, though she’ll never say what’s on them. You’ve seen her palms, stained with iron oxide dust, and wondered if it’s poisonous.  
 
 “You’re here to talk or to work?” she asks, handing you a spray bottle. Her voice is a subway announcement—loud, clear, unyielding.  
 
@@ -31,7 +31,7 @@ You didn’t. You buried the tape in a box marked *FLOOD DAMAGE* and let the cit
 
 ---  
 
-Marisol finds you at the greenhouse sink, washing soil from your gloves. “There’s a cartridge,” she says, “addressed to *Deckhand, Western Ferry Line*. No return info.”  
+Inez finds you at the greenhouse sink, washing soil from your gloves. “There’s a cartridge,” she says, “addressed to *Deckhand, Western Ferry Line*. No return info.”  
 
 You freeze. The gloves slip off, exposing your bare hands. “Must be a joke.”  
 
@@ -43,7 +43,7 @@ You don’t. You want to throw the gloves into the East River, let the tide take
 
 The cartridge plays on her laptop, the greenhouse lights dimmed. It’s not a video. It’s a list: names, dates, routes. Your manifest notes, exactly, from the past three years. At the bottom, a question: *WHY DO YOU KEEP THEM?*  
 
-Marisol leans closer, her shoulder brushing yours. “They’re watching you. Or someone is.”  
+Inez leans closer, her shoulder brushing yours. “They’re watching you. Or someone is.”  
 
 You think of the missing finger on the glove, how it got torn off hauling cargo two winters ago. How you didn’t report it, didn’t want the paperwork. How the city always takes more than it gives.  
 
@@ -65,9 +65,9 @@ You type: *WHO ARE YOU?*
 
 The next morning, the gloves are gone. In their place, a new pair, identical except for the index finger, intact. On the palm, a sticker: a smiling rat, the same as the one from the 1987 Christmas tape.  
 
-Marisol’s watch ticks against her wrist as she hands you the manifest. “Page twelve,” she says.  
+Inez’s watch ticks against her wrist as she hands you the manifest. “Page twelve,” she says.  
 
-There’s a new name: *Marisol Vega*, real as a birth certificate.  
+There’s a new name: *Inez Vega*, real as a birth certificate.  
 
 You write it down.  
 

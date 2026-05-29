@@ -1,0 +1,2959 @@
+volume: 1
+title: "256 Bits"
+default_aspect_ratio: "4:5"
+default_output_size: "print-ready source, minimum 2400px on the long edge"
+
+lanes:
+  auto_draft:
+    provider: "nvidia"
+    model: "black-forest-labs/flux.1-schnell"
+    role: "Generate fast commercial-use visual drafts and exploratory plates."
+    commercial_note: "NVIDIA's FLUX.1-schnell model card described the model as ready for commercial use when researched on 2026-05-04."
+  manual_hero:
+    providers:
+      - "Gemini image generation / Nano Banana"
+      - "Midjourney"
+    role: "Human-directed final art for selected entries."
+    commercial_note: "Record plan, account, prompt, date, edits, and final approval for every final asset."
+
+global_forbidden:
+  - "living artist style imitation"
+  - "named fictional characters"
+  - "named fictional universes"
+  - "brand logos or trademark-like symbols"
+  - "celebrity likenesses"
+  - "lyrics, poems, or text copied from protected works"
+  - "reference images without owned or licensed rights"
+
+approval_states:
+  - "missing"
+  - "draft"
+  - "needs_human_review"
+  - "approved_for_book"
+  - "rejected"
+
+entries:
+  - slug: "2026-02-02-the-static-between"
+    byte_index: "00"
+    title: "The Static Between"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/00-the-static-between/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_02b9fb6284ad8b76016a14c67d8dcc8198b7035630f5e10613.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-25"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    fit: "cover"
+    position: "center 44%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.88"
+    contrast: "1.04"
+    brightness: "1.02"
+    scale: "1.02"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/00-the-static-between/continuation-signal-field.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_088e696f484784a4016a15e7c0a28c819a9a88557aab7789d8.png"
+        role_note: "Second-page quiet signal field; water-tower ghost and static seam rather than a repeated opener."
+        art_layout: "side"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.8"
+        contrast: "1.02"
+        brightness: "1.04"
+        scale: "1.03"
+    prompt: |
+      Original editorial art for Bit 00, "The Static Between": a tactile archival receiver sheet from a rooftop water-tower antenna, faint range rings, static interference, paper grain, oxidized teal, muted rust, charcoal, faded blue-black, portrait 4:5, generous quiet margins, no readable labels, no logos, no living artist style imitation.
+  - slug: "2026-02-07-frostbite-protocol"
+    byte_index: "01"
+    title: "Frostbite Protocol"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/01-frostbite-protocol/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_02b9fb6284ad8b76016a14c73ffe3c8198acb4cc30d717b88e.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-25"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    fit: "cover"
+    position: "center 46%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.72"
+    contrast: "1.08"
+    brightness: "1.04"
+    scale: "1.02"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/01-frostbite-protocol/continuation-thaw-band.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_088e696f484784a4016a15eabd89d0819a9d038df0811c30a2.png"
+        role_note: "Second-page horizontal thaw band; cold specimen residue above the final prose."
+        art_layout: "thaw-band"
+        fit: "cover"
+        position: "center 52%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.74"
+        contrast: "1.02"
+        brightness: "1.04"
+        scale: "1.0"
+    prompt: |
+      Original editorial art for Bit 01, "Frostbite Protocol": a cold procedural cryogenic specimen plate, frost ring, instrument-grid geometry, translucent blackened crystalline fragment suggested abstractly, clinical frame, bone white, cold blue-gray, bruised black, pale cyan, no gore, no readable labels, no logos, no living artist style imitation.
+  - slug: "2026-02-20-the-balcony-transmission"
+    byte_index: "02"
+    title: "The Balcony Transmission"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/02-the-balcony-transmission/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_02b9fb6284ad8b76016a14c77fed588198abfe923e9c85d7df.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-25"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    fit: "cover"
+    position: "center 36%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.82"
+    contrast: "1.05"
+    brightness: "1.01"
+    scale: "1.02"
+    continuation_assets:
+      - use: "tail"
+        page_index: 2
+        asset_path: "book/source/volume-1/assets/art/02-the-balcony-transmission/final-balcony-afterimage.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_088e696f484784a4016a15e76b13ec819a85587178aba65bd8.png"
+        role_note: "Final-page theater afterimage; smaller balcony aperture and fading intercom static for the ending."
+        art_layout: "side"
+        fit: "cover"
+        position: "center 48%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.78"
+        contrast: "1.02"
+        brightness: "1.04"
+        scale: "1.03"
+    prompt: |
+      Original editorial art for Bit 02, "The Balcony Transmission": a closed theater signal-intrusion artifact with balcony glass, intercom static, theater-program paper, one dark balcony aperture inside speaker-grille geometry, dusty acoustic mood, warm bone paper, faded rose, oxidized teal, no readable theater name, no logos, no living artist style imitation.
+  - slug: "2026-05-20-rubbed-out"
+    byte_index: "0B"
+    title: "Rubbed Out"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/0B-rubbed-out/plate-draft-v2.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_02b9fb6284ad8b76016a14cad66c2c8198b558b2e4e4bf49c2.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-25"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    fit: "cover"
+    position: "center 36%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.76"
+    contrast: "1.02"
+    brightness: "1.03"
+    scale: "1.17"
+    prompt: |
+      Original editorial art for Bit 0B, "Rubbed Out": tire shop paperwork abstracted into blank grid forms, erased payroll columns, receipt-stock texture, rubber smears, clear plastic badge sleeve, one empty oval badge window drifting out of alignment, rubbed blank interior, smudges, scratches, fingerprint oil, two erased magenta bars, no readable words, no numbers, no human face, no ID photo, no logos, no living artist style imitation.
+  - slug: "2026-02-01-the-bloom-protocol"
+    byte_index: "20"
+    title: "The Bloom Protocol"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/20-the-bloom-protocol/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0f03fa89c155a4ae016a14fedecc488199b7396f46ce6045c9.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-25"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "side"
+    fit: "cover"
+    position: "center 47%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.82"
+    contrast: "1.04"
+    brightness: "1.02"
+    scale: "1.06"
+    continuation_assets:
+      - use: "tail"
+        asset_path: "book/source/volume-1/assets/art/20-the-bloom-protocol/continuation-detail.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0f03fa89c155a4ae016a158bef8c70819989646f1532f83b6e.png"
+        role_note: "Second-page specimen-detail plate; related to the opener but not a repeated hero."
+        art_layout: "side"
+        fit: "cover"
+        position: "center 48%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.78"
+        contrast: "1.03"
+        brightness: "1.03"
+        scale: "1.08"
+      - use: "reserve"
+        asset_path: "book/source/volume-1/assets/art/20-the-bloom-protocol/tail-remnant.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0f03fa89c155a4ae016a158c57c4688199a4c41f0746f8db73.png"
+        role_note: "Quiet remnant card held for a future longer/tail layout."
+        art_layout: "side"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.68"
+        contrast: "1.0"
+        brightness: "1.05"
+        scale: "1.03"
+    prompt: |
+      Original editorial art for Bit 20, "The Bloom Protocol": a soft-machine specimen opener, blooming circuit tissue on lab vellum, organic branching traces contained by a clinical frame, faint bioluminescent algae bloom encoded with memory, tactile archival evidence file, bone vellum, algae green, pale cyan glow, oxidized teal, muted rust pin-lines, charcoal shadows, no readable text, no logos, no living artist style imitation.
+  - slug: "2026-02-11-the-second-genome"
+    byte_index: "22"
+    title: "The Second Genome"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/22-the-second-genome/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0f03fa89c155a4ae016a14ff2185848199bb4110c1884f55c4.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-25"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 45%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.8"
+    contrast: "1.03"
+    brightness: "1.03"
+    scale: "1.08"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/22-the-second-genome/continuation-catalog.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0f03fa89c155a4ae016a15a7e22f288199a1ed2ef714421738.png"
+        role_note: "Continuation catalog strip; related specimen-index language without repeating the opener petri dish."
+        art_layout: "foldout"
+        fit: "cover"
+        position: "center 49%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.76"
+        contrast: "1.02"
+        brightness: "1.04"
+        scale: "1.05"
+    prompt: |
+      Original editorial art for Bit 22, "The Second Genome": biological foldout/specimen plate, petri dish alphabet without readable letters, cellular grids, agar smears, catalog notches, observation marks, growth medium arranging itself into almost-language, found lab archive, warm bone paper, translucent amber agar, mold green, bruise violet, oxidized teal, faint red catalog marks, no readable text, no numbers, no logos, no living artist style imitation.
+  - slug: "2026-02-26-backup-lectures"
+    byte_index: "25"
+    title: "Backup Lectures"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/25-backup-lectures/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0f03fa89c155a4ae016a14ff7b83fc8199a0285ab713ff9e3a.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-25"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "packet"
+    fit: "cover"
+    position: "center 57%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.74"
+    contrast: "1.05"
+    brightness: "1.02"
+    scale: "1.04"
+    continuation_assets:
+      - use: "tail"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/25-backup-lectures/continuation-receipt-remnant.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_088e696f484784a4016a15e7042a68819a91e02e5afa855956.png"
+        role_note: "Final-page transcript/receipt remnant; sectioned copy-machine residue for the ending."
+        art_layout: "packet"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.72"
+        contrast: "1.01"
+        brightness: "1.05"
+        scale: "1.03"
+    prompt: |
+      Original editorial art for Bit 25, "Backup Lectures": document-scan lecture packet plate, stacked classroom handouts, receipt-paper ghosts, transcript blocks reduced to abstract bars, illegible margin marks, section divider bands, binder-hole shadows, copy-machine grain, duplicated self/copy theme through misaligned paper layers, warm paper, copier gray, faded black ink, charcoal redactions, pale blue registration marks, safety orange divider tabs, faint magenta scan drift, no readable text, no real names, no numbers, no logos, no living artist style imitation.
+  - slug: "2026-04-16-tube-12s-complaint"
+    byte_index: "30"
+    title: "Tube 12's Complaint"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/30-tube-12s-complaint/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0f03fa89c155a4ae016a151f7c24688199a3211526b05639db.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-26"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "municipal"
+    fit: "cover"
+    position: "center 47%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.76"
+    contrast: "1.04"
+    brightness: "1.02"
+    scale: "1.04"
+    continuation_assets:
+      - use: "tail"
+        asset_path: "book/source/volume-1/assets/art/30-tube-12s-complaint/continuation-routing.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0f03fa89c155a4ae016a15a856f890819991668892d08db6cc.png"
+        role_note: "Tail-page municipal routing packet; same Tube 12 evidence family without repeating the opener."
+        art_layout: "municipal"
+        fit: "cover"
+        position: "center 48%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.74"
+        contrast: "1.03"
+        brightness: "1.03"
+        scale: "1.04"
+    prompt: |
+      Original editorial art for Bit 30, "Tube 12's Complaint": municipal complaint opener, pneumatic tube label, service ticket, fluorescent office stock, oversized numbered evidence tag, clipped transcript fragments reduced to illegible bars, capsule routing marks, carbon-copy smudges, bureaucratic repetition, civic records office discovering a haunted transport tube, warm municipal paper, fluorescent office green, faded red routing marks, dull brass, copier charcoal, oxidized teal, civic orange accent, no readable text, no official seals, no logos, no living artist style imitation.
+  - slug: "2026-05-14-saved-fingerprint"
+    byte_index: "37"
+    title: "Saved Fingerprint"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/37-saved-fingerprint/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0f03fa89c155a4ae016a152095ab588199826360e1a1cc3ec7.png"
+    rejected_source_paths:
+      - "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0f03fa89c155a4ae016a151fcfaa388199b123aca7132a73ba.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-26"
+    rights_note: "Draft original generated image for internal review; replacement selected because the first draft contained too many credential/card/receipt cues."
+    art_layout: "dossier"
+    fit: "cover"
+    position: "center 48%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.72"
+    contrast: "1.04"
+    brightness: "1.03"
+    scale: "1.05"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 2
+        asset_path: "book/source/volume-1/assets/art/37-saved-fingerprint/continuation-fragment.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0f03fa89c155a4ae016a15a8c1df4c8199a50872e64d996589.png"
+        role_note: "Middle continuation dossier fragment; partial fingerprint residue and blank audit fields."
+        art_layout: "dossier"
+        fit: "cover"
+        position: "center 48%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.7"
+        contrast: "1.03"
+        brightness: "1.04"
+        scale: "1.04"
+    prompt: |
+      Original editorial art for Bit 37, "Saved Fingerprint": biometric audit dossier with no readable text, numbers, barcodes, chips, payment-card details, or official-looking IDs, abstract blank form fields, smudged blocks, acetate sleeve glare, evidence tabs, one large fingerprint ridge pattern interrupting the page, identity paperwork after every identifying detail has been erased, warm paper, smoky graphite, faded cyan acetate, bruised violet, small red audit marks as abstract dots, nickel gray, no logos, no living artist style imitation.
+  - slug: "2026-02-03-the-nested-echo"
+    byte_index: "40"
+    title: "The Nested Echo"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/40-the-nested-echo/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0f03fa89c155a4ae016a15202a723c8199b8bd957a60c8d158.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-26"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "echo"
+    fit: "cover"
+    position: "center 45%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.78"
+    contrast: "1.06"
+    brightness: "1.02"
+    scale: "1.06"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/40-the-nested-echo/continuation-afterimage.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0f03fa89c155a4ae016a15a933fc5c8199a26533c35088f634.png"
+        role_note: "Page-two VHS afterimage artifact; quiet tracking geometry after the opener frame collapses."
+        art_layout: "echo"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.72"
+        contrast: "1.03"
+        brightness: "1.04"
+        scale: "1.03"
+    prompt: |
+      Original editorial art for Bit 40, "The Nested Echo": analog echo plate, VHS head-switching error, horizontal noise bars, frame offset, nested rectangles of a living-room image dissolving into static, tape shell shadow, dust, magnetic distortion, old video frame nesting inside paper, bone paper, smoked black, desaturated CRT blue, bruised violet, oxidized teal, faint rust tracking marks, silver tape gray, no recognizable people, no readable labels, no logos, no living artist style imitation.
+  - slug: "2026-02-04-the-between-places"
+    byte_index: "50"
+    title: "The Between Places"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/50-the-between-places/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0b6eac79a92b3962016a15c8cfd4b88199a239509792df7c9d.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-26"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 48%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.78"
+    contrast: "1.03"
+    brightness: "1.03"
+    scale: "1.04"
+    prompt: |
+      Original editorial art for Bit 50, "The Between Places": liminal transit-map artifact, old train platform map folded into impossible borders, platform dust, ticket-paper fibers, doorway-like negative space where the map fails to connect, border-stamp shapes reduced to abstract unreadable marks, measuring strings, warm bone paper, oxidized teal, desaturated rail blue, graphite, faded rust, small acid-yellow registration marks, no readable words, no numbers, no logos, no real transit branding, no people, no living artist style imitation.
+  - slug: "2026-05-13-the-spiral"
+    byte_index: "5B"
+    title: "The Spiral"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/5B-the-spiral/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0b6eac79a92b3962016a15c92e8250819995cbe1b42c7932e6.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-26"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "packet"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.75"
+    contrast: "1.04"
+    brightness: "1.02"
+    scale: "1.12"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/5B-the-spiral/continuation-file-detail.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0b6eac79a92b3962016a15cdc0134881998516fd78596d374f.png"
+        role_note: "Second-page file-detail plate; a partial spiral and receipt-spike residue rather than a repeated opener."
+        art_layout: "packet"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.74"
+        contrast: "1.02"
+        brightness: "1.04"
+        scale: "1.04"
+      - use: "tail"
+        page_index: 2
+        asset_path: "book/source/volume-1/assets/art/5B-the-spiral/final-tail-remnant.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_088e696f484784a4016a15dcf93e60819ab81d1ae461b90395.png"
+        role_note: "Final-page remnant plate; a quieter envelope and spiral trace for the story's ending."
+        art_layout: "packet"
+        fit: "cover"
+        position: "center 55%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.72"
+        contrast: "1.0"
+        brightness: "1.05"
+        scale: "1.02"
+    prompt: |
+      Original editorial art for Bit 5B, "The Spiral": ritual-protocol evidence plate built from municipal case folders and a procedural spiral diagram, worn civic card stock, stamped circles reduced to abstract blocks, vellum overlay, off-center imperfect spiral, small blank form fragments, pin marks, warm bone paper, civic orange, oxidized teal, graphite gray, faded magenta, dull brass, no readable text, no numbers, no logos, no official seals, no occult symbols from real traditions, no people, no living artist style imitation.
+  - slug: "2026-02-09-static-echoes"
+    byte_index: "70"
+    title: "Static Echoes"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/70-static-echoes/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0b6eac79a92b3962016a15c97a030081999ca58a371e3d3750.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-26"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "side"
+    fit: "cover"
+    position: "center 57%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.8"
+    contrast: "1.04"
+    brightness: "1.03"
+    scale: "1.06"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/70-static-echoes/continuation-afterimage.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_088e696f484784a4016a15e3130dec819abda66817501ccdc7.png"
+        role_note: "Final-page signal afterimage; a quiet oscilloscope/radio trace rather than a repeated opener."
+        art_layout: "side"
+        fit: "cover"
+        position: "center 52%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.76"
+        contrast: "1.02"
+        brightness: "1.04"
+        scale: "1.03"
+    prompt: |
+      Original editorial art for Bit 70, "Static Echoes": frequency-map plate, layered radio log paper, translucent oscilloscope acetate, dust, torn tape, faint antenna geometry, abstract waveform bands, echo rings, ghostly duplicate trace offset from the original, blank calibration boxes, warm bone, smoked charcoal, desaturated cyan, oxidized teal, faded signal green, tiny muted red ticks, no readable text, no numbers, no logos, no real radio brand marks, no people, no living artist style imitation.
+  - slug: "2026-02-27-chrono-caper"
+    byte_index: "71"
+    title: "Chrono Caper"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/71-chrono-caper/plate-draft-v2.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-28"
+    rights_note: "Draft original generated art for internal review; replaces procedural SVG plate for stronger art-book texture; no external source imagery, readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "dossier"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.8"
+    contrast: "1.03"
+    brightness: "1.02"
+    scale: "1.04"
+    prompt: |
+      Original editorial art for Bit 71, "Chrono Caper": cemetery time-heist evidence plate, tarnished locket, foil packet, blank broken phone rectangle, cemetery ironwork curls, marble fragment, dusk photo paper, time-window geometry as unlabeled blocks, warm bone, oxidized teal, muted berry-magenta, graphite, tarnished brass, faint cyan wash, tactile archival collage, no readable text, no numbers, no logos, no faces, no hands, no animals.
+  - slug: "2026-03-17-timekeeping-for-the-distracted"
+    byte_index: "72"
+    title: "Timekeeping for the Distracted"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/72-timekeeping-for-the-distracted/plate-draft-v2.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-28"
+    rights_note: "Draft original generated art for internal review; replaces procedural SVG plate for stronger art-book texture; no external source imagery, readable brands, celebrity likenesses, named fictional universes, soup labels, lighter branding, or living-artist style prompts requested."
+    art_layout: "dossier"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.78"
+    contrast: "1.03"
+    brightness: "1.02"
+    scale: "1.04"
+    prompt: |
+      Original editorial art for Bit 72, "Timekeeping for the Distracted": cracked watch face without visible numbers, subway-dark vertical panel, blank document forms, unlabeled can/lighter references reduced to anonymous geometric artifacts, paper layers, backwards-time geometry, warm bone, smoke charcoal, oxidized teal, muted brass, dusty rose, pale blue-gray, no readable text, no labels, no logos, no people.
+  - slug: "2026-04-24-the-key-deposit-policy"
+    byte_index: "73"
+    title: "The Key Deposit Policy"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/73-the-key-deposit-policy/plate-draft-v2.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-28"
+    rights_note: "Draft original generated art for internal review; replaces procedural SVG plate for stronger art-book texture; regenerated to avoid key engravings and readable marks; no external source imagery, readable brands, celebrity likenesses, official insignia, postal branding, or living-artist style prompts requested."
+    art_layout: "dossier"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.78"
+    contrast: "1.03"
+    brightness: "1.02"
+    scale: "1.04"
+    prompt: |
+      Original editorial art for Bit 73, "The Key Deposit Policy": abstract key-deposit evidence board, completely smooth unengraved brass keys on plain string, open worn shoebox, anonymous folded route-map paper made only of unlabeled colored lines and dots, blank bulletin strips, empty carbon-copy forms, push pins, torn tape shadows, warm bone, tarnished brass, oxidized teal, civic red-orange, muted olive, graphite, no readable text, no letters, no numbers, no logos, no official seals, no people.
+  - slug: "2026-05-19-the-bell-and-the-biscotti"
+    byte_index: "74"
+    title: "The Bell and the Biscotti"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/74-the-bell-and-the-biscotti/plate-draft-v2.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-28"
+    rights_note: "Draft original generated art for internal review; replaces procedural SVG plate for stronger art-book texture; no external source imagery, readable brands, celebrity likenesses, product packaging, venue branding, or living-artist style prompts requested."
+    art_layout: "dossier"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.8"
+    contrast: "1.03"
+    brightness: "1.02"
+    scale: "1.04"
+    prompt: |
+      Original editorial art for Bit 74, "The Bell and the Biscotti": tarnished brass handbell, storage-unit association paperwork, biscotti-like abstract rounded ivory rectangles, catering inventory forms, folded table geometry, thin pink/orange acetate strips, faint storage-unit floor-grid shadows, warm bone, brass gold, dusty coral, oxidized teal, graphite, muted magenta, no readable text, no product labels, no logos, no people.
+  - slug: "2026-01-31-the-memory-weaver-of-elarion"
+    byte_index: "A0"
+    title: "The Memory Weaver of Elarion"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/A0-the-memory-weaver-of-elarion/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0b6eac79a92b3962016a15c9c8571481999584b15910e5cb9f.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-26"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.72"
+    contrast: "1.02"
+    brightness: "1.04"
+    scale: "1.1"
+    continuation_assets:
+      - use: "tail"
+        asset_path: "book/source/volume-1/assets/art/A0-the-memory-weaver-of-elarion/continuation-remnant.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0b6eac79a92b3962016a15cd3ea8b48199931d3dadadb521b4.png"
+        role_note: "Tail-page memory remnant; keeps the woven visual system but opens more negative space."
+        art_layout: "foldout"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.68"
+        contrast: "1.0"
+        brightness: "1.05"
+        scale: "1.02"
+    prompt: |
+      Original editorial art for Bit A0, "The Memory Weaver of Elarion": woven memory-index plate, ledger vellum, woven paper strips, thread shadows, catalog tabs, loom-like grid suggested through archival materials, interlaced blank index cards and translucent vellum, colored knots, empty aperture where a memory is missing, warm bone, old linen, oxidized teal, muted berry-magenta, graphite, faint gold thread, pale blue-gray, no readable text, no runes, no invented alphabets that look legible, no logos, no famous fantasy motifs, no people, no living artist style imitation.
+  - slug: "2026-02-06-resonance-chamber"
+    byte_index: "A1"
+    title: "Resonance Chamber"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/A1-resonance-chamber/plate-draft-v2.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-28"
+    rights_note: "Draft original generated art for internal review; replaces procedural SVG plate for stronger art-book texture; no external source imagery, readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "dossier"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.78"
+    contrast: "1.03"
+    brightness: "1.02"
+    scale: "1.04"
+    prompt: |
+      Original editorial art for Bit A1, "Resonance Chamber": brass phonograph-stethoscope apparatus, concentric resonance rings on translucent acetate, moonlit rain-window evidence paper, blank patent forms, wire traces, old workbench dust, warm bone, smoky graphite, oxidized teal, tarnished brass, faint rain-blue, muted berry accent, no readable text, no logos, no people.
+  - slug: "2026-02-17-the-silent-archive"
+    byte_index: "A2"
+    title: "The Silent Archive"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/A2-the-silent-archive/plate-draft-v2.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-28"
+    rights_note: "Draft original generated art for internal review; replaces procedural SVG plate for stronger art-book texture; no external source imagery, readable brands, celebrity likenesses, official insignia, medical branding, or living-artist style prompts requested."
+    art_layout: "packet"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.76"
+    contrast: "1.03"
+    brightness: "1.02"
+    scale: "1.04"
+    prompt: |
+      Original editorial art for Bit A2, "The Silent Archive": institutional basement intake folder, rusted key, hidden stair spiral implied by shadows and curved paper strips, blank shelves receding into teal-black, damp vellum, condensation rings, machine-oil stains, small brass tabs with no markings, warm bone, old brass, oxidized teal, charcoal, moss gray, faint institutional pink, no readable text, no logos, no people.
+  - slug: "2026-02-24-the-aerialists-requiem"
+    byte_index: "A3"
+    title: "The Aerialist's Requiem"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/A3-the-aerialists-requiem/plate-draft-v2.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-28"
+    rights_note: "Draft original generated art for internal review; replaces procedural SVG plate for stronger art-book texture; no external source imagery, readable brands, celebrity likenesses, official marks, named fictional universes, or living-artist style prompts requested."
+    art_layout: "dossier"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.78"
+    contrast: "1.03"
+    brightness: "1.02"
+    scale: "1.04"
+    prompt: |
+      Original editorial art for Bit A3, "The Aerialist's Requiem": rooftop garden evidence plate, cracked fountain geometry, radio-mast wires, oilcloth packet, fogged city forms, aerialist cable traces, warm bone, oxidized teal, fog gray, muted brass, pale moss, faded berry, charcoal, no readable text, no logos, no faces.
+  - slug: "2026-02-25-circuit-graves"
+    byte_index: "A4"
+    title: "Circuit Graves"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/A4-circuit-graves/plate-draft-v2.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-28"
+    rights_note: "Draft original generated art for internal review; replaces procedural SVG plate for stronger art-book texture; no external source imagery, readable brands, celebrity likenesses, official marks, platform marks, or living-artist style prompts requested."
+    art_layout: "echo"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.78"
+    contrast: "1.04"
+    brightness: "1.01"
+    scale: "1.04"
+    prompt: |
+      Original editorial art for Bit A4, "Circuit Graves": dead server-room plate, obsolete circuit boards arranged like cemetery plots, cathode-glow tower shapes, corrupted archive traces, sticky keyboard evidence slab with unlabeled keys, diagonal data-burial lines, burnt plastic smudges, blank magnetic-tape strip, warm bone, charcoal, oxidized teal, burnt umber, faded signal green, dull brass, tiny muted red ticks, no readable text, no logos, no people.
+  - slug: "2026-03-07-the-bakelite-dial"
+    byte_index: "A5"
+    title: "The Bakelite Dial"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/A5-the-bakelite-dial/plate-draft-v2.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-28"
+    rights_note: "Draft original generated art for internal review; replaces procedural SVG plate for stronger art-book texture; no external source imagery, readable brands, celebrity likenesses, broadcast trademarks, hospital branding, or living-artist style prompts requested."
+    art_layout: "dossier"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.78"
+    contrast: "1.04"
+    brightness: "1.01"
+    scale: "1.04"
+    prompt: |
+      Original editorial art for Bit A5, "The Bakelite Dial": institutional ward plate, black unlabeled Bakelite rotary-style control dial, tarnished brass fittings, blank institutional ward forms, translucent pinwheel geometry without numbers, thin radio-static wire traces, stale-air bands, small dark aperture, warm bone, charcoal black, oxidized teal, old brass, faded institutional green, dusty berry, pale gray-blue, no readable text, no logos, no people.
+  - slug: "2026-03-14-the-last-rehearsal"
+    byte_index: "A6"
+    title: "The Last Rehearsal"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/A6-the-last-rehearsal/plate-draft-v2.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-28"
+    rights_note: "Draft original generated art for internal review; replaces procedural SVG plate for stronger art-book texture; no external source imagery, readable brands, celebrity likenesses, theater logos, venue marks, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.78"
+    contrast: "1.03"
+    brightness: "1.02"
+    scale: "1.04"
+    prompt: |
+      Original editorial art for Bit A6, "The Last Rehearsal": old theater stage-floor plate, glass thread filaments, battered shoebox relic, plain microphone silhouette, warm footlights, blank rehearsal paperwork, torn tape tabs, curtain-shadow arcs, dust, warm bone, smoked charcoal, tarnished brass, muted burgundy, oxidized teal, amber footlight, dusty rose, no readable text, no venue marks, no people.
+  - slug: "2026-03-15-the-archivists-cat"
+    byte_index: "A7"
+    title: "The Archivist's Cat"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/A7-the-archivists-cat/plate-draft-v2.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-28"
+    rights_note: "Draft original generated art for internal review; replaces procedural SVG plate for stronger art-book texture; no external source imagery, readable brands, celebrity likenesses, archive logos, platform marks, or living-artist style prompts requested."
+    art_layout: "packet"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.76"
+    contrast: "1.03"
+    brightness: "1.02"
+    scale: "1.04"
+    prompt: |
+      Original editorial art for Bit A7, "The Archivist's Cat": microfilm reader plate, corrupted ledger bands as abstract stripes, cassette strip, ribbon cable, small paper-negative archive-cat silhouette, coffee-stained blank forms, index-card corners, warm bone, charcoal, oxidized teal, old brass, coffee brown, faded berry, pale gray-blue, no readable text, no logos, no people.
+  - slug: "2026-04-01-the-stage-managers-notes"
+    byte_index: "A8"
+    title: "The Stage Manager's Notes"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/A8-the-stage-managers-notes/plate-draft-v2.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-28"
+    rights_note: "Draft original generated art for internal review; replaces procedural SVG plate for stronger art-book texture; no external source imagery, readable brands, celebrity likenesses, opera marks, venue marks, or living-artist style prompts requested."
+    art_layout: "dossier"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.78"
+    contrast: "1.03"
+    brightness: "1.02"
+    scale: "1.04"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/A8-the-stage-managers-notes/continuation-mechanism-detail.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0799bec1799d342a016a188665978c8199a77ce1e90436a907.png"
+        role_note: "Second-page mechanism detail with hinge, rigging cords, blank gridded paperwork, and softer negative space."
+        art_layout: "dossier"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.78"
+        contrast: "1.02"
+        brightness: "1.03"
+        scale: "1.01"
+    prompt: |
+      Original editorial art for Bit A8, "The Stage Manager's Notes": theater pit mechanism plate, hydraulic cover arcs, rigging lines, incandescent lens, old blank stage paperwork, brass hinge hardware, black tape tabs, grease-pencil traces as abstract lines, dark crescent-shaped mechanical opening, warm bone, smoked charcoal, oxidized teal, tarnished brass, amber light, muted burgundy, dusty coral, no readable text, no opera branding, no venue marks, no people.
+  - slug: "2026-04-02-the-flesh-archives"
+    byte_index: "A9"
+    title: "The Flesh Archives"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/A9-the-flesh-archives/plate-draft-v2.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-28"
+    rights_note: "Draft original generated art for internal review; replaces procedural SVG plate for stronger art-book texture; no external source imagery, readable brands, celebrity likenesses, explicit gore, medical logos, recognizable body parts, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.78"
+    contrast: "1.03"
+    brightness: "1.02"
+    scale: "1.04"
+    prompt: |
+      Original editorial art for Bit A9, "The Flesh Archives": abstract clinic archive plate, indigo data-smudge lines, non-gory biomaterial forms, cracked tablet-like glass geometry, blank treatment papers, sealed specimen blocks, dark folded folder, honey-rust and teal traces, warm bone, oxidized teal, indigo, charcoal, muted berry, pale clinical green, no readable text, no logos, no people.
+  - slug: "2026-04-12-the-salt-archivist"
+    byte_index: "AA"
+    title: "The Salt Archivist"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/AA-the-salt-archivist/plate-draft-v2.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-28"
+    rights_note: "Draft original generated art for internal review; replaces procedural SVG plate for stronger art-book texture; no external source imagery, readable brands, ship marks, celebrity likenesses, or living-artist style prompts requested."
+    art_layout: "dossier"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.76"
+    contrast: "1.04"
+    brightness: "1.01"
+    scale: "1.04"
+    prompt: |
+      Original editorial art for Bit AA, "The Salt Archivist": cargo-hold evidence plate, matte black tetrahedral abyss artifact nested in salt-crusted paper, rusted buoy-like dots, cassette-log forms with blank fields, compass-ring vibration geometry, rope fibers, tide stains, dark blue-green cargo shadows, warm bone, oxidized teal, salt white, rust orange, graphite black, old brass, muted sea blue, no readable text, no ship names, no logos.
+  - slug: "2026-04-14-the-archive-of-small-things"
+    byte_index: "AB"
+    title: "The Archive of Small Things"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/AB-the-archive-of-small-things/plate-draft-v2.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-28"
+    rights_note: "Draft original generated art for internal review; replaces procedural SVG plate for stronger art-book texture; no external source imagery, readable brands, lab logos, celebrity likenesses, product marks, or living-artist style prompts requested."
+    art_layout: "packet"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.77"
+    contrast: "1.03"
+    brightness: "1.02"
+    scale: "1.04"
+    prompt: |
+      Original editorial art for Bit AB, "The Archive of Small Things": bio-memory workshop plate, blank circular vat or petri aperture, fiber lattice, microscope-printer silhouette, tiny sealed specimen blocks, formaldehyde-toned paper, small glassine envelopes, blank cards, pale thread paths, colored pin dots, warm bone, formaldehyde amber, oxidized teal, pale clinical green, graphite, muted berry, old brass, no readable text, no lab branding, no people.
+  - slug: "2026-04-17-the-last-log-entry"
+    byte_index: "AC"
+    title: "The Last Log Entry"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/AC-the-last-log-entry/plate-draft-v2.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-28"
+    rights_note: "Draft original generated art for internal review; replaces procedural SVG plate for stronger art-book texture; no external source imagery, readable brands, computer logos, municipal seals, celebrity likenesses, or living-artist style prompts requested."
+    art_layout: "dossier"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.78"
+    contrast: "1.03"
+    brightness: "1.02"
+    scale: "1.04"
+    prompt: |
+      Original editorial art for Bit AC, "The Last Log Entry": kitchen-table terminal plate, blank green screen, ledger and phone-cord traces, porcelain-sink paper geometry, family-maintenance log forms, chipped mug ring stain, utility wires, dark empty rectangle, warm bone, terminal green, oxidized teal, porcelain gray, old brass, charcoal, muted rust, faded berry, no readable text, no computer branding, no municipal seals, no people.
+  - slug: "2026-05-28-the-glove-and-the-good-neighbors"
+    byte_index: "5D"
+    title: "The Glove and the Good Neighbors"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/5D-the-glove-and-the-good-neighbors/plate-draft.svg"
+    provider: "Procedural SVG generator"
+    generated_at: "2026-05-28"
+    rights_note: "Draft original procedural vector art for internal review; no external source imagery, readable brands, municipal seals, celebrity likenesses, or living-artist style prompts requested."
+    art_layout: "packet"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.78"
+    contrast: "1.03"
+    brightness: "1.02"
+    scale: "1.04"
+    prompt: |
+      Procedural editorial art for Bit 5D, "The Glove and the Good Neighbors": port authority lost-and-found evidence packet, glove silhouettes, complaint forms, hydrangea/sidewalk civic paper noise, no readable text, no logos, no people.
+  - slug: "2026-04-20-the-stack-of-unsigned-forms"
+    byte_index: "AD"
+    title: "The Stack of Unsigned Forms"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/AD-the-stack-of-unsigned-forms/plate-draft.svg"
+    provider: "Procedural SVG generator"
+    generated_at: "2026-05-28"
+    rights_note: "Draft original procedural vector art for internal review; no external source imagery, readable school marks, product logos, celebrity likenesses, or living-artist style prompts requested."
+    art_layout: "dossier"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.76"
+    contrast: "1.03"
+    brightness: "1.02"
+    scale: "1.04"
+    prompt: |
+      Procedural editorial art for Bit AD, "The Stack of Unsigned Forms": old school maintenance form stack, pink slip field, broken home-computer silhouette, boiler-room paper dust, no readable text, no school marks, no product logos.
+  - slug: "2026-04-21-queue-order-is-sacred"
+    byte_index: "AE"
+    title: "Queue Order is Sacred"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/AE-queue-order-is-sacred/plate-draft.svg"
+    provider: "Procedural SVG generator"
+    generated_at: "2026-05-28"
+    rights_note: "Draft original procedural vector art for internal review; no external source imagery, readable theater marks, website captures, product logos, celebrity likenesses, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.77"
+    contrast: "1.03"
+    brightness: "1.02"
+    scale: "1.04"
+    prompt: |
+      Procedural editorial art for Bit AE, "Queue Order is Sacred": numbered queue slips, backstage corridor archive, black modem monolith, abandoned bulletin-board signal rings, no readable text, no logos, no people.
+  - slug: "2026-04-22-transfer-slip"
+    byte_index: "AF"
+    title: "Transfer Slip"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/AF-transfer-slip/plate-draft.svg"
+    provider: "Procedural SVG generator"
+    generated_at: "2026-05-28"
+    rights_note: "Draft original procedural vector art for internal review; no external source imagery, transit logos, readable card numbers, celebrity likenesses, game marks, or living-artist style prompts requested."
+    art_layout: "packet"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.77"
+    contrast: "1.03"
+    brightness: "1.02"
+    scale: "1.04"
+    prompt: |
+      Procedural editorial art for Bit AF, "Transfer Slip": frayed counterfeit transit card, bus-transfer paper, night route trace, simulation residue as abstract waves, no readable numbers, no transit marks, no game marks, no people.
+  - slug: "2026-02-05-entangled-observers"
+    byte_index: "B1"
+    title: "Entangled Observers"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/B1-entangled-observers/plate-draft.svg"
+    provider: "Procedural SVG generator"
+    generated_at: "2026-05-28"
+    rights_note: "Draft original procedural vector art for internal review; no external source imagery, readable lab marks, celebrity likenesses, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.72"
+    contrast: "1.03"
+    brightness: "1.03"
+    scale: "1.04"
+    prompt: |
+      Procedural editorial art for Bit B1, "Entangled Observers": quantum sensor-array plate, mirrored data spirals, coffee-stained lab paper, cool blue-gray and oxidized teal traces, no readable text, no lab logos, no people.
+  - slug: "2026-02-23-bureaucratic-superposition"
+    byte_index: "B2"
+    title: "Bureaucratic Superposition"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/B2-bureaucratic-superposition/plate-draft.svg"
+    provider: "Procedural SVG generator"
+    generated_at: "2026-05-28"
+    rights_note: "Draft original procedural vector art for internal review; no external source imagery, agency marks, readable forms, celebrity likenesses, or living-artist style prompts requested."
+    art_layout: "dossier"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.72"
+    contrast: "1.03"
+    brightness: "1.03"
+    scale: "1.04"
+    prompt: |
+      Procedural editorial art for Bit B2, "Bureaucratic Superposition": translucent office forms, duplicated hand/eye ovals as abstract marks, dark filing cabinet, nested observation rings, no readable text, no agency marks, no people.
+  - slug: "2026-03-31-the-doubleslit-office"
+    byte_index: "B4"
+    title: "The Double-Slit Office"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/B4-the-doubleslit-office/plate-draft.svg"
+    provider: "Procedural SVG generator"
+    generated_at: "2026-05-28"
+    rights_note: "Draft original procedural vector art for internal review; no external source imagery, readable project labels, lab logos, celebrity likenesses, or living-artist style prompts requested."
+    art_layout: "dossier"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.72"
+    contrast: "1.03"
+    brightness: "1.03"
+    scale: "1.04"
+    prompt: |
+      Procedural editorial art for Bit B4, "The Double-Slit Office": shattered chalkboard field, telephone and photon-slit geometry, split interference marks, brass-console paper shadow, no readable labels, no lab logos, no people.
+  - slug: "2026-05-27-the-leverage-of-frayed-plastic"
+    byte_index: "B6"
+    title: "The Leverage of Frayed Plastic"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/B6-the-leverage-of-frayed-plastic/plate-draft.svg"
+    provider: "Procedural SVG generator"
+    generated_at: "2026-05-28"
+    rights_note: "Draft original procedural vector art for internal review; no external source imagery, readable permit numbers, government seals, celebrity likenesses, or living-artist style prompts requested."
+    art_layout: "packet"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.74"
+    contrast: "1.03"
+    brightness: "1.03"
+    scale: "1.04"
+    prompt: |
+      Procedural editorial art for Bit B6, "The Leverage of Frayed Plastic": frayed lanyard relic, cracked keycard, permit archive time-window arcs, old-plastic yellow on cool civic paper, no readable numbers, no seals, no people.
+  - slug: "2026-03-02-the-silent-ward"
+    byte_index: "C1"
+    title: "The Silent Ward"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/C1-the-silent-ward/plate-draft.svg"
+    provider: "Procedural SVG generator"
+    generated_at: "2026-05-28"
+    rights_note: "Draft original procedural vector art for internal review; no external source imagery, hospital logos, readable patient data, celebrity likenesses, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.72"
+    contrast: "1.03"
+    brightness: "1.03"
+    scale: "1.04"
+    prompt: |
+      Procedural editorial art for Bit C1, "The Silent Ward": 1970s ward correspondence plate, bed-window forms, oscilloscopic silence waves, coded dots on hospital paper, no readable patient data, no hospital marks, no people.
+  - slug: "2026-03-20-the-ciphers-edge"
+    byte_index: "C2"
+    title: "The Cipher's Edge"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/C2-the-ciphers-edge/plate-draft.svg"
+    provider: "Procedural SVG generator"
+    generated_at: "2026-05-28"
+    rights_note: "Draft original procedural vector art for internal review; no external source imagery, ship marks, readable manifests, celebrity likenesses, or living-artist style prompts requested."
+    art_layout: "dossier"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.72"
+    contrast: "1.04"
+    brightness: "1.02"
+    scale: "1.04"
+    prompt: |
+      Procedural editorial art for Bit C2, "The Cipher's Edge": scarred metal decrypter plate, concentric rings, heavy diamond casing, salt-kerosene manifest shadow, no readable text, no ship names, no logos, no people.
+  - slug: "2026-04-07-the-sock-cipher"
+    byte_index: "C3"
+    title: "The Sock Cipher"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/C3-the-sock-cipher/plate-draft.svg"
+    provider: "Procedural SVG generator"
+    generated_at: "2026-05-28"
+    rights_note: "Draft original procedural vector art for internal review; no external source imagery, readable transcript data, agency marks, celebrity likenesses, or living-artist style prompts requested."
+    art_layout: "packet"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.76"
+    contrast: "1.03"
+    brightness: "1.02"
+    scale: "1.04"
+    prompt: |
+      Procedural editorial art for Bit C3, "The Sock Cipher": redacted interview transcript plate, argyle sock silhouette, stitched cipher bands, bunker-paper blocks, no readable transcript text, no agency marks, no people.
+  - slug: "2026-04-19-care-instructions-for-unit-4b"
+    byte_index: "C4"
+    title: "Care Instructions for Unit 4B"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/C4-care-instructions-for-unit-4b/plate-draft.svg"
+    provider: "Procedural SVG generator"
+    generated_at: "2026-05-28"
+    rights_note: "Draft original procedural vector art for internal review; no external source imagery, care-home logos, medical logos, readable patient data, celebrity likenesses, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.74"
+    contrast: "1.03"
+    brightness: "1.03"
+    scale: "1.04"
+    prompt: |
+      Procedural editorial art for Bit C4, "Care Instructions for Unit 4B": care-home instruction packet, obsolete keycard, flickering synthetic skin monitor, oxygen-order forms, no readable data, no medical branding, no people.
+  - slug: "2026-05-09-the-lanyard-and-the-lemon-drops"
+    byte_index: "C5"
+    title: "The Lanyard and the Lemon Drops"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/C5-the-lanyard-and-the-lemon-drops/plate-draft.svg"
+    provider: "Procedural SVG generator"
+    generated_at: "2026-05-28"
+    rights_note: "Draft original procedural vector art for internal review; no external source imagery, ferry logos, readable serials, product labels, celebrity likenesses, or living-artist style prompts requested."
+    art_layout: "packet"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.77"
+    contrast: "1.03"
+    brightness: "1.03"
+    scale: "1.04"
+    prompt: |
+      Procedural editorial art for Bit C5, "The Lanyard and the Lemon Drops": ferry lost-and-found packet, red lanyard curve, obsolete keycard, three lemon-drop circles, salt-mildew paper waves, no readable serials, no ferry marks, no people.
+  - slug: "2026-05-04-the-receipt-and-the-rhododendron"
+    byte_index: "E1"
+    title: "The Receipt and the Rhododendron"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/E1-the-receipt-and-the-rhododendron/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0b6eac79a92b3962016a15ca25bc0c81998b981ab0ee3535e0.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-26"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "echo"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.84"
+    contrast: "1.02"
+    brightness: "1.04"
+    scale: "1.12"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/E1-the-receipt-and-the-rhododendron/continuation-afterimage.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0b6eac79a92b3962016a15ce2526a88199a11b6192615fa98e.png"
+        role_note: "Page-two botanical receipt afterimage; quieter and airier than the opener."
+        art_layout: "echo"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.78"
+        contrast: "1.0"
+        brightness: "1.05"
+        scale: "1.02"
+    prompt: |
+      Original editorial art for Bit E1, "The Receipt and the Rhododendron": glitch-fragment plate where receipt tape and flower shadow become a threshold, translucent envelope window, torn garden-center tag shapes with all marks abstract, rhododendron leaf and flower shadow, scan drift, long curling receipt strip with blank blocks, soft botanical shadow, misregistered magenta and cyan edges, torn paper apertures suggesting a doorway, warm bone, faded receipt gray, rhododendron pink, oxidized teal, muted leaf green, graphite, tiny rust marks, no readable text, no numbers, no barcodes, no logos, no brand labels, no real store marks, no people, no living artist style imitation.
+  - slug: "2026-05-24-incense-and-the-exit-sign"
+    byte_index: "3A"
+    title: "Incense and the Exit Sign"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/3A-incense-and-the-exit-sign/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0149f88873ad471f016a17680172948195a1a496d9cdd678d0.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, official marks, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.78"
+    contrast: "1.03"
+    brightness: "1.02"
+    scale: "1.04"
+    prompt: |
+      Original editorial art for Bit 3A, "Incense and the Exit Sign": wordless night bus depot intake alcove, old blank monitor glow, clipboard shapes with blank gridded paper, bubble mailer holding a cracked red sign lens with no letters, incense ash, crushed marigold residue, wet concrete, faint humming brick texture, abstract thermal-paper ribbon and discharged-debt geometry, bone paper, ash gray, marigold orange, wet concrete green-gray, dull teal, faded red lens, brass flecks, no readable text, no logos, no faces, no living artist style imitation.
+  - slug: "2026-05-26-the-mourning-docket"
+    byte_index: "3C"
+    title: "The Mourning Docket"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/3C-the-mourning-docket/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0149f88873ad471f016a1768634c188195bbdf4ec1d634b757.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, religious symbols, or living-artist style prompts requested."
+    art_layout: "dossier"
+    fit: "cover"
+    position: "center 48%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.76"
+    contrast: "1.03"
+    brightness: "1.02"
+    scale: "1.03"
+    prompt: |
+      Original editorial art for Bit 3C, "The Mourning Docket": funeral home side-office evidence still life, fogged vending-machine glass, dented blank nameplate, chipped teacup, cold thermos, cracked certificate glass, single carnation, umbrella drip, old ledger, tiny wrapped mints, queue implied by shadows only, bone paper, funeral-home green, muted brass, carnation red, cold coffee brown, fogged glass gray, soft mint blue-green, no readable text, no crosses, no logos, no faces, no living artist style imitation.
+  - slug: "2026-02-10-the-duplicate-report"
+    byte_index: "41"
+    title: "The Duplicate Report"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/41-the-duplicate-report/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0149f88873ad471f016a1768c251f48195bee36430306efe1f.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, official marks, or living-artist style prompts requested."
+    art_layout: "dossier"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.76"
+    contrast: "1.03"
+    brightness: "1.02"
+    scale: "1.03"
+    prompt: |
+      Original editorial art for Bit 41, "The Duplicate Report": 42nd-floor mirror archive office, pneumatic tube mouth, three blank duplicate forms, invalid blank stamp pad, chamomile tea stain, lint roller, surveillance camera with no logo, mirrored black computer glass, carbonless copies merging into one, bone paper, carbon gray, tea gold, office teal, muted red-orange correction marks, pale fluorescent green, black glass, no readable text, no seals, no logos, no faces, no living artist style imitation.
+  - slug: "2026-02-14-fault-lines"
+    byte_index: "42"
+    title: "Fault Lines"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/42-fault-lines/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0149f88873ad471f016a17691e2e2c81958adcc49fc4aab9ef.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.86"
+    contrast: "1.04"
+    brightness: "1.0"
+    scale: "1.04"
+    prompt: |
+      Original editorial art for Bit 42, "Fault Lines": dusk city corner stuttering between bakery, bookstore, and laundromat states, seven-blink streetlight, wet crosswalk, alley maintenance hatch, folded blank napkin map, nonexistent subway token, misaligned street geometry, color-channel offset, dusk blue, wet asphalt black, faded awning blue, warning red-orange, sodium yellow, dull teal, bone paper, no readable text, no shop names, no logos, no people, no living artist style imitation.
+  - slug: "2026-02-18-cracked-frequency"
+    byte_index: "43"
+    title: "Cracked Frequency"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/43-cracked-frequency/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0149f88873ad471f016a1769ddde088195a1cdabebeaa77b35.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, explicit song references, or living-artist style prompts requested."
+    art_layout: "dossier"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.8"
+    contrast: "1.04"
+    brightness: "1.02"
+    scale: "1.04"
+    prompt: |
+      Original editorial art for Bit 43, "Cracked Frequency": wordless library checkout desk and rare-books room edge, cracked stainless thermos leaking steam, prepaid burner phone dismantled, east stairwell light, old intercom grille, vintage radio display, blank inventory cards, thermos crack lit from within, bone paper, library green, stainless gray, lemon disinfectant yellow, carbon black, dull teal, faded radio amber, no readable text, no signs, no logos, no faces, no living artist style imitation.
+  - slug: "2026-02-21-the-archivists-ledger"
+    byte_index: "44"
+    title: "The Archivist's Ledger"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/44-the-archivists-ledger/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0149f88873ad471f016a176a4702c08195b70d965f45401d4d.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, recognizable book titles, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 51%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.82"
+    contrast: "1.04"
+    brightness: "1.0"
+    scale: "1.03"
+    prompt: |
+      Original editorial art for Bit 44, "The Archivist's Ledger": special collections desk after hours, slim forbidden ledger, shifting map with no readable labels, blank index cards trembling in drawers, paperknife, cardigan edge, cube-like hailstones, bookshop door opening onto impossible sodium-green lawn, bone paper, leather brown, archive green, sodium sky yellow-green, black ink, muted red-orange, pale cube ice, no readable text, no book titles, no logos, no faces, no living artist style imitation.
+  - slug: "2026-02-28-the-other-half"
+    byte_index: "45"
+    title: "The Other Half"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/45-the-other-half/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_063ac50248675600016a177e302e6481938863c96ff65d4632.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, readable headstone text, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.78"
+    contrast: "1.03"
+    brightness: "1.02"
+    scale: "1.04"
+    prompt: |
+      Original editorial art for Bit 45, "The Other Half": cemetery edge in late morning, pinewoods, weathered blank headstones, clock-tower distance, silver coin suspended in air, independent broken-glass shadow, empty bench, trimmed grass, oxidized silver, cemetery green, warm bone paper, graphite marks, no readable inscriptions, no logos, no faces, no living artist style imitation.
+  - slug: "2026-03-04-the-spoon-that-remembered"
+    byte_index: "46"
+    title: "The Spoon That Remembered"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    layout_mode: "field_note"
+    asset_path: "book/source/volume-1/assets/art/46-the-spoon-that-remembered/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_063ac50248675600016a177e7a19e881938558ae1489ab4144.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, labels, or living-artist style prompts requested."
+    art_layout: "dossier"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.82"
+    contrast: "1.04"
+    brightness: "1.01"
+    scale: "1.04"
+    prompt: |
+      Original editorial art for Bit 46, "The Spoon That Remembered": tarnished silver spoon on restaurant counter, flour dust, basil smear, steam, anonymous cropped gloved hands, forest reflection leaking into soup surface, antique overlapping-circle engraving, tarnished chrome, basil green, tom-yum amber, bone-paper grain, no readable text, no labels, no logos, no faces, no living artist style imitation.
+  - slug: "2026-03-11-the-infinite-windows"
+    byte_index: "47"
+    title: "The Infinite Windows"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/47-the-infinite-windows/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_063ac50248675600016a177ebb7d98819394c7b40bb8b24f51.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, transit branding, or living-artist style prompts requested."
+    art_layout: "side"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.76"
+    contrast: "1.03"
+    brightness: "1.03"
+    scale: "1.03"
+    prompt: |
+      Original editorial art for Bit 47, "The Infinite Windows": early morning train interior, recursive west-facing windows, anonymous navy-coated notebook figure repeated in panes, torn blank page drifting toward tracks, printing-press reflection shapes, cyan-blue glass, muted navy, paper cream, graphite, no readable text, no transit brands, no logos, no faces, no living artist style imitation.
+  - slug: "2026-03-18-the-spice-of-elsewheres"
+    byte_index: "48"
+    title: "The Spice of Elsewheres"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/48-the-spice-of-elsewheres/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_063ac50248675600016a177f0a1728819388401f430808cbf1.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, labels, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.88"
+    contrast: "1.04"
+    brightness: "1.0"
+    scale: "1.04"
+    prompt: |
+      Original editorial art for Bit 48, "The Spice of Elsewheres": market stall, one glass spice jar containing cinnamon dust and a miniature galaxy spiral, impossible weather reflection, almost-touching anonymous hands, brass scale, soft market shapes, amber, copper, rain blue, translucent glass, grainy paper texture, no readable labels, no text, no logos, no faces, no living artist style imitation.
+  - slug: "2026-03-22-glitch-in-the-pantheon"
+    byte_index: "49"
+    title: "Glitch in the Pantheon"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/49-glitch-in-the-pantheon/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_063ac50248675600016a177fe8c68c81939341376b3bbd3ef2.png"
+    rejected_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_063ac50248675600016a177f4ceacc8193bd94270caa9cb0de.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; rejected first draft for UI/text artifacts; no readable brands, celebrity likenesses, named fictional universes, signage, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.84"
+    contrast: "1.04"
+    brightness: "1.0"
+    scale: "1.04"
+    prompt: |
+      Original editorial art for Bit 49, "Glitch in the Pantheon": ornate theater corridor and backstage hatch fractured by temporal light, abstract stage masks, blank paper shards becoming static, velvet curtains, marble, amber chartreuse violet emergency bands, analog printmaking and gouache, no readable text, no pseudo text, no signage, no UI chrome, no logos, no faces, no living artist style imitation.
+  - slug: "2026-03-25-the-weight-of-the-lanyard"
+    byte_index: "4A"
+    title: "The Weight of the Lanyard"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/4A-the-weight-of-the-lanyard/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_063ac50248675600016a17825714a0819390da79c013335ecd.png"
+    rejected_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_063ac50248675600016a177f8c4b3c8193b0d9cfc89850945c.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; rejected first draft for generated letter artifacts; no readable brands, celebrity likenesses, named fictional universes, transit branding, or living-artist style prompts requested."
+    art_layout: "side"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.78"
+    contrast: "1.03"
+    brightness: "1.02"
+    scale: "1.03"
+    prompt: |
+      Original editorial art for Bit 4A, "The Weight of the Lanyard": rainy bus transfer station at night, frayed institutional lanyard, blank keycard, red access-reader glow, fluorescent shelter reflections, anonymous commuters blurred as shapes, blazer silhouette in reflection, dusky teal, sodium orange, access red, concrete gray, paper grain, no readable card text, no transit branding, no logos, no faces, no living artist style imitation.
+  - slug: "2026-03-26-tag-number-37"
+    byte_index: "4B"
+    title: "Tag Number 37"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/4B-tag-number-37/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_063ac50248675600016a17b6e183a08193a2c0e0644851c62e.png"
+    rejected_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_063ac50248675600016a17b30f2c84819395971f7011e1cf6a.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-28"
+    rights_note: "Draft original generated image for internal review; rejected first draft as too cinematic/photoreal; no readable brands, celebrity likenesses, named fictional universes, tag numerals, or living-artist style prompts requested."
+    art_layout: "dossier"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.78"
+    contrast: "1.04"
+    brightness: "1.02"
+    scale: "1.04"
+    prompt: |
+      Original editorial art for Bit 4B, "Tag Number 37": flatbed evidence plate of duplicate blank coat-check tags, umbrella tips, ice, scanner light, rippling counterfeit bill, rain droplets, torn translucent overlays, violet-black velvet, oxidized brass, icy blue, nicotine amber, muted magenta, no readable text, no pseudo text, no letters, no numbers, no tag numerals, no signage, no logos, no faces, no living artist style imitation.
+  - slug: "2026-03-29-the-whispering-parchment"
+    byte_index: "4C"
+    title: "The Whispering Parchment"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/4C-the-whispering-parchment/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_063ac50248675600016a17b783f3ac8193a781926cc9582ec5.png"
+    rejected_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_063ac50248675600016a17b37095b08193a137f40666f02b35.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-28"
+    rights_note: "Draft original generated image for internal review; rejected first draft as too fantasy-scene literal; no readable brands, celebrity likenesses, named fictional universes, glyphs, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.76"
+    contrast: "1.03"
+    brightness: "1.02"
+    scale: "1.04"
+    prompt: |
+      Original editorial art for Bit 4C, "The Whispering Parchment": flat occult archive specimen, blank vellum page, ink-smoke motion, wax, stone dust, scroll fragments, rusted cross fragment, thread, mildew stains, soot, subtle gold-brown wash, no readable text, no pseudo text, no letters, no runes, no glyphs, no numbers, no logos, no face, no living artist style imitation.
+  - slug: "2026-04-05-the-glassmongers-bargain"
+    byte_index: "4D"
+    title: "The Glassmonger’s Bargain"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/4D-the-glassmongers-bargain/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_063ac50248675600016a17b42aa240819382c7ef9dd70bd471.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-28"
+    rights_note: "Draft original generated image for internal review; selected as fitting the artifact/book-plate direction; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 51%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.82"
+    contrast: "1.04"
+    brightness: "1.01"
+    scale: "1.04"
+    prompt: |
+      Original editorial art for Bit 4D, "The Glassmonger’s Bargain": traveling mirror seller's table, small antique mirrors, impossible alternate workshop reflection, indigo cloth, brass tray, pomegranate seed, date-palm market dusk, burnished brass, indigo dye, pomegranate red, desert gold, smoke-gray glass, no readable text, no labels, no logos, no identifiable faces, no living artist style imitation.
+  - slug: "2026-04-09-the-glitch-in-the-weave"
+    byte_index: "4E"
+    title: "The Glitch in the Weave"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/4E-the-glitch-in-the-weave/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_063ac50248675600016a17b49287548193902dde74c74d1440.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-28"
+    rights_note: "Draft original generated image for internal review; selected as fitting the tactile/weave abstraction; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "side"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.8"
+    contrast: "1.03"
+    brightness: "1.02"
+    scale: "1.03"
+    prompt: |
+      Original editorial art for Bit 4E, "The Glitch in the Weave": domestic room as old blanket reality pulled apart, frayed textile threads stretching into air, stacked sky-color resets through a window, tactile sci-fi magical realism, woven fiber, teal dusk, muted coral reset-light, charcoal, fabric grain, no readable text, no letters, no numbers, no UI, no logos, no faces, no living artist style imitation.
+  - slug: "2026-04-25-the-mirror-test"
+    byte_index: "4F"
+    title: "The Mirror Test"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/4F-the-mirror-test/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_063ac50248675600016a17b8272d188193940f9f82f7c494b3.png"
+    rejected_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_063ac50248675600016a17b54314548193a6fe51aec142ef18.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-28"
+    rights_note: "Draft original generated image for internal review; rejected first draft as too documentary/real; no readable brands, celebrity likenesses, named fictional universes, stamps, or living-artist style prompts requested."
+    art_layout: "dossier"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.74"
+    contrast: "1.03"
+    brightness: "1.03"
+    scale: "1.04"
+    prompt: |
+      Original editorial art for Bit 4F, "The Mirror Test": damaged evidence collage, cracked pink compact mirror, ash, blank voucher paper, false clean reflection as soft color blocks, smoke residue, charred paper edge, donation-bin fragment, flatbed scan, faded pink, ash gray, voucher yellow, muted teal, no readable text, no pseudo text, no letters, no numbers, no stamps, no logos, no faces, no living artist style imitation.
+  - slug: "2026-02-13-the-silent-garden"
+    byte_index: "51"
+    title: "The Silent Garden"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/51-the-silent-garden/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_063ac50248675600016a17b8e9acf48193a125265f0ea478a3.png"
+    rejected_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_063ac50248675600016a17b5bacc188193a66f5852def494b5.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-28"
+    rights_note: "Draft original generated image for internal review; rejected first draft as too polished cinematic sci-fi; no readable brands, celebrity likenesses, named fictional universes, spacecraft branding, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 49%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.82"
+    contrast: "1.04"
+    brightness: "1.0"
+    scale: "1.04"
+    prompt: |
+      Original editorial art for Bit 51, "The Silent Garden": restrained botanical station specimen, translucent bioluminescent plant in corroded hydroponic tray, copper wall fragments, frost, moss, cables, pale blue porthole crescent, floating blank paper scrap, botanical plate plus analog collage, copper rust, luminous moss green, cold blue, frost white, no readable text, no labels, no logos, no astronauts, no spacecraft branding, no living artist style imitation.
+  - slug: "2026-02-22-the-bureaucracy-of-ghosts"
+    byte_index: "52"
+    title: "The Bureaucracy of Ghosts"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/52-the-bureaucracy-of-ghosts/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_06caae30769b1be4016a180a3c2b1c819a9eb6bab3a324c4e0.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-28"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "dossier"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.78"
+    contrast: "1.03"
+    brightness: "1.02"
+    scale: "1.04"
+    prompt: |
+      Original editorial art for Bit 52, "The Bureaucracy of Ghosts": fog-damp cemetery filing desk as impossible ministry archive, carbon-copy forms, brass urn ash, rusted cemetery plot markers, typewriter smudges, worn coordinate grid, pale grave fog, abstract official stamp blocks, flatbed archive collage, aged paper, fog gray, oxidized brass, tobacco brown, institutional green, no readable text, no logos, no faces, no living artist style imitation.
+  - slug: "2026-03-03-the-weeping-cogs-of-naqshab"
+    byte_index: "53"
+    title: "The Weeping Cogs of Naqshab"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/53-the-weeping-cogs-of-naqshab/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_06caae30769b1be4016a180a91ad54819a99f018703e5b5288.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-28"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, flags, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 51%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.82"
+    contrast: "1.04"
+    brightness: "1.0"
+    scale: "1.04"
+    prompt: |
+      Original editorial art for Bit 53, "The Weeping Cogs of Naqshab": ruined transit-lounge archive with brass orrery fragments, oxidized ship-hull sliver, brittle customs ledgers, spice dust, silk scraps, porthole-like circular diagrams as abstract sea-blue bands, weeping oil on cogs, museum specimen plate, tarnished brass, bergamot ochre, rust iron, deep Mediterranean blue, no readable text, no logos, no faces, no living artist style imitation.
+  - slug: "2026-03-12-the-suburban-stitchwork"
+    byte_index: "54"
+    title: "The Suburban Stitchwork"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/54-the-suburban-stitchwork/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_06caae30769b1be4016a180b1b529c819aab41ee8a81ee69dd.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-28"
+    rights_note: "Draft original generated image for internal review; generated as non-graphic textile evidence; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "dossier"
+    fit: "cover"
+    position: "center 49%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.76"
+    contrast: "1.03"
+    brightness: "1.02"
+    scale: "1.04"
+    prompt: |
+      Original editorial art for Bit 54, "The Suburban Stitchwork": suburban garage workbench as evidence/specimen plate, wrong sewing tools, ruler-long needles, abstract toothlike scissors, oil-stained cloth, skin-toned fabric swatches, thread grids, workshop shadow, restrained forensic textile collage, garage concrete gray, motor-oil black, faded turquoise, thread red, no gore, no readable text, no logos, no faces, no living artist style imitation.
+  - slug: "2026-03-21-the-ghost-ship-gambit"
+    byte_index: "55"
+    title: "The Ghost Ship Gambit"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/55-the-ghost-ship-gambit/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_06caae30769b1be4016a180b9f8f10819a843d385e8c4a6206.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-28"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, spacecraft franchises, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.78"
+    contrast: "1.03"
+    brightness: "1.01"
+    scale: "1.04"
+    prompt: |
+      Original editorial art for Bit 55, "The Ghost Ship Gambit": orbital salvage evidence board inside a stale transit terminal, derelict hull fragment, coffee-ringed blank transfer ticket, wrench silhouette, navigation core as abstract dark gem, proximity-alarm waveform as non-readable marks, terminal light panels, analog sci-fi archive plate, stale coffee tan, terminal fluorescent green, oxidized steel, Mars rust, no readable text, no logos, no faces, no living artist style imitation.
+  - slug: "2026-03-30-transcript-the-unseen-route"
+    byte_index: "56"
+    title: "Transcript: The Unseen Route"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/56-transcript-the-unseen-route/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_06caae30769b1be4016a180c5be590819a8e53c1c86986181c.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-28"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named transit systems, or living-artist style prompts requested."
+    art_layout: "dossier"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.78"
+    contrast: "1.03"
+    brightness: "1.02"
+    scale: "1.04"
+    prompt: |
+      Original editorial art for Bit 56, "Transcript: The Unseen Route": train route anomaly recorded as archive plate, blank transcript sheets, stopped clock face without numbers, leather satchel silhouette, coffee cup ring, rail-light strips, luggage-rack shadow, abstract crow feather, vial and rolled blueprint as unlabeled shapes, stale train-car beige, rail-signal green, soot black, amber station light, no readable text, no logos, no faces, no living artist style imitation.
+  - slug: "2026-04-08-the-fairs-last-testimony"
+    byte_index: "57"
+    title: "The Fair’s Last Testimony"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/57-the-fairs-last-testimony/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_06caae30769b1be4016a180cc86264819a8b1d31e0b4851119.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-28"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, fair branding, or living-artist style prompts requested."
+    art_layout: "dossier"
+    fit: "cover"
+    position: "center 49%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.76"
+    contrast: "1.03"
+    brightness: "1.02"
+    scale: "1.04"
+    prompt: |
+      Original editorial art for Bit 57, "The Fair's Last Testimony": final county fair report as evidence packet, blank ticket-stub blocks, partial ferris wheel geometry, concession-paper stains, administration trailer form layers, humming-machine waveform marks as abstract scratches, faded ticket yellow, oxidized red, old paper cream, trailer aluminum gray, night teal, no readable text, no logos, no faces, no living artist style imitation.
+  - slug: "2026-04-28-plastic-bloom"
+    byte_index: "58"
+    title: "Plastic Bloom"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/58-plastic-bloom/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_06caae30769b1be4016a180d6b37a4819a9ba557dd4dd894f7.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-28"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, school branding, children, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.8"
+    contrast: "1.03"
+    brightness: "1.02"
+    scale: "1.04"
+    prompt: |
+      Original editorial art for Bit 58, "Plastic Bloom": school clinic/staff hallway audit artifact, cracked plastic duck keychain, biometric scanner light as abstract block, gym hallway tile fragments, nurse clipboard blanks, green data-bloom pattern like translucent plastic plant, muted evidence collage, clinic green, hallway beige, plastic yellow, scanner red, copier gray, no readable text, no logos, no faces, no children, no living artist style imitation.
+  - slug: "2026-04-29-the-oathkeepers-lanyard"
+    byte_index: "59"
+    title: "The Oathkeeper’s Lanyard"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/59-the-oathkeepers-lanyard/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_06caae30769b1be4016a18109b825c819ab41300927bb38343.png"
+    rejected_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_06caae30769b1be4016a180ddff21c819a8cea0a05e7ba81f0.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-28"
+    rights_note: "Draft original generated image for internal review; rejected first draft for excessive pseudo-document detail; no readable brands, celebrity likenesses, court seals, flags, or living-artist style prompts requested."
+    art_layout: "dossier"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.78"
+    contrast: "1.03"
+    brightness: "1.02"
+    scale: "1.04"
+    prompt: |
+      Original editorial art for Bit 59, "The Oathkeeper's Lanyard": courthouse printer/court translation desk as muted evidence packet, jammed receipt paper as blank cream strips with abstract toner blocks, plain yellow lanyard, tiny duck charm, transparent evidence bag, copier geometry, printer roller shadow, access-card teal block, restrained glitch archive plate, no readable text, no logos, no court seals, no faces, no living artist style imitation.
+  - slug: "2026-05-02-the-unlisted-special"
+    byte_index: "5A"
+    title: "The Unlisted Special"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/5A-the-unlisted-special/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_06caae30769b1be4016a1811372598819aa43a4714b8a5978d.png"
+    rejected_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_06caae30769b1be4016a180e5b3568819a9234c8dc522e9a34.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-28"
+    rights_note: "Draft original generated image for internal review; rejected first draft for excessive pseudo-document detail; no readable brands, celebrity likenesses, school branding, children, or living-artist style prompts requested."
+    art_layout: "dossier"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.78"
+    contrast: "1.03"
+    brightness: "1.02"
+    scale: "1.04"
+    prompt: |
+      Original editorial art for Bit 5A, "The Unlisted Special": school faculty lounge and nail salon paperwork anomaly as quiet field-note collage, absence excuse slips as blank blue-line blocks, triplicate paper stack, abstract blue ink smudges, muted manicure color swatches without names, laminate tabletop circle, blank appointment card, copier-gray paper scraps, no readable text, no logos, no faces, no children, no living artist style imitation.
+  - slug: "2026-05-25-the-copyists-dilemma"
+    byte_index: "3B"
+    title: "The Copyist’s Dilemma"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/3B-the-copyists-dilemma/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0d705e790306feee016a166b595ca48196855e341795b87d4e.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    fit: "cover"
+    position: "center 47%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.74"
+    contrast: "1.02"
+    brightness: "1.03"
+    scale: "1.04"
+    prompt: |
+      Original editorial art for Bit 3B, "The Copyist’s Dilemma": counterfeit realities as a copy-shop document artifact, strict ledger grid of duplicate blank forms, repeated signature strokes failing to align, smudged notary circles, copy counter geometry, a human-shaped absence made from paper and ink voids, warm bone copy paper, carbon dust, copier gray, graphite black, muted rust red, dull teal, faint institutional green, no readable text, no logos, no faces, no bodies, no living artist style imitation.
+  - slug: "2026-05-22-the-ice-bucket-tags"
+    byte_index: "5C"
+    title: "The Ice Bucket Tags"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/5C-the-ice-bucket-tags/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0d705e790306feee016a166be44adc81969ab551b7edf60281.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    fit: "cover"
+    position: "center 57%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.8"
+    contrast: "1.03"
+    brightness: "1.02"
+    scale: "1.04"
+    prompt: |
+      Original editorial art for Bit 5C, "The Ice Bucket Tags": parking garage booth and plastic ice bucket rendered as a document-scan artifact, blank numbered-tag shapes without readable numbers, frosty duplicate tags stacking, parking-ticket perforation marks, receipt strips, cold cyan glow inside the bucket, warm receipt paper, garage concrete gray, warning orange, oxidized teal, muted black, no readable text, no readable numbers, no logos, no people, no living artist style imitation.
+  - slug: "2026-04-30-the-ledger-of-living-cells"
+    byte_index: "60"
+    title: "The Ledger of Living Cells"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/60-the-ledger-of-living-cells/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0d705e790306feee016a166c5b1e0c81969effa898dc4adaa3.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "side"
+    fit: "cover"
+    position: "center 46%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.72"
+    contrast: "1.02"
+    brightness: "1.03"
+    scale: "1.04"
+    prompt: |
+      Original editorial art for Bit 60, "The Ledger of Living Cells": archival ledger-fragment where ruled columns merge into soft cellular diagrams, old theater ledger, translucent vials as abstract silhouettes, green organic ink bleeding through paper fibers, backstage nail holes, stage-mark lines, warm bone paper, graphite, soft green bioluminescence, faded red pencil, chalk gray, oxidized teal, no gore, no readable text, no logos, no people, no living artist style imitation.
+  - slug: "2026-04-10-the-mind-in-the-midway"
+    byte_index: "90"
+    title: "The Mind in the Midway"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/90-the-mind-in-the-midway/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0d705e790306feee016a166cdaa6c08196b5e603ed349d484c.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 47%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.82"
+    contrast: "1.03"
+    brightness: "1.02"
+    scale: "1.12"
+    prompt: |
+      Original editorial art for Bit 90, "The Mind in the Midway": ritual-diagram of an uncanny fairground machine, brass and vacuum tubes, carousel ring fragments, cotton-candy filament clouds, electrical tendrils entering a fairground grid, repair tags and prize tokens orbiting a precise central rule, warm bone, midway orange, aged brass, oxidized teal, faded carnival pink, soot black, no gore, no readable text, no logos, no people, no living artist style imitation.
+  - slug: "2026-01-30-the-echoes-of-elsewhere"
+    byte_index: "B0"
+    title: "The Echoes of Elsewhere"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/B0-the-echoes-of-elsewhere/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0d705e790306feee016a166d4ec6308196af3040f20ed0b6df.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "side"
+    fit: "cover"
+    position: "center 48%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.78"
+    contrast: "1.02"
+    brightness: "1.03"
+    scale: "1.03"
+    prompt: |
+      Original editorial art for Bit B0, "The Echoes of Elsewhere": frequency-map plate with cracked telephone handset silhouette, waveform lines crossing a river map, small compass-eye relay device, door-like apertures in a lattice of realities, looped cord becoming a signal path, midnight graphite, oxidized teal, river gray, dormant red-orange, bone paper, pale silver, no readable text, no logos, no people, no living artist style imitation.
+  - slug: "2026-03-13-dialup-entanglement"
+    byte_index: "B3"
+    title: "Dial-Up Entanglement"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/B3-dial-up-entanglement/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0d705e790306feee016a166db238c08196bd388baf0d5ac55d.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "side"
+    fit: "cover"
+    position: "center 46%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.76"
+    contrast: "1.04"
+    brightness: "1.02"
+    scale: "1.03"
+    prompt: |
+      Original editorial art for Bit B3, "Dial-Up Entanglement": signal-diagram and corrupted document scan, paired nodes connected by tangled 1200-baud waveforms, shed-shaped relay room, empty shelves, redaction bars as abstract blocks, cable combs, static crackle in margins, bone paper, soot black, electric teal, muted red, faded beige, graphite, no readable text, no logos, no brand marks, no people, no living artist style imitation.
+  - slug: "2026-05-05-the-clipboards-edge"
+    byte_index: "B5"
+    title: "The Clipboard's Edge"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/B5-the-clipboards-edge/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_06eabfd06d618296016a16793622d08197b10b3d14e10f4db9.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    fit: "cover"
+    position: "center 48%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.78"
+    contrast: "1.03"
+    brightness: "1.03"
+    scale: "1.03"
+    prompt: |
+      Original editorial art for Bit B5, "The Clipboard's Edge": haunted administrative object without horror clichés, broken clipboard, appointment rows as abstract marks, tire-shop rubber dust, burned manual ash fragments, probability paths bending as fine red and teal threads, warm bone paper, beige tan, soot black, oxidized teal, rust red, tired fluorescent gray, no readable text, no numbers, no logos, no faces, no bodies, no brand marks, no living artist style imitation.
+  - slug: "2026-02-12-the-unbroken-key"
+    byte_index: "C0"
+    title: "The Unbroken Key"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/C0-the-unbroken-key/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_06eabfd06d618296016a16797c686c8197a5080389f18cd082.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 46%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.82"
+    contrast: "1.03"
+    brightness: "1.02"
+    scale: "1.02"
+    prompt: |
+      Original editorial art for Bit C0, "The Unbroken Key": cryptographic archive in orbit of a dead star, blue data spire, dissolving self-erasing marks, childlike sun drawing with too many rays, Mars crater and bunker floor plan ghosted beneath paper, warm bone, cold spire blue, rust Mars red, graphite black, pale silver, muted teal, no readable text, no letters, no numbers, no logos, no people, no spacesuit figures, no living artist style imitation.
+  - slug: "2026-05-16-the-velvet-audit"
+    byte_index: "C6"
+    title: "The Velvet Audit"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/C6-the-velvet-audit/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_06eabfd06d618296016a1679beb14c8197aabc4321fab43386.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    fit: "cover"
+    position: "center 44%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.8"
+    contrast: "1.02"
+    brightness: "1.02"
+    scale: "1.04"
+    prompt: |
+      Original editorial art for Bit C6, "The Velvet Audit": satirical institutional relic, seamless velvet box opened like a strange mouth, blank buttons, folded hexagon receipt shape, checkout-lane scanner geometry, emergency light wash, coupons as abstract slips, honey packet amber, sardine-can ovals without labels, deep velvet burgundy, bone paper, brass yellow, mother-of-pearl gray, checkout red, oxidized teal, linoleum green, no readable text, no logos, no brand marks, no faces, no bodies, no living artist style imitation.
+  - slug: "2026-05-08-line-items-in-the-dark"
+    byte_index: "D0"
+    title: "Line Items in the Dark"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/D0-line-items-in-the-dark/plate-draft-v2.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_06eabfd06d618296016a1680d609e8819782a3a435f69caa28.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 48%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.82"
+    contrast: "1.04"
+    brightness: "1.02"
+    scale: "1.02"
+    prompt: |
+      Original editorial art for Bit D0, "Line Items in the Dark": theater maintenance cart and receipt that keeps inventing charges, rolling dolly in dark wings, ghost receipt strip lengthening into stage rigging, emergency exit sign geometry, walker as abstract linework, coffee-ring stain, clipboard, blank paper blocks, black stage void, warm bone receipt paper, crimson thread, emergency green, oxidized teal, brass dust, rain-gray, no readable text, no numbers, no logos, no people, no faces, no living artist style imitation.
+  - slug: "2026-04-27-tomorrows-transfer"
+    byte_index: "E0"
+    title: "Tomorrow’s Transfer"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/E0-tomorrows-transfer/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_06eabfd06d618296016a167a530078819782686d88a2d52983.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 48%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.78"
+    contrast: "1.03"
+    brightness: "1.02"
+    scale: "1.03"
+    prompt: |
+      Original editorial art for Bit E0, "Tomorrow's Transfer": reality glitch through a bus transfer and library archive, crumpled punched transfer, catering schedule grease smudges, reference desk card-catalog geometry, unlabeled encyclopedia blocks, deviled-egg spill, storm drain swallowing a paper slip, warm bone, faded blue, library green, grease yellow, storm-drain graphite, rust red, oxidized teal, no readable text, no numbers, no logos, no people, no faces, no living artist style imitation.
+  - slug: "2026-05-11-final-notice"
+    byte_index: "E2"
+    title: "Final Notice"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/E2-final-notice/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_06eabfd06d618296016a167aa18a3881979b2620a05fdc98a9.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "side"
+    fit: "cover"
+    position: "center 55%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.78"
+    contrast: "1.04"
+    brightness: "1.02"
+    scale: "1.08"
+    prompt: |
+      Original editorial art for Bit E2, "Final Notice": parking enforcement ghost story without literal ghosts, seam-less velvet box on parking booth counter, frost crawling from shadow hinge, torn parking citation as warm paper fragment, empty parking garage stripes, abstract citation log blocks, tiny stitched crooked yellow sun patch, asphalt black, cold frost blue, velvet charcoal, citation yellow, municipal orange, bone paper, oxidized teal, no readable text, no numbers, no logos, no cars with brands, no people, no faces, no living artist style imitation.
+  - slug: "2026-03-08-dead-drop"
+    byte_index: "03"
+    title: "Dead Drop"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/03-dead-drop/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_06eabfd06d618296016a16e7696d388197b516610e495d3de5.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "packet"
+    fit: "cover"
+    position: "center 48%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.78"
+    contrast: "1.03"
+    brightness: "1.03"
+    scale: "1.03"
+    prompt: |
+      Original editorial art for Bit 03, "Dead Drop": absurd bureaucratic spycraft as an archive artifact, paper airplane folded into a raven, hollow stapler with microfilm spools, yellowed envelope behind false panel, shredder confetti, storm-drain aperture, warm bone paper, office gray, rubber-glove yellow, oxidized teal, rust red, graphite black, no readable text, no words, no numbers, no logos, no people, no faces, no living artist style imitation.
+  - slug: "2026-03-10-love-letters-from-the-router"
+    byte_index: "04"
+    title: "Love Letters from the Router"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/04-love-letters-from-the-router/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_06eabfd06d618296016a16e7f81cb481979f181aba0b93a0ea.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 47%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.82"
+    contrast: "1.04"
+    brightness: "1.02"
+    scale: "1.03"
+    prompt: |
+      Original editorial art for Bit 04, "Love Letters from the Router": rooftop radio/router romance as a signal artifact, dead Wi-Fi router as relic, rooftop antenna wires, basil silhouettes, dot-matrix love-letter sheets with abstract marks, radio waveform forming a tender loop, city lights as packet nodes, midnight graphite, router gray, warm window amber, oxidized teal, packet cyan, muted rust, bone paper, no readable text, no IP addresses, no numbers, no logos, no people, no faces, no living artist style imitation.
+  - slug: "2026-03-28-the-1215-signal"
+    byte_index: "05"
+    title: "The 12:15 Signal"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/05-the-1215-signal/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_06eabfd06d618296016a16e86b27548197b8207fe7b65ee6ed.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 48%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.82"
+    contrast: "1.04"
+    brightness: "1.02"
+    scale: "1.02"
+    prompt: |
+      Original editorial art for Bit 05, "The 12:15 Signal": subway tunnel receiver artifact, vacuum tube radio on steel rail trunk, damp tunnel wall, single red bulb, twisted receiver wire, abstract dot rhythm, distant train headlight, streetcar silhouettes dissolving, tunnel graphite, red bulb, damp concrete gray, oxidized teal, brass tube amber, bone paper, no readable text, no words, no numbers, no logos, no people, no faces, no living artist style imitation.
+  - slug: "2026-04-13-the-whispering-orders"
+    byte_index: "06"
+    title: "The Whispering Orders"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/06-the-whispering-orders/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_06eabfd06d618296016a16e8dd77e48197a1fc30f15fed934e.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "side"
+    fit: "cover"
+    position: "center 48%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.78"
+    contrast: "1.03"
+    brightness: "1.03"
+    scale: "1.03"
+    prompt: |
+      Original editorial art for Bit 06, "The Whispering Orders": haunted receipt printer network inside a restaurant kitchen, POS printer, blank thermal slips curling out, empty vinyl booth, espresso machine hum as waveform, refrigerator vibration lines, health-inspector clipboard shape, kitchen ticket rail, warm receipt paper, basil green, espresso brown, fluorescent gray, oxidized teal, warning orange, soot black, no readable text, no words, no numbers, no logos, no people, no faces, no living artist style imitation.
+  - slug: "2026-04-15-how-to-tune-the-void"
+    byte_index: "07"
+    title: "How to Tune the Void"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/07-how-to-tune-the-void/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_06eabfd06d618296016a16e94cfd9c81979df25a3894d5ce4c.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 57%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.8"
+    contrast: "1.03"
+    brightness: "1.02"
+    scale: "1.12"
+    prompt: |
+      Original editorial art for Bit 07, "How to Tune the Void": 1970s ham-radio workshop and oscilloscope instruction sheet, oscilloscope glow, cracked antenna housing, cassette tape, solder-burned workbench, tea mug, satellite dish geometry, abstract pulses and dots, solder amber, workshop brown, oscilloscope green, oxidized teal, graphite black, bone paper, muted rust, no readable text, no words, no numbers, no logos, no people, no faces, no living artist style imitation.
+  - slug: "2026-05-03-permit-for-the-unseen-room"
+    byte_index: "08"
+    title: "Permit for the Unseen Room"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/08-permit-for-the-unseen-room/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_06eabfd06d618296016a16e9b9b86481979de5e01fbf9132a7.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 57%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.78"
+    contrast: "1.02"
+    brightness: "1.03"
+    scale: "1.04"
+    prompt: |
+      Original editorial art for Bit 08, "Permit for the Unseen Room": hotel permit office and impossible room paperwork, structural permit form as abstract boxes, freezer bag of obsolete coins, missing fifteenth-floor blueprint, keycard, folded guest note, small rounded donation-slot aperture, warm bone paper, hotel brass, municipal teal, peppermint green, coin silver, rust stamp red, freezer-bag blue, no readable text, no words, no numbers, no logos, no people, no faces, no living artist style imitation.
+  - slug: "2026-05-12-the-garment-tag"
+    byte_index: "09"
+    title: "The Garment Tag"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/09-the-garment-tag/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0b91d43e23ed8545016a16f47657bc819697d60ebeaa2525cd.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 48%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.78"
+    contrast: "1.03"
+    brightness: "1.03"
+    scale: "1.02"
+    prompt: |
+      Original editorial art for Bit 09, "The Garment Tag": haunted hospital supply corridor and abandoned phone kiosk compressed into a curated artifact, cream garment-care tag on uniform sleeve, cracked glowing phone, charging docks, linen carts, fluorescent haze, grief and digital ghosts without readable messages, hospital green, oxidized teal, off-white paper, acidic tag yellow, no readable text, no logos, no people, no faces, no living artist style imitation.
+  - slug: "2026-05-18-bench-warrant-bowling"
+    byte_index: "0A"
+    title: "Bench Warrant Bowling"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/0A-bench-warrant-bowling/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0b91d43e23ed8545016a16f4de20c4819682a07cae899a2790.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "side"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.82"
+    contrast: "1.04"
+    brightness: "1.01"
+    scale: "1.12"
+    prompt: |
+      Original editorial art for Bit 0A, "Bench Warrant Bowling": courthouse service hallway, corrupted bowling trophy, favor-routing mesh, janitor ethics, disposal chute, mop bucket, dead holographic projector, evidence-tag fragments, tarnished brass, courthouse green, muted orange, linoleum gray, no readable text, no logos, no people, no faces, no living artist style imitation.
+  - slug: "2026-05-21-dock-12"
+    byte_index: "0C"
+    title: "Dock 12"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/0C-dock-12/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0b91d43e23ed8545016a16f52935148196a61b09162293dbcf.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 57%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.84"
+    contrast: "1.03"
+    brightness: "1.0"
+    scale: "1.1"
+    prompt: |
+      Original editorial art for Bit 0C, "Dock 12": convention-center coat check and community-theater raffle tickets threaded through a cosmic signal, scratched radio, coat racks, stage-curtain shadows, star-map lines, cyan signal glow, stale beige, soft magenta, no readable text, no logos, no people, no faces, no living artist style imitation.
+  - slug: "2026-02-16-the-blue-that-wasnt"
+    byte_index: "10"
+    title: "The Blue That Wasn't"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/10-the-blue-that-wasnt/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0b91d43e23ed8545016a16f57679e4819687125465c97c31fa.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 48%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.76"
+    contrast: "1.02"
+    brightness: "1.04"
+    scale: "1.02"
+    prompt: |
+      Original editorial art for Bit 10, "The Blue That Wasn't": post-collapse library and transit hub where the memory of blue has been removed, titleless book, apricot map lines, ration vouchers, broken window, paper ash, forbidden color glow that is almost not blue, apricot, smoke gray, oxidized green, bone paper, no readable text, no logos, no people, no faces, no living artist style imitation.
+  - slug: "2026-03-06-receipt-for-services-rendered"
+    byte_index: "11"
+    title: "Receipt for Services Rendered"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/11-receipt-for-services-rendered/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0b91d43e23ed8545016a16f6085268819692fd5a3ba3eb6cce.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "packet"
+    fit: "cover"
+    position: "center 46%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.78"
+    contrast: "1.04"
+    brightness: "1.02"
+    scale: "1.04"
+    prompt: |
+      Original editorial art for Bit 11, "Receipt for Services Rendered": institutional restaurant kitchen where memory edits arrive as blank itemized receipts, grill smoke, fax machine, curling receipt paper, empty bolted chair, shredder scraps, red stamp blocks, paper cream, civic red, oxidized yellow, charcoal gray, no readable text, no logos, no people, no faces, no living artist style imitation.
+  - slug: "2026-03-24-the-gatekeepers-equation"
+    byte_index: "12"
+    title: "The Gatekeeper's Equation"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/12-the-gatekeepers-equation/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0b91d43e23ed8545016a16f64fb87c819686165a04ed38e15c.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.8"
+    contrast: "1.04"
+    brightness: "1.02"
+    scale: "1.02"
+    prompt: |
+      Original editorial art for Bit 12, "The Gatekeeper's Equation": mythic modern checkpoint, memory coins, customs gate, quill, lens glass, aqueduct shadows, wire-wrapped columns, ink-blot wings, mineral pigments, rust red, bone cream, oxidized teal, ink black, no readable text, no logos, no people, no faces, no living artist style imitation.
+  - slug: "2026-04-11-the-memory-audit"
+    byte_index: "13"
+    title: "The Memory Audit"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/13-the-memory-audit/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0b91d43e23ed8545016a171da0d9bc819691cc28cd73914c5d.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 48%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.8"
+    contrast: "1.04"
+    brightness: "1.02"
+    scale: "1.03"
+    prompt: |
+      Original editorial art for Bit 13, "The Memory Audit": kinetic memory-heist bureau, brutalist records office, ventilation shaft, vault door, ceiling fax-machine forms, obsolete black memory cubes, scanner glow, municipal red, oxidized teal, paper cream, graphite black, institutional green, no readable text, no logos, no people, no faces, no living artist style imitation.
+  - slug: "2026-05-01-the-lease-of-forgetting"
+    byte_index: "14"
+    title: "The Lease of Forgetting"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/14-the-lease-of-forgetting/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0b91d43e23ed8545016a171e10f6388196a1f9fdd0ae4f63cb.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 49%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.78"
+    contrast: "1.02"
+    brightness: "1.04"
+    scale: "1.02"
+    prompt: |
+      Original editorial art for Bit 14, "The Lease of Forgetting": tender memory-market romance, chipped forget-me-not teacup, unopened envelope, tote fabric, audit contract edges, cotton-candy cloud mist, warm ivory, soft pink, market orange, hospice blue, oxidized teal, no readable text, no logos, no people, no faces, no living artist style imitation.
+  - slug: "2026-05-23-the-mirror-and-the-misfiled-oath"
+    byte_index: "15"
+    title: "The Mirror and the Misfiled Oath"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/15-the-mirror-and-the-misfiled-oath/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0b91d43e23ed8545016a171e6d24a48196bc1125fdda7e57b5.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.78"
+    contrast: "1.03"
+    brightness: "1.02"
+    scale: "1.03"
+    prompt: |
+      Original editorial art for Bit 15, "The Mirror and the Misfiled Oath": cracked archive hand mirror, donated-paperback sorting room, lost-and-found bin, moth-eaten scarf, soup-can silhouettes, archive cart wheel, dust ivory, mirror silver, faded burgundy, library brown, oxidized teal, no readable text, no logos, no people, no faces, no living artist style imitation.
+  - slug: "2026-02-08-the-echo-archive"
+    byte_index: "21"
+    title: "The Echo Archive"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/21-the-echo-archive/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0b91d43e23ed8545016a171f3151688196ad0f03c7754d8b32.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 48%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.82"
+    contrast: "1.05"
+    brightness: "1.0"
+    scale: "1.03"
+    prompt: |
+      Original editorial art for Bit 21, "The Echo Archive": neural upload archive, dark server room, rain-streaked lab window, glowing neural lace web, fractured memory pixels, overlapping waveform silhouettes without faces, graphite, ozone blue, hospital green, amber, bone highlights, no readable text, no logos, no people, no faces, no living artist style imitation.
+  - slug: "2026-02-15-the-listening-chair"
+    byte_index: "23"
+    title: "The Listening Chair"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/23-the-listening-chair/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0b91d43e23ed8545016a171fb119f481968917de11e87f6d0f.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "dossier"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.76"
+    contrast: "1.04"
+    brightness: "1.02"
+    scale: "1.02"
+    prompt: |
+      Original editorial art for Bit 23, "The Listening Chair": 1960s institutional lab corner, oak observer chair facing wall, tape recorder, punch-card machine, scorched wall, disinfected floor, dropped glove, backward tape loops, disinfectant ivory, smoky gray, oak brown, ozone blue, ember orange, no readable text, no logos, no people, no faces, no living artist style imitation.
+  - slug: "2026-02-19-basement-lattice"
+    byte_index: "24"
+    title: "Basement Lattice"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/24-basement-lattice/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0b91d43e23ed8545016a172025d9388196b9c64d331dc34fe1.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 51%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.8"
+    contrast: "1.04"
+    brightness: "1.01"
+    scale: "1.03"
+    prompt: |
+      Original editorial art for Bit 24, "Basement Lattice": damp basement tunnel, synthetic mycelium lattice, bioluminescent nodes, archival memory conduits, amber vial, stormwater stains, antiseptic tile, iron rust, antiseptic green, amber fluid, damp concrete, blue-green glow, no readable text, no logos, no people, no faces, no living artist style imitation.
+  - slug: "2026-03-01-the-glass-hive"
+    byte_index: "26"
+    title: "The Glass Hive"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/26-the-glass-hive/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_011396941fa97d77016a172dd759cc8197ac5209193ad89fad.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 48%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.82"
+    contrast: "1.05"
+    brightness: "1.0"
+    scale: "1.03"
+    prompt: |
+      Original editorial art for Bit 26, "The Glass Hive": buried Alexandrian archive tunnel, glass-sinew hive, thumb-sized glass insects, wax, salt, charred papyrus, torchlit stone, obsidian goggles as relic detail, soot black, honey amber, cyan glass, parchment, no readable text, no logos, no people, no faces, no living artist style imitation.
+  - slug: "2026-03-05-the-tin-labyrinth"
+    byte_index: "27"
+    title: "The Tin Labyrinth"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/27-the-tin-labyrinth/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_011396941fa97d77016a172e49d17481979c7835d0926f0ab0.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "dossier"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.84"
+    contrast: "1.05"
+    brightness: "0.98"
+    scale: "1.02"
+    prompt: |
+      Original editorial art for Bit 27, "The Tin Labyrinth": twilight salvage market, humming refrigerators, cracked holo-saint, toy car in puddle, cameras, wires, tea steam, rosemary, ozone, rusted tin, oxidized teal, warm lamp amber, no readable text, no logos, no people, no faces, no living artist style imitation.
+  - slug: "2026-03-09-the-sock-archive"
+    byte_index: "28"
+    title: "The Sock Archive"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/28-the-sock-archive/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_011396941fa97d77016a172e9c71e881979378b240966ad268.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 52%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.82"
+    contrast: "1.03"
+    brightness: "1.0"
+    scale: "1.03"
+    prompt: |
+      Original editorial art for Bit 28, "The Sock Archive": Cold War hospital basement, ordinary wool sock containing living genetic code, hidden film canister, archival reels, monitor glow, linoleum, clipboard, violet helix light, fluorescent green, winter gray, no readable text, no logos, no people, no faces, no living artist style imitation.
+  - slug: "2026-03-16-the-glass-transcription"
+    byte_index: "29"
+    title: "The Glass Transcription"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/29-the-glass-transcription/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_011396941fa97d77016a172eefae6c81978c40d62370d3cf7a.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "dossier"
+    fit: "cover"
+    position: "center 49%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.78"
+    contrast: "1.04"
+    brightness: "1.01"
+    scale: "1.02"
+    prompt: |
+      Original editorial art for Bit 29, "The Glass Transcription": 1934 asylum thought-transcription machine, child's tin robot, jar of fog, scratched phonograph record, brass apparatus, red vacuum tubes, surgical tray, lavender-grey shadows, no readable text, no logos, no people, no faces, no living artist style imitation.
+  - slug: "2026-03-19-the-paperwork-of-bones"
+    byte_index: "2A"
+    title: "The Paperwork of Bones"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/2a-the-paperwork-of-bones/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_011396941fa97d77016a172f416158819783edfea5db5f4e9c.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.72"
+    contrast: "1.02"
+    brightness: "1.04"
+    scale: "1.02"
+    prompt: |
+      Original editorial art for Bit 2A, "The Paperwork of Bones": windowless research office, sealed culture dish with almost-living engineered tissue, incident reports, petri dishes, cold coffee, institutional stamps as abstract marks, fluorescent green, coral tissue, toner gray, no readable text, no logos, no people, no faces, no living artist style imitation.
+  - slug: "2026-03-23-the-clicking-psalter"
+    byte_index: "2B"
+    title: "The Clicking Psalter"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/2b-the-clicking-psalter/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_011396941fa97d77016a172f8f56e08197bc1590c376b02054.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "dossier"
+    fit: "cover"
+    position: "center 51%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.8"
+    contrast: "1.04"
+    brightness: "1.01"
+    scale: "1.02"
+    prompt: |
+      Original editorial art for Bit 2B, "The Clicking Psalter": medieval crypt, bronze quill in limestone fissure, blackened gears, vellum, candles, silver ink glow, stone vault, devotional machinery, umber, brass, bone paper, black ink, no readable text, no logos, no people, no faces, no living artist style imitation.
+  - slug: "2026-03-27-the-honeycomb-engine"
+    byte_index: "2C"
+    title: "The Honeycomb Engine"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/2c-the-honeycomb-engine/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_011396941fa97d77016a1740c343d4819783c1ff7f31f05a48.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "dossier"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.82"
+    contrast: "1.05"
+    brightness: "1.0"
+    scale: "1.02"
+    prompt: |
+      Original editorial art for Bit 2C, "The Honeycomb Engine": dim biological-computing workshop, rotary telephone, petri dish honeycomb, moss-green tendrils, vacuum tubes, oscilloscope, reel-to-reel recorder, iodine brown, honey amber, oxidized teal, no readable text, no logos, no people, no faces, no living artist style imitation.
+  - slug: "2026-04-03-stages-of-absence"
+    byte_index: "2D"
+    title: "Stages of Absence"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/2d-stages-of-absence/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_011396941fa97d77016a1741759ffc81979fd93fba39e3165c.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 47%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.76"
+    contrast: "1.05"
+    brightness: "0.98"
+    scale: "1.03"
+    prompt: |
+      Original editorial art for Bit 2D, "Stages of Absence": dim theater and domestic upload terminal, empty stage, fallen script, holographic performer made of light, cracked mug imprint, coiled upload cable, midnight blue, theater red, cold cyan, plaster cream, no readable text, no logos, no people, no faces, no living artist style imitation.
+  - slug: "2026-04-04-the-card-in-the-wall"
+    byte_index: "2E"
+    title: "The Card in the Wall"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/2e-the-card-in-the-wall/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_011396941fa97d77016a1741d250ec81978eeae4de69d81592.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.78"
+    contrast: "1.03"
+    brightness: "1.02"
+    scale: "1.02"
+    prompt: |
+      Original editorial art for Bit 2E, "The Card in the Wall": municipal clinic waiting room, living grocery loyalty card between bricks, shimmering barcode, cracked vinyl chair, utility cart, knocked plant, check-in machine, burnt coffee brown, antiseptic green, faded card blue, brick red, no readable text, no logos, no people, no faces, no living artist style imitation.
+  - slug: "2026-04-06-synthetic-dawn-at-checkpoint-twelve"
+    byte_index: "2F"
+    title: "Synthetic Dawn at Checkpoint Twelve"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/2f-synthetic-dawn-at-checkpoint-twelve/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_011396941fa97d77016a174239ed7081979996e775d22cc3c5.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 51%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.86"
+    contrast: "1.05"
+    brightness: "0.98"
+    scale: "1.03"
+    prompt: |
+      Original editorial art for Bit 2F, "Synthetic Dawn at Checkpoint Twelve": sterile UV transit med-bay, coiled synthetic hair question mark, scanner glass with iridescent organic smear, cryopods, bioluminescent node-sinew forms, cold violet, sterile white, oily rainbow, deep teal, no readable text, no logos, no faces, no explicit gore, no living artist style imitation.
+  - slug: "2026-04-18-the-pneumatic-alibi"
+    byte_index: "31"
+    title: "The Pneumatic Alibi"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/31-the-pneumatic-alibi/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_011396941fa97d77016a174452a7608197beaf5bb4efc8b3c1.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.82"
+    contrast: "1.04"
+    brightness: "1.0"
+    scale: "1.03"
+    prompt: |
+      Original editorial art for Bit 31, "The Pneumatic Alibi": rusty pneumatic tube terminal, brass elbows, pressure gauges, mangled umbrella, child sneaker, blank counterfeit cards, torn map-color scraps, artificial plastic toy rat, rust red, brass, river gray, oxidized teal, no readable text, no logos, no people, no real animals, no living artist style imitation.
+  - slug: "2026-04-23-the-cancellation-bell"
+    byte_index: "32"
+    title: "The Cancellation Bell"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/32-the-cancellation-bell/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_011396941fa97d77016a17438b77288197a2e1ef85014f2761.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "dossier"
+    fit: "cover"
+    position: "center 49%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.76"
+    contrast: "1.03"
+    brightness: "1.03"
+    scale: "1.02"
+    prompt: |
+      Original editorial art for Bit 32, "The Cancellation Bell": dental clinic and post-office counter, cracked brass handbell, tiny silver molar-like tongue, folded bill, yellow slip, lollipop jar, X-ray envelope, tea cup, warm brass, dental mint, postage red, lemon cream, no readable text, no logos, no people, no faces, no living artist style imitation.
+  - slug: "2026-04-26-the-detergent-dispensary"
+    byte_index: "33"
+    title: "The Detergent Dispensary"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/33-the-detergent-dispensary/plate-draft-crop.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0149f88873ad471f016a174f4ca0588195bd817183659df690.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 57%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.82"
+    contrast: "1.04"
+    brightness: "1.01"
+    scale: "1.12"
+    prompt: |
+      Original editorial art for Bit 33, "The Detergent Dispensary": fluorescent laundromat archive plate, washer drum, detergent dispenser, pharmacy bag, brittle corsage petals, dented old coin, lavender water, cellular-study flyer shapes with no readable text, gardenia/corsage fragments beginning to root through concrete, warm bone, orange-red, gray-blue, brass yellow, lavender wash, oxidized teal, no readable text, no logos, no faces, no living artist style imitation.
+  - slug: "2026-05-06-receipt-88-and-the-man-who"
+    byte_index: "34"
+    title: "Receipt #88 and the Man Who Bought Mango Lassi"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/34-receipt-88-and-the-man-who-bought-mango-lassi/plate-draft-crop.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0149f88873ad471f016a174feac29081958d74f22450ecb141.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, official marks, or living-artist style prompts requested."
+    art_layout: "dossier"
+    fit: "cover"
+    position: "center 57%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.8"
+    contrast: "1.04"
+    brightness: "1.02"
+    scale: "1.12"
+    prompt: |
+      Original editorial art for Bit 34, "Receipt #88 and the Man Who Bought Mango Lassi": dusty service counter, anonymous thermal receipt printer, blank pill bottle shapes, small unlabeled mango lassi cup, dead vending-machine silhouette, long receipt ribbon with only abstract bars and illegible ghost marks, warm bone, receipt gray, mango saffron, muted red-orange, dull teal, carbon black, no readable text, no stamps, no official marks, no logos, no faces, no living artist style imitation.
+  - slug: "2026-05-07-the-ferry-notarys-second-signature"
+    byte_index: "35"
+    title: "The Ferry Notary's Second Signature"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/35-the-ferry-notarys-second-signature/plate-draft-crop.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0149f88873ad471f016a17507df7c88195ac392beabb1b6794.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, official marks, or living-artist style prompts requested."
+    art_layout: "dossier"
+    fit: "cover"
+    position: "center 57%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.78"
+    contrast: "1.03"
+    brightness: "1.02"
+    scale: "1.12"
+    continuation_assets:
+      - use: "tail"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/35-the-ferry-notarys-second-signature/continuation-freezer-wake.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0149f88873ad471f016a1763c2cedc81959359cb219faa3bd5.png"
+        role_note: "Second-page aftermath fragment: freezer vent, blank paper, stamp-pad residue, ferry wake, no repeated remote-control hero."
+        art_layout: "side"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.74"
+        contrast: "1.02"
+        brightness: "1.03"
+        scale: "1.04"
+    prompt: |
+      Original editorial art for Bit 35, "The Ferry Notary's Second Signature": ferry-terminal cafeteria counter, scuffed linoleum, portable freezer haze, saltwater light, anonymous corroded remote control, blank notary forms, blank ink stamp, ferry wake through a small window, abstract doubled ink shadow on paper, bone paper, gray-blue saltwater, faded orange-red, cafeteria beige, oxidized teal, brass yellow, no readable text, no logos, no icons, no official seals, no faces, no living artist style imitation.
+  - slug: "2026-05-10-the-third-ink"
+    byte_index: "36"
+    title: "The Third Ink"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/36-the-third-ink/plate-draft-crop.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0149f88873ad471f016a17510ba724819583f178ecae06664e.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 57%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.82"
+    contrast: "1.04"
+    brightness: "1.01"
+    scale: "1.12"
+    prompt: |
+      Original editorial art for Bit 36, "The Third Ink": courthouse jury-room table, old server-farm residue, cassette single, ancient boombox, melted pink Jell-O, virtual suburb deed fragments as pixel-house map blocks, three abstract ink textures with no readable letters, receipt-like strip emerging from boombox, bone paper, charcoal, stale pink, court-file tan, oxidized teal, muted red-orange, faint electric blue, no readable text, no logos, no faces, no living artist style imitation.
+  - slug: "2026-05-15-the-bells-rule"
+    byte_index: "38"
+    title: "The Bell's Rule"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/38-the-bells-rule/plate-draft-crop.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0149f88873ad471f016a17515b6528819586e84de505ea09eb.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, official marks, or living-artist style prompts requested."
+    art_layout: "dossier"
+    fit: "cover"
+    position: "center 57%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.78"
+    contrast: "1.05"
+    brightness: "1.02"
+    scale: "1.12"
+    prompt: |
+      Original editorial art for Bit 38, "The Bell's Rule": basement copy shop counter, cracked brass handbell, Xerox tray, old incident log, carbon paper, manila envelope, smudged rule sheet with no readable text, copied pages as abstract black bars, ghost-bureaucracy residue, bone paper, brass yellow, copy-machine gray, carbon black, muted red-orange, blue-gray, spectral teal, no readable text, no official seals, no logos, no faces, no living artist style imitation.
+  - slug: "2026-05-17-the-glass-and-the-lie"
+    byte_index: "39"
+    title: "The Glass and the Lie"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/39-the-glass-and-the-lie/plate-draft-crop.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0149f88873ad471f016a1751a85ac081958302df84995e9af7.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-27"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, border agency insignia, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 57%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.8"
+    contrast: "1.04"
+    brightness: "1.01"
+    scale: "1.1"
+    prompt: |
+      Original editorial art for Bit 39, "The Glass and the Lie": border-counter pharmacy window, cracked dead exit sign wrapped in bubble mailer, onionskin prescription paper, customs counter, steel door, diesel-gray light, glass shards and bubble wrap as evidence, replacement sign glowing without readable letters, bone paper, cracked red lens, diesel gray, dull teal, pharmacy green-gray, carbon black, warm amber glow, no readable text, no official seals, no logos, no faces, no living artist style imitation.
+  - slug: "2026-05-31-the-greenhouse-receipt"
+    byte_index: "75"
+    title: "The Greenhouse Receipt"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/75-the-greenhouse-receipt/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0a63d45085dab59b016a185d774ce4819b8ba0f94a7dd150cd.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-28"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, official marks, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.82"
+    contrast: "1.03"
+    brightness: "1.02"
+    scale: "1.02"
+    prompt: |
+      Original editorial art for Bit 75, "The Greenhouse Receipt": a city clerk's impossible receipt keeps growing with past and future line items, rooftop greenhouse, carbon copy paper, carnations, train ticket, marriage-license echo, love as audited evidence. Tactile archival mixed-media plate with paper grain, carbon receipt layers, botanical pressings, municipal office residue. Warm bone, faded carbon blue, greenhouse sage, carnation red, graphite, pale brass stamp marks. No readable words or numbers, no logos, no faces, no living artist style imitation.
+  - slug: "2026-05-29-unclaimed"
+    byte_index: "82"
+    title: "Unclaimed"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/82-unclaimed/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0a63d45085dab59b016a185cd98708819b9299281f9f37becc.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-28"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, official marks, or living-artist style prompts requested."
+    art_layout: "dossier"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.82"
+    contrast: "1.04"
+    brightness: "1.02"
+    scale: "1.02"
+    prompt: |
+      Original editorial art for Bit 82, "Unclaimed": a pharmacy unclaimed-prescription drawer becomes a dead digital estate, faint glowing prescription bags, expired orange tags, a ghostly metaverse meadow implied through pixel shimmer, a red tag going dark, family grief as subscription residue. Tactile archival mixed-media plate with paper grain, receipt stock, translucent plastic sleeves, scanner dust. Bone paper, pharmacy amber, muted teal-gray, lipstick red accent, charcoal, faint cyan pixel glow. No readable labels, no logos, no faces, no living artist style imitation.
+  - slug: "2026-05-30-the-glove-and-the-glasshouse"
+    byte_index: "92"
+    title: "The Glove and the Glasshouse"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/92-the-glove-and-the-glasshouse/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0a63d45085dab59b016a185d352498819b8e11d9e54e8eb3e1.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-05-28"
+    rights_note: "Draft original generated image for internal review; no readable brands, celebrity likenesses, named fictional universes, official marks, or living-artist style prompts requested."
+    art_layout: "side"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.78"
+    contrast: "1.03"
+    brightness: "1.01"
+    scale: "1.03"
+    prompt: |
+      Original editorial art for Bit 92, "The Glove and the Glasshouse": a ferry deckhand's worn glove, rooftop greenhouse, archive cartridges, a manifest of real names, and a blinking cursor asking a question. Tender but uneasy urban maintenance romance with obsolete media. Tactile archival mixed-media plate with paper grain, greenhouse vellum, ferry manifest paper, oxide dust. Harbor teal, glasshouse green, rust-red oxide, glove charcoal, brass highlights. No readable words or numbers, no logos, no faces, no living artist style imitation.

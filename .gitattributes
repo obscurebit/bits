@@ -1,0 +1,7 @@
+book/source/volume-1/assets/**/*.jpeg filter=lfs diff=lfs merge=lfs -text
+book/source/volume-1/assets/**/*.webp filter=lfs diff=lfs merge=lfs -text
+book/source/volume-1/assets/**/*.tif filter=lfs diff=lfs merge=lfs -text
+book/source/volume-1/assets/**/*.tiff filter=lfs diff=lfs merge=lfs -text
+book/source/volume-1/assets/**/*.psd filter=lfs diff=lfs merge=lfs -text
+book/source/volume-1/assets/**/*.png filter=lfs diff=lfs merge=lfs -text
+book/source/volume-1/assets/**/*.jpg filter=lfs diff=lfs merge=lfs -text

@@ -1,0 +1,296 @@
+status: review
+intent: "Treat every bit as an artifact from the Obscure Bit archive: specimen, signal, form, myth, or corrupted record."
+
+mode_defaults:
+  signal:
+    treatment: "frequency-map"
+    material: "radio paper / oscilloscope trace / antenna shadow"
+    gesture: "thin vertical bands, signal drift, small cyan instrument marks"
+  archive:
+    treatment: "ledger-fragment"
+    material: "catalog card / onion-skin paper / accession stamp"
+    gesture: "rules, tabs, offset labels, preservation marks"
+  field_note:
+    treatment: "specimen-study"
+    material: "field notebook / specimen plate / location tag"
+    gesture: "observation lines, pinned object, quiet color blocks"
+  protocol:
+    treatment: "document-scan"
+    material: "municipal form / warning sticker / receipt stock"
+    gesture: "check boxes, boxed instructions, bureaucratic geometry"
+  myth:
+    treatment: "ritual-diagram"
+    material: "vellum chart / altar diagram / gold pencil"
+    gesture: "centered geometry, sparse symbols, ceremonial spacing"
+  glitch:
+    treatment: "glitch-fragment"
+    material: "thermal fax / broken UI / corrupted scanline"
+    gesture: "offset blocks, damaged captions, fractured registration"
+
+priority_workflow:
+  hero:
+    lane: "manual_hero"
+    purpose: "cover candidates, sales preview plates, section-defining art"
+  high:
+    lane: "manual_hero"
+    purpose: "story-defining plates and opener art that should feel hand-curated"
+  medium:
+    lane: "auto_draft"
+    purpose: "generate strong drafts, then manually replace weak or generic results"
+  standard:
+    lane: "auto_draft"
+    purpose: "coverage pass so every page has real visual material to design against"
+
+stories:
+  "00":
+    layout_intent: "opening transmission"
+    treatment: "signal-diagram"
+    material: "water-tower receiver sheet"
+    gesture: "vertical aerial and faint range rings"
+    priority: hero
+  "01":
+    layout_intent: "cold procedural specimen"
+    treatment: "specimen-study"
+    material: "cryogenic lab plate"
+    gesture: "frost ring and instrument grid"
+    priority: high
+  "02":
+    layout_intent: "theater signal intrusion"
+    treatment: "frequency-map"
+    material: "balcony glass, intercom static, theater program paper"
+    gesture: "speaker grille geometry with one dark balcony aperture"
+    priority: high
+  "09":
+    layout_intent: "garment label as signal evidence"
+    treatment: "document-scan"
+    material: "care tag, laundering symbol, posted notice paper"
+    gesture: "stitched border and warning-label grid"
+    priority: medium
+  "0A":
+    layout_intent: "recreational law office"
+    treatment: "document-scan"
+    material: "bowling score sheet, warrant slip, municipal stamp"
+    gesture: "lane markings intersecting bureaucratic boxes"
+    priority: medium
+  "0B":
+    layout_intent: "vanished coworker evidence"
+    treatment: "frequency-map"
+    material: "tire shop invoice, smudged badge laminate, waiting-room receipt paper"
+    gesture: "one worn oval badge mark drifting out of alignment with the payroll grid"
+    priority: high
+  "3B":
+    layout_intent: "counterfeit truth ledger"
+    treatment: "document-scan"
+    material: "copy paper, forged signature sheet, carbon dust, notary stamp"
+    gesture: "duplicated signatures failing to register inside a strict ledger"
+    priority: high
+  "5C":
+    layout_intent: "numbered tag bureaucracy"
+    treatment: "document-scan"
+    material: "plastic ice bucket, parking tag stack, toll booth log, warning sticker"
+    gesture: "repeating numbered tags collecting around a single absurd container"
+    priority: high
+  "B5":
+    layout_intent: "probability clipboard artifact"
+    treatment: "glitch-fragment"
+    material: "dental office clipboard, appointment sheet, carbon-paper probability smear"
+    gesture: "a hard clipboard edge cutting a bureaucratic form into alternate outcomes"
+    priority: high
+  "10":
+    layout_intent: "domestic color anomaly"
+    treatment: "ledger-fragment"
+    material: "paint chip, catalog card, faded room photograph"
+    gesture: "single impossible blue swatch breaking a neutral grid"
+    priority: medium
+  "20":
+    layout_intent: "soft-machine opener"
+    treatment: "specimen-study"
+    material: "blooming circuit tissue on lab vellum"
+    gesture: "organic branching trace contained by a clinical frame"
+    priority: high
+  "22":
+    layout_intent: "biological foldout"
+    treatment: "specimen-study"
+    material: "petri dish alphabet"
+    gesture: "cellular grid with catalog notch"
+    priority: high
+  "25":
+    layout_intent: "lecture packet with section dividers"
+    treatment: "document-scan"
+    material: "stacked classroom handouts"
+    gesture: "multiple small print zones and margin annotations"
+    priority: high
+  "27":
+    layout_intent: "single-page labyrinth artifact"
+    treatment: "specimen-study"
+    material: "tin corridor rubbing and field notebook"
+    gesture: "one compressed passage with a thin maze shadow"
+    priority: medium
+  "26":
+    layout_intent: "glass colony study"
+    treatment: "specimen-study"
+    material: "transparent hive slide and lab pencil"
+    gesture: "hexagonal ghost structure fading into margin notes"
+    priority: medium
+  "30":
+    layout_intent: "municipal complaint opener"
+    treatment: "document-scan"
+    material: "tube label, service ticket, fluorescent office stock"
+    gesture: "oversized numbered evidence tag with clipped transcript fragments"
+    priority: high
+  "33":
+    layout_intent: "ticketed domestic artifact"
+    treatment: "document-scan"
+    material: "laundromat receipt and detergent label"
+    gesture: "perforation marks and stamped color"
+    priority: medium
+  "36":
+    layout_intent: "ink as municipal residue"
+    treatment: "document-scan"
+    material: "ink blotter, stamped form, carbon copy"
+    gesture: "third mark bleeding through a rigid paper grid"
+    priority: medium
+  "37":
+    layout_intent: "biometric audit dossier"
+    treatment: "document-scan"
+    material: "fingerprint card, acetate sleeve, saved credential"
+    gesture: "large fingerprint rings interrupting form fields"
+    priority: high
+  "38":
+    layout_intent: "rule bell notice"
+    treatment: "document-scan"
+    material: "bell diagram, office rule sheet, brass stamp"
+    gesture: "small ring marks arranged like procedure steps"
+    priority: medium
+  "39":
+    layout_intent: "truth test on glass"
+    treatment: "glitch-fragment"
+    material: "window reflection, deposition sheet, cracked pane"
+    gesture: "two misaligned reflections and a ruled testimony column"
+    priority: medium
+  "40":
+    layout_intent: "analog echo"
+    treatment: "glitch-fragment"
+    material: "VHS head-switching error"
+    gesture: "horizontal noise bars and frame offset"
+    priority: high
+  "50":
+    layout_intent: "threshold field report"
+    treatment: "specimen-study"
+    material: "map fold, train-platform dust, impossible border stamp"
+    gesture: "route line that refuses to connect to itself"
+    priority: high
+  "56":
+    layout_intent: "route transcript as small evidence plate"
+    treatment: "specimen-study"
+    material: "transit receipt, route scrap, pencil trace"
+    gesture: "one spare path line with oversized negative space"
+    priority: medium
+  "5B":
+    layout_intent: "spiral file"
+    treatment: "ritual-diagram"
+    material: "case folder, spiral stamp, worn municipal card"
+    gesture: "concentric filing marks turning into a diagram"
+    priority: high
+  "60":
+    layout_intent: "body ledger opener"
+    treatment: "ledger-fragment"
+    material: "medical ledger, tissue diagram, red pencil accounting marks"
+    gesture: "anatomical columns reconciled like bookkeeping"
+    priority: high
+  "70":
+    layout_intent: "static memory"
+    treatment: "frequency-map"
+    material: "echo trace on radio log paper"
+    gesture: "concentric static rings"
+    priority: high
+  "90":
+    layout_intent: "maintenance carnival"
+    treatment: "ritual-diagram"
+    material: "midway ticket stock, repair tags, devotional diagram"
+    gesture: "bright maintenance tokens orbiting a precise central rule"
+    priority: high
+  "74":
+    layout_intent: "cafe timekeeping charm"
+    treatment: "ledger-fragment"
+    material: "biscotti wrapper, service bell, receipt ledger"
+    gesture: "small brass ring centered in a coffee-stained grid"
+    priority: medium
+  "75":
+    layout_intent: "receipt as temporal greenhouse"
+    treatment: "ledger-fragment"
+    material: "carbon receipt, pressed carnation, municipal greenhouse paper"
+    gesture: "long receipt ribbon growing like a plant through clerkly evidence"
+    priority: high
+  "82":
+    layout_intent: "domestic digital estate drawer"
+    treatment: "ledger-fragment"
+    material: "unclaimed prescription drawer, translucent bags, dead subscription glow"
+    gesture: "one red tag going dark inside a grid of unpaid ghosts"
+    priority: high
+  "92":
+    layout_intent: "maintenance romance artifact"
+    treatment: "specimen-study"
+    material: "frayed work glove, ferry manifest, glasshouse pane, archive cartridge"
+    gesture: "work glove anchoring ferry route and greenhouse geometry"
+    priority: high
+  "A0":
+    layout_intent: "large archive loom"
+    treatment: "ledger-fragment"
+    material: "woven memory index"
+    gesture: "crosshatched registry lines"
+    priority: high
+  "B0":
+    layout_intent: "elsewhere physics opener"
+    treatment: "frequency-map"
+    material: "signal paper, distant landscape exposure, measuring string"
+    gesture: "wide negative-space field interrupted by a thin impossible horizon"
+    priority: high
+  "B3":
+    layout_intent: "dial-up entanglement"
+    treatment: "signal-diagram"
+    material: "56k connection sheet"
+    gesture: "modem comb, paired nodes, tangled trace"
+    priority: high
+  "C5":
+    layout_intent: "lanyard instruction packet"
+    treatment: "document-scan"
+    material: "lanyard card, candy wrapper, care instruction slip"
+    gesture: "bright small objects pinned against official copy"
+    priority: medium
+  "C6":
+    layout_intent: "soft audit record"
+    treatment: "ledger-fragment"
+    material: "velvet folder, audit card, dark graphite"
+    gesture: "plush texture trapped under strict accounting lines"
+    priority: high
+  "C0":
+    layout_intent: "cryptographic relic opener"
+    treatment: "document-scan"
+    material: "key card, punched tape, worn instruction sheet"
+    gesture: "single black keyhole shape surrounded by procedural marks"
+    priority: high
+  "D0":
+    layout_intent: "underworld accounting"
+    treatment: "ritual-diagram"
+    material: "ledger vellum and cave-light ink"
+    gesture: "ceremonial debit columns"
+    priority: high
+  "E0":
+    layout_intent: "threshold transfer"
+    treatment: "glitch-fragment"
+    material: "departure board, transfer receipt, erased doorway photo"
+    gesture: "one bright exit block misregistered against a dark page"
+    priority: high
+  "E1":
+    layout_intent: "final corrupted receipt"
+    treatment: "glitch-fragment"
+    material: "receipt tape and flower shadow"
+    gesture: "broken thermal text with botanical ghost"
+    priority: high
+  "E2":
+    layout_intent: "terminal notice"
+    treatment: "document-scan"
+    material: "final notice sheet, envelope window, red pencil"
+    gesture: "one official block closing over a pale field"
+    priority: high
