@@ -320,6 +320,111 @@ Use: pilot story art plates for renderer/layout review.
 - Prompt intent: kitchen-table terminal, blank green screen, phone cord, ledger forms, porcelain-sink geometry, chipped mug ring.
 - Rights note: draft original generation, no readable brand/logos, computer logos, municipal seals, people, or protected-world references requested.
 
+## 5D / The Glove and the Good Neighbors
+
+- Asset: `book/source/volume-1/assets/art/5D-the-glove-and-the-good-neighbors/plate-draft-v2.png`
+- Replaced: `book/source/volume-1/assets/art/5D-the-glove-and-the-good-neighbors/plate-draft.svg`
+- Source: `/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0799bec1799d342a016a189da9197c81999b75adea99c91e09.png`
+- Prompt intent: port authority lost-and-found packet, glove evidence, complaint forms, good-neighbor sidewalk and hydrangea residue.
+- Rights note: draft original generation, no readable brand/logos, municipal seals, people, or protected-world references requested.
+
+## AD / The Stack of Unsigned Forms
+
+- Asset: `book/source/volume-1/assets/art/AD-the-stack-of-unsigned-forms/plate-draft-v2.png`
+- Replaced: `book/source/volume-1/assets/art/AD-the-stack-of-unsigned-forms/plate-draft.svg`
+- Source: `/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0799bec1799d342a016a1899eae8dc8199971a0a061cc0df0f.png`
+- Prompt intent: school maintenance form stack, pink slip field, broken home-computer silhouette, boiler-room paper dust.
+- Rights note: draft original generation, no readable school marks, product logos, people, or protected-world references requested.
+
+## AE / Queue Order is Sacred
+
+- Asset: `book/source/volume-1/assets/art/AE-queue-order-is-sacred/plate-draft-v2.png`
+- Replaced: `book/source/volume-1/assets/art/AE-queue-order-is-sacred/plate-draft.svg`
+- Source: `/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0799bec1799d342a016a189a97df2c8199b89aa285f80cc436.png`
+- Prompt intent: queue slips, backstage archive corridor, black modem monolith, abandoned bulletin-board signal rings.
+- Rights note: draft original generation, no readable theater marks, website captures, logos, people, or protected-world references requested.
+
+## AF / Transfer Slip
+
+- Asset: `book/source/volume-1/assets/art/AF-transfer-slip/plate-draft-v2.png`
+- Replaced: `book/source/volume-1/assets/art/AF-transfer-slip/plate-draft.svg`
+- Source: `/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0799bec1799d342a016a189b1323548199bf5212bb54e98417.png`
+- Prompt intent: frayed transit card, bus-transfer paper, night route trace, simulation residue as abstract waves.
+- Rights note: draft original generation, no readable card numbers, transit marks, game marks, people, or protected-world references requested.
+
+## B1 / Entangled Observers
+
+- Asset: `book/source/volume-1/assets/art/B1-entangled-observers/plate-draft-v2.png`
+- Replaced: `book/source/volume-1/assets/art/B1-entangled-observers/plate-draft.svg`
+- Source: `/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0799bec1799d342a016a189b8ecbe4819981b0dac35e58e1fd.png`
+- Prompt intent: quantum sensor-array plate, mirrored data spirals, coffee-stained lab paper, cool blue-gray and oxidized teal traces.
+- Rights note: draft original generation, no readable lab marks, logos, people, or protected-world references requested.
+
+## B2 / Bureaucratic Superposition
+
+- Asset: `book/source/volume-1/assets/art/B2-bureaucratic-superposition/plate-draft-v2.png`
+- Replaced: `book/source/volume-1/assets/art/B2-bureaucratic-superposition/plate-draft.svg`
+- Source: `/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_039832f8804bb182016a18dc789de081999676ce61e92f11d9.png`
+- Prompt intent: translucent duplicated office forms, abstract hand and eye observation marks, filing-cabinet shadow, nested measurement rings.
+- Rights note: draft original generation, no readable agency marks, form text, people, gore, or protected-world references requested.
+
+## B4 / The Double-Slit Office
+
+- Asset: `book/source/volume-1/assets/art/B4-the-doubleslit-office/plate-draft-v2.png`
+- Replaced: `book/source/volume-1/assets/art/B4-the-doubleslit-office/plate-draft.svg`
+- Source: `/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_039832f8804bb182016a18dcb02c108199b945cf6977cebcef.png`
+- Prompt intent: shattered chalkboard fragments, hanging telephone receiver, photon-slit geometry, interference bands, brass-console shadow.
+- Rights note: draft original generation, no readable project labels, lab logos, people, or protected-world references requested.
+
+## B6 / The Leverage of Frayed Plastic
+
+- Asset: `book/source/volume-1/assets/art/B6-the-leverage-of-frayed-plastic/plate-draft-v2.png`
+- Replaced: `book/source/volume-1/assets/art/B6-the-leverage-of-frayed-plastic/plate-draft.svg`
+- Source: `/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_039832f8804bb182016a18dce7961481998b36fd22b8a1871b.png`
+- Prompt intent: frayed red lanyard, cracked blank keycard, permit archive paper stack, access-window arcs, worn plastic edge.
+- Rights note: draft original generation, no readable permit numbers, government seals, people, or protected-world references requested.
+
+## C1 / The Silent Ward
+
+- Asset: `book/source/volume-1/assets/art/C1-the-silent-ward/plate-draft-v2.png`
+- Replaced: `book/source/volume-1/assets/art/C1-the-silent-ward/plate-draft.svg`
+- Source: `/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_039832f8804bb182016a18dd1d3bb48199a982a7cff9acb457.png`
+- Prompt intent: 1970s ward correspondence, bed-window forms, oscilloscopic silence waves, coded dots, wire-mesh shadows.
+- Rights note: draft original generation, no readable patient data, hospital names, logos, people, or protected-world references requested.
+
+## C2 / The Cipher's Edge
+
+- Asset: `book/source/volume-1/assets/art/C2-the-ciphers-edge/plate-draft-v2.png`
+- Replaced: `book/source/volume-1/assets/art/C2-the-ciphers-edge/plate-draft.svg`
+- Source: `/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_039832f8804bb182016a18dd565e0c819990ef781868c43f06.png`
+- Prompt intent: scarred metal decrypter plate, concentric rings, data-chip shadow, salt-kerosene manifest blocks.
+- Rights note: draft original generation, no readable ship names, manifests, logos, people, weapons, or protected-world references requested.
+
+## C3 / The Sock Cipher
+
+- Asset: `book/source/volume-1/assets/art/C3-the-sock-cipher/plate-draft-v2.png`
+- Replaced: `book/source/volume-1/assets/art/C3-the-sock-cipher/plate-draft.svg`
+- Source: `/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_039832f8804bb182016a18dd96e5208199837763a418d09c0b.png`
+- Prompt intent: argyle sock artifact, stitched cipher bands, redacted transcript blocks, vault tag shapes, bunker-paper geometry.
+- Rights note: draft original generation, no readable transcript data, agency marks, people, or protected-world references requested.
+
+## C4 / Care Instructions for Unit 4B
+
+- Asset: `book/source/volume-1/assets/art/C4-care-instructions-for-unit-4b/plate-draft-v2.png`
+- Replaced: `book/source/volume-1/assets/art/C4-care-instructions-for-unit-4b/plate-draft.svg`
+- Source: `/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_039832f8804bb182016a18de687e68819987c1b6ea426c5077.png`
+- Rejected source: `/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_039832f8804bb182016a18ddcea060819986061ceabb8b1bc4.png`
+- Prompt intent: care-home instruction packet, blank keycard, oxygen monitor diagram, synthetic skin waveform, coffee-stained order panel.
+- Rights note: replacement selected to avoid visible byte-label text; draft original generation, no readable patient data, medical branding, people, or protected-world references requested.
+
+## C5 / The Lanyard and the Lemon Drops
+
+- Asset: `book/source/volume-1/assets/art/C5-the-lanyard-and-the-lemon-drops/plate-draft-v2.png`
+- Replaced: `book/source/volume-1/assets/art/C5-the-lanyard-and-the-lemon-drops/plate-draft.svg`
+- Source: `/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_039832f8804bb182016a18de1838e8819992153b7672a97e06.png`
+- Prompt intent: ferry lost-and-found packet, red lanyard, blank keycard, tin with three lemon-drop circles, salt-mildew paper waves.
+- Rights note: draft original generation, no readable serials, ferry marks, product labels, people, hands, or protected-world references requested.
+
 ## E1 / The Receipt and the Rhododendron
 
 - Asset: `book/source/volume-1/assets/art/E1-the-receipt-and-the-rhododendron/plate-draft.png`
