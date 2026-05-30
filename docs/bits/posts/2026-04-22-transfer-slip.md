@@ -15,7 +15,7 @@ The counterfeit card trembles in my palm, its edges fraying like old bandage gau
 
 *Shut up*, I think. *Shut up shut up shut up*. My sister’s avatar in the *Sheyenne Bend* simulation still wears the sweater I bought her, the one she died in. It’s been three years. Three years and the game’s corpse still sends her “activity notifications” to my old email.  
 
-Harlan slams the brakes. A man in a rumpled suit stumbles aboard, clutching a paper bag that smells like yesterday’s fried chicken. He drops into the seat beside the lottoticket woman. “Apologies,” he says, breath mint sharp enough to cut. “Late from the archives.”  
+Harlan slams the brakes. A man in a rumpled suit stumbles aboard, clutching a paper bag that smells like yesterday’s fried chicken. He drops into the seat beside the lotto-ticket woman. “Apologies,” he says, breath mint sharp enough to cut. “Late from the archives.”
 
 “Digital Press guy,” the woman mutters. “They’re all liars.”  
 
@@ -33,7 +33,7 @@ The air leaves me. *Mooseknit*, her favorite game. The avatar’s sweater had a 
 
 “You can’t keep visiting,” he says, softer now. “It’s why your credit’s junk. Why your landlord’s evicting you. The system thinks you’re still paying rent on that virtual land.”  
 
-The lottoticket woman cackles. “Told you it weren’t right.”  
+The lotto-ticket woman cackles. “Told you it weren’t right.”
 
 I stare at the card. Three years of swiping into a dead world, three years of her voice saying *“Hey, you online?”* in the chat, three years of pretending I’m not bankrupting myself to keep her .txt file alive.  
 

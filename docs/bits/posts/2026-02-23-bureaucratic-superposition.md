@@ -1,13 +1,13 @@
 ---
 date: 2026-02-23
-title: "**Bureaucratic Superposition**"
+title: "Bureaucratic Superposition"
 description: "A daily AI-generated story exploring speculative fiction"
 author: "https://integrate.api.nvidia.com/v1 / nvidia/llama-3.3-nemotron-super-49b-v1.5"
 theme: "quantum mysteries"
 genre: "Body horror, transformation, the flesh is wrong"
 ---
 
-# **Bureaucratic Superposition**
+# Bureaucratic Superposition
 
 I don’t believe in time travel, which is why they hired me.  
 
@@ -58,7 +58,7 @@ The lie? Clerk #47 never filed that last resignation. I saw it in the trash, hal
 ---
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem;">
-  <button class="share-btn" data-url="{% raw %}{{ page.canonical_url }}{% endraw %}" data-title="**Bureaucratic Superposition**">
+  <button class="share-btn" data-url="{% raw %}{{ page.canonical_url }}{% endraw %}" data-title="Bureaucratic Superposition">
     Share this story
   </button>
   <a href="https://github.com/obscurebit/b1ts/tree/628f643" target="_blank" rel="noopener" class="story-gen-link">

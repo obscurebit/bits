@@ -515,6 +515,8 @@ layout:
       teaser: false
       first_page_words: 260
       continuation_words: 430
+      body_size: "11px"
+      body_leading: "1.36"
     "54":
       art_title: "Stitchwork"
       art_glyph: "STC"
@@ -713,7 +715,7 @@ layout:
       teaser: false
       first_page_words: 240
       continuation_words: 340
-      tail_plate_max_words: 430
+      tail_plate_max_words: 240
     "B1":
       art_title: "Observers"
       art_glyph: "QBT"

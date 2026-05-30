@@ -1132,6 +1132,22 @@ entries:
     contrast: "1.03"
     brightness: "1.02"
     scale: "1.04"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/AF-transfer-slip/continuation-strip.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_00ae200559012622016a1b6924240881949e1fabc1c9f326af.png"
+        role_note: "Second-page transit-memory strip; repeats the frayed card, yellow transfer slip, night route trace, prairie server geometry, phone-notification glow, and moth-wing error residue."
+        art_layout: "continuation-strip"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.76"
+        contrast: "1.02"
+        brightness: "1.03"
+        scale: "1.01"
     prompt: |
       Original editorial art for Bit AF, "Transfer Slip": frayed counterfeit transit card, bus-transfer paper, night route trace, simulation residue as abstract waves, no readable numbers, no transit marks, no game marks, no people.
   - slug: "2026-02-05-entangled-observers"
@@ -1174,6 +1190,22 @@ entries:
     contrast: "1.03"
     brightness: "1.03"
     scale: "1.04"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/B2-bureaucratic-superposition/continuation-strip.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_00ae200559012622016a1b6955e2cc8194b285c11c70ed1147.png"
+        role_note: "Second-page superposition strip; repeats the translucent forms, blank approval stamps, observation rings, filing cabinet, drifting clock ticks, and abstract half-transparent hand contour."
+        art_layout: "continuation-strip"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.72"
+        contrast: "1.02"
+        brightness: "1.04"
+        scale: "1.01"
     prompt: |
       Original editorial art for Bit B2, "Bureaucratic Superposition": translucent office forms, duplicated hand/eye ovals as abstract marks, dark filing cabinet, nested observation rings, no readable text, no agency marks, no people.
   - slug: "2026-03-31-the-doubleslit-office"
@@ -1947,6 +1979,22 @@ entries:
     contrast: "1.04"
     brightness: "1.0"
     scale: "1.04"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/53-the-weeping-cogs-of-naqshab/continuation-strip.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_00ae200559012622016a1b69b334bc8194b16b9cf328963b35.png"
+        role_note: "Second-page Naqshab strip; repeats the broken brass orrery, rust-weeping cogs, blank customs ledger, porthole disk, saffron dust, silk scraps, ship-hull sliver, and empty antiquities crate."
+        art_layout: "continuation-strip"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.78"
+        contrast: "1.02"
+        brightness: "1.02"
+        scale: "1.01"
     prompt: |
       Original editorial art for Bit 53, "The Weeping Cogs of Naqshab": ruined transit-lounge archive with brass orrery fragments, oxidized ship-hull sliver, brittle customs ledgers, spice dust, silk scraps, porthole-like circular diagrams as abstract sea-blue bands, weeping oil on cogs, museum specimen plate, tarnished brass, bergamot ochre, rust iron, deep Mediterranean blue, no readable text, no logos, no faces, no living artist style imitation.
   - slug: "2026-03-12-the-suburban-stitchwork"
@@ -2801,6 +2849,22 @@ entries:
     contrast: "1.04"
     brightness: "1.02"
     scale: "1.02"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/12-the-gatekeepers-equation/continuation-strip.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_00ae200559012622016a1b69846fec81948842a1f9a0c00720.png"
+        role_note: "Second-page gatekeeper strip; repeats the wire-wrapped checkpoint columns, scattered memory coins, cracked aqueduct shadow, broken quill, lens glass, ink-blot wings, and open gate."
+        art_layout: "continuation-strip"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.76"
+        contrast: "1.02"
+        brightness: "1.04"
+        scale: "1.01"
     prompt: |
       Original editorial art for Bit 12, "The Gatekeeper's Equation": mythic modern checkpoint, memory coins, customs gate, quill, lens glass, aqueduct shadows, wire-wrapped columns, ink-blot wings, mineral pigments, rust red, bone cream, oxidized teal, ink black, no readable text, no logos, no people, no faces, no living artist style imitation.
   - slug: "2026-04-11-the-memory-audit"

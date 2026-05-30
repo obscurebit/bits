@@ -19,7 +19,7 @@ The orrery dominates the room, brass planets grooved with wormholes, each orbit 
 
 The child’s doll I found strapped to a launch chair. Its glass eyes are shattered, but the velvet dress is intact, embroidered with the House of Habsburg crest. Naqshab was a transit hub for smugglers and diplomats, but the doll… it belonged to a girl who wrote her name in the margins of a navigation manual: *Anneliese, 12, Earth-standard years*. Her last entry: *“Father says we’ll reach the New World before the sea dries.”* The New World. A term from a century that never happened here.  
 
-Inspector Virek’s corpse stayed folded in the maintenance hatch for three years. I didn’t bury him. couldn’t. His uniform buttons still click when the station’s gravity flickers. He’d hidden a vial of saffron in his boot—worth a fortune on Europa, but he used it to stain his final report. The ink bled into a map of the *Blaak*’s lower decks, where a chamber was labeled *“The Alexandria Vault.”* I never found it.  
+Inspector Virek’s corpse stayed folded in the maintenance hatch for three years. I didn’t bury him. I couldn’t. His uniform buttons still click when the station’s gravity flickers. He’d hidden a vial of saffron in his boot—worth a fortune on Europa, but he used it to stain his final report. The ink bled into a map of the *Blaak*’s lower decks, where a chamber was labeled *“The Alexandria Vault.”* I never found it.
 
 The cost of knowing is that I dream in their languages. Anneliese’s German, Virek’s pidgin Arabic, the clatter of the orrery’s dead tongues. Last month, I traded the doll to a scavenger from Ceylan-4 for a packet of Earth soil. It smells like lies.  
 
