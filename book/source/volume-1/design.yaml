@@ -498,8 +498,10 @@ layout:
       art_title: "Mirror Test"
       art_glyph: "MIR"
       teaser: false
-      first_page_words: 230
+      first_page_words: 250
       continuation_words: 420
+      body_size: "9.2px"
+      body_leading: "1.35"
     "52":
       art_title: "Ghost Bureau"
       art_glyph: "FRM"

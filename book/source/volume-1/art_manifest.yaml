@@ -1816,6 +1816,22 @@ entries:
     contrast: "1.03"
     brightness: "1.03"
     scale: "1.04"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/4F-the-mirror-test/continuation-strip.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_058951c0946ac92d016a1b2ca0a9ec8193867b74eaa5eea6a0.png"
+        role_note: "Second-page mirror-test strip; repeats the cracked compact, ash-caked donation debris, blank voucher slips, melted lipstick, charred paper, and smoke residue."
+        art_layout: "continuation-strip"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.72"
+        contrast: "1.02"
+        brightness: "1.04"
+        scale: "1.01"
     prompt: |
       Original editorial art for Bit 4F, "The Mirror Test": damaged evidence collage, cracked pink compact mirror, ash, blank voucher paper, false clean reflection as soft color blocks, smoke residue, charred paper edge, donation-bin fragment, flatbed scan, faded pink, ash gray, voucher yellow, muted teal, no readable text, no pseudo text, no letters, no numbers, no stamps, no logos, no faces, no living artist style imitation.
   - slug: "2026-02-13-the-silent-garden"
@@ -2092,6 +2108,22 @@ entries:
     contrast: "1.02"
     brightness: "1.03"
     scale: "1.04"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/3B-the-copyists-dilemma/continuation-strip.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_058951c0946ac92d016a1b2a11e50c81939489fffcdaaa7af8.png"
+        role_note: "Second-page copyist strip; repeats the blank intake forms, smudged notary circles, misregistered strokes, copy roller, counter bell, and paper-dust absence."
+        art_layout: "continuation-strip"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.72"
+        contrast: "1.02"
+        brightness: "1.04"
+        scale: "1.01"
     prompt: |
       Original editorial art for Bit 3B, "The Copyist’s Dilemma": counterfeit realities as a copy-shop document artifact, strict ledger grid of duplicate blank forms, repeated signature strokes failing to align, smudged notary circles, copy counter geometry, a human-shaped absence made from paper and ink voids, warm bone copy paper, carbon dust, copier gray, graphite black, muted rust red, dull teal, faint institutional green, no readable text, no logos, no faces, no bodies, no living artist style imitation.
   - slug: "2026-05-22-the-ice-bucket-tags"
@@ -2563,6 +2595,22 @@ entries:
     contrast: "1.03"
     brightness: "1.03"
     scale: "1.02"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/09-the-garment-tag/continuation-strip.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_058951c0946ac92d016a1b299bb9fc81938b41de517aad5181.png"
+        role_note: "Second-page garment-tag strip; repeats the uniform fabric, care tag, cracked hospital phone, charging dock, disposal slip, and linen-cart residue."
+        art_layout: "continuation-strip"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.72"
+        contrast: "1.02"
+        brightness: "1.04"
+        scale: "1.01"
     prompt: |
       Original editorial art for Bit 09, "The Garment Tag": haunted hospital supply corridor and abandoned phone kiosk compressed into a curated artifact, cream garment-care tag on uniform sleeve, cracked glowing phone, charging docks, linen carts, fluorescent haze, grief and digital ghosts without readable messages, hospital green, oxidized teal, off-white paper, acidic tag yellow, no readable text, no logos, no people, no faces, no living artist style imitation.
   - slug: "2026-05-18-bench-warrant-bowling"
@@ -3393,5 +3441,21 @@ entries:
     contrast: "1.03"
     brightness: "1.01"
     scale: "1.03"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/92-the-glove-and-the-glasshouse/continuation-strip.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_058951c0946ac92d016a1b2c290c2881938a684b0a432dd736.png"
+        role_note: "Second-page glasshouse strip; repeats the worn deckhand glove, greenhouse frame, blank manifest margin, archive cartridge, ferry deck, and oxide-dust residue."
+        art_layout: "continuation-strip"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.74"
+        contrast: "1.02"
+        brightness: "1.04"
+        scale: "1.01"
     prompt: |
       Original editorial art for Bit 92, "The Glove and the Glasshouse": a ferry deckhand's worn glove, rooftop greenhouse, archive cartridges, a manifest of real names, and a blinking cursor asking a question. Tender but uneasy urban maintenance romance with obsolete media. Tactile archival mixed-media plate with paper grain, greenhouse vellum, ferry manifest paper, oxide dust. Harbor teal, glasshouse green, rust-red oxide, glove charcoal, brass highlights. No readable words or numbers, no logos, no faces, no living artist style imitation.
