@@ -60,6 +60,7 @@ class BookRenderTests(unittest.TestCase):
         css = book_render.css_for(design, "light")
         self.assertIn("#fff", css)
         self.assertIn("Georgia", css)
+        self.assertIn("art-layout-continuation-strip", css)
         self.assertIn("art-layout-receipt-strip", css)
 
     def test_print_fit_script_measures_entry_body_overflow(self) -> None:

@@ -2576,6 +2576,7 @@ html, body {{
 .spread-text.art-continuation .plate-label {{
   font-size: 5.6px;
 }}
+.spread-text.art-continuation:has(.plate.has-art.art-layout-continuation-strip),
 .spread-text.art-continuation:has(.plate.has-art.art-layout-receipt-strip) {{
   grid-template-columns: 1fr;
   grid-template-areas:
@@ -2586,16 +2587,21 @@ html, body {{
   grid-template-rows: auto 0.86in minmax(0, 1fr) auto;
   row-gap: 0.11in;
 }}
+.spread-text.art-continuation:has(.plate.has-art.art-layout-continuation-strip) .plate,
 .spread-text.art-continuation:has(.plate.has-art.art-layout-receipt-strip) .plate {{
   min-height: 0.86in;
   height: 0.86in;
   opacity: 0.88;
 }}
+.spread-text.art-continuation:has(.plate.has-art.art-layout-continuation-strip) .entry-body,
 .spread-text.art-continuation:has(.plate.has-art.art-layout-receipt-strip) .entry-body {{
   max-width: 5.38in;
   margin: 0 auto;
   align-self: start;
 }}
+.spread-text.art-continuation:has(.plate.has-art.art-layout-continuation-strip) .plate-sigil,
+.spread-text.art-continuation:has(.plate.has-art.art-layout-continuation-strip) .plate-label,
+.spread-text.art-continuation:has(.plate.has-art.art-layout-continuation-strip) .plate-notes,
 .spread-text.art-continuation:has(.plate.has-art.art-layout-receipt-strip) .plate-sigil,
 .spread-text.art-continuation:has(.plate.has-art.art-layout-receipt-strip) .plate-label,
 .spread-text.art-continuation:has(.plate.has-art.art-layout-receipt-strip) .plate-notes {{

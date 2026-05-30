@@ -589,7 +589,7 @@ layout:
       teaser: false
       first_page_words: 250
       continuation_words: 560
-      tail_plate_max_words: 520
+      tail_plate_max_words: 480
     "74":
       art_title: "Bell + Biscotti"
       art_glyph: "BIS"
