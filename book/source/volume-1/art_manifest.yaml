@@ -1369,6 +1369,22 @@ entries:
     contrast: "1.03"
     brightness: "1.02"
     scale: "1.03"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/3C-the-mourning-docket/continuation-strip.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_06adc62e398a4697016a1af032cf808193b96c2a916f6241e4.png"
+        role_note: "Second-page mourning docket strip; fogged vending glass, carnation, cracked certificate, and blank office forms."
+        art_layout: "continuation-strip"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.74"
+        contrast: "1.02"
+        brightness: "1.04"
+        scale: "1.01"
     prompt: |
       Original editorial art for Bit 3C, "The Mourning Docket": funeral home side-office evidence still life, fogged vending-machine glass, dented blank nameplate, chipped teacup, cold thermos, cracked certificate glass, single carnation, umbrella drip, old ledger, tiny wrapped mints, queue implied by shadows only, bone paper, funeral-home green, muted brass, carnation red, cold coffee brown, fogged glass gray, soft mint blue-green, no readable text, no crosses, no logos, no faces, no living artist style imitation.
   - slug: "2026-02-10-the-duplicate-report"
@@ -1765,6 +1781,22 @@ entries:
     contrast: "1.03"
     brightness: "1.02"
     scale: "1.04"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/52-the-bureaucracy-of-ghosts/continuation-strip.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_06adc62e398a4697016a1af1c607cc8193924c6fba9055b383.png"
+        role_note: "Second-page afterlife archive strip; plain marker tags, urn ash, blank carbon forms, fog, and file drawers."
+        art_layout: "continuation-strip"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.72"
+        contrast: "1.02"
+        brightness: "1.04"
+        scale: "1.01"
     prompt: |
       Original editorial art for Bit 52, "The Bureaucracy of Ghosts": fog-damp cemetery filing desk as impossible ministry archive, carbon-copy forms, brass urn ash, rusted cemetery plot markers, typewriter smudges, worn coordinate grid, pale grave fog, abstract official stamp blocks, flatbed archive collage, aged paper, fog gray, oxidized brass, tobacco brown, institutional green, no readable text, no logos, no faces, no living artist style imitation.
   - slug: "2026-03-03-the-weeping-cogs-of-naqshab"
@@ -2175,6 +2207,22 @@ entries:
     contrast: "1.04"
     brightness: "1.02"
     scale: "1.02"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/D0-line-items-in-the-dark/continuation-strip.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_06adc62e398a4697016a1af15b61788193b9f569e08c3ad8e0.png"
+        role_note: "Second-page backstage ledger strip; receipt ribbon, rigging lines, cart edge, emergency green, and crimson thread."
+        art_layout: "continuation-strip"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.78"
+        contrast: "1.02"
+        brightness: "1.03"
+        scale: "1.01"
     prompt: |
       Original editorial art for Bit D0, "Line Items in the Dark": theater maintenance cart and receipt that keeps inventing charges, rolling dolly in dark wings, ghost receipt strip lengthening into stage rigging, emergency exit sign geometry, walker as abstract linework, coffee-ring stain, clipboard, blank paper blocks, black stage void, warm bone receipt paper, crimson thread, emergency green, oxidized teal, brass dust, rain-gray, no readable text, no numbers, no logos, no people, no faces, no living artist style imitation.
   - slug: "2026-04-27-tomorrows-transfer"
@@ -2971,6 +3019,22 @@ entries:
     contrast: "1.03"
     brightness: "1.03"
     scale: "1.02"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/32-the-cancellation-bell/continuation-strip.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_06adc62e398a4697016a1af0fce49c8193a77a0c88468d0cae.png"
+        role_note: "Second-page cancellation bell strip; cracked handbell, molar clapper, x-ray envelope, blank slips, and counter wear."
+        art_layout: "continuation-strip"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.74"
+        contrast: "1.02"
+        brightness: "1.04"
+        scale: "1.01"
     prompt: |
       Original editorial art for Bit 32, "The Cancellation Bell": dental clinic and post-office counter, cracked brass handbell, tiny silver molar-like tongue, folded bill, yellow slip, lollipop jar, X-ray envelope, tea cup, warm brass, dental mint, postage red, lemon cream, no readable text, no logos, no people, no faces, no living artist style imitation.
   - slug: "2026-04-26-the-detergent-dispensary"
