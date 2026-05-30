@@ -17,7 +17,7 @@ Renzo C. did not believe in echoes. He believed in stamps, specifically the one 
 
 At 9:07 a.m., on the floor above, Fumiko W. spilled chamomile tea on her Report of Anomalies. The liquid spread across the page, blurring the categories: *Likely Coincidence*, *Routine Glitch*, *File for Review*. She dabbed at it with a lint roller from her desk drawer—used earlier that week to clean dust from her keyboard—and stared at the security camera in the corner of her cubicle. It winked a red light, then flickered off.  
 
-Renzo called the Mirror Archives. Hold music played—a saxophone-heavy rendition of *"Yesterday"*—until a voice games "Department of Redundancy, how may we route your concern?"  
+Renzo called the Mirror Archives. Hold music played—a saxophone-heavy rendition of *"Yesterday"*—until a voice came on: "Department of Redundancy, how may we route your concern?"
 
 "I have tripled forms," Renzo said. "And a stamp that doesn’t exist."  
 

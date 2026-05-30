@@ -440,7 +440,7 @@ layout:
       body_leading: "1.33"
       first_page_words: 220
       continuation_words: 380
-      tail_plate_max_words: 500
+      tail_plate_max_words: 240
     "39":
       art_title: "Glass Lie"
       art_glyph: "GLS"
@@ -461,7 +461,7 @@ layout:
     "41":
       first_page_words: 250
       continuation_words: 430
-      tail_plate_max_words: 520
+      tail_plate_max_words: 240
     "42":
       tail_plate_max_words: 560
     "43":
@@ -678,7 +678,7 @@ layout:
       teaser: false
       first_page_words: 230
       continuation_words: 430
-      tail_plate_max_words: 520
+      tail_plate_max_words: 1
     "AC":
       art_title: "Last Log"
       art_glyph: "LOG"

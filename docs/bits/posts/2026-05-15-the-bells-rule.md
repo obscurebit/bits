@@ -49,12 +49,6 @@ The bell hasn’t rung since.
 
 But the Xerox machine won’t stop printing L. Varga’s name.  
 
----  
-*Title note: Avoids overused abstract nouns, ties directly to the anchor object and setting.*  
-*Speculative element: The bell’s purpose is treated as a bureaucratic hassle, not a wonder. The dead are a known, regulated nuisance.*  
-*Emotional turn: Mrs. Palma’s quiet tenderness toward Milton’s humiliation.*  
-*Ending: New rule accepted, but the system’s strangeness persists in the background.*
-
 ---
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem;">

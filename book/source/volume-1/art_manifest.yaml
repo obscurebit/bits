@@ -979,6 +979,22 @@ entries:
     contrast: "1.03"
     brightness: "1.02"
     scale: "1.04"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/AB-the-archive-of-small-things/continuation-strip.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_08ba682c4cb356b1016a1b628f003081938d14edd20c0074a2.png"
+        role_note: "Second-page bio-memory strip; repeats the vat aperture, sealed backup drive, amber vials, specimen blocks, glassine cards, fiber lattice, and pin-map residue."
+        art_layout: "continuation-strip"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.72"
+        contrast: "1.02"
+        brightness: "1.04"
+        scale: "1.01"
     prompt: |
       Original editorial art for Bit AB, "The Archive of Small Things": bio-memory workshop plate, blank circular vat or petri aperture, fiber lattice, microscope-printer silhouette, tiny sealed specimen blocks, formaldehyde-toned paper, small glassine envelopes, blank cards, pale thread paths, colored pin dots, warm bone, formaldehyde amber, oxidized teal, pale clinical green, graphite, muted berry, old brass, no readable text, no lab branding, no people.
   - slug: "2026-04-17-the-last-log-entry"
@@ -1487,6 +1503,22 @@ entries:
     contrast: "1.03"
     brightness: "1.02"
     scale: "1.03"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/41-the-duplicate-report/continuation-strip.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_08ba682c4cb356b1016a1b633780508193a6f890f787f8401d.png"
+        role_note: "Second-page duplicate-report strip; repeats the pneumatic tube, blank merging forms, stamp pad, tea stain, lint roller, mirrored office glass, and archive-camera residue."
+        art_layout: "continuation-strip"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.72"
+        contrast: "1.02"
+        brightness: "1.04"
+        scale: "1.01"
     prompt: |
       Original editorial art for Bit 41, "The Duplicate Report": 42nd-floor mirror archive office, pneumatic tube mouth, three blank duplicate forms, invalid blank stamp pad, chamomile tea stain, lint roller, surveillance camera with no logo, mirrored black computer glass, carbonless copies merging into one, bone paper, carbon gray, tea gold, office teal, muted red-orange correction marks, pale fluorescent green, black glass, no readable text, no seals, no logos, no faces, no living artist style imitation.
   - slug: "2026-02-14-fault-lines"
@@ -3379,6 +3411,22 @@ entries:
     contrast: "1.04"
     brightness: "1.01"
     scale: "1.12"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/36-the-third-ink/continuation-strip.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_08ba682c4cb356b1016a1b61f8f64c81938486d17326732baa.png"
+        role_note: "Second-page third-ink strip; repeats the cassette, boombox mouth, three abstract ink strokes, receipt strip, pink gelatin residue, server rack, and virtual-suburb map fragments."
+        art_layout: "continuation-strip"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.74"
+        contrast: "1.02"
+        brightness: "1.03"
+        scale: "1.01"
     prompt: |
       Original editorial art for Bit 36, "The Third Ink": courthouse jury-room table, old server-farm residue, cassette single, ancient boombox, melted pink Jell-O, virtual suburb deed fragments as pixel-house map blocks, three abstract ink textures with no readable letters, receipt-like strip emerging from boombox, bone paper, charcoal, stale pink, court-file tan, oxidized teal, muted red-orange, faint electric blue, no readable text, no logos, no faces, no living artist style imitation.
   - slug: "2026-05-15-the-bells-rule"
@@ -3401,6 +3449,22 @@ entries:
     contrast: "1.05"
     brightness: "1.02"
     scale: "1.12"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/38-the-bells-rule/continuation-strip.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_08ba682c4cb356b1016a1b62dfaa348193a72b7b1ae13b958d.png"
+        role_note: "Second-page bell-rule strip; repeats the cracked handbell, copy-machine tray, incident ledger, manila envelope, redacted pages, rotary-phone edge, and copy-shop haze."
+        art_layout: "continuation-strip"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.72"
+        contrast: "1.02"
+        brightness: "1.04"
+        scale: "1.01"
     prompt: |
       Original editorial art for Bit 38, "The Bell's Rule": basement copy shop counter, cracked brass handbell, Xerox tray, old incident log, carbon paper, manila envelope, smudged rule sheet with no readable text, copied pages as abstract black bars, ghost-bureaucracy residue, bone paper, brass yellow, copy-machine gray, carbon black, muted red-orange, blue-gray, spectral teal, no readable text, no official seals, no logos, no faces, no living artist style imitation.
   - slug: "2026-05-17-the-glass-and-the-lie"
