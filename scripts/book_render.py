@@ -29,7 +29,7 @@ STORY_DIVIDER = "__OBSCUREBIT_STORY_DIVIDER__"
 PDF_IMAGE_PROFILES: dict[str, dict[str, Any]] = {
     "review": {"suffix": "review", "quality": None, "max_long_edge": None, "optimize_images": False},
     "print": {"suffix": "print", "quality": 90, "max_long_edge": None, "optimize_images": True},
-    "download": {"suffix": "download", "quality": 76, "max_long_edge": 1200, "optimize_images": True},
+    "download": {"suffix": "download", "quality": 45, "max_long_edge": 700, "optimize_images": True},
 }
 
 
@@ -1084,6 +1084,7 @@ html, body {{
   font-family: {typo["body"]};
 }}
 .page {{
+  --paper: {palette["paper"]};
   --section-accent: {palette["accent"]};
   --section-accent-2: {palette["accent_2"]};
   --section-accent-3: {palette["accent_3"]};
@@ -3524,7 +3525,7 @@ html, body {{
 def pdf_profile_css(profile_name: str) -> str:
     if profile_name == "review":
         return ""
-    return """
+    css = """
 .pdf-profile-print *,
 .pdf-profile-download * {
   mix-blend-mode: normal !important;
@@ -3541,6 +3542,35 @@ def pdf_profile_css(profile_name: str) -> str:
   mask-image: none !important;
 }
 """.strip()
+    if profile_name != "download":
+        return css
+    download_css = """
+.pdf-profile-download .plate.has-art::after,
+.pdf-profile-download .section-panel::after,
+.pdf-profile-download .mode-card::after,
+.pdf-profile-download .taxonomy-spectrum span::after,
+.pdf-profile-download .taxonomy-thread span::after {
+  display: none !important;
+}
+.pdf-profile-download .page,
+.pdf-profile-download .plate {
+  background: var(--paper) !important;
+}
+.pdf-profile-download .plate {
+  isolation: auto !important;
+}
+.pdf-profile-download .plate.has-art::before {
+  display: none !important;
+}
+.pdf-profile-download .plate.has-art .plate-label,
+.pdf-profile-download .plate.has-art .plate-notes {
+  background: var(--paper) !important;
+}
+.pdf-profile-download .mode-card-panel img {
+  opacity: 0.18 !important;
+}
+""".strip()
+    return f"{css}\n{download_css}"
 
 
 def load_front_note(path: Path, fallback_title: str) -> tuple[str, str, str]:

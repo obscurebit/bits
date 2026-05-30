@@ -78,6 +78,15 @@ class BookRenderTests(unittest.TestCase):
         self.assertIn("mix-blend-mode: normal", css)
         self.assertIn("backdrop-filter: none", css)
         self.assertIn("mask-image: none", css)
+        self.assertIn(".pdf-profile-download .plate.has-art::after", css)
+        self.assertIn(".pdf-profile-download .page", css)
+        self.assertIn("background: var(--paper)", css)
+
+    def test_download_profile_uses_smaller_images(self) -> None:
+        profile = book_render.PDF_IMAGE_PROFILES["download"]
+
+        self.assertEqual(profile["quality"], 45)
+        self.assertEqual(profile["max_long_edge"], 700)
 
     def test_spread_split_keeps_both_pages_populated(self) -> None:
         text = "\n\n".join(
