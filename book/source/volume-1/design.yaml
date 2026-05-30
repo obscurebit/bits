@@ -401,7 +401,7 @@ layout:
       teaser: false
       first_page_words: 260
       continuation_words: 430
-      tail_plate_max_words: 500
+      tail_plate_max_words: 380
     "33":
       variant: "detergent-ticket"
       art_title: "Detergent Ticket"
@@ -689,7 +689,7 @@ layout:
       teaser: false
       first_page_words: 240
       continuation_words: 320
-      tail_plate_max_words: 420
+      tail_plate_max_words: 360
     "AD":
       art_title: "Unsigned Forms"
       art_glyph: "22B"
@@ -755,7 +755,7 @@ layout:
       teaser: false
       first_page_words: 230
       continuation_words: 320
-      tail_plate_max_words: 410
+      tail_plate_max_words: 360
     "C3":
       art_title: "Sock Cipher"
       art_glyph: "ARG"
@@ -769,14 +769,14 @@ layout:
       first_page_words: 220
       continuation_words: 360
       tail_plate_max_words: 380
-    "C5":
+    "80":
       art_title: "Lanyard + Lemon Drops"
       art_glyph: "LNY"
       teaser: false
       first_page_words: 240
       continuation_words: 340
-      tail_plate_max_words: 430
-    "C6":
+      tail_plate_max_words: 240
+    "C5":
       variant: "velvet-audit"
       art_title: "Velvet Audit"
       art_glyph: "VLT"

@@ -1037,6 +1037,22 @@ entries:
     contrast: "1.03"
     brightness: "1.02"
     scale: "1.04"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/5D-the-glove-and-the-good-neighbors/continuation-strip.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_058951c0946ac92d016a1b0612b11c8193a04353a01e2dbd81.png"
+        role_note: "Second-page good-neighbors strip; repeats the glove packet, blank complaint grid, photo sleeve, sidewalk geometry, and hydrangea residue."
+        art_layout: "continuation-strip"
+        fit: "cover"
+        position: "center 48%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.72"
+        contrast: "1.02"
+        brightness: "1.04"
+        scale: "1.01"
     prompt: |
       Original editorial art for Bit 5D, "The Glove and the Good Neighbors": port authority lost-and-found evidence packet, glove silhouettes, complaint forms, hydrangea/sidewalk civic paper noise, no readable text, no logos, no people.
   - slug: "2026-04-20-the-stack-of-unsigned-forms"
@@ -1241,6 +1257,22 @@ entries:
     contrast: "1.04"
     brightness: "1.02"
     scale: "1.04"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/C2-the-ciphers-edge/continuation-strip.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_058951c0946ac92d016a1b067c41488193a2efc7f424a8f5ce.png"
+        role_note: "Second-page cipher strip; echoes the decrypter rings, blank chip, manifest grid, circuit traces, and black non-text redaction bars."
+        art_layout: "continuation-strip"
+        fit: "cover"
+        position: "center 48%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.7"
+        contrast: "1.02"
+        brightness: "1.04"
+        scale: "1.01"
     prompt: |
       Original editorial art for Bit C2, "The Cipher's Edge": scarred metal decrypter plate, concentric rings, heavy diamond casing, salt-kerosene manifest shadow, no readable text, no ship names, no logos, no people.
   - slug: "2026-04-07-the-sock-cipher"
@@ -1319,6 +1351,22 @@ entries:
     contrast: "1.03"
     brightness: "1.03"
     scale: "1.04"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/C5-the-lanyard-and-the-lemon-drops/continuation-strip.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_058951c0946ac92d016a1b05b1f32c8193ae27199998df7cfe.png"
+        role_note: "Second-page ferry packet strip; repeats the red lanyard, blank keycard, lemon-drop tin, claim tags, and salt-mildew paper waves."
+        art_layout: "continuation-strip"
+        fit: "cover"
+        position: "center 48%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.76"
+        contrast: "1.02"
+        brightness: "1.04"
+        scale: "1.01"
     prompt: |
       Original editorial art for Bit C5, "The Lanyard and the Lemon Drops": ferry lost-and-found packet, red lanyard curve, obsolete keycard, three lemon-drop circles, salt-mildew paper waves, no readable serials, no ferry marks, no people.
   - slug: "2026-05-04-the-receipt-and-the-rhododendron"
@@ -3045,6 +3093,22 @@ entries:
     contrast: "1.04"
     brightness: "1.0"
     scale: "1.03"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/31-the-pneumatic-alibi/continuation-strip.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_058951c0946ac92d016a1b0871510481939665b985b2b97004.png"
+        role_note: "Second-page pneumatic strip; echoes the tube mouth, pressure gauge, mangled umbrella ribs, child sneaker, blank transit-card fragments, and map-color scraps."
+        art_layout: "continuation-strip"
+        fit: "cover"
+        position: "center 48%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.74"
+        contrast: "1.02"
+        brightness: "1.05"
+        scale: "1.01"
     prompt: |
       Original editorial art for Bit 31, "The Pneumatic Alibi": rusty pneumatic tube terminal, brass elbows, pressure gauges, mangled umbrella, child sneaker, blank counterfeit cards, torn map-color scraps, artificial plastic toy rat, rust red, brass, river gray, oxidized teal, no readable text, no logos, no people, no real animals, no living artist style imitation.
   - slug: "2026-04-23-the-cancellation-bell"
