@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-05-30-edition-121/" class="archive-item">
+    <div class="archive-item__number">121</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">May 30, 2026</span>
+      <h3 class="archive-item__title">Edition #121</h3>
+      <p class="archive-item__excerpt">Library Of Lost Formats · You learn to handle the gloves like they’re alive. The left one’s missing the index finger, frayed threads where the seam gave out three seasons back. They’re s...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Library Of Lost Formats</span><span class="archive-item__genre" title="Tender romance complicated by one impossible condition">Tender romance complicated by one impossible condition</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-05-29-edition-120/" class="archive-item">
     <div class="archive-item__number">120</div>
     <div class="archive-item__content">

@@ -1,8 +1,11 @@
 {
   "date": "2026-05-30",
   "links_file": "docs/links/posts/2026-05-30-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-05-30T09:07:09Z",
+  "published_links_file": "docs/links/posts/2026-05-30-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-05-30-the-glove-and-the-glasshouse.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-05-30-the-glove-and-the-glasshouse.md",
   "theme": "library of lost formats",
-  "updated_at": "2026-05-29T10:03:15Z"
+  "updated_at": "2026-05-30T08:33:51Z"
 }
