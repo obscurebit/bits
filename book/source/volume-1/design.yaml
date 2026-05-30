@@ -234,8 +234,9 @@ layout:
       art_glyph: "RTR"
       teaser: false
       body_font: "IBM Plex Mono, Menlo, Courier New, monospace"
-      body_size: "8.45px"
-      body_leading: "1.47"
+      body_size: "8.05px"
+      body_leading: "1.34"
+      first_page_words: 400
     "08":
       art_title: "Unseen Room Permit"
       art_glyph: "PER"
@@ -377,7 +378,7 @@ layout:
       body_size: "10.2px"
       body_leading: "1.42"
     "2E":
-      tail_plate_max_words: 460
+      tail_plate_max_words: 320
     "2F":
       art_title: "Checkpoint Twelve"
       art_glyph: "CHK"

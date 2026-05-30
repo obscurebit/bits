@@ -2041,6 +2041,22 @@ entries:
     contrast: "1.03"
     brightness: "1.02"
     scale: "1.04"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/58-plastic-bloom/continuation-strip.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_08ba682c4cb356b1016a1b34a053d881939d438eccf3483959.png"
+        role_note: "Second-page plastic-bloom strip; repeats the cracked duck keychain, green data tendrils, biometric scanner, clipboard blanks, coffee-filter evidence, and wet clinic residue."
+        art_layout: "continuation-strip"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.76"
+        contrast: "1.02"
+        brightness: "1.04"
+        scale: "1.01"
     prompt: |
       Original editorial art for Bit 58, "Plastic Bloom": school clinic/staff hallway audit artifact, cracked plastic duck keychain, biometric scanner light as abstract block, gym hallway tile fragments, nurse clipboard blanks, green data-bloom pattern like translucent plastic plant, muted evidence collage, clinic green, hallway beige, plastic yellow, scanner red, copier gray, no readable text, no logos, no faces, no children, no living artist style imitation.
   - slug: "2026-04-29-the-oathkeepers-lanyard"
@@ -2470,6 +2486,22 @@ entries:
     contrast: "1.04"
     brightness: "1.02"
     scale: "1.03"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/04-love-letters-from-the-router/continuation-strip.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_08ba682c4cb356b1016a1b34ef54448193ad03cb887b134084.png"
+        role_note: "Second-page router-letter strip; repeats the rooftop router, dot-matrix sheets, basil pot, antenna mast, cyan waveform loop, radio debris, and city-packet lights."
+        art_layout: "continuation-strip"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.74"
+        contrast: "1.02"
+        brightness: "1.03"
+        scale: "1.01"
     prompt: |
       Original editorial art for Bit 04, "Love Letters from the Router": rooftop radio/router romance as a signal artifact, dead Wi-Fi router as relic, rooftop antenna wires, basil silhouettes, dot-matrix love-letter sheets with abstract marks, radio waveform forming a tender loop, city lights as packet nodes, midnight graphite, router gray, warm window amber, oxidized teal, packet cyan, muted rust, bone paper, no readable text, no IP addresses, no numbers, no logos, no people, no faces, no living artist style imitation.
   - slug: "2026-03-28-the-1215-signal"
@@ -3098,6 +3130,22 @@ entries:
     contrast: "1.03"
     brightness: "1.02"
     scale: "1.02"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/2e-the-card-in-the-wall/continuation-strip.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_08ba682c4cb356b1016a1b342704488193beb6bce2c6548bce.png"
+        role_note: "Second-page card-in-wall strip; repeats the brick-held loyalty card, clinic chair, utility cart, toppled plant, check-in machine, and antiseptic corridor residue."
+        art_layout: "continuation-strip"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.72"
+        contrast: "1.02"
+        brightness: "1.04"
+        scale: "1.01"
     prompt: |
       Original editorial art for Bit 2E, "The Card in the Wall": municipal clinic waiting room, living grocery loyalty card between bricks, shimmering barcode, cracked vinyl chair, utility cart, knocked plant, check-in machine, burnt coffee brown, antiseptic green, faded card blue, brick red, no readable text, no logos, no people, no faces, no living artist style imitation.
   - slug: "2026-04-06-synthetic-dawn-at-checkpoint-twelve"
@@ -3375,6 +3423,22 @@ entries:
     contrast: "1.04"
     brightness: "1.01"
     scale: "1.1"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/39-the-glass-and-the-lie/continuation-strip.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_08ba682c4cb356b1016a1b34625f948193bbf7404630c15723.png"
+        role_note: "Second-page glass-and-lie strip; repeats the cracked red exit glass, bubble mailer, onionskin prescription sheet, customs parcel, pharmacy window, and diesel counter grit."
+        art_layout: "continuation-strip"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.74"
+        contrast: "1.02"
+        brightness: "1.03"
+        scale: "1.01"
     prompt: |
       Original editorial art for Bit 39, "The Glass and the Lie": border-counter pharmacy window, cracked dead exit sign wrapped in bubble mailer, onionskin prescription paper, customs counter, steel door, diesel-gray light, glass shards and bubble wrap as evidence, replacement sign glowing without readable letters, bone paper, cracked red lens, diesel gray, dull teal, pharmacy green-gray, carbon black, warm amber glow, no readable text, no official seals, no logos, no faces, no living artist style imitation.
   - slug: "2026-05-31-the-greenhouse-receipt"

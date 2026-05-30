@@ -1503,6 +1503,16 @@ html, body {{
   font-size: 8.55px;
   line-height: 1.47;
 }}
+.variant-router-love-letter.entry.signal.copy-dense .entry-body {{
+  font-size: var(--story-body-size, 8.05px);
+  line-height: var(--story-body-leading, 1.34);
+}}
+.variant-router-love-letter.entry.signal.copy-dense .entry-body p {{
+  margin-bottom: 0.045in;
+}}
+.variant-router-love-letter.entry.signal.copy-dense .entry-body p:last-child {{
+  margin-bottom: 0;
+}}
 .entry.archive .entry-body {{
   font-size: var(--story-body-size, 10.4px);
   line-height: var(--story-body-leading, 1.44);
@@ -2204,6 +2214,12 @@ html, body {{
     repeating-radial-gradient(circle at 82% 24%, transparent 0 18px, color-mix(in srgb, {palette["accent_2"]} 24%, transparent) 19px 20px),
     repeating-linear-gradient(90deg, color-mix(in srgb, {palette["accent_2"]} 34%, transparent) 0 2px, transparent 3px 12px),
     linear-gradient(135deg, {palette["paper_alt"]}, {palette["plate_b"]});
+}}
+.variant-router-love-letter.spread-open.no-teaser:has(.plate.has-art.art-layout-foldout) {{
+  grid-template-columns: minmax(2.52in, 2.82in) minmax(0, 1fr);
+}}
+.variant-router-love-letter.spread-open.no-teaser:has(.plate.has-art.art-layout-foldout) .plate {{
+  min-height: 5.42in;
 }}
 .variant-router-love-letter.spread-open .entry-pullquote {{
   font-size: 17px;
