@@ -679,6 +679,22 @@ entries:
     contrast: "1.03"
     brightness: "1.02"
     scale: "1.04"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/74-the-bell-and-the-biscotti/continuation-strip.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_058951c0946ac92d016a1afd4071288193bb3814595331a48a.png"
+        role_note: "Second-page heritage-night strip; echoes the brass bell, biscotti crumbs, blank inventory cards, and folding-chair shadow as ritual residue."
+        art_layout: "continuation-strip"
+        fit: "cover"
+        position: "center 48%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.74"
+        contrast: "1.02"
+        brightness: "1.04"
+        scale: "1.01"
     prompt: |
       Original editorial art for Bit 74, "The Bell and the Biscotti": tarnished brass handbell, storage-unit association paperwork, biscotti-like abstract rounded ivory rectangles, catering inventory forms, folded table geometry, thin pink/orange acetate strips, faint storage-unit floor-grid shadows, warm bone, brass gold, dusty coral, oxidized teal, graphite, muted magenta, no readable text, no product labels, no logos, no people.
   - slug: "2026-01-31-the-memory-weaver-of-elarion"
@@ -984,6 +1000,22 @@ entries:
     contrast: "1.03"
     brightness: "1.02"
     scale: "1.04"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/AC-the-last-log-entry/continuation-strip.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_058951c0946ac92d016a1afcfc11b08193b8f7e1bac997fb16.png"
+        role_note: "Second-page maintenance-log strip; repeats the blank terminal, ledger grid, phone cord, mug ring, and sink-porcelain residue."
+        art_layout: "continuation-strip"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.72"
+        contrast: "1.02"
+        brightness: "1.03"
+        scale: "1.01"
     prompt: |
       Original editorial art for Bit AC, "The Last Log Entry": kitchen-table terminal plate, blank green screen, ledger and phone-cord traces, porcelain-sink paper geometry, family-maintenance log forms, chipped mug ring stain, utility wires, dark empty rectangle, warm bone, terminal green, oxidized teal, porcelain gray, old brass, charcoal, muted rust, faded berry, no readable text, no computer branding, no municipal seals, no people.
   - slug: "2026-05-28-the-glove-and-the-good-neighbors"
@@ -1841,6 +1873,22 @@ entries:
     contrast: "1.03"
     brightness: "1.02"
     scale: "1.04"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/54-the-suburban-stitchwork/continuation-strip.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_058951c0946ac92d016a1afd9672ec8193904be2919624132f.png"
+        role_note: "Second-page stitchwork strip; keeps the garage-body horror abstract through needles, wrong shears, stitched swatches, thread grids, and a dark sealed-door stain."
+        art_layout: "continuation-strip"
+        fit: "cover"
+        position: "center 42%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.72"
+        contrast: "1.02"
+        brightness: "1.03"
+        scale: "1.01"
     prompt: |
       Original editorial art for Bit 54, "The Suburban Stitchwork": suburban garage workbench as evidence/specimen plate, wrong sewing tools, ruler-long needles, abstract toothlike scissors, oil-stained cloth, skin-toned fabric swatches, thread grids, workshop shadow, restrained forensic textile collage, garage concrete gray, motor-oil black, faded turquoise, thread red, no gore, no readable text, no logos, no faces, no living artist style imitation.
   - slug: "2026-03-21-the-ghost-ship-gambit"
@@ -3057,6 +3105,22 @@ entries:
     contrast: "1.04"
     brightness: "1.01"
     scale: "1.12"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/33-the-detergent-dispensary/continuation-strip.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_058951c0946ac92d016a1afcb9e000819389c85486b4136804.png"
+        role_note: "Second-page laundromat strip; echoes the washer rim, detergent pellets, pharmacy bag paper, corsage petals, coin, and concrete gardenia sprout."
+        art_layout: "continuation-strip"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.74"
+        contrast: "1.02"
+        brightness: "1.04"
+        scale: "1.01"
     prompt: |
       Original editorial art for Bit 33, "The Detergent Dispensary": fluorescent laundromat archive plate, washer drum, detergent dispenser, pharmacy bag, brittle corsage petals, dented old coin, lavender water, cellular-study flyer shapes with no readable text, gardenia/corsage fragments beginning to root through concrete, warm bone, orange-red, gray-blue, brass yellow, lavender wash, oxidized teal, no readable text, no logos, no faces, no living artist style imitation.
   - slug: "2026-05-06-receipt-88-and-the-man-who"
