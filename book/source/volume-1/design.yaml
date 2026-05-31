@@ -666,7 +666,7 @@ layout:
       teaser: false
       first_page_words: 230
       continuation_words: 430
-      tail_plate_max_words: 520
+      tail_plate_max_words: 240
     "AA":
       art_title: "Salt Archivist"
       art_glyph: "SLT"
@@ -701,7 +701,7 @@ layout:
       teaser: false
       first_page_words: 235
       continuation_words: 330
-      tail_plate_max_words: 420
+      tail_plate_max_words: 240
     "AE":
       art_title: "Queue Order"
       art_glyph: "QUE"

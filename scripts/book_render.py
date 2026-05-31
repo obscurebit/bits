@@ -2737,6 +2737,17 @@ html, body {{
 .entry.glitch.art-quad.spread-text.art-continuation {{
   grid-template-rows: auto 1.74in minmax(0, 1fr) auto;
 }}
+.entry.glitch.variant-clipboard-edge.spread-text.art-continuation {{
+  grid-template-rows: auto 0.86in minmax(0, 1fr) auto;
+}}
+.entry.glitch.variant-clipboard-edge.spread-text.art-continuation .plate {{
+  min-height: 0.86in;
+  height: 0.86in;
+  opacity: 0.88;
+}}
+.entry.glitch.variant-clipboard-edge.spread-text.art-continuation .entry-body {{
+  align-self: start;
+}}
 .entry.glitch.art-quad.spread-text.tail-continuation {{
   grid-template-rows: auto minmax(0, 1fr) auto;
 }}

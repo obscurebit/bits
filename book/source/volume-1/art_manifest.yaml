@@ -937,6 +937,22 @@ entries:
     contrast: "1.03"
     brightness: "1.02"
     scale: "1.04"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/A9-the-flesh-archives/continuation-strip.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_00ae200559012622016a1ba4f279648194a3169bae43fd14a2.png"
+        role_note: "Second-page flesh-archive strip; repeats the cracked tablet glass, blank treatment papers, sealed specimen blocks, dark folder, indigo data-smudges, elixir vial, and heart-drive silhouette without gore."
+        art_layout: "continuation-strip"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.74"
+        contrast: "1.02"
+        brightness: "1.03"
+        scale: "1.01"
     prompt: |
       Original editorial art for Bit A9, "The Flesh Archives": abstract clinic archive plate, indigo data-smudge lines, non-gory biomaterial forms, cracked tablet-like glass geometry, blank treatment papers, sealed specimen blocks, dark folded folder, honey-rust and teal traces, warm bone, oxidized teal, indigo, charcoal, muted berry, pale clinical green, no readable text, no logos, no people.
   - slug: "2026-04-12-the-salt-archivist"
@@ -1090,6 +1106,22 @@ entries:
     contrast: "1.03"
     brightness: "1.02"
     scale: "1.04"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/AD-the-stack-of-unsigned-forms/continuation-strip.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_00ae200559012622016a1ba5c3907081949fd2b7b709bb232f.png"
+        role_note: "Second-page unsigned-forms strip; repeats the pink slip stack, broken home computer, old game-console block, hollow camera shell, maintenance ash, abstract heart-monitor trace, and staff-room paper dust."
+        art_layout: "continuation-strip"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.74"
+        contrast: "1.02"
+        brightness: "1.04"
+        scale: "1.01"
     prompt: |
       Original editorial art for Bit AD, "The Stack of Unsigned Forms": old school maintenance form stack, pink slip field, broken home-computer silhouette, boiler-room paper dust, no readable text, no school marks, no product logos.
   - slug: "2026-04-21-queue-order-is-sacred"
@@ -2366,6 +2398,22 @@ entries:
     contrast: "1.03"
     brightness: "1.03"
     scale: "1.03"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/B5-the-clipboards-edge/continuation-strip.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_00ae200559012622016a1ba534c2c08194b805ed0d45550b30.png"
+        role_note: "Second-page clipboard-probability strip; repeats the broken clipboard, blank appointment rows, burned manual ash, spare-tire shadow, rubber dust, coffee ring, antique pen, and red/teal probability threads."
+        art_layout: "continuation-strip"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.74"
+        contrast: "1.02"
+        brightness: "1.03"
+        scale: "1.01"
     prompt: |
       Original editorial art for Bit B5, "The Clipboard's Edge": haunted administrative object without horror clichés, broken clipboard, appointment rows as abstract marks, tire-shop rubber dust, burned manual ash fragments, probability paths bending as fine red and teal threads, warm bone paper, beige tan, soot black, oxidized teal, rust red, tired fluorescent gray, no readable text, no numbers, no logos, no faces, no bodies, no brand marks, no living artist style imitation.
   - slug: "2026-02-12-the-unbroken-key"
@@ -2745,6 +2793,22 @@ entries:
     contrast: "1.04"
     brightness: "1.01"
     scale: "1.12"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/0A-bench-warrant-bowling/continuation-strip.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_00ae200559012622016a1ba57908708194b5a223f4061e23b3.png"
+        role_note: "Second-page lane-warrant strip; repeats the chipped bowling trophy, blank evidence tags, cracked holographic projector, disposal chute, mop bucket, courthouse linoleum, and favor-routing mesh."
+        art_layout: "continuation-strip"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.76"
+        contrast: "1.02"
+        brightness: "1.03"
+        scale: "1.01"
     prompt: |
       Original editorial art for Bit 0A, "Bench Warrant Bowling": courthouse service hallway, corrupted bowling trophy, favor-routing mesh, janitor ethics, disposal chute, mop bucket, dead holographic projector, evidence-tag fragments, tarnished brass, courthouse green, muted orange, linoleum gray, no readable text, no logos, no people, no faces, no living artist style imitation.
   - slug: "2026-05-21-dock-12"

@@ -9,7 +9,7 @@ genre: "Character study where the strange thing stays partly offstage"
 
 # Bench Warrant Bowling
 
-Milton’s cart clattered against the linoleum as he hauled the day’s discards to the chute: a cracked holographic exhibit projector, three blister packs of expired evidence tags, and a bowling trophy chipped at the crown. The engraving read *“Champion: Gary Fenster”* though everyone in the courthouse knew Gary Fenster had thrown three spares in the finals. The trophy weighed 160 centimeters of solid regret, or so Milton calculated, hefting it. His debt to Councilman Vye—$480, owed by 1700 hours—felt lighter, more airborne, like the holographic projector’s ghostly flicker before it died.  
+Milton’s cart clattered against the linoleum as he hauled the day’s discards to the chute: a cracked holographic exhibit projector, three blister packs of expired evidence tags, and a bowling trophy chipped at the crown. The engraving read *“Champion: Gary Fenster”* though everyone in the courthouse knew Gary Fenster had thrown three spares in the finals. The trophy weighed sixteen pounds of solid regret, or so Milton calculated, hefting it. His debt to Councilman Vye—$480, owed by 1700 hours—felt lighter, more airborne, like the holographic projector’s ghostly flicker before it died.
 
 He’d heard Gary Fenster’s name in the hallways, muttered between lawyers polishing closing arguments. *“Fenster’s case is a lemon,”* one had said, spitting coffee grounds into a potted fern. *“But the bench clerk’s cousin runs the lanes. You know how it goes.”* Milton knew. He mopped the floors where deals were struck in the echo of his bucket. He’d overheard Councilman Vye himself, two weeks prior, rehearsing a speech about civic integrity while staring at his reflection in the urinal.  
 
@@ -49,9 +49,7 @@ He smiled.
 
 *“Objection!”* the lawyer’s voice boomed in his memory. *“Your honor, my client’s dancing alpaca is clearly a metaphor!”*  
 
-Milton kept walking.  
-
-The end.
+Milton kept walking.
 
 ---
 
