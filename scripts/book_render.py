@@ -1901,7 +1901,7 @@ html, body {{
 .entry-foot {{
   grid-area: foot;
   display: grid;
-  grid-template-columns: 1fr 0.54in;
+  grid-template-columns: 1fr 0.68in;
   gap: 0.18in;
   align-items: end;
   min-width: 0;
@@ -2769,38 +2769,21 @@ html, body {{
   color: {palette["accent"]};
 }}
 .qr {{
-  width: 0.54in;
-  height: 0.54in;
-  border: 1px solid {palette["ink"]};
-  display: grid;
-  place-items: center;
+  width: 0.68in;
+  height: 0.68in;
+  border: 1px solid color-mix(in srgb, {palette["ink"]} 72%, transparent);
+  display: block;
   position: relative;
-  font-family: {typo["mono"]};
-  font-size: 9px;
-  color: {palette["ink"]};
-  background:
-    linear-gradient(90deg, transparent 42%, {palette["ink"]} 43% 57%, transparent 58%),
-    linear-gradient(0deg, transparent 42%, {palette["ink"]} 43% 57%, transparent 58%);
+  background: #fff;
+  padding: 0.035in;
+  color: #000;
+  text-decoration: none;
 }}
-.qr span {{
-  position: absolute;
-  width: 0.12in;
-  height: 0.12in;
-  border: 1px solid {palette["paper"]};
-  background: {palette["ink"]};
-}}
-.qr span:nth-child(1) {{ left: 0.055in; top: 0.055in; }}
-.qr span:nth-child(2) {{ right: 0.055in; top: 0.055in; }}
-.qr span:nth-child(3) {{ left: 0.055in; bottom: 0.055in; }}
-.qr i {{
-  position: relative;
-  z-index: 2;
-  font-style: normal;
-  color: {palette["paper"]};
-  background: {palette["ink"]};
-  padding: 0.01in 0.025in;
-  font-size: 6px;
-  letter-spacing: 0.06em;
+.qr-code {{
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #000;
 }}
 .toc h2, .notes h2, .object-page h2 {{
   font-family: {typo["display"]};
@@ -4039,9 +4022,287 @@ def entry_caption_lines(
     source_label = gen_label or "gen:unrecorded"
     suffix = f" / {continuation}" if continuation else ""
     return [
-        f'<span class="caption-accent">obscurebit.com / bit {html.escape(entry.byte_index)}</span>{html.escape(suffix)}',
+        f'<span class="caption-accent">bits.obscurebit.com / bit {html.escape(entry.byte_index)}</span>{html.escape(suffix)}',
         f'<span class="caption-state">art {html.escape(entry.art_status)}</span> / {html.escape(source_label)} / final rights review pending',
     ]
+
+
+QR_VERSION = 6
+QR_SIZE = QR_VERSION * 4 + 17
+QR_DATA_CODEWORDS = 108
+QR_ECC_CODEWORDS_PER_BLOCK = 16
+QR_BLOCK_COUNT = 4
+QR_REMAINDER_BITS = 7
+QR_ALIGNMENT_POSITIONS = (6, 34)
+
+
+def _qr_gf_mul(x: int, y: int) -> int:
+    result = 0
+    while y:
+        if y & 1:
+            result ^= x
+        x <<= 1
+        if x & 0x100:
+            x ^= 0x11D
+        y >>= 1
+    return result
+
+
+def _qr_rs_generator(degree: int) -> list[int]:
+    result = [1]
+    root = 1
+    for _ in range(degree):
+        result.append(0)
+        for index in range(len(result) - 1):
+            result[index] = _qr_gf_mul(result[index], root) ^ result[index + 1]
+        result[-1] = _qr_gf_mul(result[-1], root)
+        root = _qr_gf_mul(root, 2)
+    return result
+
+
+def _qr_rs_remainder(data: list[int], generator: list[int]) -> list[int]:
+    result = [0] * (len(generator) - 1)
+    for byte in data:
+        factor = byte ^ result.pop(0)
+        result.append(0)
+        for index, coefficient in enumerate(generator[1:]):
+            result[index] ^= _qr_gf_mul(coefficient, factor)
+    return result
+
+
+def _append_bits(bits: list[int], value: int, width: int) -> None:
+    for shift in range(width - 1, -1, -1):
+        bits.append((value >> shift) & 1)
+
+
+def _qr_codewords_for_url(url: str) -> list[int]:
+    data = url.encode("utf-8")
+    max_bytes = QR_DATA_CODEWORDS - 2
+    if len(data) > max_bytes:
+        raise ValueError(f"QR target is too long for the fixed book QR code: {url}")
+    bits: list[int] = []
+    _append_bits(bits, 0b0100, 4)
+    _append_bits(bits, len(data), 8)
+    for byte in data:
+        _append_bits(bits, byte, 8)
+    _append_bits(bits, 0, min(4, QR_DATA_CODEWORDS * 8 - len(bits)))
+    while len(bits) % 8:
+        bits.append(0)
+    pad = 0xEC
+    while len(bits) < QR_DATA_CODEWORDS * 8:
+        _append_bits(bits, pad, 8)
+        pad = 0x11 if pad == 0xEC else 0xEC
+    data_codewords = [sum(bits[index + bit] << (7 - bit) for bit in range(8)) for index in range(0, len(bits), 8)]
+    generator = _qr_rs_generator(QR_ECC_CODEWORDS_PER_BLOCK)
+    data_blocks = [
+        data_codewords[index * (QR_DATA_CODEWORDS // QR_BLOCK_COUNT) : (index + 1) * (QR_DATA_CODEWORDS // QR_BLOCK_COUNT)]
+        for index in range(QR_BLOCK_COUNT)
+    ]
+    ecc_blocks = [_qr_rs_remainder(block, generator) for block in data_blocks]
+    result: list[int] = []
+    for index in range(QR_DATA_CODEWORDS // QR_BLOCK_COUNT):
+        result.extend(block[index] for block in data_blocks)
+    for index in range(QR_ECC_CODEWORDS_PER_BLOCK):
+        result.extend(block[index] for block in ecc_blocks)
+    return result
+
+
+def _qr_blank_matrix() -> tuple[list[list[bool]], list[list[bool]]]:
+    modules = [[False] * QR_SIZE for _ in range(QR_SIZE)]
+    reserved = [[False] * QR_SIZE for _ in range(QR_SIZE)]
+
+    def set_function(x: int, y: int, dark: bool) -> None:
+        if 0 <= x < QR_SIZE and 0 <= y < QR_SIZE:
+            modules[y][x] = dark
+            reserved[y][x] = True
+
+    def draw_finder(x: int, y: int) -> None:
+        for dy in range(-1, 8):
+            for dx in range(-1, 8):
+                xx = x + dx
+                yy = y + dy
+                dark = (
+                    0 <= dx <= 6
+                    and 0 <= dy <= 6
+                    and (dx in (0, 6) or dy in (0, 6) or (2 <= dx <= 4 and 2 <= dy <= 4))
+                )
+                set_function(xx, yy, dark)
+
+    def draw_alignment(cx: int, cy: int) -> None:
+        for dy in range(-2, 3):
+            for dx in range(-2, 3):
+                set_function(cx + dx, cy + dy, max(abs(dx), abs(dy)) != 1)
+
+    draw_finder(0, 0)
+    draw_finder(QR_SIZE - 7, 0)
+    draw_finder(0, QR_SIZE - 7)
+    for i in range(8, QR_SIZE - 8):
+        set_function(i, 6, i % 2 == 0)
+        set_function(6, i, i % 2 == 0)
+    draw_alignment(QR_ALIGNMENT_POSITIONS[1], QR_ALIGNMENT_POSITIONS[1])
+    set_function(8, QR_VERSION * 4 + 9, True)
+    _qr_draw_format_bits(modules, reserved, 0, reserve_only=True)
+    return modules, reserved
+
+
+def _qr_format_bits(mask: int) -> int:
+    data = mask  # ECC level M is 00 in QR format bits.
+    bits = data << 10
+    generator = 0x537
+    for shift in range(14, 9, -1):
+        if (bits >> shift) & 1:
+            bits ^= generator << (shift - 10)
+    return ((data << 10) | bits) ^ 0x5412
+
+
+def _qr_draw_format_bits(
+    modules: list[list[bool]],
+    reserved: list[list[bool]] | None,
+    mask: int,
+    reserve_only: bool = False,
+) -> None:
+    bits = _qr_format_bits(mask)
+
+    def draw(x: int, y: int, index: int) -> None:
+        if reserve_only and reserved is not None:
+            reserved[y][x] = True
+            return
+        modules[y][x] = ((bits >> index) & 1) != 0
+        if reserved is not None:
+            reserved[y][x] = True
+
+    for i in range(6):
+        draw(8, i, i)
+    draw(8, 7, 6)
+    draw(8, 8, 7)
+    draw(7, 8, 8)
+    for i in range(9, 15):
+        draw(14 - i, 8, i)
+    for i in range(8):
+        draw(QR_SIZE - 1 - i, 8, i)
+    for i in range(8, 15):
+        draw(8, QR_SIZE - 15 + i, i)
+    modules[QR_VERSION * 4 + 9][8] = True
+
+
+def _qr_mask_bit(mask: int, x: int, y: int) -> bool:
+    if mask == 0:
+        return (x + y) % 2 == 0
+    if mask == 1:
+        return y % 2 == 0
+    if mask == 2:
+        return x % 3 == 0
+    if mask == 3:
+        return (x + y) % 3 == 0
+    if mask == 4:
+        return (y // 2 + x // 3) % 2 == 0
+    if mask == 5:
+        return (x * y) % 2 + (x * y) % 3 == 0
+    if mask == 6:
+        return ((x * y) % 2 + (x * y) % 3) % 2 == 0
+    return ((x + y) % 2 + (x * y) % 3) % 2 == 0
+
+
+def _qr_apply_data(modules: list[list[bool]], reserved: list[list[bool]], codewords: list[int]) -> None:
+    bits: list[int] = []
+    for byte in codewords:
+        _append_bits(bits, byte, 8)
+    bits.extend([0] * QR_REMAINDER_BITS)
+    bit_index = 0
+    upward = True
+    x = QR_SIZE - 1
+    while x > 0:
+        if x == 6:
+            x -= 1
+        y_range = range(QR_SIZE - 1, -1, -1) if upward else range(QR_SIZE)
+        for y in y_range:
+            for dx in range(2):
+                xx = x - dx
+                if not reserved[y][xx]:
+                    modules[y][xx] = bit_index < len(bits) and bits[bit_index] == 1
+                    bit_index += 1
+        upward = not upward
+        x -= 2
+
+
+def _qr_penalty(modules: list[list[bool]]) -> int:
+    penalty = 0
+    for horizontal in (True, False):
+        for outer in range(QR_SIZE):
+            run_color = False
+            run_len = 0
+            for inner in range(QR_SIZE):
+                color = modules[outer][inner] if horizontal else modules[inner][outer]
+                if inner == 0 or color != run_color:
+                    if run_len >= 5:
+                        penalty += 3 + run_len - 5
+                    run_color = color
+                    run_len = 1
+                else:
+                    run_len += 1
+            if run_len >= 5:
+                penalty += 3 + run_len - 5
+    for y in range(QR_SIZE - 1):
+        for x in range(QR_SIZE - 1):
+            color = modules[y][x]
+            if modules[y][x + 1] == color and modules[y + 1][x] == color and modules[y + 1][x + 1] == color:
+                penalty += 3
+    pattern = (True, False, True, True, True, False, True)
+    for horizontal in (True, False):
+        for outer in range(QR_SIZE):
+            line = [modules[outer][i] if horizontal else modules[i][outer] for i in range(QR_SIZE)]
+            for index in range(QR_SIZE - 6):
+                if tuple(line[index : index + 7]) == pattern:
+                    before = index >= 4 and not any(line[index - 4 : index])
+                    after = index + 11 <= QR_SIZE and not any(line[index + 7 : index + 11])
+                    if before or after:
+                        penalty += 40
+    dark = sum(1 for row in modules for value in row if value)
+    total = QR_SIZE * QR_SIZE
+    penalty += abs(dark * 20 - total * 10) // total * 10
+    return penalty
+
+
+def qr_matrix(url: str) -> list[list[bool]]:
+    codewords = _qr_codewords_for_url(url)
+    base, reserved = _qr_blank_matrix()
+    _qr_apply_data(base, reserved, codewords)
+    best: list[list[bool]] | None = None
+    best_penalty: int | None = None
+    for mask in range(8):
+        candidate = [row[:] for row in base]
+        for y in range(QR_SIZE):
+            for x in range(QR_SIZE):
+                if not reserved[y][x] and _qr_mask_bit(mask, x, y):
+                    candidate[y][x] = not candidate[y][x]
+        _qr_draw_format_bits(candidate, None, mask)
+        penalty = _qr_penalty(candidate)
+        if best_penalty is None or penalty < best_penalty:
+            best = candidate
+            best_penalty = penalty
+    assert best is not None
+    return best
+
+
+def qr_svg(url: str, label: str) -> str:
+    matrix = qr_matrix(url)
+    quiet = 4
+    size = QR_SIZE + quiet * 2
+    rects = []
+    for y, row in enumerate(matrix):
+        start: int | None = None
+        for x, dark in enumerate(row + [False]):
+            if dark and start is None:
+                start = x
+            elif not dark and start is not None:
+                rects.append(f"M{start + quiet} {y + quiet}h{x - start}v1h-{x - start}z")
+                start = None
+    return (
+        f'<svg class="qr-code" viewBox="0 0 {size} {size}" role="img" '
+        f'aria-label="{html.escape(label, quote=True)}" xmlns="http://www.w3.org/2000/svg">'
+        f'<rect width="{size}" height="{size}" fill="#fff"/>'
+        f'<path fill="#000" d="{" ".join(rects)}"/></svg>'
+    )
 
 
 def entry_head_html(
@@ -4112,11 +4373,13 @@ def plate_html(
 
 def entry_foot_html(entry: book_build.BookEntry, page_num: int, continuation: str = "") -> str:
     caption_lines = entry_caption_lines(entry, continuation)
+    qr_label = f"QR code for Bit {entry.byte_index}: {entry.qr_target}"
+    qr_markup = qr_svg(entry.qr_target, qr_label)
     return "\n".join(
         [
             '<div class="entry-foot">',
             f'<div class="caption">{"<br>".join(caption_lines)}</div>',
-            '<div class="qr"><span></span><span></span><span></span><i>QR</i></div>',
+            f'<a class="qr" href="{html.escape(entry.qr_target, quote=True)}">{qr_markup}</a>',
             "</div>",
             folio(entry.byte_index, str(page_num)),
         ]

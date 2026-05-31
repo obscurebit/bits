@@ -229,6 +229,35 @@ class BookRenderTests(unittest.TestCase):
         self.assertIn(">ICE<", plate)
         self.assertIn("Cryo Core Plate", plate)
 
+    def test_entry_footer_renders_real_qr_link(self) -> None:
+        bit = book_render.book_build.BitPost(
+            path=Path("sample.md"),
+            slug="2026-05-27-the-leverage-of-frayed-plastic",
+            date="2026-05-27",
+            title="The Leverage of Frayed Plastic",
+            description="",
+            theme="quantum mysteries",
+            body="word",
+        )
+        target = "https://bits.obscurebit.com/bits/posts/2026-05-27-the-leverage-of-frayed-plastic/"
+        entry = book_render.book_build.BookEntry(
+            byte_index="B6",
+            section_code="B",
+            bit=bit,
+            qr_target=target,
+            art_status="draft",
+            art_lane="auto",
+            layout_mode="glitch",
+            validation_notes=[],
+        )
+
+        footer = book_render.entry_foot_html(entry, 235)
+
+        self.assertIn(f'href="{target}"', footer)
+        self.assertIn('<svg class="qr-code"', footer)
+        self.assertIn('bits.obscurebit.com / bit B6', footer)
+        self.assertNotIn("<i>QR</i>", footer)
+
     def test_plate_identity_accepts_multiple_art_titles(self) -> None:
         bit = book_render.book_build.BitPost(
             path=Path("sample.md"),

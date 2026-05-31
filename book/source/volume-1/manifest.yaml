@@ -2,7 +2,7 @@ volume: 1
 title: "256 Bits"
 subtitle: "Volume 1: The First Byte"
 edition_name: "First Byte Edition"
-canonical_url_base: "https://obscurebit.com/bits/posts"
+canonical_url_base: "https://bits.obscurebit.com/bits/posts"
 target_entry_count: 256
 byte_index_start: 0
 selection_mode: "curated"
