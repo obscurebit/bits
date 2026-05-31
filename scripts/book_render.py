@@ -7,6 +7,7 @@ import argparse
 import base64
 import html
 import mimetypes
+import os
 import re
 import shutil
 import subprocess
@@ -4650,9 +4651,16 @@ def print_fit_script() -> str:
 
 
 def chrome_path() -> str | None:
+    env_candidates = [
+        os.environ.get("CHROME_BIN"),
+        os.environ.get("CHROME_PATH"),
+    ]
     candidates = [
+        *env_candidates,
         shutil.which("chromium"),
+        shutil.which("chromium-browser"),
         shutil.which("google-chrome"),
+        shutil.which("google-chrome-stable"),
         "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
     ]
     for candidate in candidates:
