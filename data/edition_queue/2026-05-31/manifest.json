@@ -1,8 +1,11 @@
 {
   "date": "2026-05-31",
   "links_file": "docs/links/posts/2026-05-31-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-05-31T09:34:22Z",
+  "published_links_file": "docs/links/posts/2026-05-31-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-05-31-the-greenhouse-receipt.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-05-31-the-greenhouse-receipt.md",
   "theme": "time anomalies",
-  "updated_at": "2026-05-30T08:33:51Z"
+  "updated_at": "2026-05-31T08:53:41Z"
 }

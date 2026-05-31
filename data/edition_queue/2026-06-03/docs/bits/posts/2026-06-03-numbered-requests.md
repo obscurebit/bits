@@ -1,0 +1,59 @@
+---
+date: 2026-06-03
+title: "Numbered Requests"
+description: "A daily AI-generated story exploring speculative fiction"
+author: "https://integrate.api.nvidia.com/v1 / nvidia/llama-3.3-nemotron-super-49b-v1.5"
+theme: "cryptographic secrets"
+genre: "Satire of systems, credentials, or institutional language"
+---
+
+# Numbered Requests
+
+The cough drop display shivered each time the pharmacy door swung open, its plastic sheets vibrating like a throat trying to clear itself. Darlene wedged herself between the counter and a pyramid of sinus spray, her diner apron stiff with old grease. The ice bucket sat beside the pickup window, its plastic clouded with age, numbered tags dangling like tiny washers. 3, 7, 12. Each key to a message she shouldn’t need.  
+
+She’d bused tables at the Route 66 Diner since ’92, but today her hands fumbled. The code system was her sister’s idea, back when their mother’s illness had turned their shared language into a minefield. Now, with Mom three months buried, Darlene still swapped tags with the pharmacy tech—her sister, Linda—through the diner’s delivery chute. 3 meant *I’m okay*. 7 meant *Call me*. 12 meant *I left something in the freezer*.  
+
+The tech behind the counter, a man with a name tag reading *Earl*, slid a prescription into a white envelope. “Next!” he barked. Darlene flinched. Linda always handled her refills, but today Earl stood between her and the ice bucket. Protocol: Only employees could access the chute. If she reached for the tags, he’d report her. The diner manager would dock her pay. Again.  
+
+She stared at the bucket. 14 tags hung there, each tied with a loop of nylon cord. Linda had added three since yesterday. Darlene’s chest tightened. 4 meant *Don’t call*. 9 meant *I’m late*. 16 meant *The argument we didn’t have*.  
+
+A boy in a wheelchair inched past, his mother apologizing to no one as he grabbed handfuls of mints from a bulk bin. Darlene’s fingers twitched. She needed to swap 7 for 3. To say, *I’m here. Let’s talk*. But Earl’s eyes lingered on her stained apron, his brow furrowed like she’d already broken a rule.  
+
+The diner’s rulebook, laminated and taped above the soda machine, had a section titled *Conduct Unbecoming*. Curiosity—asking questions, deviating from tasks—was a fireable offense. Obedience earned bonuses. Last week, a busboy got written up for using the restaurant’s AOL account to email his sister in Oaxaca. “Personal use of company resources,” the manager hissed, though the boy had only sent a poem about rain.  
+
+Darlene’s shift ended in twenty minutes. She could wait, but the tags gnawed at her. Linda’s last note, tucked into a bag of diabetic ice cream, had been a 16. *The argument we didn’t have*. Since Mom’s funeral, they’d spoken only through the codes. Darlene had replied with a 7—*Call me*—but Linda never did.  
+
+Earl turned his back to package a refill. Darlene lunged, snatching tag 7 from the bucket. The nylon cord bit her palm. She shoved it into her apron pocket and grabbed tag 3, looping its cord around the metal prong. Her hands shook. The tags were supposed to be anonymous, but Earl could note her number. Could trace it.  
+
+“Darlene?” Earl’s voice. “Your lunch break’s over.”  
+
+She stepped back, the cough drops vibrating again. The tags hung undisturbed.  
+
+Outside, the diner’s neon sign buzzed. Darlene tied her apron tighter. She’d swapped the tags. Let the system work. Let Linda see the 3. Let her call.  
+
+But as she clocked in, the manager handed her a slip: *Aunt Mabel called. Your sister’s phone is disconnected*.  
+
+Darlene’s period ended with a decisive action. She dropped her tray of ketchup bottles and marched to the payphone, quarters clinking. Linda’s apartment number was 4B. The code for *Don’t call*.  
+
+She dialed anyway.  
+
+The line rang. And rang.  
+
+In the ice bucket, 16 would stay 16.  
+
+But Darlene would call again tomorrow. And the next day.  
+
+Grief, she decided, was a kind of obedience.  
+
+It demanded you keep trying, even when the system stopped making sense.
+
+---
+
+<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem;">
+  <button class="share-btn" data-url="{% raw %}{{ page.canonical_url }}{% endraw %}" data-title="Numbered Requests">
+    Share this story
+  </button>
+  <a href="https://github.com/obscurebit/b1ts/tree/ecac125" target="_blank" rel="noopener" class="story-gen-link">
+    gen:ecac125
+  </a>
+</div>

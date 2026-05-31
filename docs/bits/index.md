@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-05-31-the-greenhouse-receipt/" class="archive-item">
+    <div class="archive-item__number">122</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">May 31, 2026</span>
+      <h3 class="archive-item__title">The Greenhouse Receipt</h3>
+      <p class="archive-item__excerpt">“You’re late again, Celia.”</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Time Anomalies</span><span class="archive-item__genre" title="Tender romance complicated by one impossible condition">Tender romance complicated by one impossible condition</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-05-30-the-glove-and-the-glasshouse/" class="archive-item">
     <div class="archive-item__number">121</div>
     <div class="archive-item__content">
@@ -1070,7 +1081,7 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
     <div class="archive-item__number">025</div>
     <div class="archive-item__content">
       <span class="archive-item__date">February 23, 2026</span>
-      <h3 class="archive-item__title">**Bureaucratic Superposition**</h3>
+      <h3 class="archive-item__title">Bureaucratic Superposition</h3>
       <p class="archive-item__excerpt">I don’t believe in time travel, which is why they hired me.</p>
       <div class="archive-item__tags"><span class="archive-item__theme">Quantum Mysteries</span><span class="archive-item__genre" title="Body horror, transformation, the flesh is wrong">Body horror</span></div>
     </div>
