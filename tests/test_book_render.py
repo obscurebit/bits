@@ -258,6 +258,33 @@ class BookRenderTests(unittest.TestCase):
         self.assertIn('bits.obscurebit.com / bit B6', footer)
         self.assertNotIn("<i>QR</i>", footer)
 
+    def test_visible_art_labels_hide_internal_review_status(self) -> None:
+        bit = book_render.book_build.BitPost(
+            path=Path("sample.md"),
+            slug="sample",
+            date="2026-01-01",
+            title="Sample",
+            description="",
+            theme="signal",
+            body="word",
+        )
+        entry = book_render.book_build.BookEntry(
+            byte_index="AA",
+            section_code="A",
+            bit=bit,
+            qr_target="https://bits.obscurebit.com/bits/posts/sample/",
+            art_status="needs_human_review",
+            art_lane="auto_draft",
+            layout_mode="signal",
+            validation_notes=[],
+        )
+
+        visible_html = book_render.entry_foot_html(entry, 1) + book_render.plate_html(entry, {})
+
+        self.assertNotIn("needs_human_review", visible_html)
+        self.assertNotIn("human review", visible_html.lower())
+        self.assertIn("Signal Plate / Auto Draft", visible_html)
+
     def test_plate_identity_accepts_multiple_art_titles(self) -> None:
         bit = book_render.book_build.BitPost(
             path=Path("sample.md"),

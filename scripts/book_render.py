@@ -2772,6 +2772,7 @@ html, body {{
 .qr {{
   width: 0.68in;
   height: 0.68in;
+  box-sizing: border-box;
   border: 1px solid color-mix(in srgb, {palette["ink"]} 72%, transparent);
   display: block;
   position: relative;
@@ -4024,8 +4025,12 @@ def entry_caption_lines(
     suffix = f" / {continuation}" if continuation else ""
     return [
         f'<span class="caption-accent">bits.obscurebit.com / bit {html.escape(entry.byte_index)}</span>{html.escape(suffix)}',
-        f'<span class="caption-state">art {html.escape(entry.art_status)}</span> / {html.escape(source_label)} / final rights review pending',
+        f'<span class="caption-state">{html.escape(source_label)}</span> / rights record pending',
     ]
+
+
+def art_lane_label(entry: book_build.BookEntry) -> str:
+    return entry.art_lane.replace("_", " ").replace("-", " ").title()
 
 
 QR_VERSION = 6
@@ -4346,8 +4351,8 @@ def plate_html(
     story_direction = art_direction_for(entry, art_direction)
     mode_direction = mode_art_direction(entry.layout_mode, art_direction)
     treatment = art_treatment_for(entry, art_direction)
-    material = str(story_direction.get("material") or mode_direction.get("material") or entry.art_lane)
-    gesture = str(story_direction.get("gesture") or mode_direction.get("gesture") or entry.art_status)
+    material = str(story_direction.get("material") or mode_direction.get("material") or art_lane_label(entry))
+    gesture = str(story_direction.get("gesture") or mode_direction.get("gesture") or "registered plate")
     asset_uri = art_asset_uri_for(entry, art_direction, role, art_index, allow_art_fallback, assets)
     art_extra = art_classes_for(entry, art_direction, role, art_index, allow_art_fallback)
     art_class = (" has-art " + art_extra).rstrip() if asset_uri else ""
@@ -4365,7 +4370,7 @@ def plate_html(
             '<div class="plate-notch plate-notch-a"></div>',
             '<div class="plate-notch plate-notch-b"></div>',
             f'<div class="plate-sigil">{html.escape(identity["glyph"])}</div>',
-            f'<div class="plate-label">{html.escape(identity["label"])} Plate / {html.escape(entry.art_lane)} / {html.escape(entry.art_status)}</div>',
+            f'<div class="plate-label">{html.escape(identity["label"])} Plate / {html.escape(art_lane_label(entry))}</div>',
             f'<div class="plate-notes">{html.escape(material)} / {html.escape(gesture)}</div>',
             "</div>",
         ]
