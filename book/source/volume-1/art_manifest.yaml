@@ -1312,6 +1312,22 @@ entries:
     contrast: "1.03"
     brightness: "1.03"
     scale: "1.04"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/B6-the-leverage-of-frayed-plastic/continuation-strip.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_0d61d34c8205ca74016a1c5bae80b0819689f97ea6c4c1fcb0.png"
+        role_note: "Second-page permit-archive strip; frayed lanyard, cracked legacy keycard, access reader glow, blank contour report, camera crack, and biometric tray."
+        art_layout: "continuation-strip"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.74"
+        contrast: "1.03"
+        brightness: "1.03"
+        scale: "1.01"
     prompt: |
       Original editorial art for Bit B6, "The Leverage of Frayed Plastic": frayed lanyard relic, cracked keycard, permit archive time-window arcs, old-plastic yellow on cool civic paper, no readable numbers, no seals, no people.
   - slug: "2026-03-02-the-silent-ward"
@@ -1691,6 +1707,22 @@ entries:
     contrast: "1.04"
     brightness: "1.02"
     scale: "1.04"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/43-cracked-frequency/continuation-strip.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_0d61d34c8205ca74016a1c5cdae9948196ba9646e832565e39.png"
+        role_note: "Second-page library-frequency strip; cracked thermos, dismantled burner phone, vintage radio display, intercom grille, inventory cards, and recycling-bin aftermath."
+        art_layout: "continuation-strip"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.76"
+        contrast: "1.03"
+        brightness: "1.02"
+        scale: "1.01"
     prompt: |
       Original editorial art for Bit 43, "Cracked Frequency": wordless library checkout desk and rare-books room edge, cracked stainless thermos leaking steam, prepaid burner phone dismantled, east stairwell light, old intercom grille, vintage radio display, blank inventory cards, thermos crack lit from within, bone paper, library green, stainless gray, lemon disinfectant yellow, carbon black, dull teal, faded radio amber, no readable text, no signs, no logos, no faces, no living artist style imitation.
   - slug: "2026-02-21-the-archivists-ledger"
@@ -2943,6 +2975,22 @@ entries:
     contrast: "1.03"
     brightness: "1.0"
     scale: "1.1"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/0C-dock-12/continuation-strip.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_0d61d34c8205ca74016a1c5c93b5c4819681067756331a1863.png"
+        role_note: "Second-page coat-check/theater strip; blank raffle tickets, clipboard form, silent radio, stage-shadow stole, coffee cup, and fading signal lines."
+        art_layout: "continuation-strip"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.78"
+        contrast: "1.02"
+        brightness: "1.02"
+        scale: "1.01"
     prompt: |
       Original editorial art for Bit 0C, "Dock 12": convention-center coat check and community-theater raffle tickets threaded through a cosmic signal, scratched radio, coat racks, stage-curtain shadows, star-map lines, cyan signal glow, stale beige, soft magenta, no readable text, no logos, no people, no faces, no living artist style imitation.
   - slug: "2026-02-16-the-blue-that-wasnt"
@@ -3781,6 +3829,22 @@ entries:
     contrast: "1.03"
     brightness: "1.02"
     scale: "1.02"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/75-the-greenhouse-receipt/continuation-strip.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_0d61d34c8205ca74016a1c5b61e8208196912e867652a19d41.png"
+        role_note: "Second-page greenhouse/municipal romance strip; shoebox receipt ribbon, watering can, pressed carnation, blank archive forms, and kitchen-table evidence."
+        art_layout: "continuation-strip"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.78"
+        contrast: "1.02"
+        brightness: "1.03"
+        scale: "1.01"
     prompt: |
       Original editorial art for Bit 75, "The Greenhouse Receipt": a city clerk's impossible receipt keeps growing with past and future line items, rooftop greenhouse, carbon copy paper, carnations, train ticket, marriage-license echo, love as audited evidence. Tactile archival mixed-media plate with paper grain, carbon receipt layers, botanical pressings, municipal office residue. Warm bone, faded carbon blue, greenhouse sage, carnation red, graphite, pale brass stamp marks. No readable words or numbers, no logos, no faces, no living artist style imitation.
   - slug: "2026-05-29-unclaimed"

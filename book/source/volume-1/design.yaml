@@ -468,7 +468,7 @@ layout:
     "42":
       tail_plate_max_words: 240
     "43":
-      tail_plate_max_words: 560
+      tail_plate_max_words: 240
     "46":
       first_page_words: 280
       continuation_words: 560
@@ -748,7 +748,7 @@ layout:
       teaser: false
       first_page_words: 190
       continuation_words: 320
-      tail_plate_max_words: 420
+      tail_plate_max_words: 240
     "C1":
       variant: "silent-ward"
       art_title: "Silent Ward"
