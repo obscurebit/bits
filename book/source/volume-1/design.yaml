@@ -228,6 +228,7 @@ layout:
     "03":
       first_page_words: 260
       continuation_words: 560
+      tail_plate_max_words: 240
     "04":
       variant: "router-love-letter"
       art_title: "Router Letter"
@@ -557,7 +558,7 @@ layout:
       teaser: false
       first_page_words: 280
       continuation_words: 560
-      tail_plate_max_words: 560
+      tail_plate_max_words: 240
       allow_glitch_tail_plate: true
     "5A":
       art_title: "Unlisted"
@@ -619,7 +620,7 @@ layout:
       teaser: false
       first_page_words: 240
       continuation_words: 560
-      tail_plate_max_words: 520
+      tail_plate_max_words: 240
     "A3":
       art_title: "Aerialist"
       art_glyph: "AIR"

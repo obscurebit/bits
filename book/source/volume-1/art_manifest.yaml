@@ -774,6 +774,22 @@ entries:
     contrast: "1.03"
     brightness: "1.02"
     scale: "1.04"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/A2-the-silent-archive/continuation-strip.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_0d61d34c8205ca74016a1c4ada5bdc81969da83c54179049d0.png"
+        role_note: "Second-page hidden-chamber strip; cracked doll, x-ray sheets, rusted key, tarnished tag, stone memory wall, and stairwell closure."
+        art_layout: "continuation-strip"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.74"
+        contrast: "1.03"
+        brightness: "1.02"
+        scale: "1.01"
     prompt: |
       Original editorial art for Bit A2, "The Silent Archive": institutional basement intake folder, rusted key, hidden stair spiral implied by shadows and curved paper strips, blank shelves receding into teal-black, damp vellum, condensation rings, machine-oil stains, small brass tabs with no markings, warm bone, old brass, oxidized teal, charcoal, moss gray, faint institutional pink, no readable text, no logos, no people.
   - slug: "2026-02-24-the-aerialists-requiem"
@@ -1870,6 +1886,22 @@ entries:
     contrast: "1.04"
     brightness: "1.02"
     scale: "1.04"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/4B-tag-number-37/continuation-strip.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_0d61d34c8205ca74016a1c4a711cf081969b9e86a27e9b0cd9.png"
+        role_note: "Second-page coat-check strip; ice bucket of duplicate blank tags, umbrella tips, counterfeit bill, and child-coat lining motif."
+        art_layout: "continuation-strip"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.78"
+        contrast: "1.03"
+        brightness: "1.02"
+        scale: "1.01"
     prompt: |
       Original editorial art for Bit 4B, "Tag Number 37": flatbed evidence plate of duplicate blank coat-check tags, umbrella tips, ice, scanner light, rippling counterfeit bill, rain droplets, torn translucent overlays, violet-black velvet, oxidized brass, icy blue, nicotine amber, muted magenta, no readable text, no pseudo text, no letters, no numbers, no tag numerals, no signage, no logos, no faces, no living artist style imitation.
   - slug: "2026-03-29-the-whispering-parchment"
@@ -2240,6 +2272,22 @@ entries:
     contrast: "1.03"
     brightness: "1.02"
     scale: "1.04"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/59-the-oathkeepers-lanyard/continuation-strip.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_0d61d34c8205ca74016a1c4aa03efc8196ba931bb051a0c77a.png"
+        role_note: "Second-page workshop/Vault strip; lanyard charm, blank receipts, USB drive, headset, vent cables, and silent screen."
+        art_layout: "continuation-strip"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.76"
+        contrast: "1.03"
+        brightness: "1.02"
+        scale: "1.01"
     prompt: |
       Original editorial art for Bit 59, "The Oathkeeper's Lanyard": courthouse printer/court translation desk as muted evidence packet, jammed receipt paper as blank cream strips with abstract toner blocks, plain yellow lanyard, tiny duck charm, transparent evidence bag, copier geometry, printer roller shadow, access-card teal block, restrained glitch archive plate, no readable text, no logos, no court seals, no faces, no living artist style imitation.
   - slug: "2026-05-02-the-unlisted-special"
@@ -2640,6 +2688,22 @@ entries:
     contrast: "1.03"
     brightness: "1.03"
     scale: "1.03"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/03-dead-drop/continuation-strip.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_0d61d34c8205ca74016a1c4a3870c081969f03c6feb57fb553.png"
+        role_note: "Second-page inspection strip; hollow stapler microfilm, blank diary, copy-paper ream, clipboard blanks, and storm-drain airplane exit."
+        art_layout: "continuation-strip"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.76"
+        contrast: "1.02"
+        brightness: "1.03"
+        scale: "1.01"
     prompt: |
       Original editorial art for Bit 03, "Dead Drop": absurd bureaucratic spycraft as an archive artifact, paper airplane folded into a raven, hollow stapler with microfilm spools, yellowed envelope behind false panel, shredder confetti, storm-drain aperture, warm bone paper, office gray, rubber-glove yellow, oxidized teal, rust red, graphite black, no readable text, no words, no numbers, no logos, no people, no faces, no living artist style imitation.
   - slug: "2026-03-10-love-letters-from-the-router"
