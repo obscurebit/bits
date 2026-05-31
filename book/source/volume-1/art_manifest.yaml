@@ -1143,6 +1143,22 @@ entries:
     contrast: "1.03"
     brightness: "1.02"
     scale: "1.04"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/AE-queue-order-is-sacred/continuation-strip.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_00ae200559012622016a1bac167cdc81949c75adab4693c0f0.png"
+        role_note: "Second-page queue-order strip; repeats the queue slips, black modem, backstage bulletin-board rings, tool-belt hardware, prop-closet fabric, chat-room grid, small keychain, sink ash, and disconnect waveform."
+        art_layout: "continuation-strip"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.76"
+        contrast: "1.02"
+        brightness: "1.03"
+        scale: "1.01"
     prompt: |
       Original editorial art for Bit AE, "Queue Order is Sacred": numbered queue slips, backstage corridor archive, black modem monolith, abandoned bulletin-board signal rings, no readable text, no logos, no people.
   - slug: "2026-04-22-transfer-slip"
@@ -1507,6 +1523,22 @@ entries:
     contrast: "1.03"
     brightness: "1.02"
     scale: "1.04"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/3A-incense-and-the-exit-sign/continuation-strip.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_00ae200559012622016a1bab13071481948e7823fa7070ba22.png"
+        role_note: "Second-page egress strip; repeats the bubble mailer, cracked red sign lens, incense ash, marigold residue, blank monitor, clipboard grids, ledger margin, old handheld device, and wet depot concrete."
+        art_layout: "continuation-strip"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.76"
+        contrast: "1.02"
+        brightness: "1.03"
+        scale: "1.01"
     prompt: |
       Original editorial art for Bit 3A, "Incense and the Exit Sign": wordless night bus depot intake alcove, old blank monitor glow, clipboard shapes with blank gridded paper, bubble mailer holding a cracked red sign lens with no letters, incense ash, crushed marigold residue, wet concrete, faint humming brick texture, abstract thermal-paper ribbon and discharged-debt geometry, bone paper, ash gray, marigold orange, wet concrete green-gray, dull teal, faded red lens, brass flecks, no readable text, no logos, no faces, no living artist style imitation.
   - slug: "2026-05-26-the-mourning-docket"
@@ -1605,6 +1637,22 @@ entries:
     contrast: "1.04"
     brightness: "1.0"
     scale: "1.04"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/42-fault-lines/continuation-strip.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_00ae200559012622016a1bab7f4978819483a8af53e660197a.png"
+        role_note: "Second-page fault-line strip; repeats the seven-blink streetlight, wet crosswalk, glowing maintenance hatch, folded napkin map, impossible subway token, phone rectangles, and misaligned storefront geometry."
+        art_layout: "continuation-strip"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.78"
+        contrast: "1.02"
+        brightness: "1.02"
+        scale: "1.01"
     prompt: |
       Original editorial art for Bit 42, "Fault Lines": dusk city corner stuttering between bakery, bookstore, and laundromat states, seven-blink streetlight, wet crosswalk, alley maintenance hatch, folded blank napkin map, nonexistent subway token, misaligned street geometry, color-channel offset, dusk blue, wet asphalt black, faded awning blue, warning red-orange, sodium yellow, dull teal, bone paper, no readable text, no shop names, no logos, no people, no living artist style imitation.
   - slug: "2026-02-18-cracked-frequency"
@@ -3010,6 +3058,22 @@ entries:
     contrast: "1.03"
     brightness: "1.02"
     scale: "1.03"
+    continuation_assets:
+      - use: "continuation"
+        page_index: 1
+        asset_path: "book/source/volume-1/assets/art/15-the-mirror-and-the-misfiled-oath/continuation-strip.png"
+        generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_00ae200559012622016a1baaca1cf88194af2a71742b4962f7.png"
+        role_note: "Second-page misfiled-oath strip; repeats the cracked hand mirror, will-contest form, soup-can silhouettes, scarf, single ice skate, archive cart wheel, donated paperbacks, and folded sweater fabric."
+        art_layout: "continuation-strip"
+        fit: "cover"
+        position: "center 50%"
+        edge_fade: true
+        soft_matte: true
+        quiet_labels: true
+        saturate: "0.74"
+        contrast: "1.02"
+        brightness: "1.04"
+        scale: "1.01"
     prompt: |
       Original editorial art for Bit 15, "The Mirror and the Misfiled Oath": cracked archive hand mirror, donated-paperback sorting room, lost-and-found bin, moth-eaten scarf, soup-can silhouettes, archive cart wheel, dust ivory, mirror silver, faded burgundy, library brown, oxidized teal, no readable text, no logos, no people, no faces, no living artist style imitation.
   - slug: "2026-02-08-the-echo-archive"

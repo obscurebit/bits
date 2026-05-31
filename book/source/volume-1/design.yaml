@@ -275,7 +275,9 @@ layout:
       first_page_words: 240
       continuation_words: 410
     "3A":
-      tail_plate_max_words: 520
+      tail_plate_max_words: 240
+      body_size: "8px"
+      body_leading: "1.24"
     "3C":
       tail_plate_max_words: 560
     "5C":
@@ -313,7 +315,7 @@ layout:
       first_page_words: 250
       continuation_words: 300
     "15":
-      tail_plate_max_words: 360
+      tail_plate_max_words: 240
     "20":
       art_title: "Bloom Protocol"
       art_glyph: "BLM"
@@ -463,7 +465,7 @@ layout:
       continuation_words: 430
       tail_plate_max_words: 240
     "42":
-      tail_plate_max_words: 560
+      tail_plate_max_words: 240
     "43":
       tail_plate_max_words: 560
     "46":
@@ -708,7 +710,7 @@ layout:
       teaser: false
       first_page_words: 235
       continuation_words: 330
-      tail_plate_max_words: 420
+      tail_plate_max_words: 1
     "AF":
       art_title: "Transfer Slip"
       art_glyph: "BUS"
