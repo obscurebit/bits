@@ -18,6 +18,7 @@ from pathlib import Path
 from typing import Any
 
 import yaml
+import segno
 
 import book_build
 
@@ -1902,7 +1903,7 @@ html, body {{
 .entry-foot {{
   grid-area: foot;
   display: grid;
-  grid-template-columns: 1fr 0.68in;
+  grid-template-columns: 1fr 0.78in;
   gap: 0.18in;
   align-items: end;
   min-width: 0;
@@ -2770,8 +2771,8 @@ html, body {{
   color: {palette["accent"]};
 }}
 .qr {{
-  width: 0.68in;
-  height: 0.68in;
+  width: 0.78in;
+  height: 0.78in;
   box-sizing: border-box;
   border: 1px solid color-mix(in srgb, {palette["ink"]} 72%, transparent);
   display: block;
@@ -2786,6 +2787,10 @@ html, body {{
   width: 100%;
   height: 100%;
   color: #000;
+  shape-rendering: crispEdges;
+}}
+.qr-modules {{
+  fill: #000;
 }}
 .toc h2, .notes h2, .object-page h2 {{
   font-family: {typo["display"]};
@@ -4291,13 +4296,14 @@ def qr_matrix(url: str) -> list[list[bool]]:
 
 
 def qr_svg(url: str, label: str) -> str:
-    matrix = qr_matrix(url)
+    qr = segno.make(url, error="m", micro=False, boost_error=False)
+    matrix = qr.matrix
     quiet = 4
-    size = QR_SIZE + quiet * 2
+    size = len(matrix) + quiet * 2
     rects = []
     for y, row in enumerate(matrix):
         start: int | None = None
-        for x, dark in enumerate(row + [False]):
+        for x, dark in enumerate(list(row) + [0]):
             if dark and start is None:
                 start = x
             elif not dark and start is not None:
@@ -4306,8 +4312,9 @@ def qr_svg(url: str, label: str) -> str:
     return (
         f'<svg class="qr-code" viewBox="0 0 {size} {size}" role="img" '
         f'aria-label="{html.escape(label, quote=True)}" xmlns="http://www.w3.org/2000/svg">'
+        f"<title>{html.escape(label)}</title>"
         f'<rect width="{size}" height="{size}" fill="#fff"/>'
-        f'<path fill="#000" d="{" ".join(rects)}"/></svg>'
+        f'<path class="qr-modules" d="{" ".join(rects)}"/></svg>'
     )
 
 

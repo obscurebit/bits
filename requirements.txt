@@ -9,4 +9,5 @@ openai>=2.0.0
 python-substack>=0.0.8
 PyYAML>=6.0.0
 requests>=2.32.0
+segno>=1.6.6
 tiktoken>=0.7.0

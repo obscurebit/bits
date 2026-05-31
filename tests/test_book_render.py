@@ -254,7 +254,9 @@ class BookRenderTests(unittest.TestCase):
         footer = book_render.entry_foot_html(entry, 235)
 
         self.assertIn(f'href="{target}"', footer)
-        self.assertIn('<svg class="qr-code"', footer)
+        self.assertIn('class="qr-code"', footer)
+        self.assertIn('class="qr-modules"', footer)
+        self.assertIn('viewBox="0 0 45 45"', footer)
         self.assertIn('bits.obscurebit.com / bit B6', footer)
         self.assertNotIn("<i>QR</i>", footer)
 
