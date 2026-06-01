@@ -1,0 +1,123 @@
+---
+date: 2026-06-01
+title: "The Crayfish and the Credit Line"
+description: "A daily AI-generated story exploring speculative fiction"
+author: "https://integrate.api.nvidia.com/v1 / nvidia/llama-3.3-nemotron-super-49b-v1.5"
+theme: "parallel dimensions"
+genre: "Caper energy at a human scale"
+---
+
+# The Crayfish and the Credit Line
+
+"We told Marco it wasn’t his fault the crayfish special got scratched out," says Lila, leaning against the industrial dryer that smells like lint and cheaper detergent. The laundry room hums—*not hum, drum*—with the rhythm of a dozen machines, but we’re all staring at the laminated menu taped to the wall, its edges yellowing like a tooth. The crayfish special is gone, the ink smeared so hard the paper’s torn.  
+
+Marco, our repair tech, runs a hand over his buzzcut. "Says here ‘Today’s Special: Crayfish Thermidor.’ But it’s *scratched*." His voice cracks. "I—I didn’t even know they still served that here."  
+
+We exchange glances. The menu hasn’t changed in six years. Not since the hotel switched to a digital board by the elevator. But this morning, the laminated sheet reappeared, tacked up beside the timeclock. And the crayfish? That’s Marco’s dish. His *other* life dish, the one he eats in the version where he didn’t quit culinary school to fix vending machines for a living.  
+
+"You think it’s a glitch?" asks Jess, our crew’s de facto manager, flipping her pen like a baton. "Or a message?"  
+
+Marco laughs, bitter. "From who? The ghost of my student loans?"  
+
+Here’s the thing: the menu works. If you scratch out a dish, that life folds itself into yours for twenty-four hours. A trial run. We’ve all done it. Lila scratched “Chicken Piccata” last month and woke up fluent in Italian, her side hustle selling handmade pastries to the breakfast crowd. Jess erased “Vegetarian Lasagna” and spent a day as a vegan food blogger with 10K Instagram followers.  
+
+But Marco’s different. His other life leaks. Last week, he came to work wearing a chef’s coat “from a place I don’t remember buying.” Started reciting recipes for dishes he’s never cooked. We had to stage an intervention with a marker and the menu, scratching “Crayfish Thermidor” back into existence.  
+
+Until this morning.  
+
+"Somebody messed up," says Marco. "Or somebody’s *trying* to mess me up."  
+
+Jess steps closer. "We all agreed. No more alterations without a group vote."  
+
+"But—"  
+
+"No buts. The credit line’s already stretched. You think the hotel just *gives* us this room for free?" She gestures at the machines, the folded carts, the single window fogged with steam. "We’re on thin ice, Marco. One more unapproved change, and we lose the laundry room. Lose the menu."  
+
+The menu. Our stupid, magical, laminated lifeline. We found it the day the hotel upgraded its POS system, buried under a drawer of outdated keycards. No one knows where it came from. Or how it works. But it’s ours.  
+
+Marco’s fists clench. "You think I *wanted* this? I’m the one who looks like a lunatic every time my ‘other life’ bleeds through. I’m the one who has to explain why I’m crying in the supply closet!"  
+
+Lila moves to touch his arm, stops. "We’ll fix it. Together. But you can’t scratch it back yourself. We do it as a crew, or we don’t do it at all."  
+
+He stares at the menu. The crayfish dish glares back, its absence a jagged hole.  
+
+Then Jess’s phone pings. A text. We all hear the notification—*bling-blurb*, the sound she programmed for hotel alerts.  
+
+Her face goes pale. "They’re coming," she says. "The new manager. She’s doing a walkthrough. In ten minutes."  
+
+Panic. The laundry room is our sanctuary, but it’s also against policy for staff to congregate here during shifts. We’re supposed to be dispersed: Marco fixing the ice machine by the pool, Lila restocking mini-shampoos, Jess at the front desk.  
+
+"Hide the menu," Marco says.  
+
+"Too late."  
+
+The door swings open.  
+
+The manager is a woman in a charcoal pantsuit, her smile tight as a drumhead. Behind her lurks a guy in a rumpled suit—corporate, probably. Auditor.  
+
+"Staff," Jess says, too brightly. "Just, uh, discussing… linen inventory."  
+
+The manager’s eyes flick to the menu. To the scratched-out crayfish. Her smile widens.  
+
+"Ah. The *specials board*," she says. "We’ve had… complaints. About inconsistencies."  
+
+Marco stiffens.  
+
+The man in the suit steps forward, holding a clipboard. "We’re updating all hotel documentation. Physical and digital. For uniformity."  
+
+Jess’s voice trembles. "This is just a—  
+
+"A relic," the manager cuts in. "We’ll be replacing it. Today."  
+
+The menu. They’re going to take it.  
+
+Marco moves first. A lunge, almost—  
+
+But Lila grabs his wrist. Jess shakes her head, barely perceptible.  
+
+The manager peels the menu from the wall, careful, as if it might bite. Tucks it into her portfolio.  
+
+"Thank you for your… creativity," she says.  
+
+When they’re gone, we’re silent.  
+
+Then Marco says, "We break into her office tonight. Get it back."  
+
+Jess sighs. "The credit line can’t cover another fine. We’re already paying off—"  
+
+"Then we don’t use the credit line," Lila says. "We use the tip jar."  
+
+The tip jar. A cracked porcelain thing behind the front desk where guests sometimes toss coins. Our emergency fund.  
+
+Marco eyes it like it’s a grenade. "That’s… less than $200."  
+
+" Enough," Jess says, "if we all chip in."  
+
+We look at each other. The rule we’ve lived by—*no unilateral changes*—hovers, unspoken.  
+
+Marco nods.  
+
+So we do it.  
+
+The new rule: *No more solo alterations. And if the menu’s ever threatened, we pool resources. Even if it means touching the jar.*  
+
+Later, in the dark, we’ll argue about who gets to scratch what next.  
+
+But for now, we’re a crew.  
+
+And the crayfish?  
+
+It’s coming back.  
+
+One way or another.
+
+---
+
+<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem;">
+  <button class="share-btn" data-url="{% raw %}{{ page.canonical_url }}{% endraw %}" data-title="The Crayfish and the Credit Line">
+    Share this story
+  </button>
+  <a href="https://github.com/obscurebit/b1ts/tree/3aa0cb5" target="_blank" rel="noopener" class="story-gen-link">
+    gen:3aa0cb5
+  </a>
+</div>

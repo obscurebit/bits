@@ -1,8 +1,11 @@
 {
   "date": "2026-06-01",
   "links_file": "docs/links/posts/2026-06-01-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-06-01T12:20:26Z",
+  "published_links_file": "docs/links/posts/2026-06-01-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-06-01-the-crayfish-and-the-credit-line.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-06-01-the-crayfish-and-the-credit-line.md",
   "theme": "parallel dimensions",
-  "updated_at": "2026-05-31T08:53:41Z"
+  "updated_at": "2026-06-01T11:46:11Z"
 }

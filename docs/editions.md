@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-06-01-edition-123/" class="archive-item">
+    <div class="archive-item__number">123</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">June 01, 2026</span>
+      <h3 class="archive-item__title">Edition #123</h3>
+      <p class="archive-item__excerpt">Parallel Dimensions · "We told Marco it wasn’t his fault the crayfish special got scratched out," says Lila, leaning against the industrial dryer that smells like lint and cheaper de...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Parallel Dimensions</span><span class="archive-item__genre" title="Caper energy at a human scale">Caper energy at a human scale</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-05-31-edition-122/" class="archive-item">
     <div class="archive-item__number">122</div>
     <div class="archive-item__content">
