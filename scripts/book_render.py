@@ -525,6 +525,17 @@ def mode_panel_uri(design: dict[str, Any], mode: str, assets: AssetResolver | No
     return assets.uri(path) if assets else image_data_uri(path)
 
 
+def cover_art_uri(design: dict[str, Any], assets: AssetResolver | None = None) -> str:
+    cover = design.get("cover") or {}
+    if not isinstance(cover, dict):
+        return ""
+    value = cover.get("asset_path")
+    if not value:
+        return ""
+    path = Path(str(value))
+    return assets.uri(path) if assets else image_data_uri(path)
+
+
 def section_panel_uri(design: dict[str, Any], code: str, assets: AssetResolver | None = None) -> str:
     section_panels = design.get("section_panels") or {}
     if not isinstance(section_panels, dict):
@@ -1069,6 +1080,13 @@ def css_for(design: dict[str, Any], palette_name: str) -> str:
     typo = design["typography"]
     trim = design["trim"]
     mark_filter = "filter: invert(1);" if palette_name == "dark" else ""
+    cover_art_filter = (
+        "filter: invert(0.92) hue-rotate(165deg) saturate(0.92) brightness(0.76) contrast(1.08);"
+        if palette_name == "dark"
+        else ""
+    )
+    cover_art_blend = "screen" if palette_name == "dark" else "multiply"
+    cover_art_opacity = "0.58" if palette_name == "dark" else "0.88"
     spectrum_blend = "screen" if palette_name == "dark" else "multiply"
     mode_panel_blend = "screen" if palette_name == "dark" else "multiply"
     section_css = section_palette_css(design, palette_name)
@@ -1131,32 +1149,24 @@ html, body {{
     repeating-linear-gradient(90deg, transparent 0 0.19in, color-mix(in srgb, {palette["accent_2"]} 18%, transparent) 0.2in 0.21in),
     repeating-linear-gradient(180deg, transparent 0 0.29in, color-mix(in srgb, {palette["accent"]} 12%, transparent) 0.3in 0.31in),
     linear-gradient(135deg, color-mix(in srgb, {palette["paper_alt"]} 86%, transparent), transparent);
-  opacity: 0.58;
+  opacity: 0.18;
+  z-index: 1;
 }}
-.cover::after {{
-  content: "00 01 10 11 / 256 / FIRST BYTE";
+.cover > .cover-art {{
   position: absolute;
-  right: 0.66in;
-  bottom: 0.84in;
-  width: 1.62in;
-  height: 1.62in;
-  display: grid;
-  place-items: center;
-  border: 1px solid color-mix(in srgb, {palette["ink"]} 22%, transparent);
-  font-family: {typo["mono"]};
-  font-size: 7px;
-  line-height: 1.45;
-  text-align: center;
-  letter-spacing: 0.14em;
-  color: color-mix(in srgb, {palette["muted"]} 62%, transparent);
-  background:
-    linear-gradient(90deg, transparent 0 42%, color-mix(in srgb, {palette["ink"]} 18%, transparent) 43% 57%, transparent 58%),
-    linear-gradient(0deg, transparent 0 42%, color-mix(in srgb, {palette["ink"]} 18%, transparent) 43% 57%, transparent 58%),
-    color-mix(in srgb, {palette["paper"]} 72%, transparent);
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  opacity: {cover_art_opacity};
+  mix-blend-mode: {cover_art_blend};
+  {cover_art_filter}
+  z-index: 0;
 }}
 .cover > * {{
   position: relative;
-  z-index: 1;
+  z-index: 4;
 }}
 .cover-top {{
   display: flex;
@@ -1190,6 +1200,7 @@ html, body {{
   line-height: 0.88;
   margin: 0 0 0.18in;
   font-weight: 400;
+  text-shadow: 0 1px 0 color-mix(in srgb, {palette["paper"]} 52%, transparent);
 }}
 .cover .subtitle {{
   font-family: {typo["sans"]};
@@ -4504,6 +4515,7 @@ def render_html(
     mark_uri: str = "",
 ) -> str:
     palette = design["palettes"][palette_name]
+    cover_uri = cover_art_uri(design, assets)
     parts = [
         "<!doctype html>",
         "<html>",
@@ -4517,6 +4529,7 @@ def render_html(
         "</head>",
         f'<body class="pdf-profile-{html.escape(assets.profile_name)}">',
         '<section class="page cover">',
+        f'<img class="cover-art" src="{html.escape(cover_uri, quote=True)}" alt="">' if cover_uri else "",
         '<div class="cover-top">',
         '<div class="cover-code">00 01 02 03 04 05 06 07<br>08 09 0A 0B 0C 0D 0E 0F<br><br>10 11 12 13 14 15 16 17<br>18 19 1A 1B 1C 1D 1E 1F</div>',
         logo_mark(mark_uri, "brand-mark"),

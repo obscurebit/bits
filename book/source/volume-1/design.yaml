@@ -28,6 +28,11 @@ typography:
   title_weight: 400
   label_tracking: "0.08em"
 
+cover:
+  asset_path: "book/source/volume-1/assets/cover/first-byte-cover-plate.png"
+  generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_0991d29e002c5d33016a1e4e43fc208197ae0817cdf7920309.png"
+  prompt_summary: "Iconic First Byte cover plate: nested byte aperture, analog archive grid, signal traces, oxidized teal and coral misregistration, no readable text."
+
 palettes:
   light:
     name: "Paper Archive"

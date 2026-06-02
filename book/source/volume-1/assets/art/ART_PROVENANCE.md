@@ -530,3 +530,10 @@ Use: pilot story art plates for renderer/layout review.
 - Continuation/tail source: `/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_039832f8804bb182016a18e3c575408199a3c04f0d675f5df7.png`
 - Continuation/tail prompt intent: quiet final-notice tail plate, velvet-box shadow, hinge frost, torn blank parking citation, empty garage stripe geometry, yellow sun patch.
 - Rights note: draft original continuation generation, no readable text, numbers, logos, vehicles with brands, people, or protected-world references requested.
+
+## Cover / First Byte Cover Plate
+
+- Asset: `book/source/volume-1/assets/cover/first-byte-cover-plate.png`
+- Source: `/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_0991d29e002c5d33016a1e4e43fc208197ae0817cdf7920309.png`
+- Prompt intent: iconic First Byte cover plate, nested byte aperture, analog archive grid, signal traces, oxidized teal and coral misregistration, lower register field, warm bone paper.
+- Rights note: draft original cover generation, no readable text, logos, people, faces, animals, stock-photo look, or protected-world references requested.
