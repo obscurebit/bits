@@ -285,7 +285,8 @@ class BookRenderTests(unittest.TestCase):
 
         self.assertNotIn("needs_human_review", visible_html)
         self.assertNotIn("human review", visible_html.lower())
-        self.assertIn("Signal Plate / Auto Draft", visible_html)
+        self.assertNotIn("Auto Draft", visible_html)
+        self.assertIn("Signal Plate", visible_html)
 
     def test_plate_identity_accepts_multiple_art_titles(self) -> None:
         bit = book_render.book_build.BitPost(

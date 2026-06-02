@@ -4045,10 +4045,6 @@ def entry_caption_lines(
     ]
 
 
-def art_lane_label(entry: book_build.BookEntry) -> str:
-    return entry.art_lane.replace("_", " ").replace("-", " ").title()
-
-
 QR_VERSION = 6
 QR_SIZE = QR_VERSION * 4 + 17
 QR_DATA_CODEWORDS = 108
@@ -4369,7 +4365,7 @@ def plate_html(
     story_direction = art_direction_for(entry, art_direction)
     mode_direction = mode_art_direction(entry.layout_mode, art_direction)
     treatment = art_treatment_for(entry, art_direction)
-    material = str(story_direction.get("material") or mode_direction.get("material") or art_lane_label(entry))
+    material = str(story_direction.get("material") or mode_direction.get("material") or "source plate")
     gesture = str(story_direction.get("gesture") or mode_direction.get("gesture") or "registered plate")
     asset_uri = art_asset_uri_for(entry, art_direction, role, art_index, allow_art_fallback, assets)
     art_extra = art_classes_for(entry, art_direction, role, art_index, allow_art_fallback)
@@ -4388,7 +4384,7 @@ def plate_html(
             '<div class="plate-notch plate-notch-a"></div>',
             '<div class="plate-notch plate-notch-b"></div>',
             f'<div class="plate-sigil">{html.escape(identity["glyph"])}</div>',
-            f'<div class="plate-label">{html.escape(identity["label"])} Plate / {html.escape(art_lane_label(entry))}</div>',
+            f'<div class="plate-label">{html.escape(identity["label"])} Plate</div>',
             f'<div class="plate-notes">{html.escape(material)} / {html.escape(gesture)}</div>',
             "</div>",
         ]
