@@ -3907,3 +3907,47 @@ entries:
         scale: "1.01"
     prompt: |
       Original editorial art for Bit 92, "The Glove and the Glasshouse": a ferry deckhand's worn glove, rooftop greenhouse, archive cartridges, a manifest of real names, and a blinking cursor asking a question. Tender but uneasy urban maintenance romance with obsolete media. Tactile archival mixed-media plate with paper grain, greenhouse vellum, ferry manifest paper, oxide dust. Harbor teal, glasshouse green, rust-red oxide, glove charcoal, brass highlights. No readable words or numbers, no logos, no faces, no living artist style imitation.
+  - slug: "2026-06-01-the-crayfish-and-the-credit-line"
+    byte_index: "83"
+    title: "The Crayfish and the Credit Line"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/83-the-crayfish-and-the-credit-line/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_09c17b1197a07314016a1ed03fd4c08197a0c6acfc1592f7a6.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-06-02"
+    rights_note: "Draft original generated image for internal review; no readable brands, hotel marks, product labels, people, faces, or living-artist style prompts requested."
+    art_layout: "foldout"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.82"
+    contrast: "1.03"
+    brightness: "1.02"
+    scale: "1.02"
+    prompt: |
+      Original editorial art for Bit 83, "The Crayfish and the Credit Line": hotel basement laundry room as a secret parallel-life altar, industrial dryers, folded linen carts, outdated keycards, cracked porcelain tip jar, laminated specials menu with unreadable scratched-out lines, crayfish mark, laundry steam, receipt-paper folds, ordinary-object cosmology. Tactile archival mixed-media plate with paper grain, lint gray, hotel-laundry mint, oxidized teal, detergent blue, dull coral-red scratch marks, brass coin glints. No readable words or numbers, no logos, no faces, no living artist style imitation.
+  - slug: "2026-06-02-the-substitutes-compact"
+    byte_index: "3C"
+    title: "The Substitute's Compact"
+    status: "needs_human_review"
+    lane: "auto_draft"
+    asset_path: "book/source/volume-1/assets/art/3C-the-substitutes-compact/plate-draft.png"
+    generated_source_path: "/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_09c17b1197a07314016a1ecfc084d0819794eddec4c8ff7f3e.png"
+    provider: "OpenAI built-in image_gen"
+    generated_at: "2026-06-02"
+    rights_note: "Draft original generated image for internal review; no readable brands, school marks, official seals, people, faces, or living-artist style prompts requested."
+    art_layout: "dossier"
+    fit: "cover"
+    position: "center 50%"
+    edge_fade: true
+    soft_matte: true
+    quiet_labels: true
+    saturate: "0.8"
+    contrast: "1.04"
+    brightness: "1.02"
+    scale: "1.02"
+    prompt: |
+      Original editorial art for Bit 3C, "The Substitute's Compact": dim school library lost-and-found shelf merging into a staff-room evidence table, cracked compact mirror, chipped powder case, attendance sheet, parent notes, catalog cards, obsolete inventory tags, deprecated school tech, blue-bleeding signature ink, corrupted mirror reflection with one subtle pixel-flicker eye. Tactile archival mixed-media plate with paper grain, warm bone, library green, oxidized teal, graphite, stale fluorescent cream, faint electric blue ink, dull red correction marks. No readable text, no logos, no official seals, no faces, no living artist style imitation.

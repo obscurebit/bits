@@ -537,3 +537,17 @@ Use: pilot story art plates for renderer/layout review.
 - Source: `/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_0991d29e002c5d33016a1e4e43fc208197ae0817cdf7920309.png`
 - Prompt intent: iconic First Byte cover plate, nested byte aperture, analog archive grid, signal traces, oxidized teal and coral misregistration, lower register field, warm bone paper.
 - Rights note: draft original cover generation, no readable text, logos, people, faces, animals, stock-photo look, or protected-world references requested.
+
+## 83 / The Crayfish and the Credit Line
+
+- Asset: `book/source/volume-1/assets/art/83-the-crayfish-and-the-credit-line/plate-draft.png`
+- Source: `/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_09c17b1197a07314016a1ed03fd4c08197a0c6acfc1592f7a6.png`
+- Prompt intent: hotel laundry-room menu relic, scratched crayfish special, cracked tip jar, outdated keycards, laundry steam, and parallel-life receipt folds.
+- Rights note: draft original generation, no readable hotel marks, product labels, people, faces, logos, or protected-world references requested.
+
+## 3C / The Substitute's Compact
+
+- Asset: `book/source/volume-1/assets/art/3C-the-substitutes-compact/plate-draft.png`
+- Source: `/Users/jason/.codex/generated_images/019e7115-ae4a-7ab3-a27a-bb3685ceb3fa/ig_09c17b1197a07314016a1ecfc084d0819794eddec4c8ff7f3e.png`
+- Prompt intent: cracked compact mirror, school lost-and-found shelf, attendance sheets, blue-bleeding signature ink, obsolete library inventory, and corrupted truth reflection.
+- Rights note: draft original generation, no readable school marks, official seals, people, faces, logos, or protected-world references requested.
