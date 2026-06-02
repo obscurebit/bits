@@ -90,16 +90,18 @@ class GenerateStoryVarietyTests(unittest.TestCase):
         self.assertNotIn("protagonist", modifiers)
         self.assertNotIn("anchor_object", modifiers)
         for key in [
-            "setting_family",
+            "protagonist_archetype",
+            "object_family",
+        ]:
+            self.assertGreaterEqual(len(modifiers[key]), 12)
+        for key in [
             "setting_texture",
             "conflict_engine",
-            "protagonist_archetype",
             "protagonist_pressure",
-            "object_family",
             "object_behavior",
             "relationship_pressure",
         ]:
-            self.assertGreaterEqual(len(modifiers[key]), 12)
+            self.assertGreaterEqual(len(modifiers[key]), 28)
 
     def test_model_routing_uses_composable_style_keys(self) -> None:
         model, reason = generate_story.select_story_model(
