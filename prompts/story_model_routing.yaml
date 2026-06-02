@@ -27,13 +27,19 @@ routes:
         - "single continuous scene"
         - "brief sections"
         - "confession"
-      setting:
-        - "apartment"
-        - "kitchen"
-        - "market"
-        - "clinic"
-        - "school"
-        - "neighborhood"
+      setting_family:
+        - "domestic threshold"
+        - "retail or service"
+        - "care institution"
+        - "education-adjacent"
+        - "neighborhood infrastructure"
+        - "civic meeting"
+      protagonist_archetype:
+        - "service worker"
+        - "caretaker"
+        - "family fixer"
+        - "temporary worker"
+        - "committee volunteer"
       theme_name:
         - "maintenance myths"
         - "municipal weirdness"
@@ -65,6 +71,11 @@ routes:
         - "playful"
         - "bitter"
         - "patient wonder"
+      voice_profile:
+        - "fragmented documentary"
+        - "dry academic"
+        - "recursive metafictional"
+        - "oral-history"
       theme_name:
         - "recursive realities"
         - "digital archaeology"
@@ -83,6 +94,14 @@ routes:
       era:
         - "deep future"
         - "post-collapse"
+      conflict_engine:
+        - "unbelievable"
+        - "wrong thing"
+        - "consensus"
+      object_behavior:
+        - "consensus"
+        - "future consequence"
+        - "supernatural resource"
       theme_name:
         - "parallel dimensions"
         - "synthetic life"

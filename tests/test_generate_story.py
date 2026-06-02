@@ -40,8 +40,12 @@ class GenerateStoryVarietyTests(unittest.TestCase):
     def test_build_story_prompt_includes_ai_variety_brief(self) -> None:
         style = {
             "genre": "domestic infrastructure fiction",
-            "protagonist": "a building superintendent",
-            "anchor_object": "an obsolete keycard",
+            "protagonist_archetype": "Service worker with informal knowledge that management undervalues",
+            "setting_family": "Back-of-house workplace where unofficial rules matter more than posted rules",
+            "object_family": "A mundane access object: card, key, badge, ticket, stamp, or wristband",
+            "object_behavior": "It works correctly for the wrong person",
+            "conflict_engine": "A humane exception threatens a system people depend on",
+            "relationship_pressure": "Two coworkers need each other but disagree about what the job owes them",
             "voice_profile": "Blue-collar systems thinking: pipes, carts, tickets, locks, machines, and workarounds reveal the world",
         }
         variety = {
@@ -62,6 +66,12 @@ class GenerateStoryVarietyTests(unittest.TestCase):
         self.assertEqual(genre, "domestic infrastructure fiction")
         self.assertIn("AI VARIETY BRIEF", prompt)
         self.assertIn("Voice profile: Blue-collar systems thinking", prompt)
+        self.assertIn("Protagonist archetype: Service worker", prompt)
+        self.assertIn("Setting family: Back-of-house workplace", prompt)
+        self.assertIn("Object family: A mundane access object", prompt)
+        self.assertIn("Object behavior: It works correctly for the wrong person", prompt)
+        self.assertIn("Conflict engine: A humane exception", prompt)
+        self.assertIn("Relationship pressure: Two coworkers", prompt)
         self.assertIn("substitute crossing guard", prompt)
         self.assertIn("cracked handheld stop sign", prompt)
         self.assertIn("Specifically avoid today: teacups, archives", prompt)
@@ -71,6 +81,38 @@ class GenerateStoryVarietyTests(unittest.TestCase):
 
         self.assertEqual(len(modifiers["voice_profile"]), 64)
         self.assertTrue(all("write like" not in item.lower() for item in modifiers["voice_profile"]))
+
+    def test_specific_premise_keys_are_replaced_by_composable_layers(self) -> None:
+        modifiers = generate_story.load_style_modifiers()
+
+        self.assertNotIn("setting", modifiers)
+        self.assertNotIn("conflict", modifiers)
+        self.assertNotIn("protagonist", modifiers)
+        self.assertNotIn("anchor_object", modifiers)
+        for key in [
+            "setting_family",
+            "setting_texture",
+            "conflict_engine",
+            "protagonist_archetype",
+            "protagonist_pressure",
+            "object_family",
+            "object_behavior",
+            "relationship_pressure",
+        ]:
+            self.assertGreaterEqual(len(modifiers[key]), 12)
+
+    def test_model_routing_uses_composable_style_keys(self) -> None:
+        model, reason = generate_story.select_story_model(
+            {"name": "maintenance myths", "story": "repair cultures under pressure"},
+            {
+                "genre": "Quiet literary realism with one impossible pressure point",
+                "setting_family": "Care institution where routine compassion collides with policy",
+                "protagonist_archetype": "Caretaker responsible for both people and a failing system",
+            },
+        )
+
+        self.assertIn("mistral-large", model)
+        self.assertTrue(reason.startswith("grounded-human:"))
 
 
 if __name__ == "__main__":

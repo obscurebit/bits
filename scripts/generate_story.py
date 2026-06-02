@@ -58,15 +58,19 @@ STYLE_KEYS = [
     "tone",
     "voice_profile",
     "era",
-    "setting",
+    "setting_family",
+    "setting_texture",
     "structure",
-    "conflict",
+    "conflict_engine",
     "opening",
     "genre",
     "wildcard",
-    "protagonist",
+    "protagonist_archetype",
+    "protagonist_pressure",
     "desire",
-    "anchor_object",
+    "object_family",
+    "object_behavior",
+    "relationship_pressure",
     "social_pressure",
     "ending_shape",
 ]
@@ -633,14 +637,20 @@ def build_story_prompt(
     
     if style:
         parts.append("TODAY'S BRIEF (make these feel organic, not bolted on):")
-        if "protagonist" in style:
-            parts.append(f"- Protagonist: {style['protagonist']}")
+        if "protagonist_archetype" in style:
+            parts.append(f"- Protagonist archetype: {style['protagonist_archetype']}")
+        if "protagonist_pressure" in style:
+            parts.append(f"- Protagonist pressure: {style['protagonist_pressure']}")
         if "desire" in style:
             parts.append(f"- What they want: {style['desire']}")
+        if "relationship_pressure" in style:
+            parts.append(f"- Relationship pressure: {style['relationship_pressure']}")
         if "social_pressure" in style:
             parts.append(f"- Social pressure around them: {style['social_pressure']}")
-        if "anchor_object" in style:
-            parts.append(f"- Anchor object: {style['anchor_object']}")
+        if "object_family" in style:
+            parts.append(f"- Object family: {style['object_family']}")
+        if "object_behavior" in style:
+            parts.append(f"- Object behavior: {style['object_behavior']}")
         if "pov" in style:
             parts.append(f"- Point of view: {style['pov']}")
         if "tone" in style:
@@ -649,12 +659,14 @@ def build_story_prompt(
             parts.append(f"- Voice profile: {style['voice_profile']}")
         if "era" in style:
             parts.append(f"- Setting era: {style['era']}")
-        if "setting" in style:
-            parts.append(f"- Setting location: {style['setting']}")
+        if "setting_family" in style:
+            parts.append(f"- Setting family: {style['setting_family']}")
+        if "setting_texture" in style:
+            parts.append(f"- Setting texture: {style['setting_texture']}")
         if "structure" in style:
             parts.append(f"- Narrative structure: {style['structure']}")
-        if "conflict" in style:
-            parts.append(f"- Central conflict: {style['conflict']}")
+        if "conflict_engine" in style:
+            parts.append(f"- Conflict engine: {style['conflict_engine']}")
         if "opening" in style:
             parts.append(f"- Opening: {style['opening']}")
         if "genre" in style:
@@ -674,7 +686,7 @@ def build_story_prompt(
         parts.append("")
 
     parts.append("NOVELTY RULES:")
-    parts.append("- Treat the protagonist role, setting, and anchor object as today's one-use focus details, not house motifs.")
+    parts.append("- Treat the protagonist archetype, setting family, and object family as broad ingredients to instantiate freshly, not fixed plot assignments.")
     parts.append("- Do not repeat distinctive recent props, workplaces, named institutions, or opening images. If a detail feels familiar from the recent archive, substitute a different concrete detail.")
     parts.append("- Obscurity should come from fresh specificity: a new job, room, errand, tool, local rule, or social ritual rather than another version of the same odd object.")
     parts.append("")
