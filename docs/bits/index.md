@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-06-02-the-substitutes-compact/" class="archive-item">
+    <div class="archive-item__number">124</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">June 02, 2026</span>
+      <h3 class="archive-item__title">The Substitute’s Compact</h3>
+      <p class="archive-item__excerpt">She found the mirror in the lost-and-found bin beneath a cracked *Encyclopedia Britannica* volume, its powder-puff applicator missing and one edge chi...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Synthetic Life</span><span class="archive-item__genre" title="Workplace comedy with a speculative inconvenience">Workplace comedy with a speculative inconvenience</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-06-01-the-crayfish-and-the-credit-line/" class="archive-item">
     <div class="archive-item__number">123</div>
     <div class="archive-item__content">

@@ -1,8 +1,11 @@
 {
   "date": "2026-06-02",
   "links_file": "docs/links/posts/2026-06-02-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-06-02T11:19:42Z",
+  "published_links_file": "docs/links/posts/2026-06-02-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-06-02-the-substitutes-compact.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-06-02-the-substitutes-compact.md",
   "theme": "synthetic life",
-  "updated_at": "2026-06-01T11:46:11Z"
+  "updated_at": "2026-06-02T10:45:37Z"
 }
