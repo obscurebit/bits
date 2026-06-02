@@ -42,6 +42,7 @@ class GenerateStoryVarietyTests(unittest.TestCase):
             "genre": "domestic infrastructure fiction",
             "protagonist": "a building superintendent",
             "anchor_object": "an obsolete keycard",
+            "voice_profile": "Blue-collar systems thinking: pipes, carts, tickets, locks, machines, and workarounds reveal the world",
         }
         variety = {
             "person": "a substitute crossing guard with two unpaid parking tickets",
@@ -60,9 +61,16 @@ class GenerateStoryVarietyTests(unittest.TestCase):
 
         self.assertEqual(genre, "domestic infrastructure fiction")
         self.assertIn("AI VARIETY BRIEF", prompt)
+        self.assertIn("Voice profile: Blue-collar systems thinking", prompt)
         self.assertIn("substitute crossing guard", prompt)
         self.assertIn("cracked handheld stop sign", prompt)
         self.assertIn("Specifically avoid today: teacups, archives", prompt)
+
+    def test_style_modifier_bank_has_sixty_four_voice_profiles(self) -> None:
+        modifiers = generate_story.load_style_modifiers()
+
+        self.assertEqual(len(modifiers["voice_profile"]), 64)
+        self.assertTrue(all("write like" not in item.lower() for item in modifiers["voice_profile"]))
 
 
 if __name__ == "__main__":

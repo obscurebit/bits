@@ -56,6 +56,7 @@ RECENT_STORY_LOOKBACK = max(4, int(os.environ.get("STORY_RECENT_LOOKBACK", "12")
 STYLE_KEYS = [
     "pov",
     "tone",
+    "voice_profile",
     "era",
     "setting",
     "structure",
@@ -644,6 +645,8 @@ def build_story_prompt(
             parts.append(f"- Point of view: {style['pov']}")
         if "tone" in style:
             parts.append(f"- Tone: {style['tone']}")
+        if "voice_profile" in style:
+            parts.append(f"- Voice profile: {style['voice_profile']}")
         if "era" in style:
             parts.append(f"- Setting era: {style['era']}")
         if "setting" in style:
@@ -822,10 +825,10 @@ def select_best_candidate(client: OpenAI, theme: dict, base_prompt: str, candida
     return 0
 
 
-def generate_story(theme: dict, target_date: Optional[datetime] = None) -> tuple[str, str, str, str, str]:
+def generate_story(theme: dict, target_date: Optional[datetime] = None) -> tuple[str, str, str, str, str, str]:
     """Generate a story using the OpenAI-compatible API.
     
-    Returns (title, story, theme_name, genre, writer_model).
+    Returns (title, story, theme_name, genre, writer_model, voice_profile).
     """
     if not API_KEY:
         print("Error: OPENAI_API_KEY environment variable not set")
@@ -864,17 +867,27 @@ def generate_story(theme: dict, target_date: Optional[datetime] = None) -> tuple
     title, story = parse_story_output(content)
     
     theme_name = theme.get("name", "unknown")
+    voice_profile = style.get("voice_profile", "")
     
-    return title, story, theme_name, genre, writer_model
+    return title, story, theme_name, genre, writer_model, voice_profile
 
 
-def save_story(title: str, story: str, theme_name: str, genre: str = "speculative fiction", writer_model: Optional[str] = None, target_date: Optional[datetime] = None) -> Path:
+def save_story(
+    title: str,
+    story: str,
+    theme_name: str,
+    genre: str = "speculative fiction",
+    writer_model: Optional[str] = None,
+    target_date: Optional[datetime] = None,
+    voice_profile: str = "",
+) -> Path:
     """Save the story as a markdown file in the bits/posts directory."""
     today = target_date or datetime.now()
     date_str = today.strftime("%Y-%m-%d")
     safe_title = title.replace('"', '\\"')
     safe_theme = theme_name.replace('"', '\\"')
     safe_genre = genre.replace('"', '\\"')
+    safe_voice_profile = voice_profile.replace('"', '\\"')
     safe_author = f"{API_BASE} / {writer_model or MODEL}".replace('"', '\\"')
     
     # Create slug from title
@@ -912,6 +925,7 @@ description: "A daily AI-generated story exploring speculative fiction"
 author: "{safe_author}"
 theme: "{safe_theme}"
 genre: "{safe_genre}"
+voice_profile: "{safe_voice_profile}"
 ---
 
 """
@@ -950,12 +964,13 @@ def main():
     print(f"Story candidates: {STORY_CANDIDATES}")
     print(f"Theme: {theme.get('name', 'unknown')}")
     
-    title, story, theme_name, genre, writer_model = generate_story(theme, target_date)
+    title, story, theme_name, genre, writer_model, voice_profile = generate_story(theme, target_date)
     print(f"Generated story: {title}")
     print(f"Genre: {genre}")
+    print(f"Voice profile: {voice_profile}")
     print(f"Writer model: {writer_model}")
     
-    filepath = save_story(title, story, theme_name, genre, writer_model, target_date)
+    filepath = save_story(title, story, theme_name, genre, writer_model, target_date, voice_profile)
     print(f"Success! Story saved to {filepath}")
 
 
