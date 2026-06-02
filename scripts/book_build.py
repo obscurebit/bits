@@ -33,6 +33,9 @@ class BitPost:
     body: str
     generation_ref: str = ""
     generation_url: str = ""
+    web_path: Path | None = None
+    book_source_path: Path | None = None
+    book_text_edited: bool = False
 
 
 @dataclass(frozen=True)
@@ -150,7 +153,7 @@ def extract_generation_ref(body: str) -> tuple[str, str]:
     return ref, url
 
 
-def discover_bit_posts(posts_dir: Path = BIT_POSTS_DIR) -> list[BitPost]:
+def discover_bit_posts(posts_dir: Path = BIT_POSTS_DIR, editorial_dir: Path | None = None) -> list[BitPost]:
     posts: list[BitPost] = []
     for path in sorted(posts_dir.glob("*.md")):
         text = path.read_text()
@@ -158,18 +161,41 @@ def discover_bit_posts(posts_dir: Path = BIT_POSTS_DIR) -> list[BitPost]:
         slug = path.stem
         date_value = frontmatter.get("date") or slug[:10]
         title = clean_title(frontmatter.get("title") or title_from_body(body) or slug)
+        description = frontmatter.get("description", "")
+        theme = frontmatter.get("theme", "")
         generation_ref, generation_url = extract_generation_ref(body)
+
+        source_path = path
+        source_body = body
+        source_title = title
+        book_source_path = None
+        book_text_edited = False
+        if editorial_dir:
+            editorial_path = editorial_dir / path.name
+            if editorial_path.exists():
+                editorial_frontmatter, editorial_body = parse_frontmatter(editorial_path.read_text())
+                source_path = editorial_path
+                source_body = editorial_body
+                source_title = clean_title(
+                    editorial_frontmatter.get("title") or title_from_body(editorial_body) or title
+                )
+                book_source_path = editorial_path
+                book_text_edited = True
+
         posts.append(
             BitPost(
-                path=path,
+                path=source_path,
                 slug=slug,
                 date=date_value,
-                title=title,
-                description=frontmatter.get("description", ""),
-                theme=frontmatter.get("theme", ""),
-                body=strip_site_chrome(body),
+                title=source_title,
+                description=description,
+                theme=theme,
+                body=strip_site_chrome(source_body),
                 generation_ref=generation_ref,
                 generation_url=generation_url,
+                web_path=path,
+                book_source_path=book_source_path,
+                book_text_edited=book_text_edited,
             )
         )
     return posts
@@ -933,6 +959,7 @@ def write_manuscript(entries: list[BookEntry], manifest: dict[str, Any], output_
                 f"- Generation ref: {entry.bit.generation_ref or 'unrecorded'}",
                 f"- QR target: {entry.qr_target}",
                 f"- Art: {entry.art_status} via {entry.art_lane}",
+                f"- Book-edition text: {'yes' if entry.bit.book_text_edited else 'no'}",
                 "",
                 entry.bit.body,
                 "",
@@ -1097,6 +1124,18 @@ def write_manual_art_checklist(
     output_path.write_text("\n".join(lines).rstrip() + "\n")
 
 
+def manifest_path(path: Path | None) -> str:
+    if path is None:
+        return ""
+    raw = str(path)
+    if not path.is_absolute():
+        return raw
+    try:
+        return str(path.resolve().relative_to(Path.cwd().resolve()))
+    except ValueError:
+        return raw
+
+
 def write_source_manifest(entries: list[BookEntry], output_path: Path) -> None:
     payload = {
         "entries": [
@@ -1106,7 +1145,10 @@ def write_source_manifest(entries: list[BookEntry], output_path: Path) -> None:
                 "slug": entry.bit.slug,
                 "title": entry.bit.title,
                 "date": entry.bit.date,
-                "source_path": str(entry.bit.path),
+                "source_path": manifest_path(entry.bit.path),
+                "web_source_path": manifest_path(entry.bit.web_path or entry.bit.path),
+                "book_source_path": manifest_path(entry.bit.book_source_path),
+                "book_text_edited": entry.bit.book_text_edited,
                 "generation_ref": entry.bit.generation_ref,
                 "generation_url": entry.bit.generation_url,
                 "qr_target": entry.qr_target,
@@ -1196,7 +1238,7 @@ def build_book(volume_dir: Path, output_dir: Path) -> tuple[list[BookEntry], lis
     art_manifest = read_yaml(volume_dir / "art_manifest.yaml")
     art_entries = load_art_entries(volume_dir / "art_manifest.yaml")
     art_direction = read_optional_yaml(volume_dir / ART_DIRECTION_FILE)
-    posts = discover_bit_posts()
+    posts = discover_bit_posts(editorial_dir=volume_dir / "stories")
     entries, warnings = build_entries(manifest, posts, art_entries)
     name_blockers, name_warnings = validate_name_collisions(entries, manifest)
     warnings = validate_front_matter(manifest) + warnings

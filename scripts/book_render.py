@@ -4763,7 +4763,7 @@ def render(
     art_direction = read_optional_yaml(volume_dir / ART_DIRECTION_PATH)
     art_entries = book_build.load_art_entries(volume_dir / "art_manifest.yaml")
     art_direction["_art_entries"] = art_entries
-    posts = book_build.discover_bit_posts()
+    posts = book_build.discover_bit_posts(editorial_dir=volume_dir / "stories")
     entries, warnings = book_build.build_entries(manifest, posts, art_entries)
     name_blockers, name_warnings = book_build.validate_name_collisions(entries, manifest)
     warnings = book_build.validate_front_matter(manifest) + warnings

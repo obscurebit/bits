@@ -1,4 +1,5 @@
 import importlib.util
+import json
 import os
 import sys
 import tempfile
@@ -72,6 +73,87 @@ This is a test bit with enough words to avoid the short-entry warning. It has an
             self.assertTrue((output_dir / "manual-art-checklist.md").exists())
             self.assertTrue((output_dir / "qr.csv").exists())
             self.assertTrue((output_dir / "gumroad" / "README.txt").exists())
+
+    def test_book_story_override_preserves_web_source_and_qr_target(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            volume_dir = root / "book" / "volume-1"
+            posts_dir = root / "docs" / "bits" / "posts"
+            stories_dir = volume_dir / "stories"
+            output_dir = root / "book" / "output" / "volume-1"
+            volume_dir.mkdir(parents=True)
+            posts_dir.mkdir(parents=True)
+            stories_dir.mkdir(parents=True)
+
+            (volume_dir / "manifest.yaml").write_text(
+                """
+volume: 1
+title: "256 Bits"
+target_entry_count: 1
+canonical_url_base: "https://example.test/bits/posts"
+release_outputs:
+  manuscript: "book/output/volume-1/book.md"
+  validation_report: "book/output/volume-1/report.md"
+  source_manifest: "book/output/volume-1/source.json"
+  art_briefs: "book/output/volume-1/art.yaml"
+  qr_targets: "book/output/volume-1/qr.csv"
+selected_entries: []
+"""
+            )
+            (volume_dir / "art_manifest.yaml").write_text("entries: []\n")
+            (posts_dir / "2026-01-30-first.md").write_text(
+                """---
+date: 2026-01-30
+title: "First Web Title"
+theme: "signals"
+---
+
+# First Web Title
+
+Original web body with enough words to establish the public archive text and keep it distinct from the edited book copy.
+
+<div style="display: flex;">
+  <a href="https://github.com/obscurebit/b1ts/tree/abc1234" class="story-gen-link">gen:abc1234</a>
+</div>
+"""
+            )
+            (stories_dir / "2026-01-30-first.md").write_text(
+                """---
+title: "First Book Title"
+---
+
+# First Book Title
+
+Edited book-only body with different language, a calmer sentence, and no change to the public web archive.
+"""
+            )
+
+            original_cwd = Path.cwd()
+            try:
+                os.chdir(root)
+                entries, warnings = book_build.build_book(volume_dir, output_dir)
+            finally:
+                os.chdir(original_cwd)
+
+            self.assertEqual(len(entries), 1)
+            self.assertEqual(entries[0].bit.title, "First Book Title")
+            self.assertIn("Edited book-only body", entries[0].bit.body)
+            self.assertEqual(entries[0].bit.generation_ref, "abc1234")
+            self.assertEqual(entries[0].qr_target, "https://example.test/bits/posts/2026-01-30-first/")
+            self.assertNotIn("Volume has", "\n".join(warnings))
+
+            source_manifest = json.loads((output_dir / "source.json").read_text())
+            source_entry = source_manifest["entries"][0]
+            self.assertTrue(source_entry["book_text_edited"])
+            self.assertEqual(source_entry["source_path"], "book/volume-1/stories/2026-01-30-first.md")
+            self.assertEqual(source_entry["book_source_path"], "book/volume-1/stories/2026-01-30-first.md")
+            self.assertEqual(source_entry["web_source_path"], "docs/bits/posts/2026-01-30-first.md")
+
+            manuscript = (output_dir / "book.md").read_text()
+            self.assertIn("First Book Title", manuscript)
+            self.assertIn("Book-edition text: yes", manuscript)
+            self.assertIn("Edited book-only body", manuscript)
+            self.assertNotIn("Original web body", manuscript)
 
     def test_byte_indexes_are_hexadecimal(self) -> None:
         posts = [
