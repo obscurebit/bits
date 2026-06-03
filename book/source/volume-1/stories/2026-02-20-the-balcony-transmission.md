@@ -4,89 +4,89 @@ title: "The Balcony Transmission"
 
 # The Balcony Transmission
 
-Renzo sweeps the same cracked marble floor every Tuesday. The theater has been closed since March, but the dust clings like it is waiting for an audience. He hums off-key show tunes to keep the silence from getting smug.
+What's the point of cleaning a place that's just going to get dirty again?
+
+Renzo sweeps the same cracked marble floor every Tuesday. The theater's been closed since March, but the dust clings like it's waiting for an audience. He hums off-key show tunes to keep the silence from getting smug.
 
 The intercom crackles.
 
-"Renzo," says Linh, the tech who refuses to leave her booth. "It is happening again."
+"Renzo," crackles Linh, the tech who refuses to leave her booth. "It's happening again."
 
-He drops the broom. "Define *it*."
+He drops the broom. "Define 'it.'"
 
 "The feed. From the balcony."
 
-Renzo trudges up the center aisle. The balcony has been sealed for years, ever since the fire codes got religion. He peers through the glass. Dark. Empty.
+Renzo trudges up the center aisle. The balcony's been sealed for years, ever since the fire codes got religion. He peers through the glass. Dark. Empty.
 
-Linh meets him at the door, holding a handheld recorder. Her eyes are bloodshot, her hair frizzed from static or sleeplessness.
+Linh meets him at the door, holding a handheld recorder. Her eyes are bloodshot, hair frizzed from static or sleeplessness. "Hear that?"
 
-"Hear that?"
-
-He does. A rhythmic tapping, like Morse but lazier. Not from the speakers. Through them. As if the room itself has learned an alphabet.
+He does. A rhythmic tapping, like Morse but lazier. Not from the speakers: *through* them. Like the air itself is Morse.
 
 "Could be the pipes," he says.
 
-"Pipes do not spell SOS in four languages."
+"Pipes don't spell 'SOS' in four languages."
 
-Linh adjusts the dials on her recorder, though she knows it is pointless. The transmissions started three weeks ago, always midday, always from the balcony. No source, no pattern except the words: *help us help us help us*. A child, then an old man, then someone speaking what might be Hungarian.
+Why do people always assume the problem's with the equipment?
 
-Renzo hovers with the broom in hand. "You are not thinking ghosts."
+Linh adjusts the dials on her recorder, though she knows it's pointless. The transmissions started three weeks ago, always midday, always the balcony. No source, no pattern except the words: *help us help us help us*. Different accents each time. A child, then an old man, then someone speaking what might be Hungarian.
 
-"Ghosts do not exist. But something is using the building's old wiring as an antenna."
+Renzo hovers, broom in hand. "You're not thinking it's... ghosts?"
+
+"Ghosts don't exist. But something's using the building's old wiring as an antenna."
 
 "You ever consider turning it off?"
 
-"It is off. All of it. City cut the power months ago."
+"It *is* off. All of it. City cut the power months ago."
 
-The tapping stops.
+The tapping stops. Both freeze.
 
 Then a voice, clear as a bell: "Where are you?"
 
-Linh lunges for the recorder. Renzo steps back.
-
-"Who is asking?" he says.
+Linh lunges for her recorder. Renzo steps back. "Who's asking?"
 
 Silence.
+
+What's the point of answers if nobody listens?
 
 ---
 
 Renzo sweeps the balcony stairs. Linh paces, arguing with the air.
 
-"They are trapped somewhere. The signal is bouncing off satellite dishes, old phone lines, maybe the emergency network."
+"They're trapped somewhere. The signal's bouncing off satellite dishes, old phone lines-"
 
-"They are not here."
+"They're not here."
 
 "Neither are you."
 
-He pauses. She is right. He has been a janitor for six years, waiting for the theater to reopen. She has been a ghost in the booth, maintaining a system that no longer has power.
+He pauses. She's right. He's been a janitor for six years, waiting for the theater to reopen. She's been a ghost in the booth, maintaining a system that doesn't exist.
 
 The tapping resumes.
 
-Linh says, "We need to broadcast back."
+Linh: "We need to broadcast back."
 
-Renzo says, "We need to let it go."
+Renzo: "We need to let it go."
 
-They stare at each other. The air hums. Not a sound, exactly. A pressure.
+They stare. The air hums: not a sound, a pressure.
 
-Then the lights flicker: a single bulb in the ceiling, brief as a held breath.
+Then the lights flicker. A single bulb in the ceiling, brief as a sigh.
 
-Linh whispers, "It is responding."
+Linh whispers, "It's responding."
 
-Renzo picks up his broom. "It is a short with good timing."
+Renzo picks up his broom. "It's a short. Or termites. Or the universe being a jerk."
 
-She grabs his arm. "You are scared."
+She grabs his arm. "You're scared."
 
-"I am tired. There is a difference."
+"I'm tired. There's a difference."
 
-Linh sets up her equipment anyway. Renzo sweeps the stage, pretending not to watch. She patches into the old soundboard and types with two rigid fingers. The tapping grows faster, urgent enough to make the balcony glass tremble in its frame.
+Why do people always think fear is the only interesting emotion?
 
-He clears his throat. "If you are going to send a message, make it good."
+Linh sets up her equipment anyway. Renzo sweeps the stage, pretending not to watch. She patches into the old soundboard, types frantically. The tapping grows faster, urgent.
+
+He clears his throat. "If you're going to send a message, make it good."
 
 She types: *WHO ARE YOU?*
 
-The lights flare.
-
-A voice booms through the empty theater, distorted but alive.
-
-"We are the ones who stayed."
+The lights flare. A voice booms, distorted but alive: "We are the ones who stayed."
 
 Silence.
 
@@ -96,12 +96,8 @@ Then the system dies.
 
 Days later, the city condemns the building.
 
-Renzo gets a new job at a cineplex. Linh vanishes, leaving behind a note folded into the recorder case:
+Renzo gets a new job at a cineplex. Linh vanishes, leaving behind a note: *They're still talking.*
 
-*They are still talking.*
-
-He sometimes hears tapping in the mall's ventilation shafts. He tells himself he ignores it.
-
-Once, before the first matinee, he catches himself counting the pauses.
+He sometimes hears the tapping in the mall's ventilation shafts. Ignores it.
 
 Some questions don't want answers. They just want to be asked.
