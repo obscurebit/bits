@@ -103,3 +103,5 @@ Renzo gets a new job at a cineplex. Linh vanishes, leaving behind a note folded 
 He sometimes hears tapping in the mall's ventilation shafts. He tells himself he ignores it.
 
 Once, before the first matinee, he catches himself counting the pauses.
+
+Some questions don't want answers. They just want to be asked.
