@@ -66,4 +66,4 @@ The first subject's eye froze shut. His final word came almost gently.
 
 "Forgive."
 
-The wind carried it across the excavation pit, and every sensor on the ice began to record.
+The wind carried it away, a prayer to no one.
