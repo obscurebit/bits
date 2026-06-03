@@ -701,7 +701,7 @@ layout:
       art_glyph: "GLV"
       teaser: false
       first_page_words: 240
-      continuation_words: 320
+      continuation_words: 300
       tail_plate_max_words: 360
     "AD":
       art_title: "Unsigned Forms"
@@ -789,6 +789,15 @@ layout:
       first_page_words: 240
       continuation_words: 340
       tail_plate_max_words: 240
+    "83":
+      teaser: false
+      first_page_words: 400
+      continuation_words: 360
+      allow_glitch_tail_plate: true
+    "91":
+      teaser: false
+      first_page_words: 300
+      continuation_words: 430
     "C5":
       variant: "velvet-audit"
       art_title: "Velvet Audit"

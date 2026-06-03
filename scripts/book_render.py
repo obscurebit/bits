@@ -83,6 +83,16 @@ def excerpt(text: str, words: int) -> str:
     return " ".join(tokens[:words]).rstrip() + "..."
 
 
+def clean_excerpt_boundary(text: str) -> str:
+    stripped = text.rstrip()
+    if not stripped:
+        return stripped
+    boundary = max(stripped.rfind("."), stripped.rfind("?"), stripped.rfind("!"))
+    if boundary >= max(36, int(len(stripped) * 0.55)):
+        return stripped[: boundary + 1]
+    return stripped + "..."
+
+
 def excerpt_paragraphs_html(text: str, words: int) -> str:
     paragraphs: list[str] = []
     current: list[str] = []
@@ -103,7 +113,10 @@ def excerpt_paragraphs_html(text: str, words: int) -> str:
             truncated = True
             break
         if len(tokens) > remaining:
-            current.append(" ".join(tokens[:remaining]).rstrip() + "...")
+            if paragraphs or current:
+                truncated = True
+                break
+            current.append(clean_excerpt_boundary(" ".join(tokens[:remaining])))
             used += remaining
             truncated = True
             break
@@ -113,7 +126,7 @@ def excerpt_paragraphs_html(text: str, words: int) -> str:
         paragraphs.append(" ".join(current))
     if not paragraphs:
         paragraphs.append("Awaiting final copy.")
-    if truncated and not paragraphs[-1].endswith("..."):
+    if truncated and not paragraphs[-1].endswith(("...", ".", "?", "!")):
         paragraphs[-1] = paragraphs[-1].rstrip() + "..."
     return "".join(f"<p>{html.escape(paragraph)}</p>" for paragraph in paragraphs)
 
@@ -1572,7 +1585,7 @@ html, body {{
   font-size: var(--story-body-size, 8.8px);
   line-height: var(--story-body-leading, 1.5);
   transform: skewY(-0.35deg);
-  border: 1px dashed {palette["accent"]};
+  border: 1px solid color-mix(in srgb, {palette["accent"]} 36%, transparent);
   padding: 0.13in;
 }}
 .entry.glitch.copy-dense .entry-body {{
@@ -2295,7 +2308,7 @@ html, body {{
 }}
 .variant-detergent-ticket.spread-open .entry-body,
 .variant-detergent-ticket.spread-text .entry-body {{
-  border-style: dashed;
+  border-color: color-mix(in srgb, {palette["accent"]} 28%, transparent);
 }}
 .variant-detergent-ticket .plate-grid span {{
   border-style: dashed;
