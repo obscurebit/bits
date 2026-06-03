@@ -1,8 +1,11 @@
 {
   "date": "2026-06-03",
   "links_file": "docs/links/posts/2026-06-03-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-06-03T11:47:10Z",
+  "published_links_file": "docs/links/posts/2026-06-03-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-06-03-numbered-requests.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-06-03-numbered-requests.md",
   "theme": "cryptographic secrets",
-  "updated_at": "2026-06-02T10:45:37Z"
+  "updated_at": "2026-06-03T11:10:24Z"
 }

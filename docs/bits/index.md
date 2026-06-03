@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-06-03-numbered-requests/" class="archive-item">
+    <div class="archive-item__number">125</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">June 03, 2026</span>
+      <h3 class="archive-item__title">Numbered Requests</h3>
+      <p class="archive-item__excerpt">The cough drop display shivered each time the pharmacy door swung open, its plastic sheets vibrating like a throat trying to clear itself. Darlene wed...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Cryptographic Secrets</span><span class="archive-item__genre" title="Satire of systems, credentials, or institutional language">Satire of systems</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-06-02-the-substitutes-compact/" class="archive-item">
     <div class="archive-item__number">124</div>
     <div class="archive-item__content">
