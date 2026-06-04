@@ -151,33 +151,33 @@ mode_panels:
   signal:
     asset_path: "book/source/volume-1/assets/modes/signal-panel.png"
     generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0b91d43e23ed8545016a16fd9eb138819696818024e627c747.png"
-    light: { accent: "#b64127", accent_2: "#145f68", accent_3: "#8a742d", wash: "#dbe8e3" }
-    dark: { accent: "#ff6a3d", accent_2: "#4db7c5", accent_3: "#d8ad3f", wash: "#102025" }
+    light: { accent: "#c83b25", accent_2: "#005f7c", accent_3: "#e6ac23", wash: "#d8ecee" }
+    dark: { accent: "#ff6a3d", accent_2: "#45c1d8", accent_3: "#f2c64b", wash: "#102025" }
   archive:
     asset_path: "book/source/volume-1/assets/modes/archive-panel.png"
     generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0b91d43e23ed8545016a16fdf4d9388196a422b69cb2863a06.png"
-    light: { accent: "#9b6570", accent_2: "#426f89", accent_3: "#9c8133", wash: "#e4dde0" }
-    dark: { accent: "#d997a6", accent_2: "#79b9d2", accent_3: "#d7bc5d", wash: "#211b20" }
+    light: { accent: "#754b86", accent_2: "#667f91", accent_3: "#c09b42", wash: "#e5e0ec" }
+    dark: { accent: "#d7a0e5", accent_2: "#8ab5cc", accent_3: "#e2c06a", wash: "#211827" }
   field_note:
     asset_path: "book/source/volume-1/assets/modes/field-note-panel.png"
     generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0b91d43e23ed8545016a16fe7d32c081968779c5643293f759.png"
-    light: { accent: "#5d7b38", accent_2: "#157078", accent_3: "#a75d2b", wash: "#d8e5d8" }
-    dark: { accent: "#9cc96e", accent_2: "#5bd0ce", accent_3: "#e08b4e", wash: "#14231b" }
+    light: { accent: "#347b43", accent_2: "#167d76", accent_3: "#d16f2a", wash: "#dfe9d6" }
+    dark: { accent: "#9fd26e", accent_2: "#58d2c8", accent_3: "#f09a52", wash: "#14231b" }
   protocol:
     asset_path: "book/source/volume-1/assets/modes/protocol-panel.png"
     generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0b91d43e23ed8545016a16fed80dcc81968c3da1b84a8de297.png"
-    light: { accent: "#b4492f", accent_2: "#2b6b83", accent_3: "#b78a29", wash: "#e8dfcf" }
-    dark: { accent: "#ff7d58", accent_2: "#62b6d5", accent_3: "#e0b84a", wash: "#221b18" }
+    light: { accent: "#ad332d", accent_2: "#344f7b", accent_3: "#d39b20", wash: "#eadfd1" }
+    dark: { accent: "#ff7d58", accent_2: "#7b9fe3", accent_3: "#e9b641", wash: "#221b18" }
   myth:
     asset_path: "book/source/volume-1/assets/modes/myth-panel.png"
     generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0b91d43e23ed8545016a16ff3677608196ade293973a6a90b9.png"
-    light: { accent: "#a05a3c", accent_2: "#635a91", accent_3: "#a9872c", wash: "#e5dcd0" }
-    dark: { accent: "#d58d66", accent_2: "#aaa0de", accent_3: "#dec158", wash: "#211b20" }
+    light: { accent: "#8d4e30", accent_2: "#7257a4", accent_3: "#d0ae34", wash: "#eadfd0" }
+    dark: { accent: "#d58d66", accent_2: "#b49bea", accent_3: "#e4c85b", wash: "#211b20" }
   glitch:
     asset_path: "book/source/volume-1/assets/modes/glitch-panel.png"
     generated_source_path: "/Users/jason/.codex/generated_images/019df440-a41f-77d3-8666-ba9fc4bb666c/ig_0b91d43e23ed8545016a16ff8e547c8196be6d28c20eeb49a6.png"
-    light: { accent: "#b9527e", accent_2: "#176f70", accent_3: "#3f7f61", wash: "#eadce4" }
-    dark: { accent: "#f080b1", accent_2: "#5fc4bd", accent_3: "#7bc894", wash: "#241820" }
+    light: { accent: "#c72c88", accent_2: "#008f9c", accent_3: "#4da64a", wash: "#ecddea" }
+    dark: { accent: "#ff71bd", accent_2: "#4ee0dc", accent_3: "#8adc68", wash: "#241820" }
 
 layout:
   section_size: 16

@@ -3046,10 +3046,6 @@ html, body {{
   min-height: 0;
 }}
 .mode-card {{
-  --mode-accent: {palette["accent"]};
-  --mode-accent-2: {palette["accent_2"]};
-  --mode-accent-3: {palette["accent_3"]};
-  --mode-wash: {palette["paper_alt"]};
   display: block;
   border: 1px solid color-mix(in srgb, var(--mode-accent) 38%, {palette["rule"]});
   border-top: 2px solid color-mix(in srgb, var(--mode-accent) 70%, {palette["rule"]});
@@ -3130,22 +3126,59 @@ html, body {{
 }}
 .mode-card-colors {{
   display: grid;
-  grid-template-columns: repeat(4, 0.24in);
-  gap: 0.02in;
+  grid-template-columns: 0.46in 0.36in 0.3in 0.2in;
+  gap: 0.025in;
   margin-top: 0.075in;
+  align-items: center;
 }}
 .mode-card-colors span {{
-  height: 0.075in;
+  height: 0.086in;
   background: var(--chip);
   border: 1px solid color-mix(in srgb, {palette["ink"]} 20%, transparent);
   box-shadow:
     inset 0 0 0 1px color-mix(in srgb, {palette["paper"]} 24%, transparent),
     0 0.018in 0.04in color-mix(in srgb, {palette["ink"]} 8%, transparent);
 }}
+.mode-card-colors span:nth-child(1) {{
+  height: 0.105in;
+}}
+.mode-card-colors span:nth-child(2) {{
+  height: 0.076in;
+}}
+.mode-card-colors span:nth-child(3) {{
+  height: 0.094in;
+}}
 .mode-card-colors span:nth-child(4) {{
+  height: 0.12in;
   background:
     repeating-linear-gradient(90deg, transparent 0 4px, color-mix(in srgb, {palette["ink"]} 12%, transparent) 4px 5px),
     var(--chip);
+}}
+.mode-signal .mode-card-colors span:nth-child(1) {{
+  background:
+    repeating-linear-gradient(90deg, var(--mode-accent) 0 9px, color-mix(in srgb, var(--mode-accent-2) 64%, var(--mode-accent)) 9px 12px);
+}}
+.mode-archive .mode-card-colors span:nth-child(1) {{
+  background:
+    repeating-linear-gradient(0deg, var(--mode-accent) 0 3px, color-mix(in srgb, var(--mode-accent-2) 55%, var(--mode-accent)) 3px 5px);
+}}
+.mode-field-note .mode-card-colors span:nth-child(1) {{
+  background:
+    radial-gradient(circle at 22% 55%, var(--mode-accent-2) 0 2px, transparent 2.5px),
+    radial-gradient(circle at 68% 42%, var(--mode-accent-3) 0 1.7px, transparent 2.2px),
+    var(--mode-accent);
+}}
+.mode-protocol .mode-card-colors span:nth-child(1) {{
+  background:
+    repeating-linear-gradient(135deg, var(--mode-accent) 0 5px, color-mix(in srgb, var(--mode-accent-3) 78%, var(--mode-accent)) 5px 7px);
+}}
+.mode-myth .mode-card-colors span:nth-child(1) {{
+  background:
+    linear-gradient(90deg, var(--mode-accent), var(--mode-accent-2) 48%, var(--mode-accent-3));
+}}
+.mode-glitch .mode-card-colors span:nth-child(1) {{
+  background:
+    linear-gradient(90deg, var(--mode-accent) 0 31%, transparent 31% 37%, var(--mode-accent-2) 37% 43%, transparent 43% 50%, var(--mode-accent-3) 50% 100%);
 }}
 .taxonomy-thread {{
   display: grid;
@@ -3155,10 +3188,6 @@ html, body {{
 }}
 .taxonomy-thread span {{
   min-height: 0.38in;
-  --mode-accent: {palette["accent"]};
-  --mode-accent-2: {palette["accent_2"]};
-  --mode-accent-3: {palette["accent_3"]};
-  --mode-wash: {palette["paper_alt"]};
   position: relative;
   overflow: hidden;
   border: 1px solid color-mix(in srgb, var(--mode-accent) 58%, {palette["rule"]});
