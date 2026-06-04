@@ -6,7 +6,7 @@ title: "The Static Between"
 
 Amara adjusted the receiver's dial, her fingers smudging the dusty panel. The attic hummed with the whir of old electronics: her grandfather's hobbyist gear, never thrown out. She'd come to salvage what she could, but the radio's hiss had stopped her mid-sigh. Buried beneath the static was a rhythm: three clicks, a pause, five clicks, another pause. Prime numbers. Not random.
 
-She leaned closer, the headphones pressing against her ears. The pattern shifted, resolving into something almost melodic: a sequence of tones that rose and fell like a question. Her dry-erase board already had two pages of scribbled notes. The signal originated somewhere local, but the towers she'd checked didn't match its frequency.
+She leaned closer, the headphones pressing against her ears. The pattern shifted, resolving into something almost melodic: a sequence of tones that rose and fell like a question. Her notebook already had two pages of scribbled notes. The signal originated somewhere local, but the towers she'd checked didn't match its frequency.
 
 When Diego called, she didn't answer. His text blinked on her phone: *Still chasing ghosts?* She ignored it.
 
@@ -42,7 +42,7 @@ Late for what? They asked questions, but the voice only cycled through more frag
 
 Days passed. The tower went silent.
 
-Then, at 3 a.m., Amara's phone buzzed with a coordinates link. Diego's name on the message. But he hadn't sent it.
+Then, at 3 a.m., Amara's phone buzzed with a pin and coordinates. Diego's name on the message. But he hadn't sent it.
 
 The location was a field outside town, overgrown with weeds. In the center stood a structure they'd never noticed before: a low, curved arch, like a ribcage half-buried in earth. Its surface was smooth, metallic, but when Amara touched it, it warmed and depressed slightly, like skin.
 

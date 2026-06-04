@@ -20,7 +20,7 @@ Renzo trudges up the center aisle. The balcony's been sealed for years, ever sin
 
 Linh meets him at the door, holding a handheld recorder. Her eyes are bloodshot, hair frizzed from static or sleeplessness. "Hear that?"
 
-He does. A rhythmic tapping, like Morse but lazier. Not from the speakers: *through* them. Like the air itself is Morse.
+He does. A rhythmic tapping, like Morse but lazier. Not from the speakers: *through* them. As if the air itself were tapping Morse.
 
 "Could be the pipes," he says.
 

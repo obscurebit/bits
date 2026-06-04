@@ -8,7 +8,7 @@ The ice crackled like static as Dr. Ewa Nowak scraped her scalpel against the su
 
 "Temperature?" she barked.
 
-"-32C and dropping," replied Tariq Hansen, his voice muffled by the heating element in his parka. The corporal monitored the sensors arrayed around the excavation pit, their wires snaking into the permafrost like mechanical roots. "They're waking up."
+"-32°C and dropping," replied Tariq Hansen, his voice muffled by the heating element in his parka. The corporal monitored the sensors arrayed around the excavation pit, their wires snaking into the permafrost like mechanical roots. "They're waking up."
 
 *They*. Not "the remains." Not "specimens." The word had slipped into their lexicon early, during the first thaw cycle, when the things in the ice had begun to move.
 
