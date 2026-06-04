@@ -2965,7 +2965,7 @@ html, body {{
   color: {palette["accent"]};
 }}
 .taxonomy-page {{
-  grid-template-rows: auto auto auto minmax(0, 1fr) auto auto;
+  grid-template-rows: auto auto minmax(0, 1fr) auto;
 }}
 .taxonomy-spectrum {{
   position: relative;
@@ -3802,16 +3802,12 @@ def designed_object_pages(
     counts = mode_counts(entries)
     modes = design.get("layout_modes") or {}
     mode_cards: list[str] = []
-    mode_thread: list[str] = []
     for mode, data in modes.items():
         info = mode_info(design, str(mode))
         direction = mode_art_direction(str(mode), art_direction)
         treatment = direction.get("treatment", str(mode))
         panel_uri = mode_panel_uri(design, str(mode), assets)
         panel_img = f'<img src="{html.escape(panel_uri, quote=True)}" alt="">' if panel_uri else ""
-        mode_thread.append(
-            f'<span class="{mode_css_class(str(mode))}"><strong>{html.escape(info["glyph"])} / {counts.get(str(mode), 0):02d}</strong></span>'
-        )
         mode_cards.append(
             "\n".join(
                 [
@@ -3857,14 +3853,10 @@ def designed_object_pages(
         "\n".join(
             [
                 '<section class="page object-page taxonomy-page">',
-                '<div class="object-kicker">visual taxonomy / six house styles</div>',
+                '<div class="object-kicker">visual taxonomy / reading modes</div>',
                 "<h2>The Six Reading Modes</h2>",
-                section_color_spectrum(design, palette_name),
                 '<div class="taxonomy-grid">',
                 *mode_cards,
-                "</div>",
-                '<div class="taxonomy-thread">',
-                *mode_thread,
                 "</div>",
                 folio("taxonomy", "front"),
                 "</section>",
