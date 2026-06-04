@@ -1394,6 +1394,10 @@ html, body {{
   position: relative;
   z-index: 1;
 }}
+.entry > .folio {{
+  position: absolute;
+  z-index: 2;
+}}
 .entry-head {{
   grid-area: head;
   display: grid;
