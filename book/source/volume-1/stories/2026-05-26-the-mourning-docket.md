@@ -1,0 +1,62 @@
+---
+date: 2026-05-26
+title: "The Mourning Docket"
+description: "A daily AI-generated story exploring speculative fiction"
+author: "https://integrate.api.nvidia.com/v1 / nvidia/llama-3.3-nemotron-super-49b-v1.5"
+theme: "small gods of commerce"
+genre: "Tender romance complicated by one impossible condition"
+---
+
+# The Mourning Docket
+
+A dented nameplate reads *H. R. Dinsmore, Manager*—though the office it once adorned was bulldozed three years past to make way for a parking lot. Mabel Voss, union steward for Local 47 of the Funeral Services Workers’ Alliance, keeps it propped against a chipped teacup on her desk. She tells herself it’s for the weight—it holds down the stack of grievances she’s too harried to file.
+
+The queue outside the funeral home’s side office grows at a glacial pace, as queues do when the dead are involved. Mabel is late to the monthly safety committee meeting, but the mourners won’t stop trickling in. They come for the vending machine in the corner, its glass panel fogged with the breath of the bereaved. It dispenses only one item: *Sacred Mints*, the kind that supposedly ease the passage of souls stuck between worlds. The church frowns on them. The funeral home’s new owner, a sharp-suited relic named Mr. Greeley, wants to replace the machine with a premium coffee station. Mabel’s job, today, is to count the mints and argue their case.
+
+She wants to leave. Her overcoat is buttoned, her umbrella drips on the linoleum, and the committee meeting features a man she’s loved in stubborn silence for six years—Alfie, the embalmer, who wears cologne like a challenge. But Mrs. Peabody is here again, third in line, clutching her hat with one gloved hand and a crumpled dollar bill in the other. Mrs. Peabody’s husband died in March. She buys a mint every Tuesday, same time, same coin. Last week, she tried to pay with a button from his coat.
+
+“Regulations,” Mabel says, as gently as she can, “say it’s got to be cash.”
+
+“Regulations,” Mrs. Peabody hisses, “can go fornicate with the devil’s own accountant.”
+
+The queue tenses. A queue’s morality is simple: those at the front are righteous, those at the back are suspect, and no one crosses the line. Mabel slides a mint into the slot and hands it over. Mrs. Peabody drops her dollar in the till and stalks off, muttering about the price of eternity.
+
+Item by item, the office testifies:
+
+- **The dented nameplate**: H.R. Dinsmore’s successor, a woman who kept a jar of wasps on her desk, fired Mabel’s brother for unionizing. Mabel took the nameplate the day they cleared the office. It’s not a souvenir. It’s a paperweight.
+
+- **The Sacred Mints machine**: Emptied weekly by a driver who smells of incense and motor oil. Mabel once followed him to a warehouse where men in aprons sorted mints into sacks labeled *For the Unquiet*. She didn’t tell Alfie. She tells herself it’s none of the union’s business.
+
+- **A thermos with a chipped enamel lid**: Mabel’s. Always full of coffee, always cold. She forgets to drink it when Alfie’s around.
+
+- **A ledger**: Not the union’s, but hers alone. She records names, dates, and the odd habits of the bereaved. *Mrs. Peabody: 14 mints since March. Always a dollar. Once a hairpin.*
+
+Alfie arrives, late and apologetic, his presence a cloud of cedar and ambition. He carries a file folder and a smile meant to disarm. The queue watches him pass like a priest entering a chapel. Mabel’s throat tightens. She inventories the room again, desperate:
+
+- **A framed certificate**: *Outstanding Service to the Bereaved*, awarded to H.R. Dinsmore in 1927. The glass is cracked.
+
+- **A single carnation**: Tucked behind the nameplate. Alfie’s doing. He leaves them monthly, though they wilt in a day.
+
+- **Mrs. Peabody’s shadow**: She’s returned, standing just outside the door, listening.
+
+The trouble is not the mints. The trouble is that Mabel wants Alfie to ask her to dinner, to say something that isn’t *We should talk about the embalming room ventilation* or *Your brother was a good man*. She wants him to see her as something other than the woman who counts mints and enforces rules. Instead, he says, “The owner wants to install a second machine. For the living. Coffee, pastries—”
+
+“Sacred Mints stay,” Mabel says. Her voice is a club strike.
+
+The queue shuffles in approval.
+
+Mrs. Peabody steps inside, uninvited. She drops another dollar on the desk. “I’ll have two today.”
+
+“Regulations—”
+
+“To hell with your regulations.” The old woman’s eyes are bright, terrible. “I’m buying a mint for my husband and one for the woman who won’t stop staring at the man who smells like a graveyard.”
+
+The room stills. Alfie flushes. Mabel feels the queue’s gaze like a spotlight.
+
+She loads two mints into the slot.
+
+That night, Mabel leaves the nameplate on the desk. The mints stay in the machine. The queue, she knows, will return tomorrow, moral and endless.
+
+In the parking lot, Alfie catches up, carnation in hand. “Walk with me?” he says.
+
+What remains is this: Mrs. Peabody, alone on a bench, unwrapping two mints. She places one on her tongue. She places the other in her pocket. Somewhere, a ghost hiccups. A wasp buzzes in a jar long buried. The queue’s next in line steps forward, ready to begin.

@@ -112,7 +112,20 @@ def strip_site_chrome(body: str) -> str:
             break
         cleaned_lines.append(line)
     cleaned_lines = strip_drafting_notes(cleaned_lines)
+    cleaned_lines = strip_bold_body_heading(cleaned_lines)
     return "\n".join(cleaned_lines).strip()
+
+
+def strip_bold_body_heading(lines: list[str]) -> list[str]:
+    for index, line in enumerate(lines):
+        stripped = line.strip()
+        if not stripped:
+            continue
+        match = re.fullmatch(r"(#{1,6})\s+\*\*(.+?)\*\*", stripped)
+        if match:
+            lines[index] = f"{match.group(1)} {match.group(2).strip()}"
+        break
+    return lines
 
 
 def strip_drafting_notes(lines: list[str]) -> list[str]:
@@ -123,18 +136,33 @@ def strip_drafting_notes(lines: list[str]) -> list[str]:
         "emotional turn:",
         "ending:",
         "final line",
+        "fresh detail:",
+        "funny line:",
+        "funny sentence:",
+        "image:",
+        "note:",
+        "refusal:",
+        "strange image:",
+        "stranger image:",
+        "the reader may catch",
+        "the funny sentence:",
+        "this story avoids",
+        "unpredicted sentence:",
+        "unpredictable sentence:",
     )
     filtered: list[str] = []
     for line in lines:
-        normalized = re.sub(r"^[\\s*_`#>-]+|[\\s*_`:-]+$", "", line).lower()
+        normalized = line.strip().lower()
+        normalized = re.sub(r"^[\s*_`#>-]+", "", normalized)
+        normalized = normalized.replace("**", "").replace("__", "")
+        normalized = re.sub(r"[*_`]+", "", normalized)
+        normalized = re.sub(r"[\s*_`:-]+$", "", normalized)
         if any(normalized.startswith(prefix) for prefix in note_prefixes):
             continue
-        if normalized == "end":
+        if normalized in {"end", "the end."}:
             continue
         filtered.append(line)
-    while filtered and not filtered[-1].strip():
-        filtered.pop()
-    if filtered and filtered[-1].strip() == "---":
+    while filtered and (not filtered[-1].strip() or filtered[-1].strip() == "---"):
         filtered.pop()
     return filtered
 
