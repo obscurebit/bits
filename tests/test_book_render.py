@@ -84,6 +84,8 @@ class BookRenderTests(unittest.TestCase):
         self.assertIn(".pdf-profile-download .plate.has-art::after", css)
         self.assertIn(".pdf-profile-download .page", css)
         self.assertIn("background: var(--paper)", css)
+        self.assertIn(".pdf-profile-download .plate.has-art::before", css)
+        self.assertIn("width: 1.02in !important", css)
 
     def test_download_profile_uses_smaller_images(self) -> None:
         profile = book_render.PDF_IMAGE_PROFILES["download"]

@@ -1760,10 +1760,16 @@ html, body {{
 .plate.has-art.soft-matte::before {{
   inset: 0.07in;
   border-color: color-mix(in srgb, {palette["paper"]} 48%, transparent);
+  background:
+    radial-gradient(ellipse at 0% 100%, color-mix(in srgb, {palette["paper"]} 92%, transparent) 0 34%, color-mix(in srgb, {palette["paper"]} 68%, transparent) 50%, transparent 76%);
   box-shadow:
     inset 0 0 0.22in color-mix(in srgb, {palette["paper"]} 35%, transparent),
     inset 0 0 0.05in color-mix(in srgb, {palette["ink"]} 18%, transparent);
   z-index: 2;
+}}
+.entry .plate-orbit,
+.entry .plate-notch {{
+  display: none;
 }}
 .plate.has-art::after {{
   z-index: 1;
@@ -3668,7 +3674,12 @@ def pdf_profile_css(profile_name: str) -> str:
   isolation: auto !important;
 }
 .pdf-profile-download .plate.has-art::before {
-  display: none !important;
+  display: block !important;
+  inset: auto auto 0 0 !important;
+  width: 1.02in !important;
+  height: 0.84in !important;
+  border: 0 !important;
+  background: color-mix(in srgb, var(--paper) 86%, transparent) !important;
 }
 .pdf-profile-download .plate.has-art .plate-label,
 .pdf-profile-download .plate.has-art .plate-notes {
