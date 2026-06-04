@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-06-04-ticket-thirteen-hold-the-mayo/" class="archive-item">
+    <div class="archive-item__number">126</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">June 04, 2026</span>
+      <h3 class="archive-item__title">Ticket Thirteen, Hold the Mayo</h3>
+      <p class="archive-item__excerpt">The third time the door creaks open late, I’m squinting at a shelf of unclaimed urns, their labels bleached by time. The man who walks in smells like ...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Abandoned Stations</span><span class="archive-item__genre" title="Noir-ish social observation rather than detective plotting">Noir-ish social observation rather than detective plotting</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-06-03-numbered-requests/" class="archive-item">
     <div class="archive-item__number">125</div>
     <div class="archive-item__content">
