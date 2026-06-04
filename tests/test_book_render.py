@@ -260,6 +260,53 @@ class BookRenderTests(unittest.TestCase):
         self.assertIn('bits.obscurebit.com / bit B6', footer)
         self.assertNotIn("<i>QR</i>", footer)
 
+    def test_spread_pages_only_render_qr_on_last_page(self) -> None:
+        bit = book_render.book_build.BitPost(
+            path=Path("sample.md"),
+            slug="sample-spread",
+            date="2026-01-01",
+            title="Sample Spread",
+            description="",
+            theme="signal",
+            body="\n\n".join(
+                [
+                    " ".join(["alpha"] * 160),
+                    " ".join(["bravo"] * 160),
+                ]
+            ),
+        )
+        target = "https://bits.obscurebit.com/bits/posts/sample-spread/"
+        entry = book_render.book_build.BookEntry(
+            byte_index="C0",
+            section_code="C",
+            bit=bit,
+            qr_target=target,
+            art_status="draft",
+            art_lane="auto",
+            layout_mode="signal",
+            validation_notes=[],
+        )
+        design = {"layout": {"spread_first_page_words": 180, "spread_continuation_words": 220}}
+
+        pages = book_render.render_spread_entry_pages(
+            entry,
+            {"sections": [{"code": "C", "title": "Sample Section"}]},
+            design,
+            {},
+            40,
+            None,
+        )
+
+        self.assertEqual(len(pages), 2)
+        self.assertIn("continues next page", pages[0])
+        self.assertIn('class="entry-foot no-qr"', pages[0])
+        self.assertNotIn('class="qr"', pages[0])
+        self.assertNotIn(f'href="{target}"', pages[0])
+        self.assertNotIn("continues next page", pages[1])
+        self.assertIn('class="qr"', pages[1])
+        self.assertIn(f'href="{target}"', pages[1])
+        self.assertEqual("".join(pages).count('class="qr"'), 1)
+
     def test_visible_art_labels_hide_internal_review_status(self) -> None:
         bit = book_render.book_build.BitPost(
             path=Path("sample.md"),

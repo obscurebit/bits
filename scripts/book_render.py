@@ -1932,6 +1932,9 @@ html, body {{
   align-items: end;
   min-width: 0;
 }}
+.entry-foot.no-qr {{
+  grid-template-columns: 1fr;
+}}
 .art-side {{
   grid-template-columns: minmax(1.55in, 2.05in) minmax(0, 1fr);
   grid-template-rows: auto minmax(0, 1fr) auto auto;
@@ -4425,15 +4428,26 @@ def plate_html(
     )
 
 
-def entry_foot_html(entry: book_build.BookEntry, page_num: int, continuation: str = "") -> str:
+def entry_foot_html(
+    entry: book_build.BookEntry,
+    page_num: int,
+    continuation: str = "",
+    show_qr: bool = True,
+) -> str:
     caption_lines = entry_caption_lines(entry, continuation)
-    qr_label = f"QR code for Bit {entry.byte_index}: {entry.qr_target}"
-    qr_markup = qr_svg(entry.qr_target, qr_label)
+    qr_anchor = ""
+    foot_class = "entry-foot"
+    if show_qr:
+        qr_label = f"QR code for Bit {entry.byte_index}: {entry.qr_target}"
+        qr_markup = qr_svg(entry.qr_target, qr_label)
+        qr_anchor = f'<a class="qr" href="{html.escape(entry.qr_target, quote=True)}">{qr_markup}</a>'
+    else:
+        foot_class += " no-qr"
     return "\n".join(
         [
-            '<div class="entry-foot">',
+            f'<div class="{foot_class}">',
             f'<div class="caption">{"<br>".join(caption_lines)}</div>',
-            f'<a class="qr" href="{html.escape(entry.qr_target, quote=True)}">{qr_markup}</a>',
+            qr_anchor,
             "</div>",
             folio(entry.byte_index, str(page_num)),
         ]
@@ -4488,7 +4502,12 @@ def render_spread_entry_pages(
     open_parts.extend(
         [
             f'<div class="entry-body">{render_story_blocks(pages[0])}</div>',
-            entry_foot_html(entry, first_page_num, "continues next page" if len(pages) > 1 else ""),
+            entry_foot_html(
+                entry,
+                first_page_num,
+                "continues next page" if len(pages) > 1 else "",
+                show_qr=len(pages) == 1,
+            ),
             "</section>",
         ]
     )
@@ -4497,6 +4516,7 @@ def render_spread_entry_pages(
     for index, page_blocks in enumerate(pages[1:], start=1):
         page_num = first_page_num + index
         continuation = "continues next page" if index < len(pages) - 1 else ""
+        is_last_page = index == len(pages) - 1
         override = story_layout_override(entry, design)
         tail_plate_words = int(
             override.get("tail_plate_max_words")
@@ -4526,7 +4546,7 @@ def render_spread_entry_pages(
                     continuation_plate,
                     f'<div class="entry-body">{render_story_blocks(page_blocks)}</div>',
                     tail_plate,
-                    entry_foot_html(entry, page_num, continuation),
+                    entry_foot_html(entry, page_num, continuation, show_qr=is_last_page),
                     "</section>",
                 ]
             )
