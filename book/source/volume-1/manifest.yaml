@@ -80,6 +80,12 @@ selection_rules:
   - "Every final entry must have a stable QR target and a final art approval."
 
 section_overrides:
+  2026-02-01-the-bloom-protocol: "2"
+  2026-05-01-the-lease-of-forgetting: "1"
+  2026-05-18-bench-warrant-bowling: "0"
+  2026-05-20-rubbed-out: "0"
+  2026-05-21-dock-12: "0"
+  2026-05-23-the-mirror-and-the-misfiled-oath: "1"
   2026-05-29-unclaimed: "8"
   2026-05-30-the-glove-and-the-glasshouse: "9"
   2026-05-31-the-greenhouse-receipt: "7"
