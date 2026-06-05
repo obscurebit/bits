@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-06-05-edition-127/" class="archive-item">
+    <div class="archive-item__number">127</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">June 05, 2026</span>
+      <h3 class="archive-item__title">Edition #127</h3>
+      <p class="archive-item__excerpt">Reality Glitches · Rosa’s left glove tore again at the knuckle, the frayed thread dangling like a loose string on a sweater. She jabbed the Xerox machine’s reset button with the s...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Reality Glitches</span><span class="archive-item__genre" title="Caper energy at a human scale">Caper energy at a human scale</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-06-04-edition-126/" class="archive-item">
     <div class="archive-item__number">126</div>
     <div class="archive-item__content">

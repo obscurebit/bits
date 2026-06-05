@@ -1,8 +1,11 @@
 {
   "date": "2026-06-05",
   "links_file": "docs/links/posts/2026-06-05-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-06-05T10:24:44Z",
+  "published_links_file": "docs/links/posts/2026-06-05-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-06-05-the-margin-for-error.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-06-05-the-margin-for-error.md",
   "theme": "reality glitches",
-  "updated_at": "2026-06-04T10:04:03Z"
+  "updated_at": "2026-06-05T10:01:17Z"
 }
