@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-06-06-edition-128/" class="archive-item">
+    <div class="archive-item__number">128</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">June 06, 2026</span>
+      <h3 class="archive-item__title">Edition #128</h3>
+      <p class="archive-item__excerpt">Emergent Intelligence · "You said it would hold," Marco snaps, not looking up from the console where error messages blink like a slot machine on a losing streak. "You *swore* the modem...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Emergent Intelligence</span><span class="archive-item__genre" title="Domestic drama bent by one technological or metaphysical fact">Domestic drama bent by one technological or metaphysical fact</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-06-05-edition-127/" class="archive-item">
     <div class="archive-item__number">127</div>
     <div class="archive-item__content">
