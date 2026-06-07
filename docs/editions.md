@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-06-07-edition-129/" class="archive-item">
+    <div class="archive-item__number">129</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">June 07, 2026</span>
+      <h3 class="archive-item__title">Edition #129</h3>
+      <p class="archive-item__excerpt">Memory Manipulation · We filed into the Claims Annex at 8:03 a.m., three pairs of eyes avoiding the brass plaque that still read *Department of Rectifications (Junior Grade)*. The ca...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Memory Manipulation</span><span class="archive-item__genre" title="Satire of systems, credentials, or institutional language">Satire of systems</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-06-06-edition-128/" class="archive-item">
     <div class="archive-item__number">128</div>
     <div class="archive-item__content">

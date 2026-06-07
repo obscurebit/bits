@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-06-07-the-docket-of-minor-infractions/" class="archive-item">
+    <div class="archive-item__number">129</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">June 07, 2026</span>
+      <h3 class="archive-item__title">The Docket of Minor Infractions</h3>
+      <p class="archive-item__excerpt">We filed into the Claims Annex at 8:03 a.m., three pairs of eyes avoiding the brass plaque that still read *Department of Rectifications (Junior Grade...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Memory Manipulation</span><span class="archive-item__genre" title="Satire of systems, credentials, or institutional language">Satire of systems</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-06-06-the-modems-ledger/" class="archive-item">
     <div class="archive-item__number">128</div>
     <div class="archive-item__content">
