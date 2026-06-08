@@ -1,8 +1,11 @@
 {
   "date": "2026-06-08",
   "links_file": "docs/links/posts/2026-06-08-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-06-08T11:44:13Z",
+  "published_links_file": "docs/links/posts/2026-06-08-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-06-08-the-lunchbox-archive.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-06-08-the-lunchbox-archive.md",
   "theme": "lost civilizations",
-  "updated_at": "2026-06-07T09:23:47Z"
+  "updated_at": "2026-06-08T11:07:31Z"
 }
