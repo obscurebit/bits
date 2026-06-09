@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-06-09-the-weighing-room/" class="archive-item">
+    <div class="archive-item__number">131</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">June 09, 2026</span>
+      <h3 class="archive-item__title">The Weighing Room</h3>
+      <p class="archive-item__excerpt">You fold the receipt into smaller and smaller squares as the queue shuffles forward. It’s your third shift at the transit hub’s underlevel, where the ...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Underground Networks</span><span class="archive-item__genre" title="Moral fable disguised as a very specific modern problem">Moral fable disguised as a very specific modern problem</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-06-08-the-lunchbox-archive/" class="archive-item">
     <div class="archive-item__number">130</div>
     <div class="archive-item__content">
