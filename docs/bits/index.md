@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-06-10-the-ledger-of-breath/" class="archive-item">
+    <div class="archive-item__number">132</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">June 10, 2026</span>
+      <h3 class="archive-item__title">The Ledger of Breath</h3>
+      <p class="archive-item__excerpt">We arrive late again, the clinic door’s brass bell clanging like a warning we ignore. The night nurse, Mabel, is already hunched over the Ledger, her ...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Biological Computing</span><span class="archive-item__genre" title="Character study where the strange thing stays partly offstage">Character study where the strange thing stays partly offstage</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-06-09-the-weighing-room/" class="archive-item">
     <div class="archive-item__number">131</div>
     <div class="archive-item__content">
