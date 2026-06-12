@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-06-12-edition-134/" class="archive-item">
+    <div class="archive-item__number">134</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">June 12, 2026</span>
+      <h3 class="archive-item__title">Edition #134</h3>
+      <p class="archive-item__excerpt">Recursive Realities · The pen spat ink like a dying squid, smearing the tag for the third time that shift. Lila jabbed it toward the crumpled garment—some executive’s silk blouse, pr...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Recursive Realities</span><span class="archive-item__genre" title="Noir-ish social observation rather than detective plotting">Noir-ish social observation rather than detective plotting</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-06-11-edition-133/" class="archive-item">
     <div class="archive-item__number">133</div>
     <div class="archive-item__content">

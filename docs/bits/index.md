@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-06-12-the-delayed-tag/" class="archive-item">
+    <div class="archive-item__number">134</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">June 12, 2026</span>
+      <h3 class="archive-item__title">The Delayed Tag</h3>
+      <p class="archive-item__excerpt">The pen spat ink like a dying squid, smearing the tag for the third time that shift. Lila jabbed it toward the crumpled garment—some executive’s silk ...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Recursive Realities</span><span class="archive-item__genre" title="Noir-ish social observation rather than detective plotting">Noir-ish social observation rather than detective plotting</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-06-11-the-third-version/" class="archive-item">
     <div class="archive-item__number">133</div>
     <div class="archive-item__content">

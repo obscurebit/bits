@@ -1,8 +1,11 @@
 {
   "date": "2026-06-12",
   "links_file": "docs/links/posts/2026-06-12-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-06-12T10:51:16Z",
+  "published_links_file": "docs/links/posts/2026-06-12-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-06-12-the-delayed-tag.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-06-12-the-delayed-tag.md",
   "theme": "recursive realities",
-  "updated_at": "2026-06-11T10:46:33Z"
+  "updated_at": "2026-06-12T10:22:19Z"
 }
