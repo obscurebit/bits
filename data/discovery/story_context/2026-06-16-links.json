@@ -1,0 +1,59 @@
+{
+  "date": "2026-06-16",
+  "theme": "biological computing",
+  "links_direction": "biocomputing research, DNA data storage, organic electronics",
+  "motifs": [
+    "Computing",
+    "Models",
+    "Organic",
+    "Figure",
+    "Molecular",
+    "Materials",
+    "Rotaxane",
+    "100 nm",
+    "Biology",
+    "Synthetic",
+    "30 billion",
+    "in 2011"
+  ],
+  "interesting_bits": [
+    "100 nm",
+    "30 billion",
+    "in 2011"
+  ],
+  "links": [
+    {
+      "title": "Broader Perspective: Expanding notion of Computing",
+      "url": "https://futurememes.blogspot.com/2009/05/expanding-notion-of-computing.html",
+      "concepts": [
+        "Computing",
+        "Models",
+        "Organic",
+        "Figure"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Broader Perspective: The future of computing \u2013 rotaxanes?",
+      "url": "https://futurememes.blogspot.com/2009/05/future-of-computing-rotaxanes.html",
+      "concepts": [
+        "Molecular",
+        "Materials",
+        "Rotaxane",
+        "Organic"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Broader Perspective: May 2009",
+      "url": "https://futurememes.blogspot.com/2009/05/",
+      "concepts": [
+        "Computing",
+        "Molecular",
+        "Biology",
+        "Synthetic"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}
