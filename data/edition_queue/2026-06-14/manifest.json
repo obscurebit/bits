@@ -1,8 +1,11 @@
 {
   "date": "2026-06-14",
   "links_file": "docs/links/posts/2026-06-14-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-06-14T10:10:02Z",
+  "published_links_file": "docs/links/posts/2026-06-14-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-06-14-the-wax-seal-counter.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-06-14-the-wax-seal-counter.md",
   "theme": "maintenance myths",
-  "updated_at": "2026-06-13T09:24:04Z"
+  "updated_at": "2026-06-14T09:45:00Z"
 }

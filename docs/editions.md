@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-06-14-edition-136/" class="archive-item">
+    <div class="archive-item__number">136</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">June 14, 2026</span>
+      <h3 class="archive-item__title">Edition #136</h3>
+      <p class="archive-item__excerpt">Maintenance Myths · The bleach sting in your nostrils is a clock. Three hours until your shift ends, but the queue already snakes past the folding tables, past the dented laundry b...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Maintenance Myths</span><span class="archive-item__genre" title="Character study where the strange thing stays partly offstage">Character study where the strange thing stays partly offstage</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-06-13-edition-135/" class="archive-item">
     <div class="archive-item__number">135</div>
     <div class="archive-item__content">
