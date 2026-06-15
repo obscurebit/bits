@@ -1,8 +1,11 @@
 {
   "date": "2026-06-15",
   "links_file": "docs/links/posts/2026-06-15-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-06-15T12:59:54Z",
+  "published_links_file": "docs/links/posts/2026-06-15-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-06-15-the-taremeters-complaint.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-06-15-the-taremeters-complaint.md",
   "theme": "counterfeit realities",
-  "updated_at": "2026-06-14T09:45:00Z"
+  "updated_at": "2026-06-15T12:28:02Z"
 }

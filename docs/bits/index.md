@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-06-15-the-taremeters-complaint/" class="archive-item">
+    <div class="archive-item__number">137</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">June 15, 2026</span>
+      <h3 class="archive-item__title">The Tare-Meter’s Complaint</h3>
+      <p class="archive-item__excerpt">The air in the Reclamation Shed smells like burnt hair and Tide Pods. We’re hunched over the counter, six of us, swapping earbuds to share the audiobo...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Counterfeit Realities</span><span class="archive-item__genre" title="Tender romance complicated by one impossible condition">Tender romance complicated by one impossible condition</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-06-14-the-wax-seal-counter/" class="archive-item">
     <div class="archive-item__number">136</div>
     <div class="archive-item__content">
