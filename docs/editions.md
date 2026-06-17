@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-06-17-edition-139/" class="archive-item">
+    <div class="archive-item__number">139</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">June 17, 2026</span>
+      <h3 class="archive-item__title">Edition #139</h3>
+      <p class="archive-item__excerpt">Small Gods Of Commerce · The vending machine spat out a crumpled soda can and died with a buzz, its screen flickering *TRANSACTION UNCANCELABLE*. Rosa kicked its dented side, the toe of...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Small Gods Of Commerce</span><span class="archive-item__genre" title="Caper energy at a human scale">Caper energy at a human scale</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-06-16-edition-138/" class="archive-item">
     <div class="archive-item__number">138</div>
     <div class="archive-item__content">

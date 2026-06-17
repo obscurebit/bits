@@ -1,0 +1,58 @@
+{
+  "date": "2026-06-20",
+  "theme": "digital archaeology",
+  "links_direction": "internet history, lost media, abandoned websites, web archaeology",
+  "motifs": [
+    "Text",
+    "Source",
+    "This Text",
+    "Instructors",
+    "Failure",
+    "Fail",
+    "Graham",
+    "Work",
+    "in 2011",
+    "in 2012",
+    "Digital",
+    "Archaeology"
+  ],
+  "interesting_bits": [
+    "in 2011",
+    "in 2012"
+  ],
+  "links": [
+    {
+      "title": "Instructors: How to use this text | The Open Digital Archaeology Textbook",
+      "url": "https://o-date.github.io/draft/book/instructors-how-to-use-this-text.html",
+      "concepts": [
+        "Text",
+        "Source",
+        "This Text",
+        "Instructors"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "1.5 Failing Productively | The Open Digital Archaeology Textbook",
+      "url": "https://o-date.github.io/draft/book/failing-productively.html",
+      "concepts": [
+        "Failure",
+        "Fail",
+        "Graham",
+        "Work"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Getting Started | The Open Digital Archaeology Textbook",
+      "url": "https://o-date.github.io/draft/book/getting-started.html",
+      "concepts": [
+        "Digital",
+        "Archaeology",
+        "What",
+        "Work"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}

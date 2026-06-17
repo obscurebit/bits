@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-06-17-the-jar-of-honest-receipts/" class="archive-item">
+    <div class="archive-item__number">139</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">June 17, 2026</span>
+      <h3 class="archive-item__title">The Jar of Honest Receipts</h3>
+      <p class="archive-item__excerpt">The vending machine spat out a crumpled soda can and died with a buzz, its screen flickering *TRANSACTION UNCANCELABLE*. Rosa kicked its dented side, ...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Small Gods Of Commerce</span><span class="archive-item__genre" title="Caper energy at a human scale">Caper energy at a human scale</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-06-16-the-last-tag/" class="archive-item">
     <div class="archive-item__number">138</div>
     <div class="archive-item__content">

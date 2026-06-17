@@ -10,6 +10,15 @@ description: Daily curated discoveries from the hidden corners of the web
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-06-17-daily-links/" class="archive-item archive-item--links">
+    <div class="archive-item__number">139</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">June 17, 2026</span>
+      <div class="archive-item__tags"><span class="archive-item__theme">Small Gods Of Commerce</span></div>
+    </div>
+    <span class="archive-item__category">0 Links</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-06-16-daily-links/" class="archive-item archive-item--links">
     <div class="archive-item__number">138</div>
     <div class="archive-item__content">
