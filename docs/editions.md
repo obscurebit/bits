@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-06-18-edition-140/" class="archive-item">
+    <div class="archive-item__number">140</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">June 18, 2026</span>
+      <h3 class="archive-item__title">Edition #140</h3>
+      <p class="archive-item__excerpt">Quantum Mysteries · The third time the pen spat ink onto her sleeve, Mara knew she’d be late again. The council chamber’s clock hissed as she wiped the smudge, its numbers bleeding...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Quantum Mysteries</span><span class="archive-item__genre" title="Moral fable disguised as a very specific modern problem">Moral fable disguised as a very specific modern problem</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-06-17-edition-139/" class="archive-item">
     <div class="archive-item__number">139</div>
     <div class="archive-item__content">

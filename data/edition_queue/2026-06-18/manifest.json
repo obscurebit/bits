@@ -1,8 +1,11 @@
 {
   "date": "2026-06-18",
   "links_file": "docs/links/posts/2026-06-18-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-06-18T10:58:10Z",
+  "published_links_file": "docs/links/posts/2026-06-18-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-06-18-the-intent-pen.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-06-18-the-intent-pen.md",
   "theme": "quantum mysteries",
-  "updated_at": "2026-06-17T11:06:32Z"
+  "updated_at": "2026-06-18T10:38:01Z"
 }

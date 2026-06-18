@@ -59,6 +59,11 @@
     "last_selected": "2026-02-06",
     "selected_count": 6
   },
+  "armscollectors.com": {
+    "last_seen": "2026-06-21",
+    "last_selected": "",
+    "selected_count": 0
+  },
   "arnold-neumaier.at": {
     "last_seen": "2026-06-01",
     "last_selected": "2026-04-27",
@@ -353,6 +358,11 @@
     "last_seen": "",
     "last_selected": "2026-04-10",
     "selected_count": 1
+  },
+  "grahamfoundation.org": {
+    "last_seen": "2026-06-21",
+    "last_selected": "2026-06-21",
+    "selected_count": 3
   },
   "gwern.net": {
     "last_seen": "2026-04-28",
@@ -940,7 +950,7 @@
     "selected_count": 1
   },
   "unpatentable.org": {
-    "last_seen": "2026-05-17",
+    "last_seen": "2026-06-21",
     "last_selected": "2026-05-18",
     "selected_count": 1
   },

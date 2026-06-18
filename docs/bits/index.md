@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-06-18-the-intent-pen/" class="archive-item">
+    <div class="archive-item__number">140</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">June 18, 2026</span>
+      <h3 class="archive-item__title">The Intent Pen</h3>
+      <p class="archive-item__excerpt">The third time the pen spat ink onto her sleeve, Mara knew she’d be late again. The council chamber’s clock hissed as she wiped the smudge, its number...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Quantum Mysteries</span><span class="archive-item__genre" title="Moral fable disguised as a very specific modern problem">Moral fable disguised as a very specific modern problem</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-06-17-the-jar-of-honest-receipts/" class="archive-item">
     <div class="archive-item__number">139</div>
     <div class="archive-item__content">
