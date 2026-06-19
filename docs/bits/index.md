@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-06-19-the-residual-registry/" class="archive-item">
+    <div class="archive-item__number">141</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">June 19, 2026</span>
+      <h3 class="archive-item__title">The Residual Registry</h3>
+      <p class="archive-item__excerpt">The badge cooler hums as it always has, its frost-rimmed slot exhaling condensed history onto the Formica. We’re six tonight, counting Marisol, who sl...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Forgotten Technology</span><span class="archive-item__genre" title="Character study where the strange thing stays partly offstage">Character study where the strange thing stays partly offstage</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-06-18-the-intent-pen/" class="archive-item">
     <div class="archive-item__number">140</div>
     <div class="archive-item__content">
