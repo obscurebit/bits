@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-06-20-when-the-ledger-shivered/" class="archive-item">
+    <div class="archive-item__number">142</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">June 20, 2026</span>
+      <h3 class="archive-item__title">When the Ledger Shivered</h3>
+      <p class="archive-item__excerpt">The ledger shivered in my hands like it did every third Tuesday when the committee showed up to sniff around for mistakes. Their shoes scuffed the lin...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Digital Archaeology</span><span class="archive-item__genre" title="Satire of systems, credentials, or institutional language">Satire of systems</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-06-19-the-residual-registry/" class="archive-item">
     <div class="archive-item__number">141</div>
     <div class="archive-item__content">
