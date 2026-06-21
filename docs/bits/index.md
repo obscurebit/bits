@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-06-21-the-leaning-sculptures/" class="archive-item">
+    <div class="archive-item__number">143</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">June 21, 2026</span>
+      <h3 class="archive-item__title">The Leaning Sculptures</h3>
+      <p class="archive-item__excerpt">The scale in the activities room had a crack down its left side, like a hairline fracture. It was there when I started in ’73 and still there the day ...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Industrial Byproducts</span><span class="archive-item__genre" title="Quiet literary realism with one impossible pressure point">Quiet literary realism with one impossible pressure point</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-06-20-when-the-ledger-shivered/" class="archive-item">
     <div class="archive-item__number">142</div>
     <div class="archive-item__content">

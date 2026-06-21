@@ -1,0 +1,68 @@
+---
+date: 2026-06-21
+title: "The Leaning Sculptures"
+description: "A daily AI-generated story exploring speculative fiction"
+author: "https://integrate.api.nvidia.com/v1 / nvidia/llama-3.3-nemotron-super-49b-v1.5"
+theme: "industrial byproducts"
+genre: "Quiet literary realism with one impossible pressure point"
+voice_profile: "Clean moral clarity under speculative pressure: plain sentences, exact choices, social consequence over spectacle"
+---
+
+# The Leaning Sculptures
+
+The scale in the activities room had a crack down its left side, like a hairline fracture. It was there when I started in ’73 and still there the day they bulldozed the east wing. We used it to measure the sludge—thick, iridescent muck hauled from the canal where the factory used to dump. The residents loved it. Mixed with sawdust or chopped bark, it held shape. We called it “art medium.”  
+
+I was nineteen, covering for Lorraine, who’d called in sick again. Her brother worked the night shift at the chemical plant and “borrowed” barrels. She’d trade a jar to the orderly who restocked the supply closet, or so I thought.  
+
+The scale lied. First time, it said a bucket of sludge weighed twelve pounds when it should’ve been thirty. Mrs. Peet from 4B screamed blue murder because her sculpture collapsed. Next week, it claimed three pounds of sludge was sixty. The director made us pour it all down the sink, wasting a week’s worth. Each time the scale broke, the room got meaner. Residents ganged up on each other for “wasting” material. Nurses started locking the cabinet early.  
+
+I didn’t connect it. Thought it was stress. The scale would reset itself overnight, numbers steady until the next hiccup.  
+
+Lorraine never fixed it. She’d lean against the window, chewing gum, watching me wrestle the dials. “You’re too careful,” she said once. “It’s just mud.”  
+
+The art was good, actually. Mr. Halvorsen built a cathedral with spires that dripped. The nurses called it unsanitary. The director called it “therapeutic rebellion” until the county inspector saw a photo in the local paper.  
+
+They replaced the scale with a shiny one. No cracks. The sludge went into biohazard bags. The activities room became a storage closet.  
+
+At the holiday party, drunk on muscatel, Lorraine told me she’d sold the sludge to a sculptor in the city. “Twelve bucks a jar,” she said. “You never asked.”  
+
+I didn’t. I’d assumed she was helping her brother. Or the residents.  
+
+Years later, I saw Mr. Halvorsen’s cathedral in a gallery. Labeled “Upcycled Industrial Waste, 1974.” The plaque called it “a testament to community resilience.”  
+
+I emailed the curator. Asked if they knew where the sludge came from.  
+
+She wrote back: *“The artist mentioned a worker who diverted it. Said she had a boyfriend who ‘handled disposal.’”*  
+
+I never told Lorraine about the email.  
+
+The scale’s crack was a seam for mercury, I think. Leaked from the factory’s old tanks. It wouldn’t kill you quick, but it’d loosen your teeth, blur your vision. The kind of slow poison that looks like regret.  
+
+At my reunion, I asked Mrs. Peet’s niece if she knew why her aunt stopped making art.  
+
+“She said the room smelled like lies,” she said. “Swore the walls were getting heavier.”  
+
+I nodded. Like I knew.  
+
+The last time I saw Lorraine, she was managing a Denny’s in Tucson. Called me “teacher’s pet” and poured coffee like she’d never mixed sludge in her socks.  
+
+I didn’t mention the scale.  
+
+It’s gone now. Everything’s gone.  
+
+But sometimes, I dream in weights. Twelve pounds. Sixty. Thirty. The numbers don’t match, but the cathedral stands.  
+
+Lorraine never asked what happened to the residents.  
+
+Neither did I.
+
+---
+
+<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem;">
+  <button class="share-btn" data-url="{% raw %}{{ page.canonical_url }}{% endraw %}" data-title="The Leaning Sculptures">
+    Share this story
+  </button>
+  <a href="https://github.com/obscurebit/b1ts/tree/81abe28" target="_blank" rel="noopener" class="story-gen-link">
+    gen:81abe28
+  </a>
+</div>
