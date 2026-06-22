@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-06-22-the-couriers-ledger/" class="archive-item">
+    <div class="archive-item__number">144</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">June 22, 2026</span>
+      <h3 class="archive-item__title">The Courier’s Ledger</h3>
+      <p class="archive-item__excerpt">Harold adjusted his cap as the depot clock bonged six. His badge—a brass plaque the size of a playing card, pinned to his chest—itched with fresh ink....</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Time Anomalies</span><span class="archive-item__genre" title="Character study where the strange thing stays partly offstage">Character study where the strange thing stays partly offstage</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-06-21-the-leaning-sculptures/" class="archive-item">
     <div class="archive-item__number">143</div>
     <div class="archive-item__content">
