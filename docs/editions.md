@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-06-23-edition-145/" class="archive-item">
+    <div class="archive-item__number">145</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">June 23, 2026</span>
+      <h3 class="archive-item__title">Edition #145</h3>
+      <p class="archive-item__excerpt">Parallel Dimensions · Verna tightened the bolt on the ledger’s power conduit under the council table, her wrench slipping twice before catching. Above her, voices sharpened. “The rec...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Parallel Dimensions</span><span class="archive-item__genre" title="Caper energy at a human scale">Caper energy at a human scale</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-06-22-edition-144/" class="archive-item">
     <div class="archive-item__number">144</div>
     <div class="archive-item__content">

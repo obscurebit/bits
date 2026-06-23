@@ -1,0 +1,54 @@
+{
+  "date": "2026-06-26",
+  "theme": "digital archaeology",
+  "links_direction": "internet history, lost media, abandoned websites, web archaeology",
+  "motifs": [
+    "Hypothesis",
+    "Annotations",
+    "Text",
+    "Please",
+    "Digital",
+    "Mobilizing",
+    "Past",
+    "Digital Future",
+    "Perhaps",
+    "Github",
+    "Since"
+  ],
+  "interesting_bits": [],
+  "links": [
+    {
+      "title": "Students: How to use this text | The Open Digital Archaeology Textbook",
+      "url": "https://o-date.github.io/draft/book/students-how-to-use-this-text.html",
+      "concepts": [
+        "Hypothesis",
+        "Annotations",
+        "Text",
+        "Please"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Mobilizing the Past for a Digital Future: The Potential of Digital Archaeology \u2013 The Digital Press at the University of North Dakota",
+      "url": "https://thedigitalpress.org/portfolio/mobilizing-the-past-for-a-digital-future/",
+      "concepts": [
+        "Digital",
+        "Mobilizing",
+        "Past",
+        "Digital Future"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "How to contribute changes, or make your own version | The Open Digital Archaeology Textbook",
+      "url": "https://o-date.github.io/draft/book/how-to-contribute-changes-or-make-your-own-version.html",
+      "concepts": [
+        "Text",
+        "Perhaps",
+        "Github",
+        "Since"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}
