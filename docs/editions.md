@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-06-24-edition-146/" class="archive-item">
+    <div class="archive-item__number">146</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">June 24, 2026</span>
+      <h3 class="archive-item__title">Edition #146</h3>
+      <p class="archive-item__excerpt">Synthetic Life · The checkpoint was always loud but never musical. Fans wheezed. People shouted over paperwork. The air smelled of fried oil and synthetic leather. Lila, tempora...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Synthetic Life</span><span class="archive-item__genre" title="Quiet literary realism with one impossible pressure point">Quiet literary realism with one impossible pressure point</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-06-23-edition-145/" class="archive-item">
     <div class="archive-item__number">145</div>
     <div class="archive-item__content">

@@ -1,8 +1,11 @@
 {
   "date": "2026-06-24",
   "links_file": "docs/links/posts/2026-06-24-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-06-24T09:48:35Z",
+  "published_links_file": "docs/links/posts/2026-06-24-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-06-24-the-last-claim-drawer.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-06-24-the-last-claim-drawer.md",
   "theme": "synthetic life",
-  "updated_at": "2026-06-23T09:52:35Z"
+  "updated_at": "2026-06-24T09:39:54Z"
 }

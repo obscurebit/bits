@@ -1,0 +1,60 @@
+{
+  "date": "2026-06-27",
+  "theme": "digital archaeology",
+  "links_direction": "internet history, lost media, abandoned websites, web archaeology",
+  "motifs": [
+    "Digital",
+    "Projects",
+    "What",
+    "Digital Scholarship",
+    "10 years",
+    "4 years",
+    "in 2015",
+    "Archaeology",
+    "The Digital Press",
+    "Book",
+    "Graham",
+    "Practical Necromancy"
+  ],
+  "interesting_bits": [
+    "10 years",
+    "4 years",
+    "in 2015",
+    "in 2019"
+  ],
+  "links": [
+    {
+      "title": "The Final Death(s) of Digital Scholarship\u00e2\u0080\u0094An Ongoing Case Study of DH2005 Projects \u00e2\u0080\u00a2 Robin Camille Davis \u00e2\u0080\u00a2",
+      "url": "https://www.robincamille.com/presentations/death_of_digital_scholarship/",
+      "concepts": [
+        "Digital",
+        "Projects",
+        "What",
+        "Digital Scholarship"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Archaeology at the Digital Press \u2013 The Digital Press at the University of North Dakota",
+      "url": "https://thedigitalpress.org/2017/03/15/archaeology-at-the-digital-press/",
+      "concepts": [
+        "Digital",
+        "Archaeology",
+        "The Digital Press",
+        "Book"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "NEW BOOK DAY: Practical Necromancy for Beginners \u2013 The Digital Press at the University of North Dakota",
+      "url": "https://thedigitalpress.org/2025/09/23/new-book-day-practical-necromancy-for-beginners/",
+      "concepts": [
+        "Graham",
+        "Book",
+        "Practical Necromancy",
+        "Failing Gloriously"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}

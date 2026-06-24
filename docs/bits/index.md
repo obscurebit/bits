@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-06-24-the-last-claim-drawer/" class="archive-item">
+    <div class="archive-item__number">146</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">June 24, 2026</span>
+      <h3 class="archive-item__title">The Last Claim Drawer</h3>
+      <p class="archive-item__excerpt">The checkpoint was always loud but never musical. Fans wheezed. People shouted over paperwork. The air smelled of fried oil and synthetic leather. Lil...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Synthetic Life</span><span class="archive-item__genre" title="Quiet literary realism with one impossible pressure point">Quiet literary realism with one impossible pressure point</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-06-23-the-adjusted-ledger/" class="archive-item">
     <div class="archive-item__number">145</div>
     <div class="archive-item__content">
