@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-06-25-the-thermos-of-quiet/" class="archive-item">
+    <div class="archive-item__number">147</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">June 25, 2026</span>
+      <h3 class="archive-item__title">The Thermos of Quiet</h3>
+      <p class="archive-item__excerpt">The tang of burnt coffee grounds clung to Nadia’s fingers as she poured the dregs into her chipped thermos. The community center’s ancient heater groa...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Cryptographic Secrets</span><span class="archive-item__genre" title="Domestic drama bent by one technological or metaphysical fact">Domestic drama bent by one technological or metaphysical fact</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-06-24-the-last-claim-drawer/" class="archive-item">
     <div class="archive-item__number">146</div>
     <div class="archive-item__content">

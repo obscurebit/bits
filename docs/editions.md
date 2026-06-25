@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-06-25-edition-147/" class="archive-item">
+    <div class="archive-item__number">147</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">June 25, 2026</span>
+      <h3 class="archive-item__title">Edition #147</h3>
+      <p class="archive-item__excerpt">Cryptographic Secrets · The tang of burnt coffee grounds clung to Nadia’s fingers as she poured the dregs into her chipped thermos. The community center’s ancient heater groaned, its r...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Cryptographic Secrets</span><span class="archive-item__genre" title="Domestic drama bent by one technological or metaphysical fact">Domestic drama bent by one technological or metaphysical fact</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-06-24-edition-146/" class="archive-item">
     <div class="archive-item__number">146</div>
     <div class="archive-item__content">

@@ -1,8 +1,11 @@
 {
   "date": "2026-06-25",
   "links_file": "docs/links/posts/2026-06-25-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-06-25T09:56:44Z",
+  "published_links_file": "docs/links/posts/2026-06-25-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-06-25-the-thermos-of-quiet.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-06-25-the-thermos-of-quiet.md",
   "theme": "cryptographic secrets",
-  "updated_at": "2026-06-24T09:39:54Z"
+  "updated_at": "2026-06-25T09:32:39Z"
 }
