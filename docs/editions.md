@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-06-26-edition-148/" class="archive-item">
+    <div class="archive-item__number">148</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">June 26, 2026</span>
+      <h3 class="archive-item__title">Edition #148</h3>
+      <p class="archive-item__excerpt">Digital Archaeology · Posted Notice: *All digital estates must be reconciled within thirty days of abandonment. Failure to comply incurs a dust tax levied against the nearest living...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Digital Archaeology</span><span class="archive-item__genre" title="Domestic drama bent by one technological or metaphysical fact">Domestic drama bent by one technological or metaphysical fact</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-06-25-edition-147/" class="archive-item">
     <div class="archive-item__number">147</div>
     <div class="archive-item__content">

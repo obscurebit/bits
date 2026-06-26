@@ -1,8 +1,11 @@
 {
   "date": "2026-06-26",
   "links_file": "docs/links/posts/2026-06-26-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-06-26T10:10:17Z",
+  "published_links_file": "docs/links/posts/2026-06-26-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-06-26-the-dust-tax.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-06-26-the-dust-tax.md",
   "theme": "digital archaeology",
-  "updated_at": "2026-06-25T09:32:39Z"
+  "updated_at": "2026-06-26T09:37:22Z"
 }
