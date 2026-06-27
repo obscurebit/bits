@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-06-27-edition-149/" class="archive-item">
+    <div class="archive-item__number">149</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">June 27, 2026</span>
+      <h3 class="archive-item__title">Edition #149</h3>
+      <p class="archive-item__excerpt">Digital Archaeology · The yellow printer in the back of Halberd’s Appliance Repair spat out another fault log, its thermal paper curling like a tongue. Mervyn snatched it before it c...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Digital Archaeology</span><span class="archive-item__genre" title="Quiet literary realism with one impossible pressure point">Quiet literary realism with one impossible pressure point</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-06-26-edition-148/" class="archive-item">
     <div class="archive-item__number">148</div>
     <div class="archive-item__content">

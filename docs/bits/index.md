@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-06-27-the-fault-log/" class="archive-item">
+    <div class="archive-item__number">149</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">June 27, 2026</span>
+      <h3 class="archive-item__title">The Fault Log</h3>
+      <p class="archive-item__excerpt">The yellow printer in the back of Halberd’s Appliance Repair spat out another fault log, its thermal paper curling like a tongue. Mervyn snatched it b...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Digital Archaeology</span><span class="archive-item__genre" title="Quiet literary realism with one impossible pressure point">Quiet literary realism with one impossible pressure point</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-06-26-the-dust-tax/" class="archive-item">
     <div class="archive-item__number">148</div>
     <div class="archive-item__content">

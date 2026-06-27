@@ -1,8 +1,11 @@
 {
   "date": "2026-06-27",
   "links_file": "docs/links/posts/2026-06-27-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-06-27T08:54:42Z",
+  "published_links_file": "docs/links/posts/2026-06-27-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-06-27-the-fault-log.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-06-27-the-fault-log.md",
   "theme": "digital archaeology",
-  "updated_at": "2026-06-26T09:37:22Z"
+  "updated_at": "2026-06-27T08:43:07Z"
 }

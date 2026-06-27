@@ -1,0 +1,60 @@
+{
+  "date": "2026-06-30",
+  "theme": "vacant frequencies",
+  "links_direction": "obsolete radio protocols, defunct alert systems, analog communication archives",
+  "motifs": [
+    "Shortwave",
+    "Radio",
+    "Band",
+    "Frequency",
+    "\". In reality, the definition of the \"",
+    "\" frequency band is a mess, and therefore the \"",
+    "10.0 m",
+    "Paper",
+    "Just",
+    "Think",
+    "Voting",
+    "in 2000"
+  ],
+  "interesting_bits": [
+    "\". In reality, the definition of the \"",
+    "\" frequency band is a mess, and therefore the \"",
+    "10.0 m",
+    "in 2000"
+  ],
+  "links": [
+    {
+      "title": "Shortwave radio - Alchetron, The Free Social Encyclopedia",
+      "url": "https://alchetron.com/Shortwave-radio",
+      "concepts": [
+        "Shortwave",
+        "Radio",
+        "Band",
+        "Frequency"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Think Tank Bashes Paper Trails For E-Voting | Techdirt",
+      "url": "https://www.techdirt.com/2007/09/19/think-tank-bashes-paper-trails-for-e-voting/",
+      "concepts": [
+        "Paper",
+        "Just",
+        "Think",
+        "Voting"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Webinar on Tools and Solutions for Analog IP Migration - SemiWiki",
+      "url": "https://semiwiki.com/eda/muneda/283771-webinar-on-tools-and-solutions-for-analog-ip-migration/",
+      "concepts": [
+        "Muneda",
+        "Analog",
+        "Webinar",
+        "Michael"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}
