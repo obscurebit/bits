@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-06-28-edition-150/" class="archive-item">
+    <div class="archive-item__number">150</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">June 28, 2026</span>
+      <h3 class="archive-item__title">Edition #150</h3>
+      <p class="archive-item__excerpt">Emergent Intelligence · The scanner never lied, but it didn’t tell the whole truth either. That was my job.</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Emergent Intelligence</span><span class="archive-item__genre" title="Quiet literary realism with one impossible pressure point">Quiet literary realism with one impossible pressure point</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-06-27-edition-149/" class="archive-item">
     <div class="archive-item__number">149</div>
     <div class="archive-item__content">
