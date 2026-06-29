@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-06-29-edition-151/" class="archive-item">
+    <div class="archive-item__number">151</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">June 29, 2026</span>
+      <h3 class="archive-item__title">Edition #151</h3>
+      <p class="archive-item__excerpt">Memory Manipulation · The notice hung above the filing cabinets in smudged mimeograph print: *ALL MEMORY ADJUSTMENTS REQUIRE A DEPOSIT OF EQUAL WEIGHT. NO EXCEPTIONS.* I restocked th...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Memory Manipulation</span><span class="archive-item__genre" title="Quiet literary realism with one impossible pressure point">Quiet literary realism with one impossible pressure point</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-06-28-edition-150/" class="archive-item">
     <div class="archive-item__number">150</div>
     <div class="archive-item__content">
