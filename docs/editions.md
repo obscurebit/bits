@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-06-30-edition-152/" class="archive-item">
+    <div class="archive-item__number">152</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">June 30, 2026</span>
+      <h3 class="archive-item__title">Edition #152</h3>
+      <p class="archive-item__excerpt">Vacant Frequencies · Mara squeezed between the humming utility carts in the maintenance corridor, her toolbox bumping her thigh with each step. The request had seemed simple: retrie...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Vacant Frequencies</span><span class="archive-item__genre" title="Moral fable disguised as a very specific modern problem">Moral fable disguised as a very specific modern problem</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-06-29-edition-151/" class="archive-item">
     <div class="archive-item__number">151</div>
     <div class="archive-item__content">

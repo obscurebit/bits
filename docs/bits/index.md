@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-06-30-the-frequency-jar/" class="archive-item">
+    <div class="archive-item__number">152</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">June 30, 2026</span>
+      <h3 class="archive-item__title">The Frequency Jar</h3>
+      <p class="archive-item__excerpt">Mara squeezed between the humming utility carts in the maintenance corridor, her toolbox bumping her thigh with each step. The request had seemed simp...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Vacant Frequencies</span><span class="archive-item__genre" title="Moral fable disguised as a very specific modern problem">Moral fable disguised as a very specific modern problem</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-06-29-the-adjustment-ledger/" class="archive-item">
     <div class="archive-item__number">151</div>
     <div class="archive-item__content">

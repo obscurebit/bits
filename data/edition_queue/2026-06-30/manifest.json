@@ -1,8 +1,11 @@
 {
   "date": "2026-06-30",
   "links_file": "docs/links/posts/2026-06-30-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-06-30T10:25:15Z",
+  "published_links_file": "docs/links/posts/2026-06-30-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-06-30-the-frequency-jar.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-06-30-the-frequency-jar.md",
   "theme": "vacant frequencies",
-  "updated_at": "2026-06-29T11:10:04Z"
+  "updated_at": "2026-06-30T09:50:06Z"
 }
