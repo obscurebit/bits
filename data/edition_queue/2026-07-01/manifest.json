@@ -1,8 +1,11 @@
 {
   "date": "2026-07-01",
   "links_file": "docs/links/posts/2026-07-01-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-07-01T10:25:53Z",
+  "published_links_file": "docs/links/posts/2026-07-01-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-07-01-the-good-book.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-07-01-the-good-book.md",
   "theme": "underground networks",
-  "updated_at": "2026-06-30T09:50:06Z"
+  "updated_at": "2026-07-01T09:59:02Z"
 }

@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-07-01-the-good-book/" class="archive-item">
+    <div class="archive-item__number">153</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">July 01, 2026</span>
+      <h3 class="archive-item__title">The Good Book</h3>
+      <p class="archive-item__excerpt">"We didn’t need the book to tell us Mrs. Halvorsen was in trouble. But there it was, the coupon torn clean, sitting on the counter like a verdict."</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Underground Networks</span><span class="archive-item__genre" title="Noir-ish social observation rather than detective plotting">Noir-ish social observation rather than detective plotting</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-06-30-the-frequency-jar/" class="archive-item">
     <div class="archive-item__number">152</div>
     <div class="archive-item__content">
