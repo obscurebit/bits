@@ -1,0 +1,54 @@
+---
+date: 2026-07-02
+title: "The Hydrangea Protocol"
+description: "A daily AI-generated story exploring speculative fiction"
+author: "https://integrate.api.nvidia.com/v1 / nvidia/llama-3.3-nemotron-super-49b-v1.5"
+theme: "biological computing"
+genre: "Noir-ish social observation rather than detective plotting"
+voice_profile: "Mournful archival voice without nostalgia: preservation is practical, partial, and morally complicated"
+---
+
+# The Hydrangea Protocol
+
+Mabel burst into the clinic’s rear garden twenty minutes past dawn, her apron stained with yesterday’s soup and her shoes caked in the clay she’d promised old Mrs. Peet she’d avoid. The hydrangeas were screaming again—purple petals curling like fists, their color too vivid, too loud, which meant the potassium levels in the ward’s IV drips were off. Again. The garden’s sensors, buried in the soil like coffin nails, had stopped syncing with the clinic’s machines two days prior. Now the flowers lied for her.  
+
+She knelt, ignoring the throb in her knees, and jabbed a pH strip into the dirt. The chart taped to the greenhouse wall—the one that updated itself only when someone told a lie they thought was kind—had shifted overnight. *Water heavily at dawn*, it now read, though the soil was already slick with morning dew. A lie, then. Someone had come by earlier and murmured a falsehood to the paper, maybe the night nurse claiming the garden “looked robust” to keep the higher-ups from fussing. Mabel tucked the strip into her pocket. She’d dilute the fertilizer herself. Let the chart gasp its blue lies.  
+
+Inside, the hallway smelled of iodine and burnt toast. Frank was already there, hunched by the medication cart, his tie knotted too tight. “Took you long enough,” he muttered. “They’re asking about the Ward 3 biometrics.”  
+
+Mabel didn’t slow. “Tell them the numbers are fine. The *flowers* say so.”  
+
+“They’re asking about the money, Mabel.” He caught her arm. “The trust fund audit. You know what happens if they find out the system’s been—”  
+
+“End of day, Frank,” she said, peeling his fingers off. “I’ll have the cash by then. Just keep the chart happy.”  
+
+He let her go. Of course he did. Frank wanted justice, whatever that meant. Mabel wanted her daughter’s school fees paid. End of day.  
+
+The chart in the nurse’s station had changed again by noon. *Cease irrigation for 48 hours*. A new lie, this one from the matron who’d visited at breakfast, cooing about “how drought-resistant those blooms looked.” Mabel stared at the paper until her eyes blurred. Without water, the hydrangeas would wilt, their roots sending a panic up the sensors into the patients’ monitors. Machines would wail. Doctors would come. They’d find the rot in the system—the way the garden’s code had frayed, how the lies in the chart were the only thing holding it together.  
+
+She found a boy from the janitor’s closet and sent him to the supply room for distilled water. “And a trowel,” she added. “The kind that doesn’t bend.”  
+
+At dusk, she dug.  
+
+The patients slept, pumped full of sedatives and half-truths. Mabel worked the trowel into the garden’s edge, slicing the sensor cables one by one. The chart in the station shuddered, ink swirling like inkblot tests. *Reinitialize protocol*, it pleaded. *Reinitialize protocol*.  
+
+Frank appeared, breathless. “You’re killing them,” he said.  
+
+“No,” she said. “I’m killing the lie.”  
+
+The hydrangeas bloomed on schedule that night, petals the color of a bruise not quite healed. Mabel sat on the clinic steps, trowel in hand, and watched the chart disintegrate to ash.  
+
+The money never came.  
+
+But the flowers, for once, told no one’s lie but their own.
+
+---
+
+<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem;">
+  <button class="share-btn" data-url="{% raw %}{{ page.canonical_url }}{% endraw %}" data-title="The Hydrangea Protocol">
+    Share this story
+  </button>
+  <a href="https://github.com/obscurebit/b1ts/tree/0ebe3b2" target="_blank" rel="noopener" class="story-gen-link">
+    gen:0ebe3b2
+  </a>
+</div>

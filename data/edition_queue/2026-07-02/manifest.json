@@ -1,8 +1,11 @@
 {
   "date": "2026-07-02",
   "links_file": "docs/links/posts/2026-07-02-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-07-02T10:01:43Z",
+  "published_links_file": "docs/links/posts/2026-07-02-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-07-02-the-hydrangea-protocol.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-07-02-the-hydrangea-protocol.md",
   "theme": "biological computing",
-  "updated_at": "2026-07-01T09:59:02Z"
+  "updated_at": "2026-07-02T09:21:54Z"
 }

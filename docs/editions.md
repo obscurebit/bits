@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-07-02-edition-154/" class="archive-item">
+    <div class="archive-item__number">154</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">July 02, 2026</span>
+      <h3 class="archive-item__title">Edition #154</h3>
+      <p class="archive-item__excerpt">Biological Computing · Mabel burst into the clinic’s rear garden twenty minutes past dawn, her apron stained with yesterday’s soup and her shoes caked in the clay she’d promised old M...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Biological Computing</span><span class="archive-item__genre" title="Noir-ish social observation rather than detective plotting">Noir-ish social observation rather than detective plotting</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-07-01-edition-153/" class="archive-item">
     <div class="archive-item__number">153</div>
     <div class="archive-item__content">
