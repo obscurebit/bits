@@ -1,8 +1,11 @@
 {
   "date": "2026-07-03",
   "links_file": "docs/links/posts/2026-07-03-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-07-03T09:51:32Z",
+  "published_links_file": "docs/links/posts/2026-07-03-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-07-03-the-logbook-of-minor-grievances.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-07-03-the-logbook-of-minor-grievances.md",
   "theme": "signal from nowhere",
-  "updated_at": "2026-07-02T09:21:54Z"
+  "updated_at": "2026-07-03T09:26:49Z"
 }

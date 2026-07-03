@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-07-03-the-logbook-of-minor-grievances/" class="archive-item">
+    <div class="archive-item__number">155</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">July 03, 2026</span>
+      <h3 class="archive-item__title">The Logbook of Minor Grievances</h3>
+      <p class="archive-item__excerpt">"You’re still here?" says the man in the chipped yellow raincoat, his voice a file stripping paint. He stands at the intake desk, one finger pressed t...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Signal From Nowhere</span><span class="archive-item__genre" title="Noir-ish social observation rather than detective plotting">Noir-ish social observation rather than detective plotting</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-07-02-the-hydrangea-protocol/" class="archive-item">
     <div class="archive-item__number">154</div>
     <div class="archive-item__content">
