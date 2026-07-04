@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-07-04-edition-156/" class="archive-item">
+    <div class="archive-item__number">156</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">July 04, 2026</span>
+      <h3 class="archive-item__title">Edition #156</h3>
+      <p class="archive-item__excerpt">Signal From Nowhere · The municipal garden smelled of wet concrete and stubborn petrichor after every rain. This was the third week the tulips had refused to bloom, and the man from...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Signal From Nowhere</span><span class="archive-item__genre" title="Quiet literary realism with one impossible pressure point">Quiet literary realism with one impossible pressure point</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-07-03-edition-155/" class="archive-item">
     <div class="archive-item__number">155</div>
     <div class="archive-item__content">

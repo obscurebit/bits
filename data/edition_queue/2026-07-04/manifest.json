@@ -1,8 +1,11 @@
 {
   "date": "2026-07-04",
   "links_file": "docs/links/posts/2026-07-04-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-07-04T09:11:30Z",
+  "published_links_file": "docs/links/posts/2026-07-04-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-07-04-the-soil-meter.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-07-04-the-soil-meter.md",
   "theme": "signal from nowhere",
-  "updated_at": "2026-07-03T09:26:49Z"
+  "updated_at": "2026-07-04T08:44:39Z"
 }

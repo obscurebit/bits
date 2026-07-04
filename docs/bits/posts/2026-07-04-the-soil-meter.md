@@ -1,0 +1,58 @@
+---
+date: 2026-07-04
+title: "The Soil Meter"
+description: "A daily AI-generated story exploring speculative fiction"
+author: "https://integrate.api.nvidia.com/v1 / nvidia/llama-3.3-nemotron-super-49b-v1.5"
+theme: "signal from nowhere"
+genre: "Quiet literary realism with one impossible pressure point"
+voice_profile: "Soft uncanny pastoral: plants, weather, soil, animals, and seasonal routines bend quietly out of sense"
+---
+
+# The Soil Meter
+
+The municipal garden smelled of wet concrete and stubborn petrichor after every rain. This was the third week the tulips had refused to bloom, and the man from the water department kept submitting his forms in triplicate, as if extra paper might shame the soil into compliance.  
+
+Gwen adjusted the bent soil meter on her desk—a dented relic from the ’47 expansion, its wires frayed into a nest that hummed when rainy. The meter didn’t measure pH or nutrients. It measured need. If you needed the answer it gave, it would show you the hidden tap behind the hydrant, the cracked sewer line under the mayor’s rosebed. If you didn’t, it just displayed the mayor’s golf score from 1963, which everyone agreed was a deeply unhelpful number.  
+
+“Same issue,” said the water man, sliding his forms across the counter. His name was Hal, and his tie always hung like a noose. “The pipes groan at night. My wife won’t sleep.”  
+
+Gwen thumbed the meter. It buzzed, then projected a map onto the blotter: a serpent of blue light coiled under Hal’s district. “You need a listener,” she said. “Not a plumber.”  
+
+Hal blinked. “A what?”  
+
+The mayor’s secretary, a woman who wore gloves indoors and called everyone “dear,” leaned over his shoulder. “The old workaround,” she hissed. “She’s not *allowed* to tell you.”  
+
+Gwen wasn’t, technically. The 1952 agreement had been clear: *Only those who understand the process may redirect the flow.* But the mayor had retired, the agreement buried under newer paper, and now the secretary’s nephew managed the archives. He’d sold the binding machine to a junk dealer in Akron.  
+
+Hal’s forms began to smolder. The meter was getting insistent.  
+
+“You need to dig where the lilacs won’t grow,” Gwen said, because the meter was vibrating hard enough to shake her teeth. “There’s a valve there. Turn it clockwise while whistling ‘Land of Hope and Glory.’”  
+
+Hal stared. The secretary snorted. “That’s the mayor’s mother’s favorite song.”  
+
+“It’s the only one the valve recognizes,” Gwen said.  
+
+The water man left. The secretary lingered. “You’re still using *that*?” She nodded at the meter. “It’ll get you fired.”  
+
+“Probably,” Gwen said. The meter dimmed, its work done. Hal would find the valve. The lilacs would die, but his wife would sleep. The mayor would never know.  
+
+The secretary’s gloves creaked. “Why do you bother?”  
+
+Gwen didn’t answer. She was watching the garden, where the non-blooming tulips shivered in the rain. The meter had shown her the valve, but it had also shown her the mayor’s wife’s letters to the gardener, the ones buried in the soil with the cuttings. The mayor had planted the lilacs himself, after the affair.  
+
+The secretary left. Gwen filed Hal’s forms in the circular bin. The meter hummed back to sleep.  
+
+When the rain came again, the garden smelled the same—wet concrete, petrichor, the faintest note of petrol. But the tulips were still closed, and the lilacs, Gwen noticed, had learned to bend away from the wind.  
+
+She planted the meter in the bed of marigolds and waited for the earth to lie again.
+
+---
+
+<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem;">
+  <button class="share-btn" data-url="{% raw %}{{ page.canonical_url }}{% endraw %}" data-title="The Soil Meter">
+    Share this story
+  </button>
+  <a href="https://github.com/obscurebit/b1ts/tree/be8ab14" target="_blank" rel="noopener" class="story-gen-link">
+    gen:be8ab14
+  </a>
+</div>
