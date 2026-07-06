@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-07-06-edition-158/" class="archive-item">
+    <div class="archive-item__number">158</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">July 06, 2026</span>
+      <h3 class="archive-item__title">Edition #158</h3>
+      <p class="archive-item__excerpt">Maintenance Myths · We kept the building running on a schedule we all knew was a lie.</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Maintenance Myths</span><span class="archive-item__genre" title="Tender romance complicated by one impossible condition">Tender romance complicated by one impossible condition</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-07-05-edition-157/" class="archive-item">
     <div class="archive-item__number">157</div>
     <div class="archive-item__content">

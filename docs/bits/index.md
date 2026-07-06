@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-07-06-maintenance-tag-217b/" class="archive-item">
+    <div class="archive-item__number">158</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">July 06, 2026</span>
+      <h3 class="archive-item__title">Maintenance Tag 217B</h3>
+      <p class="archive-item__excerpt">We kept the building running on a schedule we all knew was a lie.</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Maintenance Myths</span><span class="archive-item__genre" title="Tender romance complicated by one impossible condition">Tender romance complicated by one impossible condition</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-07-05-the-redaction-fence/" class="archive-item">
     <div class="archive-item__number">157</div>
     <div class="archive-item__content">
