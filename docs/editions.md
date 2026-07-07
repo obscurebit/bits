@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-07-07-edition-159/" class="archive-item">
+    <div class="archive-item__number">159</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">July 07, 2026</span>
+      <h3 class="archive-item__title">Edition #159</h3>
+      <p class="archive-item__excerpt">Counterfeit Realities · A notice hung above the filing cabinets, its letters faded but legible: *All documents pertaining to civic continuity must bear the Wax Seal of Usual Practice b...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Counterfeit Realities</span><span class="archive-item__genre" title="Satire of systems, credentials, or institutional language">Satire of systems</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-07-06-edition-158/" class="archive-item">
     <div class="archive-item__number">158</div>
     <div class="archive-item__content">

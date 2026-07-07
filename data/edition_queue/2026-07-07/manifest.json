@@ -1,8 +1,11 @@
 {
   "date": "2026-07-07",
   "links_file": "docs/links/posts/2026-07-07-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-07-07T10:30:16Z",
+  "published_links_file": "docs/links/posts/2026-07-07-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-07-07-the-wax-seal-of-usual-practice.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-07-07-the-wax-seal-of-usual-practice.md",
   "theme": "counterfeit realities",
-  "updated_at": "2026-07-06T10:48:29Z"
+  "updated_at": "2026-07-07T09:51:22Z"
 }
