@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-07-08-the-apology-coin/" class="archive-item">
+    <div class="archive-item__number">160</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">July 08, 2026</span>
+      <h3 class="archive-item__title">The Apology Coin</h3>
+      <p class="archive-item__excerpt">Greta adjusted her municipal lanyard and stared at the damp spot on her desk where her brother’s elbow had rested. “It’s not even a real favor,” he’d ...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Municipal Weirdness</span><span class="archive-item__genre" title="Moral fable disguised as a very specific modern problem">Moral fable disguised as a very specific modern problem</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-07-07-the-wax-seal-of-usual-practice/" class="archive-item">
     <div class="archive-item__number">159</div>
     <div class="archive-item__content">

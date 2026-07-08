@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-07-08-edition-160/" class="archive-item">
+    <div class="archive-item__number">160</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">July 08, 2026</span>
+      <h3 class="archive-item__title">Edition #160</h3>
+      <p class="archive-item__excerpt">Municipal Weirdness · Greta adjusted her municipal lanyard and stared at the damp spot on her desk where her brother’s elbow had rested. “It’s not even a real favor,” he’d said, scra...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Municipal Weirdness</span><span class="archive-item__genre" title="Moral fable disguised as a very specific modern problem">Moral fable disguised as a very specific modern problem</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-07-07-edition-159/" class="archive-item">
     <div class="archive-item__number">159</div>
     <div class="archive-item__content">

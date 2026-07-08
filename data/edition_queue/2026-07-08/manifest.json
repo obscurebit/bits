@@ -1,8 +1,11 @@
 {
   "date": "2026-07-08",
   "links_file": "docs/links/posts/2026-07-08-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-07-08T09:11:16Z",
+  "published_links_file": "docs/links/posts/2026-07-08-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-07-08-the-apology-coin.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-07-08-the-apology-coin.md",
   "theme": "municipal weirdness",
-  "updated_at": "2026-07-07T09:51:22Z"
+  "updated_at": "2026-07-08T08:36:30Z"
 }
