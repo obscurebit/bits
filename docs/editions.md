@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-07-09-edition-161/" class="archive-item">
+    <div class="archive-item__number">161</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">July 09, 2026</span>
+      <h3 class="archive-item__title">Edition #161</h3>
+      <p class="archive-item__excerpt">Small Gods Of Commerce · I stopped collecting debts the day my badge began to weep.</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Small Gods Of Commerce</span><span class="archive-item__genre" title="Noir-ish social observation rather than detective plotting">Noir-ish social observation rather than detective plotting</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-07-08-edition-160/" class="archive-item">
     <div class="archive-item__number">160</div>
     <div class="archive-item__content">

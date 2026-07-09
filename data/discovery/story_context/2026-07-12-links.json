@@ -1,0 +1,61 @@
+{
+  "date": "2026-07-12",
+  "theme": "digital archaeology",
+  "links_direction": "internet history, lost media, abandoned websites, web archaeology",
+  "motifs": [
+    "Website",
+    "The Website",
+    "Abandoned",
+    "Websites",
+    "Reply",
+    "Years",
+    "Years Ago",
+    "Fish",
+    "3 years",
+    "Neverville",
+    "The Children",
+    "Milo"
+  ],
+  "interesting_bits": [
+    "\"I don\u00e2\u0080\u0099t know where to begin with this\u2014literally, figuratively, existentially?\"",
+    "\"It is definitely a text adventure, because I was eaten by a grue.\"",
+    "3 years",
+    "in 1912",
+    "in 1906"
+  ],
+  "links": [
+    {
+      "title": "Abandoned Website Protocols - Web Support - Toronto Metropolitan University (TMU)",
+      "url": "https://www.torontomu.ca/web-support/web-standards-guidelines/abandoned-website-protocols/",
+      "concepts": [
+        "Website",
+        "The Website",
+        "Abandoned",
+        "Websites"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Mackerelmedia Fish (ARG) by alienmelon",
+      "url": "https://alienmelon.itch.io/mackerelmedia-fish",
+      "concepts": [
+        "Reply",
+        "Years",
+        "Years Ago",
+        "Fish"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "New Book Day: The Children of Neverville \u2013 The Digital Press at the University of North Dakota",
+      "url": "https://thedigitalpress.org/2026/02/10/new-book-day-the-children-of-neverville/",
+      "concepts": [
+        "Neverville",
+        "The Children",
+        "Milo",
+        "Novel"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}

@@ -1,8 +1,11 @@
 {
   "date": "2026-07-09",
   "links_file": "docs/links/posts/2026-07-09-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-07-09T10:25:06Z",
+  "published_links_file": "docs/links/posts/2026-07-09-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-07-09-the-weeping-badge.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-07-09-the-weeping-badge.md",
   "theme": "small gods of commerce",
-  "updated_at": "2026-07-08T08:36:30Z"
+  "updated_at": "2026-07-09T09:49:13Z"
 }

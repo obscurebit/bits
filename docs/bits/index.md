@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-07-09-the-weeping-badge/" class="archive-item">
+    <div class="archive-item__number">161</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">July 09, 2026</span>
+      <h3 class="archive-item__title">The Weeping Badge</h3>
+      <p class="archive-item__excerpt">I stopped collecting debts the day my badge began to weep.</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Small Gods Of Commerce</span><span class="archive-item__genre" title="Noir-ish social observation rather than detective plotting">Noir-ish social observation rather than detective plotting</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-07-08-the-apology-coin/" class="archive-item">
     <div class="archive-item__number">160</div>
     <div class="archive-item__content">

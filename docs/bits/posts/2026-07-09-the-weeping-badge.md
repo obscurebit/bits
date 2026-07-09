@@ -1,0 +1,60 @@
+---
+date: 2026-07-09
+title: "The Weeping Badge"
+description: "A daily AI-generated story exploring speculative fiction"
+author: "https://integrate.api.nvidia.com/v1 / nvidia/llama-3.3-nemotron-super-49b-v1.5"
+theme: "small gods of commerce"
+genre: "Noir-ish social observation rather than detective plotting"
+voice_profile: "Dry academic artifact: footnote energy, careful categorization, and one classification that will not hold"
+---
+
+# The Weeping Badge
+
+I stopped collecting debts the day my badge began to weep.  
+
+This was not figurative. The dull silver oval—stamped with my serial number, 447-B, and the words *INTENT RECORDED*—had developed a faint, relentless drip. Not sweat. Not condensation. Grief, perhaps. The first tear fell during Mrs. Varga’s monthly payment. She owed 37 cents for her brother’s stay at the sanatorium, a sum she could not pay and I could not forgive. But as I leaned over her kitchen table, badge hovering above the ledger, it shivered. A single drop splashed onto her chipped teacup. She didn’t notice. I did.  
+
+The badge does not measure what people do. It measures what they mean to do.  
+
+My supervisor, Mr. Halvorsen, calls it a “moral rectifier.” A tool to “purify the transactional spirit.” He wears his own badge, polished to a mirror shine, which never weeps. Never cracks. Never, I suspect, records the lies he tells himself to sleep.  
+
+I have always been good at my job. Too good. Collecting debts from the sick, the sobering, the stubbornly alive—requires a kind of patience that is not patience at all. It is the patience of a ledger balancing itself. Until the badge, I believed endurance was loyalty. That showing up every day to extract pennies from the pinched faces of the nearly dead was a kind of faith.  
+
+Then the tears started.  
+
+They fall when intention diverges from action. When a debtor means to pay but cannot. When I mean to show mercy but do not.  
+
+Last Thursday, I found a man sleeping in the supply closet of the east wing. His shoes were gone, his coat patched with newspaper. He muttered about a subscription—something about a monthly delivery of “light.” I reached for my badge to log his trespass, but it trembled. A tear welled at its edge. He hadn’t meant to steal. He’d meant to ask.  
+
+I let him stay. Gave him a cot and a voucher for the canteen. Broke protocol. Mr. Halvorsen will skin me if he finds out.  
+
+The badge approved. It stayed dry.  
+
+This morning, a woman arrived at the intake desk with a parcel wrapped in brown paper. “For the one who sleeps in the closet,” she said. Inside: a pair of shoes, size 10, scuffless. A note: *He meant to return them.*  
+
+I wore my badge to the canteen that night. Sat across from the man, now awake and named (Leo, a typesetter with a collapsed lung), and asked why he’d come here. He said he’d subscribed to a service—deliveries of “sunlight concentrate”—but the payments lapsed. “I meant to keep up,” he said. “But the vials stopped coming. So I came to where they’re made.”  
+
+I didn’t tell him the sanatorium has no such lab. Didn’t tell him the closest thing we have is the ultraviolet lamp used to treat tuberculosis scars.  
+
+The badge stayed dry.  
+
+Mr. Halvorsen appeared today, sniffing for irregularities. My ledger is immaculate, but the badge betrays me. It wept openly when he asked about Leo. I called it a defect. He smiled. “Defects are forgiven. Intent is not.”  
+
+Tonight, I added a rule to my personal inventory (Item #12: *When in doubt, let the badge decide*). Then I burned the inventory.  
+
+The badge is silent now.  
+
+I think it’s waiting.  
+
+So am I.
+
+---
+
+<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem;">
+  <button class="share-btn" data-url="{% raw %}{{ page.canonical_url }}{% endraw %}" data-title="The Weeping Badge">
+    Share this story
+  </button>
+  <a href="https://github.com/obscurebit/b1ts/tree/0713a37" target="_blank" rel="noopener" class="story-gen-link">
+    gen:0713a37
+  </a>
+</div>
