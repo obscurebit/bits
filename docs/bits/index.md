@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-07-10-the-ozone-clerk-and-the-borrowed/" class="archive-item">
+    <div class="archive-item__number">162</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">July 10, 2026</span>
+      <h3 class="archive-item__title">The Ozone Clerk and the Borrowed Generator</h3>
+      <p class="archive-item__excerpt">The air in the equipment rental shed tasted like burnt cotton and regret. That was the ozone, mostly—old generators sparking their last—but also Mrs. ...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Quantum Mysteries</span><span class="archive-item__genre" title="Noir-ish social observation rather than detective plotting">Noir-ish social observation rather than detective plotting</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-07-09-the-weeping-badge/" class="archive-item">
     <div class="archive-item__number">161</div>
     <div class="archive-item__content">

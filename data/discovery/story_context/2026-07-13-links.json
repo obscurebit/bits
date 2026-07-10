@@ -1,0 +1,57 @@
+{
+  "date": "2026-07-13",
+  "theme": "digital archaeology",
+  "links_direction": "internet history, lost media, abandoned websites, web archaeology",
+  "motifs": [
+    "Fish",
+    "Once",
+    "Site",
+    "Alienmelon",
+    "6 years",
+    "Bakken",
+    "Booms",
+    "Bearing",
+    "Burden",
+    "Click",
+    "Share",
+    "Download"
+  ],
+  "interesting_bits": [
+    "6 years"
+  ],
+  "links": [
+    {
+      "title": "The Walkthrough - Mackerelmedia Fish (ARG) by alienmelon",
+      "url": "https://alienmelon.itch.io/mackerelmedia-fish/devlog/135497/the-walkthrough",
+      "concepts": [
+        "Fish",
+        "Once",
+        "Site",
+        "Alienmelon"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "New Book Day: Bearing the Burden of Booms \u2013 The Digital Press at the University of North Dakota",
+      "url": "https://thedigitalpress.org/2026/03/03/new-book-day-bearing-the-burden-of-booms/",
+      "concepts": [
+        "Bakken",
+        "Booms",
+        "Bearing",
+        "Burden"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Cyber Monday: One Click Download from The Digital Press at the University of North Dakota \u2013 The Digital Press at the University of North Dakota",
+      "url": "https://thedigitalpress.org/2025/12/01/cyber-monday-one-click-download-from-the-digital-press-at-the-university-of-north-dakota/",
+      "concepts": [
+        "Click",
+        "Share",
+        "Download",
+        "The Digital Press"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}

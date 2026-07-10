@@ -1,8 +1,11 @@
 {
   "date": "2026-07-10",
   "links_file": "docs/links/posts/2026-07-10-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-07-10T10:08:46Z",
+  "published_links_file": "docs/links/posts/2026-07-10-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-07-10-the-ozone-clerk-and-the-borrowed.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-07-10-the-ozone-clerk-and-the-borrowed.md",
   "theme": "quantum mysteries",
-  "updated_at": "2026-07-09T09:49:13Z"
+  "updated_at": "2026-07-10T09:44:46Z"
 }
