@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-07-11-the-apology-scale/" class="archive-item">
+    <div class="archive-item__number">163</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">July 11, 2026</span>
+      <h3 class="archive-item__title">The Apology Scale</h3>
+      <p class="archive-item__excerpt">A notice taped to the cracked linoleum counter read: *All rations require verification by the Apology Scale. Refusals will be reported to the Ministry...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Forgotten Technology</span><span class="archive-item__genre" title="Noir-ish social observation rather than detective plotting">Noir-ish social observation rather than detective plotting</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-07-10-the-ozone-clerk-and-the-borrowed/" class="archive-item">
     <div class="archive-item__number">162</div>
     <div class="archive-item__content">

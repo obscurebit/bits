@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-07-11-edition-163/" class="archive-item">
+    <div class="archive-item__number">163</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">July 11, 2026</span>
+      <h3 class="archive-item__title">Edition #163</h3>
+      <p class="archive-item__excerpt">Forgotten Technology · A notice taped to the cracked linoleum counter read: *All rations require verification by the Apology Scale. Refusals will be reported to the Ministry of Calori...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Forgotten Technology</span><span class="archive-item__genre" title="Noir-ish social observation rather than detective plotting">Noir-ish social observation rather than detective plotting</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-07-10-edition-162/" class="archive-item">
     <div class="archive-item__number">162</div>
     <div class="archive-item__content">
