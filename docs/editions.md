@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-07-12-edition-164/" class="archive-item">
+    <div class="archive-item__number">164</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">July 12, 2026</span>
+      <h3 class="archive-item__title">Edition #164</h3>
+      <p class="archive-item__excerpt">Digital Archaeology · The worst part of managing the hostel wasn’t the guests—it was the ghosts of their old profiles.</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Digital Archaeology</span><span class="archive-item__genre" title="Moral fable disguised as a very specific modern problem">Moral fable disguised as a very specific modern problem</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-07-11-edition-163/" class="archive-item">
     <div class="archive-item__number">163</div>
     <div class="archive-item__content">

@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-07-12-the-reply-button-at-the-end/" class="archive-item">
+    <div class="archive-item__number">164</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">July 12, 2026</span>
+      <h3 class="archive-item__title">The Reply Button at the End of the World</h3>
+      <p class="archive-item__excerpt">The worst part of managing the hostel wasn’t the guests—it was the ghosts of their old profiles.</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Digital Archaeology</span><span class="archive-item__genre" title="Moral fable disguised as a very specific modern problem">Moral fable disguised as a very specific modern problem</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-07-11-the-apology-scale/" class="archive-item">
     <div class="archive-item__number">163</div>
     <div class="archive-item__content">

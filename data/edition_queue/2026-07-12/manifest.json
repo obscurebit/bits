@@ -1,8 +1,11 @@
 {
   "date": "2026-07-12",
   "links_file": "docs/links/posts/2026-07-12-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-07-12T08:59:49Z",
+  "published_links_file": "docs/links/posts/2026-07-12-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-07-12-the-reply-button-at-the-end.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-07-12-the-reply-button-at-the-end.md",
   "theme": "digital archaeology",
-  "updated_at": "2026-07-11T08:03:27Z"
+  "updated_at": "2026-07-12T08:24:43Z"
 }
