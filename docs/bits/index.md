@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-07-13-the-tin-that-ate-tuesdays/" class="archive-item">
+    <div class="archive-item__number">165</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">July 13, 2026</span>
+      <h3 class="archive-item__title">The Tin That Ate Tuesdays</h3>
+      <p class="archive-item__excerpt">We kept the tin of fish money because it worked, though no one could say how.</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Digital Archaeology</span><span class="archive-item__genre" title="Character study where the strange thing stays partly offstage">Character study where the strange thing stays partly offstage</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-07-12-the-reply-button-at-the-end/" class="archive-item">
     <div class="archive-item__number">164</div>
     <div class="archive-item__content">
