@@ -1,8 +1,11 @@
 {
   "date": "2026-07-14",
   "links_file": "docs/links/posts/2026-07-14-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-07-14T08:59:55Z",
+  "published_links_file": "docs/links/posts/2026-07-14-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-07-14-the-tip-that-outgrew-its-plate.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-07-14-the-tip-that-outgrew-its-plate.md",
   "theme": "time anomalies",
-  "updated_at": "2026-07-13T09:36:57Z"
+  "updated_at": "2026-07-14T08:17:20Z"
 }

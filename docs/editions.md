@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-07-14-edition-166/" class="archive-item">
+    <div class="archive-item__number">166</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">July 14, 2026</span>
+      <h3 class="archive-item__title">Edition #166</h3>
+      <p class="archive-item__excerpt">Time Anomalies · "You’re covering her shift *again*?" Marco said, leaning against the snack cart’s dented aluminum counter. His name tag—*M. Delp*, faded ink, third reassignment...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Time Anomalies</span><span class="archive-item__genre" title="Character study where the strange thing stays partly offstage">Character study where the strange thing stays partly offstage</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-07-13-edition-165/" class="archive-item">
     <div class="archive-item__number">165</div>
     <div class="archive-item__content">
