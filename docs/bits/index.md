@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-07-15-the-weirdest-thing-was-the-scanner/" class="archive-item">
+    <div class="archive-item__number">167</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">July 15, 2026</span>
+      <h3 class="archive-item__title">The Weirdest Thing Was the Scanner</h3>
+      <p class="archive-item__excerpt">“You still using that brick from 2007?” Marlon says, leaning against the intake counter like he owns the dust. His name tag peels at the corner: *Corp...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Parallel Dimensions</span><span class="archive-item__genre" title="Noir-ish social observation rather than detective plotting">Noir-ish social observation rather than detective plotting</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-07-14-the-tip-that-outgrew-its-plate/" class="archive-item">
     <div class="archive-item__number">166</div>
     <div class="archive-item__content">
