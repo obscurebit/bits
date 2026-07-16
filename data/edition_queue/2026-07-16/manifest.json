@@ -1,8 +1,11 @@
 {
   "date": "2026-07-16",
   "links_file": "docs/links/posts/2026-07-16-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-07-16T08:49:10Z",
+  "published_links_file": "docs/links/posts/2026-07-16-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-07-16-the-warranty-of-sighs.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-07-16-the-warranty-of-sighs.md",
   "theme": "synthetic life",
-  "updated_at": "2026-07-15T08:22:41Z"
+  "updated_at": "2026-07-16T08:22:07Z"
 }

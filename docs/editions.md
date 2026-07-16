@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-07-16-edition-168/" class="archive-item">
+    <div class="archive-item__number">168</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">July 16, 2026</span>
+      <h3 class="archive-item__title">Edition #168</h3>
+      <p class="archive-item__excerpt">Synthetic Life · The phone rang as Mara priced out a replacement hinge for a cracked tablet, the kind of device that still had a home button and a user who refused to stop calli...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Synthetic Life</span><span class="archive-item__genre" title="Ghost story energy without old haunted-house defaults">Ghost story energy without old haunted-house defaults</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-07-15-edition-167/" class="archive-item">
     <div class="archive-item__number">167</div>
     <div class="archive-item__content">
