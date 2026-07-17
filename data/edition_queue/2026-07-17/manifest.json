@@ -1,8 +1,11 @@
 {
   "date": "2026-07-17",
   "links_file": "docs/links/posts/2026-07-17-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-07-17T09:03:28Z",
+  "published_links_file": "docs/links/posts/2026-07-17-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-07-17-the-hinge-of-forgiven-things.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-07-17-the-hinge-of-forgiven-things.md",
   "theme": "cryptographic secrets",
-  "updated_at": "2026-07-16T08:22:07Z"
+  "updated_at": "2026-07-17T08:18:32Z"
 }

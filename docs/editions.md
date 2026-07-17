@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-07-17-edition-169/" class="archive-item">
+    <div class="archive-item__number">169</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">July 17, 2026</span>
+      <h3 class="archive-item__title">Edition #169</h3>
+      <p class="archive-item__excerpt">Cryptographic Secrets · A clipboard hung by the back door, its clip cradling a stack of yellowed tags. Each one listed a chore in my father’s slanting script: *Unstick the pantry windo...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Cryptographic Secrets</span><span class="archive-item__genre" title="Quiet literary realism with one impossible pressure point">Quiet literary realism with one impossible pressure point</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-07-16-edition-168/" class="archive-item">
     <div class="archive-item__number">168</div>
     <div class="archive-item__content">
