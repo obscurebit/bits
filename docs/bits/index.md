@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-07-18-the-marking-jar/" class="archive-item">
+    <div class="archive-item__number">170</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">July 18, 2026</span>
+      <h3 class="archive-item__title">The Marking Jar</h3>
+      <p class="archive-item__excerpt">The smell of burnt oatmeal grease clings to the cafeteria’s asbestos tiles. You scrape another glob into the disposal chute, watching the jar on your ...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Abandoned Stations</span><span class="archive-item__genre" title="Domestic drama bent by one technological or metaphysical fact">Domestic drama bent by one technological or metaphysical fact</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-07-17-the-hinge-of-forgiven-things/" class="archive-item">
     <div class="archive-item__number">169</div>
     <div class="archive-item__content">

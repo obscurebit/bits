@@ -1,0 +1,116 @@
+---
+date: 2026-07-18
+title: "The Marking Jar"
+description: "A daily AI-generated story exploring speculative fiction"
+author: "https://integrate.api.nvidia.com/v1 / nvidia/llama-3.3-nemotron-super-49b-v1.5"
+theme: "abandoned stations"
+genre: "Domestic drama bent by one technological or metaphysical fact"
+voice_profile: "Contrarian speculative irony: the obvious moral is wrong; the stranger practical choice is kinder"
+---
+
+# The Marking Jar
+
+The smell of burnt oatmeal grease clings to the cafeteria’s asbestos tiles. You scrape another glob into the disposal chute, watching the jar on your counter pulse—a faint blue hieroglyphic blooming across its neck like a hiccup. The symbol means *insufficient gratitude* last week, *excessive hesitation* the week before. You’ve stopped trying to keep track.  
+
+Your badge, laminated and fraying at the edges, reads *Certifier of Local Truths (Provisional)*. The title irritates you. Everyone knows provisional means *until someone less embarrassed by the job shows up*.  
+
+Mara slinks in at 3:07 PM, her cart wheezing. She’s late again, and the jar’s glyphs will say so. They always do.  
+
+“You’re covering the east wing’s rations,” she says, not a question. Her eyes dart to the jar.  
+
+“You’re late,” you say. The jar flickers. A jagged red line splits its side—*unmet obligation*.  
+
+Mara sighs, pulling a crumpled permission slip from her pocket. “The kids at Depot 4 swear the math room’s haunted. Took me forever to calm them down.”  
+
+The slip is signed by three teachers who left years ago. The jar goes snowy white—*plausible falsehood*.  
+
+You want to believe her. You want the jar to stay white, to stamp her paperwork *Verified* and let her shuffle off to her next lie. But the east wing’s rations depend on accurate counts. Mrs. Halvorsen’s diabetes medication depends on accurate counts.  
+
+Your pen hovers. The jar hums.  
+
+---  
+
+Two years ago, Mara smuggled antibiotics to your niece when the med depot closed. Your sister still sends her cookies in gratitude, even though Mara never acknowledges them. You’ve eaten three of those cookies. They’re terrible—desiccated, like she bakes the hope out of them first.  
+
+The jar’s glyphs have grown teeth.  
+
+“You can’t keep doing this,” you say.  
+
+Mara’s smile doesn’t reach her eyes. “And you can’t keep pretending that jar’s not broken.”  
+
+It’s not broken. It’s *sensitive*. The glyphs react to communal tension, to the weight of unspoken things. Last month, when the water pump failed and everyone lied about hearing it, the jar turned transparent for a week.  
+
+But Mara’s right. You’re using it as an excuse.  
+
+---  
+
+The room’s been rearranged again. Someone dragged the principal’s old desk to the center, draped it with a sheet to make a “privacy screen” for disputes. No one uses it. The real disputes happen in the parking lot, where Mrs. Okoro sells homebrew antifungal ointment and judges everyone’s life choices with her eyebrows.  
+
+You find a note taped to the jar at dawn: *Stop being a coward or stop being a clerk.*  
+
+The handwriting is yours.  
+
+---  
+
+At noon, a boy from Depot 4 presents a worksheet. His hands shake. “We did the math,” he says. “The numbers match what’s in the jar.”  
+
+The worksheet is covered in frantic scribbles—equations that loop into cartoons of screaming chickens. The jar glows faintly, glyphs soft and circular: *child’s truth*.  
+
+You stamp it *Verified*.  
+
+Mara watches from the snack cart, her face a closed door.  
+
+---  
+
+That night, you dream the jar is full of teeth.  
+
+When you wake, it’s empty.  
+
+The glyphs are gone.  
+
+You touch the glass. It’s warm.  
+
+For the first time, you realize the jar isn’t reacting to lies. It’s reacting to *silence*. To all the things no one says because saying them would mean admitting how precarious everything is.  
+
+Mara’s lies are a kind of glue. So are yours.  
+
+The next morning, you find her slipping expired ration cards into the east wing’s slot.  
+
+“You don’t have to do this,” you say.  
+
+She flinches. “Yes, I do.”  
+
+The jar sits between you, still blank.  
+
+You pick up your pen.  
+
+“Go home,” you say. “I’ll handle it.”  
+
+Mara opens her mouth. Closes it.  
+
+The jar remains empty.  
+
+It’s the kindest thing you’ve ever done.  
+
+---  
+
+They’ll find out eventually. The numbers won’t add up.  
+
+But today, Mrs. Halvorsen gets her insulin.  
+
+The jar stays blank for weeks.  
+
+You wonder if it’s waiting.  
+
+Or if it’s finally finished listening.
+
+---
+
+<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem;">
+  <button class="share-btn" data-url="{% raw %}{{ page.canonical_url }}{% endraw %}" data-title="The Marking Jar">
+    Share this story
+  </button>
+  <a href="https://github.com/obscurebit/b1ts/tree/32307cc" target="_blank" rel="noopener" class="story-gen-link">
+    gen:32307cc
+  </a>
+</div>
