@@ -1,8 +1,11 @@
 {
   "date": "2026-07-19",
   "links_file": "docs/links/posts/2026-07-19-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-07-19T08:36:44Z",
+  "published_links_file": "docs/links/posts/2026-07-19-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-07-19-the-rabbit-keycard.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-07-19-the-rabbit-keycard.md",
   "theme": "reality glitches",
-  "updated_at": "2026-07-18T08:00:13Z"
+  "updated_at": "2026-07-19T08:26:05Z"
 }

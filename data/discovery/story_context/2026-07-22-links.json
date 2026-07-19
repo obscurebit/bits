@@ -1,0 +1,58 @@
+{
+  "date": "2026-07-22",
+  "theme": "synthetic life",
+  "links_direction": "biotech breakthroughs, artificial life projects, synthetic organism research",
+  "motifs": [
+    "Synthetic",
+    "Nature",
+    "Biology",
+    "Patent",
+    "30 years",
+    "3 million",
+    "Life",
+    "Digital",
+    "Matter",
+    "Real",
+    "Sofia",
+    "What"
+  ],
+  "interesting_bits": [
+    "30 years",
+    "3 million"
+  ],
+  "links": [
+    {
+      "title": "homunculus",
+      "url": "https://philipball.blogspot.com/2007/06/should-synthetic-biologists-patent.html",
+      "concepts": [
+        "Synthetic",
+        "Nature",
+        "Biology",
+        "Patent"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Digital materialization and synthetic life | chorasimilarity",
+      "url": "https://chorasimilarity.wordpress.com/2014/02/28/digital-materialization-and-synthetic-life/",
+      "concepts": [
+        "Life",
+        "Digital",
+        "Matter",
+        "Real"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "116. Sofia Crespo \u2013 Artificial Life : MTF Labs",
+      "url": "https://mtflabs.net/podcast116/",
+      "concepts": [
+        "Sofia",
+        "What",
+        "Dubber",
+        "Life"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}

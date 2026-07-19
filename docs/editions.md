@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-07-19-edition-171/" class="archive-item">
+    <div class="archive-item__number">171</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">July 19, 2026</span>
+      <h3 class="archive-item__title">Edition #171</h3>
+      <p class="archive-item__excerpt">Reality Glitches · The first rule of the Vending Machine Technician’s Handbook is that there are no rules. The second is that you never use the master keycard for personal purchas...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Reality Glitches</span><span class="archive-item__genre" title="Caper energy at a human scale">Caper energy at a human scale</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-07-18-edition-170/" class="archive-item">
     <div class="archive-item__number">170</div>
     <div class="archive-item__content">

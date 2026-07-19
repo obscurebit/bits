@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-07-19-the-rabbit-keycard/" class="archive-item">
+    <div class="archive-item__number">171</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">July 19, 2026</span>
+      <h3 class="archive-item__title">The Rabbit Keycard</h3>
+      <p class="archive-item__excerpt">The first rule of the Vending Machine Technician’s Handbook is that there are no rules. The second is that you never use the master keycard for person...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Reality Glitches</span><span class="archive-item__genre" title="Caper energy at a human scale">Caper energy at a human scale</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-07-18-the-marking-jar/" class="archive-item">
     <div class="archive-item__number">170</div>
     <div class="archive-item__content">
