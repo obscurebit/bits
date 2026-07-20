@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-07-20-edition-172/" class="archive-item">
+    <div class="archive-item__number">172</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">July 20, 2026</span>
+      <h3 class="archive-item__title">Edition #172</h3>
+      <p class="archive-item__excerpt">Emergent Intelligence · Rule 14.7: *All water consumption figures must be entered into the Master Meter before 1700 hours. Failure to comply will result in ration deduction.*</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Emergent Intelligence</span><span class="archive-item__genre" title="Ghost story energy without old haunted-house defaults">Ghost story energy without old haunted-house defaults</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-07-19-edition-171/" class="archive-item">
     <div class="archive-item__number">171</div>
     <div class="archive-item__content">
