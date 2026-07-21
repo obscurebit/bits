@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-07-21-the-glint-in-the-chart/" class="archive-item">
+    <div class="archive-item__number">173</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">July 21, 2026</span>
+      <h3 class="archive-item__title">The Glint in the Chart</h3>
+      <p class="archive-item__excerpt">The fluorescent lights buzzed like a trapped wasp, and the air smelled of lemon disinfectant and burnt coffee. I sorted memory logs at my desk, each o...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Memory Manipulation</span><span class="archive-item__genre" title="Quiet literary realism with one impossible pressure point">Quiet literary realism with one impossible pressure point</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-07-20-the-meters-debt/" class="archive-item">
     <div class="archive-item__number">172</div>
     <div class="archive-item__content">

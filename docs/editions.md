@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-07-21-edition-173/" class="archive-item">
+    <div class="archive-item__number">173</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">July 21, 2026</span>
+      <h3 class="archive-item__title">Edition #173</h3>
+      <p class="archive-item__excerpt">Memory Manipulation · The fluorescent lights buzzed like a trapped wasp, and the air smelled of lemon disinfectant and burnt coffee. I sorted memory logs at my desk, each one a trans...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Memory Manipulation</span><span class="archive-item__genre" title="Quiet literary realism with one impossible pressure point">Quiet literary realism with one impossible pressure point</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-07-20-edition-172/" class="archive-item">
     <div class="archive-item__number">172</div>
     <div class="archive-item__content">
