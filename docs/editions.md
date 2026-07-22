@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-07-22-edition-174/" class="archive-item">
+    <div class="archive-item__number">174</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">July 22, 2026</span>
+      <h3 class="archive-item__title">Edition #174</h3>
+      <p class="archive-item__excerpt">Synthetic Life · *Posted notice, yellowed and laminated, hangs above the checkpoint booth: “ALL PERSONAL DEVICES MUST BE LOGGED UPON ENTRY. FAILURE TO COMPLY WILL RESULT IN DELA...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Synthetic Life</span><span class="archive-item__genre" title="Character study where the strange thing stays partly offstage">Character study where the strange thing stays partly offstage</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-07-21-edition-173/" class="archive-item">
     <div class="archive-item__number">173</div>
     <div class="archive-item__content">

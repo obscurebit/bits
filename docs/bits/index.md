@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-07-22-the-log-that-knew-less/" class="archive-item">
+    <div class="archive-item__number">174</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">July 22, 2026</span>
+      <h3 class="archive-item__title">The Log That Knew Less</h3>
+      <p class="archive-item__excerpt">*Posted notice, yellowed and laminated, hangs above the checkpoint booth: “ALL PERSONAL DEVICES MUST BE LOGGED UPON ENTRY. FAILURE TO COMPLY WILL RESU...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Synthetic Life</span><span class="archive-item__genre" title="Character study where the strange thing stays partly offstage">Character study where the strange thing stays partly offstage</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-07-21-the-glint-in-the-chart/" class="archive-item">
     <div class="archive-item__number">173</div>
     <div class="archive-item__content">
