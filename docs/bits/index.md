@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-07-23-the-bent-valve/" class="archive-item">
+    <div class="archive-item__number">175</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">July 23, 2026</span>
+      <h3 class="archive-item__title">The Bent Valve</h3>
+      <p class="archive-item__excerpt">Posted above the parts cabinet: *All maintenance tags must be filled out in triplicate. Any deviation will result in disciplinary action.* Clara dabbe...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Underground Networks</span><span class="archive-item__genre" title="Quiet literary realism with one impossible pressure point">Quiet literary realism with one impossible pressure point</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-07-22-the-log-that-knew-less/" class="archive-item">
     <div class="archive-item__number">174</div>
     <div class="archive-item__content">
