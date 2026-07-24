@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-07-24-edition-176/" class="archive-item">
+    <div class="archive-item__number">176</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">July 24, 2026</span>
+      <h3 class="archive-item__title">Edition #176</h3>
+      <p class="archive-item__excerpt">Biological Computing · The token is warm when I palm it, still holding the heat from my brother’s fist. It’s a dull brass disc, edge worn smooth, number 47 stamped unevenly. The woman...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Biological Computing</span><span class="archive-item__genre" title="Domestic drama bent by one technological or metaphysical fact">Domestic drama bent by one technological or metaphysical fact</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-07-23-edition-175/" class="archive-item">
     <div class="archive-item__number">175</div>
     <div class="archive-item__content">

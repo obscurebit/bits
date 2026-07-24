@@ -1,8 +1,11 @@
 {
   "date": "2026-07-24",
   "links_file": "docs/links/posts/2026-07-24-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-07-24T08:47:57Z",
+  "published_links_file": "docs/links/posts/2026-07-24-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-07-24-the-token-wash.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-07-24-the-token-wash.md",
   "theme": "biological computing",
-  "updated_at": "2026-07-23T08:37:35Z"
+  "updated_at": "2026-07-24T08:33:48Z"
 }
