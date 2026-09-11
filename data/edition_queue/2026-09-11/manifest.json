@@ -1,8 +1,11 @@
 {
   "date": "2026-09-11",
   "links_file": "docs/links/posts/2026-09-11-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-09-11T11:13:46Z",
+  "published_links_file": "docs/links/posts/2026-09-11-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-09-11-the-spare-edition.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-09-11-the-spare-edition.md",
   "theme": "counterfeit realities",
-  "updated_at": "2026-09-10T10:59:10Z"
+  "updated_at": "2026-09-11T10:57:26Z"
 }
