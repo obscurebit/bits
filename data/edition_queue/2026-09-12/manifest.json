@@ -1,8 +1,11 @@
 {
   "date": "2026-09-12",
   "links_file": "docs/links/posts/2026-09-12-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-09-12T10:40:46Z",
+  "published_links_file": "docs/links/posts/2026-09-12-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-09-12-the-spare-edition.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-09-12-the-spare-edition.md",
   "theme": "municipal weirdness",
-  "updated_at": "2026-09-11T10:57:26Z"
+  "updated_at": "2026-09-12T10:25:18Z"
 }
