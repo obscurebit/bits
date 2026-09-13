@@ -1,8 +1,11 @@
 {
   "date": "2026-09-13",
   "links_file": "docs/links/posts/2026-09-13-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-09-13T11:42:36Z",
+  "published_links_file": "docs/links/posts/2026-09-13-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-09-13-the-spare-edition.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-09-13-the-spare-edition.md",
   "theme": "small gods of commerce",
-  "updated_at": "2026-09-12T10:25:18Z"
+  "updated_at": "2026-09-13T11:28:21Z"
 }
