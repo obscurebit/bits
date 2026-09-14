@@ -1,8 +1,11 @@
 {
   "date": "2026-09-14",
   "links_file": "docs/links/posts/2026-09-14-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-09-14T12:33:58Z",
+  "published_links_file": "docs/links/posts/2026-09-14-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-09-14-the-spare-edition.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-09-14-the-spare-edition.md",
   "theme": "quantum mysteries",
-  "updated_at": "2026-09-13T11:28:21Z"
+  "updated_at": "2026-09-14T12:21:03Z"
 }
