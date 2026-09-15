@@ -1,8 +1,11 @@
 {
   "date": "2026-09-15",
   "links_file": "docs/links/posts/2026-09-15-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-09-15T11:45:46Z",
+  "published_links_file": "docs/links/posts/2026-09-15-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-09-15-the-spare-edition.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-09-15-the-spare-edition.md",
   "theme": "forgotten technology",
-  "updated_at": "2026-09-14T12:21:03Z"
+  "updated_at": "2026-09-15T11:27:38Z"
 }
