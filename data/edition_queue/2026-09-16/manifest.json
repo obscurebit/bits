@@ -1,8 +1,11 @@
 {
   "date": "2026-09-16",
   "links_file": "docs/links/posts/2026-09-16-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-09-16T11:29:36Z",
+  "published_links_file": "docs/links/posts/2026-09-16-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-09-16-the-spare-edition.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-09-16-the-spare-edition.md",
   "theme": "digital archaeology",
-  "updated_at": "2026-09-15T11:27:38Z"
+  "updated_at": "2026-09-16T11:13:31Z"
 }
