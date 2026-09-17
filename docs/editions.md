@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-09-17-edition-231/" class="archive-item">
+    <div class="archive-item__number">231</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">September 17, 2026</span>
+      <h3 class="archive-item__title">Edition #231</h3>
+      <p class="archive-item__excerpt">Consciousness Frontiers · By the time the daily machine admitted it had no story, the office had already opened.</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Consciousness Frontiers</span><span class="archive-item__genre" title="Fallback speculative vignette">Fallback speculative vignette</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-09-16-edition-230/" class="archive-item">
     <div class="archive-item__number">230</div>
     <div class="archive-item__content">
