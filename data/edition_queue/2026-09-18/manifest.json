@@ -1,8 +1,11 @@
 {
   "date": "2026-09-18",
   "links_file": "docs/links/posts/2026-09-18-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-09-18T11:09:10Z",
+  "published_links_file": "docs/links/posts/2026-09-18-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-09-18-the-spare-edition.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-09-18-the-spare-edition.md",
   "theme": "time anomalies",
-  "updated_at": "2026-09-17T11:21:45Z"
+  "updated_at": "2026-09-18T10:55:29Z"
 }
