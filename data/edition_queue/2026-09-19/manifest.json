@@ -1,8 +1,11 @@
 {
   "date": "2026-09-19",
   "links_file": "docs/links/posts/2026-09-19-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-09-19T10:53:19Z",
+  "published_links_file": "docs/links/posts/2026-09-19-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-09-19-the-spare-edition.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-09-19-the-spare-edition.md",
   "theme": "parallel dimensions",
-  "updated_at": "2026-09-18T10:55:29Z"
+  "updated_at": "2026-09-19T10:38:44Z"
 }
