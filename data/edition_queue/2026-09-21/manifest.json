@@ -1,8 +1,11 @@
 {
   "date": "2026-09-21",
   "links_file": "docs/links/posts/2026-09-21-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-09-21T12:44:14Z",
+  "published_links_file": "docs/links/posts/2026-09-21-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-09-21-the-spare-edition.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-09-21-the-spare-edition.md",
   "theme": "cryptographic secrets",
-  "updated_at": "2026-09-20T11:01:30Z"
+  "updated_at": "2026-09-21T12:28:30Z"
 }
