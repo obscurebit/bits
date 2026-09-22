@@ -10,6 +10,15 @@ description: Daily curated discoveries from the hidden corners of the web
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-09-22-daily-links/" class="archive-item archive-item--links">
+    <div class="archive-item__number">236</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">September 22, 2026</span>
+      <div class="archive-item__tags"><span class="archive-item__theme">Abandoned Stations</span></div>
+    </div>
+    <span class="archive-item__category">0 Links</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-09-21-daily-links/" class="archive-item archive-item--links">
     <div class="archive-item__number">235</div>
     <div class="archive-item__content">

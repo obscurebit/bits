@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-09-22-edition-236/" class="archive-item">
+    <div class="archive-item__number">236</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">September 22, 2026</span>
+      <h3 class="archive-item__title">Edition #236</h3>
+      <p class="archive-item__excerpt">Abandoned Stations · By the time the daily machine admitted it had no story, the office had already opened.</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Abandoned Stations</span><span class="archive-item__genre" title="Fallback speculative vignette">Fallback speculative vignette</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-09-21-edition-235/" class="archive-item">
     <div class="archive-item__number">235</div>
     <div class="archive-item__content">
