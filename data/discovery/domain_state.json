@@ -260,7 +260,7 @@
     "selected_count": 5
   },
   "daito.ws": {
-    "last_seen": "2026-08-13",
+    "last_seen": "2026-09-26",
     "last_selected": "",
     "selected_count": 0
   },
@@ -571,8 +571,8 @@
   },
   "marginalia-search.com": {
     "last_seen": "2026-09-10",
-    "last_selected": "2026-09-10",
-    "selected_count": 3
+    "last_selected": "2026-09-26",
+    "selected_count": 4
   },
   "mariowiki.com": {
     "last_seen": "2026-08-28",
@@ -798,6 +798,11 @@
     "last_seen": "2026-07-23",
     "last_selected": "2026-07-22",
     "selected_count": 1
+  },
+  "phillaneum.com": {
+    "last_seen": "2026-09-26",
+    "last_selected": "2026-09-26",
+    "selected_count": 2
   },
   "phoenixnewtimes.com": {
     "last_seen": "",

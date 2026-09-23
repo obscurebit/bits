@@ -1,0 +1,59 @@
+{
+  "date": "2026-09-26",
+  "theme": "lost civilizations",
+  "links_direction": "specific archaeological discoveries, individual ancient artifacts, detailed forgotten culture histories",
+  "motifs": [
+    "Decorative",
+    "Panels",
+    "Furniture",
+    "Decorative Panels",
+    "Victorian",
+    "Blocks",
+    "Inca",
+    "Stones",
+    "Protzen",
+    "30 cm",
+    "5 km",
+    "in 1609"
+  ],
+  "interesting_bits": [
+    "30 cm",
+    "5 km",
+    "in 1609"
+  ],
+  "links": [
+    {
+      "title": "Decorative Furniture Panels and Ornament Culture",
+      "url": "https://phillaneum.com/read/0020-decorative-furniture-panels-topic.html",
+      "concepts": [
+        "Decorative",
+        "Panels",
+        "Furniture",
+        "Decorative Panels"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Forgotten Victorian Panels Hidden Inside Old Furniture",
+      "url": "https://phillaneum.com/read/0136-forgotten-victorian-panels.html",
+      "concepts": [
+        "Victorian",
+        "Panels",
+        "Decorative",
+        "Furniture"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Lost civilizations of the Andes (2)",
+      "url": "https://www.marginalia-search.com/r/3/147370998235145/crvk9tky4p?hash=4Mvu8gcedpfTGsFJe340wiCIIoRaoFm0YZu0i9xuKOs",
+      "concepts": [
+        "Blocks",
+        "Inca",
+        "Stones",
+        "Protzen"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}
