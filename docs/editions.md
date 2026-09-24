@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-09-24-edition-238/" class="archive-item">
+    <div class="archive-item__number">238</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">September 24, 2026</span>
+      <h3 class="archive-item__title">Edition #238</h3>
+      <p class="archive-item__excerpt">Emergent Intelligence · By the time the daily machine admitted it had no story, the office had already opened.</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Emergent Intelligence</span><span class="archive-item__genre" title="Fallback speculative vignette">Fallback speculative vignette</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-09-23-edition-237/" class="archive-item">
     <div class="archive-item__number">237</div>
     <div class="archive-item__content">
