@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-09-26-the-spare-edition/" class="archive-item">
+    <div class="archive-item__number">240</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">September 26, 2026</span>
+      <h3 class="archive-item__title">The Spare Edition</h3>
+      <p class="archive-item__excerpt">By the time the daily machine admitted it had no story, the office had already opened.</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Lost Civilizations</span><span class="archive-item__genre" title="Fallback speculative vignette">Fallback speculative vignette</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-09-25-the-spare-edition/" class="archive-item">
     <div class="archive-item__number">239</div>
     <div class="archive-item__content">
