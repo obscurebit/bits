@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-01",
+  "theme": "signal from nowhere",
+  "links_direction": "specific number station recordings, individual unexplained signal incidents, detailed SETI discovery stories",
+  "motifs": [
+    "Number",
+    "Stations",
+    "Enigma",
+    "Number Stations",
+    "60 years",
+    "in 1993",
+    "Signal",
+    "Radio",
+    "Earth",
+    "The Signal",
+    "In 1972",
+    "Shortwave"
+  ],
+  "interesting_bits": [
+    "60 years",
+    "in 1993",
+    "In 1972",
+    "\". In reality, the definition of the \"",
+    "\" frequency band is a mess, and therefore the \"",
+    "10.0 m"
+  ],
+  "links": [
+    {
+      "title": "Number Stations \u203a  Priyom.org",
+      "url": "https://priyom.org/number-stations",
+      "concepts": [
+        "Number",
+        "Stations",
+        "Enigma",
+        "Number Stations"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "The \u201cWow!\u201d Signal | Hidden History",
+      "url": "https://lflank.wordpress.com/2015/02/12/the-wow-signal/",
+      "concepts": [
+        "Signal",
+        "Radio",
+        "Earth",
+        "The Signal"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Shortwave radio - Alchetron, The Free Social Encyclopedia",
+      "url": "https://www.marginalia-search.com/r/8/55896516368128/egpcj3l43d?hash=zyndl9pRHAddpI7CFKdSsLIHrAGE5Lwkvyk8kaRErXM",
+      "concepts": [
+        "Shortwave",
+        "Radio",
+        "Band",
+        "Frequency"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}

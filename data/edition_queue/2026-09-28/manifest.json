@@ -1,8 +1,11 @@
 {
   "date": "2026-09-28",
   "links_file": "docs/links/posts/2026-09-28-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-09-28T13:38:52Z",
+  "published_links_file": "docs/links/posts/2026-09-28-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-09-28-the-spare-edition.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-09-28-the-spare-edition.md",
   "theme": "biological computing",
-  "updated_at": "2026-09-27T11:45:44Z"
+  "updated_at": "2026-09-28T13:26:31Z"
 }
