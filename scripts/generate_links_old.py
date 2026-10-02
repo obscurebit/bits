@@ -17,7 +17,7 @@ from openai import OpenAI
 # Configuration
 API_BASE = os.environ.get("OPENAI_API_BASE", "https://integrate.api.nvidia.com/v1")
 API_KEY = os.environ.get("OPENAI_API_KEY")
-MODEL = os.environ.get("OPENAI_MODEL", "nvidia/llama-3.3-nemotron-super-49b-v1.5")
+MODEL = os.environ.get("OPENAI_MODEL", "nvidia/nemotron-3-ultra-550b-a55b")
 
 # Paths to prompt files
 PROMPTS_DIR = Path(__file__).parent.parent / "prompts"

@@ -135,40 +135,26 @@ class RunDailyFallbackTests(unittest.TestCase):
         self._run_in_temp_cwd(exercise)
         self.assertEqual(executed, ["generate_links.py", "generate_story.py", "update_landing.py"])
 
-    def test_fallback_story_allows_landing_to_continue(self) -> None:
-        explicit_theme = {"name": "parallel dimensions", "story": "s1", "links": "l1"}
+    def test_story_failure_stops_before_landing_without_writing_placeholder(self) -> None:
+        args = SimpleNamespace(theme_json=None, date="2026-05-17", skip_story=False,
+                               skip_links=True, skip_landing=False)
         executed = []
 
         def fake_run(command, env, timeout=None):
-            script_name = Path(command[1]).name
-            executed.append(script_name)
-            if script_name == "generate_story.py":
-                return self._completed(124)
-            return self._completed(0)
-
-        args = SimpleNamespace(
-            theme_json='{"name":"parallel dimensions"}',
-            date="2026-05-17",
-            skip_story=False,
-            skip_links=False,
-            skip_landing=False,
-        )
+            executed.append(Path(command[1]).name)
+            return self._completed(124)
 
         def exercise(root: Path) -> None:
             with mock.patch.object(run_daily, "parse_args", return_value=args), \
-                 mock.patch.object(run_daily, "load_theme_override", return_value=explicit_theme), \
-                 mock.patch.object(run_daily, "ALLOW_FALLBACK_STORY", True), \
+                 mock.patch.object(run_daily, "load_theme_override", return_value={"name": "test"}), \
                  mock.patch.object(run_daily.subprocess, "run", side_effect=fake_run):
-                run_daily.main()
-
-            story_files = list((root / "docs" / "bits" / "posts").glob("2026-05-17-*.md"))
-            self.assertEqual(len(story_files), 1)
-            story_text = story_files[0].read_text()
-            self.assertIn('author: "fallback-local"', story_text)
-            self.assertIn("The Spare Edition", story_text)
+                with self.assertRaises(SystemExit) as raised:
+                    run_daily.main()
+                self.assertEqual(raised.exception.code, 124)
+            self.assertFalse(list(root.glob("docs/bits/posts/*.md")))
 
         self._run_in_temp_cwd(exercise)
-        self.assertEqual(executed, ["generate_links.py", "generate_story.py", "update_landing.py"])
+        self.assertEqual(executed, ["generate_story.py"])
 
     def test_existing_links_skip_link_generation(self) -> None:
         fallback_theme = {"name": "municipal weirdness", "story": "s2", "links": "l2"}

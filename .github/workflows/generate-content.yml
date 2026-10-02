@@ -33,7 +33,7 @@ permissions:
 env:
   OPENAI_API_BASE: ${{ secrets.OPENAI_API_BASE || 'https://integrate.api.nvidia.com/v1' }}
   OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-  OPENAI_MODEL: ${{ secrets.OPENAI_MODEL || 'nvidia/llama-3.3-nemotron-super-49b-v1.5' }}
+  OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'nvidia/nemotron-3-ultra-550b-a55b' }}
   SUBSTACK_EMAIL: ${{ secrets.SUBSTACK_EMAIL }}
   SUBSTACK_PASSWORD: ${{ secrets.SUBSTACK_PASSWORD }}
   SUBSTACK_COOKIES: ${{ secrets.SUBSTACK_COOKIES }}
@@ -103,7 +103,6 @@ jobs:
 
       - name: Prepare Edition Queue
         if: github.event_name == 'schedule'
-        continue-on-error: true
         run: uv run --python .venv/bin/python scripts/prepare_queue.py
 
       - name: Publish Today's Prepared Edition

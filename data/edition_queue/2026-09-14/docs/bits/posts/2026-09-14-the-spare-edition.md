@@ -1,20 +1,76 @@
 ---
 date: 2026-09-14
-title: "The Spare Edition"
-description: "Fallback daily story generated after model failure: story generation exited 1"
-author: "fallback-local"
+title: "The Alteration Log"
+description: "A daily AI-generated story exploring speculative fiction"
+author: "https://integrate.api.nvidia.com/v1 / nvidia/nemotron-3-ultra-550b-a55b"
 theme: "quantum mysteries"
-genre: "Fallback speculative vignette"
+genre: "Caper energy at a human scale"
+voice_profile: "Blue-collar systems thinking: pipes, carts, tickets, locks, machines, and workarounds reveal the world"
 ---
 
-# The Spare Edition
+# The Alteration Log
 
-By the time the daily machine admitted it had no story, the office had already opened.
+You want to know how it works? It works like the ticket machine at the DMV. You pull a number, you wait, your number comes up. Only here, the number is a person, and the waiting room is a fitting room at Kleiner's Formal Wear on 14th Street, and the ticket dispenser is probability acting like seniority.
 
-The clerk on duty was supposed to stamp a packet, unlock the side door, and pretend the missing page did not matter. Instead, she held the blank sheet up to the window and watched the morning pass through it. On one side was September 14, 2026. On the other was the version of the day that had arrived fully prepared.
+Tuesday afternoon. I'm pinning the hem on a charcoal topcoat. Heavy wool, canvas interlining, the kind a man buys once and wears to every funeral for thirty years. The client is Mr. Vasquez. Fifty-something, dry cleaner hands, smells like Pall Malls and vetiver. He needs the sleeves taken up three-eighths. Standard.
 
-The form at the top said Quantum Mysteries. Nobody in the queue cared what that meant. They cared about lunch breaks, bus transfers, small promises made too early, and whether a system that failed politely still counted as a system.
+Except the left pocket.
 
-So she wrote the first true thing she could prove: the day had happened. Then she wrote the second: someone had noticed.
+"Right side," says the man on the platform. His tie is knotted tight, Windsor, dimple perfect. "Inside breast pocket. Pen goes there. Wedding ring goes there when the hands swell in July."
 
-At closing, she filed the page between the finished editions and locked the cabinet. The blank space did not disappear. It became part of the record, which was not the same as being repaired, but was better than being lost.
+I don't look up from the chalk. "And the other side?"
+
+The reflection doesn't match the man standing on the platform. The reflection wears the same coat, same tie, but the knot is a four-in-hand, loose, the dimple gone slack. That Vasquez has a split knuckle on the right index finger, healed wrong.
+
+"Left side," says the reflection. "Outside hip pocket. Keys. Phone. The ring stays on the finger. She hates when I take it off."
+
+"She?"
+
+"Maria. The architect. We close on the condo in Bushwick Friday."
+
+The man on the platform clears his throat. "Elena. The nurse. We close on the house in Jersey City Saturday. The pocket goes on the right. Inside. I told you."
+
+I keep pinning. Chalk dust on my fingers. The air in the shop smells like steam presses and mothballs and the specific sweat of men who don't know how to stand still. My machine hums behind me, a Juki 8700, thirty years old, timing belt replaced twice by me personally.
+
+"Gentlemen," I say. "One coat. Two pockets. You want me to run a second pass?"
+
+"This isn't a second pass situation, Consuela," says Platform Vasquez. He uses my name. He never uses my name. "This is a custody dispute."
+
+"Custody of what?"
+
+"The life," says Mirror Vasquez. "The one that holds. The one where the pocket is where I reach without thinking."
+
+I look at the coat. Good fabric. Hanger loop intact. No moth damage. The ticket on the rack reads VASQUEZ - 14:00 - ALTERATIONS.
+
+"Alright," I say. "Here's the workaround."
+
+I unpin the hem. I rip the existing pocket lining — inside left, standard factory — clean out. Seam ripper, slow, respect the wool. The other girls would surge it. I hand-pick.
+
+"New pocket," I say. "Vertical welt. Right chest. *And* horizontal welt. Left hip. Both functional. Both lined with the silk from the sleeve allowance. You lose the pen slot on the sleeve, but you gain access."
+
+Platform Vasquez frowns. "Two pockets. Two marriages. Two lives."
+
+"Two pockets," I agree. "One coat. You wear it, you reach for what you need. The fabric doesn't care which hand you use."
+
+Mirror Vasquez laughs. Dry, no humor. "The fabric doesn't care. That's the ticket."
+
+"Thirty minutes," I say. "Cash up front. I don't run tabs on maybes."
+
+Platform Vasquez pays. Mirror Vasquez doesn't have a wallet. I don't ask where he keeps his money.
+
+When they leave — both of them, through the same door, at the same time, the bell chiming once — the coat hangs on the rack. Two pockets. Two welts. My chalk marks washed clean by steam.
+
+The ticket machine clicks. Next number.
+
+I don't ask which one comes back. I just keep the silk scraps in my locker. Same place I keep the button from my first husband's shirt. The one he wore the day he didn't come home. The fabric remembers. The machine doesn't.
+
+---
+
+<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem;">
+  <button class="share-btn" data-url="{% raw %}{{ page.canonical_url }}{% endraw %}" data-title="The Alteration Log">
+    Share this story
+  </button>
+  <a href="https://github.com/obscurebit/bits/tree/755edf3" target="_blank" rel="noopener" class="story-gen-link">
+    gen:755edf3
+  </a>
+</div>

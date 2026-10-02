@@ -17,6 +17,29 @@ SPEC.loader.exec_module(publish_prepared)
 
 
 class PublishPreparedTests(unittest.TestCase):
+    def test_fallback_queue_story_cannot_replace_published_content(self) -> None:
+        target_date = date(2026, 8, 30)
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            entry = root / "data/edition_queue/2026-08-30/docs"
+            stories = entry / "bits/posts"
+            links = entry / "links/posts"
+            stories.mkdir(parents=True)
+            links.mkdir(parents=True)
+            (stories / "2026-08-30-the-spare-edition.md").write_text('author: "fallback-local"\n')
+            (links / "2026-08-30-daily-links.md").write_text("links")
+            published = root / "docs/bits/posts/2026-08-30-good-story.md"
+            published.parent.mkdir(parents=True)
+            published.write_text("original story")
+            original_cwd = Path.cwd()
+            try:
+                os.chdir(root)
+                with self.assertRaisesRegex(ValueError, "Refusing to publish fallback"):
+                    publish_prepared.copy_prepared_files(target_date)
+                self.assertEqual(published.read_text(), "original story")
+            finally:
+                os.chdir(original_cwd)
+
     def test_copy_prepared_files_replaces_same_date_outputs(self) -> None:
         target_date = date(2026, 4, 20)
         date_str = target_date.strftime("%Y-%m-%d")

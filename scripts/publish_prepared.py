@@ -11,7 +11,7 @@ from pathlib import Path
 from typing import Optional, Tuple
 
 from prepare_queue import prepare_date
-from project_paths import queue_entry_dir, queue_manifest_path
+from project_paths import queue_entry_dir, queue_manifest_path, is_fallback_story
 from update_landing import (
     create_edition_snapshot,
     get_edition_number,
@@ -89,6 +89,9 @@ def copy_prepared_files(target_date: date) -> Tuple[Path, Path]:
                 f"(missing: {missing_label}; exit code: {prepare_result})"
             )
 
+    if is_fallback_story(story_source):
+        raise ValueError(f"Refusing to publish fallback story: {story_source}")
+
     remove_existing_for_date(target_date)
 
     story_target_dir = Path("docs/bits/posts")
@@ -142,6 +145,8 @@ def main() -> None:
 
     story_path = published_story_path(target_date)
     links_path = published_links_path(target_date)
+    if story_path and is_fallback_story(story_path):
+        raise ValueError(f"Refusing to reuse published fallback story: {story_path}")
     if story_path and links_path:
         print(f"Using already-published content for {target_date}")
         rebuild_site_state(target_date, update_home)

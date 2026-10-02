@@ -37,7 +37,7 @@ python3 -m http.server 8000 --directory site
 ```bash
 export OPENAI_API_KEY="..."
 export OPENAI_API_BASE="https://integrate.api.nvidia.com/v1"
-export OPENAI_MODEL="nvidia/llama-3.3-nemotron-super-49b-v1.5"
+export OPENAI_MODEL="nvidia/nemotron-3-ultra-550b-a55b"
 export STORY_SELECTOR_MODEL="$OPENAI_MODEL"
 export STORY_MODEL_ROUTING="1"
 export STORY_CANDIDATES="2"
@@ -238,7 +238,7 @@ Queue prep deliberately uses more conservative defaults:
 
 - `STORY_CANDIDATES=1`
 - `STORY_MODEL_ROUTING=0`
-- `OPENAI_REQUEST_TIMEOUT=90`
+- `OPENAI_REQUEST_TIMEOUT=240`
 
 That keeps scheduled staging cheaper and more predictable.
 
@@ -345,3 +345,11 @@ For content-path changes, also test one queued date locally:
 uv run --python .venv/bin/python scripts/prepare_queue.py --date 2026-04-19 --force
 uv run --python .venv/bin/python scripts/publish_prepared.py --date 2026-04-19
 ```
+
+### Story generation failures
+
+The verified default writer is `nvidia/nemotron-3-ultra-550b-a55b` on NVIDIA NIM.
+`model_config.py` disables reasoning for this model so short output budgets produce prose and JSON.
+Scheduled generation uses the GitHub Actions variable `OPENAI_MODEL` (if set), rather than the legacy model secret.
+Story generation failures stop the pipeline. Queue publication rejects legacy fallback stories.
+To repair fallback dates while preserving public URLs, run `scripts/repair_fallback_stories.py` with the API environment configured.

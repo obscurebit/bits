@@ -11,7 +11,7 @@ from pathlib import Path
 from typing import List, Optional, Tuple
 
 import yaml
-from project_paths import links_posts_output_dir, story_posts_output_dir
+from project_paths import links_posts_output_dir, story_posts_output_dir, is_fallback_story
 
 try:
     from openai import OpenAI
@@ -20,11 +20,13 @@ except Exception as exc:
     OpenAI = None
     OPENAI_IMPORT_ERROR = exc
 
+from model_config import completion_options
+
 PROMPTS_DIR = Path(__file__).parent.parent / "prompts"
 THEMES_FILE = PROMPTS_DIR / "themes.yaml"
 API_BASE = os.environ.get("OPENAI_API_BASE", "https://integrate.api.nvidia.com/v1")
 API_KEY = os.environ.get("OPENAI_API_KEY")
-MODEL = os.environ.get("OPENAI_MODEL", "nvidia/llama-3.3-nemotron-super-49b-v1.5")
+MODEL = os.environ.get("OPENAI_MODEL", "nvidia/nemotron-3-ultra-550b-a55b")
 AUTO_THEME_ATTEMPTS = max(1, int(os.environ.get("AUTO_THEME_ATTEMPTS", "8")))
 AI_THEME_FALLBACKS = max(0, int(os.environ.get("AI_THEME_FALLBACKS", "0")))
 AI_THEME_TIMEOUT_SECONDS = max(15, int(os.environ.get("AI_THEME_TIMEOUT_SECONDS", "60")))
@@ -32,7 +34,6 @@ LINK_STEP_TIMEOUT_SECONDS = max(60, int(os.environ.get("RUN_DAILY_LINK_TIMEOUT_S
 STORY_STEP_TIMEOUT_SECONDS = max(60, int(os.environ.get("RUN_DAILY_STORY_TIMEOUT_SECONDS", "420")))
 LANDING_STEP_TIMEOUT_SECONDS = max(30, int(os.environ.get("RUN_DAILY_LANDING_TIMEOUT_SECONDS", "180")))
 ALLOW_EMPTY_LINKS = os.environ.get("ALLOW_EMPTY_LINKS", "0").lower() in {"1", "true", "yes"}
-ALLOW_FALLBACK_STORY = os.environ.get("ALLOW_FALLBACK_STORY", "0").lower() in {"1", "true", "yes"}
 
 
 def parse_args() -> argparse.Namespace:
@@ -207,6 +208,7 @@ Constraints:
         client = OpenAI(api_key=API_KEY, base_url=API_BASE, timeout=AI_THEME_TIMEOUT_SECONDS)
         response = client.chat.completions.create(
             model=MODEL,
+            **completion_options(MODEL),
             messages=[
                 {"role": "system", "content": "You design reliable fallback themes for a daily fiction-and-links site. Return valid JSON only."},
                 {"role": "user", "content": prompt},
@@ -318,51 +320,6 @@ The daily story still published; this page is intentionally empty rather than fi
     return path
 
 
-def fallback_story_text(theme: dict, target_date: datetime) -> tuple[str, str, str]:
-    theme_name = theme.get("name", "unknown")
-    title = f"The Spare Edition"
-    genre = "Fallback speculative vignette"
-    date_label = target_date.strftime("%B %d, %Y")
-    story = f"""By the time the daily machine admitted it had no story, the office had already opened.
-
-The clerk on duty was supposed to stamp a packet, unlock the side door, and pretend the missing page did not matter. Instead, she held the blank sheet up to the window and watched the morning pass through it. On one side was {date_label}. On the other was the version of the day that had arrived fully prepared.
-
-The form at the top said {theme_name.title()}. Nobody in the queue cared what that meant. They cared about lunch breaks, bus transfers, small promises made too early, and whether a system that failed politely still counted as a system.
-
-So she wrote the first true thing she could prove: the day had happened. Then she wrote the second: someone had noticed.
-
-At closing, she filed the page between the finished editions and locked the cabinet. The blank space did not disappear. It became part of the record, which was not the same as being repaired, but was better than being lost."""
-    return title, story, genre
-
-
-def write_fallback_story(theme: dict, target_date: datetime, reason: str) -> Path:
-    date_str = target_date.strftime("%Y-%m-%d")
-    theme_name = theme.get("name", "unknown")
-    title, story, genre = fallback_story_text(theme, target_date)
-    safe_title = markdown_escape(title)
-    safe_theme = markdown_escape(theme_name)
-    safe_genre = markdown_escape(genre)
-    output_dir = story_posts_output_dir()
-    output_dir.mkdir(parents=True, exist_ok=True)
-    path = output_dir / f"{date_str}-{slugify(title)}.md"
-    content = f"""---
-date: {date_str}
-title: "{safe_title}"
-description: "Fallback daily story generated after model failure: {markdown_escape(reason)}"
-author: "fallback-local"
-theme: "{safe_theme}"
-genre: "{safe_genre}"
----
-
-# {title}
-
-{story}
-"""
-    path.write_text(content)
-    print(f"⚠️  Wrote fallback story after generation failure: {path}")
-    return path
-
-
 def run_script(
     label: str,
     command: list[str],
@@ -458,6 +415,9 @@ def main():
 
     if not args.skip_story:
         existing_story = find_existing_story(target_date)
+        if existing_story and is_fallback_story(existing_story):
+            print(f"Error: existing story is a fallback requiring repair: {existing_story}")
+            sys.exit(1)
         if existing_story:
             print(f"Using existing story for {target_date.strftime('%Y-%m-%d')}: {existing_story}")
         else:
@@ -469,10 +429,8 @@ def main():
                 timeout_seconds=STORY_STEP_TIMEOUT_SECONDS,
             )
             if story_exit_code != 0:
-                if ALLOW_FALLBACK_STORY:
-                    write_fallback_story(theme, target_date, f"story generation exited {story_exit_code}")
-                else:
-                    sys.exit(story_exit_code)
+                # Never turn a failed generation into a publishable placeholder.
+                sys.exit(story_exit_code)
 
     if not args.skip_landing:
         run_script(

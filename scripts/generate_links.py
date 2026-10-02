@@ -44,10 +44,12 @@ from link_registry import LinkRegistry, normalize_url
 from discovery_corpus import DiscoveryCorpus, STORY_CONTEXT_DIR, classify_source_lane
 from project_paths import links_posts_output_dir
 
+from model_config import completion_options
+
 # Configuration
 API_BASE = os.environ.get("OPENAI_API_BASE", "https://integrate.api.nvidia.com/v1")
 API_KEY = os.environ.get("OPENAI_API_KEY")
-MODEL = os.environ.get("OPENAI_MODEL", "nvidia/llama-3.3-nemotron-super-49b-v1.5")
+MODEL = os.environ.get("OPENAI_MODEL", "nvidia/nemotron-3-ultra-550b-a55b")
 OPENAI_REQUEST_TIMEOUT = max(30, int(os.environ.get("OPENAI_REQUEST_TIMEOUT", "120")))
 OPENAI_MAX_RETRIES = max(0, int(os.environ.get("OPENAI_MAX_RETRIES", "2")))
 
@@ -1731,6 +1733,7 @@ def get_llm_research_strategy(theme: dict) -> Tuple[List[str], List[str], List[s
             )
             response = client.chat.completions.create(
                 model=MODEL,
+                **completion_options(MODEL),
                 messages=[
                     {"role": "system", "content": system_prompt},
                     {"role": "user", "content": f"Research topic: {theme_name}"}
@@ -2100,6 +2103,7 @@ Content excerpt:
         )
         response = client.chat.completions.create(
             model=MODEL,
+            **completion_options(MODEL),
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": prompt}

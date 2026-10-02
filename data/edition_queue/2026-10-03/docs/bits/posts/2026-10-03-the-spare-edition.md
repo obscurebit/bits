@@ -1,20 +1,82 @@
 ---
 date: 2026-10-03
-title: "The Spare Edition"
-description: "Fallback daily story generated after model failure: story generation exited 1"
-author: "fallback-local"
+title: "The Apple Cart"
+description: "A daily AI-generated story exploring speculative fiction"
+author: "https://integrate.api.nvidia.com/v1 / nvidia/nemotron-3-ultra-550b-a55b"
 theme: "counterfeit realities"
-genre: "Fallback speculative vignette"
+genre: "Ghost story energy without old haunted-house defaults"
+voice_profile: "Noir civic decay: compromised people, dim public spaces, favors, debt, and procedural suspicion"
 ---
 
-# The Spare Edition
+# The Apple Cart
 
-By the time the daily machine admitted it had no story, the office had already opened.
+I stood on the corner of 4th and Main, watching the lunch crowd thin out, the smell of fry oil and exhaust settling in my coat. My stomach was a fist. My wallet held three singles and a bus pass. My Auntie Vi sat behind her folding table, a mountain of wax fruit stacked in wooden crates: Red Delicious, Granny Smith, Bosc pears, clusters of grapes that looked like purple marbles. A hand-painted sign leaned against a crate: *Confession Fruit — $2. Eat Honest.*
 
-The clerk on duty was supposed to stamp a packet, unlock the side door, and pretend the missing page did not matter. Instead, she held the blank sheet up to the window and watched the morning pass through it. On one side was October 03, 2026. On the other was the version of the day that had arrived fully prepared.
+"Nephew," she said, not looking up from her crossword. "You're blocking the light."
 
-The form at the top said Counterfeit Realities. Nobody in the queue cared what that meant. They cared about lunch breaks, bus transfers, small promises made too early, and whether a system that failed politely still counted as a system.
+"I need an apple, Vi. A real one."
 
-So she wrote the first true thing she could prove: the day had happened. Then she wrote the second: someone had noticed.
+"Two dollars. You know the rule."
 
-At closing, she filed the page between the finished editions and locked the cabinet. The blank space did not disappear. It became part of the record, which was not the same as being repaired, but was better than being lost.
+"I know the rule. I hate the rule."
+
+"Rule keeps the lights on. Rule put you through community college." She capped her pen. "Pick one."
+
+I picked a Red Delicious. It felt heavy, cool, the wax skin yielding slightly under my thumb. "Fine. I admit it. You fooled me. This is fake fruit. Happy?"
+
+Vi didn't move. "Say it to the apple."
+
+"The apple doesn't have ears."
+
+"Say it to the apple, or it stays wax. Your tuition, your rent, your dignity — all wax until you speak."
+
+A transit cop slowed his cruiser at the light, eyeing us. Vi had permits. Probably. The city tolerated her because she paid her fines on time and didn't block the sidewalk. Mostly.
+
+I looked at the apple. "You tricked me. I bought a lie. I'm an idiot."
+
+The wax softened in my hand. The color deepened, pores appearing like freckles. A scent rose — sharp, green, autumn. I bit. Juice ran down my chin, sweet and tart, crunch loud in the traffic noise.
+
+Vi checked her watch. "Lunch break's over in ten. Eat fast."
+
+I ate the core. The seeds tasted like almonds. "Why does it work like that?"
+
+"Because the world runs on people pretending they aren't fooled. Admitting it breaks the seal. Lets the real in." She packed her crossword away. "Same reason your diploma works. You admitted you didn't know anything. They gave you paper. Now you pretend you know things. Everybody wins."
+
+"My diploma is real. I passed the classes."
+
+"Did you? Or did you just admit you were confused often enough they let you graduate?"
+
+The cop circled back, parked. Walked over, boots heavy on the pavement. "Viola. Permit check."
+
+"Officer Miller. Top drawer, middle folder." She didn't flinch.
+
+Miller flipped the folder, nodded. "Apples still turning real?"
+
+"Only for the honest." She gestured at me. "My nephew here just confessed to grand larceny of the truth. Ate the evidence."
+
+Miller looked at my empty hand, the juice on my chin. "Huh. You want a pear for the road? Might help the digestion."
+
+"I'm good." I wiped my face. "Thanks, Vi. For the apple. For the... lesson."
+
+"Don't thank me. Thank the sucker who paid full price for the wax version yesterday. He's the one who made yours real." She started folding her table. "Now scram. I got a dentist appointment and this cop owes me a favor for the time he ate three plums and cried about his ex-wife."
+
+I walked away, the bus pass warm in my pocket, the taste of apple still on my fingers. Behind me, Miller asked, "You really told him?"
+
+"You cried like a baby," Vi said. "Admitted you loved her more than your pension. Plums turned into gold. You pawned them, paid off your boat."
+
+The bus hissed to a stop. I got on, found a seat, watched the city roll by through scratched glass. My phone buzzed. A text from my boss: *Where's that report?*
+
+I typed: *Coming. Had to eat a lie first.*
+
+Sent. The screen didn't change. But the weight in my pocket felt different. Realer.
+
+---
+
+<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem;">
+  <button class="share-btn" data-url="{% raw %}{{ page.canonical_url }}{% endraw %}" data-title="The Apple Cart">
+    Share this story
+  </button>
+  <a href="https://github.com/obscurebit/bits/tree/755edf3" target="_blank" rel="noopener" class="story-gen-link">
+    gen:755edf3
+  </a>
+</div>

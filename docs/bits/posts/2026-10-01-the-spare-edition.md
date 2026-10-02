@@ -1,20 +1,86 @@
 ---
 date: 2026-10-01
-title: "The Spare Edition"
-description: "Fallback daily story generated after model failure: story generation exited 1"
-author: "fallback-local"
+title: "The Lot Next Door"
+description: "A daily AI-generated story exploring speculative fiction"
+author: "https://integrate.api.nvidia.com/v1 / nvidia/nemotron-3-ultra-550b-a55b"
 theme: "signal from nowhere"
-genre: "Fallback speculative vignette"
+genre: "Satire of systems, credentials, or institutional language"
+voice_profile: "Domestic fabulism: ordinary rooms, family habits, and one impossible rule treated as household logistics"
 ---
 
-# The Spare Edition
+# The Lot Next Door
 
-By the time the daily machine admitted it had no story, the office had already opened.
+I measure the ridge vent first. Twenty-two feet, asphalt shingle, south-facing. The vane sits on the peak of the garage—copper rooster, green with verdigris at the tail. It doesn't spin with the wind. It holds at three-one-five degrees, pointing past the oak, past the chain-link, straight at the empty lot where Mrs. Hernandez's garden used to be before the city took it for back taxes. I've been up here three hours. The vane hasn't trembled.
 
-The clerk on duty was supposed to stamp a packet, unlock the side door, and pretend the missing page did not matter. Instead, she held the blank sheet up to the window and watched the morning pass through it. On one side was October 01, 2026. On the other was the version of the day that had arrived fully prepared.
+"Come down," Elena calls from the ladder. Her voice carries the same flatness she uses when the inspector misses a soft spot. "The buyer's here."
 
-The form at the top said Signal From Nowhere. Nobody in the queue cared what that meant. They cared about lunch breaks, bus transfers, small promises made too early, and whether a system that failed politely still counted as a system.
+I don't move. The rooster's beak is fixed on a foundation that doesn't exist. No stakes. No string lines. Just crabgrass and a rusted swing set sinking into clay.
 
-So she wrote the first true thing she could prove: the day had happened. Then she wrote the second: someone had noticed.
+"He's offering twelve thousand over asking," she says, climbing the last rung. Her boots scrape the shingles. "Cash. Thirty-day close. We pay off the truck, the visa, put five toward the kitchen remodel."
 
-At closing, she filed the page between the finished editions and locked the cabinet. The blank space did not disappear. It became part of the record, which was not the same as being repaired, but was better than being lost.
+"The vane."
+
+"It's a weather vane, Marco. It points where the wind pushes it."
+
+"There's no wind."
+
+She stands beside me now, close enough that I smell the citrus cleaner on her hands. She follows the rooster's gaze. The lot is rectangular, fifty by one-twenty, zoned R-2. The city planner showed us the overlay map last month. Duplex possible. ADU in back. Numbers penciled in red ink.
+
+"Okay," she says. "Say it's broken. Say it's stuck. We sell the lot, we buy the vane a new roof to sit on. Everybody wins."
+
+"Elena." I tap the copper breast. Warm. Sun-heated. "It turned yesterday. Nine-fifteen a.m. Pointed at the Wilcox place on Elm. By noon, their permits were posted. New porch. Dormer. The vane knew before the city stamped the paper."
+
+She exhales through her nose. The sound she makes when I quote the supply catalog at dinner. "You watched it all day?"
+
+"I clocked it. Nine-fifteen. Wilcox. Two-thirty, the Chen house on Fourth. Solar array. Permit pulled three p.m. Same day." I pull the notebook from my hip pocket. Torn pages, pencil smears. "Three-forty-five, the old water tower lot. Demolition permit. Six p.m., the Miller place. Fence variance. Every single one. Before the paperwork existed."
+
+She takes the notebook. Flips. Her thumb smudges the graphite. "Coincidence. Confirmation bias. You're not writing down the times it points at nothing."
+
+"It never points at nothing."
+
+"Then why this lot? Nothing's happening there. No permits. No surveyors. The for-sale sign's been up six months."
+
+"Exactly."
+
+The buyer's car idles at the curb. Gray sedan. Rental plates. He checks his watch through the windshield.
+
+Elena hands back the notebook. Her wedding band catches the light—white gold, sized up twice since the pregnancy. "If we don't sell, we default on the truck in November. The kitchen stays gutted. The baby gets the crib in our room for another year."
+
+"I know."
+
+"Then why are we still talking about a piece of tin?"
+
+Because the rooster just moved.
+
+Not wind. Not vibration. A clean sweep, fifteen degrees left. Now it points at our house. At the bedroom window where the crib isn't assembled. At the kitchen where the cabinets sit in boxes in the garage.
+
+Elena sees it. Her hand finds my wrist. "Marco."
+
+"Yeah."
+
+"What does it mean?"
+
+I look at the lot. At the buyer tapping his steering wheel. At my wife's fingers, white-knuckled on my sleeve. The rooster holds its new heading, patient as a surveyor.
+
+"It means," I say, "we're not selling the lot."
+
+"Marco—"
+
+"We're building on it."
+
+"With what money?"
+
+"I don't know yet." I start down the roof, boots finding the familiar purchase. "But the vane says somebody's going to live there. And I think it's us."
+
+Behind me, Elena doesn't follow. She stays at the peak, notebook open, pencil poised over blank paper. Waiting for the next heading. Writing it down before the city knows.
+
+---
+
+<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem;">
+  <button class="share-btn" data-url="{% raw %}{{ page.canonical_url }}{% endraw %}" data-title="The Lot Next Door">
+    Share this story
+  </button>
+  <a href="https://github.com/obscurebit/bits/tree/755edf3" target="_blank" rel="noopener" class="story-gen-link">
+    gen:755edf3
+  </a>
+</div>

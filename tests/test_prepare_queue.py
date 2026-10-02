@@ -19,6 +19,17 @@ SPEC.loader.exec_module(prepare_queue)
 
 
 class PrepareQueueTests(unittest.TestCase):
+    def test_fallback_queue_entry_is_not_complete(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            entry = Path(tmpdir)
+            stories = entry / "docs/bits/posts"
+            links = entry / "docs/links/posts"
+            stories.mkdir(parents=True)
+            links.mkdir(parents=True)
+            (stories / "2026-08-30-the-spare-edition.md").write_text('author: "fallback-local"\n')
+            (links / "2026-08-30-daily-links.md").write_text("links")
+            self.assertFalse(prepare_queue.queue_entry_complete(entry, date(2026, 8, 30)))
+
     def test_prepare_date_sets_reliable_story_defaults(self) -> None:
         target_date = date(2026, 4, 22)
         date_str = target_date.strftime("%Y-%m-%d")
@@ -54,7 +65,7 @@ class PrepareQueueTests(unittest.TestCase):
             self.assertEqual(captured["env"]["OPENAI_RETRY_BACKOFF_SECONDS"], "20")
             self.assertEqual(captured["env"]["RUN_DAILY_STORY_TIMEOUT_SECONDS"], "1200")
             self.assertEqual(captured["env"]["ALLOW_EMPTY_LINKS"], "1")
-            self.assertEqual(captured["env"]["ALLOW_FALLBACK_STORY"], "1")
+            self.assertNotIn("ALLOW_FALLBACK_STORY", captured["env"])
             self.assertEqual(captured["env"]["AI_THEME_FALLBACKS"], "3")
             self.assertEqual(captured["env"]["AI_THEME_TIMEOUT_SECONDS"], "60")
             self.assertEqual(captured["env"]["AI_STORY_VARIETY"], "1")

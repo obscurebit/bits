@@ -1,20 +1,58 @@
 ---
 date: 2026-08-10
-title: "The Spare Edition"
-description: "Fallback daily story generated after model failure: story generation exited 1"
-author: "fallback-local"
+title: "The Door in Studio B"
+description: "A daily AI-generated story exploring speculative fiction"
+author: "https://integrate.api.nvidia.com/v1 / nvidia/nemotron-3-ultra-550b-a55b"
 theme: "reality glitches"
-genre: "Fallback speculative vignette"
+genre: "Tender romance complicated by one impossible condition"
+voice_profile: "Oral-history realism: a communal voice, selective memory, gossip, and practical contradiction"
 ---
 
-# The Spare Edition
+# The Door in Studio B
 
-By the time the daily machine admitted it had no story, the office had already opened.
+Mira
+I’m the one who saw it first, obviously. Six a.m. call, I’m sweeping sawdust off the marley, and Aris walks through the upstage-left door — the one that goes to the hallway, the one with the sticky latch — and he doesn’t come out the other side. He comes out *there*. The kitchen. His mother’s kitchen. Yellow Formica, the chipped mug drying rack, the smell of cumin and burnt toast. He freezes. Drops his water bottle. I hear him say, "Ma?" loud enough to crack the quiet.
 
-The clerk on duty was supposed to stamp a packet, unlock the side door, and pretend the missing page did not matter. Instead, she held the blank sheet up to the window and watched the morning pass through it. On one side was August 10, 2026. On the other was the version of the day that had arrived fully prepared.
+Theo
+Mira exaggerates. She was on her phone. I was rigging the fly rail, saw the whole thing. Aris walked through the door, paused, turned around, walked back out. Said, "Wrong room." That’s it. The kitchen thing? That’s Mira’s fanfic. She’s been writing that novel for four years.
 
-The form at the top said Reality Glitches. Nobody in the queue cared what that meant. They cared about lunch breaks, bus transfers, small promises made too early, and whether a system that failed politely still counted as a system.
+Mira
+Theo wasn’t there. He was in the booth eating a breakfast sandwich. I have the timestamp on my security badge swipe. 05:58. Aris’s badge? 05:59. The door log — the *actual* log, not the one Theo "remembers" — shows the maglock cycling *twice* in three seconds. You don’t get two cycles unless the sensor thinks two different people passed through. Or the same person twice. From different directions.
 
-So she wrote the first true thing she could prove: the day had happened. Then she wrote the second: someone had noticed.
+Javi
+The door’s always been weird. Since the renovation in ’19. HVAC guy swore the pressure differential makes it suck shut, but that doesn’t explain why the handle gets hot. Or why the paint peels in a perfect circle around the latch. We’ve all put our hands on it. We’ve all felt the hum. Aris isn’t special. He’s just the one who *stayed*.
 
-At closing, she filed the page between the finished editions and locked the cabinet. The blank space did not disappear. It became part of the record, which was not the same as being repaired, but was better than being lost.
+Theo
+Aris stayed because he’s a diva. He’s refusing the balcony scene. Says the blocking "violates his process." Director’s losing her mind. We’re three days from tech. The door is a distraction. A convenient excuse for a tantrum.
+
+Mira
+It’s not an excuse. I saw his face when he came back through. He’d been gone forty minutes. Forty minutes in a three-second door cycle. He had flour on his sleeve. *Flour*. We’re a theater. There is no flour.
+
+Javi
+The apprentice — Kira. First year, unpaid, calls everyone "boss" ironically. She wedged the door open with a sandbag. Said, "If it’s a portal, let’s use it. If it’s broken, let’s fix it. Either way, stop yelling." Director screamed at her. Aris laughed. First time I’ve heard him laugh in six months.
+
+Theo
+Kira’s an idiot. You don’t prop a fire door. It’s a code violation. The sandbag slipped. Door shut. Aris went white. Not scared — *homesick*. That’s the word. He looked at the closed door like it was a grave.
+
+Mira
+He asked her to open it again. Quiet. "Please." She didn’t. She looked at the director. The director looked at the clock. Tech in three days. Budget bleeding. Aris is the lead. He *has* to do the balcony scene.
+
+Javi
+So Kira picks up the sandbag. Wedges it. Door stays open. The kitchen smell hits us — cumin, toast, *cardamom*. Aris walks through. Doesn’t come back. Rehearsal continues. Understudy reads Romeo. Aris’s mother yells from the doorway, "Habibi, eat something!" and the whole company hears it.
+
+Theo
+We finished the week. Aris never came back. His mother sends leftovers sometimes. Tupperware appears on the props table. Kira got hired full-time. The door stays propped. We all use it. Quick trip for coffee. A nap on a childhood couch. A phone call you’ve been avoiding.
+
+Mira
+The balcony scene? Still unblocked. But sometimes, during the fight call, you hear a woman’s voice offstage: *"Aris! The oil!"* And the understudy — he nails the exit. Every time.
+
+---
+
+<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem;">
+  <button class="share-btn" data-url="{% raw %}{{ page.canonical_url }}{% endraw %}" data-title="The Door in Studio B">
+    Share this story
+  </button>
+  <a href="https://github.com/obscurebit/bits/tree/755edf3" target="_blank" rel="noopener" class="story-gen-link">
+    gen:755edf3
+  </a>
+</div>

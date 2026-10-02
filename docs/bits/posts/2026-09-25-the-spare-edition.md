@@ -1,20 +1,50 @@
 ---
 date: 2026-09-25
-title: "The Spare Edition"
-description: "Fallback daily story generated after model failure: story generation exited 1"
-author: "fallback-local"
+title: "The Knot Tariff"
+description: "A daily AI-generated story exploring speculative fiction"
+author: "https://integrate.api.nvidia.com/v1 / nvidia/nemotron-3-ultra-550b-a55b"
 theme: "memory manipulation"
-genre: "Fallback speculative vignette"
+genre: "Ghost story energy without old haunted-house defaults"
+voice_profile: "Satirical marketplace fable: price, trade, scarcity, and desire become supernatural bookkeeping"
 ---
 
-# The Spare Edition
+# The Knot Tariff
 
-By the time the daily machine admitted it had no story, the office had already opened.
+I still have the rope. It hangs in the shed behind the house, smelling of diesel and river mud, the same hemp I hauled aboard the *Lydia* for thirty years. The knots are the inventory. A figure-eight for the woman who left her sleeping pills in the cabin ashtray. A slipknot for the teenager who jumped before we cleared the dock, his body never found, his fare refunded to a mother who paid in installments. A bowline, tight as a fist, for the businessman who wept into his briefcase while the engine turned over. I never learned their names. The rope didn't require them.
 
-The clerk on duty was supposed to stamp a packet, unlock the side door, and pretend the missing page did not matter. Instead, she held the blank sheet up to the window and watched the morning pass through it. On one side was September 25, 2026. On the other was the version of the day that had arrived fully prepared.
+The Company audited the line every spring. An inspector in a polyester suit would run his fingers over the coils, reading the tension like Braille. "Three departures this quarter," he'd say, tapping his tablet. "One unauthorized. That's a surcharge." He didn't mean money. He meant the memory tax. You paid by forgetting the face. You paid by forgetting the sound of the splash.
 
-The form at the top said Memory Manipulation. Nobody in the queue cared what that meant. They cared about lunch breaks, bus transfers, small promises made too early, and whether a system that failed politely still counted as a system.
+Mara was twelve when she found the ledger in my coat pocket — a grease-stained notebook where I tallied the knots against the manifest. She didn't ask about the dead. She asked about the living.
 
-So she wrote the first true thing she could prove: the day had happened. Then she wrote the second: someone had noticed.
+"Father," she said, standing in the galley doorway, flour on her forearms from kneading dough for the ferry's snack bar. "The woman in the blue coat. The one who paid double to cross on a Tuesday. Her knot is loose."
 
-At closing, she filed the page between the finished editions and locked the cabinet. The blank space did not disappear. It became part of the record, which was not the same as being repaired, but was better than being lost.
+I didn't look up from the engine log. "They all loosen. Vibration. Tide."
+
+"Can you untie it?"
+
+"Costs extra."
+
+She set the bowl down. "I'll pay."
+
+"You don't have the currency."
+
+"I have the flour. I have the shift tomorrow. I have the story about the time you let the priest cross free because he blessed the propellers."
+
+"That story's inflated. The priest threw up over the gunwale."
+
+"Still worth something."
+
+She was bargaining for a stranger's departure. That was the offense. Not the theft of memory — the Company encouraged that, leased it back to you in monthly subscriptions — but the attempt to *restore* one. To make a leaving stay left.
+
+I untied the bowline. The rope sighed. In the shed, years later, I can still feel the ghost of that tension in my fingertips. The woman in the blue coat never came back. The ledger shows a zero balance. Mara runs the snack bar now. She charges tourists double for the story of the rope. They eat it up. She never asks me if it's true.
+
+---
+
+<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem;">
+  <button class="share-btn" data-url="{% raw %}{{ page.canonical_url }}{% endraw %}" data-title="The Knot Tariff">
+    Share this story
+  </button>
+  <a href="https://github.com/obscurebit/bits/tree/755edf3" target="_blank" rel="noopener" class="story-gen-link">
+    gen:755edf3
+  </a>
+</div>

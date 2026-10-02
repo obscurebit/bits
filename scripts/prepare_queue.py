@@ -13,7 +13,7 @@ from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
 from typing import Iterable, Optional
 
-from project_paths import OUTPUT_ROOT_ENV, queue_entry_dir, queue_manifest_path
+from project_paths import OUTPUT_ROOT_ENV, queue_entry_dir, queue_manifest_path, is_fallback_story
 
 
 def utc_now_iso() -> str:
@@ -70,7 +70,8 @@ def queued_links_path(entry_dir: Path, date_str: str) -> Optional[Path]:
 
 def queue_entry_complete(entry_dir: Path, target_date: date) -> bool:
     date_str = target_date.strftime("%Y-%m-%d")
-    return bool(queued_story_path(entry_dir, date_str) and queued_links_path(entry_dir, date_str))
+    story = queued_story_path(entry_dir, date_str)
+    return bool(story and not is_fallback_story(story) and queued_links_path(entry_dir, date_str))
 
 
 def extract_theme_name(path: Optional[Path]) -> str:
@@ -129,7 +130,6 @@ def prepare_date(target_date: date, force: bool = False) -> int:
     env.setdefault("OPENAI_RETRY_BACKOFF_SECONDS", "20")
     env.setdefault("RUN_DAILY_STORY_TIMEOUT_SECONDS", "1200")
     env.setdefault("ALLOW_EMPTY_LINKS", "1")
-    env.setdefault("ALLOW_FALLBACK_STORY", "1")
     env.setdefault("AI_THEME_FALLBACKS", "3")
     env.setdefault("AI_THEME_TIMEOUT_SECONDS", "60")
     env.setdefault("AI_STORY_VARIETY", "1")
@@ -147,7 +147,7 @@ def prepare_date(target_date: date, force: bool = False) -> int:
 
     story_path = queued_story_path(entry_dir, date_str)
     links_path = queued_links_path(entry_dir, date_str)
-    status = "prepared" if result.returncode == 0 and story_path and links_path else "failed"
+    status = "prepared" if result.returncode == 0 and queue_entry_complete(entry_dir, target_date) else "failed"
     write_manifest(
         entry_dir,
         {

@@ -5,10 +5,11 @@ Test if the model can access the web for link curation.
 
 import os
 from openai import OpenAI
+from model_config import completion_options
 
 API_BASE = os.environ.get("OPENAI_API_BASE", "https://integrate.api.nvidia.com/v1")
 API_KEY = os.environ.get("OPENAI_API_KEY")
-MODEL = os.environ.get("OPENAI_MODEL", "nvidia/llama-3.3-nemotron-super-49b-v1.5")
+MODEL = os.environ.get("OPENAI_MODEL", "nvidia/nemotron-3-ultra-550b-a55b")
 
 client = OpenAI(
     api_key=API_KEY,
@@ -21,6 +22,7 @@ print(f"API Base: {API_BASE}\n")
 
 response = client.chat.completions.create(
     model=MODEL,
+    **completion_options(MODEL),
     messages=[
         {
             "role": "system",

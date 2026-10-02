@@ -4,7 +4,7 @@
 
 routes:
   - name: "grounded-human"
-    model: "mistralai/mistral-large-3-675b-instruct-2512"
+    model: "nvidia/nemotron-3-ultra-550b-a55b"
     description: "Best default for clean, character-driven, socially grounded stories."
     match:
       genre:
@@ -48,7 +48,7 @@ routes:
         - "memory manipulation"
 
   - name: "formal-experimental"
-    model: "qwen/qwen3-next-80b-a3b-instruct"
+    model: "nvidia/nemotron-3-ultra-550b-a55b"
     description: "Use for more structurally adventurous or voice-led stories."
     match:
       pov:
@@ -82,7 +82,7 @@ routes:
         - "cryptographic secrets"
 
   - name: "uncanny-speculative"
-    model: "nvidia/llama-3.3-nemotron-super-49b-v1.5"
+    model: "nvidia/nemotron-3-ultra-550b-a55b"
     description: "Keep as fallback for stranger, higher-concept, or colder speculative setups."
     match:
       genre:

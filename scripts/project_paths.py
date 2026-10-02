@@ -34,3 +34,9 @@ def queue_entry_dir(date_str: str) -> Path:
 
 def queue_manifest_path(date_str: str) -> Path:
     return queue_entry_dir(date_str) / "manifest.json"
+
+
+def is_fallback_story(path: Path) -> bool:
+    """Recognize old placeholder content so it cannot be published again."""
+    text = path.read_text()
+    return 'author: "fallback-local"' in text or 'genre: "Fallback speculative vignette"' in text

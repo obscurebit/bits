@@ -6,6 +6,8 @@
   "published_story_file": "docs/bits/posts/2026-07-27-the-spare-edition.md",
   "status": "published",
   "story_file": "docs/bits/posts/2026-07-27-the-spare-edition.md",
+  "story_model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "story_repaired_at": "2026-10-02T15:14:55.669958+00:00",
   "theme": "edge of maps",
   "updated_at": "2026-07-27T10:00:06Z"
 }

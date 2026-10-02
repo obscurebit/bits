@@ -1,20 +1,68 @@
 ---
 date: 2026-09-15
-title: "The Spare Edition"
-description: "Fallback daily story generated after model failure: story generation exited 1"
-author: "fallback-local"
+title: "The Velvet Map"
+description: "A daily AI-generated story exploring speculative fiction"
+author: "https://integrate.api.nvidia.com/v1 / nvidia/nemotron-3-ultra-550b-a55b"
 theme: "forgotten technology"
-genre: "Fallback speculative vignette"
+genre: "Workplace comedy with a speculative inconvenience"
+voice_profile: "New-wave interior drift: perception, memory, and environment blur while concrete objects stay sharp"
 ---
 
-# The Spare Edition
+# The Velvet Map
 
-By the time the daily machine admitted it had no story, the office had already opened.
+You sweep popcorn kernels from Row J's grooves, the broom catching the same splintered armrest every third pass. The renovation crew took the seats out Tuesday — hydraulic lift, shrink-wrap, manifest clipboard — leaving thirty-seven rectangles of darker carpet where velvet was protected from twenty years of matinees. New recliners arrive Friday. Today is Wednesday, and you are the only one who noticed the lantern.
 
-The clerk on duty was supposed to stamp a packet, unlock the side door, and pretend the missing page did not matter. Instead, she held the blank sheet up to the window and watched the morning pass through it. On one side was September 15, 2026. On the other was the version of the day that had arrived fully prepared.
+It sat in the projection booth's parts drawer, wrapped in canvas smelling of machine oil and pre-ban cigarette smoke. Brass body, cracked mica chimney, hand-cranked gearbox stamped 1922. The foreman called it theater junk, told you to toss it in the dumpster with torn stubs and rusted reels. You slipped it into your cart instead.
 
-The form at the top said Forgotten Technology. Nobody in the queue cared what that meant. They cared about lunch breaks, bus transfers, small promises made too early, and whether a system that failed politely still counted as a system.
+Now you turn the crank in the empty auditorium. The mechanism catches, whirs, settles like a sewing machine. Light blooms — not white, but the particular amber of carbon arcs. It throws a beam toward Row J.
 
-So she wrote the first true thing she could prove: the day had happened. Then she wrote the second: someone had noticed.
+The seat appears first: plum velvet, brass number plate. Then the occupant. A man in a weak-tea cardigan, reading a program by feature glow. He turns a page. Real dust dances in impossible light.
 
-At closing, she filed the page between the finished editions and locked the cabinet. The blank space did not disappear. It became part of the record, which was not the same as being repaired, but was better than being lost.
+You stop cranking. The image holds.
+
+"Evening, Marcus."
+
+The voice comes from Row H, three seats in. You know that cardigan. The way he folds programs into precise quarters during trailers. Harold. Head usher 1994 to 2019. Retired to Boca, or so the Christmas card said. Cards stopped three years ago.
+
+Harold doesn't look at you. He watches his younger self in Row J. "*The Seventh Seal*. Tuesday matinee. April 1987. Spilled coffee on Mrs. Patterson's mink during the dream sequence. She wrote the owner. I got docked a week's pay."
+
+The lantern's crank clicks. The man in Row J lifts his cup.
+
+"You're not supposed to be here," you say.
+
+Harold turns. Same face — broken capillary on the left cheek, eyebrow scar from the '03 curtain rigging — but his edges shimmer at the light cone's boundary. "Neither are you. This booth's been sealed since digital conversion. I checked."
+
+"You checked."
+
+"Every Wednesday for six months. Since they announced the recliners." He gestures at empty rows. "Forty-three years in this house. I know which seats creak. Which patrons talk through quiet parts. The exact weight of silence between reels." His voice cracks. "I want my seat back."
+
+The lantern sputters. In Row J, the cardigan man sets down his coffee. Mrs. Patterson's mink rustles in the periphery.
+
+You look at your cart: industrial cleaner, replacement bulbs, the logbook waiting for tonight's cleaning hours. Row A: a woman knitting through *Vertigo*. Row F: a teenager carving initials during *Star Wars*. Row M: an old man who died during *Casablanca*'s second reel, not found until lights up.
+
+Row J. Harold. April 1987.
+
+The crank feels warm. The gear oil smells like your grandfather's garage.
+
+"Which one?"
+
+Harold's ghost-hand presses Row H's velvet. "J-14. Aisle. Left side. Always left. Easier exit if the reel jammed."
+
+The beam trembles. In Row J, the cardigan man stands, folds his program, leaves into a lobby that hasn't existed since 1998.
+
+You walk to Row H. The carpet rectangle is darker here too. You set the lantern down, crank once, twice. The beam finds Harold's seat. He sits. The velvet sighs under weight that shouldn't register.
+
+"Thank you," he says. "I'll wait for the feature."
+
+You pick up your broom. Kernels crunch under bristles. Friday the recliners come. Tonight you'll bring a folding chair and the logbook. Forty-three years of Tuesdays to catch up on.
+
+---
+
+<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem;">
+  <button class="share-btn" data-url="{% raw %}{{ page.canonical_url }}{% endraw %}" data-title="The Velvet Map">
+    Share this story
+  </button>
+  <a href="https://github.com/obscurebit/bits/tree/755edf3" target="_blank" rel="noopener" class="story-gen-link">
+    gen:755edf3
+  </a>
+</div>

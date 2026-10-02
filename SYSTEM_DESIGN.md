@@ -216,7 +216,10 @@ Queue prep intentionally overrides some of those defaults for speed and reliabil
 
 - `STORY_CANDIDATES=1`
 - `STORY_MODEL_ROUTING=0`
-- `OPENAI_REQUEST_TIMEOUT=90`
+- `OPENAI_REQUEST_TIMEOUT=240`
+
+Story failures exit without publishing a placeholder; publication rejects legacy fallback stories.
+The default NVIDIA writer is Nemotron 3 Ultra with reasoning disabled for bounded prose and JSON responses.
 
 ## Link Generation Architecture
 

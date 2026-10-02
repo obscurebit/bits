@@ -1,20 +1,52 @@
 ---
 date: 2026-09-18
-title: "The Spare Edition"
-description: "Fallback daily story generated after model failure: story generation exited 1"
-author: "fallback-local"
+title: "The Front Wheel"
+description: "A daily AI-generated story exploring speculative fiction"
+author: "https://integrate.api.nvidia.com/v1 / nvidia/nemotron-3-ultra-550b-a55b"
 theme: "time anomalies"
-genre: "Fallback speculative vignette"
+genre: "Quiet literary realism with one impossible pressure point"
+voice_profile: "Fragmented documentary texture: records, labels, notices, and testimony creating story through gaps"
 ---
 
-# The Spare Edition
+# The Front Wheel
 
-By the time the daily machine admitted it had no story, the office had already opened.
+The repair slip from Morales Bike Shop, dated Tuesday: TRUED FRONT RIM. REPLACED 14 SPOKES. LABOR $45. PARTS $22. TAX $4.02. The mechanic circled something in red pen near the bottom. You didn't ask what it meant. You paid with the wrinkled twenties from your messenger bag and rode out into traffic that moved at the usual speed.
 
-The clerk on duty was supposed to stamp a packet, unlock the side door, and pretend the missing page did not matter. Instead, she held the blank sheet up to the window and watched the morning pass through it. On one side was September 18, 2026. On the other was the version of the day that had arrived fully prepared.
+Your sister's text came Wednesday, 6:43 AM: *Mom's birthday Saturday. Cake from Porto's. Pick up 10 AM. Drop at her place by noon. Don't be late. Again.*
 
-The form at the top said Time Anomalies. Nobody in the queue cared what that meant. They cared about lunch breaks, bus transfers, small promises made too early, and whether a system that failed politely still counted as a system.
+You typed: *On it.* The rear wheel ate pavement normally. The front wheel hummed, a low bass note you felt in the handlebars, and the shadows of trees stretched long across the bike lane at angles that belonged to 5:43 AM.
 
-So she wrote the first true thing she could prove: the day had happened. Then she wrote the second: someone had noticed.
+Thursday, you tested it. Left the apartment at 7:00. Arrived at the warehouse dispatch at 6:00. The dispatcher, Luis, frowned at your timestamp. "You're early, man. Coffee's not even made." You sat on a milk crate in the loading dock for fifty-eight minutes, watching the sun rise a second time, drinking cold brew from yesterday's thermos. The front wheel rested against your knee, ticking like a cooling engine.
 
-At closing, she filed the page between the finished editions and locked the cabinet. The blank space did not disappear. It became part of the record, which was not the same as being repaired, but was better than being lost.
+Friday, you tried to explain to Maya over the phone. "It's not fast. It's *behind*. The back wheel lives in now. The front lives in an hour ago." She laughed, the sound tinny through the speaker. "That's the stupidest thing you've ever said. Just bring the cake. Mom bought the good candles. The ones that relight."
+
+Saturday, 9:15 AM. Porto's Bakery. The box smelled of guava and cheese and butter. You strapped it to the rear rack, bungee cords tight. The front wheel spun freely on the stand. 8:15 AM, said the spoke reflector's shadow.
+
+You rode.
+
+At 10:30 by your watch, 9:30 by the front wheel's reckoning, you hit the hill on Whittier. A sedan drifted into the lane. The driver, a woman with a phone at her ear, didn't look. You braked hard. The rear wheel locked, skidded, bit asphalt. The front wheel kept spinning, calm and hourly, and the fork twisted, metal screaming, and you went over the bars.
+
+The cake box exploded on the curb. Guava filling on a hubcap. Cheese frosting in the gutter.
+
+The woman screamed. Luis arrived in the dispatch van at 11:45, or 10:45, depending on which wheel you asked. He loaded the bike. Drove you to your mother's.
+
+Your mother opened the door at noon exactly. She wore the floral apron. "You're late," she said. "The candles burned down to nubs."
+
+Maya stood behind her, arms crossed. She had bought a second cake. Sheet cake, supermarket, plastic roses.
+
+You handed your mother the ruined box. "Front wheel's slow," you said. "An hour slow. Has been since Tuesday."
+
+She peered inside. Scooped a finger through the wreckage. Tasted. "Still good," she said. "Sit down. Eat with us."
+
+Maya unfolded a chair. The front wheel leaned against the wall in the hallway, ticking its private hour. You sat.
+
+---
+
+<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem;">
+  <button class="share-btn" data-url="{% raw %}{{ page.canonical_url }}{% endraw %}" data-title="The Front Wheel">
+    Share this story
+  </button>
+  <a href="https://github.com/obscurebit/bits/tree/755edf3" target="_blank" rel="noopener" class="story-gen-link">
+    gen:755edf3
+  </a>
+</div>

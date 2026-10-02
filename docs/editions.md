@@ -15,8 +15,8 @@ description: Browse previous daily editions of Obscure Bit
     <div class="archive-item__content">
       <span class="archive-item__date">October 02, 2026</span>
       <h3 class="archive-item__title">Edition #246</h3>
-      <p class="archive-item__excerpt">Maintenance Myths · By the time the daily machine admitted it had no story, the office had already opened.</p>
-      <div class="archive-item__tags"><span class="archive-item__theme">Maintenance Myths</span><span class="archive-item__genre" title="Fallback speculative vignette">Fallback speculative vignette</span></div>
+      <p class="archive-item__excerpt">Maintenance Myths · We know the Otis 4000's groan before the pager fires. Wet, low, gastric. We roll the cart in—laptop, sheaves, come-along—and find Car 3 level at the lobby, door...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Maintenance Myths</span><span class="archive-item__genre" title="Moral fable disguised as a very specific modern problem">Moral fable disguised as a very specific modern problem</span></div>
     </div>
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>
@@ -26,8 +26,8 @@ description: Browse previous daily editions of Obscure Bit
     <div class="archive-item__content">
       <span class="archive-item__date">October 01, 2026</span>
       <h3 class="archive-item__title">Edition #245</h3>
-      <p class="archive-item__excerpt">Signal From Nowhere · By the time the daily machine admitted it had no story, the office had already opened.</p>
-      <div class="archive-item__tags"><span class="archive-item__theme">Signal From Nowhere</span><span class="archive-item__genre" title="Fallback speculative vignette">Fallback speculative vignette</span></div>
+      <p class="archive-item__excerpt">Signal From Nowhere · I measure the ridge vent first. Twenty-two feet, asphalt shingle, south-facing. The vane sits on the peak of the garage—copper rooster, green with verdigris at...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Signal From Nowhere</span><span class="archive-item__genre" title="Satire of systems, credentials, or institutional language">Satire of systems</span></div>
     </div>
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>
@@ -37,8 +37,8 @@ description: Browse previous daily editions of Obscure Bit
     <div class="archive-item__content">
       <span class="archive-item__date">September 30, 2026</span>
       <h3 class="archive-item__title">Edition #244</h3>
-      <p class="archive-item__excerpt">Recursive Realities · By the time the daily machine admitted it had no story, the office had already opened.</p>
-      <div class="archive-item__tags"><span class="archive-item__theme">Recursive Realities</span><span class="archive-item__genre" title="Fallback speculative vignette">Fallback speculative vignette</span></div>
+      <p class="archive-item__excerpt">Recursive Realities · I'm the one who actually read the 2023 Custody Appendix. Section 4.7: "Aesthetic Decisions Requiring Mutual Consent." It lists haircuts. It does not list *hairc...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Recursive Realities</span><span class="archive-item__genre" title="Satire of systems, credentials, or institutional language">Satire of systems</span></div>
     </div>
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>
@@ -48,8 +48,8 @@ description: Browse previous daily editions of Obscure Bit
     <div class="archive-item__content">
       <span class="archive-item__date">September 29, 2026</span>
       <h3 class="archive-item__title">Edition #243</h3>
-      <p class="archive-item__excerpt">Signal From Nowhere · By the time the daily machine admitted it had no story, the office had already opened.</p>
-      <div class="archive-item__tags"><span class="archive-item__theme">Signal From Nowhere</span><span class="archive-item__genre" title="Fallback speculative vignette">Fallback speculative vignette</span></div>
+      <p class="archive-item__excerpt">Signal From Nowhere · I kept a spiral notebook for the voices. Not names — just addresses, dates, and the intervals they hid in. 442 Sycamore, October 1998: a minor third in the teno...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Signal From Nowhere</span><span class="archive-item__genre" title="Noir-ish social observation rather than detective plotting">Noir-ish social observation rather than detective plotting</span></div>
     </div>
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>
@@ -59,8 +59,8 @@ description: Browse previous daily editions of Obscure Bit
     <div class="archive-item__content">
       <span class="archive-item__date">September 28, 2026</span>
       <h3 class="archive-item__title">Edition #242</h3>
-      <p class="archive-item__excerpt">Biological Computing · By the time the daily machine admitted it had no story, the office had already opened.</p>
-      <div class="archive-item__tags"><span class="archive-item__theme">Biological Computing</span><span class="archive-item__genre" title="Fallback speculative vignette">Fallback speculative vignette</span></div>
+      <p class="archive-item__excerpt">Biological Computing · The machine breathes. Not the compressor's rattle — I know that sound like my own pulse after thirty years — but something wetter. A rhythmic expansion behind t...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Biological Computing</span><span class="archive-item__genre" title="Quiet literary realism with one impossible pressure point">Quiet literary realism with one impossible pressure point</span></div>
     </div>
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>
@@ -70,8 +70,8 @@ description: Browse previous daily editions of Obscure Bit
     <div class="archive-item__content">
       <span class="archive-item__date">September 27, 2026</span>
       <h3 class="archive-item__title">Edition #241</h3>
-      <p class="archive-item__excerpt">Underground Networks · By the time the daily machine admitted it had no story, the office had already opened.</p>
-      <div class="archive-item__tags"><span class="archive-item__theme">Underground Networks</span><span class="archive-item__genre" title="Fallback speculative vignette">Fallback speculative vignette</span></div>
+      <p class="archive-item__excerpt">Underground Networks · First, you learn the knock. Three sharp raps on the cast-iron rib beside the window, then wait. If the steam hisses back low and slow, the line is open. If it s...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Underground Networks</span><span class="archive-item__genre" title="Ghost story energy without old haunted-house defaults">Ghost story energy without old haunted-house defaults</span></div>
     </div>
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>
@@ -81,8 +81,8 @@ description: Browse previous daily editions of Obscure Bit
     <div class="archive-item__content">
       <span class="archive-item__date">September 26, 2026</span>
       <h3 class="archive-item__title">Edition #240</h3>
-      <p class="archive-item__excerpt">Lost Civilizations · By the time the daily machine admitted it had no story, the office had already opened.</p>
-      <div class="archive-item__tags"><span class="archive-item__theme">Lost Civilizations</span><span class="archive-item__genre" title="Fallback speculative vignette">Fallback speculative vignette</span></div>
+      <p class="archive-item__excerpt">Lost Civilizations · Elena taped the warning sign to the linoleum: WET FLOOR — CURE TIME 4 HRS. The tenant, a man named Kaelo who worked in compliance for a logistics algorithm, hov...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Lost Civilizations</span><span class="archive-item__genre" title="Satire of systems, credentials, or institutional language">Satire of systems</span></div>
     </div>
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>
@@ -92,8 +92,8 @@ description: Browse previous daily editions of Obscure Bit
     <div class="archive-item__content">
       <span class="archive-item__date">September 25, 2026</span>
       <h3 class="archive-item__title">Edition #239</h3>
-      <p class="archive-item__excerpt">Memory Manipulation · By the time the daily machine admitted it had no story, the office had already opened.</p>
-      <div class="archive-item__tags"><span class="archive-item__theme">Memory Manipulation</span><span class="archive-item__genre" title="Fallback speculative vignette">Fallback speculative vignette</span></div>
+      <p class="archive-item__excerpt">Memory Manipulation · I still have the rope. It hangs in the shed behind the house, smelling of diesel and river mud, the same hemp I hauled aboard the *Lydia* for thirty years. The...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Memory Manipulation</span><span class="archive-item__genre" title="Ghost story energy without old haunted-house defaults">Ghost story energy without old haunted-house defaults</span></div>
     </div>
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>
@@ -103,8 +103,8 @@ description: Browse previous daily editions of Obscure Bit
     <div class="archive-item__content">
       <span class="archive-item__date">September 24, 2026</span>
       <h3 class="archive-item__title">Edition #238</h3>
-      <p class="archive-item__excerpt">Emergent Intelligence · By the time the daily machine admitted it had no story, the office had already opened.</p>
-      <div class="archive-item__tags"><span class="archive-item__theme">Emergent Intelligence</span><span class="archive-item__genre" title="Fallback speculative vignette">Fallback speculative vignette</span></div>
+      <p class="archive-item__excerpt">Emergent Intelligence · The Model 440s arrived in September: flip-down, powder-coated, 350-lb rating, proprietary firmware. Installers left a laminated guide and a 1-800 number. The fe...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Emergent Intelligence</span><span class="archive-item__genre" title="Workplace comedy with a speculative inconvenience">Workplace comedy with a speculative inconvenience</span></div>
     </div>
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>
@@ -114,8 +114,8 @@ description: Browse previous daily editions of Obscure Bit
     <div class="archive-item__content">
       <span class="archive-item__date">September 23, 2026</span>
       <h3 class="archive-item__title">Edition #237</h3>
-      <p class="archive-item__excerpt">Reality Glitches · By the time the daily machine admitted it had no story, the office had already opened.</p>
-      <div class="archive-item__tags"><span class="archive-item__theme">Reality Glitches</span><span class="archive-item__genre" title="Fallback speculative vignette">Fallback speculative vignette</span></div>
+      <p class="archive-item__excerpt">Reality Glitches · You sit there long enough, the steam stops looking like steam. Starts looking like intention. I'm telling you, Marv, the plates remember. Not all of them. Just...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Reality Glitches</span><span class="archive-item__genre" title="Noir-ish social observation rather than detective plotting">Noir-ish social observation rather than detective plotting</span></div>
     </div>
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>
@@ -125,8 +125,8 @@ description: Browse previous daily editions of Obscure Bit
     <div class="archive-item__content">
       <span class="archive-item__date">September 22, 2026</span>
       <h3 class="archive-item__title">Edition #236</h3>
-      <p class="archive-item__excerpt">Abandoned Stations · By the time the daily machine admitted it had no story, the office had already opened.</p>
-      <div class="archive-item__tags"><span class="archive-item__theme">Abandoned Stations</span><span class="archive-item__genre" title="Fallback speculative vignette">Fallback speculative vignette</span></div>
+      <p class="archive-item__excerpt">Abandoned Stations · We knew the tram line died in '87, same year the council stopped fixing the roof. What we didn't expect was for the pigeons to keep running it.</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Abandoned Stations</span><span class="archive-item__genre" title="Ghost story energy without old haunted-house defaults">Ghost story energy without old haunted-house defaults</span></div>
     </div>
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>
@@ -136,8 +136,8 @@ description: Browse previous daily editions of Obscure Bit
     <div class="archive-item__content">
       <span class="archive-item__date">September 21, 2026</span>
       <h3 class="archive-item__title">Edition #235</h3>
-      <p class="archive-item__excerpt">Cryptographic Secrets · By the time the daily machine admitted it had no story, the office had already opened.</p>
-      <div class="archive-item__tags"><span class="archive-item__theme">Cryptographic Secrets</span><span class="archive-item__genre" title="Fallback speculative vignette">Fallback speculative vignette</span></div>
+      <p class="archive-item__excerpt">Cryptographic Secrets · The stitching on the cardigan only existed while wet. Marta had seen it twice now: pale blue thread forming block letters across the lower back, visible for the...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Cryptographic Secrets</span><span class="archive-item__genre" title="Tender romance complicated by one impossible condition">Tender romance complicated by one impossible condition</span></div>
     </div>
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>
@@ -147,8 +147,8 @@ description: Browse previous daily editions of Obscure Bit
     <div class="archive-item__content">
       <span class="archive-item__date">September 20, 2026</span>
       <h3 class="archive-item__title">Edition #234</h3>
-      <p class="archive-item__excerpt">Synthetic Life · By the time the daily machine admitted it had no story, the office had already opened.</p>
-      <div class="archive-item__tags"><span class="archive-item__theme">Synthetic Life</span><span class="archive-item__genre" title="Fallback speculative vignette">Fallback speculative vignette</span></div>
+      <p class="archive-item__excerpt">Synthetic Life · The memo from Procurement arrived damp. Unit 734, *Hydrangea macrosperma* 'Blue Billow', had exercised Clause 14: Refusal of Substrate. It rejected peat, vermic...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Synthetic Life</span><span class="archive-item__genre" title="Satire of systems, credentials, or institutional language">Satire of systems</span></div>
     </div>
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>
@@ -158,8 +158,8 @@ description: Browse previous daily editions of Obscure Bit
     <div class="archive-item__content">
       <span class="archive-item__date">September 19, 2026</span>
       <h3 class="archive-item__title">Edition #233</h3>
-      <p class="archive-item__excerpt">Parallel Dimensions · By the time the daily machine admitted it had no story, the office had already opened.</p>
-      <div class="archive-item__tags"><span class="archive-item__theme">Parallel Dimensions</span><span class="archive-item__genre" title="Fallback speculative vignette">Fallback speculative vignette</span></div>
+      <p class="archive-item__excerpt">Parallel Dimensions · You grip the cold-room handle, towel-damp palm on metal. Behind you: sawdust, rendered fat, bakery yeast. 11:14 AM Sunday. The regulars served, walk-ins turned...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Parallel Dimensions</span><span class="archive-item__genre" title="Ghost story energy without old haunted-house defaults">Ghost story energy without old haunted-house defaults</span></div>
     </div>
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>
@@ -169,8 +169,8 @@ description: Browse previous daily editions of Obscure Bit
     <div class="archive-item__content">
       <span class="archive-item__date">September 18, 2026</span>
       <h3 class="archive-item__title">Edition #232</h3>
-      <p class="archive-item__excerpt">Time Anomalies · By the time the daily machine admitted it had no story, the office had already opened.</p>
-      <div class="archive-item__tags"><span class="archive-item__theme">Time Anomalies</span><span class="archive-item__genre" title="Fallback speculative vignette">Fallback speculative vignette</span></div>
+      <p class="archive-item__excerpt">Time Anomalies · The repair slip from Morales Bike Shop, dated Tuesday: TRUED FRONT RIM. REPLACED 14 SPOKES. LABOR $45. PARTS $22. TAX $4.02. The mechanic circled something in r...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Time Anomalies</span><span class="archive-item__genre" title="Quiet literary realism with one impossible pressure point">Quiet literary realism with one impossible pressure point</span></div>
     </div>
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>
@@ -180,8 +180,8 @@ description: Browse previous daily editions of Obscure Bit
     <div class="archive-item__content">
       <span class="archive-item__date">September 17, 2026</span>
       <h3 class="archive-item__title">Edition #231</h3>
-      <p class="archive-item__excerpt">Consciousness Frontiers · By the time the daily machine admitted it had no story, the office had already opened.</p>
-      <div class="archive-item__tags"><span class="archive-item__theme">Consciousness Frontiers</span><span class="archive-item__genre" title="Fallback speculative vignette">Fallback speculative vignette</span></div>
+      <p class="archive-item__excerpt">Consciousness Frontiers · The roller sat at the boundary edge, engine ticking down, a twelve-ton cylinder of cast iron and stubbornness. I'd named it Bessie in '87, back when naming thin...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Consciousness Frontiers</span><span class="archive-item__genre" title="Noir-ish social observation rather than detective plotting">Noir-ish social observation rather than detective plotting</span></div>
     </div>
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>
@@ -191,8 +191,8 @@ description: Browse previous daily editions of Obscure Bit
     <div class="archive-item__content">
       <span class="archive-item__date">September 16, 2026</span>
       <h3 class="archive-item__title">Edition #230</h3>
-      <p class="archive-item__excerpt">Digital Archaeology · By the time the daily machine admitted it had no story, the office had already opened.</p>
-      <div class="archive-item__tags"><span class="archive-item__theme">Digital Archaeology</span><span class="archive-item__genre" title="Fallback speculative vignette">Fallback speculative vignette</span></div>
+      <p class="archive-item__excerpt">Digital Archaeology · You know Mrs. Velez at the corner, the one with the vintage sign that still says "Byte Me" in fading pink neon? She sold me a beige tower last October. Said it...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Digital Archaeology</span><span class="archive-item__genre" title="Noir-ish social observation rather than detective plotting">Noir-ish social observation rather than detective plotting</span></div>
     </div>
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>
@@ -202,8 +202,8 @@ description: Browse previous daily editions of Obscure Bit
     <div class="archive-item__content">
       <span class="archive-item__date">September 15, 2026</span>
       <h3 class="archive-item__title">Edition #229</h3>
-      <p class="archive-item__excerpt">Forgotten Technology · By the time the daily machine admitted it had no story, the office had already opened.</p>
-      <div class="archive-item__tags"><span class="archive-item__theme">Forgotten Technology</span><span class="archive-item__genre" title="Fallback speculative vignette">Fallback speculative vignette</span></div>
+      <p class="archive-item__excerpt">Forgotten Technology · You sweep popcorn kernels from Row J's grooves, the broom catching the same splintered armrest every third pass. The renovation crew took the seats out Tuesday...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Forgotten Technology</span><span class="archive-item__genre" title="Workplace comedy with a speculative inconvenience">Workplace comedy with a speculative inconvenience</span></div>
     </div>
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>
@@ -213,8 +213,8 @@ description: Browse previous daily editions of Obscure Bit
     <div class="archive-item__content">
       <span class="archive-item__date">September 14, 2026</span>
       <h3 class="archive-item__title">Edition #228</h3>
-      <p class="archive-item__excerpt">Quantum Mysteries · By the time the daily machine admitted it had no story, the office had already opened.</p>
-      <div class="archive-item__tags"><span class="archive-item__theme">Quantum Mysteries</span><span class="archive-item__genre" title="Fallback speculative vignette">Fallback speculative vignette</span></div>
+      <p class="archive-item__excerpt">Quantum Mysteries · You want to know how it works? It works like the ticket machine at the DMV. You pull a number, you wait, your number comes up. Only here, the number is a person...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Quantum Mysteries</span><span class="archive-item__genre" title="Caper energy at a human scale">Caper energy at a human scale</span></div>
     </div>
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>
@@ -224,8 +224,8 @@ description: Browse previous daily editions of Obscure Bit
     <div class="archive-item__content">
       <span class="archive-item__date">September 13, 2026</span>
       <h3 class="archive-item__title">Edition #227</h3>
-      <p class="archive-item__excerpt">Small Gods Of Commerce · By the time the daily machine admitted it had no story, the office had already opened.</p>
-      <div class="archive-item__tags"><span class="archive-item__theme">Small Gods Of Commerce</span><span class="archive-item__genre" title="Fallback speculative vignette">Fallback speculative vignette</span></div>
+      <p class="archive-item__excerpt">Small Gods Of Commerce · I swore an affidavit in 2018 stating the tin was a promotional item from a defunct tire company. I have maintained this position under oath, in mediation, and o...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Small Gods Of Commerce</span><span class="archive-item__genre" title="Caper energy at a human scale">Caper energy at a human scale</span></div>
     </div>
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>
@@ -235,8 +235,8 @@ description: Browse previous daily editions of Obscure Bit
     <div class="archive-item__content">
       <span class="archive-item__date">September 12, 2026</span>
       <h3 class="archive-item__title">Edition #226</h3>
-      <p class="archive-item__excerpt">Municipal Weirdness · By the time the daily machine admitted it had no story, the office had already opened.</p>
-      <div class="archive-item__tags"><span class="archive-item__theme">Municipal Weirdness</span><span class="archive-item__genre" title="Fallback speculative vignette">Fallback speculative vignette</span></div>
+      <p class="archive-item__excerpt">Municipal Weirdness · You shoulda seen Marta's face when the foreman tried to shovel the first apology into it. We're standing on 14th and Cedar, steam coming off the fresh asphalt,...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Municipal Weirdness</span><span class="archive-item__genre" title="Quiet literary realism with one impossible pressure point">Quiet literary realism with one impossible pressure point</span></div>
     </div>
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>
@@ -246,8 +246,8 @@ description: Browse previous daily editions of Obscure Bit
     <div class="archive-item__content">
       <span class="archive-item__date">September 11, 2026</span>
       <h3 class="archive-item__title">Edition #225</h3>
-      <p class="archive-item__excerpt">Counterfeit Realities · By the time the daily machine admitted it had no story, the office had already opened.</p>
-      <div class="archive-item__tags"><span class="archive-item__theme">Counterfeit Realities</span><span class="archive-item__genre" title="Fallback speculative vignette">Fallback speculative vignette</span></div>
+      <p class="archive-item__excerpt">Counterfeit Realities · The shop smelled of mothballs and dry rot, a scent that clung to the wool coats hung heavy on rolling racks. Elias stood behind the counter, his thumb worrying...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Counterfeit Realities</span><span class="archive-item__genre" title="Domestic drama bent by one technological or metaphysical fact">Domestic drama bent by one technological or metaphysical fact</span></div>
     </div>
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>
@@ -257,8 +257,8 @@ description: Browse previous daily editions of Obscure Bit
     <div class="archive-item__content">
       <span class="archive-item__date">September 10, 2026</span>
       <h3 class="archive-item__title">Edition #224</h3>
-      <p class="archive-item__excerpt">Biological Computing · By the time the daily machine admitted it had no story, the office had already opened.</p>
-      <div class="archive-item__tags"><span class="archive-item__theme">Biological Computing</span><span class="archive-item__genre" title="Fallback speculative vignette">Fallback speculative vignette</span></div>
+      <p class="archive-item__excerpt">Biological Computing · Dr. Kovic</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Biological Computing</span><span class="archive-item__genre" title="Workplace comedy with a speculative inconvenience">Workplace comedy with a speculative inconvenience</span></div>
     </div>
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>
@@ -268,8 +268,8 @@ description: Browse previous daily editions of Obscure Bit
     <div class="archive-item__content">
       <span class="archive-item__date">September 09, 2026</span>
       <h3 class="archive-item__title">Edition #223</h3>
-      <p class="archive-item__excerpt">Edge Of Maps · By the time the daily machine admitted it had no story, the office had already opened.</p>
-      <div class="archive-item__tags"><span class="archive-item__theme">Edge Of Maps</span><span class="archive-item__genre" title="Fallback speculative vignette">Fallback speculative vignette</span></div>
+      <p class="archive-item__excerpt">Edge Of Maps · My mother wanted to die in the gap. She said it over the phone, takeout tone: "Zero rent. Zero taxes. No address."</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Edge Of Maps</span><span class="archive-item__genre" title="Noir-ish social observation rather than detective plotting">Noir-ish social observation rather than detective plotting</span></div>
     </div>
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>
@@ -279,8 +279,8 @@ description: Browse previous daily editions of Obscure Bit
     <div class="archive-item__content">
       <span class="archive-item__date">September 08, 2026</span>
       <h3 class="archive-item__title">Edition #222</h3>
-      <p class="archive-item__excerpt">Recursive Realities · By the time the daily machine admitted it had no story, the office had already opened.</p>
-      <div class="archive-item__tags"><span class="archive-item__theme">Recursive Realities</span><span class="archive-item__genre" title="Fallback speculative vignette">Fallback speculative vignette</span></div>
+      <p class="archive-item__excerpt">Recursive Realities · The cake order came in every Tuesday at 4:17 p.m. sharp. A white sheet cake, two layers, buttercream roses piped around the border. The message in blue gel: *Ha...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Recursive Realities</span><span class="archive-item__genre" title="Quiet literary realism with one impossible pressure point">Quiet literary realism with one impossible pressure point</span></div>
     </div>
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>
@@ -290,8 +290,8 @@ description: Browse previous daily editions of Obscure Bit
     <div class="archive-item__content">
       <span class="archive-item__date">September 07, 2026</span>
       <h3 class="archive-item__title">Edition #221</h3>
-      <p class="archive-item__excerpt">Signal From Nowhere · By the time the daily machine admitted it had no story, the office had already opened.</p>
-      <div class="archive-item__tags"><span class="archive-item__theme">Signal From Nowhere</span><span class="archive-item__genre" title="Fallback speculative vignette">Fallback speculative vignette</span></div>
+      <p class="archive-item__excerpt">Signal From Nowhere · Old Charlie found it in the western red cedar, two planks up from the keel. He'd been running his palm along the grain, checking for twist, when the wood warmed...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Signal From Nowhere</span><span class="archive-item__genre" title="Moral fable disguised as a very specific modern problem">Moral fable disguised as a very specific modern problem</span></div>
     </div>
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>
@@ -301,8 +301,8 @@ description: Browse previous daily editions of Obscure Bit
     <div class="archive-item__content">
       <span class="archive-item__date">September 06, 2026</span>
       <h3 class="archive-item__title">Edition #220</h3>
-      <p class="archive-item__excerpt">Biological Computing · By the time the daily machine admitted it had no story, the office had already opened.</p>
-      <div class="archive-item__tags"><span class="archive-item__theme">Biological Computing</span><span class="archive-item__genre" title="Fallback speculative vignette">Fallback speculative vignette</span></div>
+      <p class="archive-item__excerpt">Biological Computing · Start with the spent grain. Oat hulls, soybean meal, a dash of gypsum. Steam it at ninety-five Celsius for four hours. Cool to twenty-two. Inoculate with *Pleur...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Biological Computing</span><span class="archive-item__genre" title="Workplace comedy with a speculative inconvenience">Workplace comedy with a speculative inconvenience</span></div>
     </div>
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>
@@ -312,8 +312,8 @@ description: Browse previous daily editions of Obscure Bit
     <div class="archive-item__content">
       <span class="archive-item__date">September 05, 2026</span>
       <h3 class="archive-item__title">Edition #219</h3>
-      <p class="archive-item__excerpt">Underground Networks · By the time the daily machine admitted it had no story, the office had already opened.</p>
-      <div class="archive-item__tags"><span class="archive-item__theme">Underground Networks</span><span class="archive-item__genre" title="Fallback speculative vignette">Fallback speculative vignette</span></div>
+      <p class="archive-item__excerpt">Underground Networks · The pipe didn't carry water. It carried envelopes, USB drives folded into origami cranes, a vial of blood once, and last winter, a set of car keys wrapped in a...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Underground Networks</span><span class="archive-item__genre" title="Caper energy at a human scale">Caper energy at a human scale</span></div>
     </div>
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>
@@ -323,8 +323,8 @@ description: Browse previous daily editions of Obscure Bit
     <div class="archive-item__content">
       <span class="archive-item__date">September 04, 2026</span>
       <h3 class="archive-item__title">Edition #218</h3>
-      <p class="archive-item__excerpt">Lost Civilizations · By the time the daily machine admitted it had no story, the office had already opened.</p>
-      <div class="archive-item__tags"><span class="archive-item__theme">Lost Civilizations</span><span class="archive-item__genre" title="Fallback speculative vignette">Fallback speculative vignette</span></div>
+      <p class="archive-item__excerpt">Lost Civilizations · So I'm down in the hypocaust of the Baths of Caracalla, right? July, ninety degrees, lying on my back in two inches of sludge, chipping Roman hydraulic cement o...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Lost Civilizations</span><span class="archive-item__genre" title="Workplace comedy with a speculative inconvenience">Workplace comedy with a speculative inconvenience</span></div>
     </div>
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>
@@ -334,8 +334,8 @@ description: Browse previous daily editions of Obscure Bit
     <div class="archive-item__content">
       <span class="archive-item__date">September 03, 2026</span>
       <h3 class="archive-item__title">Edition #217</h3>
-      <p class="archive-item__excerpt">Memory Manipulation · By the time the daily machine admitted it had no story, the office had already opened.</p>
-      <div class="archive-item__tags"><span class="archive-item__theme">Memory Manipulation</span><span class="archive-item__genre" title="Fallback speculative vignette">Fallback speculative vignette</span></div>
+      <p class="archive-item__excerpt">Memory Manipulation · My mother left her frames on the nightstand the night she died. Cheap wire rims, bent at the bridge from falling asleep reading. My father wore them for three y...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Memory Manipulation</span><span class="archive-item__genre" title="Tender romance complicated by one impossible condition">Tender romance complicated by one impossible condition</span></div>
     </div>
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>
@@ -345,8 +345,8 @@ description: Browse previous daily editions of Obscure Bit
     <div class="archive-item__content">
       <span class="archive-item__date">September 02, 2026</span>
       <h3 class="archive-item__title">Edition #216</h3>
-      <p class="archive-item__excerpt">Emergent Intelligence · By the time the daily machine admitted it had no story, the office had already opened.</p>
-      <div class="archive-item__tags"><span class="archive-item__theme">Emergent Intelligence</span><span class="archive-item__genre" title="Fallback speculative vignette">Fallback speculative vignette</span></div>
+      <p class="archive-item__excerpt">Emergent Intelligence · The produce display at Aisle 4, Position 7, was a standard SmartStack unit. It monitored weight, temperature, ethylene output, and dwell time. At 02:14 AM, it r...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Emergent Intelligence</span><span class="archive-item__genre" title="Domestic drama bent by one technological or metaphysical fact">Domestic drama bent by one technological or metaphysical fact</span></div>
     </div>
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>
@@ -356,8 +356,8 @@ description: Browse previous daily editions of Obscure Bit
     <div class="archive-item__content">
       <span class="archive-item__date">September 01, 2026</span>
       <h3 class="archive-item__title">Edition #215</h3>
-      <p class="archive-item__excerpt">Reality Glitches · By the time the daily machine admitted it had no story, the office had already opened.</p>
-      <div class="archive-item__tags"><span class="archive-item__theme">Reality Glitches</span><span class="archive-item__genre" title="Fallback speculative vignette">Fallback speculative vignette</span></div>
+      <p class="archive-item__excerpt">Reality Glitches · Mrs. Higgins brings in Barnaby every six weeks like clockwork. Barnaby is a Standard Poodle the color of weak tea, and he hates me. He expresses this by vibrati...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Reality Glitches</span><span class="archive-item__genre" title="Workplace comedy with a speculative inconvenience">Workplace comedy with a speculative inconvenience</span></div>
     </div>
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>
@@ -367,8 +367,8 @@ description: Browse previous daily editions of Obscure Bit
     <div class="archive-item__content">
       <span class="archive-item__date">August 31, 2026</span>
       <h3 class="archive-item__title">Edition #214</h3>
-      <p class="archive-item__excerpt">Abandoned Stations · By the time the daily machine admitted it had no story, the office had already opened.</p>
-      <div class="archive-item__tags"><span class="archive-item__theme">Abandoned Stations</span><span class="archive-item__genre" title="Fallback speculative vignette">Fallback speculative vignette</span></div>
+      <p class="archive-item__excerpt">Abandoned Stations · The 4:17 from Sector 7 didn't stop at Kestrel Platform. Hadn't in twelve years. The rails were welded shut, the schedule painted over in municipal grey. But Eli...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Abandoned Stations</span><span class="archive-item__genre" title="Moral fable disguised as a very specific modern problem">Moral fable disguised as a very specific modern problem</span></div>
     </div>
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>
@@ -378,8 +378,8 @@ description: Browse previous daily editions of Obscure Bit
     <div class="archive-item__content">
       <span class="archive-item__date">August 30, 2026</span>
       <h3 class="archive-item__title">Edition #213</h3>
-      <p class="archive-item__excerpt">Cryptographic Secrets · By the time the daily machine admitted it had no story, the office had already opened.</p>
-      <div class="archive-item__tags"><span class="archive-item__theme">Cryptographic Secrets</span><span class="archive-item__genre" title="Fallback speculative vignette">Fallback speculative vignette</span></div>
+      <p class="archive-item__excerpt">Cryptographic Secrets · The shop smelled of machine oil and brass shavings, a scent Elena associated with precision, not grief. She clamped the blank into the vise, the metal cold agai...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Cryptographic Secrets</span><span class="archive-item__genre" title="Caper energy at a human scale">Caper energy at a human scale</span></div>
     </div>
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>
@@ -598,8 +598,8 @@ description: Browse previous daily editions of Obscure Bit
     <div class="archive-item__content">
       <span class="archive-item__date">August 10, 2026</span>
       <h3 class="archive-item__title">Edition #193</h3>
-      <p class="archive-item__excerpt">Reality Glitches · By the time the daily machine admitted it had no story, the office had already opened.</p>
-      <div class="archive-item__tags"><span class="archive-item__theme">Reality Glitches</span><span class="archive-item__genre" title="Fallback speculative vignette">Fallback speculative vignette</span></div>
+      <p class="archive-item__excerpt">Reality Glitches · Mira</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Reality Glitches</span><span class="archive-item__genre" title="Tender romance complicated by one impossible condition">Tender romance complicated by one impossible condition</span></div>
     </div>
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>
@@ -752,8 +752,8 @@ description: Browse previous daily editions of Obscure Bit
     <div class="archive-item__content">
       <span class="archive-item__date">July 27, 2026</span>
       <h3 class="archive-item__title">Edition #179</h3>
-      <p class="archive-item__excerpt">Edge Of Maps · By the time the daily machine admitted it had no story, the office had already opened.</p>
-      <div class="archive-item__tags"><span class="archive-item__theme">Edge Of Maps</span><span class="archive-item__genre" title="Fallback speculative vignette">Fallback speculative vignette</span></div>
+      <p class="archive-item__excerpt">Edge Of Maps · The epoxy smell bit the back of the throat, sharp and chemical-sweet. Marta rolled the long-handled roller across the pool bottom, the blue paint sealing over t...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Edge Of Maps</span><span class="archive-item__genre" title="Satire of systems, credentials, or institutional language">Satire of systems</span></div>
     </div>
     <span class="archive-item__category">Edition</span>
     <span class="archive-item__arrow">→</span>

@@ -1,6 +1,11 @@
 import importlib.util
 import sys
 import unittest
+import os
+import tempfile
+from datetime import datetime
+from types import SimpleNamespace
+from unittest import mock
 from pathlib import Path
 
 
@@ -13,6 +18,35 @@ SPEC.loader.exec_module(generate_story)
 
 
 class GenerateStoryVarietyTests(unittest.TestCase):
+    def test_recent_context_excludes_future_and_fallback_stories(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            posts = root / "docs/bits/posts"
+            queue = root / "data/edition_queue/2026-08-28/docs/bits/posts"
+            posts.mkdir(parents=True)
+            queue.mkdir(parents=True)
+            def story(title, author="model"):
+                return f'---\ntitle: "{title}"\nauthor: "{author}"\n---\n\n# {title}\n\nOpening.'
+            (posts / "2026-08-27-past.md").write_text(story("Past"))
+            (posts / "2026-08-29-fallback.md").write_text(story("Placeholder", "fallback-local"))
+            (posts / "2026-09-01-future.md").write_text(story("Future"))
+            (queue / "2026-08-28-queued.md").write_text(story("Queued"))
+            old_cwd = Path.cwd()
+            try:
+                os.chdir(root)
+                with mock.patch.object(generate_story, "POSTS_DIR", posts):
+                    context = generate_story.collect_recent_story_context(datetime(2026, 8, 30))
+                self.assertEqual(context["titles"], ["Past", "Queued"])
+            finally:
+                os.chdir(old_cwd)
+
+    def test_incomplete_story_response_is_rejected(self) -> None:
+        response = SimpleNamespace(choices=[SimpleNamespace(
+            finish_reason="length", message=SimpleNamespace(content="unfinished draft"))])
+        with mock.patch.object(generate_story, "request_chat_completion_with_retries", return_value=response):
+            with self.assertRaisesRegex(ValueError, "Story response incomplete"):
+                generate_story.request_story_completion(None, "model", "system", "prompt", .8)
+
     def test_parse_ai_variety_response_extracts_wrapped_json(self) -> None:
         response = """
         Sure:
@@ -113,7 +147,7 @@ class GenerateStoryVarietyTests(unittest.TestCase):
             },
         )
 
-        self.assertIn("mistral-large", model)
+        self.assertEqual(model, "nvidia/nemotron-3-ultra-550b-a55b")
         self.assertTrue(reason.startswith("grounded-human:"))
 
 

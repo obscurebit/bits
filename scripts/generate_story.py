@@ -28,10 +28,12 @@ except Exception as exc:
 from discovery_corpus import STORY_CONTEXT_DIR
 from project_paths import story_posts_output_dir
 
+from model_config import completion_options
+
 # Configuration
 API_BASE = os.environ.get("OPENAI_API_BASE", "https://integrate.api.nvidia.com/v1")
 API_KEY = os.environ.get("OPENAI_API_KEY")
-MODEL = os.environ.get("OPENAI_MODEL", "nvidia/llama-3.3-nemotron-super-49b-v1.5")
+MODEL = os.environ.get("OPENAI_MODEL", "nvidia/nemotron-3-ultra-550b-a55b")
 SELECTOR_MODEL = os.environ.get("STORY_SELECTOR_MODEL", MODEL)
 ENABLE_MODEL_ROUTING = os.environ.get("STORY_MODEL_ROUTING", "1").lower() not in {"0", "false", "no"}
 OPENAI_REQUEST_TIMEOUT = max(30, int(os.environ.get("OPENAI_REQUEST_TIMEOUT", "120")))
@@ -332,7 +334,7 @@ def extract_story_body(markdown_text: str) -> str:
     except ValueError:
         body = markdown_text
 
-    body = body.split("\n---\n<div", 1)[0]
+    body = re.split(r"\n---\n\s*<div", body, maxsplit=1)[0]
     return body.strip()
 
 
@@ -356,10 +358,14 @@ def collect_recent_story_context(target_date: Optional[datetime] = None, limit: 
         return {}
 
     skip_prefix = (target_date or datetime.now()).strftime("%Y-%m-%d")
-    post_paths = [
-        path for path in sorted(POSTS_DIR.glob("*.md"))
-        if not path.name.startswith(skip_prefix)
-    ]
+    # Date backfills must see the archive before that day, plus earlier queued stories.
+    paths = list(POSTS_DIR.glob("*.md"))
+    paths.extend(Path("data/edition_queue").glob("*/docs/bits/posts/*.md"))
+    by_date = {}
+    for path in sorted(paths):
+        if path.name[:10] < skip_prefix and 'author: "fallback-local"' not in path.read_text():
+            by_date[path.name[:10]] = path
+    post_paths = [by_date[key] for key in sorted(by_date)]
     recent_paths = post_paths[-limit:]
     if not recent_paths:
         return {}
@@ -579,6 +585,7 @@ Rules:
     try:
         response = client.chat.completions.create(
             model=MODEL,
+            **completion_options(MODEL),
             messages=[
                 {"role": "system", "content": "You add fresh, grounded specificity to a story prompt. Return valid JSON only."},
                 {"role": "user", "content": prompt},
@@ -692,6 +699,7 @@ def build_story_prompt(
     parts.append("")
     
     parts.append("CRAFT TARGETS:")
+    parts.append("- Aim for 450-550 words in a focused scene; stay within the 400-650 word limit.")
     parts.append("- Give the story a lived-in social world: work, family, neighbors, debt, ritual, status, care, jealousy, obligation, or embarrassment.")
     parts.append("- Use concrete, specific details that feel observed rather than generated.")
     parts.append("- Let the speculative element change a choice, relationship, or small power dynamic on the page.")
@@ -742,6 +750,7 @@ def request_chat_completion_with_retries(
         try:
             return client.chat.completions.create(
                 model=model,
+                **completion_options(model),
                 messages=messages,
                 temperature=temperature,
                 top_p=top_p,
@@ -777,7 +786,10 @@ def request_story_completion(client: OpenAI, writer_model: str, system_prompt: s
         max_tokens=4096,
         label="Story generation",
     )
-    return clean_story_response(response.choices[0].message.content.strip())
+    choice = response.choices[0]
+    if choice.finish_reason != "stop" or not choice.message.content:
+        raise ValueError(f"Story response incomplete (finish_reason={choice.finish_reason})")
+    return clean_story_response(choice.message.content.strip())
 
 
 def build_story_selection_prompt(theme: dict, base_prompt: str, candidates: list[str], target_date: Optional[datetime] = None) -> str:
@@ -924,7 +936,7 @@ def save_story(
             text=True,
             check=True
         ).stdout.strip()
-        commit_url = f"https://github.com/obscurebit/b1ts/tree/{commit_hash}"
+        commit_url = f"https://github.com/obscurebit/bits/tree/{commit_hash}"
     except:
         commit_hash = "unknown"
         commit_url = "#"

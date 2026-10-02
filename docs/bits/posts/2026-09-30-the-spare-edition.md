@@ -1,20 +1,40 @@
 ---
 date: 2026-09-30
-title: "The Spare Edition"
-description: "Fallback daily story generated after model failure: story generation exited 1"
-author: "fallback-local"
+title: "The Fractal Fringe Clause"
+description: "A daily AI-generated story exploring speculative fiction"
+author: "https://integrate.api.nvidia.com/v1 / nvidia/nemotron-3-ultra-550b-a55b"
 theme: "recursive realities"
-genre: "Fallback speculative vignette"
+genre: "Satire of systems, credentials, or institutional language"
+voice_profile: "Philosophical workplace comedy: jokes emerge from people trying to apply rules to impossible facts"
 ---
 
-# The Spare Edition
+# The Fractal Fringe Clause
 
-By the time the daily machine admitted it had no story, the office had already opened.
+I'm the one who actually read the 2023 Custody Appendix. Section 4.7: "Aesthetic Decisions Requiring Mutual Consent." It lists haircuts. It does not list *haircuts within haircuts*. That's the loophole. That's the whole case.
 
-The clerk on duty was supposed to stamp a packet, unlock the side door, and pretend the missing page did not matter. Instead, she held the blank sheet up to the window and watched the morning pass through it. On one side was September 30, 2026. On the other was the version of the day that had arrived fully prepared.
+I'm the one who has to cut it. Ten years at Shear Madness, eight at the community college cosmetology program, and now I'm explaining recursion to a family court mediator. The kid wants the left side short, right side long. Standard asymmetry. But the right side? That's where the "micro-fringe" lives. A half-inch strip, cut into a tiny, perfect bob, hidden inside the long hair. She pulls it forward, boom: second haircut. Pushes it back: first haircut. Two states. One head.
 
-The form at the top said Recursive Realities. Nobody in the queue cared what that meant. They cared about lunch breaks, bus transfers, small promises made too early, and whether a system that failed politely still counted as a system.
+I'm the one paying for it. Two hundred dollars. *Per state.* The barber—Milo, certified in "Nested Topology" since last Tuesday—runs the clippers over the left side. Buzz. Done. Then he combs the right side forward, snips the micro-bob. Snip. Done. Then he combs it back. "State One," he announces. "State Two." He charges me for State One. He charges her for State Two. The receipt has a toggle button printed on it.
 
-So she wrote the first true thing she could prove: the day had happened. Then she wrote the second: someone had noticed.
+I'm the one who filed the injunction. "Irreconcilable Aesthetic Drift." The mediator, a woman named Brenda with a laminator fetish, stares at the diagram. "So... the child has two haircuts simultaneously?" "Schrodinger's Fringe," Milo offers, unhelpfully. "It's a superposition," I say. "Until observed by a parent. Then it collapses into whichever parent is watching." "That's not physics," my ex says. "That's parenting," I say.
 
-At closing, she filed the page between the finished editions and locked the cabinet. The blank space did not disappear. It became part of the record, which was not the same as being repaired, but was better than being lost.
+I'm the one who noticed the fine print on Milo's certificate. "Certified Nested Topologist, Tier 1. Valid for single-recursion events only. Double-nesting requires Tier 2." The micro-fringe *has* a part. A microscopic zig-zag. A third haircut. "She asked for a zig-zag part *inside* the micro-bob," Milo admits. "I improvised. Tier 1 doesn't cover improvisation."
+
+I'm the one who has to pay for the zig-zag. Three hundred dollars. Per state. Six hundred total. The receipt now has a dropdown menu.
+
+I'm the one who watches the kid in the rearview mirror. She pulls the right side forward. Micro-bob. Zig-zag part visible. "State Three," she whispers. Pushes it back. Long hair. "State One." Pulls left side up—wait. *She shaved a lightning bolt into the left undercut last week.* "State Four," she says. "Dad paid for State One. Mom paid for State Two. Grandma paid for State Three. *I* paid for State Four. Babysitting money."
+
+I'm the one who pulls over. The injunction is in the glovebox. The receipt is in my wallet. The kid is in the back, a walking logic bomb. I text my ex: *She's nested four deep. We need a Tier 4 Topologist. Milo knows a guy. He takes Venmo.*
+
+I'm the one who replies: *Fine. But the zig-zag stays. It's the only part of this divorce that makes geometric sense.*
+
+---
+
+<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem;">
+  <button class="share-btn" data-url="{% raw %}{{ page.canonical_url }}{% endraw %}" data-title="The Fractal Fringe Clause">
+    Share this story
+  </button>
+  <a href="https://github.com/obscurebit/bits/tree/755edf3" target="_blank" rel="noopener" class="story-gen-link">
+    gen:755edf3
+  </a>
+</div>
