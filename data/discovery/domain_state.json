@@ -540,7 +540,7 @@
     "selected_count": 1
   },
   "lflank.wordpress.com": {
-    "last_seen": "2026-10-03",
+    "last_seen": "2026-10-05",
     "last_selected": "2026-10-01",
     "selected_count": 1
   },
@@ -749,6 +749,11 @@
     "last_selected": "",
     "selected_count": 0
   },
+  "numbers-stations.com": {
+    "last_seen": "2026-10-05",
+    "last_selected": "2026-10-05",
+    "selected_count": 2
+  },
   "numbersoddities.nl": {
     "last_seen": "",
     "last_selected": "2026-04-15",
@@ -860,9 +865,9 @@
     "selected_count": 1
   },
   "priyom.org": {
-    "last_seen": "2026-10-01",
-    "last_selected": "2026-10-01",
-    "selected_count": 3
+    "last_seen": "2026-10-05",
+    "last_selected": "2026-10-05",
+    "selected_count": 4
   },
   "projectavalon.net": {
     "last_seen": "",

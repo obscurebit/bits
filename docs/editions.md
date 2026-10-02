@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-10-02-edition-246/" class="archive-item">
+    <div class="archive-item__number">246</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">October 02, 2026</span>
+      <h3 class="archive-item__title">Edition #246</h3>
+      <p class="archive-item__excerpt">Maintenance Myths · By the time the daily machine admitted it had no story, the office had already opened.</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Maintenance Myths</span><span class="archive-item__genre" title="Fallback speculative vignette">Fallback speculative vignette</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-10-01-edition-245/" class="archive-item">
     <div class="archive-item__number">245</div>
     <div class="archive-item__content">

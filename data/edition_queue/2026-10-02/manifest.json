@@ -1,8 +1,11 @@
 {
   "date": "2026-10-02",
   "links_file": "docs/links/posts/2026-10-02-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-10-02T12:18:29Z",
+  "published_links_file": "docs/links/posts/2026-10-02-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-10-02-the-spare-edition.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-10-02-the-spare-edition.md",
   "theme": "maintenance myths",
-  "updated_at": "2026-10-01T12:49:45Z"
+  "updated_at": "2026-10-02T12:13:05Z"
 }

@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-05",
+  "theme": "signal from nowhere",
+  "links_direction": "specific number station recordings, individual unexplained signal incidents, detailed SETI discovery stories",
+  "motifs": [
+    "Radio",
+    "Latvia",
+    "Case",
+    "Soviet",
+    "in 1940",
+    "In 1979",
+    "Numbers Stations Over Latvia Marisgoldmanis",
+    "PDF download",
+    "Table",
+    "Korea Russia General",
+    "Current",
+    "Legacy"
+  ],
+  "interesting_bits": [
+    "in 1940",
+    "In 1979",
+    "PDF download"
+  ],
+  "links": [
+    {
+      "title": "KGB's monitoring effort of Number Stations",
+      "url": "https://www.numbers-stations.com/articles/kgb-numbers-stations-archive/",
+      "concepts": [
+        "Radio",
+        "Latvia",
+        "Case",
+        "Soviet"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Numbers Stations Over Latvia Marisgoldmanis",
+      "url": "https://www.numbers-stations.com/wp-content/uploads/2020/04/Numbers_Stations_over_Latvia_MarisGoldmanis.pdf",
+      "concepts": [
+        "Numbers Stations Over Latvia Marisgoldmanis"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Diplomatic Stations \u203a  Priyom.org",
+      "url": "https://priyom.org/diplomatic-stations",
+      "concepts": [
+        "Table",
+        "Korea Russia General",
+        "Current",
+        "Legacy"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}
