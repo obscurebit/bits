@@ -1,11 +1,8 @@
 {
   "date": "2026-10-05",
-  "exit_code": 0,
   "links_file": "docs/links/posts/2026-10-05-daily-links.md",
   "status": "prepared",
   "story_file": "docs/bits/posts/2026-10-05-the-spare-edition.md",
-  "story_model": "nvidia/nemotron-3-ultra-550b-a55b",
-  "story_repaired_at": "2026-10-02T15:31:38.507257+00:00",
   "theme": "signal from nowhere",
-  "updated_at": "2026-10-02T12:18:28Z"
+  "updated_at": "2026-10-03T11:24:17Z"
 }

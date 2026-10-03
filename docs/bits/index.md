@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-10-03-the-spare-edition/" class="archive-item">
+    <div class="archive-item__number">247</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">October 03, 2026</span>
+      <h3 class="archive-item__title">The Apple Cart</h3>
+      <p class="archive-item__excerpt">I stood on the corner of 4th and Main, watching the lunch crowd thin out, the smell of fry oil and exhaust settling in my coat. My stomach was a fist....</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Counterfeit Realities</span><span class="archive-item__genre" title="Ghost story energy without old haunted-house defaults">Ghost story energy without old haunted-house defaults</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-10-02-the-spare-edition/" class="archive-item">
     <div class="archive-item__number">246</div>
     <div class="archive-item__content">

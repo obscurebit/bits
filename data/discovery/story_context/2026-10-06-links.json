@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-06",
+  "theme": "time ball keepers",
+  "links_direction": "time ball operation manual harbor master, last time ball keeper interview, maritime time signal history port authority records, time ball mechanism maintenance logs",
+  "motifs": [
+    "Lock",
+    "Knowledge",
+    "Locksmith",
+    "Training",
+    "Myth",
+    "Premium",
+    "Maintenance",
+    "Cars",
+    "Guidelines",
+    "Technical",
+    "Records",
+    "Scanning"
+  ],
+  "interesting_bits": [
+    "\" NARA Guidelines for Digitizing Archival Materials for Electronic Access \""
+  ],
+  "links": [
+    {
+      "title": "How to Become a Locksmith: The Underground Guide | ValidGrad",
+      "url": "https://validgrad.com/blog/become-locksmith-guide/",
+      "concepts": [
+        "Lock",
+        "Knowledge",
+        "Locksmith",
+        "Training"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Car Maintenance: Debunking 7 Common Myths | Chase",
+      "url": "https://www.chase.com/personal/auto/education/maintenance/car-maintenance-myths",
+      "concepts": [
+        "Myth",
+        "Premium",
+        "Maintenance",
+        "Cars"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Technical Guidelines for Digitizing Archival Materials for Electronic Access: Creation of Production Master Files-Raster Images",
+      "url": "https://old.diglib.org/pubs/dlf103/dlf103.htm",
+      "concepts": [
+        "Guidelines",
+        "Technical",
+        "Records",
+        "Scanning"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}

@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-10-03-edition-247/" class="archive-item">
+    <div class="archive-item__number">247</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">October 03, 2026</span>
+      <h3 class="archive-item__title">Edition #247</h3>
+      <p class="archive-item__excerpt">Counterfeit Realities · I stood on the corner of 4th and Main, watching the lunch crowd thin out, the smell of fry oil and exhaust settling in my coat. My stomach was a fist. My wallet...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Counterfeit Realities</span><span class="archive-item__genre" title="Ghost story energy without old haunted-house defaults">Ghost story energy without old haunted-house defaults</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-10-02-edition-246/" class="archive-item">
     <div class="archive-item__number">246</div>
     <div class="archive-item__content">
