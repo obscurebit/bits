@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-10-04-edition-248/" class="archive-item">
+    <div class="archive-item__number">248</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">October 04, 2026</span>
+      <h3 class="archive-item__title">Edition #248</h3>
+      <p class="archive-item__excerpt">Municipal Weirdness · The whistle tastes like chlorine and old pennies. I blew it three times. Standard code for *contaminant in the deep end*. The kid floating face-down wasn't drow...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Municipal Weirdness</span><span class="archive-item__genre" title="Caper energy at a human scale">Caper energy at a human scale</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-10-03-edition-247/" class="archive-item">
     <div class="archive-item__number">247</div>
     <div class="archive-item__content">

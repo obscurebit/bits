@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-07",
+  "theme": "inventory hauntings",
+  "links_direction": "perpetual inventory discrepancies, ghost SKUs in legacy ERP systems, warehouse bin location anomalies, physical audit vs system record case studies",
+  "motifs": [
+    "Helpful",
+    "Some",
+    "Thing",
+    "Module",
+    "\"it will be an easy little refactoring\"",
+    "Reality",
+    "What",
+    "Just",
+    "Expect",
+    "\" He stared at me, then down at his bent golf club. \"",
+    "Life",
+    "Digital"
+  ],
+  "interesting_bits": [
+    "\"it will be an easy little refactoring\"",
+    "\"No, no, don't kick it! Are you trying to validate its warranty on existential aggression?\"",
+    "\" I snapped back, keeping my distance near the shattered storefront of what used to be a noodle bar. \"",
+    "\" He stared at me, then down at his bent golf club. \""
+  ],
+  "links": [
+    {
+      "title": "Safer Refactoring on Legacy Systems\n    -\n    Continuously Deployed",
+      "url": "https://www.mayerdan.com/programming/2015/02/18/safer-refactoring-on-legacy-systems",
+      "concepts": [
+        "Helpful",
+        "Some",
+        "Thing",
+        "Module"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Reality Glitches and Other Daily Annoyances [LitRPG][Post-Apocalypse][Snark] | Questionable Questing",
+      "url": "https://www.marginalia-search.com/r/3/723742254694882/crqrku5gwu?hash=gvOR5zAreEtECl_WMCE-s_J5e5IttJC81i-v94ll2w4",
+      "concepts": [
+        "Reality",
+        "What",
+        "Just",
+        "Expect"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Digital materialization and synthetic life | chorasimilarity",
+      "url": "https://www.marginalia-search.com/r/11/484144215753928/8jk7nmz6ua?hash=WOhzrUct4tJ90zRxUqRjlJAWZtEjQyLeQvgYH5kAlGk",
+      "concepts": [
+        "Life",
+        "Digital",
+        "Matter",
+        "Real"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}
