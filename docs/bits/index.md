@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-10-05-the-spare-edition/" class="archive-item">
+    <div class="archive-item__number">249</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">October 05, 2026</span>
+      <h3 class="archive-item__title">The Spare He Couldn't Convert</h3>
+      <p class="archive-item__excerpt">The pinsetter on Lane 7 didn't cycle. It exhaled. A pneumatic sigh, then the distinct *thwock-thwock-thwock* of wood striking wood, ten pins resetting...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Signal From Nowhere</span><span class="archive-item__genre" title="Satire of systems, credentials, or institutional language">Satire of systems</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-10-04-the-spare-edition/" class="archive-item">
     <div class="archive-item__number">248</div>
     <div class="archive-item__content">

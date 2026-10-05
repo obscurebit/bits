@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-10-05-edition-249/" class="archive-item">
+    <div class="archive-item__number">249</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">October 05, 2026</span>
+      <h3 class="archive-item__title">Edition #249</h3>
+      <p class="archive-item__excerpt">Signal From Nowhere · The pinsetter on Lane 7 didn't cycle. It exhaled. A pneumatic sigh, then the distinct *thwock-thwock-thwock* of wood striking wood, ten pins resetting themselve...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Signal From Nowhere</span><span class="archive-item__genre" title="Satire of systems, credentials, or institutional language">Satire of systems</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-10-04-edition-248/" class="archive-item">
     <div class="archive-item__number">248</div>
     <div class="archive-item__content">

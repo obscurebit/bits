@@ -1,8 +1,11 @@
 {
   "date": "2026-10-05",
   "links_file": "docs/links/posts/2026-10-05-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-10-05T14:43:20Z",
+  "published_links_file": "docs/links/posts/2026-10-05-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-10-05-the-spare-edition.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-10-05-the-spare-edition.md",
   "theme": "signal from nowhere",
-  "updated_at": "2026-10-04T12:05:10Z"
+  "updated_at": "2026-10-05T14:09:39Z"
 }
