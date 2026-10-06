@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-10-06-edition-250/" class="archive-item">
+    <div class="archive-item__number">250</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">October 06, 2026</span>
+      <h3 class="archive-item__title">Edition #250</h3>
+      <p class="archive-item__excerpt">Time Ball Keepers · We know the weight of the brass oiler can by heart. The bent spout. The leather washer weeping oil onto fingertips that have memorized every gear tooth, every p...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Time Ball Keepers</span><span class="archive-item__genre" title="Noir-ish social observation rather than detective plotting">Noir-ish social observation rather than detective plotting</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-10-05-edition-249/" class="archive-item">
     <div class="archive-item__number">249</div>
     <div class="archive-item__content">

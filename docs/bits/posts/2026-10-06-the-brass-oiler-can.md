@@ -1,0 +1,64 @@
+---
+date: 2026-10-06
+title: "The Brass Oiler Can"
+description: "A daily AI-generated story exploring speculative fiction"
+author: "https://integrate.api.nvidia.com/v1 / nvidia/nemotron-3-ultra-550b-a55b"
+theme: "time ball keepers"
+genre: "Noir-ish social observation rather than detective plotting"
+voice_profile: "Public myth undercut by logistics: ceremony, belief, and awe tangled with cleanup, staffing, and forms"
+---
+
+# The Brass Oiler Can
+
+We know the weight of the brass oiler can by heart. The bent spout. The leather washer weeping oil onto fingertips that have memorized every gear tooth, every pawl, every ratchet click of the harbor time ball mechanism. We know the iron floor plates worn thin by a century of boot soles and salt air, the single folding chair bolted off-center in the lantern room. We know the chit system the harbor master insists on—signed forms for every climb up the tower ladder—though the forms ran out in 1983 and nobody reordered them. We know the queue that forms at the base of the tower every Tuesday at noon, the queue with its own morality, its own silent accounting.
+
+Marlowe stands at the bottom of the ladder. Retired locksmith. Still carries a tension wrench in his coat pocket. Called in to consult on the antique padlocks that haven't been opened in twenty years.
+
+"Chit," he says, holding out a grease-stained hand.
+
+We don't have one. We never have one. The queue knows this. The queue watches.
+
+Marlowe's fingers find the tension wrench in his pocket. We hear the metal click against his lighter. "Harbor master's office sent me. Said the padlocks on the gear room door and the lantern room hatch are frozen. Said you'd know which keys to try."
+
+We do know. We've known for fifteen years. The keys were lost in a cardboard box during the 1972 office move. The box is in a drawer in the harbor master's desk, third from the top, behind the rubber bands and the dried-out felt-tip pens. We've never told anyone.
+
+"Can't let you up without a chit," Marlowe says. "Rules."
+
+The queue shifts. A woman with a toddler on her hip. Two men in coveralls smelling of diesel and fish. An old woman with a shopping bag full of tupperware containers—leftovers for the shelter kitchen. The queue has its own morality. It remembers who cuts. It remembers who waits. It remembers who gets helped and who gets turned away.
+
+Marlowe looks up at the tower. At the time ball frozen at the top of its mast since the motor burned out in 1979. At the mechanism we climb every Tuesday to crank by hand. Three hundred and forty-seven turns. We've counted. Every week. Fifteen years.
+
+"Look," Marlowe says, voice dropping. "I didn't drive forty miles from Port Townsend for bureaucracy. The shipping companies don't care. The Coast Guard doesn't care. The harbor master doesn't care. But I care. My grandfather was a keeper at Cape Flattery. He taught me that a mechanism maintained is a promise kept."
+
+We look at his hands. Callused. Stained. The tension wrench outline pressing against his coat pocket.
+
+The queue holds its breath.
+
+"Third drawer," we say. "Harbor master's desk. Cardboard box. Brass tags on the keys. Gear room key has a notch filed in the bow. Lantern room key is the one with the broken teeth."
+
+Marlowe nods. Once. "Thank you."
+
+He turns. Climbs. We watch him go. The queue watches him go. The woman with the toddler exhales. The men in coveralls exchange a glance. The old woman adjusts her shopping bag.
+
+We reach for the brass oiler can. The bent spout. The leather washer weeping oil onto our fingertips.
+
+At noon, the time ball drops. Three hundred and forty-seven turns later, it rises again.
+
+Marlowe descends the ladder. Hands us a chit—blank on the back, signed in pencil on the front: *M. Vance, Locksmith. Padlocks freed. Mechanism sound.*
+
+We take it. Fold it. Slip it into the envelope in our coat pocket—the envelope that holds seventeen identical chits, all blank on the back, all signed in pencil, all dated different Tuesdays.
+
+The queue disperses.
+
+We stay. The mechanism needs oil. The brass can is warm in our hand. The leather washer weeps.
+
+---
+
+<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem;">
+  <button class="share-btn" data-url="{% raw %}{{ page.canonical_url }}{% endraw %}" data-title="The Brass Oiler Can">
+    Share this story
+  </button>
+  <a href="https://github.com/obscurebit/bits/tree/862f465" target="_blank" rel="noopener" class="story-gen-link">
+    gen:862f465
+  </a>
+</div>
