@@ -1,0 +1,96 @@
+---
+date: 2026-10-10
+title: "The Winding Log"
+description: "A daily AI-generated story exploring speculative fiction"
+author: "https://integrate.api.nvidia.com/v1 / nvidia/nemotron-3-ultra-550b-a55b"
+theme: "time anomalies"
+genre: "Moral fable disguised as a very specific modern problem"
+voice_profile: "Sardonic future ethnography: the narrator explains bizarre norms with weary common sense"
+---
+
+# The Winding Log
+
+The crank slipped again. Third ordinance this month. My knuckles caught the gear housing and I bit back the curse, tasting copper. The pendulum kept swinging, indifferent, its rhythm vibrating through the floorboards into my knees.
+
+"Eight-four-seven-point-three," I muttered, resetting the crank at the precise angle. The stripped socket grabbed. One full rotation. Two. The minute hand on the courthouse face jerked forward forty minutes. Somewhere in the city, a parole hearing started early. A bakery's proofing timer misfired. A woman missed her bus by seconds and waited twenty-two minutes for the next one.
+
+The log book sat on the oil-stained crate. Previous shift's notation: *Ordinance 847.3 compliance complete. Knee acting up. Per seniority agreement, next tower climb falls to junior.* Junior. Me. Always me.
+
+I uncapped the fountain pen — city issue, nib bent from the time I dropped it down the stairwell — and wrote: *847.3 compliance complete. Seniority agreement honored. Next climb: junior.*
+
+Below it, a fresh note in cramped blue ballpoint: *Junior's turn. Senior's meniscus tear documented 2089. File 4412. Not negotiation.*
+
+Mara. She'd laminated her doctor's note. I'd seen it tucked in her locker beside the peanut butter crackers she ate for lunch every day at 11:47 exactly.
+
+The jar on the shelf caught my eye. Mason. Wide-mouth. Three-quarters full of folded paper strips. Every ordinance I'd wound since 2085. Mara's idea originally. "For when they ask what we actually did," she'd said. Back when she still believed someone would ask.
+
+Now she just wanted her knees to hold out until pension vesting. Fourteen months. I'd counted.
+
+The stairwell door rattled. Heavy boots. Mara's gait — left heel dragging since the '87 correction when the pendulum counterweight slipped its chain and she'd caught it with her body.
+
+"Log's updated," I said without turning.
+
+"Good." She leaned against the doorframe, breathing through her nose. The master key ring at her hip clicked against the brass winding crank hook. "Council voted on 912.1 yesterday. Takes effect Monday."
+
+"Another correction?"
+
+"Two hours forward. Recurring. First Tuesday monthly." She pulled a crumpled printout from her coat pocket. "Retroactive to January. Paperwork's already generated."
+
+I stared at the jar. Three-quarters full. January was six ordinances ago. Six strips of paper I hadn't folded because the corrections hadn't happened yet. But the paperwork existed. The jar knew.
+
+"Retroactive," I repeated. "So the strips for January through June — they're already consequences. Waiting for the ordinances to catch up."
+
+"Jar doesn't care about sequence." Mara's voice flattened. "Only that the work gets recorded. You fold them, I log them. That's the arrangement."
+
+"Arrangement." I laughed, short and dry. "You mean the one where I climb the tower and you laminate doctor's notes?"
+
+Her jaw tightened. "I've carried this key ring for twenty-three years. Weight tore my rotator cuff. City calls it wear and tear, not injury. No file number for that."
+
+"File 4412 says meniscus."
+
+"File 4412 got me the ground-floor assignment. You got the tower." She straightened, wincing. "We both stay. That's what the job owes us. Each other."
+
+The jar sat between us on the shelf. A container of leftovers: consequences not yet earned, paperwork not yet matched to labor. Every strip a future I'd already agreed to wind.
+
+I picked up the pen. *Ordinance 912.1 compliance scheduled. Retroactive to January. Six strips pending.*
+
+"Six climbs," Mara said quietly. "Your knees. My shoulders. We split them. Three and three."
+
+"Seniority agreement —"
+
+"Is paper. Like the strips." She reached past me, fingers brushing the jar. "Monday I climb the first. You take the second. We alternate. Council doesn't care who turns the crank. Only that it turns."
+
+The pendulum swung. The floor vibrated. Somewhere a parole hearing would start early. A bakery would overproof. A woman would miss her bus.
+
+I tore six strips from the blank stack beside the log. Folded each in half, then quarters. Dropped them into the jar. They settled among the others, indistinguishable.
+
+"Three and three," I said. "But you write the notes. My handwriting's illegible."
+
+Mara snorted. "Your handwriting's fine. You just hate the log."
+
+"I hate that it works."
+
+She capped the pen, slid it across the crate toward me. The master key ring at her hip clicked again as she turned toward the stairwell. "Monday. 3 AM. Bring the crank. I'll bring the coffee."
+
+"Thermos leaks."
+
+"Buy a new one. City reimburses." She paused at the door. "File 4412. Rotator cuff. I'll submit it Monday. You witness."
+
+The door closed. The pendulum kept swinging. I picked up the crank, feeling the stripped socket, the worn wooden handle shaped by twenty-three years of someone else's grip. The jar caught the thin light through the glass numeral — four, seven, two, nine — each strip a promise I'd made to a future that had already billed me.
+
+Monday. Three climbs. Fourteen months until her pension vested. I'd counted.
+
+I wrote in the log: *912.1 compliance arrangement confirmed. Seniority agreement suspended by mutual consent. Witness: M. Kovic.*
+
+The pen scratched. The pendulum swung. The jar waited.
+
+---
+
+<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem;">
+  <button class="share-btn" data-url="{% raw %}{{ page.canonical_url }}{% endraw %}" data-title="The Winding Log">
+    Share this story
+  </button>
+  <a href="https://github.com/obscurebit/bits/tree/66ba4a9" target="_blank" rel="noopener" class="story-gen-link">
+    gen:66ba4a9
+  </a>
+</div>

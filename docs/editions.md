@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-10-07-edition-251/" class="archive-item">
+    <div class="archive-item__number">251</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">October 07, 2026</span>
+      <h3 class="archive-item__title">Edition #251</h3>
+      <p class="archive-item__excerpt">Inventory Hauntings · I went to pull a pallet of tile adhesive from Bin 402 and found a corsage box sitting on the shrink-wrap. White cardboard, gold foil trim, the kind florists use...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Inventory Hauntings</span><span class="archive-item__genre" title="Character study where the strange thing stays partly offstage">Character study where the strange thing stays partly offstage</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-10-06-edition-250/" class="archive-item">
     <div class="archive-item__number">250</div>
     <div class="archive-item__content">
