@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-10-08-edition-252/" class="archive-item">
+    <div class="archive-item__number">252</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">October 08, 2026</span>
+      <h3 class="archive-item__title">Edition #252</h3>
+      <p class="archive-item__excerpt">Digital Archaeology · You're late. The number machine spat a ticket at 4:58 p.m., pink cardstock curling at the edges like a burnt photograph, and the waiting room already holds the...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Digital Archaeology</span><span class="archive-item__genre" title="Ghost story energy without old haunted-house defaults">Ghost story energy without old haunted-house defaults</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-10-07-edition-251/" class="archive-item">
     <div class="archive-item__number">251</div>
     <div class="archive-item__content">

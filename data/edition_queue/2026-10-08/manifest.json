@@ -1,8 +1,11 @@
 {
   "date": "2026-10-08",
   "links_file": "docs/links/posts/2026-10-08-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-10-08T13:40:23Z",
+  "published_links_file": "docs/links/posts/2026-10-08-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-10-08-the-queue-at-counter-six.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-10-08-the-queue-at-counter-six.md",
   "theme": "digital archaeology",
-  "updated_at": "2026-10-07T13:00:59Z"
+  "updated_at": "2026-10-08T13:08:17Z"
 }

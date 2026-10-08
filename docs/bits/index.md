@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-10-08-the-queue-at-counter-six/" class="archive-item">
+    <div class="archive-item__number">252</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">October 08, 2026</span>
+      <h3 class="archive-item__title">The Queue at Counter Six</h3>
+      <p class="archive-item__excerpt">You're late. The number machine spat a ticket at 4:58 p.m., pink cardstock curling at the edges like a burnt photograph, and the waiting room already ...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Digital Archaeology</span><span class="archive-item__genre" title="Ghost story energy without old haunted-house defaults">Ghost story energy without old haunted-house defaults</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-10-07-the-laminated-sleeve/" class="archive-item">
     <div class="archive-item__number">251</div>
     <div class="archive-item__content">
