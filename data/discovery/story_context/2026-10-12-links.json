@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-12",
+  "theme": "municipal flag semiotics",
+  "links_direction": "municipal flag design guidelines, city seal adoption records, vexillology society archives, flag redesign committee minutes, municipal branding manuals",
+  "motifs": [
+    "Original",
+    "Design",
+    "Web Design",
+    "Cool Site",
+    "15 years",
+    "in 1993",
+    "On August 10, 1994",
+    "Site"
+  ],
+  "interesting_bits": [
+    "15 years",
+    "in 1993",
+    "On August 10, 1994"
+  ],
+  "links": [
+    {
+      "title": "1994: Publishing comes to the Web \u2014 and design matters | Cybercultural: Internet History | minifeed",
+      "url": "https://minifeed.net/items/Fr78hpxrIWs5",
+      "concepts": [
+        "Original",
+        "Design",
+        "Web Design",
+        "Cool Site"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "1995: From Batman Forever\u2019s cinematic design to HTML tables | Cybercultural: Internet History | minifeed",
+      "url": "https://minifeed.net/items/4gK5Ox7L8uee",
+      "concepts": [
+        "Original",
+        "Design",
+        "Web Design",
+        "Cool Site"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "1994: Cool Site of the Day and the rise of curated web design | Cybercultural: Internet History | minifeed",
+      "url": "https://minifeed.net/items/tSFJWlPF5iEh",
+      "concepts": [
+        "Cool Site",
+        "Design",
+        "Web Design",
+        "Site"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}

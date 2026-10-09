@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-10-09-edition-253/" class="archive-item">
+    <div class="archive-item__number">253</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">October 09, 2026</span>
+      <h3 class="archive-item__title">Edition #253</h3>
+      <p class="archive-item__excerpt">Consciousness Frontiers · The bent port on the hub refuses the cable. You wiggle the connector, angle it, swear, wiggle again. The mini-fridge behind you cycles on, a sound like a dying...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Consciousness Frontiers</span><span class="archive-item__genre" title="Caper energy at a human scale">Caper energy at a human scale</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-10-08-edition-252/" class="archive-item">
     <div class="archive-item__number">252</div>
     <div class="archive-item__content">

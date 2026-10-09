@@ -1,8 +1,11 @@
 {
   "date": "2026-10-09",
   "links_file": "docs/links/posts/2026-10-09-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-10-09T13:02:12Z",
+  "published_links_file": "docs/links/posts/2026-10-09-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-10-09-the-usbc-hub.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-10-09-the-usbc-hub.md",
   "theme": "consciousness frontiers",
-  "updated_at": "2026-10-08T13:08:17Z"
+  "updated_at": "2026-10-09T12:55:03Z"
 }
