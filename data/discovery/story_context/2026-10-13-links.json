@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-13",
+  "theme": "digital archaeology",
+  "links_direction": "internet history, lost media, abandoned websites, web archaeology",
+  "motifs": [
+    "Disks",
+    "Floppy",
+    "Disk",
+    "Tools",
+    "Original",
+    "Internet",
+    "Design",
+    "Web Design",
+    "\"What the Internet Was Like in {Year}\"",
+    "24 million",
+    "10GB",
+    "Global Network Navigator"
+  ],
+  "interesting_bits": [
+    "\"What the Internet Was Like in {Year}\"",
+    "24 million",
+    "10GB",
+    "in 1993",
+    "On August 10, 1994"
+  ],
+  "links": [
+    {
+      "title": "The Code4Lib Journal \u2013 Digital Archaeology and/or Forensics: Working with Floppy Disks from the 1980s",
+      "url": "https://journal.code4lib.org/articles/11986",
+      "concepts": [
+        "Disks",
+        "Floppy",
+        "Disk",
+        "Tools"
+      ],
+      "reason": "A hands-on field report from a librarian who imaged ~500 floppies across 8- and 16-bit platforms (CP/M, ProDOS, p-System, Atari, Kaypro, Mac OS 7) using KryoFlux, Greaseweazle, and"
+    },
+    {
+      "title": "Cybercultural: Internet History | minifeed",
+      "url": "https://minifeed.net/blogs/87t3KrgA",
+      "concepts": [
+        "Original",
+        "Internet",
+        "Design",
+        "Web Design"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "1993: Global Network Navigator and the first web designer | Cybercultural: Internet History | minifeed",
+      "url": "https://minifeed.net/items/AaOBtA4neuqs",
+      "concepts": [
+        "Original",
+        "Design",
+        "Global Network Navigator",
+        "Web Design"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}

@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-10-10-the-winding-log/" class="archive-item">
+    <div class="archive-item__number">254</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">October 10, 2026</span>
+      <h3 class="archive-item__title">The Winding Log</h3>
+      <p class="archive-item__excerpt">The crank slipped again. Third ordinance this month. My knuckles caught the gear housing and I bit back the curse, tasting copper. The pendulum kept s...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Time Anomalies</span><span class="archive-item__genre" title="Moral fable disguised as a very specific modern problem">Moral fable disguised as a very specific modern problem</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-10-09-the-usbc-hub/" class="archive-item">
     <div class="archive-item__number">253</div>
     <div class="archive-item__content">

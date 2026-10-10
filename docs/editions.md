@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-10-10-edition-254/" class="archive-item">
+    <div class="archive-item__number">254</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">October 10, 2026</span>
+      <h3 class="archive-item__title">Edition #254</h3>
+      <p class="archive-item__excerpt">Time Anomalies · The crank slipped again. Third ordinance this month. My knuckles caught the gear housing and I bit back the curse, tasting copper. The pendulum kept swinging, i...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Time Anomalies</span><span class="archive-item__genre" title="Moral fable disguised as a very specific modern problem">Moral fable disguised as a very specific modern problem</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-10-09-edition-253/" class="archive-item">
     <div class="archive-item__number">253</div>
     <div class="archive-item__content">

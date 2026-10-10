@@ -1,8 +1,11 @@
 {
   "date": "2026-10-10",
   "links_file": "docs/links/posts/2026-10-10-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-10-10T12:32:57Z",
+  "published_links_file": "docs/links/posts/2026-10-10-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-10-10-the-winding-log.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-10-10-the-winding-log.md",
   "theme": "time anomalies",
-  "updated_at": "2026-10-09T12:55:03Z"
+  "updated_at": "2026-10-10T12:13:05Z"
 }
