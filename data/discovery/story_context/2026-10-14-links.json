@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-14",
+  "theme": "discontinued materials",
+  "links_direction": "CITES appendix timber trade documentation, discontinued industrial materials supply chains, luthier tonewood sourcing legal frameworks, pre-regulation material provenance research",
+  "motifs": [
+    "Arthur",
+    "Kimi",
+    "Claude",
+    "Come",
+    "Material Acts Dosu Oculus",
+    "image/jpeg download",
+    "Material Acts Gramazio Kohler Rock Print"
+  ],
+  "interesting_bits": [
+    "image/jpeg download"
+  ],
+  "links": [
+    {
+      "title": "Jean-Claude Attractor - Ardens Emergent Intelligence Studies",
+      "url": "https://www.marginalia-search.com/r/6/1422508200821233/a8nm1pkgtg?hash=IlGfXq6LivlTsmSiu8Bt1m7FghSCWD6-2WzmR8a1Chg",
+      "concepts": [
+        "Arthur",
+        "Kimi",
+        "Claude",
+        "Come"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Material Acts Dosu Oculus",
+      "url": "http://grahamfoundation.org/system/grants/images/12661/large/Material_Acts_DOSU-Oculus.jpg",
+      "concepts": [
+        "Material Acts Dosu Oculus"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Material Acts Gramazio Kohler Rock Print",
+      "url": "http://grahamfoundation.org/system/grants/images/12662/large/Material_Acts_Gramazio_Kohler-Rock_Print.jpg",
+      "concepts": [
+        "Material Acts Gramazio Kohler Rock Print"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}

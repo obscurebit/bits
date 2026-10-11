@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-10-11-the-last-week-of-august/" class="archive-item">
+    <div class="archive-item__number">255</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">October 11, 2026</span>
+      <h3 class="archive-item__title">The Last Week of August</h3>
+      <p class="archive-item__excerpt">The comparator block is held together with electrical tape. The yellow standard has faded to the color of a bruised peach. The pink standard looks lik...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Parallel Dimensions</span><span class="archive-item__genre" title="Character study where the strange thing stays partly offstage">Character study where the strange thing stays partly offstage</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-10-10-the-winding-log/" class="archive-item">
     <div class="archive-item__number">254</div>
     <div class="archive-item__content">
