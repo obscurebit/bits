@@ -1,8 +1,11 @@
 {
   "date": "2026-10-12",
   "links_file": "docs/links/posts/2026-10-12-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-10-12T15:26:56Z",
+  "published_links_file": "docs/links/posts/2026-10-12-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-10-12-marginalia-on-work-order-404r.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-10-12-marginalia-on-work-order-404r.md",
   "theme": "municipal flag semiotics",
-  "updated_at": "2026-10-11T12:27:33Z"
+  "updated_at": "2026-10-12T14:58:40Z"
 }

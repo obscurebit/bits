@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-10-12-edition-256/" class="archive-item">
+    <div class="archive-item__number">256</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">October 12, 2026</span>
+      <h3 class="archive-item__title">Edition #256</h3>
+      <p class="archive-item__excerpt">Municipal Flag Semiotics · Box 1: Requestor — I wrote my own name. The form requires a department code; I used the old one for Print Shop Annex, dissolved 2002. Nobody checks. The spectro...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Municipal Flag Semiotics</span><span class="archive-item__genre" title="Noir-ish social observation rather than detective plotting">Noir-ish social observation rather than detective plotting</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-10-11-edition-255/" class="archive-item">
     <div class="archive-item__number">255</div>
     <div class="archive-item__content">

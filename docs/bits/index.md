@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-10-12-marginalia-on-work-order-404r/" class="archive-item">
+    <div class="archive-item__number">256</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">October 12, 2026</span>
+      <h3 class="archive-item__title">Marginalia on Work Order 404-R</h3>
+      <p class="archive-item__excerpt">Box 1: Requestor — I wrote my own name. The form requires a department code; I used the old one for Print Shop Annex, dissolved 2002. Nobody checks. T...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Municipal Flag Semiotics</span><span class="archive-item__genre" title="Noir-ish social observation rather than detective plotting">Noir-ish social observation rather than detective plotting</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-10-11-the-last-week-of-august/" class="archive-item">
     <div class="archive-item__number">255</div>
     <div class="archive-item__content">
