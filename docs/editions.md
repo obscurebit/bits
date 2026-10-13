@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-10-13-edition-257/" class="archive-item">
+    <div class="archive-item__number">257</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">October 13, 2026</span>
+      <h3 class="archive-item__title">Edition #257</h3>
+      <p class="archive-item__excerpt">Digital Archaeology · The drive clicks. Retry 1. Retry 2. The metal shutter on the 3.5-inch disk catches, groans, stays half-open. You wedge a fingernail under it, force it down, hea...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Digital Archaeology</span><span class="archive-item__genre" title="Domestic drama bent by one technological or metaphysical fact">Domestic drama bent by one technological or metaphysical fact</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-10-12-edition-256/" class="archive-item">
     <div class="archive-item__number">256</div>
     <div class="archive-item__content">

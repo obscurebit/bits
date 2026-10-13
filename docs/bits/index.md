@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-10-13-the-kryoflux-blinks-red/" class="archive-item">
+    <div class="archive-item__number">257</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">October 13, 2026</span>
+      <h3 class="archive-item__title">The KryoFlux Blinks Red</h3>
+      <p class="archive-item__excerpt">The drive clicks. Retry 1. Retry 2. The metal shutter on the 3.5-inch disk catches, groans, stays half-open. You wedge a fingernail under it, force it...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Digital Archaeology</span><span class="archive-item__genre" title="Domestic drama bent by one technological or metaphysical fact">Domestic drama bent by one technological or metaphysical fact</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-10-12-marginalia-on-work-order-404r/" class="archive-item">
     <div class="archive-item__number">256</div>
     <div class="archive-item__content">

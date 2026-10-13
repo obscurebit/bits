@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-16",
+  "theme": "forensic palynology",
+  "links_direction": "forensic palynology case studies, pollen reference collection construction, museum diorama background materials, quarry dust forensic analysis, palynologist field notebooks",
+  "motifs": [
+    "Coin",
+    "Vaccination",
+    "Health",
+    "Lancet",
+    "230 mm",
+    "110 mm",
+    "in 1852",
+    "Value",
+    "Type",
+    "Units",
+    "Dimension",
+    "\"56c7f8ce-1155-36f0-a707-d26821f08a3c\""
+  ],
+  "interesting_bits": [
+    "230 mm",
+    "110 mm",
+    "in 1852",
+    "\"### WARNING ### - <enhancement> tags are experimental, please do not aggregate\"",
+    "\"56c7f8ce-1155-36f0-a707-d26821f08a3c\""
+  ],
+  "links": [
+    {
+      "title": "Coin operated toilet lock | Science Museum Group Collection",
+      "url": "https://collection.sciencemuseumgroup.org.uk/objects/co8069235/coin-operated-toilet-lock",
+      "concepts": [
+        "Coin",
+        "Vaccination",
+        "Health",
+        "Lancet"
+      ],
+      "reason": "A single museum object record for a brass penny-operated toilet lock (c.1890-1930) \u2014 the physical mechanism behind the phrase 'spend a penny.' Concrete dimensions, patent stamp, ma"
+    },
+    {
+      "title": "",
+      "url": "https://collection.sciencemuseumgroup.org.uk/api/objects/co8069235",
+      "concepts": [
+        "Value",
+        "Type",
+        "Units",
+        "Dimension"
+      ],
+      "reason": "A single museum object record for a Victorian coin-operated lavatory door lock \u2014 stamped with patent number, complete with 'engaged/vacant' window, designed for penny coins. Perfec"
+    },
+    {
+      "title": "Why Decorative Panels Feel Like Fragments of Lost Civilisations",
+      "url": "https://phillaneum.com/read/0158-lost-civilisations-panels.html",
+      "concepts": [
+        "Decorative",
+        "Panels",
+        "Decorative Panels",
+        "Fragments"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}
