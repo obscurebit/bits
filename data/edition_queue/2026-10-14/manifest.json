@@ -1,8 +1,11 @@
 {
   "date": "2026-10-14",
   "links_file": "docs/links/posts/2026-10-14-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-10-14T12:07:13Z",
+  "published_links_file": "docs/links/posts/2026-10-14-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-10-14-block-14-country-of-last-reexport.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-10-14-block-14-country-of-last-reexport.md",
   "theme": "discontinued materials",
-  "updated_at": "2026-10-13T13:54:46Z"
+  "updated_at": "2026-10-14T11:31:57Z"
 }
