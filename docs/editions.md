@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-10-15-edition-259/" class="archive-item">
+    <div class="archive-item__number">259</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">October 15, 2026</span>
+      <h3 class="archive-item__title">Edition #259</h3>
+      <p class="archive-item__excerpt">Reality Glitches · We found Mrs. Gable's chit wedged behind the radiator valve on the third floor, the pencil so faint it looked like a ghost had written it. *Intercom dead. Apt 3...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Reality Glitches</span><span class="archive-item__genre" title="Character study where the strange thing stays partly offstage">Character study where the strange thing stays partly offstage</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-10-14-edition-258/" class="archive-item">
     <div class="archive-item__number">258</div>
     <div class="archive-item__content">

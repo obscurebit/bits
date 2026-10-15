@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-10-15-the-chit-box/" class="archive-item">
+    <div class="archive-item__number">259</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">October 15, 2026</span>
+      <h3 class="archive-item__title">The Chit Box</h3>
+      <p class="archive-item__excerpt">We found Mrs. Gable's chit wedged behind the radiator valve on the third floor, the pencil so faint it looked like a ghost had written it. *Intercom d...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Reality Glitches</span><span class="archive-item__genre" title="Character study where the strange thing stays partly offstage">Character study where the strange thing stays partly offstage</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-10-14-block-14-country-of-last-reexport/" class="archive-item">
     <div class="archive-item__number">258</div>
     <div class="archive-item__content">
