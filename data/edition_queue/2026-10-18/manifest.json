@@ -1,9 +1,11 @@
 {
   "date": "2026-10-18",
-  "exit_code": 0,
   "links_file": "docs/links/posts/2026-10-18-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-10-18T11:47:48Z",
+  "published_links_file": "docs/links/posts/2026-10-18-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-10-18-discontinued-brown.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-10-18-discontinued-brown.md",
   "theme": "lost civilizations",
-  "updated_at": "2026-10-15T11:42:39Z"
+  "updated_at": "2026-10-18T10:43:13Z"
 }

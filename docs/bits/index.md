@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-10-18-discontinued-brown/" class="archive-item">
+    <div class="archive-item__number">262</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">October 18, 2026</span>
+      <h3 class="archive-item__title">Discontinued Brown</h3>
+      <p class="archive-item__excerpt">TASK 412 — REMOVE & REPLACE MILE 9.3 SB — 1.5 HRS</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Lost Civilizations</span><span class="archive-item__genre" title="Domestic drama bent by one technological or metaphysical fact">Domestic drama bent by one technological or metaphysical fact</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-10-15-the-chit-box/" class="archive-item">
     <div class="archive-item__number">259</div>
     <div class="archive-item__content">
