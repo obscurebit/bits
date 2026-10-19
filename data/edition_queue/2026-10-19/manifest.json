@@ -1,9 +1,11 @@
 {
   "date": "2026-10-19",
-  "exit_code": 0,
   "links_file": "docs/links/posts/2026-10-19-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-10-19T13:14:35Z",
+  "published_links_file": "docs/links/posts/2026-10-19-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-10-19-the-pink-copy.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-10-19-the-pink-copy.md",
   "theme": "underground networks",
-  "updated_at": "2026-10-18T11:05:09Z"
+  "updated_at": "2026-10-19T12:42:25Z"
 }
