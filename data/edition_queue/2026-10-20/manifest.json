@@ -1,8 +1,11 @@
 {
   "date": "2026-10-20",
   "links_file": "docs/links/posts/2026-10-20-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-10-20T11:43:46Z",
+  "published_links_file": "docs/links/posts/2026-10-20-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-10-20-the-fob.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-10-20-the-fob.md",
   "theme": "biological computing",
-  "updated_at": "2026-10-19T12:42:25Z"
+  "updated_at": "2026-10-20T11:13:39Z"
 }

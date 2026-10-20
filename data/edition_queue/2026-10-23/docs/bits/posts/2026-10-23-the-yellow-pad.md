@@ -1,0 +1,110 @@
+---
+date: 2026-10-23
+title: "The Yellow Pad"
+description: "A daily AI-generated story exploring speculative fiction"
+author: "https://integrate.api.nvidia.com/v1 / nvidia/nemotron-3-ultra-550b-a55b"
+theme: "edge of maps"
+genre: "Quiet literary realism with one impossible pressure point"
+voice_profile: "Anthropological future realism: customs, taboos, work routines, and status rules explained through action"
+---
+
+# The Yellow Pad
+
+"You signed for the notice. That makes it served."
+
+I didn't sign. My fingerprints are on the carbon, sure, pressed there when he flipped the page toward me like a dealer hitting a twelve. But signing requires a name. I wrote *Jesus H. Christ* in block letters because my hands were shaking and it was the only name that fit the space.
+
+"You initialed the carbon."
+
+"I initialed *your* copy."
+
+The clerk — badge clipped to a pocket of a shirt that has seen three decades of the same detergent — tears the top sheet free. The carbon rips uneven, a jagged tooth along the perforation. He hands me the yellow. Keeps the white.
+
+"File 447-912. Seven years, three months. Administratively closed."
+
+He says it like a prayer. Like the words themselves have weight. Maybe they do. Seven years is the rule. Unwritten, but everyone knows it. Walk the lot. Verify vacancy. Sign the affidavit. Close the file. Collect the thirty-seven dollars per resolution.
+
+Thirty-seven dollars. I counted them in the parking lot. Two twenties, a five, two ones. The five was torn and taped.
+
+---
+
+The lot at 14th and Cedar smells like wet cardboard and diesel. The roll-up door of the annex sticks halfway; he shoulders it the rest of the way, and the groan of metal drowns the traffic noise. Inside: deed books from the twenties, their leather cracked to the color of dried blood, stacked beside banker's boxes labeled *FORECLOSURE 2019–2023*. One window, high and wired with chicken mesh, frames a slice of freeway overpass.
+
+He sets the yellow pad on a metal desk. The carbon sheets are intact — all three, miracle of miracles. He clicks a ballpoint pen. The click echoes.
+
+"Name."
+
+"Marcus Webb."
+
+"Address."
+
+"I don't have one."
+
+"Last known."
+
+"The shelter on Vine. But I'm not there tonight."
+
+He writes anyway. *Marcus Webb. No fixed address.* The pen scratches. Carbon transfers. Three copies bloom at once.
+
+"Affidavit of service. I, the undersigned, certify under penalty of perjury—"
+
+"Stop."
+
+He stops. The pen hovers.
+
+"You didn't walk it."
+
+"I walked it."
+
+"You drove past in the truck. I watched from the treeline. You never got out."
+
+The pen doesn't move. The fluorescent fixture above us buzzes, one tube dead, the other flickering at a frequency that makes my teeth ache. Daylight through the wired window cuts a pale rectangle across the floor, dust motes swimming in it.
+
+"Seven years," he says. "Seven years I've carried this file. Seven years I've driven past that lot. You know what's there?"
+
+"Tents. Six of them. Maybe seven. Maria's got the blue tarp by the oak. She pays me twenty a month to not report her."
+
+He flinches. Barely. A tightening at the jaw.
+
+"Maria," he repeats. "She the one with the dog?"
+
+"Three-legged. Black. Answers to *Chance*."
+
+"Right. Right." He exhales. "I know Maria. I know Chance. I bring them sandwiches sometimes. Turkey. No mayo."
+
+"Why?"
+
+"Because the rule says verify vacancy. The rule doesn't say *how* vacant. Doesn't say *whose* vacancy."
+
+He caps the pen. The click is final.
+
+"File 447-912," he says. "Administratively closed. Vacant lot. No structures. No occupants."
+
+He tears the top sheet. Hands me the yellow. Keeps the white. The pink stays in the pad — office copy.
+
+"Thirty-seven dollars," he says. "Cash. From my own wallet."
+
+He counts it onto the desk. Two twenties. A five, torn and taped. Two ones.
+
+I don't take it. I push the yellow copy back across the metal.
+
+"Keep it."
+
+"Take the money, Marcus. Please."
+
+"Use it for the sandwiches. Turkey. No mayo."
+
+He stares at the bills. At the yellow copy. At the carbon ghost of *Jesus H. Christ* bleeding through from the white sheet he still holds.
+
+Outside, a freight train hits the crossing. The sound shakes the window in its wire cage. Dust falls from the rafters, settling on deed books, on foreclosure boxes, on the yellow legal pad where three copies of the same lie wait for the next name.
+
+---
+
+<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem;">
+  <button class="share-btn" data-url="{% raw %}{{ page.canonical_url }}{% endraw %}" data-title="The Yellow Pad">
+    Share this story
+  </button>
+  <a href="https://github.com/obscurebit/bits/tree/69ddee0" target="_blank" rel="noopener" class="story-gen-link">
+    gen:69ddee0
+  </a>
+</div>

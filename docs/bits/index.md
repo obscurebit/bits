@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-10-20-the-fob/" class="archive-item">
+    <div class="archive-item__number">264</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">October 20, 2026</span>
+      <h3 class="archive-item__title">The Fob</h3>
+      <p class="archive-item__excerpt">The key fob weighed nothing but opened every door in the building.</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Biological Computing</span><span class="archive-item__genre" title="Workplace comedy with a speculative inconvenience">Workplace comedy with a speculative inconvenience</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-10-19-the-pink-copy/" class="archive-item">
     <div class="archive-item__number">263</div>
     <div class="archive-item__content">
