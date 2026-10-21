@@ -1,0 +1,36 @@
+---
+date: 2026-10-21
+title: "The Brass Flatiron"
+description: "A daily AI-generated story exploring speculative fiction"
+author: "https://integrate.api.nvidia.com/v1 / nvidia/nemotron-3-ultra-550b-a55b"
+theme: "signal from nowhere"
+genre: "Noir-ish social observation rather than detective plotting"
+voice_profile: "Noir civic decay: compromised people, dim public spaces, favors, debt, and procedural suspicion"
+---
+
+# The Brass Flatiron
+
+You drop the first robe on the radiator grille and the hiss swallows the sound. Number one: the tenor's robe, armpits dark as bruised plums, cufflinks gone — pawned, probably, or lost in a bet with the second trombone. Number two: the soprano's, clean as a whistle, but the hem's been let out three inches since last season and the stewardess will notice. Number three: the bass-baritone's, stiff with dried sweat and something greasy at the collar — hair pomade, or maybe the ointment he rubs on his gouty thumb. You press the brass flatiron into the wool, the weight warm and patient, and the crease sharpens without you leaning on it. The iron knows. It always knows.
+
+Number four: your rent. Eight dollars by midnight or Mrs. Kowalski changes the lock while you're at the matinee. Number five: the steward's count at 10:15. One missing sleeve, he said last month, and the kid from the balcony crew ate oatmeal for a week. Number six: the soloists' union contract, Article 12, Section C — no searches of dressing rooms after curtain call. The steward knows. You know. The brass flatiron knows, heating itself on the radiator's timer, pressing shame into creases.
+
+The coat-check alcove smells of wool and orthopedic shoes in grease-pencil bags. Ticket takers whisper. You hear the steward's cough from the lobby — wet, rattling, the kind that means he'll retire in spring or die in winter. He hates the soloists. He hates the union. He hates that you're seventeen and iron pleats faster than the women who've done it twenty years. Justice, he calls it. Making the count. Making it stick.
+
+You press the flatiron into the alto's robe — number seven — and the brass hums against the seam. Resentment. That's what the iron reads. Your resentment. The tenor's cufflinks. The soprano's let-out hem. The bass-baritone's pomade. The steward's cough. Mrs. Kowalski's key. The radiator clicks off. The hiss dies. In the sudden quiet, the brass flatiron cools in your palm, its weight shifting — not heavier, but *expectant*.
+
+Number eight: the favor you owe the second trombone. He knows where the tenor's cufflinks are. He'll trade. Number nine: the steward's ledger, open on the coat-check counter, the column for *sleeves returned* waiting for your initials. Number ten: the soloists' union rep, a woman with ink-stained fingers who once bought you a coffee and asked nothing. She's in the lobby now, arguing Article 12 with the steward. Her voice carries in the quiet.
+
+You pick up the tenor's robe. The brass flatiron slides into your pocket, warm against your thigh. You walk past the coat-check counter, past the steward's cough, past the union rep's ink-stained fingers. You don't initial the ledger. You don't trade for the cufflinks. You carry the robe to the stage door, shove it into the tenor's hands — he's smoking, laughing, his wrists bare — and say, "One sleeve short. You tell the steward why."
+
+The door closes behind you. The radiator clicks on. The hiss returns.
+
+---
+
+<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem;">
+  <button class="share-btn" data-url="{% raw %}{{ page.canonical_url }}{% endraw %}" data-title="The Brass Flatiron">
+    Share this story
+  </button>
+  <a href="https://github.com/obscurebit/bits/tree/4d00960" target="_blank" rel="noopener" class="story-gen-link">
+    gen:4d00960
+  </a>
+</div>
