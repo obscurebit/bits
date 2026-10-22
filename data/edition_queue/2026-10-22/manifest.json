@@ -1,8 +1,11 @@
 {
   "date": "2026-10-22",
   "links_file": "docs/links/posts/2026-10-22-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-10-22T11:54:38Z",
+  "published_links_file": "docs/links/posts/2026-10-22-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-10-22-the-shortcut.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-10-22-the-shortcut.md",
   "theme": "recursive realities",
-  "updated_at": "2026-10-21T11:29:34Z"
+  "updated_at": "2026-10-22T11:29:42Z"
 }

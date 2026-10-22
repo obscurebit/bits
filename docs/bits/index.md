@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-10-22-the-shortcut/" class="archive-item">
+    <div class="archive-item__number">266</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">October 22, 2026</span>
+      <h3 class="archive-item__title">The Shortcut</h3>
+      <p class="archive-item__excerpt">"You'll tell her the shortcut saves fifteen minutes. You won't tell her it crosses the rail yard where the 4:10 freight stops for crew change."</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Recursive Realities</span><span class="archive-item__genre" title="Domestic drama bent by one technological or metaphysical fact">Domestic drama bent by one technological or metaphysical fact</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-10-21-the-brass-flatiron/" class="archive-item">
     <div class="archive-item__number">265</div>
     <div class="archive-item__content">
