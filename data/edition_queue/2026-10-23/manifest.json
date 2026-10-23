@@ -1,8 +1,11 @@
 {
   "date": "2026-10-23",
   "links_file": "docs/links/posts/2026-10-23-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-10-23T11:52:40Z",
+  "published_links_file": "docs/links/posts/2026-10-23-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-10-23-the-yellow-pad.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-10-23-the-yellow-pad.md",
   "theme": "edge of maps",
-  "updated_at": "2026-10-22T11:29:42Z"
+  "updated_at": "2026-10-23T11:19:16Z"
 }

@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-10-23-edition-267/" class="archive-item">
+    <div class="archive-item__number">267</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">October 23, 2026</span>
+      <h3 class="archive-item__title">Edition #267</h3>
+      <p class="archive-item__excerpt">Edge Of Maps · "You signed for the notice. That makes it served."</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Edge Of Maps</span><span class="archive-item__genre" title="Quiet literary realism with one impossible pressure point">Quiet literary realism with one impossible pressure point</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-10-22-edition-266/" class="archive-item">
     <div class="archive-item__number">266</div>
     <div class="archive-item__content">
