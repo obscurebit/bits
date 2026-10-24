@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-10-24-edition-268/" class="archive-item">
+    <div class="archive-item__number">268</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">October 24, 2026</span>
+      <h3 class="archive-item__title">Edition #268</h3>
+      <p class="archive-item__excerpt">Maintenance Myths · "You said the scale was fair. You didn't say it remembered."</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Maintenance Myths</span><span class="archive-item__genre" title="Domestic drama bent by one technological or metaphysical fact">Domestic drama bent by one technological or metaphysical fact</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-10-23-edition-267/" class="archive-item">
     <div class="archive-item__number">267</div>
     <div class="archive-item__content">

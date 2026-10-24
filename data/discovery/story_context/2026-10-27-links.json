@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-27",
+  "theme": "highway weigh station operations",
+  "links_direction": "weigh station operations manuals, truck scale calibration procedures, state overweight permit databases, commercial vehicle enforcement training materials, weigh-in-motion system error logs",
+  "motifs": [
+    "Post Office",
+    "Office",
+    "Post",
+    "London",
+    "1 million",
+    "in 1854",
+    "in 1893",
+    "Fungi",
+    "Spun",
+    "Kiers",
+    "Global",
+    "1 billion"
+  ],
+  "interesting_bits": [
+    "1 million",
+    "in 1854",
+    "in 1893",
+    "1 billion",
+    "2 million",
+    "In 2023",
+    "audio/x-wav download"
+  ],
+  "links": [
+    {
+      "title": "Post Office, (London) Railway | Science Museum Group Collection",
+      "url": "https://collection.sciencemuseumgroup.org.uk/people/ap27393/post-office-london-railway",
+      "concepts": [
+        "Post Office",
+        "Office",
+        "Post",
+        "London"
+      ],
+      "reason": "A deep-dive collection record on the Post Office Railway (Mail Rail) \u2014 a secret driverless electric railway moving millions of letters daily beneath London for 75 years. Rich with"
+    },
+    {
+      "title": "SPUN Is Mapping the World of Fungi",
+      "url": "https://ssir.org/articles/entry/the_fungi_underground",
+      "concepts": [
+        "Fungi",
+        "Spun",
+        "Kiers",
+        "Global"
+      ],
+      "reason": "Solid science journalism about SPUN's global mycorrhizal mapping project \u2014 relevant to underground networks as literal subterranean fungal webs. Good concrete details (1 billion ye"
+    },
+    {
+      "title": "Lna Lva 1 2 51 176A",
+      "url": "https://www.numbers-stations.com/wp-content/uploads/2020/03/LNA_LVA_1_2_51_176a.wav",
+      "concepts": [
+        "Lna Lva 1 2 51 176A"
+      ],
+      "reason": "Raw primary source: a direct WAV file of a specific numbers station transmission (LNA/LVA). No framing, no ads, no commentary \u2014 just the signal itself. The cryptic callsign and for"
+    }
+  ]
+}

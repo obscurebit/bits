@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-10-24-tolerance/" class="archive-item">
+    <div class="archive-item__number">268</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">October 24, 2026</span>
+      <h3 class="archive-item__title">Tolerance</h3>
+      <p class="archive-item__excerpt">"You said the scale was fair. You didn't say it remembered."</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Maintenance Myths</span><span class="archive-item__genre" title="Domestic drama bent by one technological or metaphysical fact">Domestic drama bent by one technological or metaphysical fact</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-10-23-the-yellow-pad/" class="archive-item">
     <div class="archive-item__number">267</div>
     <div class="archive-item__content">
