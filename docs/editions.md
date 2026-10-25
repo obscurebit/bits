@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-10-25-edition-269/" class="archive-item">
+    <div class="archive-item__number">269</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">October 25, 2026</span>
+      <h3 class="archive-item__title">Edition #269</h3>
+      <p class="archive-item__excerpt">Counterfeit Realities · 06/14 — $15.00 — Acknowledgment — Mercy General, Room 312</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Counterfeit Realities</span><span class="archive-item__genre" title="Moral fable disguised as a very specific modern problem">Moral fable disguised as a very specific modern problem</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-10-24-edition-268/" class="archive-item">
     <div class="archive-item__number">268</div>
     <div class="archive-item__content">

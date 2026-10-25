@@ -200,7 +200,7 @@
     "selected_count": 1
   },
   "chase.com": {
-    "last_seen": "2026-10-08",
+    "last_seen": "2026-10-28",
     "last_selected": "2026-10-06",
     "selected_count": 1
   },
@@ -688,6 +688,11 @@
     "last_seen": "",
     "last_selected": "2026-02-11",
     "selected_count": 1
+  },
+  "navy-radio.com": {
+    "last_seen": "2026-10-28",
+    "last_selected": "",
+    "selected_count": 0
   },
   "ncei.noaa.gov": {
     "last_seen": "",
