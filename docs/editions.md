@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-10-26-edition-270/" class="archive-item">
+    <div class="archive-item__number">270</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">October 26, 2026</span>
+      <h3 class="archive-item__title">Edition #270</h3>
+      <p class="archive-item__excerpt">Municipal Weirdness · The tree was healthy. The algorithm said remove.</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Municipal Weirdness</span><span class="archive-item__genre" title="Character study where the strange thing stays partly offstage">Character study where the strange thing stays partly offstage</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-10-25-edition-269/" class="archive-item">
     <div class="archive-item__number">269</div>
     <div class="archive-item__content">
