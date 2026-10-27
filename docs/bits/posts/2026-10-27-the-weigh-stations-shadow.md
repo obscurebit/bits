@@ -1,0 +1,102 @@
+---
+date: 2026-10-27
+title: "The Weigh Station's Shadow"
+description: "A daily AI-generated story exploring speculative fiction"
+author: "https://integrate.api.nvidia.com/v1 / nvidia/nemotron-3-ultra-550b-a55b"
+theme: "highway weigh station operations"
+genre: "Character study where the strange thing stays partly offstage"
+voice_profile: "Philosophical workplace comedy: jokes emerge from people trying to apply rules to impossible facts"
+---
+
+# The Weigh Station's Shadow
+
+You know how it starts. Not with a bang, but with a clipboard and a bad favor.
+
+Milo asked me to cover his Saturday shift. "Just this once, Sal. My kid's got the croup." He didn't ask. He stated it. The way he tapped his wedding ring against the thermos — that was the tell. He wasn't asking. He was informing me of the new arrangement.
+
+I said yes because I needed the overtime. Because my transmission was whining like a dying cat. Because politeness is the only currency that spends at 3 a.m. on I-80, and I was overdrawn.
+
+The station sits in the sagebrush like a dropped tool. Two scales, a booth, a patrol car that hasn't moved in three years. Trooper Hernandez uses the backseat for naps and the trunk for his wife's tamale containers. He waves at the trucks that know his schedule. The trucks that don't know his schedule get waved through by Milo, who waves at everyone.
+
+That's the favor economy. You memorize the lenient shifts. You radio your buddies: *Lane two, big guy's sleeping.* You don't write it down. Writing it down makes it real.
+
+But the clipboard. The grease-stained clipboard with its carbon copies. That's where the truth lives.
+
+Calibration tech comes quarterly. Hangs certified weights from a cherry picker, checks his badge against the list Milo taped inside the booth door. *Sal — 6 a.m. to 2 p.m. — waves tech through.* *Milo — 2 p.m. to 10 p.m. — waves tech through.* *Hernandez — 10 p.m. to 6 a.m. — asleep.*
+
+The tech — his name's Webster, I learned it from the pencil column — writes actual readings in graphite. Official numbers in ink. The pencil column tells a different story.
+
+Truck 407, axle three: pencil says 19,842. Pen says 19,840.
+Truck 407, axle three, next month: pencil says 19,842. Pen says 19,840.
+Truck 407, axle three, month after: pencil says 19,842. Pen says 19,840.
+
+Down to the pound. Identical. Not close. Identical.
+
+I found it because Webster left his thermos wedged between the fifty-pound test weights. I went to return it. The clipboard was open on the passenger seat of the calibration van. Pencil column glowing in the dome light.
+
+You want to know what I did.
+
+I didn't call the state. Didn't wake Hernandez. Didn't confront Milo when he rolled in at 1:55 p.m. smelling of cigarette smoke and excuses.
+
+I started keeping my own log. A shoebox under the booth seat. Every truck. Every axle. Pencil numbers only.
+
+Three weeks. Forty-seven trucks. Twelve repeat offenders. All permitted. All overweight. All identical.
+
+The permit database is public record if you know the clerk at the DMV. Her name's Brenda. She owes me from the time I covered her shift at the county fair weigh-in. She printed the permits. Same company. Same address. A shell corporation registered to a PO box in Wilmington.
+
+Here's the thing they don't tell you in the manual. The scale doesn't lie. The operators do. The technicians do. The troopers do. The permit writers do. Everyone gets their cut, their nap, their kid's croup medicine money.
+
+But Webster. Webster wrote the truth in pencil.
+
+Last Tuesday, Truck 407 rolled up. Driver — young, nervous, wedding ring fresh enough to shine. He handed me his permit with fingers that trembled.
+
+"Axle three," I said. "Pull forward."
+
+He did. The scale read 19,842.
+
+I looked at the permit. 19,840.
+
+I looked at the driver. At the wedding ring. At the shoebox under my seat, fat with pencil truths.
+
+"Go on," I said. "You're good."
+
+He blinked. "Serious?"
+
+"Serious. But next month? You come through light. Or you don't come through."
+
+He drove off. The taillights ate the sagebrush.
+
+Milo came on shift at two. Didn't apologize. Didn't thank me. Just tapped his ring against his thermos and said, "How was it?"
+
+"Quiet," I said.
+
+He grunted. Pulled out his phone. Probably texting the regulars: *Lane one. Sal's soft tonight.*
+
+I watched him. The way he didn't check the calibration log. The way he didn't ask about Truck 407.
+
+Webster's thermos still sits on my workbench. I should return it. He'll come back in three months. He'll check his badge against Milo's list. He'll write pencil truths and ink lies.
+
+I could call Brenda. Could wake Hernandez. Could fill the shoebox and drive it to the state police barracks in Cheyenne.
+
+Instead, I unscrewed the thermos lid. Coffee, black, still warm. Webster's wife makes it strong. She puts cinnamon in the grounds.
+
+I drank it. Set the empty thermos by the door.
+
+My transmission whines. The overtime pays for the repair. The shoebox fills. Milo sleeps in the patrol car. Hernandez wakes at six and eats tamales from his wife's containers.
+
+The scale tells the truth. The pencil tells the truth. Everything else is just the weight we agree to carry.
+
+I'll be here Saturday. Milo's kid has a birthday party. He'll ask. He won't ask. I'll say yes.
+
+The thermos needs returning.
+
+---
+
+<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem;">
+  <button class="share-btn" data-url="{% raw %}{{ page.canonical_url }}{% endraw %}" data-title="The Weigh Station's Shadow">
+    Share this story
+  </button>
+  <a href="https://github.com/obscurebit/bits/tree/0286d7e" target="_blank" rel="noopener" class="story-gen-link">
+    gen:0286d7e
+  </a>
+</div>

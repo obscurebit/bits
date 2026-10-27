@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-10-27-edition-271/" class="archive-item">
+    <div class="archive-item__number">271</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">October 27, 2026</span>
+      <h3 class="archive-item__title">Edition #271</h3>
+      <p class="archive-item__excerpt">Highway Weigh Station Operations · You know how it starts. Not with a bang, but with a clipboard and a bad favor.</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Highway Weigh Station Operations</span><span class="archive-item__genre" title="Character study where the strange thing stays partly offstage">Character study where the strange thing stays partly offstage</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-10-26-edition-270/" class="archive-item">
     <div class="archive-item__number">270</div>
     <div class="archive-item__content">
