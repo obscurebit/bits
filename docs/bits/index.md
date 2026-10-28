@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-10-28-the-coolers-weight/" class="archive-item">
+    <div class="archive-item__number">272</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">October 28, 2026</span>
+      <h3 class="archive-item__title">The Cooler's Weight</h3>
+      <p class="archive-item__excerpt">03:47 — Mercy General lobby — Antiseptic and cold coffee — Floor scuff from '19 cooler drop still visible — Wait here. Never the OR. Pretend not to he...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Quantum Mysteries</span><span class="archive-item__genre" title="Noir-ish social observation rather than detective plotting">Noir-ish social observation rather than detective plotting</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-10-27-the-weigh-stations-shadow/" class="archive-item">
     <div class="archive-item__number">271</div>
     <div class="archive-item__content">

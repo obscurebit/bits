@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-31",
+  "theme": "digital archaeology",
+  "links_direction": "internet history, lost media, abandoned websites, web archaeology",
+  "motifs": [
+    "Space Jam",
+    "Space",
+    "Tritter",
+    "Site",
+    "\"a bored & jaded 90s gen x stereotype.\"",
+    "\"It\u2019s a funny situation for them,\"",
+    "25 years",
+    "Price",
+    "Data",
+    "Tiny",
+    "Tiny Data",
+    "in 2013"
+  ],
+  "interesting_bits": [
+    "\"a bored & jaded 90s gen x stereotype.\"",
+    "\"It\u2019s a funny situation for them,\"",
+    "25 years",
+    "in 2013"
+  ],
+  "links": [
+    {
+      "title": "The New \u2018Space Jam\u2019 Website Shows How Much the Internet Has Changed \u2013 Shirley Coyle",
+      "url": "https://shirlleycoyle.wordpress.com/2021/04/23/the-new-space-jam-website-shows-how-much-the-internet-has-changed/",
+      "concepts": [
+        "Space Jam",
+        "Space",
+        "Tritter",
+        "Site"
+      ],
+      "reason": "A personal blog post reflecting on the archival of the 1996 Space Jam site through an interview with one of its original creators, capturing the weird nostalgia and corporate tensi"
+    },
+    {
+      "title": "Revisiting digital mediated shopping",
+      "url": "https://neuromantics.net/2024/08/23/Revisiting-digital-mediated-shopping/",
+      "concepts": [
+        "Price",
+        "Data",
+        "Tiny",
+        "Tiny Data"
+      ],
+      "reason": "Personal blog post from 2024 reflecting on 2013 Telefonica 'tiny data' shopping tool concepts \u2014 a time capsule of pre-mainstream thinking about personal data lockers, receipt scrap"
+    },
+    {
+      "title": "Devlog - Mackerelmedia Fish (ARG) by alienmelon",
+      "url": "https://alienmelon.itch.io/mackerelmedia-fish/devlog",
+      "concepts": [
+        "Alienmelon",
+        "Mackerelmedia Fish",
+        "Devlog",
+        "View"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}
