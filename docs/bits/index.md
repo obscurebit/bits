@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-10-29-the-spindle/" class="archive-item">
+    <div class="archive-item__number">273</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">October 29, 2026</span>
+      <h3 class="archive-item__title">The Spindle</h3>
+      <p class="archive-item__excerpt">The spindle arrives warm from your pocket. Egg-shaped from sixty years of tension, the take-up groove worn lopsided by film that stopped being manufac...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Forgotten Technology</span><span class="archive-item__genre" title="Tender romance complicated by one impossible condition">Tender romance complicated by one impossible condition</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-10-28-the-coolers-weight/" class="archive-item">
     <div class="archive-item__number">272</div>
     <div class="archive-item__content">

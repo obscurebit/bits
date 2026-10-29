@@ -1,8 +1,11 @@
 {
   "date": "2026-10-29",
   "links_file": "docs/links/posts/2026-10-29-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-10-29T13:17:33Z",
+  "published_links_file": "docs/links/posts/2026-10-29-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-10-29-the-spindle.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-10-29-the-spindle.md",
   "theme": "forgotten technology",
-  "updated_at": "2026-10-28T12:28:25Z"
+  "updated_at": "2026-10-29T12:39:26Z"
 }

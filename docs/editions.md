@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-10-29-edition-273/" class="archive-item">
+    <div class="archive-item__number">273</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">October 29, 2026</span>
+      <h3 class="archive-item__title">Edition #273</h3>
+      <p class="archive-item__excerpt">Forgotten Technology · The spindle arrives warm from your pocket. Egg-shaped from sixty years of tension, the take-up groove worn lopsided by film that stopped being manufactured befo...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Forgotten Technology</span><span class="archive-item__genre" title="Tender romance complicated by one impossible condition">Tender romance complicated by one impossible condition</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-10-28-edition-272/" class="archive-item">
     <div class="archive-item__number">272</div>
     <div class="archive-item__content">
