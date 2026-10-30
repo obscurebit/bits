@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-10-30-edition-274/" class="archive-item">
+    <div class="archive-item__number">274</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">October 30, 2026</span>
+      <h3 class="archive-item__title">Edition #274</h3>
+      <p class="archive-item__excerpt">Digital Archaeology · "Marlowe, I need you to lie to a dead man's sister."</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Digital Archaeology</span><span class="archive-item__genre" title="Noir-ish social observation rather than detective plotting">Noir-ish social observation rather than detective plotting</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-10-29-edition-273/" class="archive-item">
     <div class="archive-item__number">273</div>
     <div class="archive-item__content">

@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-10-30-the-ledger-in-the-back-room/" class="archive-item">
+    <div class="archive-item__number">274</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">October 30, 2026</span>
+      <h3 class="archive-item__title">The Ledger in the Back Room</h3>
+      <p class="archive-item__excerpt">"Marlowe, I need you to lie to a dead man's sister."</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Digital Archaeology</span><span class="archive-item__genre" title="Noir-ish social observation rather than detective plotting">Noir-ish social observation rather than detective plotting</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-10-29-the-spindle/" class="archive-item">
     <div class="archive-item__number">273</div>
     <div class="archive-item__content">
