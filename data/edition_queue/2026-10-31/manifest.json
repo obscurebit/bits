@@ -1,8 +1,11 @@
 {
   "date": "2026-10-31",
   "links_file": "docs/links/posts/2026-10-31-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-10-31T12:35:50Z",
+  "published_links_file": "docs/links/posts/2026-10-31-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-10-31-acceptable-use-policy-revised-1998.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-10-31-acceptable-use-policy-revised-1998.md",
   "theme": "digital archaeology",
-  "updated_at": "2026-10-30T12:30:27Z"
+  "updated_at": "2026-10-31T11:58:00Z"
 }
