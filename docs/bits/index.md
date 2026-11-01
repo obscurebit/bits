@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-11-01-the-lifeguards-stamp/" class="archive-item">
+    <div class="archive-item__number">276</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">November 01, 2026</span>
+      <h3 class="archive-item__title">The Lifeguard's Stamp</h3>
+      <p class="archive-item__excerpt">The kickboard slipped. Again. I bent to retrieve it from the chlorine-slick floor of the equipment closet, my notary stamp catching on the doorframe—b...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Time Anomalies</span><span class="archive-item__genre" title="Tender romance complicated by one impossible condition">Tender romance complicated by one impossible condition</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-10-31-acceptable-use-policy-revised-1998/" class="archive-item">
     <div class="archive-item__number">275</div>
     <div class="archive-item__content">

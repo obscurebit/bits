@@ -1,8 +1,11 @@
 {
   "date": "2026-11-01",
   "links_file": "docs/links/posts/2026-11-01-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-11-01T13:29:02Z",
+  "published_links_file": "docs/links/posts/2026-11-01-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-11-01-the-lifeguards-stamp.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-11-01-the-lifeguards-stamp.md",
   "theme": "time anomalies",
-  "updated_at": "2026-10-31T11:58:00Z"
+  "updated_at": "2026-11-01T12:58:13Z"
 }
