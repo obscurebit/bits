@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-11-02-the-flexschedule-addendum-rev-4/" class="archive-item">
+    <div class="archive-item__number">277</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">November 02, 2026</span>
+      <h3 class="archive-item__title">THE FLEX-SCHEDULE ADDENDUM (REV. 4)</h3>
+      <p class="archive-item__excerpt">Effective immediately, all shift-swap requests must be submitted via the Google Form linked in the #general Slack channel. Paper forms in the break ro...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Parallel Dimensions</span><span class="archive-item__genre" title="Workplace comedy with a speculative inconvenience">Workplace comedy with a speculative inconvenience</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-11-01-the-lifeguards-stamp/" class="archive-item">
     <div class="archive-item__number">276</div>
     <div class="archive-item__content">

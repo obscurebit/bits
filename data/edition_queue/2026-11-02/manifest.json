@@ -1,8 +1,11 @@
 {
   "date": "2026-11-02",
   "links_file": "docs/links/posts/2026-11-02-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-11-02T16:18:58Z",
+  "published_links_file": "docs/links/posts/2026-11-02-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-11-02-the-flexschedule-addendum-rev-4.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-11-02-the-flexschedule-addendum-rev-4.md",
   "theme": "parallel dimensions",
-  "updated_at": "2026-11-01T12:58:13Z"
+  "updated_at": "2026-11-02T15:17:38Z"
 }

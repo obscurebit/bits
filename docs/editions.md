@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-11-02-edition-277/" class="archive-item">
+    <div class="archive-item__number">277</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">November 02, 2026</span>
+      <h3 class="archive-item__title">Edition #277</h3>
+      <p class="archive-item__excerpt">Parallel Dimensions · Effective immediately, all shift-swap requests must be submitted via the Google Form linked in the #general Slack channel. Paper forms in the break room are dep...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Parallel Dimensions</span><span class="archive-item__genre" title="Workplace comedy with a speculative inconvenience">Workplace comedy with a speculative inconvenience</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-11-01-edition-276/" class="archive-item">
     <div class="archive-item__number">276</div>
     <div class="archive-item__content">
