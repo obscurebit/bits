@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-11-03-the-pager/" class="archive-item">
+    <div class="archive-item__number">278</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">November 03, 2026</span>
+      <h3 class="archive-item__title">The Pager</h3>
+      <p class="archive-item__excerpt">"You're telling me the synthetic needs a notarized affidavit because the upstairs neighbor's washing machine vibrates at a frequency that aggravates i...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Synthetic Life</span><span class="archive-item__genre" title="Domestic drama bent by one technological or metaphysical fact">Domestic drama bent by one technological or metaphysical fact</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-11-02-the-flexschedule-addendum-rev-4/" class="archive-item">
     <div class="archive-item__number">277</div>
     <div class="archive-item__content">

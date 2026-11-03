@@ -1,8 +1,11 @@
 {
   "date": "2026-11-03",
   "links_file": "docs/links/posts/2026-11-03-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-11-03T14:22:09Z",
+  "published_links_file": "docs/links/posts/2026-11-03-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-11-03-the-pager.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-11-03-the-pager.md",
   "theme": "synthetic life",
-  "updated_at": "2026-11-02T15:17:38Z"
+  "updated_at": "2026-11-03T13:54:44Z"
 }
