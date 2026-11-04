@@ -1,8 +1,11 @@
 {
   "date": "2026-11-04",
   "links_file": "docs/links/posts/2026-11-04-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-11-04T14:35:50Z",
+  "published_links_file": "docs/links/posts/2026-11-04-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-11-04-the-supers-daughters-ledger.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-11-04-the-supers-daughters-ledger.md",
   "theme": "cryptographic secrets",
-  "updated_at": "2026-11-03T13:54:44Z"
+  "updated_at": "2026-11-04T14:06:05Z"
 }

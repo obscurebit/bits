@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-11-04-the-supers-daughters-ledger/" class="archive-item">
+    <div class="archive-item__number">279</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">November 04, 2026</span>
+      <h3 class="archive-item__title">The Super's Daughter's Ledger</h3>
+      <p class="archive-item__excerpt">**Vestibule Chalk Wall — Tuesday**</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Cryptographic Secrets</span><span class="archive-item__genre" title="Tender romance complicated by one impossible condition">Tender romance complicated by one impossible condition</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-11-03-the-pager/" class="archive-item">
     <div class="archive-item__number">278</div>
     <div class="archive-item__content">
