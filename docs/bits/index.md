@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-11-05-the-weigh-station/" class="archive-item">
+    <div class="archive-item__number">280</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">November 05, 2026</span>
+      <h3 class="archive-item__title">The Weigh Station</h3>
+      <p class="archive-item__excerpt">Mrs. Gable asked for a ride to the depot. She meant the weigh station. She always meant the weigh station. We drove her there seventeen times last yea...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Abandoned Stations</span><span class="archive-item__genre" title="Character study where the strange thing stays partly offstage">Character study where the strange thing stays partly offstage</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-11-04-the-supers-daughters-ledger/" class="archive-item">
     <div class="archive-item__number">279</div>
     <div class="archive-item__content">

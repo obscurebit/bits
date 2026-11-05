@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-11-05-edition-280/" class="archive-item">
+    <div class="archive-item__number">280</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">November 05, 2026</span>
+      <h3 class="archive-item__title">Edition #280</h3>
+      <p class="archive-item__excerpt">Abandoned Stations · Mrs. Gable asked for a ride to the depot. She meant the weigh station. She always meant the weigh station. We drove her there seventeen times last year. The con...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Abandoned Stations</span><span class="archive-item__genre" title="Character study where the strange thing stays partly offstage">Character study where the strange thing stays partly offstage</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-11-04-edition-279/" class="archive-item">
     <div class="archive-item__number">279</div>
     <div class="archive-item__content">
