@@ -1,0 +1,64 @@
+---
+date: 2026-11-09
+title: "The Folding Table"
+description: "A daily AI-generated story exploring speculative fiction"
+author: "https://integrate.api.nvidia.com/v1 / nvidia/nemotron-3-ultra-550b-a55b"
+theme: "lost civilizations"
+genre: "Workplace comedy with a speculative inconvenience"
+voice_profile: "Feral comic bureaucracy: forms, titles, queues, and policies become ridiculous without losing stakes"
+---
+
+# The Folding Table
+
+I arrived seventeen minutes late to the Halloween store. The clip lamp buzzed, throwing a cone of yellow over vinyl capes and plastic skulls. Marisol didn't look up from her calculator. She just slid an envelope across the table. "Cash only. Exact change on the flap. Receipt puts you on the 'next year' list."
+
+The rubber date stamp sat beside her elbow, bands frozen on 1997. Ink pad cracked like dry riverbed. She clicked it anyway. *Thwack.* The year bled faint and red onto a carbonless copy.
+
+*Thwack.*
+
+You don't understand. I've been filing amended returns for cash businesses since the Clinton administration. Section 179 depreciation on seasonal inventory — costume shops, fireworks stands, Christmas tree lots. The loophole expires October 15th every year. Congress renews it in December, retroactive, but the IRS doesn't care. They want the money now. My clients pay me in folded envelopes. Exact change written on the flap. I stamp their returns *thwack* and they vanish until next October.
+
+*Thwack.*
+
+The union rep from Local 402 showed up with a grievance form three weeks ago. Said the seasonal preparers deserved parity with the year-round CPAs. "Fairness means equality," he said. Marisol laughed, a dry sound. "Fairness means triage. You want parity? File my amended returns for the next forty Octobers. I'll sign your grievance." He left the form on the table. It's still there, buried under plastic fangs.
+
+*Thwack.*
+
+I owe Marisol. She covered my bar tab at O'Malley's when my ex-wife's lawyer froze the joint account. Three hundred dollars, plus tip. She didn't ask for repayment. She asked for the Halloween store shift. Every October. "Just stamp the returns, Eddie. I'll handle the clients." Her clients. The ones who pay in envelopes. The ones who don't exist on paper.
+
+*Thwack.*
+
+A woman in a polyester witch costume approached the table. No envelope. Just a crumpled W-2 from a temp agency. "I need my refund," she said. "Earned Income Credit. My kid needs braces."
+
+Marisol didn't blink. "Next year list."
+
+"Please. The dentist said—"
+
+"Next year list. Exact change on the flap. Or you come back October 1998."
+
+The woman's hands shook. She dug in her purse, found a twenty, two fives, four ones. Thirty-nine dollars. Wrote "39.00" on a scrap of paper. Folded it into an envelope. Slid it across.
+
+Marisol picked up the stamp. *Thwack.* 1997 bled onto the carbonless copy. She handed the yellow sheet to the woman. "Keep this. Don't lose it. IRS asks, you filed timely."
+
+The woman clutched the copy like a relic. "Thank you. Thank you."
+
+Marisol didn't say you're welcome. She clicked the stamp again. *Thwack.* 1997. *Thwack.* 1997. *Thwack.* 1997. The year wouldn't advance. The bands were frozen. The ink pad was crust. But the returns kept coming, the envelopes kept folding, the clients kept vanishing until next October.
+
+I watched her stamp my own amended return. Schedule C, Line 31: Net profit $0. The loophole expired yesterday. Congress would renew it in December. Retroactive. It always did.
+
+"Same time next year, Eddie?"
+
+The envelope sat in my pocket. Exact change written on the flap. I slid it across the vinyl.
+
+*Thwack.*
+
+---
+
+<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem;">
+  <button class="share-btn" data-url="{% raw %}{{ page.canonical_url }}{% endraw %}" data-title="The Folding Table">
+    Share this story
+  </button>
+  <a href="https://github.com/obscurebit/bits/tree/86338e0" target="_blank" rel="noopener" class="story-gen-link">
+    gen:86338e0
+  </a>
+</div>

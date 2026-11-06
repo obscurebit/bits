@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-11-06-the-elevator-operators-knee/" class="archive-item">
+    <div class="archive-item__number">281</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">November 06, 2026</span>
+      <h3 class="archive-item__title">The Elevator Operator's Knee</h3>
+      <p class="archive-item__excerpt">You feel the building settle through the soles of your shoes. The hydraulic ram groans, a low shudder traveling up the steel grating, into your left k...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Reality Glitches</span><span class="archive-item__genre" title="Noir-ish social observation rather than detective plotting">Noir-ish social observation rather than detective plotting</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-11-05-the-weigh-station/" class="archive-item">
     <div class="archive-item__number">280</div>
     <div class="archive-item__content">

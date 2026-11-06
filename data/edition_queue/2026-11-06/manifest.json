@@ -1,8 +1,11 @@
 {
   "date": "2026-11-06",
   "links_file": "docs/links/posts/2026-11-06-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-11-06T14:33:43Z",
+  "published_links_file": "docs/links/posts/2026-11-06-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-11-06-the-elevator-operators-knee.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-11-06-the-elevator-operators-knee.md",
   "theme": "reality glitches",
-  "updated_at": "2026-11-05T14:24:30Z"
+  "updated_at": "2026-11-06T14:00:02Z"
 }

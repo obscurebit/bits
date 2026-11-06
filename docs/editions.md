@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-11-06-edition-281/" class="archive-item">
+    <div class="archive-item__number">281</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">November 06, 2026</span>
+      <h3 class="archive-item__title">Edition #281</h3>
+      <p class="archive-item__excerpt">Reality Glitches · You feel the building settle through the soles of your shoes. The hydraulic ram groans, a low shudder traveling up the steel grating, into your left knee — clic...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Reality Glitches</span><span class="archive-item__genre" title="Noir-ish social observation rather than detective plotting">Noir-ish social observation rather than detective plotting</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-11-05-edition-280/" class="archive-item">
     <div class="archive-item__number">280</div>
     <div class="archive-item__content">
