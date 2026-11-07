@@ -1,8 +1,11 @@
 {
   "date": "2026-11-07",
   "links_file": "docs/links/posts/2026-11-07-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-11-07T12:48:04Z",
+  "published_links_file": "docs/links/posts/2026-11-07-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-11-07-the-queue-slip.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-11-07-the-queue-slip.md",
   "theme": "emergent intelligence",
-  "updated_at": "2026-11-06T14:00:02Z"
+  "updated_at": "2026-11-07T12:44:23Z"
 }

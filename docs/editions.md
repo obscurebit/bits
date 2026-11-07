@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-11-07-edition-282/" class="archive-item">
+    <div class="archive-item__number">282</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">November 07, 2026</span>
+      <h3 class="archive-item__title">Edition #282</h3>
+      <p class="archive-item__excerpt">Emergent Intelligence · You want the truth? Fine. But pull up a crate. The floor's cold and my sciatica doesn't negotiate.</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Emergent Intelligence</span><span class="archive-item__genre" title="Tender romance complicated by one impossible condition">Tender romance complicated by one impossible condition</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-11-06-edition-281/" class="archive-item">
     <div class="archive-item__number">281</div>
     <div class="archive-item__content">

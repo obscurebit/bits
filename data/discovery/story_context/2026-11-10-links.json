@@ -1,0 +1,59 @@
+{
+  "date": "2026-11-10",
+  "theme": "synthetic life",
+  "links_direction": "biotech breakthroughs, artificial life projects, synthetic organism research",
+  "motifs": [
+    "Dictionary",
+    "Emergent",
+    "Parallel",
+    "Algebra",
+    "Selected Works",
+    "Archive",
+    "Daito Manabe",
+    "Daito",
+    "4 years",
+    "On February 10, 2025",
+    "in 2006",
+    "Life"
+  ],
+  "interesting_bits": [
+    "4 years",
+    "On February 10, 2025",
+    "in 2006"
+  ],
+  "links": [
+    {
+      "title": "Assembling the puzzle of computing with space (I) | chorasimilarity",
+      "url": "https://chorasimilarity.wordpress.com/2014/03/03/assembling-the-puzzle-of-computing-with-space-i/",
+      "concepts": [
+        "Dictionary",
+        "Emergent",
+        "Parallel",
+        "Algebra"
+      ],
+      "reason": "A singular researcher's blog post from 2014 detailing 'chemlambda' - an artificial chemistry and graph rewrite system for decentralized computation. This is primary-source eccentri"
+    },
+    {
+      "title": "Daito Manabe | Official Site",
+      "url": "https://www.daito.ws/en/",
+      "concepts": [
+        "Selected Works",
+        "Archive",
+        "Daito Manabe",
+        "Daito"
+      ],
+      "reason": "Artist portfolio homepage - navigation hub rather than a singular deep-dive page. While Manabe's work intersects with synthetic life themes (generative systems, AI, bio-art), this"
+    },
+    {
+      "title": "homunculus",
+      "url": "https://philipball.blogspot.com/2007/06/what-is-life-silly-question-this-will.html",
+      "concepts": [
+        "Life",
+        "What",
+        "Greenland",
+        "Group"
+      ],
+      "reason": "fallback heuristic"
+    }
+  ]
+}
