@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-11-08-edition-283/" class="archive-item">
+    <div class="archive-item__number">283</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">November 08, 2026</span>
+      <h3 class="archive-item__title">Edition #283</h3>
+      <p class="archive-item__excerpt">Memory Manipulation · 06:00 — Admission Discharge Transfer Form — ID: Wristband Scan — Fee: $15 — Thumbprint: Y</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Memory Manipulation</span><span class="archive-item__genre" title="Character study where the strange thing stays partly offstage">Character study where the strange thing stays partly offstage</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-11-07-edition-282/" class="archive-item">
     <div class="archive-item__number">282</div>
     <div class="archive-item__content">
