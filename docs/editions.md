@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-11-09-edition-284/" class="archive-item">
+    <div class="archive-item__number">284</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">November 09, 2026</span>
+      <h3 class="archive-item__title">Edition #284</h3>
+      <p class="archive-item__excerpt">Lost Civilizations · I arrived seventeen minutes late to the Halloween store. The clip lamp buzzed, throwing a cone of yellow over vinyl capes and plastic skulls. Marisol didn't loo...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Lost Civilizations</span><span class="archive-item__genre" title="Workplace comedy with a speculative inconvenience">Workplace comedy with a speculative inconvenience</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-11-08-edition-283/" class="archive-item">
     <div class="archive-item__number">283</div>
     <div class="archive-item__content">

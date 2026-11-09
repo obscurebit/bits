@@ -1,8 +1,11 @@
 {
   "date": "2026-11-09",
   "links_file": "docs/links/posts/2026-11-09-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-11-09T15:58:06Z",
+  "published_links_file": "docs/links/posts/2026-11-09-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-11-09-the-folding-table.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-11-09-the-folding-table.md",
   "theme": "lost civilizations",
-  "updated_at": "2026-11-08T13:02:07Z"
+  "updated_at": "2026-11-09T15:45:31Z"
 }

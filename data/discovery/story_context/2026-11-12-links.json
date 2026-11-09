@@ -1,0 +1,62 @@
+{
+  "date": "2026-11-12",
+  "theme": "weather station observers",
+  "links_direction": "historical weather observer daily routines manuals, Stevenson screen maintenance logs, meteorological telegraph code books, mountain weather station personnel records, cooperative observer program archives",
+  "motifs": [
+    "February",
+    "Likes",
+    "February Pm",
+    "Thanks",
+    "Teletype",
+    "Model",
+    "List",
+    "\"Teletype Model 35 Data Terminals Catalog\"",
+    "\"Teletype Model 37 Product Catalog\"",
+    "\"Teletype Model 38 Data Terminals\"",
+    "Texas",
+    "Cooperatives"
+  ],
+  "interesting_bits": [
+    "\"Teletype Model 35 Data Terminals Catalog\"",
+    "\"Teletype Model 37 Product Catalog\"",
+    "\"Teletype Model 38 Data Terminals\"",
+    "8 percent",
+    "4 percent",
+    "in 1873"
+  ],
+  "links": [
+    {
+      "title": "Guy visits the least used train stations in the UK - boing - Boing Boing BBS",
+      "url": "https://bbs.boingboing.net/t/guy-visits-the-least-used-train-stations-in-the-uk/94704",
+      "concepts": [
+        "February",
+        "Likes",
+        "February Pm",
+        "Thanks"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Teletype Corp. Maintenance, Installation, Operation, and Parts\nPublications",
+      "url": "https://www.navy-radio.com/manuals-ttycorp.htm",
+      "concepts": [
+        "Teletype",
+        "Model",
+        "List",
+        "Thanks"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "Cooperatives",
+      "url": "https://www.tshaonline.org/handbook/entries/cooperatives",
+      "concepts": [
+        "Texas",
+        "Cooperatives",
+        "Associations",
+        "Cotton"
+      ],
+      "reason": "General encyclopedia entry about Texas cooperatives broadly (agricultural, cotton, Grange), not specific to rural telephone cooperatives. Useful context but lacks the targeted arti"
+    }
+  ]
+}
