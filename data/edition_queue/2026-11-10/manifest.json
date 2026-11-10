@@ -1,8 +1,11 @@
 {
   "date": "2026-11-10",
   "links_file": "docs/links/posts/2026-11-10-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-11-10T15:09:24Z",
+  "published_links_file": "docs/links/posts/2026-11-10-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-11-10-the-attendance-slip.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-11-10-the-attendance-slip.md",
   "theme": "synthetic life",
-  "updated_at": "2026-11-09T15:45:31Z"
+  "updated_at": "2026-11-10T14:38:21Z"
 }

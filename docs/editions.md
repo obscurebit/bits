@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-11-10-edition-285/" class="archive-item">
+    <div class="archive-item__number">285</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">November 10, 2026</span>
+      <h3 class="archive-item__title">Edition #285</h3>
+      <p class="archive-item__excerpt">Synthetic Life · Mrs. Gable's hydrangea died on a Tuesday, which meant the Attendance Slip on her kitchen counter turned from pale blue to the color of dried blood by Wednesday...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Synthetic Life</span><span class="archive-item__genre" title="Tender romance complicated by one impossible condition">Tender romance complicated by one impossible condition</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-11-09-edition-284/" class="archive-item">
     <div class="archive-item__number">284</div>
     <div class="archive-item__content">

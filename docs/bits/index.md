@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-11-10-the-attendance-slip/" class="archive-item">
+    <div class="archive-item__number">285</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">November 10, 2026</span>
+      <h3 class="archive-item__title">The Attendance Slip</h3>
+      <p class="archive-item__excerpt">Mrs. Gable's hydrangea died on a Tuesday, which meant the Attendance Slip on her kitchen counter turned from pale blue to the color of dried blood by ...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Synthetic Life</span><span class="archive-item__genre" title="Tender romance complicated by one impossible condition">Tender romance complicated by one impossible condition</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-11-09-the-folding-table/" class="archive-item">
     <div class="archive-item__number">284</div>
     <div class="archive-item__content">
