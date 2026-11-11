@@ -1,8 +1,11 @@
 {
   "date": "2026-11-11",
   "links_file": "docs/links/posts/2026-11-11-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-11-11T14:17:30Z",
+  "published_links_file": "docs/links/posts/2026-11-11-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-11-11-the-thermometer-clip.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-11-11-the-thermometer-clip.md",
   "theme": "biological computing",
-  "updated_at": "2026-11-10T14:38:21Z"
+  "updated_at": "2026-11-11T13:53:47Z"
 }

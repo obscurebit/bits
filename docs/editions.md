@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-11-11-edition-286/" class="archive-item">
+    <div class="archive-item__number">286</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">November 11, 2026</span>
+      <h3 class="archive-item__title">Edition #286</h3>
+      <p class="archive-item__excerpt">Biological Computing · MOISTURE: 72%</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Biological Computing</span><span class="archive-item__genre" title="Noir-ish social observation rather than detective plotting">Noir-ish social observation rather than detective plotting</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-11-10-edition-285/" class="archive-item">
     <div class="archive-item__number">285</div>
     <div class="archive-item__content">

@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-11-11-the-thermometer-clip/" class="archive-item">
+    <div class="archive-item__number">286</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">November 11, 2026</span>
+      <h3 class="archive-item__title">The Thermometer Clip</h3>
+      <p class="archive-item__excerpt">MOISTURE: 72%</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Biological Computing</span><span class="archive-item__genre" title="Noir-ish social observation rather than detective plotting">Noir-ish social observation rather than detective plotting</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-11-10-the-attendance-slip/" class="archive-item">
     <div class="archive-item__number">285</div>
     <div class="archive-item__content">
