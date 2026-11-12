@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-15",
+  "theme": "signal from nowhere",
+  "links_direction": "specific number station recordings, individual unexplained signal incidents, detailed SETI discovery stories",
+  "motifs": [
+    "Operator",
+    "Transmissions",
+    "Ukrainian",
+    "October",
+    "on July 18, 2013",
+    "On August 1, 2019",
+    "Ogorodnik",
+    "Soviet",
+    "Moscow",
+    "Foreign",
+    "4mm",
+    "15mm"
+  ],
+  "interesting_bits": [
+    "on July 18, 2013",
+    "On August 1, 2019",
+    "4mm",
+    "15mm",
+    "in 1973"
+  ],
+  "links": [
+    {
+      "title": "Ukrainian sz \u203a  Priyom.org",
+      "url": "https://priyom.org/number-stations/operators/ukrainian-sz",
+      "concepts": [
+        "Operator",
+        "Transmissions",
+        "Ukrainian",
+        "October"
+      ],
+      "reason": "A meticulously documented profile of a specific Ukrainian numbers station operator (S06s/E17z) with distinct behavioral fingerprints: ultra-short messages, repeating group sequence"
+    },
+    {
+      "title": "TRIGON Numbers Station: The Case of Alexandr Ogorodnik",
+      "url": "https://www.numbers-stations.com/articles/trigon-numbers-station-the-case-of-alexandr-ogorodnik/",
+      "concepts": [
+        "Ogorodnik",
+        "Soviet",
+        "Moscow",
+        "Foreign"
+      ],
+      "reason": "Deep-dive article on a specific Cold War spy (Ogorodnik/TRIGON) linking real numbers station traffic to a Soviet TV dramatization \u2014 rich with tradecraft detail, historical texture,"
+    },
+    {
+      "title": "Wednesday Friday \u203a XPA \r\n          \u203a\r\n         Priyom.org",
+      "url": "https://priyom.org/number-stations/digital/xpa/wednesday-friday",
+      "concepts": [
+        "November",
+        "January",
+        "December",
+        "October"
+      ],
+      "reason": "A specific XPA digital number station schedule page showing Moscow-originating transmissions with exact frequencies, IDs, and full message blocks for specific dates \u2014 raw primary-s"
+    }
+  ]
+}

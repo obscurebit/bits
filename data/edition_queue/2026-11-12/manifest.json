@@ -1,8 +1,11 @@
 {
   "date": "2026-11-12",
   "links_file": "docs/links/posts/2026-11-12-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-11-12T15:15:46Z",
+  "published_links_file": "docs/links/posts/2026-11-12-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-11-12-the-warrant.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-11-12-the-warrant.md",
   "theme": "weather station observers",
-  "updated_at": "2026-11-11T13:53:47Z"
+  "updated_at": "2026-11-12T14:54:57Z"
 }

@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-11-12-the-warrant/" class="archive-item">
+    <div class="archive-item__number">287</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">November 12, 2026</span>
+      <h3 class="archive-item__title">The Warrant</h3>
+      <p class="archive-item__excerpt">0600  -4°C  CALM  CLR</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Weather Station Observers</span><span class="archive-item__genre" title="Quiet literary realism with one impossible pressure point">Quiet literary realism with one impossible pressure point</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-11-11-the-thermometer-clip/" class="archive-item">
     <div class="archive-item__number">286</div>
     <div class="archive-item__content">

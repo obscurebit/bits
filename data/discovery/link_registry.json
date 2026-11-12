@@ -2674,6 +2674,27 @@
       "date": "2026-11-12",
       "theme": "weather station observers",
       "title": "Cooperatives"
+    },
+    "e9473ff4b8dde148b7bfe17b9073a45e7dda9753dae56622d0c635ba039c05d2": {
+      "url": "https://priyom.org/number-stations/operators/ukrainian-sz",
+      "domain": "priyom.org",
+      "date": "2026-11-15",
+      "theme": "signal from nowhere",
+      "title": "Ukrainian sz \u203a  Priyom.org"
+    },
+    "4ea0ec1ffc926dc081adab7d593c9738832a356cde485a0fe3019d6307c0604f": {
+      "url": "https://www.numbers-stations.com/articles/trigon-numbers-station-the-case-of-alexandr-ogorodnik/",
+      "domain": "numbers-stations.com",
+      "date": "2026-11-15",
+      "theme": "signal from nowhere",
+      "title": "TRIGON Numbers Station: The Case of Alexandr Ogorodnik"
+    },
+    "57be6d1b739cbb7f3199467c9544ccd20b262950c7e5f20b2f6e170dea3a0d11": {
+      "url": "https://priyom.org/number-stations/digital/xpa/wednesday-friday",
+      "domain": "priyom.org",
+      "date": "2026-11-15",
+      "theme": "signal from nowhere",
+      "title": "Wednesday Friday \u203a XPA \r\n          \u203a\r\n         Priyom.org"
     }
   }
 }
