@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-11-13-the-ledger/" class="archive-item">
+    <div class="archive-item__number">288</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">November 13, 2026</span>
+      <h3 class="archive-item__title">The Ledger</h3>
+      <p class="archive-item__excerpt">Hold the pen vertical. Press hard enough to transfer through three sheets. The top copy goes to the debtor, the middle to the file, the bottom stays b...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Recursive Realities</span><span class="archive-item__genre" title="Satire of systems, credentials, or institutional language">Satire of systems</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-11-12-the-warrant/" class="archive-item">
     <div class="archive-item__number">287</div>
     <div class="archive-item__content">

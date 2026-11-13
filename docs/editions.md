@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-11-13-edition-288/" class="archive-item">
+    <div class="archive-item__number">288</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">November 13, 2026</span>
+      <h3 class="archive-item__title">Edition #288</h3>
+      <p class="archive-item__excerpt">Recursive Realities · Hold the pen vertical. Press hard enough to transfer through three sheets. The top copy goes to the debtor, the middle to the file, the bottom stays bound. This...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Recursive Realities</span><span class="archive-item__genre" title="Satire of systems, credentials, or institutional language">Satire of systems</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-11-12-edition-287/" class="archive-item">
     <div class="archive-item__number">287</div>
     <div class="archive-item__content">

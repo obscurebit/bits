@@ -1,8 +1,11 @@
 {
   "date": "2026-11-13",
   "links_file": "docs/links/posts/2026-11-13-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-11-13T14:47:10Z",
+  "published_links_file": "docs/links/posts/2026-11-13-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-11-13-the-ledger.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-11-13-the-ledger.md",
   "theme": "recursive realities",
-  "updated_at": "2026-11-12T14:54:57Z"
+  "updated_at": "2026-11-13T14:19:45Z"
 }
