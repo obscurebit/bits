@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-11-14-edition-289/" class="archive-item">
+    <div class="archive-item__number">289</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">November 14, 2026</span>
+      <h3 class="archive-item__title">Edition #289</h3>
+      <p class="archive-item__excerpt">Edge Of Maps · “Previous)</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Edge Of Maps</span><span class="archive-item__genre" title="Character study where the strange thing stays partly offstage">Character study where the strange thing stays partly offstage</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-11-13-edition-288/" class="archive-item">
     <div class="archive-item__number">288</div>
     <div class="archive-item__content">

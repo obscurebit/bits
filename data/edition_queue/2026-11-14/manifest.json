@@ -1,8 +1,11 @@
 {
   "date": "2026-11-14",
   "links_file": "docs/links/posts/2026-11-14-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-11-14T13:41:06Z",
+  "published_links_file": "docs/links/posts/2026-11-14-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-11-14-previous.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-11-14-previous.md",
   "theme": "edge of maps",
-  "updated_at": "2026-11-13T14:19:45Z"
+  "updated_at": "2026-11-14T13:16:08Z"
 }
