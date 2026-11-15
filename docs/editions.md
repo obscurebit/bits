@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-11-15-edition-290/" class="archive-item">
+    <div class="archive-item__number">290</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">November 15, 2026</span>
+      <h3 class="archive-item__title">Edition #290</h3>
+      <p class="archive-item__excerpt">Signal From Nowhere · Mrs. Gable asked us to fix the loop again, which meant she stood at the bottom of the choir loft stairs holding a casserole dish wrapped in foil while the ampli...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Signal From Nowhere</span><span class="archive-item__genre" title="Domestic drama bent by one technological or metaphysical fact">Domestic drama bent by one technological or metaphysical fact</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-11-14-edition-289/" class="archive-item">
     <div class="archive-item__number">289</div>
     <div class="archive-item__content">

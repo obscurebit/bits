@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-11-15-the-wire-spool/" class="archive-item">
+    <div class="archive-item__number">290</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">November 15, 2026</span>
+      <h3 class="archive-item__title">The Wire Spool</h3>
+      <p class="archive-item__excerpt">Mrs. Gable asked us to fix the loop again, which meant she stood at the bottom of the choir loft stairs holding a casserole dish wrapped in foil while...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Signal From Nowhere</span><span class="archive-item__genre" title="Domestic drama bent by one technological or metaphysical fact">Domestic drama bent by one technological or metaphysical fact</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-11-14-previous/" class="archive-item">
     <div class="archive-item__number">289</div>
     <div class="archive-item__content">

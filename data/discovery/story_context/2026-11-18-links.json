@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-18",
+  "theme": "signal from nowhere",
+  "links_direction": "specific number station recordings, individual unexplained signal incidents, detailed SETI discovery stories",
+  "motifs": [
+    "Numbers",
+    "Stations",
+    "Numbers Stations",
+    "Working",
+    "Since 1917",
+    "Digit",
+    "Group",
+    "Minutes",
+    "Schedule",
+    "1200 Hz",
+    "Operator",
+    "This Operator"
+  ],
+  "interesting_bits": [
+    "Since 1917",
+    "1200 Hz",
+    "\"always on Tuesdays and Thursdays\"",
+    "\"accompanied by a special identification tune\"",
+    "\"almost certainly that used by the two German spies arrested on 18th October, 2011\""
+  ],
+  "links": [
+    {
+      "title": "Working at a Numbers Station, a Story From a Numbers Stations Operator",
+      "url": "https://www.numbers-stations.com/articles/working-at-a-numbers-station/",
+      "concepts": [
+        "Numbers",
+        "Stations",
+        "Numbers Stations",
+        "Working"
+      ],
+      "reason": "First-person account from a 1960s numbers station operator on a WWII naval base with 20kW transmitters, crystal oscillators, and pickup-truck security \u2014 primary-source texture, viv"
+    },
+    {
+      "title": "S06s \u203a  Priyom.org",
+      "url": "https://priyom.org/number-stations/slavic/s06s",
+      "concepts": [
+        "Digit",
+        "Group",
+        "Minutes",
+        "Schedule"
+      ],
+      "reason": "A living archive page for a specific number station (S06s 'Russian Lady') that went silent the night Russia invaded Ukraine \u2014 includes exact schedules, audio samples, transmission"
+    },
+    {
+      "title": "Russian 7 \u203a  Priyom.org",
+      "url": "https://priyom.org/number-stations/operators/russian-7",
+      "concepts": [
+        "Operator",
+        "Schedule",
+        "This Operator",
+        "This"
+      ],
+      "reason": "Deeply specific operator profile for a Russian numbers station network with binding technical characteristics, historical schedule mutations, and a direct link to a real espionage"
+    }
+  ]
+}

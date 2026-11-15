@@ -1,8 +1,11 @@
 {
   "date": "2026-11-15",
   "links_file": "docs/links/posts/2026-11-15-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-11-15T13:57:59Z",
+  "published_links_file": "docs/links/posts/2026-11-15-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-11-15-the-wire-spool.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-11-15-the-wire-spool.md",
   "theme": "signal from nowhere",
-  "updated_at": "2026-11-14T13:16:08Z"
+  "updated_at": "2026-11-15T13:44:17Z"
 }
