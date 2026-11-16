@@ -1,0 +1,59 @@
+{
+  "date": "2026-11-19",
+  "theme": "signal from nowhere",
+  "links_direction": "specific number station recordings, individual unexplained signal incidents, detailed SETI discovery stories",
+  "motifs": [
+    "Download",
+    "Data",
+    "Qpsk",
+    "Bpsk",
+    "512 ms",
+    "12288 ms",
+    "Since 2008",
+    "Group",
+    "Digit",
+    "Twice",
+    "English",
+    "November"
+  ],
+  "interesting_bits": [
+    "512 ms",
+    "12288 ms",
+    "Since 2008"
+  ],
+  "links": [
+    {
+      "title": "Experimental Modes \u203a Russian 7 \r\n          \u203a\r\n         Priyom.org",
+      "url": "https://priyom.org/number-stations/operators/russian-7/experimental-modes",
+      "concepts": [
+        "Download",
+        "Data",
+        "Qpsk",
+        "Bpsk"
+      ],
+      "reason": "A meticulously documented archive of experimental Russian number station waveforms with downloadable audio recordings, spectrograms, and technical breakdowns of evolving PSK/FSK mo"
+    },
+    {
+      "title": "E17z \u203a  Priyom.org",
+      "url": "https://priyom.org/number-stations/english/e17z",
+      "concepts": [
+        "Group",
+        "Digit",
+        "Twice",
+        "English"
+      ],
+      "reason": "A specific number station profile (E17z 'English Lady') with precise technical details, a known geographic origin (Rivne, Ukraine), and a haunting historical cutoff date \u2014 the nigh"
+    },
+    {
+      "title": "Tuesday Friday \u203a XPA2 \r\n          \u203a\r\n         Priyom.org",
+      "url": "https://priyom.org/number-stations/digital/xpa2/tuesday-friday",
+      "concepts": [
+        "November",
+        "September",
+        "January",
+        "December"
+      ],
+      "reason": "A specific XPA2 number station schedule page with actual intercepted message logs \u2014 raw five-figure groups transmitted from Moscow on specific dates, complete with seasonal frequen"
+    }
+  ]
+}

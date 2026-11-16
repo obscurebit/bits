@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-11-16-edition-291/" class="archive-item">
+    <div class="archive-item__number">291</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">November 16, 2026</span>
+      <h3 class="archive-item__title">Edition #291</h3>
+      <p class="archive-item__excerpt">Counterfeit Realities · Step one: hold the certificate at a forty-five-degree angle. The cheap stock tears if you come in flat. Learned that the third week when Mrs. Velez’s marriage l...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Counterfeit Realities</span><span class="archive-item__genre" title="Workplace comedy with a speculative inconvenience">Workplace comedy with a speculative inconvenience</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-11-15-edition-290/" class="archive-item">
     <div class="archive-item__number">290</div>
     <div class="archive-item__content">
