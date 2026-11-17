@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-11-17-edition-292/" class="archive-item">
+    <div class="archive-item__number">292</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">November 17, 2026</span>
+      <h3 class="archive-item__title">Edition #292</h3>
+      <p class="archive-item__excerpt">Municipal Weirdness · The laminator in the senior wing supply closet smelled like burnt hair and melted glue sticks, a scent that clung to your cardigan sleeves until laundry day. It...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Municipal Weirdness</span><span class="archive-item__genre" title="Tender romance complicated by one impossible condition">Tender romance complicated by one impossible condition</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-11-16-edition-291/" class="archive-item">
     <div class="archive-item__number">291</div>
     <div class="archive-item__content">

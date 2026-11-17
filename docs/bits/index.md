@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-11-17-the-laminators-hum/" class="archive-item">
+    <div class="archive-item__number">292</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">November 17, 2026</span>
+      <h3 class="archive-item__title">The Laminator's Hum</h3>
+      <p class="archive-item__excerpt">The laminator in the senior wing supply closet smelled like burnt hair and melted glue sticks, a scent that clung to your cardigan sleeves until laund...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Municipal Weirdness</span><span class="archive-item__genre" title="Tender romance complicated by one impossible condition">Tender romance complicated by one impossible condition</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-11-16-the-embosser-knack/" class="archive-item">
     <div class="archive-item__number">291</div>
     <div class="archive-item__content">

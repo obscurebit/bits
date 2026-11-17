@@ -1,8 +1,11 @@
 {
   "date": "2026-11-17",
   "links_file": "docs/links/posts/2026-11-17-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-11-17T16:13:03Z",
+  "published_links_file": "docs/links/posts/2026-11-17-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-11-17-the-laminators-hum.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-11-17-the-laminators-hum.md",
   "theme": "municipal weirdness",
-  "updated_at": "2026-11-16T15:21:20Z"
+  "updated_at": "2026-11-17T15:45:06Z"
 }
