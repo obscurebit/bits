@@ -1,8 +1,11 @@
 {
   "date": "2026-11-18",
   "links_file": "docs/links/posts/2026-11-18-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-11-18T15:55:02Z",
+  "published_links_file": "docs/links/posts/2026-11-18-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-11-18-the-queue-log.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-11-18-the-queue-log.md",
   "theme": "signal from nowhere",
-  "updated_at": "2026-11-17T15:45:06Z"
+  "updated_at": "2026-11-18T15:25:29Z"
 }

@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-11-18-the-queue-log/" class="archive-item">
+    <div class="archive-item__number">293</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">November 18, 2026</span>
+      <h3 class="archive-item__title">The Queue Log</h3>
+      <p class="archive-item__excerpt">Item 1: The ticket printer jams at 06:17. Damp roll. The fold-and-tap ritual — crease the leading edge, tap the chassis twice on the left side — clear...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Signal From Nowhere</span><span class="archive-item__genre" title="Workplace comedy with a speculative inconvenience">Workplace comedy with a speculative inconvenience</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-11-17-the-laminators-hum/" class="archive-item">
     <div class="archive-item__number">292</div>
     <div class="archive-item__content">
