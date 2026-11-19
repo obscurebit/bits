@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-11-19-edition-294/" class="archive-item">
+    <div class="archive-item__number">294</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">November 19, 2026</span>
+      <h3 class="archive-item__title">Edition #294</h3>
+      <p class="archive-item__excerpt">Signal From Nowhere · Row 12. Mrs. Alvarez. Dialysis. Tuesday. Thursday. Saturday. 5:15 AM pickup. The van idles in the cul-de-sac while her grandson argues with the driver about the...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Signal From Nowhere</span><span class="archive-item__genre" title="Moral fable disguised as a very specific modern problem">Moral fable disguised as a very specific modern problem</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-11-18-edition-293/" class="archive-item">
     <div class="archive-item__number">293</div>
     <div class="archive-item__content">

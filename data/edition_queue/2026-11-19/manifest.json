@@ -1,8 +1,11 @@
 {
   "date": "2026-11-19",
   "links_file": "docs/links/posts/2026-11-19-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-11-19T16:00:00Z",
+  "published_links_file": "docs/links/posts/2026-11-19-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-11-19-the-whiteboard-strip.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-11-19-the-whiteboard-strip.md",
   "theme": "signal from nowhere",
-  "updated_at": "2026-11-18T15:25:29Z"
+  "updated_at": "2026-11-19T15:30:38Z"
 }
