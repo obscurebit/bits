@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-11-20-edition-295/" class="archive-item">
+    <div class="archive-item__number">295</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">November 20, 2026</span>
+      <h3 class="archive-item__title">Edition #295</h3>
+      <p class="archive-item__excerpt">Forgotten Technology · The paint wasn't paint. It was a covenant mixed from linseed oil, boiled turpentine, and a pinch of red oxide that Elena's abuelo swore he'd liberated from the...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Forgotten Technology</span><span class="archive-item__genre" title="Character study where the strange thing stays partly offstage">Character study where the strange thing stays partly offstage</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-11-19-edition-294/" class="archive-item">
     <div class="archive-item__number">294</div>
     <div class="archive-item__content">
