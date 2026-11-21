@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-11-21-edition-296/" class="archive-item">
+    <div class="archive-item__number">296</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">November 21, 2026</span>
+      <h3 class="archive-item__title">Edition #296</h3>
+      <p class="archive-item__excerpt">Digital Archaeology · "You're short three dollars again," Marisol said, not looking up from her ledger. The pen scratched. "That's the third time this month."</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Digital Archaeology</span><span class="archive-item__genre" title="Moral fable disguised as a very specific modern problem">Moral fable disguised as a very specific modern problem</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-11-20-edition-295/" class="archive-item">
     <div class="archive-item__number">295</div>
     <div class="archive-item__content">

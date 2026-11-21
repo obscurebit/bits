@@ -1,8 +1,11 @@
 {
   "date": "2026-11-21",
   "links_file": "docs/links/posts/2026-11-21-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-11-21T14:55:41Z",
+  "published_links_file": "docs/links/posts/2026-11-21-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-11-21-the-coin-bag.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-11-21-the-coin-bag.md",
   "theme": "digital archaeology",
-  "updated_at": "2026-11-20T15:09:35Z"
+  "updated_at": "2026-11-21T14:27:21Z"
 }

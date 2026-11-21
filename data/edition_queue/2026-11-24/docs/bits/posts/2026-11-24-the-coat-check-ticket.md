@@ -1,0 +1,70 @@
+---
+date: 2026-11-24
+title: "The Coat Check Ticket"
+description: "A daily AI-generated story exploring speculative fiction"
+author: "https://integrate.api.nvidia.com/v1 / nvidia/nemotron-3-ultra-550b-a55b"
+theme: "parallel dimensions"
+genre: "Satire of systems, credentials, or institutional language"
+voice_profile: "Dreamlike but concrete: surreal transitions anchored by precise objects, jobs, and bodily action"
+---
+
+# The Coat Check Ticket
+
+The ticket printer jams every Tuesday. Always Tuesday. The bailiffs know it, the clerks know it, the defendants shuffling in with their hands cuffed behind them know it — that sharp *crunch* of cardstock folding wrong, the high whine of gears giving up. Margaret keeps a butter knife in her desk drawer for this. She slides it into the teeth of the roller, works the mangled ticket free, smooths it flat against her thigh.
+
+She stamps RECALLED in red ink. The date band on the rubber stamp is stuck on 2019. She writes 26 beside it in ballpoint, every time. Her handwriting has gotten small and cramped over the years, the numbers tilting left like they're trying to fall off the page.
+
+Case 247-91. Marcus Webb. Died of pneumonia in County lockup, three days before arraignment. She writes the case number in the margin of *The Duke's Reluctant Bride*, page 147, between "his lordship's fingers brushed the lace" and "she could not breathe for wanting him." The paperback's spine is cracked in twelve places. She buys them at the Friends of the Library sale for fifty cents each, reads them once, then fills the margins with the dead.
+
+Turkey sandwich on her desk at 12:15. No ham. Never ham. Bailiff Kowalski sets it down without a word, nods at the romance novel. "Page 147 today?"
+
+"Page 147," she confirms.
+
+"Heard the Webb kid had a mother. Came to every hearing. Sat in the back row with a thermos."
+
+Margaret peels the plastic wrap. "Thermos."
+
+"Coffee, she said. Strong enough to strip paint."
+
+Margaret eats the sandwich in four bites. The turkey is dry. The bread is white and sweet. She drinks the carton of milk that comes with it — always milk, never coffee — and watches the condensation ring bloom on the desk blotter.
+
+At 3:40, a woman appears at the coat check window. Gray wool coat. Gray hair pinned up. Hands folded in leather gloves. She holds out a claim ticket: number 247. The same number. Margaret's fingers go still on the stamp.
+
+"Marcus Webb's things," the woman says. Her voice is flat. Practiced. "His mother. I'm his mother."
+
+Margaret looks at the ticket. Looks at the woman. Looks at the romance novel open on her desk, the case number tucked between the duke's fingers and the lady's breath.
+
+"We don't release property on recalled cases," Margaret says. The words come out of the manual. Page 12, Section 4. "Next of kin must petition the estate court. Six to eight weeks."
+
+The woman's gloved hands don't move. "He had a watch. His father's. Bulova. Gold band." She says it like a prayer. "He wore it to every hearing. Said it kept time better than the courtroom clock."
+
+Margaret's stamp hovers over the ticket. The red ink pad is dried at the edges. She'd need to press hard.
+
+"The manual says — "
+
+"I know what the manual says." The woman's face doesn't change. "I also know you found Judge Harlan's gavel in the evidence bag from the Ortiz case. March 2019. You didn't log it. You put it in his chambers yourself. Bailiff Kowalski told me."
+
+Margaret's thumb presses the stamp's wooden handle. The rubber gives slightly.
+
+"Turkey sandwiches," the woman continues. "Every Tuesday. No ham. Because you kept your mouth shut about the gavel. Because you're useful. Because you pretend not to know too much."
+
+The coat check room smells of mothballs and dust. The racks are mostly empty — winter coats claimed, spring coats not yet arrived. A single hanger swings gently from the AC vent's breath.
+
+Margaret sets the stamp down. Uncapped. Red ink bleeding into the blotter.
+
+"The watch is in Box 14," she says. "Third shelf. Blue velvet pouch."
+
+The woman's gloves creak as she unclasps her hands. "Thank you."
+
+"Don't," Margaret says. "Thank the duke. He's the one who let the lady breathe."
+
+---
+
+<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem;">
+  <button class="share-btn" data-url="{% raw %}{{ page.canonical_url }}{% endraw %}" data-title="The Coat Check Ticket">
+    Share this story
+  </button>
+  <a href="https://github.com/obscurebit/bits/tree/5f42933" target="_blank" rel="noopener" class="story-gen-link">
+    gen:5f42933
+  </a>
+</div>
