@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-25",
+  "theme": "municipal water rituals",
+  "links_direction": "water works museum collections, municipal reservoir logs, fire hydrant maintenance manuals, water tower inspection reports, public fountain restoration projects, historical society water department archives",
+  "motifs": [
+    "Down Street",
+    "Street",
+    "Railway",
+    "Down",
+    "In 1899",
+    "In 1900",
+    "Restoration",
+    "Like",
+    "Metal",
+    "Preservation",
+    "60 years",
+    "40 years"
+  ],
+  "interesting_bits": [
+    "In 1899",
+    "In 1900",
+    "60 years",
+    "40 years",
+    "in 2005"
+  ],
+  "links": [
+    {
+      "title": "Down Street Station \u2013 Subterranea Britannica",
+      "url": "https://www.subbrit.org.uk/sites/down-street-station/",
+      "concepts": [
+        "Down Street",
+        "Street",
+        "Railway",
+        "Down"
+      ],
+      "reason": "A deeply researched, enthusiast-written history of a single closed London tube station that became Churchill's secret wartime bunker. Rich with specific dates, financial intrigue,"
+    },
+    {
+      "title": "restoration",
+      "url": "https://www.armscollectors.com/trapdoor/restoration.html",
+      "concepts": [
+        "Restoration",
+        "Like",
+        "Metal",
+        "Preservation"
+      ],
+      "reason": "fallback heuristic"
+    },
+    {
+      "title": "An \u201chistorical\u201d edition of the yearbook Landscape Architecture and Urban Design \u2013 Archined",
+      "url": "https://www.archined.nl/2008/07/an-historical-edition-of-the-yearbook-landscape-architecture-and-urban-design/",
+      "concepts": [
+        "Water",
+        "Design",
+        "Landscape",
+        "Yearbook"
+      ],
+      "reason": "Professional review of a Dutch landscape architecture yearbook (2003-2007). While it mentions specific projects like a Merovingian fortress restoration and a post-disaster neighbor"
+    }
+  ]
+}

@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-11-22-permissible-dreamstate-ad-insertion-thresholds-v42/" class="archive-item">
+    <div class="archive-item__number">297</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">November 22, 2026</span>
+      <h3 class="archive-item__title">Permissible Dream-State Ad Insertion Thresholds (v.4.2)</h3>
+      <p class="archive-item__excerpt">Clause 3.1: No political persuasion content during REM latency windows.</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Consciousness Frontiers</span><span class="archive-item__genre" title="Satire of systems, credentials, or institutional language">Satire of systems</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-11-21-the-coin-bag/" class="archive-item">
     <div class="archive-item__number">296</div>
     <div class="archive-item__content">

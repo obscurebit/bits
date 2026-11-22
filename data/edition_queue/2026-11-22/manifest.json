@@ -1,8 +1,11 @@
 {
   "date": "2026-11-22",
   "links_file": "docs/links/posts/2026-11-22-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-11-22T14:29:10Z",
+  "published_links_file": "docs/links/posts/2026-11-22-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-11-22-permissible-dreamstate-ad-insertion-thresholds-v42.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-11-22-permissible-dreamstate-ad-insertion-thresholds-v42.md",
   "theme": "consciousness frontiers",
-  "updated_at": "2026-11-21T14:27:21Z"
+  "updated_at": "2026-11-22T14:22:10Z"
 }

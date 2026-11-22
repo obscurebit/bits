@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-11-22-edition-297/" class="archive-item">
+    <div class="archive-item__number">297</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">November 22, 2026</span>
+      <h3 class="archive-item__title">Edition #297</h3>
+      <p class="archive-item__excerpt">Consciousness Frontiers · Clause 3.1: No political persuasion content during REM latency windows.</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Consciousness Frontiers</span><span class="archive-item__genre" title="Satire of systems, credentials, or institutional language">Satire of systems</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-11-21-edition-296/" class="archive-item">
     <div class="archive-item__number">296</div>
     <div class="archive-item__content">
