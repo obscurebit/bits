@@ -1,8 +1,11 @@
 {
   "date": "2026-11-23",
   "links_file": "docs/links/posts/2026-11-23-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-11-23T18:11:46Z",
+  "published_links_file": "docs/links/posts/2026-11-23-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-11-23-the-token-log.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-11-23-the-token-log.md",
   "theme": "time anomalies",
-  "updated_at": "2026-11-22T14:22:10Z"
+  "updated_at": "2026-11-23T17:46:44Z"
 }

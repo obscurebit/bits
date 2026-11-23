@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-11-23-edition-298/" class="archive-item">
+    <div class="archive-item__number">298</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">November 23, 2026</span>
+      <h3 class="archive-item__title">Edition #298</h3>
+      <p class="archive-item__excerpt">Time Anomalies · November 23, 1946. Boiler Room.</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Time Anomalies</span><span class="archive-item__genre" title="Quiet literary realism with one impossible pressure point">Quiet literary realism with one impossible pressure point</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-11-22-edition-297/" class="archive-item">
     <div class="archive-item__number">297</div>
     <div class="archive-item__content">
