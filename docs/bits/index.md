@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-11-24-the-coat-check-ticket/" class="archive-item">
+    <div class="archive-item__number">299</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">November 24, 2026</span>
+      <h3 class="archive-item__title">The Coat Check Ticket</h3>
+      <p class="archive-item__excerpt">The ticket printer jams every Tuesday. Always Tuesday. The bailiffs know it, the clerks know it, the defendants shuffling in with their hands cuffed b...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Parallel Dimensions</span><span class="archive-item__genre" title="Satire of systems, credentials, or institutional language">Satire of systems</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-11-23-the-token-log/" class="archive-item">
     <div class="archive-item__number">298</div>
     <div class="archive-item__content">

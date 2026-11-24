@@ -1,8 +1,11 @@
 {
   "date": "2026-11-24",
   "links_file": "docs/links/posts/2026-11-24-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-11-24T17:45:53Z",
+  "published_links_file": "docs/links/posts/2026-11-24-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-11-24-the-coat-check-ticket.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-11-24-the-coat-check-ticket.md",
   "theme": "parallel dimensions",
-  "updated_at": "2026-11-23T17:46:44Z"
+  "updated_at": "2026-11-24T17:18:55Z"
 }

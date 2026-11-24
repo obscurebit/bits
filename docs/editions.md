@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-11-24-edition-299/" class="archive-item">
+    <div class="archive-item__number">299</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">November 24, 2026</span>
+      <h3 class="archive-item__title">Edition #299</h3>
+      <p class="archive-item__excerpt">Parallel Dimensions · The ticket printer jams every Tuesday. Always Tuesday. The bailiffs know it, the clerks know it, the defendants shuffling in with their hands cuffed behind them...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Parallel Dimensions</span><span class="archive-item__genre" title="Satire of systems, credentials, or institutional language">Satire of systems</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-11-23-edition-298/" class="archive-item">
     <div class="archive-item__number">298</div>
     <div class="archive-item__content">
