@@ -1,8 +1,11 @@
 {
   "date": "2026-11-25",
   "links_file": "docs/links/posts/2026-11-25-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-11-25T17:30:18Z",
+  "published_links_file": "docs/links/posts/2026-11-25-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-11-25-the-valve-exercisers-almanac.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-11-25-the-valve-exercisers-almanac.md",
   "theme": "municipal water rituals",
-  "updated_at": "2026-11-24T17:18:55Z"
+  "updated_at": "2026-11-25T16:58:51Z"
 }
