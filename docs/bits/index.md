@@ -10,6 +10,17 @@ description: AI-generated sci-fi stories, mysteries, and speculative tales
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-11-26-the-late-fee/" class="archive-item">
+    <div class="archive-item__number">301</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">November 26, 2026</span>
+      <h3 class="archive-item__title">The Late Fee</h3>
+      <p class="archive-item__excerpt">You arrive at the nutrition center's rear dock seventeen minutes past the shift change. The yellow stripe on the concrete has faded to the color of ol...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Synthetic Life</span><span class="archive-item__genre" title="Caper energy at a human scale">Caper energy at a human scale</span></div>
+    </div>
+    <span class="archive-item__category">Story</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-11-25-the-valve-exercisers-almanac/" class="archive-item">
     <div class="archive-item__number">300</div>
     <div class="archive-item__content">
