@@ -10,6 +10,17 @@ description: Browse previous daily editions of Obscure Bit
 </div>
 
 <div class="archive-list">
+  <a href="posts/2026-11-27-edition-302/" class="archive-item">
+    <div class="archive-item__number">302</div>
+    <div class="archive-item__content">
+      <span class="archive-item__date">November 27, 2026</span>
+      <h3 class="archive-item__title">Edition #302</h3>
+      <p class="archive-item__excerpt">Abandoned Stations · The laminated sign wouldn't stick to the asbestos-wing door. The adhesive strips, purchased during the Thompson Administration, had long since surrendered to hu...</p>
+      <div class="archive-item__tags"><span class="archive-item__theme">Abandoned Stations</span><span class="archive-item__genre" title="Character study where the strange thing stays partly offstage">Character study where the strange thing stays partly offstage</span></div>
+    </div>
+    <span class="archive-item__category">Edition</span>
+    <span class="archive-item__arrow">→</span>
+  </a>
   <a href="posts/2026-11-26-edition-301/" class="archive-item">
     <div class="archive-item__number">301</div>
     <div class="archive-item__content">

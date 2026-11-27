@@ -1,8 +1,11 @@
 {
   "date": "2026-11-27",
   "links_file": "docs/links/posts/2026-11-27-daily-links.md",
-  "status": "prepared",
+  "published_at": "2026-11-27T17:44:45Z",
+  "published_links_file": "docs/links/posts/2026-11-27-daily-links.md",
+  "published_story_file": "docs/bits/posts/2026-11-27-the-authorized-personnel-sign.md",
+  "status": "published",
   "story_file": "docs/bits/posts/2026-11-27-the-authorized-personnel-sign.md",
   "theme": "abandoned stations",
-  "updated_at": "2026-11-26T16:39:59Z"
+  "updated_at": "2026-11-27T16:25:06Z"
 }
